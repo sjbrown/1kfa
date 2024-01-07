@@ -1,0 +1,37 @@
+# Python CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-python/ for more details
+#
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/python:2.7-stretch
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "bin/install_deps.sh" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-
+
+      - run:
+          name: install dependencies
+          command: bin/install_deps.sh
+
+      - run:
+          name: build all
+          command: |
+              set -eo pipefail
+              KFAREPO=~/repo python2 bin/build_all.py
+
+
+      - run:
+          name: publish to website
+          command: KFAREPO=~/repo bin/publish_web.sh
+
