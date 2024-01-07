@@ -1,0 +1,21 @@
+Name,Mod,Effect,m-2,m-1,m0,m1,m2,✔✔✔,✔✔,✅,✗,Reqs,Notes,Magic,Campaign
+,,,,,,,,,,,,,,,
+_ of Illusion,,"Touch something and make some superficial change to it: clean it, soil it, cool it, warm it, flavor it, or change its color. || If you use this effect without touching a thing you can instead create minor illusions no bigger than yourself. Projected illusions cast no light, are crude and clearly illusions—they won't fool anyone, but they might entertain them.",,,,,,,,,,,ONGOING,yes,
+_ of Sensation,,"One of your senses is briefly attuned to magic. The GM will tell you how this sense reacts to magic, and how long the effect persists.",,,,,,,,,,,,yes,
+_ of Telepathy,,"By touching this item to the head of one other person, you establish a telepathic bond with them. You can now converse with that person and share vague images through your thoughts. || This item only has charge capacity of 2",,,,,,,,,,,ONGOING,yes,
+_ of Amiability,,The person (not beast or monster) you touch while flowing energy into this item counts you as a close friend until they are attacked or until you act unfriendly towards them.,,,,,,,,,,,ONGOING,yes,
+_ of Invisibility,,Touch an ally: nobody can see them. They're invisible! The spell persists until the target attacks or you dismiss the effect. || While the spell is ongoing you can’t use any other magic items.,,,,,,,,,,,ONGOING,yes,
+_ of Unerring Dispatch,,Hold a pebble or anything less than 10 grams. Send it flying in a straight line at incredible speed. || Roll 1d4+2 attack power. || The projectile is destroyed unless it is magical,,,,,,,,,,,,yes,
+_ of Vitality,,Blow through this item while someone inhales on the other side. 1d4+2 Stamina returns to them,,,,,,,,,,,,yes,
+Mending _,,"Spend your resting time meditating over this item while it touches your target. They are healed of 1 Harm or 1 Wound, your choice.",,,,,,,,,,,,yes,
+Air Sculpting _,,"Swing or wave this item in the air.  The air that it passes through becomes fixed in place, and solid enough to support a horse. || The effect persists for an hour, or until you dismiss it.",,,,,,,,,,,,yes,
+_ of Interference,,"Flow magical power through this item and have the threads of probability at your fingertips. After an attack power roll is made in a scene where you're present, and before the GM describes the outcome, re-roll one die and subtract one from it. The effect then ends.",,,,,,,,,,,ONGOING,yes,
+Sigil of the Living Light,,Drop this item on the ground.  It will land pointing towards the direction or course of action the Council of the Living Light would have you take. || This item can be powered only by the Living Light,,,,,,,,,,,,yes,
+Blade of Echoes,,Drip blood from this blade onto a corpse. It converses with you briefly. It will answer any three questions you pose to it to the best of the knowledge it had in life and the knowledge it gained in death. || This item can only be powered by the Blood-Bound,,,,,,,,,,,,yes,
+,,,,,,,,,,,,,,,
+Leather Armour,,"At any point when you would take 1 Harm or Wound, place the token on a spot on this card instead. || When you Rest, discard all tokens from this card",,,Spot for 1 WD,,,,,,,,,,
+Bracers,DEX,"At any moment when you would take a Harm, flip Dex to avoid it",,,,,,Avoid the Harm but choose to lose 1 Stamina or this item takes 1 damage,"Avoid the Harm, lose 1 Stamina, and this item takes 1 damage","Avoid the Harm, lose 1 Stamina, and this item is destroyed",,,IMMEDIATE,,9
+Shield ,DEX,"At any point when you would take 1 Wound, flip Dex to avoid it || When calculating encumberance penalty, this item counts as 2",,,,,,Avoid the Wound but choose to lose 2 Stamina or this item is destroyed.,Avoid the Wound and lose 2 Stamina,"Avoid the Wound, lose 2 Stamina, and this item is destroyed.",,,IMMEDIATE,,3
+Many Knives,,"At short range, you can throw knives to do a Volley",,,,,,,,,,,,,
+_ Sword,,It's a sword!,,,,,,,,,,,,,
+_ Bow,,Thwip thwip thwip,,,,,,,,,,,,,

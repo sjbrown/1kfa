@@ -1,0 +1,32 @@
+Contest with Deck D vs Deck A
+
+                       W    T    L    /    W   L
+           4 card adv
+           2D v -2A   98    1.6  0.4  /  99.8 .2
+           3 card adv
+           2D v -1A   96    3.3  0.7  /  99   1
+           1D v -2A   95      3    1  /  99   1
+           2 card adv
+           2D v   A   83   13    3    /  96   4
+           1D v -1A   91    6    2    /  97   3
+            D v -2A   83   13    3    /  96   4
+           0 card adv
+           2D v  2A   61   31   79    /  88  12
+           1D v  1A   61   24   14    /  82  18
+            D v   A   60   20   20    /  75  25
+           -1Dv -1A   61   25   13    /  82  18
+           -2Dv -2A   61   31    8    /  88  12
+           1 card dis
+           1D v  2A   52   30   18    /  74  26
+           D  v  1A   43   24   33    /  58  42
+           -1Dv   A   43   25   32    /  57  43
+           -2Dv -1A   51   31   17    /  74  25
+           2 card dis
+           D  v  2A   34   26   40    /  47  53
+           -1Dv  1A   ?
+           -2Dv   A   34   26   40    /  46  54
+           3 card dis
+           -1Dv  2A   16   22   61    /  20  80
+           -2Dv  1A   17   23   60    /  22  78
+           4 card dis
+           -2Dv  2A    9   18   73    /  11  89

@@ -1,0 +1,30 @@
+---
+title-meta: A Thousand Faces of Adventure Game Master's Guide
+
+toc: yes
+
+toc-depth: 2
+
+pagestyle: empty
+
+include-before: \includepdf[pages=-]{/tmp/1kfa_guide_build/1kfa_cover_page_a6.pdf}
+
+include-after: \includepdf[pages=-]{/tmp/1kfa_guide_build/playtest_thankyou.pdf}
+
+header-includes:
+  - \usepackage{pdfpages}
+
+linkcolor: purple
+urlcolor: purple
+filecolor: purple
+mainfont: LinLibertine
+monofont: RobotoMono-Regular
+fontsize: 12pt
+papersize: a6
+geometry:
+  - left=8mm
+  - right=8mm
+  - bottom=8mm
+  - includefoot=true
+
+---
