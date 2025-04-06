@@ -85,8 +85,16 @@ how everything fits together.
 This perspective lets you rely on your existing knowledge and expertise at
 conversation "games".
 Life has already taught you about how, in a conversation, you take turns,
-make offerings, interrupt politely, and listen with interest,
+offer spontaneous ideas, interrupt politely, and listen with interest,
 so you're already an expert at the foundational rules of this game.
+
+Different from the free-ranging conversation-games of our typical lives,
+however, this conversation-game provides structured activities, with goals.
+The three main activities are:
+
+ * Brainstorm to create a setting for a story
+ * Assemble game components into characters to inhabit the story
+ * Improvise and follow rules to elaborate the events of the story
 
 
 ## How to make a great story
