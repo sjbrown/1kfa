@@ -2,11 +2,12 @@
 
 **The Narrative Authority Waterfall** describes how storytelling flows
 around the table: from the Game Master (GM) outward to the players, then
-back again—like a cascade. It is not a rigid hierarchy, but a structured
-rhythm. The GM begins with the first impulse, and the players may follow
-with their own creativity, questions, or elaboration. Everyone’s
-contributions are bound by the rules of the game, which act as the basin
-of earth and rock that shapes and contains the current.
+back again—like a cascade. It should feel like a conversation, a structured
+rhythm, with a mild hierarchy. When the game calls upon the GM, they may
+take the task entirely to themselves, or instead invite the table into
+the current, to add their own creativity, questions, or elaboration.
+Everyone’s contributions are always bound by the rules of the game, 
+the solid basin of earth and rock that shapes and contains the current.
 
 This principle applies to all parts of the game—worldbuilding, roleplay,
 mechanical resolution, and narrative development.
@@ -46,6 +47,7 @@ Whether it's interpreting a flip, introducing new character details, or
 defining a new piece of lore, the contributions must:
 
  * Follow the structure laid out in the game
+ * Feel true to the world of the Touchstone List
  * Honor what the mechanics allow or prohibit
  * Avoid overriding consequences already in play
 
@@ -55,7 +57,7 @@ shared creativity stable and meaningful.
 By flowing within these boundaries, every idea gains structure, and every
 twist earns its place in the story.
 
-## Waterfall, Not Spotlight
+## Waterfall, Not Podium
 
 The Narrative Authority Waterfall allows narrative responsibility to flow,
 not pool. The GM provides guidance, but the table shapes the current. No one
