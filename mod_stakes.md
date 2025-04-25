@@ -58,10 +58,10 @@ answer the following questions:
 
  * What do the characters need to advance the story?
  * Where is an interesting location of the setting to pursue this need?
- * What are scenes from the Touchstone List that have content that could be lifted?
+ * What content from the Touchstone List is present here?
  * What significant set pieces are in front of the characters?
- * What obstacles might be present?
- * Besides the characters, who else is present?  (Who might oppose the characters?)
+ * What obstacles (if any) are blocking the obvious routes?
+ * Besides the characters, who else is present?
  * What details of this location are obvious and notable to the characters?
  * What is the ambiance? Which environmental subtleties might the characters notice? Music? Smells?
 
@@ -131,13 +131,16 @@ the Primary Stake remains the core focus.
 
 3. The Dramatic Action begins
 
-At this point, the scene and stakes should be well-understood by the table,
-and the GM will move the spotlight to a player and ask the inciting question,
- "what do you do?"
+With the scene and stakes understood, it's time for the players to take
+the reins and initiate the dramatic action. Begin by situating the
+characters' position within the scene. Are they charging into battle?
+Surveying the landscape from afar? Once established, the GM will
+direct the spotlight to a player, prompting them with the inciting
+question: "What do you do?"
 
-The PCs will take actions and have dialogues advancing the plot and triggering
-Player Moves. (See SECTION X on Player Moves). The results of those moves
-impact the scene:
+The PCs' actions and dialogue drive the plot and trigger Player Moves 
+(see SECTION X). The results of these moves, in turn, determine how the
+scene evolves:
 
  1. ✔✔ Double success
     * two ✔ tokens are added to a ✔ progress bar
@@ -186,7 +189,7 @@ The other cards are:
 
 On an ✗, two cards are revealed from the GM Move Deck, and either:
 
- 1. Any number of Shadow cards are revealed
+ 1. Any of the revealed cards is a Shadow card:
     * Ignore the revealed 1-10 card (if any)
     * Increment the skull progress bar 
     * Invoke the chapter-specific rules from the Campaign Guide

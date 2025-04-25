@@ -194,8 +194,8 @@ in his famous book **The Hero with a Thousand Faces**.
 </div>
 
 *The Hero's Journey* is a skeleton upon which many successful and popular
-movies and books are arranged: Star Wars, Lord of the Rings, The Breakfast
-Club, Die Hard, Beowulf, 50 First Dates, the list goes on.
+movies and books are arranged: Star Wars, Lord of the Rings, Slumdog
+Millionaire, Die Hard, Beowulf, Lady Bird, the list goes on.
 To help you execute a successful and popular *campaign*, the mechanisms
 of the game will generate *Journey points* and *Shadow points*.
 Generally,
@@ -291,6 +291,7 @@ Let the story be what it must be, and *play* to find out the details of what
 happens, but also take your opportunities to earn *Journey points* when they
 arise.
 
+
 # One-Shot Campaign
 
  * Start in a place of normalcy / comfort
@@ -303,6 +304,9 @@ In a One-Shot campaign, there are 4 potential *Journey points* to earn.
 <a name="one-shot-ch-1" />
 
 ## Chapter 1: Start in a place of normalcy / comfort
+
+> Your sacred space is where you can find yourself again and again.
+> - Joseph Campbell, The Power of Myth (with Bill Moyers), 1988
 
 The first *Journey point* is a "gimmie": If you can think of a way to start
 all of the PCs in their place of normalcy or comfort, gain a *Journey point*.
@@ -341,10 +345,51 @@ Fateful Moment often produces the *need*.
 You should make a note of any premise, so you can use it later when creating
 puzzles, monsters and villains.
 
+### Chapter 1 Scene procedures
+
+During scene establishment, use the Narrative Authority Waterfall to **answer
+3 of the following questions**:
+
+ * What details show the characters are in control of their environment?
+ * What subtle signs suggest the world may not stay this way?
+ * Which NPCs embody safety, comfort, or routine in this place?
+ * What’s one unwritten rule here that, if broken, would shake everything?
+ * Who or what do the characters love most in this place?
+
+Using the Fateful Moments of the PCs and the Hearth, create the primary
+stake with a dramatically appropriate amount of detail. It can start out
+as vague as any of these:
+
+ * Knowledge of the means to overcome a threat or defeat an enemy
+ * A plan to re-establish the Hearth
+ * Location of a distant resource to recruit to our cause
+
+And it may develop into something more specifc, eg:
+
+ * Secure a rare ingredient or heirloom that rekindles the hearth
+ * Resolve the inter-clan dispute so the festival may proceed
+ * Bring each elder's piece of the ancient map together
+
+The progress bar for the primary stake should be **7 units long**
+
+The skull progress bar should be **3 units long**
+
+**When the skull progress bar increments**, answer one of the following
+questions:
+
+ * What violence pierces the illusion of peace? What ambush or fight erupts?
+   * Start a Combat Scene
+ * Who among the Hearth's allies is now captured, transformed, or killed?
+ * What sudden divide or betrayal shatters the community’s trust?
+ * Which innocents were swindled, vows were broken, or alliances shattered?
+
 
 <a name="one-shot-ch-2" />
 
 ## Chapter 2: Cross a threshold with a true choice
+
+> The cave you fear to enter holds the treasure you seek.
+> Joseph Campbell, Reflections on the Art of Living, 1991
 
 As the game progresses, the conversation at the table will start
 establishing details about the world and about relationships between
@@ -399,11 +444,52 @@ a "hook". Here are some things to think about to help you invent a hook:
     - What is the rule that must not be broken?
     - Who forbids it?
     - What power structure does the rule support?
+ * Contrast the Mundane with the Fantastic
+    - What impossible ability or beauty is displayed by a creature or NPC?
+    - What region or artifact is breaking the rules of the universe?
+    - How does the incursion of a dreamworld manifest in reality?
+
+### Chapter 2 Scene procedures
+
+During scene establishment, use the Narrative Authority Waterfall to **answer
+3 of the following questions**:
+
+ * What makes the threshold visible, dramatic, or emotionally charged?
+ * What’s one reason each character might hesitate to cross?
+ * What changes or dangers await on the other side?
+ * What consequences will unfold if they don’t cross?
+ * Who is watching them make their decisions, and why does it matter?
+
+
+Create the primary stake along these lines:
+
+ * Unlock or unseal the mysterious path
+ * Escape the forces of "home" that aim to prevent your departure
+ * Penetrate through a force that blocks your transit
+
+The progress bar for the primary stake should be **7 units long**
+
+The skull progress bar should be **3 units long**
+
+**When the skull progress bar increments**, answer one of the following
+questions:
+
+ * What immediate threat must be fought or fled - who strikes first?
+   * Start a Combat Scene
+ * Who or what gives chase - why can’t it be reasoned with?
+   * Start a Pursuit Scene
+ * What unshakable agent of shadow now stalks the PCs' every movement?
+ * How has the now Hearth broken beyond any existing plan to recover it?
+ * Which essential resource or ally is blocked from crossing the threshold?
+ * How must the PCs now cross unknowingly or involuntarily?
 
 
 <a name="one-shot-ch-3" />
 
 ## Chapter 3: Take a thing and pay its (mortal?) price
+
+> Where you stumble and fall, there you will find gold.
+> - Joseph Campbell, Reflections on the Art of Living, 1991
 
 Here in the mysterious world, players take greater risks, and have an
 opportunity to earn something *epic* for their characters.
@@ -457,35 +543,69 @@ symbolically, what is something that is equivalent to
 The "prize" can be something completely related to the narrative, or it can
 invoke the mechanisms of the game, or both.
 
-In revealing the prize, you may "break the rules" by removing
-a cost or condition of the Tales of a Weapon move or the Study Under a Master
-move. This detour from the rules only applies to this chapter and should be
-narratively justified.
-
 Put that prize in a terribly difficult location.
 
 It could be at the end of a road of trials, or inside the cave where they
 must conquer their greatest fear, or in the clutches of their most powerful
 adversary.
 
-### Allot Shadow Points
+### Earning the Journey Point
 
-After the fictional set-up of the challenge to earn the prize,
-draw a circle around **all** of the *Shadow points*.
-To earn the *Journey point* of this chapter, all of these *Shadow points*
-must be spent before the characters get a chance to Rest.
+If the PCs win *all* the stakes of the Chapter, and there are no remaining
+Shadow points on the GM sheet at that moment, then a *Journey point* has
+been won.
 
-If you can do this, when they complete the challenge that used up the last of
-the set-aside *Shadow points*, give them the prize of this mysterious world
-and add a new *Journey point* on your GM worksheet.
+### Chapter 3 Scene procedures
 
-Note: after the circle is drawn, players making moves may cause new *Shadow
-points* to be added, but the new points should be marked outside of the circle.
+During scene establishment, use the Narrative Authority Waterfall to **answer
+3 of the following questions**:
+
+ * What makes the setting of this scene hostile, awe-inspiring, or symbolic?
+ * What details foreshadow the cost of acquiring the prize?
+ * What is the worst possible price one character might be asked to pay?
+ * What evidence of death is here, what symbol or message has that death left behind?
+
+Create the primary stake along these lines:
+
+ * Retrieve the prize
+ * Defeat a powerful guardian
+ * Rescue that which was stolen
+ * Survive a nightmarish ordeal
+
+The progress bar for the primary stake should be **10 units long**
+
+The skull progress bar should be **3 units long**
+
+For the duration of Chapter 3, **add the 4th Shadow Card and the
+Death Card to the GM Move Deck**.
+
+**When the skull progress bar increments**, answer one of the following
+questions:
+
+ * What fight now begins? What surprise takes the PCs off guard?
+   * Start a Combat Scene
+ * What flaw or corruption is revealed in the prize? Why can it not be
+   used in its current state?
+ * Who turns against the PCs or absconds with the prize?
+ * How does the environment permanently mark or change one of the PCs?
+   * Indicate this on the character sheet
+ * What cherished tool, weapon, or token is lost?
+   * One of the PCs items is permanently destroyed
+ * What abomination or monster emerges?
+   * Create a new 3-unit stake with the creature's name.
+
+**If both a Shadow Card and Death Card are flipped**, answer the question:
+
+ * Which PC is killed? How? Why?
 
 
 <a name="one-shot-ch-4" />
 
 ## Chapter 4: Return to the surface, changed.
+
+> The hero comes back from this mysterious adventure with the power to
+> bestow boons on his fellow man.
+> - Joseph Campbell, The Hero with a Thousand Faces, 1949
 
 In the final chapter, find a way to return the characters "home". It need not
 be their literal home, nor does it need to be where the adventure started,
@@ -501,7 +621,7 @@ The heroes are "home", but they are changed. They have been on an adventure,
 seen things, done things. They are now masters of a new way of existing,
 unafraid of crossing into the previously "alien" world.
 
-By dialogue or action, each player character should exhibit their change.
+By dialogue or action, each PC should exhibit their change.
 
 This can play out in many ways:
 
@@ -518,6 +638,40 @@ This can play out in many ways:
    with mirth in their step and a horse pulling sixteen barrels of mead
 
 Gain your final *Journey point* if you can hit this note.
+
+
+### Chapter 4 Scene procedures
+
+During scene establishment, use the Narrative Authority Waterfall to **answer
+3 of the following questions**:
+
+ * How is "The Hearth" revealed, reborn, or replaced?
+ * What makes this 'return' different from the starting point?
+ * What do the characters now see differently about their world or themselves?
+ * Which NPC notices that they've changed, and how do they react?
+
+Create the primary stake along these lines:
+
+ * Redeem or repair the broken or tainted prize
+ * Deliver the prize to those who need it
+ * Defend against a threat that followed you back
+ * Resolve an old conflict with your newfound powers
+
+The progress bar for the primary stake should be **5 units long**
+
+The skull progress bar should be **3 units long**
+
+**When the skull progress bar increments**, answer one of the following
+questions:
+
+ * What old conflict awaits them in the "safe" world?
+   * Start a Combat Scene
+ * What grim pursuer has followed them home?
+   * Start a Combat Scene
+ * Who among the returnees is deemed to have changed to much and is cast out?
+ * How is the prize lost or destroyed in order to restore balance?
+ * How is the rekindling of the Hearth shown to be only temporary, fragile,
+   or partial?
 
 
 # 9-hour Campaign
@@ -1963,8 +2117,9 @@ Leave enough space to track the points under each of those headings.
 
 ![GM Worksheet](images/gm_worksheet.png){ width=7cm }
 
-When a player flips and *resolves a move* with a ✅︎, gain a *Shadow point*.
 When a *FAST* move is resolved with a ✗, gain two *Shadow points*.
+Otherwise, *Shadow points* are gained as consequences of the Scene
+rules.
 
 See the Campaign Guide for rules on when to gain *Journey points*.
 
@@ -1999,9 +2154,9 @@ time to introduce and pitch them.
 > decisions you would have made if you were those characters.
 > 
 > Don't censor yourself, and don't shoot down anyone else's title down. This
-> is brainstorming, and we want the ideas to flow.
+> is brainstorming - we want the ideas to flow.
 > 
-> Stop when you've written 3 or 4 titles.
+> We'll stop when everyone has had a chance to write a couple titles.
 
 ![Touchstone List](images/touchstone_list_1.png){ width=7cm }
 
@@ -2020,9 +2175,9 @@ characters who struggle, who chafe against their current limitations in the
 world. So superhero titles or stories where protagonists are genetically
 imbued with special abilities might also need to be carefully interpreted.
 
-If a title is not recognized by someone at the table, invite the player
-who wrote the title to briefly describe the setting and what about that
-title really inspires them.
+The titles that are eventually chosen should be familiar to all the players,
+so if a title is not recognized by someone at the table, that is a mark
+against including it.
 
 > For step 2, we're going to narrow it down.
 >
@@ -2037,6 +2192,10 @@ finished.
 
 ![Touchstone List](images/touchstone_list_2.png){ width=7cm }
 
+Depending on player count, there may be more than 3 circled titles. If so,
+the GM further narrows it down to 3 titles, and writes these 3 on the
+GM Worksheet. These 3 will be the *Touchstone List*.
+
 The "Touchstone List" may be consulted when the table needs to make a
 judgment about whether facts being proposed make sense in the shared universe
 you're creating. It can also be used to simply make calls on whether a
@@ -2049,8 +2208,7 @@ in _ ?" (fill in the name of one of the titles in your Touchstone List).
 It's also something to consult for what's *not* special. If the titles on your
 list never talk about how their heroes acquire horses or boats, and instead
 just spontaneously present the characters on horseback or sailing at sea,
-then maybe your game should gloss over questions like "How did you get
-that horse?".
+then your game should skip over questions like "How did you get that horse?".
 
 The Touchstone List is also an early way that the players can signal
 to the GM the kind of fun they want to have.
@@ -2058,8 +2216,8 @@ to the GM the kind of fun they want to have.
 
 ### 3. Set Expectations
 
-Using your knowledge of the rules, read the list and call out any
-potential conflicts between circled titles and the rules.
+The GM will read the list and call out any potential conflicts between
+circled titles and the rules.
 
 Will the players expect their characters to pull off the same feats
 and use the same powers of the chosen touchstones?
@@ -2067,12 +2225,12 @@ and use the same powers of the chosen touchstones?
 *Die Hard* is a great touchstone for tone, themes, and relationships, but
 this game has rules for swords and magic, not helicopters or machine guns.
 
-You should not *reject* any circled titles, just address what's going
+This isn't about *rejection*, it's a moment to address what's going
 to be possible.
 
 Everyone will have more fun if expectations are set at the beginning.
 
-> This is our "Touchstone List": [read the circled titles]
+> This is our "Touchstone List": [read the titles]
 >
 > Imagine this mashed-up universe.
 >
@@ -2089,7 +2247,7 @@ Everyone will have more fun if expectations are set at the beginning.
 >
 > What monsters lurk, what weakness do the ambitious and powerful exploit?
 
-It's not necessary for anyone to answer these questions, they are mostly to
+It's not necessary for anyone to answer these questions, they are here to
 provoke the imagination. But if the table does start imagining out-loud, keep
 that discussion going for as long as it is productive.
 
@@ -2099,7 +2257,7 @@ that discussion going for as long as it is productive.
 >
 > Your character will start the game with skills and gifts beyond ordinary
 > folk, but they'll still have to work and struggle through adversity to
-> become really powerful.
+> become a powerful hero.
 
 
 ## Character Creation
