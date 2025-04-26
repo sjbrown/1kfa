@@ -98,6 +98,7 @@ There are 3 supported campaign lengths: **One-Shot** -- a campaign that
 begins and ends in a single session, **9-hour** -- a campaign that takes
 3 sessions, and **30-hour**, which spans up to 10 sessions.
 
+New players should start with a One-Shot campaign.
 
 ## Organization
 
@@ -157,11 +158,12 @@ like and dislike and what they seek from their gaming experience.
    players
  * Play your favourite universe - use the setting of your favourite
    swords-and-magic universe from pop culture, this game will support it!
- * The "surprise moment" happens for all players simultaneously - the
-   moment a card is flipped, the result is *immediately* visible
-   to everyone at the table
- * Layered, interlocking mechanisms - player choices move game resources
-   and probabilities around - there's depth to explore and skill to build
+ * It's full of immediate, dramatic, "surprise moments" - at the flip of
+   a card, an action's dramatic consequence is felt *immediately* for all
+   the players simultaneously
+ * There's a true *game* here to be mastered: layered, interlocking
+   mechanisms allow complexity to emerge. There is a depth to gameplay
+   that players can delve into with skillful choices and strategies.
 
 ---
 
@@ -198,11 +200,9 @@ movies and books are arranged: Star Wars, Lord of the Rings, Slumdog
 Millionaire, Die Hard, Beowulf, Lady Bird, the list goes on.
 To help you execute a successful and popular *campaign*, the mechanisms
 of the game will generate *Journey points* and *Shadow points*.
-Generally,
-when playing the game causes an event in the narrative to match the next
-step of *The Hero's Journey*, a *Journey point* is gained, and when a
-player resolves a move with a ✔, (see the section on The Deckahedron in
-the Player's Guide), a *Shadow point* is gained.
+Generally, when the narrative comes into alignment with the next
+step of *The Hero's Journey*, a *Journey point* is gained, and when
+the cards don't come up in the players' favour, a *Shadow point* is gained.
 
 More specific rules on gaining and using *Journey points* and *Shadow
 points* will follow in later sections.
@@ -212,24 +212,23 @@ a figurative "ordinary world", they go to a "mysterious world", and finally,
 they return.
 
 As the narrative is created, you will have opportunities
-to shape events. You decide how the world and the NPCs react to the actions of
-the PCs, and you have the freedom to describe the "meanwhile" -- all the
-goings-on "off-screen".
-These are the powers you will need to use to pull the narrative into a
-multi-chapter structure, and in each chapter, to earn *Journey points*.
+to shape events. It is primarily the GM who decides how the world and the
+NPCs react to the actions of the PCs, and they also have opportunities to
+describe the "meanwhile" -- all the goings-on "off-screen".
+Use these powers to influence the narrative into a multi-chapter structure,
+and in each chapter, to earn *Journey points*.
 
 This is the exciting challenge offered to those taking on the mantle of GM.
 Using your skills at improvisation and interpretation to cast the actions of
 PCs into the desired chapter of the story, finding or inventing hidden
-meanings, and tying it all up into repercussions of epic importance is like
-solving a living, breathing puzzle.
+meanings, and polishing it all up into repercussions of epic importance.
+Serving as GM should feel like solving a living, breathing puzzle.
 
 The game's incentives tie the GM tightly to *The Hero's Journey*.
 The other players may just be along for the ride, or they may also want to
-contribute to the structure of the narrative. Be on the lookout for signals
-that they're into this kind of fun, and use what they express about themes,
-relationships, emotional tone, conflicts, and backstory to co-create
-the journey.
+contribute to the structure of the narrative. Use Ludic Listening to
+co-create the journey, noting what players express about themes,
+relationships, emotional tone, conflicts, and backstory.
 
 While you are *incentivized* to produce a narrative with this structure,
 due to the unpredictable nature of what other players will say and the
