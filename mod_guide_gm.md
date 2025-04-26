@@ -2004,7 +2004,7 @@ It should also help teach the rules.
    Try to get the PCs to attempt *Mix It Up* or *Volley*
  * When a PC loses Stamina, explain that losing 10 Stamina points
    will mean the character is incapacitated
- * The brother & sister may trigger *Discern* and *I Know This* moves
+ * The brother & sister may trigger *Discern* and *Unfold Mystery* moves
    when they try to reveal each others' identities
  * The *Discern* move often comes up when having a look around Sarukkan's
    Chamber itself.
@@ -3383,7 +3383,7 @@ cleverness.
 The cleverness can come from the players, by analyzing the facts of the
 situation out-of-character, or the cleverness can come from the characters,
 by their fictional actions and by using moves like *Discern*
-and *I Know This*.
+and *Unfold Mystery*.
 
 Here are some things to think about when presenting a puzzle in your game.
 (with thanks to The Art of Game Design by Jesse Schell)
@@ -3404,8 +3404,8 @@ Make it easy to get started interacting with the puzzle. The players should
 want to examine and touch the mechanisms that solve it.
 
 Does it look inviting to touch? Does it look attractive? Does it look like
-something they've seen before? (This might be an opportunity for *I Know
-This*)
+something they've seen before? (This might be an opportunity for
+*Unfold Mystery*)
 
 Don't make it dangerous to interact with. The danger should be in *not*
 interacting with the puzzle.

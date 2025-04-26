@@ -36,7 +36,7 @@ h2 {
 
 *email sjb@ezide.com*
 
-**Cross together into an unknown world, share your fantastic story, and
+**Cross through together into an unknown world, share your fantastic story, and
 return a hero of myth!  Welcome to A Thousand Faces of Adventure!**
 
 <!--
@@ -50,13 +50,12 @@ Want to try improv?  Welcome to A Thousand Faces of Adventure!**
 
 # Welcome to Roleplaying
 
-A Thousand Faces of Adventure is a tool for telling a story. This story
-is written live by you and your friends, sitting around a table.
-
+Through you and your friends, A Thousand Faces of Adventure tells a story.
 This story is improvisational, interactive, and collaborative.
 
-The rewards for playing are laughter and excitement while you play,
-followed up with years of warm conversations that start with *"Remember that
+Playing A Thousand Faces of Adventure will brighten your table with
+laughter and excitement, and kindles a hearth to warm your friendships
+for years to come with recollections starting with *"Remember that
 time we were playing A Thousand Faces of Adventure and..."*
 
 <div class="note">
@@ -547,8 +546,6 @@ for the player who played it.
 If there are any negative consequences (damage, danger, etc) from the
 result, all the participating characters must suffer them.
 
-Supporting players may not Do a Flashback on Teamwork Flips.
-
 
 ## Flips only happen when the situation is uncertain or risky
 
@@ -631,7 +628,7 @@ In any kind of real-world boxing or martial arts match, the later rounds
 find the athletes worn down, their footwork less animated, and their
 guard drops more frequently.
 The contest is not always decided with a knockout punch, it often comes
-down to who can better endure the exertion.
+down to who can endure.
 
 In this spirit, in-game combat typically causes cards to be lost to the
 *Exhaustion pile*, and the players are encouraged to narrate these
@@ -1065,50 +1062,37 @@ Master, they also receive the item Sigil of the Living Light.
 
 # Notes on Moves
 
-## Do a Flashback
+## Destiny Forewritten
 
-![Do a Flashback card](images/move_do_a_flashback.png){ width=2.5inch }
+![Destiny Forewritten card](images/move_destiny_forewritten.png){ width=2.5inch }
 
 Sometimes you plan out something really great, and then you resolve
 a flip, and don't get the results you need.
 
-A Flashback serves as sort of a "mulligan" in those situations, but it also
-provides a way to develop your character's backstory and personality.
+Invoking Destiny serves as sort of a "mulligan" in those situations, but it
+also provides a way to develop your character's backstory and personality.
 
-After a player makes a flip, and before the GM describes the consequence of
-the flip, the player can declare they're going to `do a flashback`.
+After a player makes a flip, and before the consequences of the flip are
+described, any player can declare, "I invoke Destiny!". It may be a player
+other than the player that flipped.
 
-The player spends 1 XP. Then they describe how something
-that happened in the past particularly prepared their character for
-this situation.
+After the declaration, the prior flip is ignored. (It is not *resolved*.)
 
-Then the original flip is ignored, and a new flip is executed, using the same
-advantage or disadvantage as the original flip.
+The declaring player then answers one of these questions about their character:
 
-The player may then spend additional XP to "bump up" the result.
-Each XP spent increases the result, from ✗ to ✅︎ to ✔✔ to ✔✔✔.
+ * What special preparations equipped them for this moment?
+ * What aspect of their backstory empower them against this challenge?
+ * How does their bond with another PC spur them into action?
+ * What advantage do they take of another character's personality?
 
-Technically, this flip is *resolved* only after the XP are spent, so if the
-new card was an *XP card*, the player should take an XP from the supply only
-*after* they finished spending their XP to "bump up" the results.
+Based on the answer, the GM determines which attribute will be tested by
+a new flip.
+The declaring player must spend between 1-3 XP to make a new flip, with one
+level of advantage when spending 2 XP, or two levels of advantage for 3 XP.
 
-### Mercy Flashbacks
-
-Players may find themselves in a situation where they forgot to do something
-when they had the chance, like use healing magic while they were resting,
-or leveling up a move before they left a town, or getting some key
-information from an NPC before that NPC died.
-
-As long as the player and the GM both agree that the player had the necessary
-resources when the action was available, the GM may allow the player to
-spend those resources and effect that action now, as a "Mercy Flashback".
-
-The player must spend one XP, in addition to whatever cost the action incurs.
-
-Even the most conscientious of us sometimes loses track of small details,
-so the cost is kept "cheap" at only one XP. But there must be a cost.
-It is necessary to keep the flow of the game going. This is a game of improv
-storytelling, and improv means rolling with the punches sometimes.
+The original move is then *resolved* with the result of this new flip.
+If the declaring player was different from the player that triggered the move,
+any results like XP go to the player who played the resolving card.
 
 
 ## Critical Success
@@ -1676,10 +1660,48 @@ When a player first declares that they are going to Bravely Run Away
 
 `TODO: finish`
 
- * Starting player declares
  * Other players declare whether their character joins
- * One character - the one with the most Items + PACK is declared
-   the "rabbit"
+ * One character is declared the "rabbit":
+   * If the PCs are being pursued: whichever PC triggered Bravely Run Away
+   * If the PCs are chasing an NPC: whichever PC has the most Items + PACK
+
+ * Take the top card of your deckahedron, and choose any orientation. Place
+   it in front of you.
+ * Place shadow tokens on the center of the card equal to the foe's stamina bid.
+   This cannot exceed the foe's stamina.
+ * Place green tokens on the center of the card for the participating players'
+   stamina bid. The rabbit may bid an amount up to their current stamina. Each
+   other player may bid one stamina.
+ * Take the next card from your deckahedron, and place it either *away from*
+   the player or *closer to* the player. Such that one zodiac symbol matches.
+ * If *away from*, move the foe bid pile to the center of the new card, leaving
+   behind a token for every ✔ between where the pile was to where it lands.
+     * If the foe bid pile is emptied, the players have won the Pursuit
+ * If the card must be placed *closer to* the player, move the players' bid
+   pile to the center of the new card, and for every ✔ between the card
+   centers, a participating player must volunteer to take all of those tokens
+   and place them next to their deckahedron until the end of the pursuit.
+   A single player must take all the tokens; the amount cannot be split between
+   two players.
+     * If the players' bid pile is emptied, the players have lost the Pursuit
+ * As each card is placed, narrate how the scene changes in a way that
+   corresponds to the mechanical outcome.
+ * If the card *cannot* be placed, the GM makes a move. (equivalent of flipping
+   an ✗)
+ * Continue placing cards until the Pursuit ends in one of the above outcomes
+
+## Ending the Pursuit
+
+ * All cards that have been placed in front of the rabbit go into their discard
+   pile
+ * Whether the Pursuit is won or lost, all players with tokens next to their
+   deckahedron must expend that much stamina
+
+ * If the players lost the pursuit, a Combat Scene begins, with the PCs either
+   cornered or surrounded
+ * If the players won the pursuit, a ✔ is added to the Scene Progress Bar. The
+   GM will narrate the outcome.
+
  * Best 3 of 5 rounds
  * Rabbit flips solo
    * Add the rabbit's Str + Dex, then subtract their encumbrance penalty (the

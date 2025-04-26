@@ -201,7 +201,7 @@ class Discern(Card):
     * What here is not what it appears to be?
     '''
 
-class I_Know_This(Card):
+class Unfold_Mystery(Card):
   custom_number = 5
   attr = 'Int'
   slash_check = '''
@@ -220,7 +220,7 @@ class I_Know_This(Card):
     |
     (You may always do this through the normal course of playing the game,
     but when the GM doubts the fact or judges that the fact would provide
-    significant benefit to the players, the I Know This move is triggered)
+    significant benefit to the players, the Unfold Mystery move is triggered)
     |
     |
     On a ✅, the GM may ask you "How do you know this?".

@@ -1,9 +1,27 @@
 # Toolbox
 
 
-## Game is Conversation
+## Zeroth Principle
+
+Game As Conversation
 
 You already know most of the rules
+
+Politeness
+
+Turn taking
+
+Content Boundaries
+
+Bid for connection
+
+Yes, and
+
+Compromise
+
+Say No
+
+Accept rejection with grace
 
 
 ## Narrative Authority Waterfall
@@ -26,4 +44,9 @@ Staying on track
 How to choose / volunteer
 
 
-## Listen for the Kind of Fun
+## Ludic Listening
+
+Listen for the Kind of Fun
+Eye Contact metaphor (Ludic contact - choice contact)
+Insert meaning into the game
+

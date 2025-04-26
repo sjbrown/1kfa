@@ -14,7 +14,7 @@
    viewBox="0 0 744.09448819 1052.3622047"
    id="svg2"
    version="1.1"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
    sodipodi:docname="playtest_thankyou.svg">
   <defs
      id="defs4">
@@ -68,16 +68,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.43639908"
-     inkscape:cx="1154.087"
-     inkscape:cy="409.80118"
+     inkscape:zoom="1.234323"
+     inkscape:cx="554.20605"
+     inkscape:cy="330.12651"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1600"
-     inkscape:window-height="876"
+     inkscape:window-width="1920"
+     inkscape:window-height="1016"
      inkscape:window-x="0"
-     inkscape:window-y="24"
+     inkscape:window-y="27"
      inkscape:window-maximized="1"
      inkscape:snap-nodes="false"
      inkscape:snap-bbox="true"
@@ -90,7 +90,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -179,8 +179,7 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Sawasdee;-inkscape-font-specification:Sawasdee;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="161.40558"
        y="503.53778"
-       id="text4620"
-       sodipodi:linespacing="0%"><tspan
+       id="text4620"><tspan
          style="font-size:15px;line-height:1.25"
          sodipodi:role="line"
          id="tspan4622"
@@ -235,12 +234,12 @@
          sodipodi:role="line"
          x="161.40558"
          y="691.03778"
-         id="tspan26750">If you want to follow the development, join me on Twitter</tspan><tspan
+         id="tspan26750">If you want to follow the development, join me on Mastodon</tspan><tspan
          id="tspan1901"
          style="font-size:15px;line-height:1.25"
          sodipodi:role="line"
          x="161.40558"
-         y="709.78778">at @boardcrafting</tspan><tspan
+         y="709.78778">at https://mastodon.social/@sjbrown</tspan><tspan
          style="font-size:15px;line-height:1.25"
          sodipodi:role="line"
          x="161.40558"

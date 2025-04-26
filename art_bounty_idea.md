@@ -13,4 +13,4 @@ Use an Art Bounty Point
 
  also vote on artist
 
-Use Twitter - votes happen by tweeting or by liking tweets
+Use Social Media - votes happen by tweeting or by liking tweets

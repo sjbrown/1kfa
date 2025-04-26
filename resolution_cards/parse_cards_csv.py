@@ -153,22 +153,22 @@ def parse_custom_number(d2):
     # Booklet pages come in a certain order
     custom_order = [x.strip() for x in '''
       defy danger
-      take a breather
-      bravely run away
       discern
-      i know this
-      defend
+      unfold mystery
       parley
-      do a flashback
       good thing i brought...
+      destiny forewritten
       mix it up
       volley
+      defend
+      take a breather
+      bravely run away
       rest
       seek help
       shop / procure
       sharpen & stitch
       study under a master
-      craft a weapon
+      tales of a weapon
     '''.strip().split('\n')]
     if d2['title'].lower() in custom_order:
         d2['custom_number'] = 1 + custom_order.index(d2['title'].lower())

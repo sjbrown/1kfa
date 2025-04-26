@@ -267,7 +267,7 @@ class TieCountChecks(object):
             result = cmp(tally_a[i], tally_b[i])
             if result != 0:
                 if i > 0:
-                    #print tally_a, tally_b
+                    #print( tally_a, tally_b )
                     cls.kind_distribution[i] += 1
                 cls.tie_distribution[contest_ties] += 1
                 cls.ties += contest_ties
@@ -630,42 +630,42 @@ def zjoin_2(card_a, card_b):
                 match_a_index = a_index
                 match_b_index = b_index
 
-    print '   ' * (4 - match_a_index), card_a
-    print '   ' * (4 - match_b_index), card_b
+    #print( '   ' * (4 - match_a_index), card_a )
+    #print( '   ' * (4 - match_b_index), card_b )
 
     return match_a_index, match_b_index
 
 
 def join_3_in_a_line(card_a, card_b, card_c):
-    print '---'
+    print( '---' )
 
     def line_2(card_a, card_b):
         match_a_index, match_b_index = zjoin_2(card_a, card_b)
 
         line_a_index = (match_a_index + 2)%len(card_a)
         line_b_index = (match_b_index + 2)%len(card_b)
-        #print 'avail', card_a, 'index', line_a_index, 'value', card_a[line_a_index]
-        #print 'avail', card_b, 'index', line_b_index, 'value', card_b[line_b_index]
+        #print( 'avail', card_a, 'index', line_a_index, 'value', card_a[line_a_index] )
+        #print( 'avail', card_b, 'index', line_b_index, 'value', card_b[line_b_index] )
 
         return card_a[line_a_index], card_b[line_b_index]
 
     possible_a, possible_b = line_2(card_a, card_b)
     win_a_b_c = possible_a in card_c or possible_b in card_c
-    print card_a, card_b, card_c, (win_a_b_c and 'WIN A B C')
+    print( card_a, card_b, card_c, (win_a_b_c and 'WIN A B C') )
 
     possible_a, possible_c = line_2(card_a, card_c)
     win_a_c_b = possible_a in card_b or possible_c in card_b
-    print card_a, card_c, card_b, (win_a_c_b and 'WIN A C B')
+    print( card_a, card_c, card_b, (win_a_c_b and 'WIN A C B') )
 
     possible_b, possible_c = line_2(card_b, card_c)
     win_b_c_a = possible_b in card_a or possible_c in card_a
-    print card_b, card_c, card_a, (win_b_c_a and 'WIN B C A')
+    print( card_b, card_c, card_a, (win_b_c_a and 'WIN B C A') )
 
     return win_a_b_c, win_a_c_b, win_b_c_a
 
 
 def join_3_in_a_triangle(card_a, card_b, card_c):
-    print '---'
+    print( '---' )
 
     def tri_2(a, b):
         match_a_index, match_b_index = zjoin_2(a, b)
@@ -686,20 +686,20 @@ def join_3_in_a_triangle(card_a, card_b, card_c):
 
     pair1, pair2 = tri_2(card_a, card_b)
     if pair1 in edges(card_c) or pair2 in edges(card_c):
-        print edges(card_c), 'needles', pair1, pair2
-        print card_a, card_b, card_c, 'WIN A B C'
+        print( edges(card_c), 'needles', pair1, pair2 )
+        print( card_a, card_b, card_c, 'WIN A B C' )
         return True
 
     pair1, pair2 = tri_2(card_a, card_c)
     if pair1 in edges(card_b) or pair2 in edges(card_b):
-        print edges(card_b), 'needles', pair1, pair2
-        print card_a, card_b, card_c, 'WIN A C B'
+        print( edges(card_b), 'needles', pair1, pair2 )
+        print( card_a, card_b, card_c, 'WIN A C B' )
         return True
 
     pair1, pair2 = tri_2(card_b, card_c)
     if pair1 in edges(card_a) or pair2 in edges(card_a):
-        print edges(card_a), 'needles', pair1, pair2
-        print card_a, card_b, card_c, 'WIN B C A'
+        print( edges(card_a), 'needles', pair1, pair2 )
+        print( card_a, card_b, card_c, 'WIN B C A' )
         return True
 
 
@@ -755,9 +755,9 @@ def analyze_exes_and_checkmarks(svg=False, lost_stamina=0, flashback_percent=0.0
 
     all_percents = []
     for side in ['a', 'b', 'c', 'd']:
-        print ''
-        print 'Side ', side, ' FB %', flashback_percent
-        print ''
+        print( '' )
+        print( 'Side ', side, ' FB %', flashback_percent )
+        print( '' )
         #for mod in [-2, -1, 0, 1, 2]:
         for mod in [ 0]:
             mod_results = results.copy()
@@ -791,7 +791,7 @@ def analyze_exes_and_checkmarks(svg=False, lost_stamina=0, flashback_percent=0.0
 
             if svg:
                 group_id = '%s-mod%s' % (side, mod)
-                print '<g id="%s">' % group_id
+                print( '<g id="%s">' % group_id )
                 r = '''<rect style="fill:#{color};stroke:none;"
                     id="{rect_id}"
                     width="{width}"
@@ -821,29 +821,29 @@ def analyze_exes_and_checkmarks(svg=False, lost_stamina=0, flashback_percent=0.0
                         4: '44aa00',
                     }[j]
                     int_val = int(round((100*mod_results[j])/float(tries)))
-                    print r.format(
+                    print( r.format(
                         rect_id=(group_id + '-' + str(j)),
                         width=int_val,
                         x=x,
                         y=y,
                         color=color,
-                    )
+                    ) )
                     if int_val > 0:
-                        print t.format(
+                        print( t.format(
                             text_id=('text' + group_id + '-' + str(j)),
                             x=x*0.4,
                             y=y+5,
                             value=int_val
-                        )
+                        ) )
                     x += int_val
-                print '</g>'
+                print( '</g>' )
 
             else:
-                print 'mod: ', mod
-                print '✗✗', pct(mod_results[1], tries)
-                print '✗ ',  pct(mod_results[2], tries)
-                print '✔ ',  pct(mod_results[3], tries)
-                print '✔✔', pct(mod_results[4], tries)
+                print( 'mod: ', mod )
+                print( '✗✗', pct(mod_results[1], tries) )
+                print( '✗ ',  pct(mod_results[2], tries) )
+                print( '✔ ',  pct(mod_results[3], tries) )
+                print( '✔✔', pct(mod_results[4], tries) )
 
             percents = { x:pct(mod_results[x], tries) for x in mod_results.keys() }
             all_percents.append(percents)
