@@ -40,7 +40,8 @@ h2 {
 
 # Should You Read This Guide?
 
-This guide is intended for a Game Master (GM).
+This guide is intended for a Game Master (GM). You should have already
+read the Table Guide before you start this one.
 
 Read this guide if you are the volunteer among your friends to run the
 game of A Thousand Faces of Adventure (aka 1kFA).
@@ -49,7 +50,6 @@ game of A Thousand Faces of Adventure (aka 1kFA).
 
 Playing as a GM, you will:
 
- * pitch the idea of playing A Thousand Faces of Adventure to your friends
  * know, teach, and follow the rules
  * describe scenes
  * give Non-Player Characters (NPCs) names, voices, motivations,
