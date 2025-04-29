@@ -128,11 +128,9 @@ of conveying just what the game is and how it is played.
 
 This guide will equip you with the following information:
 
- * The Pitch
  * Campaigns: The structure of the narrative
  * Guidance: How to execute your role as GM
  * The procedure to walk first-time players through
- * The procedure for starting a new game
  * Procedures for specific game activities
  * Appendices - extra detail and optional rules
 

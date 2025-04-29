@@ -118,6 +118,43 @@ An NPC is any character controlled by the GM to populate the world,
 create challenges, or offer opportunities for the PCs.
 
 
+## What is a roleplaying game?
+
+In *A Thousand Faces of Adventure*, you and your friends will collaborate
+to tell an improvisational, interactive story. It is built moment-by
+moment through conversation, imagination, and shared decisions.
+
+The story you create won’t be a carefully scripted novel. It doesn't need
+to be high art -- it’s a living thing, shaped by everyone at the table.
+
+
+## How to Make a Great Story
+
+Imagine your audience is the inner children of everyone at the table.
+
+What would thrill you if you were eleven years old again? Think of the
+awe and wonder you felt watching a spectacular Spielberg movie -- or even
+the scrappy, kinetic energy of a Sam Raimi film.
+
+When it’s your turn to narrate, think about what might give your friends
+a rush: action, suspense, twists, tension, triumphs!
+
+Always remember: it's improv, not some blueprinted, pre-engineered thing.
+**Have faith in your friends, and you are sure to delight at how the
+emerging plot solidifies, and how real the characters become.**
+
+
+## How Play Works
+
+Play is a conversation. The GM and Players take turns imagining the
+world, acting through their characters, and reacting to each other.
+
+Sometimes the rules will chime in, asking you to answer direct questions,
+flip cards, or move tokens.  But most of the time, you'll just be **saying
+things**, **imagining**, and **building the story together.**
+
+
+
 # Should You Read This Guide?
 
 Yes. Everyone sitting down to play *A Thousand Faces of Adventure* should
@@ -176,6 +213,10 @@ into a fellowship, and a game into a living myth.
 guidance. It’s the ground under the game: the recognition that *we are
 people, sitting at a table together, playing a game built on 
 conversation.*
+
+> "We can easily imagine people amusing themselves in a language-game
+> with imaginary objects."
+> - Ludwig Wittgenstein, Philosophical Investigations
 
 In classic RPG traditions, "Rule Zero" often gave the GM ultimate
 authority. In *A Thousand Faces of Adventure*, we turn that concept

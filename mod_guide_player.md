@@ -48,133 +48,317 @@ Want to try improv?  Welcome to A Thousand Faces of Adventure!**
 1kfa is a structured improv game of heros and adventure.
 -->
 
-# Welcome to Roleplaying
+# A World Needs Inhabitants
 
-Through you and your friends, A Thousand Faces of Adventure tells a story.
-This story is improvisational, interactive, and collaborative.
+The world is forged. The rivers run, the stars hang in the sky, and the winds whisper across empty lands.
 
-Playing A Thousand Faces of Adventure will brighten your table with
-laughter and excitement, and kindles a hearth to warm your friendships
-for years to come with recollections starting with *"Remember that
-time we were playing A Thousand Faces of Adventure and..."*
+But it is not alive yet.\
+It needs heroes — wanderers, dreamers, schemers, fools.\
+It needs you.
 
-<div class="note">
+Now that you've completed the Universe Creation activity in the Table Guide, it's time to bring your Player Character (PC) into being:\
+someone to walk the roads, clash with dangers, chase dreams, and carve their name into the myths still waiting to be told.
 
-### Skip me to character creation!
+---
 
-If you are an experienced RPG player you might want to jump ahead past this
-indroductory hulabaloo and rules reference, and start playing with the first
-activity available to you. Typically in RPGs, this means "character
-creation", which is often done as a solo, "homework" activity before the
-whole table comes together to play.
+# Should You Read This Guide?
 
-A Thousand Faces of Adventure is designed to be played by a group of friends
-the moment everyone's together at the table. Character creation will be an
-interactive activity that requires your friends. Open the GM Guide and look
-under the **Begin a Campaign** section for more details.
+If you’re stepping into the role of **Player**, this guide is for you.
 
-This Player's Guide is a manual of all the procedures a non-GM player might
-need during play.
+Your main job will be to bring a character to life through the choices you make and the words you say.\
+You'll be part of a *conversation*, helping shape the story not only through action, but through imagination, asking questions, and chiming in when someone inspires you.
 
-</div>
+Think of your character like a hero in a movie — and use them as if you're the actor, or the writer, or the director. The stance will vary with what feels right to you at the moment.\
+You'll be asked to describe what your character says, does, feels, and remembers.\
+You'll contribute to building the world, responding to challenges, and making the story feel real and alive.
 
-This game falls in the category of games called *conversation*. It may seem
-weird to think of *conversation* as a "game", but it will help you understand
-how everything fits together.
-This perspective lets you rely on your existing knowledge and expertise at
-conversation "games".
-Life has already taught you about how, in a conversation, you take turns,
-offer spontaneous ideas, interrupt politely, and listen with interest,
-so you're already an expert at the foundational rules of this game.
+If that sounds exciting, *A Thousand Faces of Adventure* is built for you.\
+This game invites players who are ready to improvise with their friends, and breathe life into a world of trials, triumphs, and transformation.
 
-Different from the free-ranging conversation-games of our typical lives,
-however, this conversation-game provides structured activities, with goals.
-The three main activities are:
+---
 
- * Brainstorm to create a setting for a story
- * Assemble game components into characters to inhabit the story
- * Improvise and follow rules to elaborate the events of the story
+# What This Guide Does
+
+This guide will prepare you for play by covering:
+
+- **The Physical Components**\
+  Learn about your Deckahedron, character sheet, move cards, tokens, and how to set up your play area.
+
+- **Character Creation**\
+  Step-by-step procedures to build a character ready for adventure.
+
+- **The Player's Toolbox**\
+  Practical narrative tools and procedures — including useful principles to support roleplay, and the nuts-and-bolts rules for how to use all of your physical components.
+
+- **Reference Materials**\
+  A glossary, detailed explanations of move cards, and visual references to help you find what you need during play.
 
 
-## How to make a great story
+# Components
 
-Imagine the audience for this story is the inner children of all the players.
-What evokes the feelings we had when we were children playing pretend? Can
-you remember being 11 years old and watching a spectacular Steven Spielberg
-movie?  Or maybe a cheap-but-awesome Sam Raimi movie?
+# Character Creation
 
-You are going to collaborate with all the other players to make this story,
-so when it's your turn to narrate, think of what will give your friends around
-the table a thrill, put them in suspense, ratchet up their feelings of tension,
-or make their jaws drop with awe.
+---
 
-Sometimes inner children get a big kick out of blood and guts.
-Your inner child might giggle at the "adult" scenes in an HBO series.
-If you don't know what topics your friends consider "off-limits",
-it is a good idea to ask and tell before you start playing.
+# Character Creation
 
-The story that emerges is not a precisely crafted
-thing. That's ok. It doesn't have to be high art or even a cartoon on Adult
-Swim. It gets shaped by each player, and when your turn comes, you
-adapt, do your best improvisational
-["Yes, and"](https://en.wikipedia.org/wiki/Yes%2C_and...)
-, and see where it goes from there.
-**It might sound like chaos, but with some faith in your friends, you
-will delight at how the plot solidifies, and how real the characters
-become.**
+## Formatting Note
+
+This section uses the same structure as Universe Creation:\
+**One person reads aloud**, while the rest of the table follows along and participates.
+
+For Character Creation, that reader should be the **GM**.\
+The GM reads aloud the boxed or blockquoted text, guiding the players step-by-step through the process.
+
+These read-aloud sections are written to be spoken exactly as written, but feel free to paraphrase if it helps the tone or flow at your table.\
+The goal is to make this process easy, shared, and engaging — so everyone can focus on bringing their characters to life.
+
+Just like before, you don’t need to rush. Feel free to pause, ask questions, go off on tangents, or laugh together. Then recenter and keep going. You're building something.
+
+---
+
+## Choose Move Cards
+
+Get the deck of Move Cards from the supply.\
+If you are playing a One-Shot campaign, remove any cards with a **“9”** or **“30”** printed in the corner.
+
+Lay out all three cards marked with an **“A”** in the corner.
+
+Then add more cards depending on the number of PCs:
+
+| Number of PCs | Additional Cards |
+| ------------- | ---------------- |
+| 1             | 3                |
+| 2             | 6                |
+| 3             | 8                |
+| 4             | 13               |
+| 5             | 15               |
+
+You can select these additional cards at random or let the GM curate the spread.
+
+Lay the additional cards *on top of* the three initial ones, forming **three
+“streams”**. Each new card should leave only the *title* of the lower
+card visible; the new card should cover up the details of the card below it.
+You can rotate the streams if needed, so players on opposite sides of the
+table can read them right-side-up.
+
+The GM reads aloud:
+
+> These are called Move Cards. You're going to take turns choosing, and I’ll be here to explain how they work and answer questions.
+>
+> This process will give each of you three Move Cards — your character’s special starting gifts, talents, or powers.
+>
+> Later in the game, you’ll be able to “Study Under a Master” to gain more.
+>
+> There are a lot of choices here, and we don’t want to get bogged down in the details. For now, you’re just choosing by title.\
+> Read through *just the titles* and ask yourself, “Does this sound like something I’d want my character to do?”
+>
+> We’ll learn how the cards work later.\
+> This game is about improvisation, not perfection — so go with your gut and pick three cards that look fun to you.
+
+Players should use **The Rule Beneath All Rules** to determine pick order.
+
+Once each player has three Move Cards, move on to the next step. Hold onto them — these are the seeds of your character's legend.
 
 
-## Specifically, What to do
+## Choose Dex / Int / Str
 
-To play the game, one person will take on the role of the
-Game Master, or "GM".  The other people will be called simply "Players".
+Each character has three core traits: **Dexterity (Dex)**, **Intelligence (Int)**, and **Strength (Str)**.
+These traits don’t restrict what you can attempt — they shape how your character approaches challenges, and how the consequences unfold.
 
-### The GM
+You have **6 points** to distribute across your three traits.
+Each point increases a trait’s *rank* — from **Anvil** to **Blades**, **Crown**, and up to a maximum of **Dragon**.
 
-The GM's job is to help everyone follow the rules of the game, and
-say stuff. Occasionally they will write notes and scribble some quick
-numerical facts.
+The ranks are:
 
-The imagined world and its inhabitants will be narrated mainly by the GM.
+- **Anvil** (1)
+- **Blades** (2)
+- **Crown** (3)
+- **Dragon** (4)
+
+Each trait must be assigned at least **Anvil (1)**.
+No trait may go higher than **Dragon (4)**.
+
+The GM reads aloud:
+
+> Your character has three traits: Dexterity, Intelligence, and Strength.
+> Find those on the character sheet.\
+> They describe *how* your character acts, solves problems, and overcomes
+> adversity.
+>
+> You’ll assign **6 points** across these three traits to give them a rank.
+>
+> - You must assign at least **Anvil (1)** to each trait.
+> - No trait can go above **Dragon (4)**.
+> - You have exactly 6 points to spend.
+>
+> Think about what your character relies on when the world turns against
+> them. Are they fast? Cunning? Strong?\
+> What are they not so great at?
+
+Once all players have chosen their trait ranks, move to the next step.
 
 
-### The Players
+## Choose a Name
 
-Player, your narrative contribution will mainly be your character.
+Now that the PCs have their basic shape, it’s time to choose their names.
 
-![The player's job](images/player_job.png){ width=2.5inch }
+The GM reads aloud:
 
-Most of your time will be spent saying stuff. You are part of a conversation.
-Ask questions, use your imagination, chime in when someone inspires you.
-Think about your character like a hero of a movie, and try playing as
-the writer of the movie, or the director, or immerse yourself like a method
-actor standing in the character's boots and seeing with their eyes.
+> Now let’s give your character a name.
+>
+> You can invent one, borrow from your favorite fantasy stories, or draw
+> inspiration from the Touchstone List.
+>
+> Don’t worry about getting it perfect. Choose something that feels fun
+> to say, or that makes you curious about who this person might become.
 
-A Thousand Faces of Adventure invites you to:
+Players should write their character’s name on their sheet, bold and
+large so everyone around the table can read it, before continuing.
 
- * Describe your character and their actions
-   * Act out their dialogue
-   * Describe *how* they act
-      - flourishes and stunts
-      - their facial expressions, voice, and body language
-   * Tell what they say / hear / see / smell / taste / feel
-   * Describe their thoughts & memories
-   * Chime in when they interact with or support the other characters
- * Tell parts of the story
-   * Tell your character's backstory
-   * Contribute ideas and assert facts when the GM asks questions
-   * Refer to your **moves** to generate more ideas and see what boundaries you can push
 
-As the conversation unfolds, the rules will chime in as well.  When that
-happens you will be called do things beyond just "saying stuff":
+## Cut from the Worldcloth
 
- * Flip cards from your Deckahedron
- * Move tokens around
- * Roll dice
+At this point, the characters have names, attributes, and a few special Move Cards. Now it’s time to sketch the outline of who they are in the world — where they came from, what they care about, and what attachments they have to the setting.
 
-This guide will teach you how to do those things.
+The GM reads aloud:
 
-### Your Character: A Scrappy Adventurer
+> After players announce their name, it’s time to cut your character from the cloth of this world — to define what makes them stand apart.
+>
+> I’m going to ask each of you a couple of questions. Your answers will help the rest of us get a feel for your character.
+
+The GM doesn't ask each question to each player; they address a question to just one player, then move on, asking the next question to the next player, and so forth. Remember the Rule Beneath All Rules here: allow space for interruptions, tangents, and riffing, and then re-center the table.
+
+For each bulleted question, add a follow-up question of your own. How do the players' responses relate to the established Touchstone List? What further detail would you like to know? Follow your curiosity. This will warm up your improvisational energy and spark ideas for the opening scene of your story.
+
+If you can't think of a follow-up question, you can default to this one:
+
+- Why does that complicate your character's life?
+
+This conversation might also add details to the world, such as what kinds of species and religions exist.
+
+- What species is your character — human, or something else from our Touchstone List?
+- Is your character righteous, hewing to moral norms, or do they get their hands dirty, taking opportunities wherever they find them?
+- What work or calling defines your character’s life — how do they earn respect, survive, or make trouble?
+- Does your character believe in gods? Is there some kind of spiritual practice or religious organization for them?
+- What kind of life does your character know best — wandering the wilds, the streets of a city, or somewhere in between?
+- How old was your character when they had their closest encounter with Death? Were they its witness -- or its agent?
+- What station does your character hold in the world’s eyes — and what happens when they step into a crowd?
+
+Not everyone will get asked every question, but everyone will *start thinking about* how each of these questions applies to their character. With some depth and dimensionality in mind, a player will be better able to imagine creative outcomes to the situations their character is confronted with.
+
+As you're asking the players these questions, practice **Ludic Listening** and also measure the expectations they have for the game.
+
+This is a game where characters start off as scrappy adventurers. If a player is telling you their character is a fire demon, a ten-year-old shoe-shine boy, or a computer hacker, a conversation is needed to establish how that character can fit into the rules.
+
+
+## Fateful Moments
+
+The GM reads aloud:
+
+> Since this is a game about taking risks, I'm going to give you an opportunity to get some bonuses when you get risky.\
+> We're going to create what are called **Fateful Moments**.
+>
+> A Fateful Moment is a thematic goal your character might try to achieve during the story.\
+> You'll write it in the designated spot on your character sheet, and place an **XP token** and a **✔ token** there as well.
+>
+> When your character *takes a big risk* to pursue this goal, you’ll earn XP, and the ✔ token will advance a scene’s progress bar.\
+> (We’ll explain how those effects work later.)
+>
+> To choose your Fateful Moment, the player on your left will read you two options from a list. You’ll pick one, and that becomes your character’s personal Fateful Moment.  You then read propose 2 different options to the player on your right and everyone will take their turn like that.
+
+Here are the available Fateful Moments:
+
+- Expose an embarrassment
+- Locate a prize
+- Extract a secret
+- Become enamored
+- Sell your services
+- Break down a barrier
+- Choose a side
+- Be an agent of justice
+- Take pity on the desperate
+- Start a grudge
+- Consort with the unsavory
+- Believe an impossible claim
+- Get called out on your boasting
+
+Once chosen, players keep their XP and ✔ tokens on the Fateful Moment spot of their sheet. They are not available to spend yet.
+
+When a character first *takes a big risk* in pursuit of their Fateful Moment — by the method or for the reason written on the Fateful Moment spot — the player:
+
+- Claims the XP token
+- Advances a ✔ token to a scene’s progress bar of their choice
+
+Fateful Moments are especially helpful for players newer to roleplaying games — they provide a personal goal that can inspire bold choices and keep the story moving.
+
+
+# Weapons and Items
+
+The GM reads aloud:
+
+> Now let’s give your characters some equipment.
+>
+> We'll start with the mandatory stuff. First of all, everyone gets 2 **Pack Cards**. You can use these with the *"Good Thing I Brought..."* move.
+
+Give each player 2 Pack Cards. Pack Cards are just white-side green cards.
+
+> Next, does anyone have a Move Card with the "RECEIVE CARDS" tag?
+
+### RECEIVE CARDS Phase
+
+There are 3 Move Cards tagged with "RECEIVE CARDS":
+
+- **Use a Magic Item** — take 1 magic item of your choice
+- **Channel the Living Light** — take *Sigil of the Living Light*
+- **Entreat the Blood Bound** — take *Blade of Echoes*
+
+### 2 Item Cards Phase
+
+> Next, everyone gets to choose 2 **Item Cards** for their character. These can be weapons, armor, or other items with mechanical significance.\
+> This game comes with some cards to get us started, but we can also write things on blank cards.
+>
+> In stories like the one we're about to tell, your character probably has a weapon. Without one, their *attack power* will only be 1.\
+> These are the Weapon Cards included with the game, but we can also make reasonable new ones based on our Touchstone List.
+>
+> When your character strikes an enemy with a weapon, their attack power is 1d4. You'll have future opportunities to increase this using the *"Tales of a Weapon"* move.
+
+Lay out the included Weapon Cards. Use blank cards to copy or invent new ones.
+
+If a player describes an unusual or epic weapon, that's fine — just remind them that all characters begin the game with a d4 attack power regardless of how dramatic the weapon seems.
+
+> Next up: armor or a shield. Armor passively absorbs attack power. Shields can nullify it, but only after a test of your Dexterity.
+
+Lay out the Armor and Shield cards. If two players want the same kind of item, use a blank card to make a second copy.
+
+Players don’t have to choose only from weapons, armor, and shields. After the RECEIVE CARDS phase, each player can also choose **1 magic item** as one of their two Item Cards — even if they didn’t take the *"Use A Magic Item"* move. Just be sure they understand the difficulty of using magic items at the *wild* level.
+
+Any time there’s a blank on a card, the player should fill it in so that everyone knows exactly what the item is.
+
+`TODO: link to weapon and armor lists`
+
+### Magic Item Charges and Capacity
+
+Instruct every player with a Magic Item card to mark the **3** spot on the capacity gauge. Then give them 3 green cards from the supply, white-side up, to place on their item as charges.
+
+### Aside: A Feather Can Make You Slower
+
+Players may wonder: Why does a ring or pair of boots have an encumbrance penalty? How can something so small slow you down?
+
+The answer: **That’s for you to explain**. Maybe the boots are cursed, or the ring hums with a heavy magical presence. The fiction is yours to interpret — but the rule stands.
+
+Items chosen during character creation **always apply their encumbrance penalty**, even if their narrative form seems light or symbolic.
+
+This doesn't mean every item in the game will weigh your character down. During play, a letter from the king or the eggs of a cursed salamander might appear — and those may be weightless or handled purely through narrative. But starting gear is balanced with cost — and that includes the burden it brings.
+
+
+# Toolbox
+
+Narrative tools: Heroic Transoformation, Probe the Unknown
+
+Mechanical tools: Flip, Reshuffle, Trigger Move, etc.
+
+## Heroic Transformation
 
 A Thousand Faces of Adventure is a game about your character growing
 from humble beginnings as a **scrappy adventurer** into someone who will
@@ -217,6 +401,9 @@ As your character adventures in the world, they will gain experience and
 equipment making them worthy of the title "hero".
 See [Character advancement](#character-advancement) for more details.
 
+## Probe The Unknown
+
+Moves are only triggered if the outcome is *uncertain*. 
 
 # The Deckahedron
 
