@@ -351,6 +351,16 @@ Items chosen during character creation **always apply their encumbrance penalty*
 
 This doesn't mean every item in the game will weigh your character down. During play, a letter from the king or the eggs of a cursed salamander might appear — and those may be weightless or handled purely through narrative. But starting gear is balanced with cost — and that includes the burden it brings.
 
+## Character Creation Complete
+
+You’ve done it — you’ve brought your character into the world.
+
+You’ve chosen their name, their gifts, their gear, and their tangled place in the world’s weave. You’ve given them a past and a purpose. Now, it’s time to discover what fate has in store.
+
+From here, the GM Guide picks up the thread. You’ll shape The Hearth — the bond that ties these adventurers together — and build the first scene of your story: a moment of danger, a call to action, or something stranger still.
+
+But before you dive into that first breath of shared narrative, the next chapter of this guide will show you the tools for your PC: how to act, react, and improvise with clarity and confidence.
+
 
 # Toolbox
 
