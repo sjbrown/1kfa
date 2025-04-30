@@ -96,9 +96,53 @@ This guide will prepare you for play by covering:
 
 # Components
 
-# Character Creation
+## Character Sheet
 
----
+ * Spaces for various facts about your PC
+ * Attributes (Dex / Int / Str)
+ * Affordances for Deckahedron, Discard pile, Exhaustion pile
+
+## Deckahedron
+
+![Your Deckahedron](images/component_deckahedron.png){ width=2.5inch }
+
+(If you do not have a physical copy of this game, you can find a digital
+Deckahedron at [1kFA.com/table](http://www.1kFA.com/table) )
+
+Every player except the GM gets a Deckahedron. Inspect your Deckahedron.
+You should have 20 cards.  There are 4 symbols, or "suits", on the fronts and
+backs of the cards:
+
+Name      | suit                                    | odds                              | color  | rank
+----------|-----------------------------------------|-----------------------------------|--------|-------
+Anvil     | ![anvil suit](images/suit_anvil.png){ width=0.5inch }     | the weakest odds        | red    | rank 1
+Blade     | ![blade suit](images/suit_blades.png){ width=0.5inch }         | below average odds      | blue| rank 2
+Crown     | ![crown suit](images/suit_crown.png){ width=0.5inch } | above average odds      | yellow | rank 3
+Dragon    | ![dragon suit](images/suit_dragon.png){ width=0.5inch }         | the best odds           | green | rank 4
+
+
+`TODO`
+ * Parts of a card face
+   * Rank
+   * Primary Result
+   * Optional results
+   * d6 and d4 results
+   * Zodiac symbols
+
+When you begin a game, shuffle your Deckahedron and place it face-down in front of you.
+
+## Move Cards
+
+`TODO`
+ * Dramatic Action moves
+ * Combat moves
+ * Downtime moves
+   * Not used in the One-shot campaign
+
+## Layout
+
+`TODO: illustration of player-facing layout`
+
 
 # Character Creation
 
@@ -252,22 +296,22 @@ As you're asking the players these questions, practice **Ludic Listening** and a
 This is a game where characters start off as scrappy adventurers. If a player is telling you their character is a fire demon, a ten-year-old shoe-shine boy, or a computer hacker, a conversation is needed to establish how that character can fit into the rules.
 
 
-## Fateful Moments
+## Initiation to Mystery
 
 The GM reads aloud:
 
 > Since this is a game about taking risks, I'm going to give you an opportunity to get some bonuses when you get risky.\
-> We're going to create what are called **Fateful Moments**.
+> We're going to create what are called **Initiations to Mystery**.
 >
-> A Fateful Moment is a thematic goal your character might try to achieve during the story.\
+> An Initiation to Mystery is a thematic goal your character might try to achieve during the story.\
 > You'll write it in the designated spot on your character sheet, and place an **XP token** and a **✔ token** there as well.
 >
 > When your character *takes a big risk* to pursue this goal, you’ll earn XP, and the ✔ token will advance a scene’s progress bar.\
 > (We’ll explain how those effects work later.)
 >
-> To choose your Fateful Moment, the player on your left will read you two options from a list. You’ll pick one, and that becomes your character’s personal Fateful Moment.  You then read propose 2 different options to the player on your right and everyone will take their turn like that.
+> To choose your Initiation to Mystery, the player on your left will read you two options from a list. You’ll pick one, and that becomes your character’s personal Initiation to Mystery.  You then read propose 2 different options to the player on your right and everyone will take their turn like that.
 
-Here are the available Fateful Moments:
+Here are the available Initiations to Mystery:
 
 - Expose an embarrassment
 - Locate a prize
@@ -283,14 +327,14 @@ Here are the available Fateful Moments:
 - Believe an impossible claim
 - Get called out on your boasting
 
-Once chosen, players keep their XP and ✔ tokens on the Fateful Moment spot of their sheet. They are not available to spend yet.
+Once chosen, players keep their XP and ✔ tokens on the Initiation to Mystery spot of their sheet. They are not available to spend yet.
 
-When a character first *takes a big risk* in pursuit of their Fateful Moment — by the method or for the reason written on the Fateful Moment spot — the player:
+When a character first *takes a big risk* in pursuit of their Initiation to Mystery — by the method or for the reason written on the Initiation to Mystery spot — the player:
 
 - Claims the XP token
 - Advances a ✔ token to a scene’s progress bar of their choice
 
-Fateful Moments are especially helpful for players newer to roleplaying games — they provide a personal goal that can inspire bold choices and keep the story moving.
+Initiations to Mystery are especially helpful for players newer to roleplaying games — they provide a personal goal that can inspire bold choices and keep the story moving.
 
 
 # Weapons and Items
@@ -364,23 +408,25 @@ But before you dive into that first breath of shared narrative, the next chapter
 
 # Toolbox
 
-Narrative tools: Heroic Transoformation, Probe the Unknown
+To play *A Thousand Faces of Adventure*, you'll need two kinds of tools: **narrative tools** and **mechanical tools**.
 
-Mechanical tools: Flip, Reshuffle, Trigger Move, etc.
+Narrative tools help you think like a hero — they’re guidance and mindsets for how to act, speak, and grow inside the story. They make your character feel alive, and your actions feel meaningful.
+
+Mechanical tools are the physical stuff of play: flipping cards, tracking tokens, reshuffling decks. Knowing how to operate your components lets the game deliver tension, structure, and surprise to your story.
+
+Apply the narrative and mechanical tools to your *responsibilities* as a player. It’s your job to animate the character, take bold action, and stay engaged with the shared fiction. These tools will help you move with confidence, speak with purpose, and dive headfirst into the unknown.
+
 
 ## Heroic Transformation
 
-A Thousand Faces of Adventure is a game about your character growing
-from humble beginnings as a **scrappy adventurer** into someone who will
-have an epic impact on their world.
+> "Fortune and glory, kid. Fortune and glory."
+> — *Indiana Jones and the Temple of Doom*
+
+Every mythic story is about **transformation**. *A Thousand Faces of Adventure* is a game about your character growing from humble beginnings as a **scrappy adventurer** into someone who will have an epic impact on their world.
 
 ![Your Character Sheet](images/component_character_sheet.png){ width=2.5inch }
 
-During [character creation](mod_guide_gm.md#character-creation), you
-will get to determine all aspects of your character's history, social
-and economic circumstances, and personality.
-These are fictional aspects of the character. You will use the game's
-rules to determine all the *mechanical* aspects of the character.
+During Character Creation, you will determine  aspects of your character's history, social and economic circumstances, and personality. These are the **fictional** aspects of the character. You will also use the game's rules to determine all the **mechanical** aspects of the character.
 
 <div class="note">
 
@@ -389,108 +435,115 @@ that concern rules, numbers, and procedures.
 
 </div>
 
-Mechanically, characters start out just a little bit more powerful than a
-common villager.  Your character will have more stamina than a townsperson,
-and will start with three special moves, but that's all
-that separates them from Michel the stable-hand and Constance the librarian.
+Mechanically, characters start out just a little more powerful than a common villager. Your character will have more stamina than a townsperson and will start with three special moves — but that's all that separates them from Michel the stable-hand and Constance the librarian.
 
-`TODO: fluff with one-sentence example characters`
+You can invent any backstory you like, but you may need to answer questions about how it fits the character's game limitations. Nothing stops you from creating a hulking, seven-foot barbarian with a rich history of warring and slaughtering enemies. But at the beginning of the game, a little bad luck may see that barbarian suffer a sound drubbing at the hands of a farmer and his overprotective goat.
 
-You can invent any backstory you like, but you may need to answer questions
-about how the backstory fits the character's game limitations.
-Nothing stops you from creating a hulking, 7 foot tall barbarian, with a rich
-history of warring and slaughtering enemies, but at the very beginning of
-the game, a little bad luck may see that barbarian suffer a sound
-drubbing at the hands of a farmer and his overprotective goat.
+To make this barbarian feel authentic, you'll need a narrative conceit or justification — maybe they're a drunkard, battle-worn, or magically cursed — that explains why the character begins at a "scrappy adventurer" level.
 
-So to make this barbarian feel authentic, you'll need to invent
-some narrative conceit or justification (drunkard? battle-worn? magically
-cursed?) so that the character begins at a "scrappy adventurer" level.
+As your character adventures in the world, they will gain experience and equipment, making them worthy of the title "hero." Over time, they may unlock legendary abilities, form deep bonds with companions, and confront choices that shape not only their fate — but the fate of entire realms. You might rise from outlaw to oracle, from exile to queen. Each tale unfolds differently, but every step builds toward a transformation only your table could have imagined.\
+See [Character Advancement](#character-advancement) for more details.
 
-As your character adventures in the world, they will gain experience and
-equipment making them worthy of the title "hero".
-See [Character advancement](#character-advancement) for more details.
+As a player, you'll enjoy this journey most if you embrace the full sweep of transformation. Let your character stumble. Let them doubt, flinch, falter — and then let them rise. Give weight to their humble beginnings so that their final, dragon-confronting moment sings with meaning. You're not just watching a myth — you're living one, from yearning spark to cacophonous storm.
+
+---
+
+As you play, ask yourself:
+
+- What part of my character *needs to change*?
+- What lesson is the world trying to teach them?
+- What mask do they wear — and what truth lies beneath it?
+- What scars will shape their legend?
+
+
 
 ## Probe The Unknown
 
-Moves are only triggered if the outcome is *uncertain*. 
+> “A day may come when the courage of men fails, when we forsake our friends and break all bonds of fellowship. But it is not this day.”
+>
+> — Aragorn, The Lord of the Rings: The Return of the King
 
-# The Deckahedron
+In this game, consequential moments all begin the same way: **a PC does something uncertain, risky or meaningful**.
 
-![Your Deckahedron](images/component_deckahedron.png){ width=2.5inch }
+That moment triggers a **Move** — a specific rule that guides what happens next.
 
-The main activity in the game is "saying stuff", mostly stuff about your
-character. Often, you'll say something that *triggers a move*, and that
-move will be resolved using your Deckahedron.
+*Moves don’t trigger themselves*.  The game only responds when **you** do something bold, curious, or dangerous. If you play it safe, nothing happens. The world waits.
 
-(If you do not have a physical copy of this game, you can find a digital
-Deckahedron at [1kFA.com/table](http://www.1kFA.com/table) )
+That means the real power is in your hands. If you want surprise, drama, progress — you have to *probe the unknown*.
 
-Every player except the GM gets a Deckahedron. Inspect your Deckahedron.
-You should have 20 cards.  There are 4 symbols, or "suits", on the fronts and
-backs of the cards:
+When you feel unsure what to do:
 
-Name      | suit                                    | odds                              | color  | rank
-----------|-----------------------------------------|-----------------------------------|--------|-------
-Anvil     | ![anvil suit](images/suit_anvil.png){ width=0.5inch }     | the weakest odds        | red    | rank 1
-Blade     | ![blade suit](images/suit_blades.png){ width=0.5inch }         | below average odds      | blue| rank 2
-Crown     | ![crown suit](images/suit_crown.png){ width=0.5inch } | above average odds      | yellow | rank 3
-Dragon    | ![dragon suit](images/suit_dragon.png){ width=0.5inch }         | the best odds           | green | rank 4
+- Investigate something mysterious.
+- Tune your heart to something buried deeply.
+- Ask a dangerous question.
+- Cross a forbidden threshold.
+- Unleash your mischief or foolishness.
+- Charge at your adversaries
 
-Shuffle your Deckahedron and place it face-down in front of you.
+Remember, even a failure moves the story forward. You'll gain:
 
-When your character does something active in the game, like "triggering"
-a move or aiding teammates, you will use the Deckahedron to "flip"
-a card. At other times, you will also use your Deckahedron to "reveal",
-"discard", and "exhaust" cards.
-These actions are described below.
+- **XP**
+- **Narrative momentum** (new complications, discoveries, twists)
+- **Progress** on the scene or achievement of a stake
 
-## Flipping
+Think of this  as a **tool you can keep in your pocket**. When the story feels needful, when you're waiting for the next big thing — pull this out. Remember your character's curiosity, or mischief, or sheer reckless courage. Use it to push forward. Every risk you take sends a ripple through the story — the world stirs, new paths open, and consequences unfold.
 
-Whenever your character attempts something risky, where the outcome is
-not certain, it will "trigger" a move. The GM will name which move has
-triggered and call for you to take your Deckahedron and "flip".
 
-Find the description of the named move either in the Base Moves or on
-a Move Card.
-It will specify which of your character's "attributes" -- Dex, Int, or
-Str -- will be used to resolve the flip.
-(Sometimes there are multiple attributes listed. In this case, chose
-the one that makes the most sense in the narrative context)
 
-<div class="note gmnote">
 
-| **GM Note:**
-| *A subjective judgement is sometimes needed to decide between Dex,*
-| *Int, or Str, or between two moves that may be reasonably triggered*
-| *by the character's narrated action.*
-| *You may always ask the player to provide more detail before settling*
-| *on these decisions.*
-| *If there is ever remaining ambiguity after the players have had an*
-| *opportunity to discuss and clarify, the GM has final authority to*
-| *make this decision*
 
-</div>
+## **Triggering, Resolving, and Interpreting Moves**
+
+A move is triggered when your character takes an action that is **uncertain**, **risky**, or **meaningful**.\
+You don’t declare “I’m making a move” — instead, you **describe what your character does**, and the GM decides when a move has been triggered.
+
+From there, resolution unfolds in a set sequence: you trigger the move, resolve it using the **Deckahedron** and **Move Cards**, then interpret the result and fold it back into the story. Some moves may also instruct you to gain resources or mark progress — if so, follow those instructions during resolution.
 
  ![Your Deckahedron and Character Sheet](images/component_layout.png){ width=2.5inch }
 
-Take the top card of your Deckahedron and flip it face up.
-Next, look to your character sheet, at the chosen attribute -- Dex, Int, or
-Str -- to find its suit (Anvil, Blades, Crown, or Dragon).
+### Step-by-Step Procedure
 
- ![Flipping a card](images/component_flip.png){ width=2.5inch }
+- **Trigger**\
+  A move begins when your character takes action that aligns with a move’s description or dramatic purpose. The text of each move should provide clear context for the GM to decide if one is triggered, but the table can sometimes help identify when it happens or which move fits best.
 
-On the face of the flipped card, find that suit symbol.
-The "result" of the move is the ✗ or ✔ symbols next to that suit.
+  Take note of which attribute this move is resolved with.  If there are multiple choices, the table should agree one one before the next step.
 
-(When you flip, keep in mind that the GM needs to read the result. Being
-consistent with how you orient the card will help simplify the GM's
-bookkeeping and keep up the pace of the game.)
+  Examples:
 
- ![Resolving a move](images/component_read.png){ width=2.5inch }
+  - Charging at your adversaries - triggers Mix It Up or Defy Danger
+  - Speaking from the heart - triggers Unfold Mystery or Defend
+  - Reaching into  magical energies - triggers Use A Magic Item or Channel the Living Light
 
-Finally, read the instructions on your move card.
-It tells you and the GM how to interpret the ✗s and ✔s.
+
+
+- **Flip**\
+
+![Flipping a card](images/component_flip.png){ width=2.5inch }
+
+  Draw and reveal one or more cards from the **Deckahedron**.
+
+  By default, draw one card. Only if you have advantage or disadvantage (see below) do you draw more.
+
+- **Resolve**
+
+![Resolving a move](images/component_read.png){ width=2.5inch }
+
+  On their character sheet, find the PC's rank for the attribute decided on above (Dex, Int or Str).  Then find that rank on the card that was drawn, and it's associated primary result. When using advantage or disadvantage, look through all the revealed cards' primary results, and use the best (advantage) or worst (disadvantage) card from here on (this is the *resolving card*).
+
+  - **Rank** (Anvil, Blades, Crown or Dragon)
+  - **Primary result** (ranging from ✗ to ✔✔)
+
+    Take note of any secondary results on the cards, found in the center of the resolving card. See the rules below for their effects.
+  - **Secondary result** (Wound cards, blessing cards, XP cards)
+
+- **Interpret**\
+  Take the primary result and find the matching text on the Move card that matches it. Perform the actions and answer any questions demanded by the matching text on the Move card.  Also perform any mechanical actions demanded by the secondary results at this point.
+
+  Next, interpret these actions in the narrative.\
+  This is where narration reclaims the lead. If you’re unsure how to begin:
+
+  - Ask the table what this means in the scene
+  - Reflect on how your character might respond
 
 
 ## For example,
@@ -514,7 +567,7 @@ Find the description of the Defy Danger move in your Base Moves
 Next, on the character sheet, see that Kresk has rank 3 (Crown) Str.
 Flip over the top card of your Deckahedron and look for that Crown suit.
 
-Let's say the flipped card shows ✔✔ next to the Crown.
+Let's say the flipped card shows ✔ next to the Crown.
 The Defy Danger move reads "You do it, but there's a new complication".
 When you look to the GM to interpret this outcome, they begin to
 improvise:
@@ -525,6 +578,102 @@ improvise:
 > dust has been stirred. The sounds of movement and a threatening
 > rattle alerts you to something approaching from inside the pit.
 > What do you do?
+
+## Advantage and Disadvantage
+
+Some flips are a little more complicated. There are moves that
+instruct you to "take +1 advantage" or "flip with advantage".
+Sometimes you are given the opposite
+instruction "flip with disadvantage" or "your foe gets advantage".
+
+### Advantage
+
+With an advantage, flip over your top card as usual, and then
+flip over the next card as well.
+Compare the results (the number of ✗s or ✔s next to the relevant suit)
+and *resolve the flip* with the card that has the **best** result.
+
+If it's a tie, you may choose whichever card to be the card that *resolves
+the flip*.
+
+After, all flipped cards go face-up in your *discard pile*.
+
+#### Complete Flip Rule
+
+You must flip over all the cards you were instructed to, even if the first
+card shows ✔✔✔.
+
+### Disadvantage
+
+With a disadvantage, do the same thing, but use the **worst** result.
+
+Acting against a foe that has advantage is mechanically identical to your
+character having disadvantage.
+
+### Multiple Advantages / Disadvantages
+
+Advantage or disadvantage can stack. Flips can accumulate up to 2
+advantage or 2 disadvantage, meaning that you flip **3 cards in total**
+and take the **best** or **worst**, respectively.
+
+No flip may use more than 3 cards in total, so stacking advantage beyond
+2 is just ignored.
+
+It is possible a situation might arise where you are instructed to both
+"flip with advantage" and "flip with disadvantage".
+If this happens, simply add up all the advantages, and then subtract all
+the disadvantages to arrive at a "net advantage" or "net disadvantage".
+The maximum number of cards per flip is still 3, so even if the
+"net disadvantage" is -3, you only flip 3 cards and take the worst.
+
+## Secondary Results
+
+### XP
+
+![An XP card](images/component_card_green_token.png){ width=2.5inch }
+
+Resolving flips is how players acquire experience points (XP).
+XP are a player's most important mechanical currency in the game.
+
+Some Deckahedron cards show an experience point symbol in the middle.
+These are XP cards.
+After a flip is *resolved* by an XP card, take one XP from the supply.
+
+You may only do this when the card *resolves* a flip. (ie, when flipping
+multiple cards, only if the *XP card* was the one from which
+the ✗ or ✔ symbols were used to interpret the result of the move)
+
+XP are a currency you spend to activate "meta" parts of the
+game. See below for moves that let you "break" or "bend" rules, or partially
+take control of the narrative.
+
+### Wounds
+
+Sometimes you flip over a wound card and must lose a Stamina point. See the
+[Combat chapter](#combat---stamina-and-wounds).
+
+### Return Card
+
+Blessing cards
+
+![blessing cards](images/component_card_blessings.png){ width=2.5inch }
+
+Some move cards will instruct you to take Blessing cards. When instructed
+to do so, draw one Blessing card at random from the supply, and place
+it in your discard pile.
+
+Blessing cards improve your Deckahedron by giving you better chances to
+succeed at moves.
+
+Whenever a move is *resolved* by a Blessing card, return the Blessing card
+to the supply rather than keeping it in your discard pile.
+(Shown by the symbol in the center of the blessing card)
+
+
+### Secondary Results from Moves
+
+(Channel the Living Light, ...)
+
 
 
 ## Reshuffling
@@ -627,93 +776,6 @@ may start enumerating the attack power your character must suffer, to which you
 could respond by invoking Unknown Benefactor to cancel the attack's effects.
 
 
-## Other ways to flip: Advantage / Disadvantage
-
-Some flips are a little more complicated. There are moves that
-instruct you to "take +1 advantage" or "flip with advantage".
-Sometimes you are given the opposite
-instruction "flip with disadvantage" or "your foe gets advantage".
-
-### Advantage
-
-With an advantage, flip over your top card as usual, and then
-flip over the next card as well.
-Compare the results (the number of ✗s or ✔s next to the relevant suit)
-and *resolve the flip* with the card that has the **best** result.
-
-If it's a tie, you may choose whichever card to be the card that *resolves
-the flip*.
-
-After, all flipped cards go face-up in your *discard pile*.
-
-#### Complete Flip Rule
-
-You must flip over all the cards you were instructed to, even if the first
-card shows ✔✔✔.
-
-### Disadvantage
-
-With a disadvantage, do the same thing, but use the **worst** result.
-
-Acting against a foe that has advantage is mechanically identical to your
-character having disadvantage.
-
-### Multiple Advantages / Disadvantages
-
-Advantage or disadvantage can stack. Flips can accumulate up to 2
-advantage or 2 disadvantage, meaning that you flip **3 cards in total**
-and take the **best** or **worst**, respectively.
-
-No flip may use more than 3 cards in total, so stacking advantage beyond
-2 is just ignored.
-
-It is possible a situation might arise where you are instructed to both
-"flip with advantage" and "flip with disadvantage".
-If this happens, simply add up all the advantages, and then subtract all
-the disadvantages to arrive at a "net advantage" or "net disadvantage".
-The maximum number of cards per flip is still 3, so even if the
-"net disadvantage" is -3, you only flip 3 cards and take the worst.
-
-
-## XP cards
-
-![An XP card](images/component_card_green_token.png){ width=2.5inch }
-
-Resolving flips is how players acquire experience points (XP).
-XP are a player's most important mechanical currency in the game.
-
-Some Deckahedron cards show an experience point symbol in the middle.
-These are XP cards.
-After a flip is *resolved* by an XP card, take one XP from the supply.
-
-You may only do this when the card *resolves* a flip. (ie, when flipping
-multiple cards, only if the *XP card* was the one from which
-the ✗ or ✔ symbols were used to interpret the result of the move)
-
-XP are a currency you spend to activate "meta" parts of the
-game. See below for moves that let you "break" or "bend" rules, or partially
-take control of the narrative.
-
-
-## Blessing cards
-
-![blessing cards](images/component_card_blessings.png){ width=2.5inch }
-
-Some move cards will instruct you to take Blessing cards. When instructed
-to do so, draw one Blessing card at random from the supply, and place
-it in your discard pile.
-
-Blessing cards improve your Deckahedron by giving you better chances to
-succeed at moves.
-
-Whenever a move is *resolved* by a Blessing card, return the Blessing card
-to the supply rather than keeping it in your discard pile.
-
-
-## Wound cards
-
-Sometimes you flip over a wound card and must lose a Stamina point. See the
-[Combat chapter](#combat---stamina-and-wounds).
 
 
 ## Teamwork Flips

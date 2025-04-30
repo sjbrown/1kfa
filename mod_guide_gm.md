@@ -789,7 +789,7 @@ halflings are the only ones who will fit into the goblin armor.
 
 ## Chapter 4: Search
 
-**AKA: Road of Trials**
+**AKA: Trials and Revelations**
 
 **AKA: Fun & Games**
 
