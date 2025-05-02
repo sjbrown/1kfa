@@ -488,7 +488,9 @@ Remember, even a failure moves the story forward. You'll gain:
 
 Think of this  as a **tool you can keep in your pocket**. When the story feels needful, when you're waiting for the next big thing — pull this out. Remember your character's curiosity, or mischief, or sheer reckless courage. Use it to push forward. Every risk you take sends a ripple through the story — the world stirs, new paths open, and consequences unfold.
 
+## Buttons or Beats
 
+...
 
 
 
@@ -536,6 +538,8 @@ From there, resolution unfolds in a set sequence: you trigger the move, resolve 
     Take note of any secondary results on the cards, found in the center of the resolving card. See the rules below for their effects.
   - **Secondary result** (Wound cards, blessing cards, XP cards)
 
+Place all the revealed cards on your discard pile, keeping the resolving card on top.
+
 - **Interpret**\
   Take the primary result and find the matching text on the Move card that matches it. Perform the actions and answer any questions demanded by the matching text on the Move card.  Also perform any mechanical actions demanded by the secondary results at this point.
 
@@ -579,6 +583,7 @@ improvise:
 > rattle alerts you to something approaching from inside the pit.
 > What do you do?
 
+
 ## Advantage and Disadvantage
 
 Some flips are a little more complicated. There are moves that
@@ -593,15 +598,15 @@ flip over the next card as well.
 Compare the results (the number of ✗s or ✔s next to the relevant suit)
 and *resolve the flip* with the card that has the **best** result.
 
+You can't choose a worse primary result as a hack to get a secondary
+result benefit from the worse card.
+
 If it's a tie, you may choose whichever card to be the card that *resolves
 the flip*.
 
-After, all flipped cards go face-up in your *discard pile*.
-
-#### Complete Flip Rule
-
 You must flip over all the cards you were instructed to, even if the first
-card shows ✔✔✔.
+card shows ✔✔✔.  This is called the *complete flip rule* and it applies to
+disadvantage as well (eg, if the first revealed card was ✗).
 
 ### Disadvantage
 
@@ -636,16 +641,16 @@ Resolving flips is how players acquire experience points (XP).
 XP are a player's most important mechanical currency in the game.
 
 Some Deckahedron cards show an experience point symbol in the middle.
-These are XP cards.
-After a flip is *resolved* by an XP card, take one XP from the supply.
+After a flip is *resolved* by one of these cards, take one XP from the
+supply.
 
 You may only do this when the card *resolves* a flip. (ie, when flipping
 multiple cards, only if the *XP card* was the one from which
 the ✗ or ✔ symbols were used to interpret the result of the move)
 
-XP are a currency you spend to activate "meta" parts of the
-game. See below for moves that let you "break" or "bend" rules, or partially
-take control of the narrative.
+XP are a currency you spend to activate other rules in the
+game. See the Moves reference below for descriptions of how XP can
+be spent.
 
 ### Wounds
 

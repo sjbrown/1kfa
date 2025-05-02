@@ -65,6 +65,7 @@ answer the following questions:
  * What details of this location are obvious and notable to the characters?
  * What is the ambiance? Which environmental subtleties might the characters notice? Music? Smells?
 
+All questions must be answered at the beginning of *each* new scene.
 Additional questions and rules for creating scenes will be found in the Campaign
 Guide for the specific chapter the story is in.
 Those sections will inform:
@@ -260,12 +261,16 @@ Adversaries are created with Stamina progress bars, per formula.
 ## When a combat interlude begins
 
  * Gather up all the cards of the GM Move deck
- * Remove the Shadow cards and replace them with the combat-specific Deal Damage cards
+ * Remove the Shadow cards and replace them with the combat-specific Deal
+   Damage cards
 
 ## When a combat interlude ends
 
  * Gather up all the cards of the Combat deck
- * Remove the combat-specific Deal Damage cards and replace them with the Shadow cards
+ * Remove the combat-specific Deal Damage cards and replace them with the
+   Shadow cards
+ * If *any* of the PCs have survied the Combat interlude without being
+   incapacitated, one ✔ token is added to a ✔ progress bar
 
 The GM Move Deck instead of "Shadow" cards, has "Deal Damage" cards
 
