@@ -680,8 +680,6 @@ The reader closes out the Universe Creation activity by hanging this in the air:
 > still need to fight, suffer, and strive to transform into the hero
 > Destiny demands.
 
-Here’s a **shortened version** of the ending blurb — it keeps the warmth and excitement, but moves quicker:
-
 
 # Congratulations
 
