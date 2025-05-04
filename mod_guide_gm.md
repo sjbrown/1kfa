@@ -3023,7 +3023,7 @@ invokes fear.
  * blood
  * amputation / missing parts
  * sharp or thorny
- * fat
+ * bloated against its membrane
  * related to corpses or rot
  * related to excrement or egg-laying
  * signs of disease or infestation

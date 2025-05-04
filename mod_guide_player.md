@@ -517,7 +517,6 @@ From there, resolution unfolds in a set sequence: you trigger the move, resolve 
   - Reaching into  magical energies - triggers Use A Magic Item or Channel the Living Light
 
 
-
 - **Flip**\
 
 ![Flipping a card](images/component_flip.png){ width=2.5inch }
@@ -541,13 +540,13 @@ From there, resolution unfolds in a set sequence: you trigger the move, resolve 
 Place all the revealed cards on your discard pile, keeping the resolving card on top.
 
 - **Interpret**\
-  Take the primary result and find the matching text on the Move card that matches it. Perform the actions and answer any questions demanded by the matching text on the Move card.  Also perform any mechanical actions demanded by the secondary results at this point.
+  Take the primary result and find the text on the Move card that matches it. Perform the actions and answer any questions indicated by the matching text on the Move card.  Also perform any mechanical actions demanded by the secondary results at this point.
 
   Next, interpret these actions in the narrative.\
-  This is where narration reclaims the lead. If you’re unsure how to begin:
+  This is where narration reclaims the lead. The text of the Move may provide questions to answer, but if you’re otherwise unsure how to begin, the GM can answer either of these questions:
 
-  - Ask the table what this means in the scene
-  - Reflect on how your character might respond
+  - If this were a movie, how would the result of the move be shown on screen?
+  - How do the elements established in the scene respond?
 
 
 ## For example,
@@ -586,50 +585,31 @@ improvise:
 
 ## Advantage and Disadvantage
 
-Some flips are a little more complicated. There are moves that
-instruct you to "take +1 advantage" or "flip with advantage".
-Sometimes you are given the opposite
-instruction "flip with disadvantage" or "your foe gets advantage".
+Some moves will tell you to "flip with advantage" or "take +1 advantage." Others might say "flip with disadvantage" or even "your foe gains advantage." The phrasing varies, but the effect is always the same: it changes how many cards you flip, and how you resolve the result.
 
-### Advantage
+Advantage and disadvantage can also come from the fiction — including when the GM spends Shadow Points to shift the odds against you (see the GM Guide).
 
-With an advantage, flip over your top card as usual, and then
-flip over the next card as well.
-Compare the results (the number of ✗s or ✔s next to the relevant suit)
-and *resolve the flip* with the card that has the **best** result.
+* You must flip **exactly the number of cards** equal to your **net advantage or disadvantage**, up to a maximum of **3 cards**.
+* Advantage and disadvantage **cancel each other out**. (e.g. 2 advantage and 1 disadvantage = 1 net advantage.)
+* You always ***resolve*** **the flip using exactly one card**.
+* With **advantage**, you must choose the card with the **highest** primary result.
+* With **disadvantage**, you must choose the card with the **lowest** primary result.
+* If there is a **tie** for highest or lowest, you may choose freely among the tied cards.
 
-You can't choose a worse primary result as a hack to get a secondary
-result benefit from the worse card.
+Your choice determines both the outcome of the move and any secondary effects (like XP). All flipped cards go to your discard pile, with the chosen card on top.
 
-If it's a tie, you may choose whichever card to be the card that *resolves
-the flip*.
 
-You must flip over all the cards you were instructed to, even if the first
-card shows ✔✔✔.  This is called the *complete flip rule* and it applies to
-disadvantage as well (eg, if the first revealed card was ✗).
+## Primary Results
 
-### Disadvantage
+| ✗  | miss               | GM Move            | Shadow point |
+| ✓  | success and shadow | grey progress      | |
+| ✔  | success            | green progress     | |
+| ✔✔ | double success     | two green progress | |
 
-With a disadvantage, do the same thing, but use the **worst** result.
+GM Move happens on an ✗ (non-FAST card)
 
-Acting against a foe that has advantage is mechanically identical to your
-character having disadvantage.
+See the GM Guide for rules on the scene results
 
-### Multiple Advantages / Disadvantages
-
-Advantage or disadvantage can stack. Flips can accumulate up to 2
-advantage or 2 disadvantage, meaning that you flip **3 cards in total**
-and take the **best** or **worst**, respectively.
-
-No flip may use more than 3 cards in total, so stacking advantage beyond
-2 is just ignored.
-
-It is possible a situation might arise where you are instructed to both
-"flip with advantage" and "flip with disadvantage".
-If this happens, simply add up all the advantages, and then subtract all
-the disadvantages to arrive at a "net advantage" or "net disadvantage".
-The maximum number of cards per flip is still 3, so even if the
-"net disadvantage" is -3, you only flip 3 cards and take the worst.
 
 ## Secondary Results
 
@@ -652,16 +632,30 @@ XP are a currency you spend to activate other rules in the
 game. See the Moves reference below for descriptions of how XP can
 be spent.
 
-### Wounds
+### Critical Success
 
-Sometimes you flip over a wound card and must lose a Stamina point. See the
-[Combat chapter](#combat---stamina-and-wounds).
+![Critical Success card](images/critical_flip_card.png){ width=2.5inch }
+
+One of the 20 cards in your Deckahedron is the "Critical Success card". It
+has a ✔✔ symbol on every edge and a circular green symbol in the middle.
+
+If you *resolve a flip* with the Critical Success card, you can do one of
+two things:
+
+ * Draw a Blessing card from the supply and put it in your discard pile.
+ * Answer the question "How has your PC's practice finally paid off, or what
+   epiphany led them to achieve more mastery in this move?" Then spend
+   XP 1-for-1 to go up levels in the move that was just resolved.
+
 
 ### Return Card
 
 Blessing cards
 
 ![blessing cards](images/component_card_blessings.png){ width=2.5inch }
+
+Note the symbol in the center of the Blessing cards.  This indicates
+that the card should be returned to the supply.
 
 Some move cards will instruct you to take Blessing cards. When instructed
 to do so, draw one Blessing card at random from the supply, and place
@@ -675,23 +669,33 @@ to the supply rather than keeping it in your discard pile.
 (Shown by the symbol in the center of the blessing card)
 
 
+### Wounds
+
+![A wound card](images/wound_200.png){ width=1.1inch }
+
+Wound cards can be used to represent different fictional aspects. They
+usually represent literal wounds, but may also be used for the effects of
+disease, poison, or other effects inflicted by monsters or the environment.
+
+Unlike the other secondary effects, a wound card's happens both **when it resolves a 
+flip** and **when it is moved into the exhaustion pile**. See below for more details on
+that.
+
+Whenever a wound card's secondary effect is activated, do these 3 things:
+
+ * (Optional) Answer: "What sound or noise is emitted by the PC as they endure their wound or affliction?"
+ * Add a new one-unit stake to the scene, entitled "Fortify (PC's name)". If this stake is not achieved by the end of the scene, the PC wil be incapacitated at the end of the scene.
+ * (If that stake has already been added to the scene, add another unit to it)
+ * Lose one Stamina point
+
+See the [Combat chapter](#combat---stamina-and-wounds) for more details on wounds.
+
+
 ### Secondary Results from Moves
 
 (Channel the Living Light, ...)
 
 
-
-## Reshuffling
-
-After every flip, any face-up Deckahedron card is placed, face-up, in a
-*discard pile*. (Later, you will start another pile of cards called an
-*Exhaustion pile*. Keep them separate.)
-
-At any time other than during a flip, you may take your
-*discard pile* and shuffle it back into your Deckahedron.
-
-Whenever your Deckahedron has 5 or fewer cards, you **must** take
-your *discard pile* and shuffle it back into your Deckahedron.
 
 
 ## Interpreting the result of a flip
@@ -701,6 +705,12 @@ and the GM leads the table interpreting the narrative result, based on the
 text of the move.
 
  ![flip results](images/flip_results.png){ width=2.5inch }
+
+
+| ✗  | GM Move            | Shadow point |
+| ✓  | grey progress      | |
+| ✔  | green progress     | |
+| ✔✔ | two green progress | |
 
 Usually ✔✔✔ means an unfettered success,
 and ✔✔ means success, but with complication.
@@ -779,6 +789,20 @@ Or, your professor of alchemy character might trigger Defy Danger as they
 jump out of the way of a toppling bookcase. After you flip an ✗, the GM
 may start enumerating the attack power your character must suffer, to which you
 could respond by invoking Unknown Benefactor to cancel the attack's effects.
+
+
+
+## Reshuffling
+
+After every flip, any face-up Deckahedron card is placed, face-up, in a
+*discard pile*. (Later, you will start another pile of cards called an
+*Exhaustion pile*. Keep them separate.)
+
+At any time other than during a flip, you may take your
+*discard pile* and shuffle it back into your Deckahedron.
+
+Whenever your Deckahedron has 5 or fewer cards, you **must** take
+your *discard pile* and shuffle it back into your Deckahedron.
 
 
 
@@ -1006,6 +1030,8 @@ exhaustion symbols*, and put them face-down in your Exhaustion pile.
 
 ![Cards with and without Stamina symbol](images/with_without_stamina.png){ width=2.5inch }
 
+**Only with wound cards**, activate the secondary result effect.
+
 If you haven't started an Exhaustion pile, start a new one.  Keep it
 separate from your Deckahedron and discard pile.
 
@@ -1024,34 +1050,16 @@ all intelligent creatures seek to cure their condition as a high priority.
 
 When you choose to take a Wound, or if the rules demand that you take one:
 
- * **If you already have 2 wounds**:
-    - your character is incapacitated
- * **Otherwise**:
-    1. The GM will describe how your character was wounded
-    2. Randomly draw a *wound card* from the supply and place it in your
-       *discard pile*. It will now start cycling between your Deckahedron
-       and your *discard pile*.
-
-
-#### A Wound Card
-
-![A wound card](images/wound_200.png){ width=1.1inch }
+  1. The GM will describe how your character was wounded
+  2. Randomly draw a *wound card* from the supply and place it in your
+     *discard pile*. It will now start cycling between your Deckahedron
+     and your *discard pile*.
 
 Wound cards can be used to represent different fictional aspects. They
 usually represent literal wounds, but may also be used for the effects of
 disease, poison, or other effects inflicted by monsters or the environment.
 
-Having a *wound card* in your Deckahedron causes **flips** to become
-more risky.
-
-Whenever a wound card is revealed in the course of a **flip**:
-
- * (Optional) Say or act out the guttural noise emitted by your character
- * You must immediately stop flipping (eg, if you were
-   instructed you to "flip 3", you stop short once you hit
-   the wound card - resolve the move with only the card(s) you flipped.
-   This overrides the **Complete Flip Rule**)
- * Lose one Stamina point
+To get rid of a wound, the Seek Help move must be triggered.  See the detailed move rules below.
 
 
 ## Describe / Regale
@@ -1358,21 +1366,6 @@ The original move is then *resolved* with the result of this new flip.
 If the declaring player was different from the player that triggered the move,
 any results like XP go to the player who played the resolving card.
 
-
-## Critical Success
-
-![Critical Success card](images/critical_flip_card.png){ width=2.5inch }
-
-One of the 20 cards in your Deckahedron is the "Critical Success card". It
-has a ✔✔✔ symbol on every edge and a circular green symbol in the middle.
-
-If you *resolve a flip* with the Critical Success card, you can do one of
-two things:
-
- * Say how your character's practice has finally paid off, or how they had
-   an insight or epiphany about the move they just accomplished. Spend
-   XP 1-for-1 to go up levels in the move that was just resolved.
- * Take a Blessing card from the supply and put it in your discard pile.
 
 
 ## Taking a Breather
@@ -1704,17 +1697,25 @@ That the healing powers are *external* is important. Seek Help is a move
 where players acknowledge their characters' limits and cannot do
 everything on their own.
 
-When you spend a day healing:
+When you spend a day healing (not at The Hearth):
 
  * Step 1: Describe your character's healing experience
- * Step 2: Return all *Exhaustion* tokens to the supply
- * Step 3: Return all *Harm* tokens to the supply
- * Step 4: Count the *Wound* tokens on your *Exhaustion pile*
- * Step 5: Keep that many cards (player chooses which ones) in your
-   *Exhaustion pile*, put the rest into your *discard pile*
- * Step 6: Return all *wound cards* to the supply (but not *Wound* tokens)
- * Step 7: Say who you are closer to forgiving
- * Step 8: If you are at The Hearth, return all *Wound* tokens to the supply
+ * Step 1: Return all *Exhaustion* tokens to the supply
+ * Step 1: Return all *Harm* tokens to the supply
+ * Step 1: Return all *Wound* tokens to the supply
+ * Step 1: Put all the cards in your *Exhaustion pile* into your *discard pile*
+ * Step 1: For every *wound card* you have, draw one *blessing card*
+ * Step 1: Answer the question: "In what way has your PC been brought closer to forgiveness?"
+
+When you spend a day healing at The Hearth:
+
+ * Step 1: Describe your character's healing experience
+ * Step 1: Return all *Exhaustion* tokens to the supply
+ * Step 1: Return all *Harm* tokens to the supply
+ * Step 1: Return all *Wound* tokens to the supply
+ * Step 1: Return all *wound cards* tokens to the supply
+ * Step 1: Put all the cards in your *Exhaustion pile* into your *discard pile*
+ * Step 1: Answer the question: "In what way has your PC been brought closer to peace?"
 
 As with *Resting*, time spent *Seeking Help* cannot also be used in
 activities that take effort.
@@ -2028,8 +2029,7 @@ When a player's character attacks another player's character, moves are
 triggered as they would normally be, and costs are paid (eg, if the attacker
 uses a magic item, they may lose a charge), but there are differences:
 
- * XP cards do not generate XP if they resolve a flip
- * Critical Success cards cannot be used to go up levels in moves
+ * Secondary effects of flips are **not** resolved.
  * Attack power is not rolled
 
 Instead of rolling attack power, the *defender* alone describes the negative
@@ -2057,8 +2057,7 @@ Just as in PvP combat, when one player tries to:
  * use a move to dictate another player's character's action
     - eg, by using mind control magic
 
-XP cards do not generate XP, Critical Success cards cannot
-be used to go up levels, and the *defender* gets to say what the result was.
+Secondary effects of cards are not resolved, and the *defender* gets to say what the result was.
 
 
 # 30-hour Campaigns: Green rings
