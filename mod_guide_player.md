@@ -491,6 +491,17 @@ Think of this  as a **tool you can keep in your pocket**. When the story feels n
 ## Buttons or Beats
 
 ...
+You have your own personal play style.
+
+Name your moves or not.
+
+Your style can change depending on the state of the game
+
+You may prefer button pushing in combat interludes, for example.
+
+Advantage to button pushing: the GM doesn't have to interpret
+
+Advantage to beats: you can stay immersed and just say what flows from the fiction.
 
 
 
@@ -699,14 +710,9 @@ See the [Combat chapter](#combat---stamina-and-wounds) for more details on wound
 
 
 
+## Interpreting a Flip
 
-## Interpreting the result of a flip
-
-When a player's character performs a move, the player executes a flip,
-and the GM leads the table interpreting the narrative result, based on the
-text of the move.
-
- ![flip results](images/flip_results.png){ width=2.5inch }
+![flip results](images/flip_results.png){ width=2.5inch }
 
 
 | ✗  | GM Move            | Shadow point |
@@ -714,51 +720,66 @@ text of the move.
 | ✔  | green progress     | |
 | ✔✔ | two green progress | |
 
-Usually ✔✔ means an unfettered success,
-and ✔ means success, but with complication.
+Triggering a move doesn't just resolve numbers or move tokens — it advances the story.
 
-When the result is a single ✅︎, it sometimes means the same as a ✔,
-but often it is slightly worse.
+Moves have two outputs: **mechanical consequences** and **narrative consequences**. Interpreting a flip means seeing how the outcome reshapes the situation, shifts momentum, or alters the danger. Here's how to do it:
 
-As you read this section it may help to lay out the move cards in
-front of you.
+### 1. **Apply the Mechanical Consequences**
 
-Note: some move descriptions give choices between several options.
+Each move tells you what to do when a flip is resolved. This often includes:
+
+* Marking progress bars
+* Adding or expending tokens (Stamina, Items damage, Charges, etc.)
+* Activating or halting specific effects
+* Choosing from a list of 2 or 3 options (as prompted by the move)
+
+Always resolve these mechanical effects first. They are not optional — they are the cost or reward of your choices.
+
+If the move does not otherwise specify what happens on an ✗, the ✗ result triggers a **GM Move** — a special case where narrative control shifts to the GM. When this happens, the GM follows the procedures in the GM Guide to apply pressure, introduce twists, or escalate danger.
+
+### 2. **Answer the Move’s Question(s)**
+
+Most move cards include one or more narrative prompts — questions that must be answered based on the result. These might be:
+
+* **Player-facing questions**, like “How was your attack focused on part of the foe's body?”
+* **GM-facing questions**, like “Does the armor need to be surrendered or destroyed?”
+
+These narrative hooks are *calls to action* — invitations to add detail, alter the scene, or introduce twists. You don’t have to answer them alone; collaborate if you’re stuck. Once answered, they provide Fictional Positioning for further actions.
+
 If one of the options is impossible (fictionally or mechanically), it may
 not be chosen. Choose one of the other options instead.
 
-When the result is ✗, it is the GM's turn to make a move. The GM narrates
-the consequences of the move the player just attempted and has license to
-take the narrative where they like.
 
-See the GM Guide for explanations of *Shadow points* and for a list
-of moves the GM is allowed to make.
+### 3. **Repaint the Scene**
 
-### Exceptions on ✅︎ and ✗ flips
+Once the consequences are resolved and questions are answered, the GM (or the table) should take a breath to **reestablish the scene**. Ask:
 
-Sometimes a move does not say how a ✅︎ should be interpreted. In that case,
-the GM gets to make a move, just like ✗.
+* Has the setting changed?
+* What are the present threats? Has danger diminished? Has a new danger emerged?
+* Are the stakes clearer — or more dire?
 
-Rarely, a move will have instructions for how to interpret a ✗ result.
-These instructions should be executed, but might only be *part* of the
-GM's move -- the GM gets to decide if they have more to add.
+Use the **scene-establishing questions** to frame this update. Repainting the scene helps ground the narrative in the moment after impact.
 
-When the move is a *FAST* move, the GM does not get to make a move on
-a ✗. Instead, the GM just gains 2 *Shadow points*.
+### 4. **Keep the Story Moving**
+
+Finally, the GM turns to a different Player at the table:
+
+> "What do you do?"
+
+That question is the heartbeat of the game — it keeps the story alive, moment to moment, breath to breath.
 
 
 ## Moves tagged *FAST*
 
-
-Some move descriptions have the *FAST* symbol. This indicates
-they can be used in conjunction with another move during your character's
-moment in the spotlight.
-
-As the conversation shifts around the table, players will
-have informal "turns" where they talk about what actions their character
-is taking. The game works best when this "spotlight" is moved around fairly
+As the conversation transits around the table, players will
+have informal "turns" where they talk about the actions their PC takes.
+The game works best when this "spotlight" is moved around fairly
 so each player can contribute. The spotlight typically follows a single
 character's actions until they trigger, then resolve a move.
+
+Some move descriptions have the *FAST* symbol. This indicates
+they can be paired with another move during your character's
+moment in the spotlight.
 
 *FAST* moves are like "bonus" moves that augment, or quickly follow the
 initially triggered move.
@@ -821,73 +842,12 @@ say how their characters are helping and each flip one Anvil.
 
 The players choose the best result to resolve the flip.
 
-Only the card that resolved the flip can generate XP, and only
-for the player who played it.
+Only the card that resolved the flip can have secondary results, and any
+such secondary results apply only for the player who played it.
 
 If there are any negative consequences (damage, danger, etc) from the
 result, all the participating characters must suffer them.
 
-
-## Flips only happen when the situation is uncertain or risky
-
-A GM only calls for a flip when the situation is uncertain or risky for
-the character. If the outcome is certain, the GM may just narrate what
-happens. Or they may ask clarifying questions.
-
-This game is a conversation between people, so there is variability
-in how it plays out. Different GMs will draw their line of certainty at
-different places.
-
-Consider a situation where the GM has described your character, Kresk,
-waking up after making camp in a forest. Beside Kresk is a squirrel,
-nibbling an acorn.
-
-You might respond by saying,
-
-"Kresk wants that acorn! I Mix It Up with the squirrel!"
-
-It would be bizarre, but completely within the rules for the GM to write
-up some stats for the squirrel (1 Stamina, 1 attack power), and begin a
-melee combat between Kresk and the squirrel, and ask you to flip Str
-to resolve the Mix It Up move.
-
-But the GM will more likely interpret your action, as described, as having
-a *certain* outcome. Perhaps the GM will respond:
-
- * "As you raise your fist to smash the squirrel, it darts off into the
-   forest, never to be seen again."
- * "How is Kresk going to overcome the squirrel's natural speed and reflexes?"
- * "You smash your fist down and flatten the rodent. Strangely, it didn't
-   even flinch. Does this odd behaviour remind Kresk of the rumors he heard
-   about this forest being enchanted?"
-
-### Pushing buttons or staying in character
-
-The GM doesn't always have to invoke a move and call for a flip.  But in
-this example, the player literally names a move ("I Mix It Up...").
-That's a strong signal to the GM, and the GM is likely to follow strong
-signals.
-
-If you enjoy playing in a style where things flow like a narrated story,
-from question to answer, from description to dialogue and naturally back
-around again, rather than pushing a limited set of buttons laid out in
-front of you, try playing without *naming* the moves. Just describe what your
-character does in a natural way.
-
-"Kresk wants that acorn! I slam my fist down on the squirrel!"
-
-### Moves Depend On the Fiction
-
-Because uncertainty is a key requirement before a flip is called for,
-the fiction that you and your friends establish *matters*.
-
-If a character threatens a towering Mountain Giant with a punch (that would
-only reach the Giant's lower shin),
-the GM will not call for a Parley flip. A wound to the arm or hand might be
-described in such a way that would clearly make using a bow for Volley or
-Called Shot impossible. Or successful application of an Amulet of Amiability
-might mean that Pick Pockets can be skipped - the affected NPC might just offer
-to share their precious items.
 
 
 # Combat - Stamina and Wounds
