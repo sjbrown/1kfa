@@ -325,6 +325,37 @@ needs to be brilliant on command. The rules provide structure. The group
 provides the animating spirit. The story is something you all discover
 together—through intention, response, and shared creative trust.
 
+
+## Fictional Positioning
+
+Fictional positioning is how the shared narrative constrains or enables the use of mechanics. It’s what tells you whether a move applies, what options are available, and how the outcomes land in the world.
+
+If there’s no danger, you can’t “Defy Danger.” If your foe is an intangible ghost, “Mix It Up” might not work at all. The fiction isn’t decoration -- it sets the conditions for play. That’s fictional positioning.
+
+See the Player Guide for the rules on Moves.
+
+### A Shared Responsibility
+
+Everyone at the table helps establish and maintain fictional positioning. That means:
+
+* Describing what your character does, not just what move you want
+* Noticing what’s already been established
+* Tracking who has the high ground, who’s exposed, who’s watching
+* Asking questions to clarify or enrich the fiction
+
+If a move is triggered, you make it feel true in the fiction. If a move is *not* possible, the fiction should make that clear.
+
+### Why It Matters
+
+Fictional positioning tells the table:
+
+* What moves are available or valid
+* What kind of consequences are fair or obvious
+* Whether a character has leverage, opportunity, or risk
+
+It’s not just about triggering moves -- it’s about keeping the world consistent. If you’re clinging to a cliff, your options look different than if you’re standing at the edge. The fiction limits and enables everything that follows.
+
+
 ## Diegetic Dialogue
 
 **Mechanical demands, immersive play**

@@ -506,7 +506,7 @@ From there, resolution unfolds in a set sequence: you trigger the move, resolve 
 ### Step-by-Step Procedure
 
 - **Trigger**\
-  A move begins when your character takes action that aligns with a move’s description or dramatic purpose. The text of each move should provide clear context for the GM to decide if one is triggered, but the table can sometimes help identify when it happens or which move fits best.
+  A move begins when your character takes action that aligns with a move’s description or dramatic purpose. The text of each move should provide clear context for the GM to decide if one is triggered, but the table can sometimes help identify when it happens or which move fits best. Use the tool of Fictional Positioning in this decision.
 
   Take note of which attribute this move is resolved with.  If there are multiple choices, the table should agree one one before the next step.
 
@@ -695,6 +695,8 @@ See the [Combat chapter](#combat---stamina-and-wounds) for more details on wound
 
 (Channel the Living Light, ...)
 
+(Should I talk about shadow points from FAST moves?  GM Move triggers?)
+
 
 
 
@@ -712,23 +714,14 @@ text of the move.
 | ✔  | green progress     | |
 | ✔✔ | two green progress | |
 
-Usually ✔✔✔ means an unfettered success,
-and ✔✔ means success, but with complication.
+Usually ✔✔ means an unfettered success,
+and ✔ means success, but with complication.
 
-When the result is a single ✅︎, it sometimes means the same as a ✔✔,
+When the result is a single ✅︎, it sometimes means the same as a ✔,
 but often it is slightly worse.
 
 As you read this section it may help to lay out the move cards in
 front of you.
-
-<div class="note gmnote">
-
-| **GM Note:** *Any time a flip results in a single ✅︎*
-| *the GM gains a* **Shadow point** *-- even when the*
-| *move card says it has the same narrative effect*
-| *as a ✔✔.*
-
-</div>
 
 Note: some move descriptions give choices between several options.
 If one of the options is impossible (fictionally or mechanically), it may

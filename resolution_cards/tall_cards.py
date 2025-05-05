@@ -205,12 +205,12 @@ class Unfold_Mystery(Card):
   custom_number = 5
   attr = 'Int'
   slash_check = '''
-    The GM tells you something interesting
-    - it's on you to make it useful.
+    Create a one-unit stake in the new scene with the newly understood
+    information. Mark an equal amount of progress on another scene stake.
     '''
   three_check = '''
-    The GM tells you something interesting
-    and useful about the subject relevant to your situation
+    Create a one or two-unit stake in the new scene with the newly understood
+    information. Mark an equal amount of progress on another scene stake.
     '''
   desc = u'''
     State facts about the world or the people in it.
