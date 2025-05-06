@@ -1,4 +1,4 @@
-#! /usr/bin/env python
+#! /usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 import random
@@ -41,6 +41,7 @@ def make_card(C):
         'component': component,
         'attr_shield': bool(attr),
         'attr': attr,
+        'one_x': '',
         'one_check': one_check,
         'slash_check': slash_check,
         'two_check': two_check,
@@ -272,7 +273,7 @@ class Seek_Help(Card):
 
 
 
-locs = locals()
+locs = locals().copy()
 cards = []
 for k, v in locs.items():
     if Card in getattr(v, '__bases__', []):

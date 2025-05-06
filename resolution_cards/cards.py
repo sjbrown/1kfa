@@ -14,26 +14,26 @@ x=[4,5,6,5]; c = [1]*x[0] + [2]*x[1] + [3]*x[2] + [4]*x[3]
 x=[2,6,4,8]; d = [1]*x[0] + [2]*x[1] + [3]*x[2] + [4]*x[3]
 
 cards = [
- {'Pro': False, 'Stamina': False, 'a': 1, 'b': 1, 'c': 1, 'd': 1, 'crit_fail': True},
- {'Pro': False, 'Stamina': False, 'a': 1, 'b': 2, 'c': 3, 'd': 2},
- {'Pro': False, 'Stamina': False, 'a': 1, 'b': 4, 'c': 3, 'd': 4},
- {'Pro': False, 'Stamina': False, 'a': 2, 'b': 2, 'c': 3, 'd': 4},
- {'Pro': False, 'Stamina': False, 'a': 2, 'b': 3, 'c': 2, 'd': 3},
- {'Pro': False, 'Stamina': False, 'a': 1, 'b': 2, 'c': 2, 'd': 3},
- {'Pro': False, 'Stamina': False, 'a': 2, 'b': 1, 'c': 2, 'd': 3},
- {'Pro': True,  'Stamina': False, 'a': 1, 'b': 1, 'c': 4, 'd': 1},
- {'Pro': True,  'Stamina': False, 'a': 2, 'b': 2, 'c': 1, 'd': 2},
- {'Pro': False, 'Stamina': False, 'a': 3, 'b': 1, 'c': 2, 'd': 2},
- {'Pro': False, 'Stamina': True, 'a': 4, 'b': 4, 'c': 4, 'd': 4, 'crit_win': True},
- {'Pro': False, 'Stamina': True, 'a': 1, 'b': 3, 'c': 3, 'd': 4},
- {'Pro': False, 'Stamina': True, 'a': 3, 'b': 3, 'c': 4, 'd': 4},
- {'Pro': False, 'Stamina': True, 'a': 3, 'b': 4, 'c': 3, 'd': 4},
- {'Pro': True , 'Stamina': True, 'a': 1, 'b': 2, 'c': 2, 'd': 4},
- {'Pro': True,  'Stamina': True, 'a': 3, 'b': 2, 'c': 1, 'd': 2},
- {'Pro': True,  'Stamina': True, 'a': 4, 'b': 1, 'c': 1, 'd': 2},
- {'Pro': False, 'Stamina': True, 'a': 3, 'b': 4, 'c': 3, 'd': 4},
- {'Pro': False, 'Stamina': True, 'a': 1, 'b': 3, 'c': 4, 'd': 2},
- {'Pro': False, 'Stamina': True, 'a': 3, 'b': 3, 'c': 4, 'd': 3},
+ {'xp': False, 'Stamina': False, 'a': 1, 'b': 1, 'c': 1, 'd': 1, 'crit_fail': True},
+ {'xp': False, 'Stamina': False, 'a': 1, 'b': 2, 'c': 3, 'd': 2},
+ {'xp': False, 'Stamina': False, 'a': 1, 'b': 4, 'c': 3, 'd': 4},
+ {'xp': False, 'Stamina': False, 'a': 2, 'b': 2, 'c': 3, 'd': 4},
+ {'xp': False, 'Stamina': False, 'a': 2, 'b': 3, 'c': 2, 'd': 3},
+ {'xp': False, 'Stamina': False, 'a': 1, 'b': 2, 'c': 2, 'd': 3},
+ {'xp': False, 'Stamina': False, 'a': 2, 'b': 1, 'c': 2, 'd': 3},
+ {'xp': True,  'Stamina': False, 'a': 1, 'b': 1, 'c': 4, 'd': 1},
+ {'xp': True,  'Stamina': False, 'a': 2, 'b': 2, 'c': 1, 'd': 2},
+ {'xp': False, 'Stamina': False, 'a': 3, 'b': 1, 'c': 2, 'd': 2},
+ {'xp': False, 'Stamina': True, 'a': 4, 'b': 4, 'c': 4, 'd': 4, 'crit_win': True},
+ {'xp': False, 'Stamina': True, 'a': 1, 'b': 3, 'c': 3, 'd': 4},
+ {'xp': False, 'Stamina': True, 'a': 3, 'b': 3, 'c': 4, 'd': 4},
+ {'xp': False, 'Stamina': True, 'a': 3, 'b': 4, 'c': 3, 'd': 4},
+ {'xp': True , 'Stamina': True, 'a': 1, 'b': 2, 'c': 2, 'd': 4},
+ {'xp': True,  'Stamina': True, 'a': 3, 'b': 2, 'c': 1, 'd': 2},
+ {'xp': True,  'Stamina': True, 'a': 4, 'b': 1, 'c': 1, 'd': 2},
+ {'xp': False, 'Stamina': True, 'a': 3, 'b': 4, 'c': 3, 'd': 4},
+ {'xp': False, 'Stamina': True, 'a': 1, 'b': 3, 'c': 4, 'd': 2},
+ {'xp': False, 'Stamina': True, 'a': 3, 'b': 3, 'c': 4, 'd': 3},
 ]
 
 def count_checks_in_suit(cards, suit):
@@ -43,17 +43,17 @@ def count_exes_in_suit(cards, suit):
     return sum(3-card[suit] for card in cards if card[suit] < 3)
 
 blessing_cards = [
- {'Pro': False, 'Stamina': False, 'a': 4, 'b': 3, 'c': 4, 'd': 4, 'blessing': 'copper'},
- {'Pro': False, 'Stamina': False, 'a': 3, 'b': 4, 'c': 4, 'd': 4, 'blessing': 'copper'},
- {'Pro': False, 'Stamina': False, 'a': 4, 'b': 3, 'c': 4, 'd': 4, 'blessing': 'copper'},
- {'Pro': False, 'Stamina': False, 'a': 3, 'b': 4, 'c': 4, 'd': 4, 'blessing': 'copper'},
- {'Pro': False, 'Stamina': False, 'a': 4, 'b': 4, 'c': 4, 'd': 4, 'blessing': 'gold'},
- {'Pro': False, 'Stamina': False, 'a': 4, 'b': 4, 'c': 4, 'd': 4, 'blessing': 'gold'},
+ {'xp': False, 'Stamina': False, 'a': 4, 'b': 3, 'c': 4, 'd': 4, 'blessing': 'copper'},
+ {'xp': False, 'Stamina': False, 'a': 3, 'b': 4, 'c': 4, 'd': 4, 'blessing': 'copper'},
+ {'xp': False, 'Stamina': False, 'a': 4, 'b': 3, 'c': 4, 'd': 4, 'blessing': 'copper'},
+ {'xp': False, 'Stamina': False, 'a': 3, 'b': 4, 'c': 4, 'd': 4, 'blessing': 'copper'},
+ {'xp': False, 'Stamina': False, 'a': 4, 'b': 4, 'c': 4, 'd': 4, 'blessing': 'gold'},
+ {'xp': False, 'Stamina': False, 'a': 4, 'b': 4, 'c': 4, 'd': 4, 'blessing': 'gold'},
 ]
 
 wound_cards = [
- {'Pro': False, 'Stamina': False, 'a': 1, 'b': 1, 'c': 1, 'd': 2, 'blessing': 'wound'},
- {'Pro': False, 'Stamina': False, 'a': 1, 'b': 1, 'c': 2, 'd': 1, 'blessing': 'wound'},
+ {'xp': False, 'Stamina': False, 'a': 1, 'b': 1, 'c': 1, 'd': 2, 'blessing': 'wound'},
+ {'xp': False, 'Stamina': False, 'a': 1, 'b': 1, 'c': 2, 'd': 1, 'blessing': 'wound'},
 ]
 
 class Card(object):
@@ -62,10 +62,10 @@ class Card(object):
         self._data = data
 
     def __str__(self):
-        return '<{a} | {b} | {c} | {d} ||| P {Pro:d} | {Stamina:d}>'.format(**self._data)
+        return '<{a} | {b} | {c} | {d} ||| P {xp:d} | {Stamina:d}>'.format(**self._data)
 
     def __repr__(self):
-        return '<{a} | {b} | {c} | {d} ||| P {Pro:d} | {Stamina:d}>'.format(**self._data)
+        return '<{a} | {b} | {c} | {d} ||| P {xp:d} | {Stamina:d}>'.format(**self._data)
 
     def __lt__(self, other):
         return (
@@ -73,14 +73,14 @@ class Card(object):
         ) or (
             self._data[self.SIDE] == other._data[self.SIDE]
             and
-            self._data['Pro'] < other._data['Pro']
+            self._data['xp'] < other._data['xp']
         )
 
     def __eq__(self, other):
         return (
             self._data[self.SIDE] == other._data[self.SIDE]
             and
-            self._data['Pro'] == other._data['Pro']
+            self._data['xp'] == other._data['xp']
         )
 
     def __getitem__(self, key):
@@ -353,7 +353,7 @@ def proficiency_check(mod):
     for i in range(flips):
         random.shuffle(c)
         card = c.pop()
-        if card['Pro']:
+        if card['xp']:
             result += 1
     return result
 
@@ -382,7 +382,7 @@ def take_worst(rank, card_list):
     taken = card_list[0]
     for card in card_list[1:]:
         if card.get(rank) == taken.get(rank):
-            if card.get('Pro'):
+            if card.get('xp'):
                 taken = card
         elif card.get(rank) < taken.get(rank):
             taken = card
@@ -392,7 +392,7 @@ def take_best(rank, card_list):
     taken = card_list[0]
     for card in card_list[1:]:
         if card.get(rank) == taken.get(rank):
-            if card.get('Pro'):
+            if card.get('xp'):
                 taken = card
         elif card.get(rank) > taken.get(rank):
             taken = card
@@ -409,7 +409,7 @@ def green_token_check(mod, rank, stamina_loss):
         resolving_card = take_worst(rank, results)
     else:
         resolving_card = take_best(rank, results)
-    return resolving_card.get('Pro')
+    return resolving_card.get('xp')
 
 def analyze_green_token_check():
     ranks = 'abcd'
@@ -432,7 +432,7 @@ def analyze_green_token_check():
 
 def p2_check(suit, mod):
     """
-    Only take the 'Pro' if it's on the card that got used
+    Only take the 'xp' if it's on the card that got used
     """
     if mod > 0:
         raise ValueError('die')
@@ -451,7 +451,7 @@ def p2_check(suit, mod):
             score = card[suit]
             used = card
 
-    if used['Pro']:
+    if used['xp']:
         return 1
     return 0
 
@@ -785,7 +785,7 @@ def analyze_exes_and_checkmarks(svg=False, lost_stamina=0, flashback_percent=0.0
                     card = fn(deck_copy)
                     card.SIDE = side
 
-                if card._data['Pro']:
+                if card._data['xp']:
                     green_tokens += 1
                 mod_results[card.read_result()] += 1
 

@@ -1,14 +1,17 @@
-#! /usr/bin/env python
+#! /usr/bin/env python2
 # -*- coding: utf-8 -*-
 
+import sys
 import csv
 import re
 
+def debug(*args):
+    print(*args, file=sys.stderr)
 
 
 class UTF8File(object):
     def __init__(self, fpath):
-        self._data = file(fpath)
+        self._data = open(fpath)
         self._firstLine = True
 
     def next(self):
@@ -26,7 +29,7 @@ class UTF8File(object):
         self._data.close()
 
     def __iter__(self):
-        return self
+        return iter(self._data)
 
 def parse_circles(d2):
     if 'circles' not in d2:
@@ -105,7 +108,7 @@ def parse_flags(d2):
     flags = [x.strip() for x in note.split(',')]
     if any(x not in possible_flags for x in flags):
         raise Exception('How to flags ?? %s' % flags)
-    print 'set', set(flags)
+    #print 'set', set(flags)
     d2['flags'] = flags
 
 def parse_desc(d2):
@@ -114,9 +117,9 @@ def parse_desc(d2):
     bulleted = body.split('*')
     preamble = bulleted.pop(0).strip()
     if bulleted:
-        bulleted = ['\n' + u'✷' + x.strip() for x in bulleted]
+        bulleted = ['\n✷ {x}'.format(x=x) for x in bulleted]
     desc_detail = preamble + ''.join(bulleted)
-    desc_detail = desc_detail.replace('STAR', u'✷')
+    desc_detail = desc_detail.replace('STAR', '✷')
 
     desc_detail = parse_text(desc_detail)
     d2['desc_detail'] = desc_detail
@@ -135,11 +138,8 @@ def parse_checks(d2):
     one_check = parse_text(d2.get('r-1') or d2.get('✅'))
     two_check = parse_text(d2.get('r1') or d2.get('✔✔'))
     three_check = parse_text(d2.get('r2') or d2.get('✔✔✔'))
-    if two_check == one_check:
-        d2['slash_check'] = two_check
-    else:
-        d2['two_check'] = two_check
-        d2['one_check'] = one_check
+    d2['two_check'] = two_check
+    d2['one_check'] = one_check
     d2['one_x'] = one_x
     d2['three_check'] = three_check
 
@@ -147,7 +147,7 @@ def parse_attr(d2):
     d2['attr'] = d2['mod'].strip()
 
 def parse_title(d2, title):
-    d2['title'] = title.decode('utf-8').strip().replace('_', '____')
+    d2['title'] = title.strip().replace('_', '____')
 
 def parse_custom_number(d2):
     # Booklet pages come in a certain order
@@ -179,20 +179,23 @@ def get_dicts_from_spreadsheet(fname, extra_fields=None, grep_filter=''):
     if extra_fields is None:
         extra_fields = {}
 
-    f = UTF8File(fname)
+    #f = UTF8File(fname)
+    f = open(fname)
     spreadsheet = csv.DictReader(f)
 
     l = []
     for row in spreadsheet:
+        for key in list(row.keys()):
+            row[key.lower()] = row[key]
         name = row.get('name') or row.get('deckahedron move')
         if not name:
             continue
         if grep_filter and grep_filter not in name.lower():
-            print 'filtering out', name
+            debug('filtering out', name)
             continue
-        print 'Processing', name
+        debug('Processing', name)
         d2 = extra_fields.copy()
-        d2.update( {k:v.decode('utf-8') for (k,v) in row.items()} )
+        d2.update( {k:v for (k,v) in row.items()} )
         parse_title(d2, name)
         parse_circles(d2)
         parse_attr(d2)
@@ -236,3 +239,30 @@ class DictObj(dict):
 
 def get_objs(grep_filter=''):
     return [DictObj(x) for x in get_dicts(grep_filter)]
+
+def brief_print(card):
+    lev = ' | '.join(card['levels'])
+    s = u'''\n\n# {title} ({attr})
+    **Levels**: {lev}
+    ----
+    ✗: {one_x}
+    ----
+    ✓: {one_check}
+    ----
+    ✔: {two_check}
+    ----
+    ✔✔: {three_check}
+    ----
+    **Details**: {desc_detail}
+    '''.format(lev=lev, **card)
+    print(s)
+
+
+if __name__ == '__main__':
+    moves = get_dicts_from_spreadsheet('./character_move_sheet.csv', {}, '')
+    #print(moves)
+    equipment = get_dicts_from_spreadsheet('./equipment_sheet.csv', {'equipment': True},'')
+    for move in moves:
+        brief_print(move)
+    #for eq in equipment:
+        #brief_print(eq)
