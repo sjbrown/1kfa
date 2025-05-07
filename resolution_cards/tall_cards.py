@@ -38,6 +38,7 @@ def make_card(C):
     card = {
         'title': title,
         'custom_number': getattr(C, 'custom_number', None),
+        'flags': getattr(C, 'flags', []),
         'component': component,
         'attr_shield': bool(attr),
         'attr': attr,

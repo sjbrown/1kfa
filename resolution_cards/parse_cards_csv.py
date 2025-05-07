@@ -1,5 +1,4 @@
-#! /usr/bin/env python2
-# -*- coding: utf-8 -*-
+#! /usr/bin/env python3
 
 import sys
 import csv
@@ -104,11 +103,11 @@ def parse_flags(d2):
     d2['flags'] = []
     note = d2.get('flags') or d2.get('note') or d2.get('notes') or ''
     if not note.strip():
+        d2['flags'] = []
         return
     flags = [x.strip() for x in note.split(',')]
     if any(x not in possible_flags for x in flags):
         raise Exception('How to flags ?? %s' % flags)
-    #print 'set', set(flags)
     d2['flags'] = flags
 
 def parse_desc(d2):
@@ -138,6 +137,22 @@ def parse_checks(d2):
     one_check = parse_text(d2.get('r-1') or d2.get('✅'))
     two_check = parse_text(d2.get('r1') or d2.get('✔✔'))
     three_check = parse_text(d2.get('r2') or d2.get('✔✔✔'))
+
+    def maybe_join(prev, more):
+        if prev:
+            return ' | '.join([prev, more])
+        else:
+            return more
+
+    if d2['attr']:
+        if 'IMMEDIATE' in d2['flags']:
+            one_x = maybe_join(one_x, 'Shadow point')
+        else:
+            one_x = maybe_join(one_x, 'GM Move')
+            one_check = maybe_join(one_check, 'gray progress')
+            two_check = maybe_join(two_check, 'green progress')
+            three_check = maybe_join(three_check, '2x green progress')
+
     d2['two_check'] = two_check
     d2['one_check'] = one_check
     d2['one_x'] = one_x
@@ -197,6 +212,7 @@ def get_dicts_from_spreadsheet(fname, extra_fields=None, grep_filter=''):
         d2 = extra_fields.copy()
         d2.update( {k:v for (k,v) in row.items()} )
         parse_title(d2, name)
+        parse_flags(d2)
         parse_circles(d2)
         parse_attr(d2)
         parse_levels(d2)
@@ -204,7 +220,6 @@ def get_dicts_from_spreadsheet(fname, extra_fields=None, grep_filter=''):
         parse_checks(d2)
         parse_spots(d2)
         parse_tags(d2)
-        parse_flags(d2)
         parse_reqs(d2)
         parse_component(d2)
         parse_campaign(d2)
@@ -242,7 +257,7 @@ def get_objs(grep_filter=''):
 
 def brief_print(card):
     lev = ' | '.join(card['levels'])
-    s = u'''\n\n# {title} ({attr})
+    s = '''\n\n# {title} ({attr}) ({flags})
     **Levels**: {lev}
     ----
     ✗: {one_x}
