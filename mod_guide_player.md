@@ -134,10 +134,11 @@ When you begin a game, shuffle your Deckahedron and place it face-down in front 
 ## Move Cards
 
 `TODO`
- * Dramatic Action moves
- * Combat moves
- * Downtime moves
+ * Dramatic Action moves sheet
+ * Combat moves sheet
+ * Downtime moves sheet
    * Not used in the One-shot campaign
+ * Copying cards when you run out
 
 ## Layout
 
@@ -296,22 +297,22 @@ As you're asking the players these questions, practice **Ludic Listening** and a
 This is a game where characters start off as scrappy adventurers. If a player is telling you their character is a fire demon, a ten-year-old shoe-shine boy, or a computer hacker, a conversation is needed to establish how that character can fit into the rules.
 
 
-## Initiation to Mystery
+## Initiation to Dark Gardens
 
 The GM reads aloud:
 
 > Since this is a game about taking risks, I'm going to give you an opportunity to get some bonuses when you get risky.\
-> We're going to create what are called **Initiations to Mystery**.
+> We're going to create what are called **Initiations to Dark Gardens**.
 >
-> An Initiation to Mystery is a thematic goal your character might try to achieve during the story.\
+> An Initiation to Dark Gardens is a thematic goal your character might try to achieve during the story.\
 > You'll write it in the designated spot on your character sheet, and place an **XP token** and a **✔ token** there as well.
 >
 > When your character *takes a big risk* to pursue this goal, you’ll earn XP, and the ✔ token will advance a scene’s progress bar.\
 > (We’ll explain how those effects work later.)
 >
-> To choose your Initiation to Mystery, the player on your left will read you two options from a list. You’ll pick one, and that becomes your character’s personal Initiation to Mystery.  You then read propose 2 different options to the player on your right and everyone will take their turn like that.
+> To choose your Initiation to Dark Gardens, the player on your left will read you two options from a list. You’ll pick one, and that becomes your character’s personal Initiation to Dark Gardens.  You then read propose 2 different options to the player on your right and everyone will take their turn like that.
 
-Here are the available Initiations to Mystery:
+Here are the available Initiations to Dark Gardens:
 
 - Expose an embarrassment
 - Locate a prize
@@ -327,14 +328,14 @@ Here are the available Initiations to Mystery:
 - Believe an impossible claim
 - Get called out on your boasting
 
-Once chosen, players keep their XP and ✔ tokens on the Initiation to Mystery spot of their sheet. They are not available to spend yet.
+Once chosen, players keep their XP and ✔ tokens on the Initiation to Dark Gardens spot of their sheet. They are not available to spend yet.
 
-When a character first *takes a big risk* in pursuit of their Initiation to Mystery — by the method or for the reason written on the Initiation to Mystery spot — the player:
+When a character first *takes a big risk* in pursuit of their Initiation to Dark Gardens — by the method or for the reason written on the Initiation to Dark Gardens spot — the player:
 
 - Claims the XP token
 - Advances a ✔ token to a scene’s progress bar of their choice
 
-Initiations to Mystery are especially helpful for players newer to roleplaying games — they provide a personal goal that can inspire bold choices and keep the story moving.
+Initiations to Dark Gardens are especially helpful for players newer to roleplaying games — they provide a personal goal that can inspire bold choices and keep the story moving.
 
 
 # Weapons and Items
@@ -505,7 +506,7 @@ Advantage to beats: you can stay immersed and just say what flows from the ficti
 
 
 
-## **Triggering, Resolving, and Interpreting Moves**
+## Triggering, Resolving, and Interpreting Moves
 
 A move is triggered when your character takes an action that is **uncertain**, **risky**, or **meaningful**.\
 You don’t declare “I’m making a move” — instead, you **describe what your character does**, and the GM decides when a move has been triggered.
@@ -515,10 +516,8 @@ From there, resolution unfolds in a set sequence: you trigger the move, resolve 
  ![Your Deckahedron and Character Sheet](images/component_layout.png){ width=2.5inch }
 
 
+### Trigger
 
-### Step-by-Step Procedure
-
-- **Trigger**\
   A move begins when your character takes action that aligns with a move’s description or dramatic purpose. The text of each move should provide clear context for the GM to decide if one is triggered, but the table can sometimes help identify when it happens or which move fits best. Use the tool of Fictional Positioning in this decision.
 
   Take note of which attribute this move is resolved with.  If there are multiple choices, the table should agree one one before the next step.
@@ -528,6 +527,8 @@ From there, resolution unfolds in a set sequence: you trigger the move, resolve 
   - Charging at your adversaries - triggers Mix It Up or Defy Danger
   - Speaking from the heart - triggers Unfold Mystery or Defend
   - Reaching into  magical energies - triggers Use A Magic Item or Channel the Living Light
+
+`TODO: images of example moves`
 
 Remeber to use the tool of Fictional Positioning when considering whether a move is triggered.
 
@@ -549,8 +550,12 @@ The fiction provides both surprise and a clear positional advantage, meeting the
 
 Charging a foe head-on gives no fictional support for a sneak attack. *Backstab* doesn’t trigger.
 
+Some moves do not list an attribute (Dex, Int, or Str). If you trigger one of these, skip the Flip and Resolve steps entirely. Instead, go directly to Interpret -- read the instructions on the Move Card and apply its effects directly. These moves typically represent clear outcomes or guaranteed effects.
 
-- **Flip**\
+`TODO: image of non-flip move`
+
+
+### Flip
 
 ![Flipping a card](images/component_flip.png){ width=2.5inch }
 
@@ -558,7 +563,7 @@ Charging a foe head-on gives no fictional support for a sneak attack. *Backstab*
 
   By default, draw one card. Only if you have advantage or disadvantage (see below) do you draw more.
 
-- **Resolve**
+### Resolve
 
 ![Resolving a move](images/component_read.png){ width=2.5inch }
 
@@ -572,7 +577,8 @@ Charging a foe head-on gives no fictional support for a sneak attack. *Backstab*
 
 Place all the revealed cards on your discard pile, keeping the resolving card on top.
 
-- **Interpret**\
+### Interpret
+
   Take the primary result and find the text on the Move card that matches it. Perform the actions and answer any questions indicated by the matching text on the Move card.  Also perform any mechanical actions demanded by the secondary results at this point.
 
   Next, interpret these actions in the narrative.\
@@ -628,6 +634,7 @@ Advantage and disadvantage can also come from the fiction — including when the
 * With **advantage**, you must choose the card with the **highest** primary result.
 * With **disadvantage**, you must choose the card with the **lowest** primary result.
 * If there is a **tie** for highest or lowest, you may choose freely among the tied cards.
+* In the rare case that the **player's Deckahedron doesn't have enough cards**, the PC is immediately incapacitated, and the flip is treated as an ✗ result.
 
 Your choice determines both the outcome of the move and any secondary effects (like XP). All flipped cards go to your discard pile, with the chosen card on top.
 
@@ -726,13 +733,13 @@ See the [Combat chapter](#combat---stamina-and-wounds) for more details on wound
 
 ### Secondary Results from Moves
 
-(Channel the Living Light, ...)
+(Channel the Living Light, Take a Breather...)
 
 (Should I talk about shadow points from FAST moves?  GM Move triggers?)
 
 
 
-## Interpreting a Flip
+## Interpreting a Move
 
 ![flip results](images/flip_results.png){ width=2.5inch }
 
@@ -791,85 +798,228 @@ Finally, the GM turns to a different Player at the table:
 That question is the heartbeat of the game — it keeps the story alive, moment to moment, breath to breath.
 
 
-## Moves tagged *FAST*
-
-As the conversation transits around the table, players will
-have informal "turns" where they talk about the actions their PC takes.
-The game works best when this "spotlight" is moved around fairly
-so each player can contribute. The spotlight typically follows a single
-character's actions until they trigger, then resolve a move.
-
-Some move descriptions have the *FAST* symbol. This indicates
-they can be paired with another move during your character's
-moment in the spotlight.
-
-*FAST* moves are like "bonus" moves that augment, or quickly follow the
-initially triggered move.
-
-Characters will trigger **at most one** *FAST* move during their moment
-in the spotlight.
-Otherwise the pace of the game can slow down, and other players may feel
-like they aren't getting a fair share.
-
-![Moves tagged FAST](images/cards_marked_fast.png){ width=5inch }
-
-Examples of cards tagged *FAST* include Unknown Benefactor,
-Where It Hurts, and Shield.
-
-A moment in the spotlight might see your swordsman character triggering
-the move Mix It Up, causing damage to a foe, and then also triggering
-Where It Hurts as you describe the sword delivering a stunning blow,
-clanging loud and hard against the foe's helmet.
-
-Or, your professor of alchemy character might trigger Defy Danger as they
-jump out of the way of a toppling bookcase. After you flip an ✗, the GM
-may start enumerating the attack power your character must suffer, to which you
-could respond by invoking Unknown Benefactor to cancel the attack's effects.
-
-
 
 ## Reshuffling
 
-After every flip, any face-up Deckahedron card is placed, face-up, in a
-*discard pile*. (Later, you will start another pile of cards called an
-*Exhaustion pile*. Keep them separate.)
+After every flip, all revealed Deckahedron cards are placed, face-up, in a
+*discard pile*. (Later in the game, you may also have an *exhaustion pile*.
+Keep that separate.)
 
-At any time other than during a flip, you may take your
-*discard pile* and shuffle it back into your Deckahedron.
+You may reshuffle your *discard pile* back into your Deckahedron at any time
+**except during a flip**. This can be a strategic choice, allowing you to reintroduce useful cards at the right moment.
 
-Whenever your Deckahedron has 5 or fewer cards, you **must** take
-your *discard pile* and shuffle it back into your Deckahedron.
-
+If you are about to begin a flip and your Deckahedron has **5 or fewer cards**, you **must reshuffle first**. To do this, combine your discard pile with the remaining cards in your Deckahedron, shuffle them thoroughly, and form a new Deckahedron. Do not include your exhaustion pile — those cards remain set aside.
 
 
 
 ## Teamwork Flips
 
-Before a flip is executed, if other players have characters in the same
-scene as the character taking action, and there is nothing in the fiction
-preventing it, those other players may choose to have their characters
-*aid* the "spotlighted" character. They just chime in before the flip and
-say how their character helps out.
+Before a flip is executed, if other PCs have Fictional
+Positioning to assist the character taking action, they may choos to *aid*
+the *spotlighted* character. They simply chime in before the flip and
+describe how their PC contributes.
 
-Another time the Teamwork Flip is triggered is when the characters are
-all bound together in joint success or joint failure.
-(eg, Defying Danger when the whole party is in a canoe traveling over
-whitewater)
-In that case, the GM asks the players "who is taking the lead?".
-That "lead" character is the "spotlighted" character, and the
-other players are supporting them.
+Another time the Teamwork Flip is used is when the Fictional Positioning necessarily binds the characters together in joint success or joint failure.
+(eg, Defying Danger while sharing a canoe through whitewater)
+In this case, the GM asks: "who is taking the lead?".
+That "lead" character becomes the *spotlighted* character; the others
+support them.
 
-The spotlighted player flips as they normally would, the supporting players
-say how their characters are helping and each flip one Anvil.
+The spotlighted player flips as normal using their attribute. Each
+supporting player describes how their PC is helping and flips one card
+using their **Anvil** rank, regardless of their usual attribute.
 
-The players choose the best result to resolve the flip.
+All players involved in the flip look at the results and choose the
+**single best result** to resolve the move.
 
-Only the card that resolved the flip can have secondary results, and any
-such secondary results apply only for the player who played it.
+Only the resolving card may apply secondary results (XP, etc), and those
+results apply only for the player who played it.
 
 If there are any negative consequences (damage, danger, etc) from the
-result, all the participating characters must suffer them.
+result, **all the participating PCs must suffer them**.
 
+
+## Using Moves / Rhythms of Play
+
+A Thousand Faces of Adventure pulses with changing rhythms. Sometimes you’re fighting for your life. Sometimes you’re chasing shadows through the dark. Sometimes you’re resting, planning, remembering what matters. These shifts shape which moves feel most natural — and which ones come forward.
+
+We call these broad categories **Rhythms of Play**. Designed to help guide expectations and reduce cognitive load, some rhythms (like Downtime) are explicitly structured and only occur at specific times in a session or campaign. Others may emerge dynamically through choices at the table. Most moves will be used during only one rhythm -- but the fiction always comes first. If the moment supports the move, use it.
+
+### Core Rhythms
+
+* **Dramatic Action** – Dialogue, danger, and discovery. Characters are active, the stakes are being discovered or resolved.
+  *Typical moves:* *Discern*, *Unfold Mystery*, *It Belonged to My Father*, *Defy Danger*
+
+* **Combat** – The rhythm tightens. The danger is immediate. Choices are sharp.
+  *Typical moves:* *Mix It Up*, *Defend*, *Face the Onslaught*, *Use a Magic Item, Defy Danger*
+
+* **Pursuit** – Movement matters. Someone is being hunted or chased.
+  *Typical moves:* *Bravely Run Away, Called Shot, ...*
+
+* **Downtime** – Time stretches. Moves are described in montage. This is for reflection, recovery, and quiet invention.
+  *Typical moves:* *Sharpen and Stitch*, *Study Under a Master*, *...*
+
+
+### Purpose-Built vs. Flexible Moves
+
+Some moves are purpose-built for a particular rhythm. For example, *Sharpen and Stitch* is designed for Downtime — it won’t make sense in Combat or Dramatic Action. These moves align tightly with their rhythm and usually only appear when the game explicitly shifts into that mode.
+
+Other moves are more flexible. *Defy Danger*, for example, can appear in any rhythm — during Combat to penetrate defenses, during Pursuit to leap a ravine, or in Dramatic Action to avoid triggering a trap. Sometimes these moves serve as connective tissue between the rhythms, bridging from one into another.
+
+The title and text of the Move, together with Fictional Positioning
+are all you need to adjudicate whether a move can be triggered during the given rythm. Follow the flow of Narrative Authority Waterfall to resolve ambiguity.
+
+### Transitioning Between Rhythms
+
+Rhythms of Play express the shape of gameplay. Sometimes, triggering a move will shift the table from one rhythm to another entirely. For example, using *Mix It Up* during Dramatic Action will initiate the start of Combat. This transition should feel natural, driven by the fiction, but it marks a distinct change in the game's tempo and focuses the table on a different part of the rules.
+
+The GM has specific rules for how and when transitions between rhythms occur. These are detailed in the GM Guide, and include conditions like:
+
+* When all foes are defeated, Combat ends and the rhythm returns to Dramatic Action.
+* Certain narrative events may explicitly trigger Downtime — which can only be entered at specific points in the campaign structure.
+
+Being aware of these transitions helps keep your instincts aligned with the story's pacing, and can be used strategically to keep your PC alive, or keep
+the stakes of a scene in play.
+
+### *FAST* Moves
+
+```
+Good Cardio
+And This Is For...
+Where It Hurts
+Go Berserk!
+Fury
+Goreography
+Weak Spot
+Unknown Benefactor
+```
+
+As the conversation transits around the table, players will
+naturally have moments in the **spotlight** -- informal *turns* where
+they describe what their character says or does.
+The game works best when this spotlight rotates fairly, each player
+having their chance to contribute.
+
+A player's spotlight typically lasts until they trigger and resolve
+a move. Some move descriptions have the *FAST* symbol -- these are
+special moves that can be paired with another move during your turn.
+
+*FAST* moves are quick, reactive, or supplemental. Think of them as
+bonus actions, heightening a dramatic moment, protecting your
+character in a flash, or adding some "oomph" to your initial move.
+
+You may trigger **at most one** *FAST* move during your spotlight.
+This keeps the pace lively and ensures every player gets a fair chance
+to contribute.
+
+![Moves tagged FAST](images/cards_marked_fast.png){ width=5inch }
+
+**How it Works**
+
+Examples of cards tagged *FAST* include Unknown Benefactor,
+Where It Hurts, and Shield.
+
+A spotlight moment might look like this:
+
+ * Your swordsman character triggers **Mix It Up**, dealing damage to a foe.
+   As you describe your strike delivering a stunning blow, clanging loud
+   against the foe's helmet, you also trigger **Where It Hurts** for extra
+   effect.
+ * Or your alchemist triggers **Defy Danger**, leaping to safety as a
+   bookcase topples. You flip an ✗, and the GM begins to tally damage.
+   You respond with **Unknown Benefactor**, narrating the appearance of
+   a book golem who catches it at the last second.
+
+*FAST* moves reward quick thinking and cinematic flair. Use them to elevate your actions — but remember, one is enough. Keep the rhythm moving and pass the spotlight with generosity.
+
+
+### *Wild* Moves
+
+```
+   * Example using Fundamental Magic
+     * Maybe with Destiny Forewritten to back it up
+```
+
+In front of you, you'll find your **base moves** and the moves you selected during character creation. These are your character’s signature abilities — the tools they’re most practiced with.
+
+But the world is unpredictable, and sometimes your character will try something they’ve never formally trained for. That’s where **Wild moves** come in.
+
+A "Wild" move is any move that a player **has not selected**, but that still describes the action you're narrating. If the move card shows **levels**, you’re allowed to attempt it -- at the **lowest available level**.
+
+This means:
+
+* You may **freely narrate** your character’s actions, even if they sound like something off another move.
+* If that narration aligns with a (level showing) move card, the GM may call for that move being triggered -- but you’ll flip **with disadvantage**, using the lowest level shown on the card.
+
+> **You can attempt it, but you can’t wield it cleanly.**
+
+This preserves the feeling that your character can try anything -- throw a rock at someone's head, or improvise a magical invokation -- without needing advance permission. If your action matches something like **Called Shot**, even if you don’t have that card, the move can still be triggered. But you’ll flip at a disadvantage, reflecting the lack of training or preparation.
+
+Players who **do** hold the move card enjoy stronger, cleaner results -- that’s what they chose as their character’s specialty.
+
+In short: **your character is always allowed to try.
+
+**Advancing Through Success**
+
+If you flip a critical success while using a Wild move, you have an opportunity:
+
+ * You may take (or copy) that move card to your character, setting the
+   level to **one above the lowest level**
+ * This represents sudden growth: a new technique learned in the heat of the moment.
+
+You are not *required* to take the new move card.  You may instead take a 
+**Blessing Card**, per the rules of Critical Success.
+
+
+#### Example: *Fundamental Magic* as a Wild Move
+
+> **Scene:** The tower is collapsing. A wounded ally is pinned beneath a fallen beam. Kiva skids into the rubble, desperate. She remembers what she saw: the traveling mystic, sculpting stairs from air with a wand. Maybe…
+
+**Player:**
+“Kiva attunes to something in her core, and tries to shape the air under the beam — just like the mystic did with the Air Sculpting Wand. She’s improvising it. Can I trigger *Fundamental Magic* as a Wild attempt?”
+
+**GM:**
+“(Looks at the text of the move) Yes. It’s got levels, so you can attempt it, but you’ll flip at two levels of disadvantage. You’re working without tools or training, so even on success, you’ll only get the bottom tier effect.”
+
+**Player flips**: ✗
+
+**Player (instantly):**
+“I invoke Destiny! This is her moment. She feels her mother's sorceror blood coursing in her veins. I spend 1 XP.”
+
+**GM:**
+"Flip again."
+
+**Player flips again**: ✗
+
+**GM:**
+"Got any more XP?"
+
+**Player:**
+"Yeah, I've only got one more, I'll spend it to take the ✓ result.  It's worth it."
+
+**GM:**
+“The beam stops falling. Inches from your friend’s head, it lurches and holds — suspended on a column of thickened air! You don’t know how you did it, but your body does.”
+
+
+
+## Combat Procedures
+
+## Equipment Procedures
+
+## Pursuit Procedures
+
+## Tracking Resources
+
+ * Tracking XP
+ * Putting tokens on move cards
+ * Putting tokens on stakes / foes
+ * Putting tokens next to Deckahedrons
+ * Tracking item damage
+ * Tracking magical charges
+
+# Reference
+
+## Moves
 
 
 # Combat - Stamina and Wounds
