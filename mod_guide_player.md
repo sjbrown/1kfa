@@ -514,6 +514,8 @@ From there, resolution unfolds in a set sequence: you trigger the move, resolve 
 
  ![Your Deckahedron and Character Sheet](images/component_layout.png){ width=2.5inch }
 
+
+
 ### Step-by-Step Procedure
 
 - **Trigger**\
@@ -526,6 +528,26 @@ From there, resolution unfolds in a set sequence: you trigger the move, resolve 
   - Charging at your adversaries - triggers Mix It Up or Defy Danger
   - Speaking from the heart - triggers Unfold Mystery or Defend
   - Reaching into  magical energies - triggers Use A Magic Item or Channel the Living Light
+
+Remeber to use the tool of Fictional Positioning when considering whether a move is triggered.
+
+(*Example fictional trigger: When you attack someone from surprise ...*)
+
+**Fiction Supports the Move:**
+
+**Player:** “I blend into the crowd, then step behind the captain as he’s shouting orders. I draw my knife and strike low.”
+**GM:** “He doesn’t know you’re there, and he’s distracted. You’ve got the drop on him -- *Backstab* triggers.”
+
+The fiction provides both surprise and a clear positional advantage, meeting the move’s requirements.
+
+**Fiction Doesn’t Support the Move:**
+
+**Player:** “I want to use *Backstab* on the troll.”
+**GM:** “How are you approaching?”
+**Player:** “I just run up with my sword drawn.”
+**GM:** “It roars and turns to face you before you’re even close. You’ve got its full attention -- no element of surprise here.”
+
+Charging a foe head-on gives no fictional support for a sneak attack. *Backstab* doesn’t trigger.
 
 
 - **Flip**\
