@@ -489,20 +489,76 @@ Remember, even a failure moves the story forward. You'll gain:
 
 Think of this  as a **tool you can keep in your pocket**. When the story feels needful, when you're waiting for the next big thing — pull this out. Remember your character's curiosity, or mischief, or sheer reckless courage. Use it to push forward. Every risk you take sends a ripple through the story — the world stirs, new paths open, and consequences unfold.
 
-## Buttons or Beats
 
-...
-You have your own personal play style.
+## Buttons and Beats
 
-Name your moves or not.
+Some players like to name their moves aloud. Others prefer to let the fiction flow naturally and trust the table to interpret what’s happening.
+These approaches aren’t opposites — they’re part of a spectrum called **Buttons and Beats**.
 
-Your style can change depending on the state of the game
+### Your Style Is Yours
 
-You may prefer button pushing in combat interludes, for example.
+You might push Buttons, name your moves clearly, and lean into mechanics.
+You might feel the Beats, narrate your actions and dialogue, and let the GM call it when a move is triggered.
 
-Advantage to button pushing: the GM doesn't have to interpret
+You might switch styles depending on the scene.
 
-Advantage to beats: you can stay immersed and just say what flows from the fiction.
+You might play with a completely different style from the last session played.
+**All of that is valid.**
+
+### Buttons: Clear and Intentional
+
+When you **push a Button**, you name your move:
+
+> *“I'm Calling my Shot - aiming for the bandit's hand.”*
+> *“This offense will not stand! I Mix It Up with the goblin.”*
+
+**Why push Buttons?**
+
+* You're in a fast or tactical moment, like Combat Interludes.
+* You don’t want the GM to guess what you meant.
+* You’re still learning the rules and want clarity.
+
+**It’s deliberate play — choose the move, trigger the move, feel the result.**
+
+### Beats: Natural and Immersive
+
+When you play the **Beat**, you stay in the fiction:
+
+> *“I duck low and sprint through the wreckage, hoping to reach her before the shadows do.”*
+
+You don’t name the move — you let it emerge. The GM might interrupt,
+
+> *“Sounds like you’re Defying Danger — flip Dex.”*
+
+**Why play by Beats?**
+
+* You want to stay immersed in your character’s voice and world.
+* You’re in a slow, tense, or emotional scene.
+* You want to trust the moment and discover which moves arise.
+* You like a more cinematic or performative experience.
+
+**It’s instinctive play — let the fiction lead, and the mechanics follow.**
+
+### Rhythm, Not Rigidity
+
+Some players are all about Beats, others are Button-first.
+**Most players do both.**
+
+You might push Buttons when steel is drawn, and pulse along to the Beats when secrets are revealed.
+You might play your first few sessions by Button, then gradually find the Beat.
+
+There’s no pressure to pick a style. Let yours emerge, and let it shift when it needs to.
+
+
+### Both Styles Help the Table
+
+* **Button pushing** keeps things moving, and relieves the GM from having to interpret intent.
+
+* **Beat playing** keeps the fiction front and center, and helps the world feel real and alive.
+
+Name a move when you want — narrate freely when it feels right.\
+The game works either way. The *story* matters most.
+
 
 
 
@@ -935,21 +991,16 @@ A spotlight moment might look like this:
 
 ### *Wild* Moves
 
-```
-   * Example using Fundamental Magic
-     * Maybe with Destiny Forewritten to back it up
-```
-
 In front of you, you'll find your **base moves** and the moves you selected during character creation. These are your character’s signature abilities — the tools they’re most practiced with.
 
-But the world is unpredictable, and sometimes your character will try something they’ve never formally trained for. That’s where **Wild moves** come in.
+A character's potential isn't limited to the moves they’ve chosen — in moments of instinct or desperation, they may reach for something they’ve never trained for. That’s where **Wild moves** come in.
 
 A "Wild" move is any move that a player **has not selected**, but that still describes the action you're narrating. If the move card shows **levels**, you’re allowed to attempt it -- at the **lowest available level**.
 
 This means:
 
-* You may **freely narrate** your character’s actions, even if they sound like something off another move.
-* If that narration aligns with a (level showing) move card, the GM may call for that move being triggered -- but you’ll flip **with disadvantage**, using the lowest level shown on the card.
+* You have full **freedom to narrate** your character’s actions, even if they sound like something off another move.
+* If that narration aligns with a move card, the GM may call for that move being triggered -- but you’ll flip **with disadvantage**, using the lowest level shown on the card.
 
 > **You can attempt it, but you can’t wield it cleanly.**
 
@@ -998,7 +1049,7 @@ You are not *required* to take the new move card.  You may instead take a
 "Yeah, I've only got one more, I'll spend it to take the ✓ result.  It's worth it."
 
 **GM:**
-“The beam stops falling. Inches from your friend’s head, it lurches and holds — suspended on a column of thickened air! You don’t know how you did it, but your body does.”
+“Alright, pay the cost called for by the move and we'll go from there. The beam stops falling. Inches from your friend’s head, it lurches and holds — suspended on a column of thickened air! You don’t know how you did it, but your body does.”
 
 
 
@@ -1024,7 +1075,7 @@ You are not *required* to take the new move card.  You may instead take a
 
 # Combat - Stamina and Wounds
 
-Your character will confront violent foes and dangerous obstacles. Will
+PCs will confront violent foes and dangerous obstacles. Will
 they endure exertion and injury to keep venturing forward, or will they
 be disfavoured by fate and end up broken, spent, or collapsed?
 
