@@ -124,7 +124,7 @@
 
 
 # Unfold Mystery (Int) ([])
-```
+```python3
 attrs = ['Int']
 flags = []
 ```
