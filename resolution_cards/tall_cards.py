@@ -16,7 +16,8 @@ def parse(s):
         if l.startswith('|'):
             retval += '\n' + l[1:]
         elif l.startswith('*'):
-            retval += '\n' + u'✷' + l[1:]
+            #retval += '\n' + u'✷' + l[1:]
+            retval += '\n' + u' *' + l[1:]
         else:
             retval += ' ' + l
 

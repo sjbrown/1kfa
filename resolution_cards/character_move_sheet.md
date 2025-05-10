@@ -16,8 +16,8 @@ levels = []
     ✔✔: Roll melee attack power and choose
 
 **Details**: On a ✔✔✔, you can choose one:
-✷ Avoid the foe's attack
-✷ Add an extra attack power roll
+ * Avoid the foe's attack
+ * Add an extra attack power roll
 
  The foe's attack can be any GM move made directly with that NPC or monster.
 
@@ -44,9 +44,9 @@ levels = ['0', 'g1']
 
 **Details**: Send a volley flying with your ranged weapon.
  Choices:
-✷ You have to move to get the shot, placing you in danger of the GM's choice
-✷ You have to take what you can get - halve your attack power
-✷ You have to take several shots - lose 1 PACK
+ * You have to move to get the shot, placing you in danger of the GM's choice
+ * You have to take what you can get - halve your attack power
+ * You have to take several shots - lose 1 PACK
     
 
 
@@ -89,9 +89,9 @@ levels = []
 
 **Details**: When you act despite an imminent threat, say how you deal with it and flip.
  If you do it...
-✷ by powering through or enduring, flip Str
-✷ by getting out of the way or acting fast, flip Dex
-✷ with quick wits or via mental fortitude, flip Int
+ * by powering through or enduring, flip Str
+ * by getting out of the way or acting fast, flip Dex
+ * with quick wits or via mental fortitude, flip Int
 
  On a ✅ / ✔✔, the GM may ask you a question, offer you a worse outcome, hard bargain, or ugly choice
     
@@ -114,9 +114,9 @@ levels = []
  Choose 2
 
 **Details**: Stand in defense of a person, item, or location that is under attack. The attack is redirected from the thing you defend to yourself. You may spend XP to choose:
-✷ Halve the attack's effect or damage
-✷ Open up the attacker to an ally giving +1 advantage against the attacker
-✷ Roll attack power against the attacker
+ * Halve the attack's effect or damage
+ * Open up the attacker to an ally giving +1 advantage against the attacker
+ * Roll attack power against the attacker
 
  This move can interrupt an attack against an ally if you are in range and attack power has not yet been rolled.
     
@@ -138,12 +138,12 @@ levels = []
     ✔✔: Ask the GM 3 questions from the list
 
 **Details**: Closely study a situation or person, ask the GM your question(s). For each question, place a green token on this card. Whenever the information gained is acted upon by anyone in the party, take +1 advantage and remove a token from this card.
-✷ What here is useful or valuable to me?
-✷ What happened here recently?
-✷ What is about to happen?
-✷ What should I be on the lookout for?
-✷ Who's really in control here?
-✷ What here is not what it appears to be?
+ * What here is useful or valuable to me?
+ * What happened here recently?
+ * What is about to happen?
+ * What should I be on the lookout for?
+ * Who's really in control here?
+ * What here is not what it appears to be?
     
 
 
@@ -188,11 +188,11 @@ levels = []
 
 **Details**: When not travelling, with a day to devote to rest, do the following:
 
-✷ Step 1: Return all Exhaustion tokens to the supply
-✷ Step 2: Count the Harm and Wound tokens on your Exhaustion pile
-✷ Step 3: Keep that many cards in your Exhaustion pile, put the rest into your discard pile
-✷ Step 4: Return one Harm token to the supply
-✷ Step 5: Say who you blame for your injuries
+ * Step 1: Return all Exhaustion tokens to the supply
+ * Step 2: Count the Harm and Wound tokens on your Exhaustion pile
+ * Step 3: Keep that many cards in your Exhaustion pile, put the rest into your discard pile
+ * Step 4: Return one Harm token to the supply
+ * Step 5: Say who you blame for your injuries
 
  Magic items left idle regain their charges up to their capacity
 
@@ -220,14 +220,14 @@ levels = []
 
 **Details**: When in a peaceful environment where external resources with healing powers are available:
 
-✷ Step 1: Describe your healing experience
-✷ Step 2: Return all Exhaustion tokens to the supply
-✷ Step 3: Return all Harm tokens to the supply
-✷ Step 4: Count the Wound tokens on your Exhaustion pile
-✷ Step 5: Keep that many cards in your Exhaustion pile, put the rest into your discard pile
-✷ Step 6: Return all Wound cards to the supply
-✷ Step 7: Say who you are closer to forgiving
-✷ Step 8: If you are at The Hearth, return all Wound tokens to the supply
+ * Step 1: Describe your healing experience
+ * Step 2: Return all Exhaustion tokens to the supply
+ * Step 3: Return all Harm tokens to the supply
+ * Step 4: Count the Wound tokens on your Exhaustion pile
+ * Step 5: Keep that many cards in your Exhaustion pile, put the rest into your discard pile
+ * Step 6: Return all Wound cards to the supply
+ * Step 7: Say who you are closer to forgiving
+ * Step 8: If you are at The Hearth, return all Wound tokens to the supply
 
  As with Rest, idle magic items regain their charges. Gird all your armour. Seeking Help leaves no time for activities that take effort.
     
