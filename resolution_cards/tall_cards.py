@@ -30,7 +30,6 @@ def make_card(C):
     component = getattr(C, 'component', 'tall_card')
     attr = getattr(C, 'attr', '')
     one_check = parse(getattr(C, 'one_check', ''))
-    slash_check = parse(getattr(C, 'slash_check', ''))
     two_check = parse(getattr(C, 'two_check', ''))
     three_check = parse(getattr(C, 'three_check', ''))
     desc_detail = parse(C.desc)
@@ -45,7 +44,6 @@ def make_card(C):
         'attr': attr,
         'one_x': '',
         'one_check': one_check,
-        'slash_check': slash_check,
         'two_check': two_check,
         'three_check': three_check,
         'desc_detail': desc_detail,
@@ -61,18 +59,18 @@ class Mix_It_Up(Card):
   attr = 'Str'
   custom_number = 10
   one_check = '''
-    Deal 1 attack power and the foe attacks you
+    Deal 1 Might and the foe attacks you
   '''
   two_check = '''
-    Roll melee attack power and the foe attacks you
+    Roll melee Might and the foe attacks you
     '''
   three_check = '''
-    Roll melee attack power and choose
+    Roll melee Might and choose
     '''
   desc = u'''
     On a ✔✔✔, you can choose one:
     * Avoid the foe's attack
-    * Add an extra attack power roll
+    * Add an extra Might calculation to your attack
     |
     |
     The foe's attack can be any GM move made directly with that NPC or monster.
@@ -82,29 +80,29 @@ class Mix_It_Up(Card):
     the circumstances, or the weapons involved
     |
     |
-    Without a melee weapon, a character deals 1 attack power instead of rolling.
+    Without a melee weapon, a character deals 1 Might.
     '''
 
 class Volley(Card):
   custom_number = 11
   attr = 'Dex'
   one_check = '''
-    Roll attack power.
+    Calculate Might.
     GM chooses an option.
   '''
   two_check = '''
-    Roll attack power.
+    Calculate Might.
     Choose an option
   '''
   three_check = '''
-    Roll attack power.
+    Calculate Might.
   '''
   desc = u'''
     Send a volley flying with your ranged weapon.
     |
     Choices:
     * You have to move to get the shot, placing you in danger of the GM's choice
-    * You have to take what you can get - halve your attack power
+    * You have to take what you can get - halve your Might
     * You have to take several shots - lose 1 PACK
   '''
   level_start = '0'
@@ -113,11 +111,14 @@ class Volley(Card):
 class Parley(Card):
   custom_number = 7
   attr = 'Int'
-  slash_check = '''
-    They demand concrete assurance or exchange, right now.
+  one_check = '''
+    They demand concrete assurance or exchange, right now. | gray progress
+  '''
+  two_check = '''
+    They demand concrete assurance or exchange, right now. | green progress
   '''
   three_check = '''
-    They make a deal. Make a promise and get what you want.
+    They make a deal. Make a promise and get what you want. | 2x green progress
   '''
   desc = u'''
     Using leverage, manipulate an NPC. "Leverage" is something they need or want.
@@ -157,7 +158,10 @@ class Defy_Danger(Card):
 class Defend(Card):
   custom_number = 6
   attr = 'Str'
-  slash_check = '''
+  one_check = '''
+    Choose how to split the Might of the attack between yourself and the thing you defend
+  '''
+  two_check = '''
     Spend 1 XP
     |
     Choose 1
@@ -173,11 +177,14 @@ class Defend(Card):
     may spend XP to choose:
     * Halve the attack's effect or damage
     * Open up the attacker to an ally giving +1 advantage against the attacker
-    * Roll attack power against the attacker
+    * Attack them with your Might
     |
     |
     This move can interrupt an attack against an ally if you are in
-    range and attack power has not yet been rolled.
+    range and Might has not yet been calclated.
+    |
+    |
+    Place a green token on this card until you Take a Breather
   '''
 
 class Discern(Card):
@@ -208,13 +215,17 @@ class Discern(Card):
 class Unfold_Mystery(Card):
   custom_number = 5
   attr = 'Int'
-  slash_check = '''
+  one_check = '''
     Create a one-unit stake in the new scene with the newly understood
-    information. Mark an equal amount of progress on another scene stake.
+    information. | one gray progress
+    '''
+  two_check = '''
+    Create a one-unit stake in the new scene with the newly understood
+    information. | one green progress
     '''
   three_check = '''
-    Create a one or two-unit stake in the new scene with the newly understood
-    information. Mark an equal amount of progress on another scene stake.
+    Create a two-unit stake in the new scene with the newly understood
+    information. | two green progress
     '''
   desc = u'''
     State facts about the world or the people in it.

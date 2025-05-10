@@ -9,21 +9,21 @@ levels = []
 
     ✗: 
     ----
-    ✓: Deal 1 attack power and the foe attacks you
+    ✓: Deal 1 Might and the foe attacks you
     ----
-    ✔: Roll melee attack power and the foe attacks you
+    ✔: Roll melee Might and the foe attacks you
     ----
-    ✔✔: Roll melee attack power and choose
+    ✔✔: Roll melee Might and choose
 
 **Details**: On a ✔✔✔, you can choose one:
  * Avoid the foe's attack
- * Add an extra attack power roll
+ * Add an extra Might calculation to your attack
 
  The foe's attack can be any GM move made directly with that NPC or monster.
 
  Some attacks may have additional effects depending on the triggering action, the circumstances, or the weapons involved
 
- Without a melee weapon, a character deals 1 attack power instead of rolling.
+ Without a melee weapon, a character deals 1 Might.
     
 
 
@@ -36,16 +36,16 @@ levels = ['0', 'g1']
 
     ✗: 
     ----
-    ✓: Roll attack power. GM chooses an option.
+    ✓: Calculate Might. GM chooses an option.
     ----
-    ✔: Roll attack power. Choose an option
+    ✔: Calculate Might. Choose an option
     ----
-    ✔✔: Roll attack power.
+    ✔✔: Calculate Might.
 
 **Details**: Send a volley flying with your ranged weapon.
  Choices:
  * You have to move to get the shot, placing you in danger of the GM's choice
- * You have to take what you can get - halve your attack power
+ * You have to take what you can get - halve your Might
  * You have to take several shots - lose 1 PACK
     
 
@@ -59,11 +59,11 @@ levels = ['0', 'g1']
 
     ✗: 
     ----
-    ✓: 
+    ✓: They demand concrete assurance or exchange, right now. | gray progress
     ----
-    ✔: 
+    ✔: They demand concrete assurance or exchange, right now. | green progress
     ----
-    ✔✔: They make a deal. Make a promise and get what you want.
+    ✔✔: They make a deal. Make a promise and get what you want. | 2x green progress
 
 **Details**: Using leverage, manipulate an NPC. "Leverage" is something they need or want.
 
@@ -106,9 +106,10 @@ levels = []
 
     ✗: 
     ----
-    ✓: 
+    ✓: Choose how to split the Might of the attack between yourself and the thing you defend
     ----
-    ✔: 
+    ✔: Spend 1 XP
+ Choose 1
     ----
     ✔✔: Spend 1 XP
  Choose 2
@@ -116,9 +117,11 @@ levels = []
 **Details**: Stand in defense of a person, item, or location that is under attack. The attack is redirected from the thing you defend to yourself. You may spend XP to choose:
  * Halve the attack's effect or damage
  * Open up the attacker to an ally giving +1 advantage against the attacker
- * Roll attack power against the attacker
+ * Attack them with your Might
 
- This move can interrupt an attack against an ally if you are in range and attack power has not yet been rolled.
+ This move can interrupt an attack against an ally if you are in range and Might has not yet been calclated.
+
+ Place a green token on this card until you Take a Breather
     
 
 
@@ -156,11 +159,11 @@ levels = []
 
     ✗: 
     ----
-    ✓: 
+    ✓: Create a one-unit stake in the new scene with the newly understood information. | one gray progress
     ----
-    ✔: 
+    ✔: Create a one-unit stake in the new scene with the newly understood information. | one green progress
     ----
-    ✔✔: Create a one or two-unit stake in the new scene with the newly understood information. Mark an equal amount of progress on another scene stake.
+    ✔✔: Create a two-unit stake in the new scene with the newly understood information. | two green progress
 
 **Details**: State facts about the world or the people in it.
  Consult your accumulated knowledge about something.
