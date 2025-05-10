@@ -192,9 +192,10 @@ class Discern(Card):
     Ask the GM 3 questions from the list
     '''
   desc = '''
-    Closely study a situation or person, ask the GM your question(s), and
-    gain a +1 advantage when acting on the answers. (Place tokens to remember
-    where the advantages are, as appropriate)
+    Closely study a situation or person, ask the GM your question(s).
+    For each question, place a green token on this card. Whenever the
+    information gained is acted upon by anyone in the party, take +1
+    advantage and remove a token from this card.
     * What here is useful or valuable to me?
     * What happened here recently?
     * What is about to happen?

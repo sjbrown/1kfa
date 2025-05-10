@@ -7,6 +7,6 @@ import parse_cards_csv
 if __name__ == '__main__':
     moves = parse_cards_csv.get_dicts_from_spreadsheet('./character_move_sheet.csv', {}, '')
     for tc in tall_cards.cards:
-        parse_cards_csv.brief_print(tc)
+        parse_cards_csv.md_print(tc)
     for move in moves:
-        parse_cards_csv.brief_print(move)
+        parse_cards_csv.md_print(move)

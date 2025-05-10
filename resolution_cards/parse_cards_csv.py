@@ -116,7 +116,8 @@ def parse_desc(d2):
     bulleted = body.split('*')
     preamble = bulleted.pop(0).strip()
     if bulleted:
-        bulleted = ['\n✷ {x}'.format(x=x) for x in bulleted]
+        #bulleted = ['\n✷ {x}'.format(x=x) for x in bulleted]
+        bulleted = ['\n * {x}'.format(x=x) for x in bulleted]
     desc_detail = preamble + ''.join(bulleted)
     desc_detail = desc_detail.replace('STAR', '✷')
 
@@ -255,11 +256,18 @@ class DictObj(dict):
 def get_objs(grep_filter=''):
     return [DictObj(x) for x in get_dicts(grep_filter)]
 
-def brief_print(card):
+def md_print(card):
     lev = ' | '.join(card['levels'])
-    s = '''\n\n# {title} ({attr}) ({flags})
-    **Levels**: {lev}
-    ----
+    attrs = re.split(r'[^a-zA-Z]+', card['attr'])
+    if attrs == ['']:
+        attrs = []
+    s = '''\n\n# {title}
+```python3
+attrs = {attrs}
+flags = {flags}
+levels = {levels}
+```
+
     ✗: {one_x}
     ----
     ✓: {one_check}
@@ -267,9 +275,9 @@ def brief_print(card):
     ✔: {two_check}
     ----
     ✔✔: {three_check}
-    ----
-    **Details**: {desc_detail}
-    '''.format(lev=lev, **card)
+
+**Details**: {desc_detail}
+    '''.format(attrs=attrs, lev=lev, **card)
     print(s)
 
 
@@ -278,6 +286,6 @@ if __name__ == '__main__':
     #print(moves)
     equipment = get_dicts_from_spreadsheet('./equipment_sheet.csv', {'equipment': True},'')
     for move in moves:
-        brief_print(move)
+        md_print(move)
     #for eq in equipment:
-        #brief_print(eq)
+        #md_print(eq)
