@@ -80,8 +80,7 @@ levels = []
 
     ✗: 
     ----
-    ✓: Make progress, but stumble, hesitate, flinch
- or pay a cost.
+    ✓: Make progress, but stumble, hesitate, flinch or pay a cost.
     ----
     ✔: You do it, but there's a new complication
     ----
@@ -108,11 +107,9 @@ levels = []
     ----
     ✓: Choose how to split the Might of the attack between yourself and the thing you defend
     ----
-    ✔: Spend 1 XP
- Choose 1
+    ✔: Spend 1 XP, Choose 1
     ----
-    ✔✔: Spend 1 XP
- Choose 2
+    ✔✔: Spend 1 XP, Choose 2
 
 **Details**: Stand in defense of a person, item, or location that is under attack. The attack is redirected from the thing you defend to yourself. You may spend XP to choose:
  * Halve the attack's effect or damage
@@ -245,14 +242,11 @@ levels = []
 
     ✗: GM Move
     ----
-    ✓: New complication. See below
-Regain 2 exhausted cards of your choice | gray progress
+    ✓: New complication. See below.  Regain 2 exhausted cards of your choice | gray progress
     ----
-    ✔: Find a strategic safe spot / avoid attention.
-Regain 2 exhausted cards of your choice | green progress
+    ✔: Find a strategic safe spot / avoid attention.  Regain 2 exhausted cards of your choice | green progress
     ----
-    ✔✔: Find a strategic safe spot / avoid attention.
-Regain 2 exhausted cards of your choice | 2x green progress
+    ✔✔: Find a strategic safe spot / avoid attention.  Regain 2 exhausted cards of your choice | 2x green progress
 
 **Details**: Spend an uninterrupted moment to catch your breath.
 You can't Take a Breather twice in a row.
@@ -454,11 +448,9 @@ levels = ['r2', 'r1', '0', 'g1', 'g2']
 
     ✗: Shadow point
     ----
-    ✓: Regain 1 exhausted card of your choice.
-Your foe moves to a position of advantage.
+    ✓: Regain 1 exhausted card of your choice.  Your foe moves to a position of advantage.
     ----
-    ✔: Regain 1 exhausted card of your choice.
-Your foe moves to a position of advantage.
+    ✔: Regain 1 exhausted card of your choice.  Your foe moves to a position of advantage.
     ----
     ✔✔: Regain 1 exhausted card of your choice
 
@@ -478,9 +470,9 @@ levels = ['r2', 'r1', '0', 'g1', 'g2']
     ----
     ✓: 
     ----
-    ✔: 1 attack power
+    ✔: 1 Might
     ----
-    ✔✔: Roll 1d4 attack power
+    ✔✔: Roll 1d4 Might
 Turn this card face-down until you Take a Breather
 
 **Details**: After successfully striking a foe in melee, intone the name of who you avenge or protect, and add a punch, kick, or shove.
@@ -502,7 +494,7 @@ levels = ['r1', '0', 'g1']
     ----
     ✔✔: 2 red tokens max.
 
-**Details**: When you roll attack power, say how your attack was focused on a part of the foe's body. You may turn points of attack power into red tokens that are placed on a marker representing this foe. Afterwards, any player can discard one of those red tokens to take +1 advantage against the foe.
+**Details**: When you roll Might, say how your attack was focused on a part of the foe's body. You may turn points of Might into red tokens that are placed on a marker representing this foe. Afterwards, any player can discard one of those red tokens to take +1 advantage against the foe.
     
 
 
@@ -686,13 +678,11 @@ levels = ['r2', 'r1', '0', 'g1', 'g2']
 
     ✗: Shadow point
     ----
-    ✓: 1 attack power
+    ✓: 1 Might
     ----
-    ✔: Add another attack power roll, divided by 2
-Turn this card face-down until you Take a Breather
+    ✔: Add another Might roll, divided by 2.  Turn this card face-down until you Take a Breather
     ----
-    ✔✔: Add another attack power roll
-Turn this card face-down until you Take a Breather
+    ✔✔: Add another Might roll.  Turn this card face-down until you Take a Breather
 
 **Details**: After successfully striking a foe in melee, describe how the attack was especially furious, or you used your weapon to strike again.
     
@@ -707,14 +697,11 @@ levels = ['r1', '0', 'g1']
 
     ✗: Shadow point
     ----
-    ✓: GM Chooses 1
-Turn this card face-down until you Take a Breather
+    ✓: GM Chooses 1.  Turn this card face-down until you Take a Breather
     ----
-    ✔: Choose 1
-Turn this card face-down until you Take a Breather
+    ✔: Choose 1.  Turn this card face-down until you Take a Breather
     ----
-    ✔✔: Choose 2
-Turn this card face-down until you Take a Breather
+    ✔✔: Choose 2.  Turn this card face-down until you Take a Breather
 
 **Details**: After successfully striking a foe in melee, flip and choose. You may choose an option more than once. Choices:
  *  hit another foe during your attack 
@@ -808,9 +795,9 @@ levels = ['r2', 'r1', '0', 'g1', 'g2']
 
 **Details**: Attack a surprised or defenseless foe with a melee weapon. Choices:
  *  You don’t get into melee with them 
- *  You roll your attack power +1d6 
+ *  You roll your Might +1d6 
  *  You create a +1 advantage for the next player who attacks this foe 
- *  Reduce their attack power one step
+ *  Reduce their Might one step
 
 Encumbrance Penalty: You cannot perform this move if your count of Item and Pack cards is more than 3
     
@@ -825,18 +812,18 @@ levels = ['r2', 'r1', '0', 'g1']
 
     ✗: Shadow point
     ----
-    ✓: 
+    ✓: Choose 1
     ----
-    ✔: Success
+    ✔: Choose 1
     ----
-    ✔✔: Success
+    ✔✔: Choose 2
 
 **Details**: Scope out a foe with your perspicacious eyes and declare what weakness you observed
 
-Thereafter, when anyone attacks this weakness, they add 1d4 attack power
-
-When the weakness is first attacked, take +1 advantage.
-    
+Choices:
+ * When anyone attacks this weakness, they add 1d4 Might
+ * When the weakness is first attacked, take +1 advantage.
+ * 1 green progress
 
 
 # Bum Rush
@@ -848,7 +835,7 @@ levels = ['r1', '0', 'g1', 'g2']
 
     ✗: GM Move
     ----
-    ✓: Choose 1 and the foe manages 1 attack power against you | gray progress
+    ✓: Choose 1 and the foe manages 1 Might against you | gray progress
     ----
     ✔: Choose 1 | green progress
     ----
@@ -943,12 +930,12 @@ levels = ['r2', 'r1', '0', 'g1']
     ----
     ✓: gray progress
     ----
-    ✔: 1 attack power. Choose an option | green progress
+    ✔: 1 Might. Choose an option | green progress
     ----
-    ✔✔: Roll attack power (or choose 1 attack power) and choose an option | 2x green progress
+    ✔✔: Roll Might (or choose 1 Might) and choose an option | 2x green progress
 
 **Details**: Name a specific target you're aiming for when you attack at range.
- *  Head: add another attack power roll 
+ *  Head: add another Might roll 
  *  Arms: They drop anything they're holding 
  *  Legs: They're hobbled and slow moving 
  *  Other: GM will say what happens
@@ -1124,7 +1111,7 @@ levels = []
 
 **Details**: A mysterious magical defense instantaneously cancels any attack against you, but you must end an ONGOING magical effect of your magic item and lose all its remaining charges.
 
-Any amount of attack power may be cancelled, any narrative effects of the attack will be resolved by the GM.
+Any amount of Might may be cancelled, any narrative effects of the attack will be resolved by the GM.
 
 Anytime afterward, confront an authority as being your unknown benefactor. The GM will explain why you're correct, and must spend:
  *  1 Journey Point and you keep the card 
@@ -1225,8 +1212,7 @@ levels = ['r2', 'r1', '0', 'g1', 'g2']
 
     ✗: The item is destroyed | GM Move
     ----
-    ✓: The item is depleted
-Expend 2 stamina from mental exhaustion | gray progress
+    ✓: The item is depleted.  Expend 2 stamina from mental exhaustion | gray progress
     ----
     ✔: The item is depleted | green progress
     ----
