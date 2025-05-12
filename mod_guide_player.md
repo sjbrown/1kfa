@@ -363,16 +363,16 @@ There are 3 Move Cards tagged with "RECEIVE CARDS":
 > Next, everyone gets to choose 2 **Item Cards** for their character. These can be weapons, armor, or other items with mechanical significance.\
 > This game comes with some cards to get us started, but we can also write things on blank cards.
 >
-> In stories like the one we're about to tell, your character probably has a weapon. Without one, their *attack power* will only be 1.\
+> In stories like the one we're about to tell, your character probably has a weapon. Without one, their *Might* will only be 1.\
 > These are the Weapon Cards included with the game, but we can also make reasonable new ones based on our Touchstone List.
 >
-> When your character strikes an enemy with a weapon, their attack power is 1d4. You'll have future opportunities to increase this using the *"Tales of a Weapon"* move.
+> When your character strikes an enemy with a weapon, their Might is 1d4. You'll have future opportunities to increase this using the *"Tales of a Weapon"* move.
 
 Lay out the included Weapon Cards. Use blank cards to copy or invent new ones.
 
-If a player describes an unusual or epic weapon, that's fine — just remind them that all characters begin the game with a d4 attack power regardless of how dramatic the weapon seems.
+If a player describes an unusual or epic weapon, that's fine — just remind them that all characters begin the game with a d4 Might regardless of how dramatic the weapon seems.
 
-> Next up: armor or a shield. Armor passively absorbs attack power. Shields can nullify it, but only after a test of your Dexterity.
+> Next up: armor or a shield. Armor passively absorbs Might. Shields can nullify it, but only after a test of your Dexterity.
 
 Lay out the Armor and Shield cards. If two players want the same kind of item, use a blank card to make a second copy.
 
@@ -453,7 +453,7 @@ As you play, ask yourself:
 
 - What part of my character *needs to change*?
 - What lesson is the world trying to teach them?
-- What mask do they wear — and what truth lies beneath it?
+- What mask do they present, and what truth lies beneath it?
 - What scars will shape their legend?
 
 
@@ -561,11 +561,12 @@ The game works either way. The *story* matters most.
 
 
 
+## Moves
 
-## Triggering, Resolving, and Interpreting Moves
+**Moves** are the most common and critical of the *mechanical* tools in your Player Toolbox. They connect the improvisational flow of storytelling to randomness, probability, and progress toward the stakes at hand. Each Move has a specific trigger — a moment when your character’s actions bring the rules into play — and a clear set of outcomes. From these Moves, all other mechanical tools in the Player's Toolbox arise: they’re what drive you to calculate Might, expend Stamina, or mark progress, advancing the story that’s unfolding at the table.
 
 A move is triggered when your character takes an action that is **uncertain**, **risky**, or **meaningful**.\
-You don’t declare “I’m making a move” — instead, you **describe what your character does**, and the GM decides when a move has been triggered.
+You don’t have to declare “I’m making a move” — instead, you **describe what your character does**, and the GM decides when a move has been triggered.
 
 From there, resolution unfolds in a set sequence: you trigger the move, resolve it using the **Deckahedron** and **Move Cards**, then interpret the result and fold it back into the story. Some moves may also instruct you to gain resources or mark progress — if so, follow those instructions during resolution.
 
@@ -588,7 +589,7 @@ From there, resolution unfolds in a set sequence: you trigger the move, resolve 
 
 Remeber to use the tool of Fictional Positioning when considering whether a move is triggered.
 
-(*Example fictional trigger: When you attack someone from surprise ...*)
+(*Example fictional trigger: Attack a surprised or defenseless foe ...*)
 
 **Fiction Supports the Move:**
 
@@ -1052,8 +1053,85 @@ You are not *required* to take the new move card.  You may instead take a
 “Alright, pay the cost called for by the move and we'll go from there. The beam stops falling. Inches from your friend’s head, it lurches and holds — suspended on a column of thickened air! You don’t know how you did it, but your body does.”
 
 
+## Selecting "At Random"
+
+The phrase "select a random card" is used throughout the rules.
+
+
+
+## Placing green tokens on a move card
+
+```
+Discern
+Take A Breather 
+It's a Trap!
+Goreography
+Fundamental Magic
+And This Is For...
+Fury
+```
+
+Some moves instruct the player to place green tokens on it.
+It will also indicate the conditions to remove those tokens.
+The move cannot be triggered by that player again until the card
+has no more tokens on it.
+
+
+## Might
+
+Some moves instruct a player to "calculate Might"
+
+**Calculate Might**
+
+When your character suffers the consequences of violence, you reveal
+cards and read the numbers shown. Use the top card from either your
+Deckahedron or your Exhaustion pile, whichever is larger, shuffling if
+necessary to ensure unpredictability.
+
+When a move calls for "1d4", read the number shown inside the triangle.
+When a move calls for "1d6", read the number shown inside the square.
+If there is no number, that card doesn't count. Just ignore it and
+use the next card.
+
+![d4 symbols](images/deckahedron_face_d4_highlight.png){ width=5cm }
+![d6 symbols](images/deckahedron_face_d6_highlight.png){ width=5cm }
+
+When a move calls for "1d10", add both numbers shown in the triangle
+and the square. If there is no number in the triangle or the square,
+consider it a zero for the purposes of addition.
+
+Note, this "1d10" process does not produce results uniformly
+between 1 and 10, but instead produces results along a specially-designed
+"2-to-10 curve", which has been chosen to provide statistical results
+that create a pleasing and dramatic experience.
+
+In rare cases the instructions of a move will explicitly declare the
+amount of *Might*, so you won't have to reveal cards.
+
+Put the revealed card in your discard pile.
+
+
+### Might Steps
+
+**Reduce**
+**Increase**
+
+
+## Expending Stamina
+
+
+## Encumbrance
+
+**Calculate Encumbrance**
+
+
+## Slots
+
+Cards with slots
 
 ## Combat Procedures
+
+
 
 ## Equipment Procedures
 
@@ -1102,71 +1180,40 @@ With that said, there is also a Wound mechanism, described below.
 
 ## Incapacitation / Bust-on-3
 
-When a Deckahedron contains only 3 or fewer cards, even after an
-opportunity to reshuffle, that character is incapacitated.
-At the point when the player's Deckahedron hits this number, their
-character's fate is up to the game rules and the GM.
+When a player's Deckahedron is has dwindled into the Exhaustion pile,
+such that there are 3 or fewer cards remaining - even after reshuffling -
+the PC is "incapacitated".  When this happens, their fate is up to the
+game rules and the GM.
 
-## The Four Ds
+## The Four Rs
 
 When your character gets attacked or falls victim to some other danger,
 you have choices about exactly how they are affected. They may dodge,
 and just lose Stamina, they may stand stubbornly against a blow,
 perhaps absorbing it with their armour, or they may be wounded by it.
 
-The procedure for making these decisions is called "The Four Ds":
+The procedure for making these decisions is called "The Four Rs":
 
- 1. Reveal
  2. Reduce
- 3. Reap / Remand / Remit
+ 3. Reap
  4. Regale
- 
- 1. [Denominate](#denominate) - reveal cards to find the numerical *attack power*
- 2. [Deduct](#deduct) from the *attack power* by using cards or taking Wounds
- 3. [Distribute](#distribute) tokens
- 4. [Describe](#describe) the outcomes in the fiction
+
+ 2. [Reduce](#reduce) from the *Might* by using cards or taking Wounds
+ 3. [Reap](#reap) cards from your Deckahedron into the Exhaustion pile
+ 4. [Regale](#regale) the outcomes in the fiction
 
 
-## Denominate / Reveal
 
-When your character suffers the consequences of violence, you reveal
-cards and read the numbers shown. Use the top card from either your
-Deckahedron or your Exhaustion pile, whichever is larger, shuffling if
-necessary to ensure unpredictability.
+## Reduce
 
-When a move calls for "1d4", read the number shown inside the triangle.
-When a move calls for "1d5", read the number shown inside the square.
-If there is no number, that card doesn't count. Just ignore it and
-use the next card.
-
-![d4 symbols](images/deckahedron_face_d4_highlight.png){ width=5cm }
-![d6 symbols](images/deckahedron_face_d6_highlight.png){ width=5cm }
-
-When a move calls for "1d10", add both numbers shown in the triangle
-and the square. If there is no number in the triangle or the square,
-consider it a zero for the purposes of addition.
-
-Note, this "1d10" process does not produce results uniformly
-between 1 and 10, but instead produces results along a specially-designed
-"2-to-10 curve", which has been chosen to provide statistical results
-that create a pleasing and dramatic experience.
-
-In rare cases the instructions of a move will explicitly declare the
-amount of *attack power*, so you won't have to reveal cards.
-
-Put the revealed card in your discard pile.
-
-
-## Deduct / Reduce
-
-After the *attack power* is known, you can choose to lower it by
+After the *Might* is known, you can choose to lower it by
 using *move cards* like Good Cardio and Mystic Breathwork
 or *item cards* like Shield, or by taking a Wound.
 
-You can always choose to absorb the **entire** amount of *attack power* by
+You can always choose to absorb the **entire** amount of *Might* by
 taking a single Wound.
 
-Otherwise, cards that negate or absorb *attack power* can be used to
+Otherwise, cards that negate or absorb *Might* can be used to
 reduce the total. Generally, you take Exhaustion or Wound tokens from
 the supply and place them on the designated space on the card.
 
@@ -1182,10 +1229,10 @@ Let's further say your character had lost 3 Stamina points earlier in the
 battle. With only 7 Stamina points left, it's a wise time to take a Wound.
 
 
-## Distribute / Reap
+## Reap
 
 In the **third step**, you will lose cards from your Deckahedron according
-to the remaining *attack power*.
+to the remaining *Might*.
 
 Remember the Bust-On-3 rule. If this process reduces the cards in your
 Deckahedron to 3 or fewer (even after reshuffling in your discard pile),
@@ -1200,7 +1247,7 @@ the character is dead, unconscious, or otherwise unable to act.
 ### Losing or Expending Stamina
 
 Reveal cards from your Deckahedron face-up until you have revealed
-exhaustion symbols equal to the remaining *attack power*.
+exhaustion symbols equal to the remaining *Might*.
 Take all of the revealed cards, *including the cards without
 exhaustion symbols*, and put them face-down in your Exhaustion pile.
 
@@ -1226,7 +1273,8 @@ all intelligent creatures seek to cure their condition as a high priority.
 
 When you choose to take a Wound, or if the rules demand that you take one:
 
-  1. The GM will describe how your character was wounded
+  1. The GM answers:
+     * How was the PC wounded?
   2. Randomly draw a *wound card* from the supply and place it in your
      *discard pile*. It will now start cycling between your Deckahedron
      and your *discard pile*.
@@ -1235,10 +1283,10 @@ Wound cards can be used to represent different fictional aspects. They
 usually represent literal wounds, but may also be used for the effects of
 disease, poison, or other effects inflicted by monsters or the environment.
 
-To get rid of a wound, the Seek Help move must be triggered.  See the detailed move rules below.
+To cure a wound, see the rules for the Seek Help move.
 
 
-## Describe / Regale
+## Regale
 
 Finally, the **fourth step**: you interpret those results into the
 narrative.  Did your character dive into the dirt?  Did they take a punch
@@ -1670,7 +1718,7 @@ cards might describe "weaponry" rather than a single item, as the Many
 Knives card demonstrates.
 
 Weapons have "power": d4, d6, or d10. This determines what die to
-roll when you roll attack power. Generally players can increase
+roll when you roll Might. Generally players can increase
 weapon power with the [Tales of a Weapon](#tales-of-a-weapon) move.
 
 The GM should decide if the weaponry incurs any additional costs when
@@ -1749,16 +1797,16 @@ using the same rules as the Armour name-creation above.
 
 The fictional description of the "shield" has mechanical consequences. For
 example, the edge of steel shield could reasonably be used to attack a foe,
-so the character would have 1d4 attack power with Mix It Up. But a character
+so the character would have 1d4 Might with Mix It Up. But a character
 with no weapon and only leather bracers on their wrists, the character would
-be "unarmed", doing just 1 attack power.
+be "unarmed", doing just 1 Might.
 
-Blocking attack power with a shield is a *FAST* move,
+Blocking Might with a shield is a *FAST* move,
 and players may not make more than one *FAST* move per turn in the spotlight.
 
 ## More Power
 
-Some cards show a "power gauge" that indicates whether the *attack power*
+Some cards show a "power gauge" that indicates whether the *Might*
 (in the case of a weapon) or *effect* (in the case of a magic item) will
 use a d4, d6, or d10.
 
@@ -2012,9 +2060,9 @@ more granular.
 
 During the second phase of resolving a combat action, players may choose
 to take a Wound as explained before, and also a new choice:
-to turn any 3 *attack power* into Harm tokens instead.
+to turn any 3 *Might* into Harm tokens instead.
 
-For example, there are 4 ways to handle an *attack power* of 7:
+For example, there are 4 ways to handle an *Might* of 7:
 
  * Lose cards from your Deckahedron until 7 exhaustion symbols are revealed
  * Take 1 Harm token and lose cards until 4 exhaustion symbols are revealed
@@ -2030,8 +2078,8 @@ connects.
 These rules are also for representing mental strain that is so significant
 that the negative effects last for a while.
 
-*Attack power* turns into Harm tokens at *exactly* a rate of 3-to-1. You
-cannot choose a Harm token when facing an *attack power* of 2.
+*Might* turns into Harm tokens at *exactly* a rate of 3-to-1. You
+cannot choose a Harm token when facing an *Might* of 2.
 
 When you are instructed to take a Harm token:
 
@@ -2206,15 +2254,15 @@ triggered as they would normally be, and costs are paid (eg, if the attacker
 uses a magic item, they may lose a charge), but there are differences:
 
  * Secondary effects of flips are **not** resolved.
- * Attack power is not rolled
+ * Might is not rolled
 
-Instead of rolling attack power, the *defender* alone describes the negative
+Instead of rolling Might, the *defender* alone describes the negative
 consequences (if any) their character suffers. This includes loss of
 resources (like Stamina / Harm / Wounds) as well as narrative consequences.
 
 Optionally, the attacker may also describe negative consequences for their
 own character, mimicking the way the Mix It Up move causes both the
-attacker and defender to suffer attack power.
+attacker and defender to suffer Might.
 
 The GM can still collaborate with the players to describe narrative outcomes
 of the altercation, and may even use the situation to bring dangers to bear,
@@ -2310,7 +2358,7 @@ Each Deckahedron card has symbols that can be used in their place.
 1d4, 1d6, 1d10
 : This is notation that means "one four-sided die", "one six-sided die", etc.
 
-attack power
+Might
 : the number representing how powerful an attack is
 
 charge capacity

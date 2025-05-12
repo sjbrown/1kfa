@@ -2256,30 +2256,30 @@ If the foe is a fear-inducing monster, keep in mind the rules of the
 [Monsters](#monsters) chapter as you step through this process.
 
 First, write down the names of each foe.
-Beside each name, write the foe's attack power (d4, d6, d10).
+Beside each name, write the foe's Might (d4, d6, d10).
 Beside that, draw ticks or spaces for their Stamina points.
 
 ![GM Worksheet](images/gm_worksheet_filled.png){ width=7cm }
 
-For monsters or foes with high attack power or stamina, spend *Shadow points*
+For monsters or foes with high Might or stamina, spend *Shadow points*
 according to this table.
 
 | Shadow points       | Foe augmentation
 |---------------------|------------------
-| 2                   | attack power d6
-| 4                   | attack power d10
+| 2                   | Might d6
+| 4                   | Might d10
 | 1                   | monster has 11-15 stamina
 | 2                   | monster has 16-20 stamina
 | 1 per               | monster special attack / immunity
 
 
-Foes' Stamina and attack power should be realistically scaled
+Foes' Stamina and Might should be realistically scaled
 to the "scrappy adventurer" level of the players.
 Help the players estimate the threat they face by giving the foes fitting
 descriptions.
 This table should help.
 
-|                   | Stamina points | Attack power
+|                   | Stamina points | Might
 |-------------------|----------------|-------------
 | Children          | 2              | 1
 | Civilians         | 4              | 1 - 1d4
@@ -2289,12 +2289,12 @@ This table should help.
 | Villains          | 5-10           | 1d4 - 1d10
 
 
-Generally, human opponents will have 1 attack power when unarmed and 1d4
-attack power when armed. Save greater attack power for monsters and special
+Generally, human opponents will have 1 Might when unarmed and 1d4
+Might when armed. Save greater Might for monsters and special
 villains.
 
 Remember that foes' power can be exerted in more ways than just their
-Stamina and attack power. Challenges may arise from the antagonist's superior
+Stamina and Might. Challenges may arise from the antagonist's superior
 knowledge of the environment, magical abilities, political connections,
 or other types of fictional positioning.
 
@@ -2319,7 +2319,7 @@ following pre-balanced examples as a starting point, and adjust as you please.
 `TODO: illustration`
 
 The PCs way is blocked by a pair of guards who are sleeping or distracted by a
-game of dice. They have 6 stamina points, and short swords (1d4 attack power).
+game of dice. They have 6 stamina points, and short swords (1d4 Might).
 As long as the PCs don't bungle their approach, they will have an opportunity
 to attack first or attack from range.
 
@@ -2334,8 +2334,8 @@ The PCs turn a corner or open a door and stumble into a planning session
 presided over by a lieutenant and his subordinates (there are as many
 subordinates as there are PCs).
 They are the swords-first, questions-later types and attack immediately at
-close range. The 3 soldiers have 6 stamina points and do 1d4 attack power.
-The lieutenant has 8 stamina points and attack power of 1d6.
+close range. The 3 soldiers have 6 stamina points and do 1d4 Might.
+The lieutenant has 8 stamina points and Might of 1d6.
 
 The lieutenant will never surrender, but if the rest of their allies are cut
 down, a single soldier left standing may lose his nerve and give up.
@@ -2352,7 +2352,7 @@ the danger" move and additionally deals 1d4 damage to one of the PCs as the
 beast makes glancing contact with its fierce claws.
 
 This thing fights to the death and has 12 stamina points. It bites and slashes
-for 1d10 attack power.
+for 1d10 Might.
 
 Special attack: the beast can disappear into the muddy terrain and later
 spring up behind the most vulnerable PC, as long as that PC is standing in
@@ -2409,8 +2409,8 @@ This format is simple, and gives the players the most agency.
   - Go around the table until all the opponents flee or are incapacitated
   - Any ✗ results may usually be interpreted as "your enemies attack". Choose
     some opponents that weren't *just* in a Mix It Up, and declare they
-    attack one of the player's characters. Apply attack power against that
-    character. Use an attack power die from one attacker, and add 1 attack
+    attack one of the player's characters. Apply Might against that
+    character. Use an Might die from one attacker, and add 1 attack
     power for each other attacker
 
 ### Format 2
@@ -2428,11 +2428,11 @@ This format makes the opponents more of a threat.
    (move the "danger" spotlight fairly, but also try to put pressure on any
    players with more than 3 unspent XP)
  * Failing the Defy Danger flip results in the player's character suffering
-   the opponents' attack. You can calculate attack power thusly:
-      * ✗ : one attack power die from the lead attacker,
-        and add 1 attack power (not die) for each other attacker
-      * ✅︎ : no attack power die is rolled,
-        but 1 attack power per attacker (so 3 foes = 3 attack power)
+   the opponents' attack. You can calculate Might thusly:
+      * ✗ : one Might die from the lead attacker,
+        and add 1 Might (not die) for each other attacker
+      * ✅︎ : no Might die is rolled,
+        but 1 Might per attacker (so 3 foes = 3 Might)
 
 ### Format 3
 
@@ -2788,7 +2788,7 @@ not *trigger moves*, so each turn in the spotlight is limited to a few
 possible actions:
 
  * The NPC may assist any player character's attack, adding an appropriate
-   die to the attack power
+   die to the Might
  * The NPC may get into a scuffle with one foe, effectively preventing that
    foe from acting as the combat spotlight moves around
  * The NPC may convey or reveal information valuable to the players
@@ -2875,7 +2875,7 @@ the amount of *Shadow points* spent.
 ## The Enemy Strikes First
 
 When an enemy surprises or was otherwise ready for a PC, they can attack
-without giving the player an opportunity to Defy Danger. The attack power
+without giving the player an opportunity to Defy Danger. The Might
 will be equal to the amount of *Shadow points* spent.
 
 ## Deadly Pursuits
@@ -2889,7 +2889,7 @@ and either:
 ## Augmenting Combat Encounters
 
 As specified in the [Combat](#creating-a-combat-encounter) chapter,
-*Shadow points* can be spent to increase attack power, stamina, and
+*Shadow points* can be spent to increase Might, stamina, and
 outfit fear-inducing monsters.
 
 # Creating Challenges for Players

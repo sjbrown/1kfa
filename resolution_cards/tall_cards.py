@@ -210,6 +210,8 @@ class Discern(Card):
     * What should I be on the lookout for?
     * Who's really in control here?
     * What here is not what it appears to be?
+
+    When a new scene is created, remove all tokens from this card.
     '''
 
 class Unfold_Mystery(Card):
