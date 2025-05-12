@@ -11,20 +11,19 @@ levels = []
     ----
     ✓: Deal 1 Might and the foe attacks you
     ----
-    ✔: Roll melee Might and the foe attacks you
+    ✔: Reveal Might and the foe attacks you
     ----
-    ✔✔: Roll melee Might and choose
+    ✔✔: Reveal Might and choose
 
 **Details**: On a ✔✔✔, you can choose one:
  * Avoid the foe's attack
- * Add an extra Might calculation to your attack
+ * Add your attack Might
 
  The foe's attack can be any GM move made directly with that NPC or monster.
 
  Some attacks may have additional effects depending on the triggering action, the circumstances, or the weapons involved
 
  Without a melee weapon, a character deals 1 Might.
-    
 
 
 # Volley
@@ -36,18 +35,17 @@ levels = ['0', 'g1']
 
     ✗: 
     ----
-    ✓: Calculate Might. GM chooses an option.
+    ✓: Reveal Might. GM chooses an option.
     ----
-    ✔: Calculate Might. Choose an option
+    ✔: Reveal Might. Choose an option
     ----
-    ✔✔: Calculate Might.
+    ✔✔: Reveal Might.
 
 **Details**: Send a volley flying with your ranged weapon.
  Choices:
  * You have to move to get the shot, placing you in danger of the GM's choice
  * You have to take what you can get - halve your Might
  * You have to take several shots - lose 1 PACK
-    
 
 
 # Parley
@@ -116,7 +114,7 @@ levels = []
  * Open up the attacker to an ally giving +1 advantage against the attacker
  * Attack them with your Might
 
- This move can interrupt an attack against an ally if you are in range and Might has not yet been calclated.
+ This move can interrupt an attack against an ally if you are in range and Might has not yet been revealed.
 
  Place a green token on this card until you Take a Breather
     
@@ -455,7 +453,7 @@ levels = ['r2', 'r1', '0', 'g1', 'g2']
     ✔✔: Regain 1 exhausted card of your choice
 
 **Details**: Take one deep breath to recover Stamina as you jump into the fray.
-Put Exhaustion token(s) on this card instead of losing Stamina point(s) from physical exhaustion
+When you would expend Stamina from physical effort, put token(s) on this card's slots instead.
     
 
 
@@ -472,8 +470,7 @@ levels = ['r2', 'r1', '0', 'g1', 'g2']
     ----
     ✔: 1 Might
     ----
-    ✔✔: Roll 1d4 Might
-Turn this card face-down until you Take a Breather
+    ✔✔: Reveal 1-4 Might. Place a token on this card until you Take a Breather
 
 **Details**: After successfully striking a foe in melee, intone the name of who you avenge or protect, and add a punch, kick, or shove.
     
@@ -494,7 +491,7 @@ levels = ['r1', '0', 'g1']
     ----
     ✔✔: 2 red tokens max.
 
-**Details**: When you roll Might, say how your attack was focused on a part of the foe's body. You may turn points of Might into red tokens that are placed on a marker representing this foe. Afterwards, any player can discard one of those red tokens to take +1 advantage against the foe.
+**Details**: When you reveal Might, say how your attack was focused on a part of the foe's body. You may turn points of Might into red tokens that are placed on a marker representing this foe. Afterwards, any player can discard one of those red tokens to take +1 advantage against the foe.
     
 
 
@@ -629,23 +626,36 @@ When someone stands in your way, or you face a dangerous threshold, answer and p
 
 # Apex Predator
 ```python3
-attrs = []
+attrs = ['Int', 'Str']
 flags = []
 levels = []
 ```
 
     ✗: 
     ----
-    ✓: 
+    ✓: Answer one question. Expend 1 Stamina.
     ----
-    ✔: 
+    ✔: Answer one question.
     ----
-    ✔✔: 
+    ✔✔: Answer one question. | green progress
 
-**Details**: During combat, take + 1 advantage when you Discern or look for a Weak Spot
+**Details**: Make contact with, and hold your own against, the spirit of a wild beast.
+
+Place a green token on this card until you Take a Breather
+
+While this token remains,
+
+During combat, take + 1 advantage when you Discern or look for a Weak Spot
 
 If you are in pursuit of a fleeing or hidden foe, take +1 advantage to Called Shot or It's a Trap!
-    
+
+Questions:
+
+ * What hunger does the spirit transmit?
+ * What sense feels sharper?
+ * What sacrifice does the spirit demand?
+
+
 
 
 # Intimidate
@@ -678,11 +688,11 @@ levels = ['r2', 'r1', '0', 'g1', 'g2']
 
     ✗: Shadow point
     ----
-    ✓: 1 Might
+    ✓: Add 1 Might
     ----
-    ✔: Add another Might roll, divided by 2.  Turn this card face-down until you Take a Breather
+    ✔: Add your attack Might, divided by 2. Keep a token on this card until you Take a Breather
     ----
-    ✔✔: Add another Might roll.  Turn this card face-down until you Take a Breather
+    ✔✔: Add your attack Might. Keep a token on this card until you Take a Breather
 
 **Details**: After successfully striking a foe in melee, describe how the attack was especially furious, or you used your weapon to strike again.
     
@@ -795,9 +805,9 @@ levels = ['r2', 'r1', '0', 'g1', 'g2']
 
 **Details**: Attack a surprised or defenseless foe with a melee weapon. Choices:
  *  You don’t get into melee with them 
- *  You roll your Might +1d6 
+ *  Attack them with your attack Might + 1-6 Might
  *  You create a +1 advantage for the next player who attacks this foe 
- *  Reduce their Might one step
+ *  Reduce their attack Might one step
 
 Encumbrance Penalty: You cannot perform this move if your count of Item and Pack cards is more than 3
     
@@ -821,7 +831,7 @@ levels = ['r2', 'r1', '0', 'g1']
 **Details**: Scope out a foe with your perspicacious eyes and declare what weakness you observed
 
 Choices:
- * When anyone attacks this weakness, they add 1d4 Might
+ * When anyone attacks this weakness, they add 1-4 Might
  * When the weakness is first attacked, take +1 advantage.
  * 1 green progress
 
@@ -860,7 +870,7 @@ levels = []
     ----
     ✔✔: 
 
-**Details**: Nighttime or indoors, while no foe is bearing down on you, say what darkness you find shelter in. Take a Breather, but forgo the flip and simply regain 1d4 Stamina. In addition, foes cannot see you until you move.
+**Details**: Nighttime or indoors, while no foe is bearing down on you, say what darkness you find shelter in. Take a Breather, but forgo the flip and simply regain 1 exhausted card. In addition, foes cannot see you until you move.
 
 Encumbrance Penalty: expend stamina points from mental exhaustion. Count up all your Item and Pack cards.
 *  If you have 3-4, expend 1 stamina point 
@@ -912,7 +922,7 @@ levels = []
 
 Answer honestly: Do they even remember seeing you there?
 
-Encumbrance Penalty: expend stamina points from mental exhaustion. Count up all your Item and Pack cards.
+Encumbrance Penalty: expend stamina points. Count up all your Item and Pack cards.
 *  If you have 3-4, expend 1 stamina point 
  *  If you have 5-6, expend 2 stamina points 
  *  If you have more than 6, expend 3 stamina points
@@ -932,12 +942,12 @@ levels = ['r2', 'r1', '0', 'g1']
     ----
     ✔: 1 Might. Choose an option | green progress
     ----
-    ✔✔: Roll Might (or choose 1 Might) and choose an option | 2x green progress
+    ✔✔: Reveal Might (or choose 1 Might) and choose an option | 2x green progress
 
 **Details**: Name a specific target you're aiming for when you attack at range.
- *  Head: add another Might roll 
- *  Arms: They drop anything they're holding 
- *  Legs: They're hobbled and slow moving 
+ *  Head: add a second Might reveal
+ *  Arms: They drop anything they're holding
+ *  Legs: They're hobbled and slow moving
  *  Other: GM will say what happens
 
 If the target is surprised or defenseless, flip with one level of advantage.
@@ -1023,7 +1033,7 @@ levels = []
     ----
     ✔✔: 
 
-**Details**: When you would lose Stamina from mental exhaustion, put Exhaustion tokens on this card instead
+**Details**: When you would expend Stamina from mental exhaustion, put Exhaustion tokens on this card instead
     
 
 
@@ -1067,12 +1077,17 @@ levels = []
     ----
     ✔✔: 
 
-**Details**: Carefully sacrifice your blood. Take a Wound card (but not a Wound token). Until the Wound is healed, using magical items does not cost the usual 1 charge (though charges may be lost via other effects)
+**Details**: Carefully sacrifice your blood.
 
-Blade of Echoes does not count for your encumbrance penalty
+Place a green token on this card and take a Wound card into your Discard pile.
+
+When you Rest or Seek Help, you may return the token and the Wound card.
+
+Until the Wound is healed, using magical items does not cost the usual 1 charge (though charges may be lost via other effects)
 
 What does it sound or smell like when you do this?
-    
+
+Also, Blade of Echoes does not count for your encumbrance penalty
 
 
 # Channel the Living Light
@@ -1142,25 +1157,32 @@ If the cards are recharged above their capacity, place that number of white-side
 
 # Reach Out With Your Feelings
 ```python3
-attrs = []
+attrs = ['Int']
 flags = []
 levels = []
 ```
 
     ✗: 
     ----
-    ✓: 
+    ✓: Answer one question. Expend 1 Stamina.
     ----
-    ✔: 
+    ✔: Answer one question.
     ----
-    ✔✔: 
+    ✔✔: Answer one question. | green progress
 
-**Details**: While you have skin contact with an undepleted magical item, you are attenuated to the universe.
+**Details**: Maintaining skin contact with an undepleted magical item, attune to the universe.
+
+Place a green token on this card until you Take a Breather
+
+While this token remains,
 
 You have an extra split-second reaction time. Lose 1 fewer Stamina from physical exhaustion when attacked.
 
 You can share mindful wisdom with an ally while they perform Called Shot or It's a Trap!, and they get +1 advantage
-    
+
+ * What forms are suggested by the universe's rippling?
+ * What covert malice hides under overt compassion?
+ * What covert compassion hides under overt malice?
 
 
 # Fundamental Magic

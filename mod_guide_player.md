@@ -563,7 +563,7 @@ The game works either way. The *story* matters most.
 
 ## Moves
 
-**Moves** are the most common and critical of the *mechanical* tools in your Player Toolbox. They connect the improvisational flow of storytelling to randomness, probability, and progress toward the stakes at hand. Each Move has a specific trigger — a moment when your character’s actions bring the rules into play — and a clear set of outcomes. From these Moves, all other mechanical tools in the Player's Toolbox arise: they’re what drive you to calculate Might, expend Stamina, or mark progress, advancing the story that’s unfolding at the table.
+**Moves** are the most common and critical of the *mechanical* tools in your Player Toolbox. They connect the improvisational flow of storytelling to randomness, probability, and progress toward the stakes at hand. Each Move has a specific trigger — a moment when your character’s actions bring the rules into play — and a clear set of outcomes. From these Moves, all other mechanical tools in the Player's Toolbox arise: they’re what drive you to reveal Might, expend Stamina, or mark progress, advancing the story that’s unfolding at the table.
 
 A move is triggered when your character takes an action that is **uncertain**, **risky**, or **meaningful**.\
 You don’t have to declare “I’m making a move” — instead, you **describe what your character does**, and the GM decides when a move has been triggered.
@@ -783,7 +783,7 @@ Whenever a wound card's secondary effect is activated, do these 3 things:
  * (Optional) Answer: "What sound or noise is emitted by the PC as they endure their wound or affliction?"
  * Add a new one-unit stake to the scene, entitled "Fortify (PC's name)". If this stake is not achieved by the end of the scene, the PC wil be incapacitated at the end of the scene.
  * (If that stake has already been added to the scene, add another unit to it)
- * Lose one Stamina point
+ * Move the top card of your Deckahedron to the Exhaustion pile.
 
 See the [Combat chapter](#combat---stamina-and-wounds) for more details on wounds.
 
@@ -1053,13 +1053,22 @@ You are not *required* to take the new move card.  You may instead take a
 “Alright, pay the cost called for by the move and we'll go from there. The beam stops falling. Inches from your friend’s head, it lurches and holds — suspended on a column of thickened air! You don’t know how you did it, but your body does.”
 
 
-## Selecting "At Random"
+## Spending XP
 
-The phrase "select a random card" is used throughout the rules.
+You earn XP when your character does something **risky, uncertain, or meaningful**. You spend XP to seize opportunities: shaping the narrative, rewriting fate, or growing stronger.
+
+When you spend XP, return the tokens to the supply.
+
+Some moves will **require XP** to activate special benefits, such as:
+
+* Bumping up the outcome of a flip using *Destiny Forewritten*
+* Triggering an optional effect of a Move
+* Gaining or upgrading abilities or equipment during downtime
+
+Each move will state exactly how many XP to spend.
 
 
-
-## Placing green tokens on a move card
+## Placing Green Tokens on a Move Card
 
 ```
 Discern
@@ -1071,22 +1080,116 @@ And This Is For...
 Fury
 ```
 
-Some moves instruct the player to place green tokens on it.
-It will also indicate the conditions to remove those tokens.
-The move cannot be triggered by that player again until the card
-has no more tokens on it.
+Some move cards will tell you to **place a green token** on the card. This usually represents one of two things:
+
+* A move that cannot be repeated until a rest (like a mighty finishing blow or a burst of magic)
+* A resource you've charged up or prepared to spend later (like spotting traps or gathering insight)
+
+### What it Means
+
+If a move card shows a green token on it:
+
+* **You cannot trigger that move again** until the card is cleared.
+* You may still reference the card’s effects if something else tells you to.
+* If the move has an ongoing effect (like “while this token remains...”), that effect persists until the token is removed.
+
+### When to Remove the Token
+
+Each move will explain how and when to remove the token. Common instructions include:
+
+* **Take a Breather**: A short rest clears certain cards.
+* **Spend the token**: Some moves let you remove tokens in exchange for bonuses.
+* **Complete a scene**: The effect may last until the current scene ends.
+
+
+
+## Expending Stamina
+
+Some moves instruct you to **expend Stamina**. This models the physical and mental exhaustion your character suffers during action sequences — especially in combat, pursuit, or spellcasting.
+
+### What Happens When You Expend Stamina
+
+To expend Stamina, you do one or both of the following (depending on the move cards you possess):
+
+* **Move cards from your Deckahedron** into your *Exhaustion pile*
+* **Place tokens** on specific move cards (like *Good Cardio* or *Sangfroid*)
+
+#### The Procedure
+
+When a move requires you to expend Stamina, follow these steps:
+
+1. **Reveal cards from your Deckahedron** one at a time, placing them face up in a temporary reveal area.
+2. Continue revealing until you have revealed cards with a combined total of **Stamina symbols equal to the amount** you are required to expend.
+3. Once the required amount is revealed, **move all revealed cards** — both those with Stamina symbols and those without — into your *Exhaustion pile*.
+4. If your Deckahedron runs out of cards during this process, **reshuffle your Discard pile to form a new Deckahedron** and continue revealing.
+5. If you cannot satisfy the full amount of required Stamina, or if you drop to **3 or fewer cards** remaining in your Deckahedron after completing the procedure, your character is **incapacitated**.
+
+![Cards with and without Stamina symbol](images/with_without_stamina.png){ width=2.5inch }
+
+Also, note any Wound cards that get moved to the Exhaustion pile in step 3, and activate their secondary effects. See the [section on Wounds](#wounds).
+
+### Choosing a Wound Instead
+
+If a move or effect would force you to expend more Stamina than you can afford — or if you simply choose not to lose stamina — you may opt to take a **Wound** instead. This is sometimes the only way to stay standing.
+
+As long as you do not already have a Wound card, you can choose to take a Wound instead of expending Stamina. If the rules demand that you take a Wound and you already have one, your PC is incapacitated instead.
+
+![Wound token](images/component_wound.png){ width=2.5inch }
+
+Wounds are a long-term source of trouble for your charcter. When wounded,
+all intelligent creatures seek to cure their condition as a high priority.
+
+When you choose to take a Wound, or if the rules demand that you take one:
+
+  1. The GM answers:
+     * How was the PC wounded?
+  2. Randomly draw a *wound card* from the supply and place it in your
+     *discard pile*.
+
+Wound cards can be used to represent different fictional aspects. They
+usually represent literal wounds, but may also be used for the effects of
+disease, poison, or other effects inflicted by monsters or the environment.
+
+To cure a wound, see the rules for the Seek Help move.
+
+
+### Cards With Slots for Stamina / Harm / Wounds
+
+Some cards have slots to receive tokens. The slots are marked with symbols for Stamina, Harm, or Wounds.
+
+These cards allow you to **reduce Stamina loss** in more specific ways. For example:
+
+ * **Good Cardio** helps you endure physical exertion. You can place tokens in its slots one-for-one to reduce the amount of Stamina to expend.
+ * **Sangfroid** does the same for mental exertion.
+
+Each token slot creates **a temporary buffer**. Once filled, the benefit is **locked** until you remove the token by Resting or through other means specified on the card.
+
 
 
 ## Might
 
-Some moves instruct a player to "calculate Might"
+### Definitions
 
-**Calculate Might**
+**PC's attack Might**
+**Foe's attack Might**
+**Might Steps**
+ * 1 Might
+ * 1-4 Might
+ * 1-6 Might
+ * 2-10 Might
+
+### Reveal Might
+
+Some moves instruct a player to "reveal Might"
+
+**Reveal Might**
 
 When your character suffers the consequences of violence, you reveal
-cards and read the numbers shown. Use the top card from either your
-Deckahedron or your Exhaustion pile, whichever is larger, shuffling if
-necessary to ensure unpredictability.
+cards and read the numbers shown.
+
+Use the top card from your Deckahedron. If there are **5 or fewer**
+cards in your Deckahedron, you must reshuffle first. If there still aren't enough cards after reshuffling, randomly select a card from your
+Exhaustion pile instead.
 
 When a move calls for "1d4", read the number shown inside the triangle.
 When a move calls for "1d6", read the number shown inside the square.
@@ -1117,17 +1220,30 @@ Put the revealed card in your discard pile.
 **Increase**
 
 
-## Expending Stamina
-
-
 ## Encumbrance
 
 **Calculate Encumbrance**
 
 
-## Slots
 
-Cards with slots
+## Spending Pack
+
+Some moves indicate that there is a requirement to spend Pack
+
+## Progress Icons
+
+`TODO: illustration of green progress and gray progress`
+
+These icons are described in the GM Guide.
+
+
+## Incapacitation / Bust-on-3
+
+When a player's Deckahedron is has dwindled into the Exhaustion pile,
+such that there are 3 or fewer cards remaining - even after reshuffling -
+the PC is "incapacitated".  When this happens, their fate is up to the
+game rules and the GM.
+
 
 ## Combat Procedures
 
@@ -1177,13 +1293,6 @@ In this spirit, in-game combat typically causes cards to be lost to the
 mechanistic outputs as this type of stamina loss.
 
 With that said, there is also a Wound mechanism, described below.
-
-## Incapacitation / Bust-on-3
-
-When a player's Deckahedron is has dwindled into the Exhaustion pile,
-such that there are 3 or fewer cards remaining - even after reshuffling -
-the PC is "incapacitated".  When this happens, their fate is up to the
-game rules and the GM.
 
 ## The Four Rs
 
@@ -1251,7 +1360,6 @@ exhaustion symbols equal to the remaining *Might*.
 Take all of the revealed cards, *including the cards without
 exhaustion symbols*, and put them face-down in your Exhaustion pile.
 
-![Cards with and without Stamina symbol](images/with_without_stamina.png){ width=2.5inch }
 
 **Only with wound cards**, activate the secondary result effect.
 
@@ -1263,27 +1371,6 @@ reshuffle your *discard pile* into the Deckahedron and continue.
 
 Note: you *may* choose to reshuffle your *discard pile* back into the
 Deckahedron *before* moving cards onto their *Exhaustion pile*.
-
-### Taking Wounds
-
-![Wound token](images/component_wound.png){ width=2.5inch }
-
-Wounds are a long-term source of trouble for your charcter. When wounded,
-all intelligent creatures seek to cure their condition as a high priority.
-
-When you choose to take a Wound, or if the rules demand that you take one:
-
-  1. The GM answers:
-     * How was the PC wounded?
-  2. Randomly draw a *wound card* from the supply and place it in your
-     *discard pile*. It will now start cycling between your Deckahedron
-     and your *discard pile*.
-
-Wound cards can be used to represent different fictional aspects. They
-usually represent literal wounds, but may also be used for the effects of
-disease, poison, or other effects inflicted by monsters or the environment.
-
-To cure a wound, see the rules for the Seek Help move.
 
 
 ## Regale
