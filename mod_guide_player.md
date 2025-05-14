@@ -1182,36 +1182,24 @@ Each token slot creates **a temporary buffer**. Once filled, the benefit is **lo
 
 Some moves instruct a player to "reveal Might"
 
-**Reveal Might**
-
-When your character suffers the consequences of violence, you reveal
-cards and read the numbers shown.
-
 Use the top card from your Deckahedron. If there are **5 or fewer**
-cards in your Deckahedron, you must reshuffle first. If there still aren't enough cards after reshuffling, randomly select a card from your
-Exhaustion pile instead.
+cards in your Deckahedron, you must reshuffle first. If there still aren't enough cards after reshuffling, randomly select a card from your Exhaustion pile instead.
 
-When a move calls for "1d4", read the number shown inside the triangle.
-When a move calls for "1d6", read the number shown inside the square.
-If there is no number, that card doesn't count. Just ignore it and
-use the next card.
+When a move calls for "1-4 Might", read the number shown inside the triangle.
+When a move calls for "1-6 Might", read the number shown inside the square.
+When a move calls for "2-10 Might", read both numbers and add them.
+If the result is zero, that card doesn't count. Just ignore it and take a new card.
 
-![d4 symbols](images/deckahedron_face_d4_highlight.png){ width=5cm }
-![d6 symbols](images/deckahedron_face_d6_highlight.png){ width=5cm }
+![1-4 symbols](images/deckahedron_face_d4_highlight.png){ width=5cm }
+![1-66 symbols](images/deckahedron_face_d6_highlight.png){ width=5cm }
 
-When a move calls for "1d10", add both numbers shown in the triangle
-and the square. If there is no number in the triangle or the square,
-consider it a zero for the purposes of addition.
-
-Note, this "1d10" process does not produce results uniformly
-between 1 and 10, but instead produces results along a specially-designed
-"2-to-10 curve", which has been chosen to provide statistical results
-that create a pleasing and dramatic experience.
+Note, the numbers resulting from  "2-10 Might" are not uniformly distributed.
+Instead, the results fall along a specially-designed "2-to-10 curve", which has been chosen to create a pleasing and dramatic experience.
 
 In rare cases the instructions of a move will explicitly declare the
 amount of *Might*, so you won't have to reveal cards.
 
-Put the revealed card in your discard pile.
+Put revealed card(s) in your discard pile, if drawn from your Deckahedron. Cards that came from the Exhausion pile should be returned to it.
 
 
 ### Might Steps
