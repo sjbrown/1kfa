@@ -849,3 +849,14 @@ def analyze_exes_and_checkmarks(svg=False, lost_stamina=0, flashback_percent=0.0
             all_percents.append(percents)
     return all_percents
 
+def start_pursuit(deck):
+    a1, a2 = random.sample(deck, 2)
+    d2 = deck[:]
+    d2.remove(a1)
+    d2.remove(a2)
+    return a1, a2, d2
+
+
+def simulate_pursuit():
+    zodiac_deck = [calc_zodiac(x) for x in range(20)]
+    a, b, zodiac_deck = start_pursuit(zodiac_deck)
