@@ -271,7 +271,19 @@ levels = []
     ✔✔: 
 
 **Details**: See SVG
-    
+
+As long as you're not cornered or surrounded, escape your foes.
+
+The GM either starts a Pursuit Interlude or answers the question:
+
+ * Where does the character end up?
+
+Encumbrance Penalty: Count up all your Item and Pack cards.
+ *  If you have less than 3, regain 2 Stamina points
+ *  If you have 3-4, expend 1 stamina point
+ *  If you have 5-6, expend 2 stamina points
+ *  If you have more than 6, expend 3 stamina points
+
 
 
 # Destiny Forewritten
@@ -313,7 +325,17 @@ levels = []
     ✔✔: 
 
 **Details**: See SVG
-    
+
+Spend (2 Pack) and answer:
+
+ * What equipment did you bring along to aid in the current situation?
+ * What was consumed or broken?
+
+OR
+
+Spend (1 XP + 1 Pack) and answer:
+
+ * What equipment did you bring along to aid in the current situation?
 
 
 # Study under a master
@@ -535,6 +557,13 @@ levels = []
 
 **Details**: See SVG
     
+The Encumbrance Penalty for your armor is one less than usual.
+
+Level 2: The Encumbrance Penalty for your shield is one less than usual.
+Slot for 1 harm
+
+Level 3: Your armour does not count for the encumbrance penalty.
+Slot for 1 harm OR 1 wound
 
 
 # Go Berserk!
@@ -576,7 +605,10 @@ levels = []
     ✔✔: 
 
 **Details**: See SVG
-    
+
+Add +1 to your attack Might for every Harm token you have,
+including every Harm token on this card's slots
+
 
 
 # Mystic Breathwork
@@ -852,7 +884,12 @@ levels = ['r1', '0', 'g1', 'g2']
     ✔✔: Choose 2 | 2x green progress
 
 **Details**: See SVG
-    
+
+Before you are engaged in melee, charge in (expend Stamina) and then choose:
+
+ * Move past them out of their reach
+ * Fast strike before the melee begins: attack a foe with your Might
+ * perform another move right now, ignoring its Encumbrance Penalty
 
 
 # Find Shadows
@@ -1106,6 +1143,15 @@ levels = ['r2', 'r1', '0', 'g1']
     ✔✔: Expend 2 Stamina, take a Blessing Card | 2x green progress
 
 **Details**: See SVG
+
+Use this instead of *Use a Magic Item*
+Instead of losing charges, expend Stamina due to mental exhaustion.
+
+Answer:
+
+ * What does it look like when you channel?
+
+Sigil of the Living Light does not count for your Encumbrance Penalty.
     
 
 
@@ -1149,7 +1195,9 @@ levels = []
     ----
     ✔✔: 
 
-**Details**: See SVG. When you Entreat the Blood-Bound, also recharge all of your magic items that have been depleted.
+**Details**: See SVG.
+
+When you Entreat the Blood-Bound, also recharge all of your magic items that have been depleted.
 
 If the cards are recharged above their capacity, place that number of white-side green cards on them.
     
