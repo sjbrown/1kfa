@@ -4,6 +4,7 @@
 import random
 import itertools
 from collections import defaultdict, OrderedDict
+import statistics
 
 def pct(x, total):
     return '%04.1f%%' % (100*float(x)/total)
@@ -856,7 +857,77 @@ def start_pursuit(deck):
     d2.remove(a2)
     return a1, a2, d2
 
+def one_symbol_in_common(card1, card2):
+     incommon = set(card1).intersection(card2)
+     return random.choice(list(incommon))
+
+def next_matches_a_or_b(deck, a, b):
+    d2 = deck[:]
+    top = random.choice(d2)
+    d2.remove(top)
+    try:
+        incommon = one_symbol_in_common(top, a)
+        return 'a', d2, top, a, b, incommon
+    except:
+        try:
+            incommon = one_symbol_in_common(top, b)
+            return 'b', d2, top, a, b, incommon
+        except:
+            return '', d2, top, a, b, None
 
 def simulate_pursuit():
-    zodiac_deck = [calc_zodiac(x) for x in range(20)]
-    a, b, zodiac_deck = start_pursuit(zodiac_deck)
+    deck = [calc_zodiac(x) for x in range(20)]
+    a, b, deck = start_pursuit(deck)
+    print(f'A: {a} \n B: {b} \n Deck: {deck}\n')
+    symbol = one_symbol_in_common(a,b)
+    print(f'Symbol {symbol}\n')
+    a = list(a)
+    b = list(b)
+    a.remove(symbol)
+    b.remove(symbol)
+
+    turn = 0
+    exceptions = 0
+    while(True):
+        turn += 1
+        print(f'\nTurn {turn}')
+        winner, deck, top, a, b, symbol = next_matches_a_or_b(deck, a, b)
+        if symbol is None:
+            print(f'No winner! | {top}, {a}, {b}')
+            exceptions += 1
+        else:
+            print(f'Winner {winner} | {top}, {a}, {b}, {symbol}')
+        if winner == 'a':
+            a.remove(symbol)
+        elif winner == 'b':
+            b.remove(symbol)
+        print(f'A: {a} \n B: {b} \n Deck: {deck}\n')
+        if len(a) == 0 or len(b) == 0:
+            print(f'=== End Game {a} {b} ===')
+            print(f'=== Turns {turn} ===')
+            print(f'=== Exceptions {exceptions} ===')
+            return a, b, turn, exceptions
+
+def pursuit_statistics():
+    results = []
+    a_wins = 0
+    b_wins = 0
+    turns = []
+    exception_list = []
+    num = 10000
+    for i in range(num):
+        a,b,turn,exceptions = simulate_pursuit()
+        results.append([a,b,turns,exceptions])
+        a_wins += int(len(a) == 0)
+        b_wins += int(len(b) == 0)
+        turns.append(turn)
+        exception_list.append(exceptions)
+
+    print(f'A wins: {a_wins} | {a_wins/num:.0%}')
+    print(f'B wins: {b_wins} | {b_wins/num:.0%}')
+    def stats(l):
+        return f'Avg {statistics.mean(l):.1f} Max {max(l)} Min {min(l)} Stdev {statistics.stdev(l):.1f}'
+    print(f'TURNS {stats(turns)}')
+    print(f'EX    {stats(exception_list)}')
+
+
