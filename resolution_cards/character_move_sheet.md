@@ -69,7 +69,7 @@ levels = ['0', 'g1']
     
 
 
-# Defy Danger
+# Avoid, Abide, Affront
 ```python3
 attrs = ['Str', 'Dex', 'Int']
 flags = []
