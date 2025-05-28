@@ -78,11 +78,11 @@ levels = []
 
     ✗: 
     ----
-    ✓: Make progress, but stumble, hesitate, flinch or pay a cost.
+    ✓: Make progress. GM answers one question, you answer a second.
     ----
-    ✔: You do it, but there's a new complication
+    ✔: Partial success.  GM answers one question.
     ----
-    ✔✔: Success
+    ✔✔: Success | one gray progress
 
 **Details**: When you act despite an imminent threat, say how you deal with it and flip.
  If you do it...
@@ -90,7 +90,12 @@ levels = []
  * by getting out of the way or acting fast, flip Dex
  * with quick wits or via mental fortitude, flip Int
 
- On a ✅ / ✔✔, the GM may ask you a question, offer you a worse outcome, hard bargain, or ugly choice
+Questions:
+
+ * What new complication arises?
+ * What cost must be paid?
+ * What disadvantage does this create?
+ * What hard bargain or ugly choice must be made?
     
 
 
