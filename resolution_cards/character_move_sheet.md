@@ -1045,14 +1045,20 @@ levels = ['r2', 'r1', '0', 'g1']
 
     ✗: GM Move
     ----
-    ✓: You arrive, the GM will say why this is more tenuous than you originally thought | gray progress
+    ✓: You arrive, the GM answers one question
     ----
-    ✔: You arrive, but the GM will say what it cost you | green progress
+    ✔: You arrive, the GM answers one question | gray progress
     ----
-    ✔✔: Smooth move | 2x green progress
+    ✔✔: Smooth move | green progress
 
-**Details**: Name a (setting appropriate) aspect of the environment that the GM hasn't described yet. Make it something that will help you get into an advantageous position. Jump, clamber, swing, etc. to that position.
-    
+**Details**: Name an aspect of the environment that the GM hasn't described yet. Make it something that will help you get into an advantageous position. Jump, clamber, swing, etc. to that position.
+
+Place a token on this card, and remove it when you act with the advantage granted by your new
+position.
+
+Questions
+ * Why is this more tenuous than you originally thought?
+ * What did it cost you to get here?
 
 
 # Sangfroid
@@ -1174,10 +1180,12 @@ levels = []
 
 Any amount of Might may be cancelled, any narrative effects of the attack will be resolved by the GM.
 
-Anytime afterward, confront an authority as being your unknown benefactor. The GM will explain why you're correct, and must spend:
- *  1 Journey Point and you keep the card 
- *  3 Shadow Points and you lose the card
-    
+Place a token on this card.
+
+Anytime afterward, remove the token to confront an authority as being your unknown benefactor. The GM will explain why you're correct, and chooses:
+ * Spend 1 Journey Point and you keep this card
+ * Spend 3 Shadow Points and you lose this card
+ * You must exchange this card for a new move card of the GM's choice
 
 
 # Void Transfusion

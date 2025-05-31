@@ -1111,8 +1111,9 @@ Some moves instruct you to **expend Stamina**. This models the physical and ment
 
 To expend Stamina, you do one or both of the following (depending on the move cards you possess):
 
-* **Move cards from your Deckahedron** into your *Exhaustion pile*
-* **Place tokens** on specific move cards (like *Good Cardio* or *Sangfroid*)
+ * **Move cards from your Deckahedron** into your *Exhaustion pile*
+ * **Place tokens** on specific move cards (like *Good Cardio* or *Sangfroid*)
+ * **Decide** to take Wounds or Harm to keep your Deckahedron full
 
 #### The Procedure
 
@@ -1134,7 +1135,7 @@ If a move or effect would force you to expend more Stamina than you can afford �
 
 As long as you do not already have a Wound card, you can choose to take a Wound instead of expending Stamina. If the rules demand that you take a Wound and you already have one, your PC is incapacitated instead.
 
-![Wound token](images/component_wound.png){ width=2.5inch }
+![Wound card](images/component_wound.png){ width=2.5inch }
 
 Wounds are a long-term source of trouble for your charcter. When wounded,
 all intelligent creatures seek to cure their condition as a high priority.
@@ -1153,6 +1154,29 @@ disease, poison, or other effects inflicted by monsters or the environment.
 To cure a wound, see the rules for the Seek Help move.
 
 
+### Choosing to take Harm Instead
+
+![Harm token](images/component_harm.png){ width=2.5inch }
+
+Similarly to choosing a Wound, in a 9-hour or 30-hour campaign, you can choose to take Harm instead.  One-shot campaigns are too short and simple to engage with this mechanism, so it is excluded from those.
+
+![Harm token](images/component_harm.png){ width=2.5inch }
+
+You can reduce damage your character would take by 3 by taking a Harm token instead.
+As long as your character has free slots in their attribute grid, they can take a harm token from the supply and place it in one of those slots. You must place it in a filled-in square of your attribute grid.
+
+A harm token placed in this way reduces the rank of your attribute by one.
+
+![Character sheet Harm slots](images/component_harm.png){ width=2.5inch }
+
+Notice that the "Anvil" rank of your attribute grid is not a slot.  You may not reduce an attribute's rank to nothing with a Harm token.  This means the maximum Harm tokens you can hold in your attribute grid is 3.
+
+Note, *Might* turns into Harm tokens at *exactly* a rate of 3-to-1. You cannot choose a Harm token when facing an *Might* of 2.
+
+
+Some move cards also have slots for Harm tokens.  See the details on those cards for how they operate.
+
+
 ### Cards With Slots for Stamina / Harm / Wounds
 
 Some cards have slots to receive tokens. The slots are marked with symbols for Stamina, Harm, or Wounds.
@@ -1165,6 +1189,15 @@ These cards allow you to **reduce Stamina loss** in more specific ways. For exam
 Each token slot creates **a temporary buffer**. Once filled, the benefit is **locked** until you remove the token by Resting or through other means specified on the card.
 
 
+## Incapacitation / Bust-on-3
+
+When a player's Deckahedron is has dwindled into the Exhaustion pile,
+such that there are 3 or fewer cards remaining - even after reshuffling -
+the PC is "incapacitated".  When this happens, their fate is up to the
+game rules and the GM.
+
+Once *incapacitated*, the PC can take no further actions.
+
 
 ## Might
 
@@ -1172,7 +1205,7 @@ Each token slot creates **a temporary buffer**. Once filled, the benefit is **lo
 
 **PC's attack Might**
 **Foe's attack Might**
-**Might Steps**
+**Might Ranks**
  * 1 Might
  * 1-4 Might
  * 1-6 Might
@@ -1191,7 +1224,7 @@ When a move calls for "2-10 Might", read both numbers and add them.
 If the result is zero, that card doesn't count. Just ignore it and take a new card.
 
 ![1-4 symbols](images/deckahedron_face_d4_highlight.png){ width=5cm }
-![1-66 symbols](images/deckahedron_face_d6_highlight.png){ width=5cm }
+![1-6 symbols](images/deckahedron_face_d6_highlight.png){ width=5cm }
 
 Note, the numbers resulting from  "2-10 Might" are not uniformly distributed.
 Instead, the results fall along a specially-designed "2-to-10 curve", which has been chosen to create a pleasing and dramatic experience.
@@ -1202,171 +1235,103 @@ amount of *Might*, so you won't have to reveal cards.
 Put revealed card(s) in your discard pile, if drawn from your Deckahedron. Cards that came from the Exhausion pile should be returned to it.
 
 
-### Might Steps
+### Might Ranks
 
-**Reduce**
-**Increase**
+Your Might Rank depends on your weapon, gear, or move — and it tells you how much force your attack delivers. By default, when a PC or foe attacks unarmed, the Might Rank is "1".
+If you're disarmed or otherwise separated from your weapon, your Might Rank drops to 1. Until you reclaim or replace it, you can only deal base unarmed damage.
+
+**Basic Weapons**: If you chose a weapon during character creation, it starts at Might Rank "1-4".
+
+**Advanced Weapons**: Via the move Tales of a Weapon, or emergent from the narrative, your PC can acquire weapons of higher Might Ranks.
+
+**Foes**: Foes will have different Might Ranks, from "1" all the way to "2-10". The GM Guide explains how these Might Ranks are set.
 
 
 ## Encumbrance
 
-**Calculate Encumbrance**
+Encumbrance is about when your load catches up with you. Certain Moves operate differently depending on how burdened you are.
 
+### The Encumbrance Penalty
+
+Each time you attempt Moves requiring stealth or deft movement, the total number of **Item** and **Pack** cards you have determines if you expend Stamina.  This is called the *Encumbrance Penalty*.
+
+Moves that invoke Encumbrance include:
+
+* **Bravely Run Away**: escaping combat can cost up to 3 Stamina
+* **Pick Pockets**, **Backstab**, **Find Shadows**, **Slide**: stealthy actions become more exhausting the more you're carrying
+* **Bum Rush**: this Move lets you *ignore* the Penalty during your charge
+* **Like A Second Skin**: reduces the Penalty from your armor (and later, shield)
+
+### How It Works
+
+When you perform a Move with the **Encumbrance Penalty**, count how many **Item** and **Pack** cards you have.  The Move text will declare how much Stamina need to be expended.
+
+Some Moves, like **Backstab**, become completely unavailable if you're carrying too much.
+
+Some Moves, like **Channel the Living Light**, stipulate that certain items should not be counted when determining the Encumbrance Penalty.
+
+> **Example**: You attempt to **Pick Pockets** while holding 5 items. Before flipping, you must expend 2 Stamina — because staying subtle with all that weight is mentally draining.
+
+### Reducing Encumbrance
+
+During play, you can always shed gear to lighten your load:
+
+> *“I drop the pack — it’s not worth getting caught over this.”*
+
+Use Fictional Positioning to determine if the shedding of gear can be accomplished in the middle of resolving a move.
+
+Strategic inventory choices — and sometimes dramatic sacrifices — can shape your story.
+
+### Why It Matters
+
+Encumbrance makes your loadout meaningful. It rewards planning and trade-offs. Do you go in light, ready to sneak and vanish? Or burdened with loot and survival gear, hoping you don’t need to run?
 
 
 ## Spending Pack
 
-Some moves indicate that there is a requirement to spend Pack
+**Pack** is undifferentiated gear — the torches, tools, relics, rations, and talismans a hero might carry. You don’t list or name them in advance. Until they’re used, they’re narrative potential.
+
+When a move calls for you to **spend Pack**, it might just vanish into the scene -- traded away, consumed, or quietly lost. Other times, like with **Good Thing I Brought**, the item gets named. The card is “realized” into the fiction, and you can swap it for an **Item card** -- usually a blank index card labeled with what it became.
+
+Some Pack is **Precious**: rare, magical, or meaningful. When you spend one, the table should feel the weight of it.
+
+Not every use of Pack becomes a moment of lore. Sometimes it just gets spent. That’s fine. Other times, it births the exact item the story needs.
+
 
 ## Progress Icons
 
 `TODO: illustration of green progress and gray progress`
 
-These icons are described in the GM Guide.
+When, via clever positioning, subtle influence, useful discoveries, or decisive action, your PC makes headway toward the stakes of a scene, **green** or **gray progress tokens** are generated.
 
+`TODO: illustration of icons on move cards that indicate green or gray progress`
 
-## Incapacitation / Bust-on-3
+When a move results in a progress token declare that to the table. The GM will take a token from the supply and put it on a progress bar of their choice.
 
-When a player's Deckahedron is has dwindled into the Exhaustion pile,
-such that there are 3 or fewer cards remaining - even after reshuffling -
-the PC is "incapacitated".  When this happens, their fate is up to the
-game rules and the GM.
+The **GM Guide** has the full rules for how tokens affect scenes and stakes.
 
 
 ## Combat Procedures
-
-
-
-## Equipment Procedures
-
-## Pursuit Procedures
-
-## Tracking Resources
-
- * Tracking XP
- * Putting tokens on move cards
- * Putting tokens on stakes / foes
- * Putting tokens next to Deckahedrons
- * Tracking item damage
- * Tracking magical charges
-
-# Reference
-
-## Moves
-
-
-# Combat - Stamina and Wounds
 
 PCs will confront violent foes and dangerous obstacles. Will
 they endure exertion and injury to keep venturing forward, or will they
 be disfavoured by fate and end up broken, spent, or collapsed?
 
-In a fight, a character is running, dodging, striking, and being struck
-by their foe.
-All of this action is scary and exhausting.
-A character gets weaker as this exchange goes on, even if they
-dodge every blow.
+Combat is *entered*, and *exited*.  If combat ends without any PCs becoming incapacitated, the party is rewarded with 2 progress tokens toward a stake in the scene.
+If the combat ends with *any* PCs still standing, they get 1 progress token.
 
-This weakening is represented by cards from your Deckahedron being lost
-into your *Exhaustion pile*.
+Combat begins when:
+ * A PC makes an aggressive or violent move
+ * A Pursuit ends with the PCs catching their quarry
+ * A Pursuit ends with the PCs being caught by their pursuers
+ * The foes spring an ambush
+ * The narrative situation boils over and demands clashing of blades
 
-In any kind of real-world boxing or martial arts match, the later rounds
-find the athletes worn down, their footwork less animated, and their
-guard drops more frequently.
-The contest is not always decided with a knockout punch, it often comes
-down to who can endure.
+Combat can end in a few ways:
+ * All foes are subdued or pacified
+ * Bravely Run Away is used
+ * An overriding event occurs in the narrative
 
-In this spirit, in-game combat typically causes cards to be lost to the
-*Exhaustion pile*, and the players are encouraged to narrate these
-mechanistic outputs as this type of stamina loss.
-
-With that said, there is also a Wound mechanism, described below.
-
-## The Four Rs
-
-When your character gets attacked or falls victim to some other danger,
-you have choices about exactly how they are affected. They may dodge,
-and just lose Stamina, they may stand stubbornly against a blow,
-perhaps absorbing it with their armour, or they may be wounded by it.
-
-The procedure for making these decisions is called "The Four Rs":
-
- 2. Reduce
- 3. Reap
- 4. Regale
-
- 2. [Reduce](#reduce) from the *Might* by using cards or taking Wounds
- 3. [Reap](#reap) cards from your Deckahedron into the Exhaustion pile
- 4. [Regale](#regale) the outcomes in the fiction
-
-
-
-## Reduce
-
-After the *Might* is known, you can choose to lower it by
-using *move cards* like Good Cardio and Mystic Breathwork
-or *item cards* like Shield, or by taking a Wound.
-
-You can always choose to absorb the **entire** amount of *Might* by
-taking a single Wound.
-
-Otherwise, cards that negate or absorb *Might* can be used to
-reduce the total. Generally, you take Exhaustion or Wound tokens from
-the supply and place them on the designated space on the card.
-
-![Exhaustion token](images/component_exhaustion_heroic.png){ width=2.5inch }
-
-----
-
-Let's say your character was attacked with a sword and the dice were rolled
-and summed up to 7. You can either take 7 Exhaustion tokens (thus losing 7
-Stamina points), or choose to take one *Wound token* (see below) instead.
-
-Let's further say your character had lost 3 Stamina points earlier in the
-battle. With only 7 Stamina points left, it's a wise time to take a Wound.
-
-
-## Reap
-
-In the **third step**, you will lose cards from your Deckahedron according
-to the remaining *Might*.
-
-Remember the Bust-On-3 rule. If this process reduces the cards in your
-Deckahedron to 3 or fewer (even after reshuffling in your discard pile),
-then your character is incapacitated.
-To win at combat, a character's foes must be subdued or pacified before
-this happens.
-
-Once *incapacitated*, the character can take no further actions.
-It is up to the GM to decide what this incapacitation means - whether
-the character is dead, unconscious, or otherwise unable to act.
-
-### Losing or Expending Stamina
-
-Reveal cards from your Deckahedron face-up until you have revealed
-exhaustion symbols equal to the remaining *Might*.
-Take all of the revealed cards, *including the cards without
-exhaustion symbols*, and put them face-down in your Exhaustion pile.
-
-
-**Only with wound cards**, activate the secondary result effect.
-
-If you haven't started an Exhaustion pile, start a new one.  Keep it
-separate from your Deckahedron and discard pile.
-
-If your Deckahedron does not contain enough cards, you **must**
-reshuffle your *discard pile* into the Deckahedron and continue.
-
-Note: you *may* choose to reshuffle your *discard pile* back into the
-Deckahedron *before* moving cards onto their *Exhaustion pile*.
-
-
-## Regale
-
-Finally, the **fourth step**: you interpret those results into the
-narrative.  Did your character dive into the dirt?  Did they take a punch
-to the jaw and respond with a bloodied grin?  Did the spear bounce right
-off their steel breastplate?
 <div class="note gmnote">
 
 | *The act of taking a risk, deciding how*
@@ -1380,842 +1345,7 @@ off their steel breastplate?
 
 </div>
 
-
-# Equipment
-
-During [character creation](mod_guide_gm.md#character-creation), you
-receive two Pack cards and take some Item cards.
-These cards represent equipment carried by your character that interacts
-with mechanisms of the game.
-
-Daily-use amounts of money and food are not tracked. It is assumed
-your character will always be able to scrounge a meal somehow.
-Unless it is relevant to the drama of the fictional situation or
-inspired by the Touchstone List (see the GM Guide), small monetary
-transactions may be abridged or assumed.
-
-It is also not necessary to exactly measure movement speed or the sizes
-of all the gear carried or to track the body part to which the gear
-is strapped.
-
-Your character has a movement speed, a certain lightness-of-foot,
-they carry a certain amount of equipment and items,
-and perhaps even a certain amount of wealth or treasure.
-
-There are some moves that are affected by how much *stuff*
-a character carries. These moves have a "Encumbrance Penalty" section,
-and describe how carried equipment affects their outcomes.
-
-At any time that makes sense in the fiction, a character can drop items
-and equipment.
-
-## Pack - Precious and regular
-
-![Pack cards](images/component_card_pack.png){ width=2.5inch }
-
-Throughout the game, your character will gain, lose, and trade equipment
-and supplies that are worth tracking. These items don't need to be specified
-until they actually get used. Instead they are tracked with anonymous Pack
-cards.
-
-White-side green cards represent "regular" Pack and black-side green cards
-represent "precious" Pack.
-Precious Pack is something that is found precious by *someone*. It may be
-something made of a rare metal like gold, or it may be simply a full
-waterskin offered to a parched NPC in the desert.
-
-If the specifics of a Pack card get concretely established in the fiction,
-and the card is not immediately spent, the Pack card should be returned to
-the supply and a blank Item card should be taken to replace it, with the name
-or details of the item written on it.
-
-Your character starts off with 2 Pack cards, enabling the move Good Thing
-I Brought...
-
-
-## Good Thing I Brought...
-
-![Good Thing I Brought card](images/move_good_thing_i_brought.png){ width=2.5inch }
-
-Adventurers are always finding themselves in tricky situations. Luckily,
-they come prepared with adventuring gear. They have been known to carry
-50 feet of rope, smelling salts, books of racy poems, sometimes even a
-3-day-old pork chop to distract hounds or hungry goblins.
-
-It's a fact. You know this and A Thousand Faces of Adventure knows this, so
-you won't be asked to keep fine-grained notes of every candle and spare
-button in your character's inventory.
-
-Reasonable daily-use items are presumed to be in your character's pack. If
-you're unsure, remember this game is a conversation, so just ask the table.
-
-But sometimes you will be in a situation where having that 50 feet of rope
-or an old pork chop would really *solve a problem* for your character.
-
-When your character reaches into their pack and produces the item that
-solves their current problem or helps them overcome a challenge, just say
-what it is and execute the "Good Thing I Brought..." move.
-
-The Pack cards represent the adventuring gear a character has brought along.
-But you do not need to declare exactly what that gear is until you're in
-a situation where you need something specific.
-
-If the "Good Thing I Brought..." move is executed and the newly "declared"
-equipment is something that can be returned to the backpack after
-use, write its name down on a blank card and exchange that card for the
-"anonymous" Pack card(s) that were the cost of "Good Thing I Brought...".
-
-If 2 Pack cards are spent, and the character ends up with one card returning
-to their backpack, future Encumberance Penalty calculations will change.
-Use the fiction to justify that. Maybe they didn't have
-*exactly* what they needed, so one piece of equipment had to be consumed
-to create the necessary tool, in a MacGuyver-esque fashion.
-
-If the equipment is something that gets consumed immediately when used,
-the 1 or 2 Pack cards just get returned back to the supply.
-
-
-## Item Damage
-
-![Item damage](images/component_card_damage.png){ width=2.5inch }
-
-Damage to items is represented as black-side red cards.
-
-The "Bust-on-3" mechanism is used to represent damage.
-
-The first two times an item is damaged, place a red card on the Item card,
-black-side-up.
-
-*If an item already has 2 red cards on it*, and it is damaged again,
-it is destroyed. Return it and the red cards to the supply.
-
-All mundane (non-magical) items can be damaged. Usually this happens
-as the result of a GM move.
-
-To repair items, see the move [Sharpen and Stitch](#sharpen-and-stitch)
-
-
-# Magic
-
-<!-- TODO remove trademarked references -->
-Magic is an element that pervades stories of fantasy. It can be obscure
-and stemming from nature like in Lord of the Rings, it can be elemental and
-allegorical like in The Wheel of Time, and it can be linguistic and
-self-aware like in The Invisibles.
-
-To avoid presuming too much about the narrative, the rules do not dictate
-the nature of magic or the "how" of magic. That's for you to decide during
-play.
-The rules provide a mechanical foundation and some optional narrative paths.
-You are invited to take this well-tested framework, play with it, and expand
-into it.
-
-Is magic woven from subtle threads that pervade the universe? Is it based
-on words of power? Is it high technology hidden in the planet's crust
-by alien benefactors? Is it copied exactly from a concept in your Touchstone
-List? You decide.
-
-The rules give you a way to have scrappy adventurers begin with magic items.
-These artifacts have 3 charges, and are rechargeable during Rest.
-Your character can eventually build themselves up in power to a point where
-they can cast magic spells without needing the items.
-
-The rules also give names for two sources of magical power, "The Living
-Light" and "The Blood-Bound". It's up to you to give these names narrative
-meaning, if you want.
-
-One thing to keep in mind is that characters may attempt any move that
-resolves with Str / Dex / Int.
-(See [Move Levels](#move-levels)
-So even if moves like Use a Magic Item or Fundamental Magic were not chosen
-at character creation or gained via Study Under a Master, any character may
-attempt them.
-
-That said, using magic invokes some of the more complicated rules.
-Players are challenged with managing and balancing
-charges, capacity, stamina, requirements, and narrative effect. This kind
-of play is ideal for players excited by complexity and the potential
-of explorable branches.
-
-#### The ONGOING tag
-
-Upon triggering the Use a Magic Item move, a character "flows magical
-energy" into the item. Then the magical effects happen.
-
-Some magic effects happen immediately.
-
-Some magic effects persist even after the flow of magical energy into
-the item has ceased. (eg, `_` of Sensation)
-
-Some magic items have the ONGOING tag, and their effects persist
-only as long as magical energy flows into the item. It is up to the
-player to declare when their character ceases the flow of magical energy.
-If the flow of magical energy continues, they are not considered *idle*
-for the purposes of the Rest and Seek Help moves.
-
-#### Charges and Capacity
-
-![Magic item with 3 charges](images/component_card_magic_item.png){ width=2.5inch }
-
-By default, magic items have capacity for 3 charges.
-An item is considered "depleted" when all its charges are used.
-The term used for a card's maximum number of charges is "capacity"
-or "charge capacity".
-
-The number of charges a magic item *currently* has is tracked by
-keeping green cards underneath it.
-
-When a magic item loses a charge, take one of the green cards
-and place it back in the supply. When there are no more green cards
-underneath it, it is *depleted* and cannot be used.
-
- ![Capacity gauge](images/component_card_capacity.png)
-
-Charge capacity can be gained and lost. Every time it changes, players
-should mark the new capacity on the Magic Item card
-
-If the charge capacity decreases below 1, all the bonds that held
-the item together dissipate, including the bonds of matter. Return the
-card to the supply.
-
-
-## Use a Magic Item
-
-![Use a Magic Item](images/move_use_a_magic_item.png){ width=2.5inch }
-
-When a character holds a magic item and flows energy into it, the player
-flips Int, and on any result other than ✗, the item activates and the
-effects described on the magic item card happen.
-
-Using a magic item causes it to lose a charge. This loss can be avoided
-with moves like Entreat the Blood-Bound and Channel the Living Light.
-
-Following that, results of ✅︎ and ✔✔ cause a further cost to be incurred,
-as chosen from the list by the GM or the player, respectively.
-
-**Note:** if the magic item being used is a magical weapon,
-another choice is available: "the weapon is damaged".
-
-The RECEIVE CARDS tag: when a player chooses this card during character
-creation or Study Under a Master, they also receive 1 magic item of their
-choice.
-
-
-## Entreat the Blood-Bound
-
- ![Entreat the Blood-Bound](images/move_entreat_the_blood_bound.png){ width=2.5inch }
-
-If it has not yet been established, when a player first uses this move, it's
-a great time for the GM to ask them a question: "Who or what is the
-Blood-Bound?" <div class="note gmnote">
-
-| **GM Note:** *this is a great way to stretch your*
-| *improv muscles. Say "Yes, and..." no matter if*
-| *they identify the Blood-Bound as tiny, parasitic*
-| *insects or as monstrous, extra-dimensional dark gods.*
-
-</div>
-
-When a player chooses this card during character creation or Study Under a
-Master, they also receive the item Blade of Echoes.
-
-
-## Channel the Living Light
-
-![Channel the Living Light](images/move_channel_the_living_light.png){ width=2.5inch }
-
-If it has not yet been established, when a player first uses this move, it's
-a great time for the GM to ask them: "Who or what is the Living Light?"
-
-When a player chooses this card during character creation or Study Under a
-Master, they also receive the item Sigil of the Living Light.
-
-
-# Notes on Moves
-
-## Destiny Forewritten
-
-![Destiny Forewritten card](images/move_destiny_forewritten.png){ width=2.5inch }
-
-Sometimes you plan out something really great, and then you resolve
-a flip, and don't get the results you need.
-
-Invoking Destiny serves as sort of a "mulligan" in those situations, but it
-also provides a way to develop your character's backstory and personality.
-
-After a player makes a flip, and before the consequences of the flip are
-described, any player can declare, "I invoke Destiny!". It may be a player
-other than the player that flipped.
-
-After the declaration, the prior flip is ignored. (It is not *resolved*.)
-
-The declaring player then answers one of these questions about their character:
-
- * What special preparations equipped them for this moment?
- * What aspect of their backstory empower them against this challenge?
- * How does their bond with another PC spur them into action?
- * What advantage do they take of another character's personality?
-
-Based on the answer, the GM determines which attribute will be tested by
-a new flip.
-The declaring player must spend between 1-3 XP to make a new flip, with one
-level of advantage when spending 2 XP, or two levels of advantage for 3 XP.
-
-The original move is then *resolved* with the result of this new flip.
-If the declaring player was different from the player that triggered the move,
-any results like XP go to the player who played the resolving card.
-
-
-
-## Taking a Breather
-
-![Take a Breather card](images/move_take_a_breather.png){ width=2.5inch }
-
-**Taking a Breather** is a move that a character can take during combat.
-This action allows a character to regain up to 4 Stamina points.
-
-The player may use either Intelligence or Dexterity to perform the **Take a
-Breather** action.
-
-If they use Intelligence, they say how they execute a tactic or
-recognize a favourable position that lets them gather their breath
-and their wits.
-
-If they use Dexterity, they say how they maneuver into a safe position
-that offers some temporary safety.
-
-Regaining Stamina may be done either by taking cards from the
-*Exhaustion pile* and putting them into the *discard pile*,
-or by returning Exhaustion tokens to the supply.
-
-When recovering cards from the *Exhaustion pile*, the player may choose any
-cards they want, but may not flip them face-up if they are face-down.
-
-When combat or a pursuit ends, and it is appropriate for the narrative
-(e.g. when there's a scene transition and the characters reasonably have
-a few minutes to catch their breath), the players may **Take a Breather**
-using Str as a *FAST* move (ie, no GM move triggers if the result is ✗ or ✅︎).
-
-
-## Good Cardio
-
-![Good Cardio card](images/move_good_cardio.png){ width=2.5inch }
-
-This card makes a character an especially resilient fighter and athlete.
-
-In a combat encounter, a player will usually trigger an aggressive move like
-Mix It Up or Volley. During their turn in the spotlight, the player can also
-trigger one more move, as long as it has the *FAST* tag.
-Good Cardio is one such card, and allows the character to regain some of
-their lost Stamina points, and stay in the action longer.
-
-Good Cardio has an additional effect that passively prevents a character
-from losing Stamina in the first place. Instead of losing a point of Stamina,
-an Exhaustion token can be placed in the first "slot" of the card. If the
-character goes up *move levels* (see below), a new slot opens up for each
-level the move is increased. Only one token can be placed in a slot.
-
-
----
-
-# SESSION 2 RULES
-
----
-
-![Illustration](images/art_kstramat_bw.png)
-
-# The Session Opener
-
-Every session after the first session, there is a special move to execute
-at the very beginning, **The Session Opener**. It is a player's opportunity
-to generate an extra XP.
-
-Your GM will lead you through a story recap and pose some questions about
-your character.  Then you will be given the opportunity to **Ask for
-notes** and **Give notes** to your fellow players.
-
-After this exercise, all participating players will receive an XP.
-
-The details of the Session Opener are described in
-[the GM Guide](mod_guide_gm.md).
-
-
-# Equipment: acquisition, upgrade, and repair
-
-## Sharpen and Stitch
-
-![Sharpen and Stitch card](images/move_sharpen__stitch.png){ width=2.5inch }
-
-Sharpen and Stitch is a way to repair damaged items by spending Pack cards.
-
-This move must be executed alongside the Rest move.
-
-
-## Shop / Procure
-
-![Shop / Procure card](images/move_shop__procure.png){ width=2.5inch }
-
-When the Shop / Procure move is used, the scene can be described as an
-everyday shopping trip or a thieving and bribery escapade, or anything
-else that makes sense in the narrative, so long as the mechanical
-outcome would be certain.
-
-The GM presents to the player 4 cards of any mix of items: mundane,
-magical, a special commodity established in the narrative, or even
-something purely decorative. It is ok for the GM and player to discuss
-the items beforehand to any level of detail, and it is also ok for the
-player to outright say what they want to go shopping for.
-
-The GM should be honest with the narrative, stay true to their goals and
-try to provide the kind of fun the player has signaled they want to have.
-
-The GM shouldn't present a player a card the character is unable to
-use.
-
-### Mundane Items: Armor, weapons, etc
-
-There are mundane items in A Thousand Faces of Adventure, as well as magical
-ones. This text includes rules for weapons, shields, and armour. But characters
-may have other items as well. Those other items may just be decorative or
-they may have narrative value (carrying around a small barrel of brandy may
-earn you a welcome from the thirsty dwarves you meet).
-
-<!--
-You can even create rules of your own for certain classes of item.
-See the [Extending 1kFA](#extending) chapter for hints on how
-to do that.
--->
-
-#### Weapons
-
-Weapons cards describe what the character has armed themself with. These
-cards might describe "weaponry" rather than a single item, as the Many
-Knives card demonstrates.
-
-Weapons have "power": d4, d6, or d10. This determines what die to
-roll when you roll Might. Generally players can increase
-weapon power with the [Tales of a Weapon](#tales-of-a-weapon) move.
-
-The GM should decide if the weaponry incurs any additional costs when
-calculating encumbrance penalties. Is the item particularly heavy or large?
-
-Here are the default weapons available to characters:
-
-Name             |  notes
------------------|--------------
-_ Sword          |
-Many Knives      | At close range, can be thrown. Maximum power is d6
-_ Bow            | Long range, not usable at melee range
-
-
-#### Armour
-
-When an armour-clad character would normally take Harm or a Wound, the
-player may put the Harm or Wound token into an appropriate empty slot on
-their Armour card. This represents the character getting lucky, and their
-armour absorbing the attack instead of their body. Better armour has
-more chances to protect its wearer.
-
-![Slots](images/component_card_slots.png)
-
-The armour available to characters during character creation is the weakest
-kind. This kind of armour has 1 slot that can absorb a Harm or a Wound.
-
-When a character goes shopping, goes a-thieving, discovers treasure, or loots
-a battlefield, the GM may offer new, more useful armour with more slots drawn
-on it.
-
-The GM should take a blank card from the supply, and draw up to 3 slots on
-the card. A slot shall be designated to receive either:
-
- * 1 Harm token
- * or 1 Harm *or* Wound token
-
-The table should decide if the armour incurs any additional costs when
-calculating encumbrance penalties -- better armour tends to be heavier.
-Any increased encumbrance penalty should be written on the card.
-
-The player should write a descriptive name for the armour like
-"Padded" or "Chainmail" or "Full plate" and write that at the top of a card.
-The description will impact the narrative -- it's hard to sneak or swim in
-full plate armour.
-
-Here are some example armours:
-
-Suggested Name   | slots                | encumbrance modifier
------------------|----------------------|----------------------
-Leather Armour   | 1 Harm/Wound         |
-Padded Armour    | 2 Harm, 1 Harm/Wound | counts as 2 items
-Full Plate       | 3 Harm/Wound         | counts as 4 items
-
-
-#### Shields
-
-Shields provide a way to avoid Harm and Wound tokens, but they test a
-character's Dex to do so.
-
-To make a Shield card, first the GM chooses the ✔✔✔, ✔✔, and ✅︎ effects by
-choosing 3 sequential effects from this list:
-
- * Avoid the *x*
- * Avoid the *x*, but choose to lose 1 Stamina or this item takes 1 damage
- * Avoid the *x*, lose 1 Stamina
- * Avoid the *x*, lose 1 Stamina and this item takes 1 damage
-
-The *x* can be either:
-
- * Harm
- * Harm or Wound
-
-Then the GM and player come up with a name for this kind of shield together,
-using the same rules as the Armour name-creation above.
-
-The fictional description of the "shield" has mechanical consequences. For
-example, the edge of steel shield could reasonably be used to attack a foe,
-so the character would have 1d4 Might with Mix It Up. But a character
-with no weapon and only leather bracers on their wrists, the character would
-be "unarmed", doing just 1 Might.
-
-Blocking Might with a shield is a *FAST* move,
-and players may not make more than one *FAST* move per turn in the spotlight.
-
-## More Power
-
-Some cards show a "power gauge" that indicates whether the *Might*
-(in the case of a weapon) or *effect* (in the case of a magic item) will
-use a d4, d6, or d10.
-
-![Power gauge](images/component_card_power_gauge.png){ width=2.5inch }
-
-After character creation, an armed PC will be rolling 1d4 for their attack
-power. This can be increased later on in the game via the moves Tales of a
-Weapon and Obsessive Contemplation.
-
-## Tales of a Weapon
-
-![Tales of a Weapon card](images/move_tales_of_a_weapon.png){ width=2.5inch }
-
-The GM should decide whether the weapon will incur any extra cost when
-calculating an encumbrance penalty.
-Is the item particularly heavy or large? The GM should weigh that
-cost against the weapon's other features.
-
-## Obsessive Contemplation
-
-![Obsessive Contemplation card](images/move_obsessive_contemplation.png){ width=2.5inch }
-
-When using a Precious Item that is just represented by a Pack card,
-swap the Pack card with a new blank Magic Item card and write a description
-and charge capacity on the new card.
-
-# Character preservation and recovery
-
-## Bravely Run Away
-
-![Bravely Run Away card](images/move_bravely_run_away.png){ width=2.5inch }
-
-When players find themselves on the losing side of a battle, or want to
-avoid a daunting threat, they may choose to run away. If their characters
-are positioned in a way that their escape is possible, according to the
-established fiction, use this move.
-The players temporarily lose narrative control and the GM will say
-where the characters end up.
-
-There may also be a Stamina cost (or Stamina gain) depending on how weighed
-down the characters were by their equipment.
-
-The GM can resolve this move by:
-
- * putting the characters somewhere completely safe
- * putting the characters in a place where some (new or old) danger exists,
-   but is, for the moment, not directly threatening the characters
- * spending a *Shadow point* and starting the Pursuit Mini-game
- * spending a *Shadow point* and landing the characters in a place where
-   they must directly confront or defy a new danger
-
-
-## Healing
-
-Throughout the game, players are asked to decide how their
-characters get hurt, how they respond to being hurt, and how they recover
-from their injuries.
-
-This is a small-scale echo of the whole story - the Hero's Journey itself.
-At the center of the Hero's Journey is a moment of pain that the hero
-must fully endure before finding relief - either through their own action or
-with the help of their friends. The Hero's Journey is a myth that teaches
-us how to take care of ourselves, and so this game holds a puzzle where the
-players to learn how to take care of their characters.
-
-
-## Resting
-
-![Rest card](images/move_rest.png){ width=2.5inch }
-
-*Resting* is an action that a character may take when they are out of combat,
-not traveling, and have several hours to devote to rest (sleeping qualifies).
-
- * Step 1: Return all *Exhaustion* tokens to the supply
- * Step 2: Count the *Harm* and *Wound* tokens on your *Exhaustion pile*
- * Step 3: Keep that many cards (player chooses which ones) in your
-   *Exhaustion pile*, put the rest into your *discard pile*
- * Step 4: Return one *Harm* token to the supply
- * Step 5: Say who you blame for your injuries
-
-When resting, magic items that are not being used regain all charges, up
-to their charge capacity. Take green cards from the supply to represent
-the charges.
-
-You may gird all your armour, where applicable.
-Remove all Harm and Wound tokens from your armour cards and from move cards
-that represent armour effectiveness (eg, Like A Second Skin).
-
-Time devoted to *Resting* cannot also be devoted to learning skills,
-studying with a teacher, or any other action that takes mental or physical
-effort.
-
-The Harm token returned to the supply in Step 4 may come from your
-*Exhaustion pile* or from a slot on a move card (eg, Bloody But Unbowed).
-
-It is possible that the object of blame named in step 5 is the character
-themself.
-
-## Seek Help
-
-![Seek Help card](images/move_seek_help.png){ width=2.5inch }
-
-*Seeking Help* is an action that a character may take when they are in a
-peaceful environment where external resources with healing powers are
-available.
-
-Eg, if they are in a primitive camp possessing medicine men or a
-contemporary city with doctors and hospitals or a tranquil oasis infused
-with healing magic.
-
-That the healing powers are *external* is important. Seek Help is a move
-where players acknowledge their characters' limits and cannot do
-everything on their own.
-
-When you spend a day healing (not at The Hearth):
-
- * Step 1: Describe your character's healing experience
- * Step 1: Return all *Exhaustion* tokens to the supply
- * Step 1: Return all *Harm* tokens to the supply
- * Step 1: Return all *Wound* tokens to the supply
- * Step 1: Put all the cards in your *Exhaustion pile* into your *discard pile*
- * Step 1: For every *wound card* you have, draw one *blessing card*
- * Step 1: Answer the question: "In what way has your PC been brought closer to forgiveness?"
-
-When you spend a day healing at The Hearth:
-
- * Step 1: Describe your character's healing experience
- * Step 1: Return all *Exhaustion* tokens to the supply
- * Step 1: Return all *Harm* tokens to the supply
- * Step 1: Return all *Wound* tokens to the supply
- * Step 1: Return all *wound cards* tokens to the supply
- * Step 1: Put all the cards in your *Exhaustion pile* into your *discard pile*
- * Step 1: Answer the question: "In what way has your PC been brought closer to peace?"
-
-As with *Resting*, time spent *Seeking Help* cannot also be used in
-activities that take effort.
-
-Magic items that are not being used regain all charges, up to
-their capacity.
-
-You may gird all your armour, where applicable.
-Remove all Harm and Wound tokens from your armour cards.
-
-
-# Character advancement
-
-## Study Under a Master
-
-![SUaM card](images/move_study_under_a_master.png){ width=2.5inch }
-
-This move steps your character towards becoming a powerful force in
-the world.
-
-When your character is in a town (a village, city, etc. -- any safe
-place where resources and commerce present themselves), you can spend 2 XP
-to either:
-
- * Increase the level of a move you already have
-   (See [Move Levels](#move-levels)
- * Take a new move card from the supply
-
-If you want to take a move card that another player already has or one that
-was scribbled over in a previous campaign, or just has been ruined by spilled
-beer, you can copy the text onto a new card.
-
-## Move Levels
-
-Some Move cards have icons on them that indicate "levels". These levels
-represent how good your character is at that skill. For example, the move
-Pick Pockets has 5 icons.
-
-![Move levels](images/component_card_move_levels.png){ width=2.5inch }
-
-These are the "move levels" for Pick Pockets.
-From left to right, these icons are called:
-
- * ![2 red symbol](images/move_level_2_red.png){ width=0.5inch } wild or "2 red"
- * ![1 red symbol](images/move_level_1_red.png){ width=0.5inch } novice or "1 red"
- * ![base level](images/move_level_base_level.png){ width=0.5inch } "studied" or "base level"
- * ![1 green symbol](images/move_level_1_green.png){ width=0.5inch } expert or "1 green"
- * ![2 green symbol](images/move_level_2_green.png){ width=0.5inch } master or "2 green"
-
-If you chose Pick Pockets during character creation, you would receive
-the card and your character would be "studied" in the skill.
-
-## Increased Move Levels
-
-Later, you can go up a level in Pick Pockets. (Either by using the Study
-Under a Master move, or when you resolve a Pick Pockets flip and happen
-to get a *Critical Success card*
-See [Critical Success](#critical-success)
-)
-
-With a pencil, circle or underline the expert, or "1 green" symbol on the
-Pick Pockets card.
-
-![Marking a move levels](images/component_card_move_level_mark.png){ width=2.5inch }
-
-With Pick Pockets leveled up, any time you perform that move in the future,
-you will add an advantage card when you flip.
-
-Because the Pick Pockets card shows the "2 green" icon, you can repeat this
-process again later, which would let you add 2 advantage cards when you flip.
-
-## Decreased Move Levels
-
-But what about the "red" levels?
-
-Any PC can attempt any move that is performed by flipping Str, Dex, or
-Int -- even if the player doesn't have that move card!
-
-For any such moves, all characters start at the lowest level shown on the
-card.  This will be either the "wild" or "novice" level.
-
-For Example, every character, at any time, can attempt to hit two opponents
-in combat (via Goreography). Every character can attempt to cast a spell (via
-Fundamental Magic). But, their odds are very low.
-
-You can attempt moves even if you don't meet the requirements shown.
-
-Just as the "expert" and "master" levels cause the flip to be done with
-advantage, the "wild" and "novice" levels cause the flip to be done with
-disadvantage.
-
- * ![2 red symbol](images/move_level_2_red.png){ width=0.5inch } flip with 2 levels of disadvantage
- * ![1 red symbol](images/move_level_1_red.png){ width=0.5inch } flip with 1 level of disadvantage
-
-If you perform a "wild" level move, and you resolve that flip with a
-*Critical Success card*, you can spend 1 XP to graduate to "novice" level.
-
-If you choose to do so, take the move card and underline or circle the
-"1 red" symbol on it.
-
-
-----
-
-# Advanced and Optional Rules
-
-----
-
-# Combat in the 9-hour and 30-hour Campaigns
-
-If you are playing the One-Shot Campaign, you can skip this section. The
-Harm token rules are for the longer campaign formats.
-
-In the 3-hour campaign, the second phase is a choice between just 2 things:
-losing Stamina or taking a Wound. In longer campaigns, the choice is
-more granular.
-
-## Second Phase, "Deduct / Reduce"
-
-During the second phase of resolving a combat action, players may choose
-to take a Wound as explained before, and also a new choice:
-to turn any 3 *Might* into Harm tokens instead.
-
-For example, there are 4 ways to handle an *Might* of 7:
-
- * Lose cards from your Deckahedron until 7 exhaustion symbols are revealed
- * Take 1 Harm token and lose cards until 4 exhaustion symbols are revealed
- * Take 2 Harm tokens and lose cards until 1 exhaustion symbol is revealed
- * Take 1 Wound
-
-
-## Third Phase, "Distribute"
-
-Think of that boxing match again.  If Stamina represents dancing, ducking,
-and dodging, then Harm represents a sprain, bruise or cut from a blow that
-connects.
-These rules are also for representing mental strain that is so significant
-that the negative effects last for a while.
-
-*Might* turns into Harm tokens at *exactly* a rate of 3-to-1. You
-cannot choose a Harm token when facing an *Might* of 2.
-
-When you are instructed to take a Harm token:
-
- * **If you already have 2 Harm tokens on your Exhaustion pile**:
-    - You may
- * **Otherwise**:
-    1. Lose the top card of your Deckahedron to your *Exhaustion pile*
-    2. Place a *Harm token* on your *Exhaustion pile*
-
-> Note, you will see this "Bust-on-3" pattern repeated in many
-> of A Thousand Faces of Adventure's rules
-
-![Harm token](images/component_harm.png){ width=2.5inch }
-
-
-
-# Mini-games
-
-## Corner-matching Mini-games
-
-Some moves can be resolved by laying out Deckahedron cards into certain
-shapes such that the the Chinese Zodiac symbols on the corners match up.
-
-During corner-matching mini-games, the corner symbols of Wound and Blessing
-cards are *special*. The Blessing cards have a "dragon" symbol,
-which is *wild* -- it matches all other symbols except for the "goat"
-symbols on the Wound cards.
-The corners of Wound cards show the "goat" symbol, which does not match
-any other symbol, not even itself.
-
-### Pick Locks
-
-In the Pick Locks mini-game, the player attempting the move must draw
-three cards from the top of their Deckahedron and put them down on the
-table, face-up.
-
-They must then arrange the cards corner-to-corner in a line such that
-the touching corners show the exact same symbol.
-
-`TODO: illustration of Pick Locks mini-game`
-
-At any time during the mini-game, they may put one of the cards into
-their Exhaustion pile (Stamina is lost to mental exhaustion) and replace
-it with a new card from the top of their Deckahedron. The play may do
-this as many times as they like.
-
-While the player is attempting the mini-game, play continues at the table,
-with other players making moves and time moving forward in the world
-while the character concentrates on their lockpicking task.
-
-At any point in the mini-game, the player can abandon the attempt, and
-the result shall be interpreted as though they flipped an ✗.
-
-### Fundamental Magic
-
-`TODO: illustration of Fundamental Magic mini-game`
-
-The Fundamental Magic mini-game works the same as the Pick Locks mini-game,
-except that the player starts with 4 cards and must create a "box" shape.
-
-# The Pursuit Mini-game
+## Pursuit Procedures
 
 When dangerous foes are chasing the PCs, use these rules
 to determine what happens.
@@ -2302,6 +1432,726 @@ When a player first declares that they are going to Bravely Run Away
 | 4             | Dragons                |
 | 5             | Dragons with advantage |
 
+
+## Equipment Procedures
+
+During [character creation](mod_guide_gm.md#character-creation), you
+receive two Pack cards and take some Item cards.
+These cards represent equipment carried by your character that interacts
+with mechanisms of the game.
+
+**Daily-use amounts of money and provisions are not tracked**. It is assumed
+your character will always be able to scrounge a meal somehow.
+Unless it is relevant to the drama of the fictional situation or
+inspired by the Touchstone List, small monetary
+transactions may be abridged or assumed.
+
+There are some moves that are affected by how much *stuff*
+a character carries. These moves have a "Encumbrance Penalty" section,
+and describe how carried equipment affects their outcomes.
+
+**At any time that makes sense in the fiction, a character can drop items
+and equipment.**
+
+### Pack - Precious and regular
+
+![Pack cards](images/component_card_pack.png){ width=2.5inch }
+
+Throughout the game, your character will gain, lose, and trade equipment
+and supplies that are worth tracking. These items don't need to be specified
+until they actually get used. Instead they are tracked with anonymous Pack
+cards.
+
+White-side green cards represent "regular" Pack and black-side green cards
+represent "precious" Pack.
+Precious Pack is something that is found precious by *someone*. It may be
+something made of a rare metal like gold, or it may be simply a full
+waterskin as the PCs traverse an arid desert.
+
+If the specifics of a Pack card get concretely established in the fiction,
+and the card is not immediately spent, **the Pack card should be returned to
+the supply and a blank Item card should be taken to replace it**, with the name
+or details of the item written on it.
+
+Your character starts off with 2 Pack cards, enabling the move Good Thing
+I Brought... (see below for full reference on this move)
+
+
+## Item Damage
+
+![Item damage](images/component_card_damage.png){ width=2.5inch }
+
+Damage to items is represented as black-side red cards.
+
+The "Bust-on-3" mechanism is used to represent damage.
+
+The first two times an item is damaged, place a red card on the Item card,
+black-side-up.
+
+*If an item already has 2 red cards on it*, and it is damaged again,
+it is destroyed. Return it and the red cards to the supply.
+
+All mundane (non-magical) items can be damaged. Usually this happens
+as the result of a GM move.
+
+To repair items, see the move [Sharpen and Stitch](#sharpen-and-stitch)
+
+### Mundane Items: Armor, weapons, etc
+
+There are mundane items in A Thousand Faces of Adventure, as well as magical
+ones. This text includes rules for weapons, shields, and armour. But characters
+may have other items as well. Those other items may just be decorative or
+they may have narrative value (carrying around a small barrel of brandy may
+earn you a welcome from the thirsty dwarves you meet).
+
+<!--
+You can even create rules of your own for certain classes of item.
+See the [Extending 1kFA](#extending) chapter for hints on how
+to do that.
+-->
+
+### Weapons
+
+Weapons cards describe what the character has armed themself with. These
+cards might describe "weaponry" rather than a single item, as the Many
+Knives card demonstrates.
+
+Weapons have "power": d4, d6, or d10. This determines what die to
+roll when you roll Might. Generally players can increase
+weapon power with the [Tales of a Weapon](#tales-of-a-weapon) move.
+
+The GM should decide if the weaponry incurs any additional costs when
+calculating encumbrance penalties. Is the item particularly heavy or large?
+
+Here are the default weapons available to characters:
+
+Name             |  notes
+-----------------|--------------
+_ Sword          |
+Many Knives      | At close range, can be thrown. Maximum power is d6
+_ Bow            | Long range, not usable at melee range
+
+
+### Armour
+
+When an armour-clad character would normally take Harm or a Wound, the
+player may put the Harm or Wound token into an appropriate empty slot on
+their Armour card. This represents the character getting lucky, and their
+armour absorbing the attack instead of their body. Better armour has
+more chances to protect its wearer.
+
+![Slots](images/component_card_slots.png)
+
+The armour available to characters during character creation is the weakest
+kind. This kind of armour has 1 slot that can absorb a Harm or a Wound.
+
+When a character goes shopping, goes a-thieving, discovers treasure, or loots
+a battlefield, the GM may offer new, more useful armour with more slots drawn
+on it.
+
+The GM should take a blank card from the supply, and draw up to 3 slots on
+the card. A slot shall be designated to receive either:
+
+ * 1 Harm token
+ * or 1 Harm *or* Wound token
+
+The table should decide if the armour incurs any additional costs when
+calculating encumbrance penalties -- better armour tends to be heavier.
+Any increased encumbrance penalty should be written on the card.
+
+The player should write a descriptive name for the armour like
+"Padded" or "Chainmail" or "Full plate" and write that at the top of a card.
+The description will impact the narrative -- it's hard to sneak or swim in
+full plate armour.
+
+Here are some example armours:
+
+Suggested Name   | slots                | encumbrance modifier
+-----------------|----------------------|----------------------
+Leather Armour   | 1 Harm/Wound         |
+Padded Armour    | 2 Harm, 1 Harm/Wound | counts as 2 items
+Full Plate       | 3 Harm/Wound         | counts as 4 items
+
+
+### Shields
+
+Shields provide a way to avoid Harm and Wound tokens, but they test a
+character's Dex to do so.
+
+To make a Shield card, first the GM chooses the ✔✔✔, ✔✔, and ✅︎ effects by
+choosing 3 sequential effects from this list:
+
+ * Avoid the *x*
+ * Avoid the *x*, but choose to lose 1 Stamina or this item takes 1 damage
+ * Avoid the *x*, lose 1 Stamina
+ * Avoid the *x*, lose 1 Stamina and this item takes 1 damage
+
+The *x* can be either:
+
+ * Harm
+ * Harm or Wound
+
+Then the GM and player come up with a name for this kind of shield together,
+using the same rules as the Armour name-creation above.
+
+The fictional description of the "shield" has mechanical consequences. For
+example, the edge of steel shield could reasonably be used to attack a foe,
+so the character would have 1d4 Might with Mix It Up. But a character
+with no weapon and only leather bracers on their wrists, the character would
+be "unarmed", doing just 1 Might.
+
+Blocking Might with a shield is a *FAST* move,
+and players may not make more than one *FAST* move per turn in the spotlight.
+
+
+## Magic Item Procedures
+
+<!-- TODO remove trademarked references -->
+Magic is an element that pervades stories of fantasy. It can be obscure
+and stemming from nature like in Lord of the Rings, it can be elemental and
+allegorical like in The Wheel of Time, and it can be linguistic and
+self-aware like in The Invisibles.
+
+To avoid presuming too much about the narrative, the rules do not dictate
+the nature of magic or the "how" of magic. That's for you to decide during
+play.
+The rules provide a mechanical foundation and some optional narrative paths.
+You are invited to take this well-tested framework, play with it, and expand
+into it.
+
+Is magic woven from subtle threads that pervade the universe? Is it based
+on words of power? Is it high technology hidden in the planet's crust
+by alien benefactors? Is it copied exactly from a concept in your Touchstone
+List? You decide.
+
+The rules give you a way to have scrappy adventurers begin with magic items.
+These artifacts have 3 charges, and are rechargeable during Rest.
+Your character can eventually build themselves up in power to a point where
+they can cast magic spells without needing the items.
+
+The rules also give names for two sources of magical power, "The Living
+Light" and "The Blood-Bound". It's up to you to give these names narrative
+meaning, if you want.
+
+One thing to keep in mind is that characters may attempt any move that
+resolves with Str / Dex / Int.
+(See [Move Levels](#move-levels)
+So even if moves like Use a Magic Item or Fundamental Magic were not chosen
+at character creation or gained via Study Under a Master, any character may
+attempt them.
+
+That said, using magic invokes some of the more complicated rules.
+Players are challenged with managing and balancing
+charges, capacity, stamina, requirements, and narrative effect. This kind
+of play is ideal for players excited by complexity and the potential
+of explorable branches.
+
+#### The ONGOING tag
+
+Upon triggering the Use a Magic Item move, a character "flows magical
+energy" into the item. Then the magical effects happen.
+
+Some magic effects happen immediately.
+
+Some magic effects persist even after the flow of magical energy into
+the item has ceased. (eg, `_` of Sensation)
+
+Some magic items have the ONGOING tag, and their effects persist
+only as long as magical energy flows into the item. It is up to the
+player to declare when their character ceases the flow of magical energy.
+If the flow of magical energy continues, they are not considered *idle*
+for the purposes of the Rest and Seek Help moves.
+
+#### Charges and Capacity
+
+![Magic item with 3 charges](images/component_card_magic_item.png){ width=2.5inch }
+
+By default, magic items have capacity for 3 charges.
+An item is considered "depleted" when all its charges are used.
+The term used for a card's maximum number of charges is "capacity"
+or "charge capacity".
+
+The number of charges a magic item *currently* has is tracked by
+keeping green cards underneath it.
+
+When a magic item loses a charge, take one of the green cards
+and place it back in the supply. When there are no more green cards
+underneath it, it is *depleted* and cannot be used.
+
+ ![Capacity gauge](images/component_card_capacity.png)
+
+Charge capacity can be gained and lost. Every time it changes, players
+should mark the new capacity on the Magic Item card
+
+If the charge capacity decreases below 1, all the bonds that held
+the item together dissipate, including the bonds of matter. Return the
+card to the supply.
+
+
+## Tracking Resources
+
+ * Tracking XP
+ * Putting tokens on move cards
+ * Putting tokens on stakes / foes
+ * Putting tokens next to Deckahedrons
+ * Tracking item damage
+ * Tracking magical charges
+
+## Move Levels
+
+Some Move cards have icons on them that indicate "levels". These levels
+represent how good your character is at that skill. For example, the move
+Pick Pockets has 5 icons.
+
+![Move levels](images/component_card_move_levels.png){ width=2.5inch }
+
+These are the "move levels" for Pick Pockets.
+From left to right, these icons are called:
+
+ * ![2 red symbol](images/move_level_2_red.png){ width=0.5inch } wild or "2 red"
+ * ![1 red symbol](images/move_level_1_red.png){ width=0.5inch } novice or "1 red"
+ * ![base level](images/move_level_base_level.png){ width=0.5inch } "studied" or "base level"
+ * ![1 green symbol](images/move_level_1_green.png){ width=0.5inch } expert or "1 green"
+ * ![2 green symbol](images/move_level_2_green.png){ width=0.5inch } master or "2 green"
+
+If you chose Pick Pockets during character creation, you would receive
+the card and your character would be "studied" in the skill.
+
+## Increased Move Levels
+
+Later, you can go up a level in Pick Pockets. (Either by using the Study
+Under a Master move, or when you resolve a Pick Pockets flip and happen
+to get a *Critical Success card*
+See [Critical Success](#critical-success)
+)
+
+With a pencil, circle or underline the expert, or "1 green" symbol on the
+Pick Pockets card.
+
+![Marking a move levels](images/component_card_move_level_mark.png){ width=2.5inch }
+
+With Pick Pockets leveled up, any time you perform that move in the future,
+you will add an advantage card when you flip.
+
+Because the Pick Pockets card shows the "2 green" icon, you can repeat this
+process again later, which would let you add 2 advantage cards when you flip.
+
+## Decreased Move Levels
+
+But what about the "red" levels?
+
+Any PC can attempt any move that is performed by flipping Str, Dex, or
+Int -- even if the player doesn't have that move card!
+
+For any such moves, all characters start at the lowest level shown on the
+card.  This will be either the "wild" or "novice" level.
+
+For Example, every character, at any time, can attempt to hit two opponents
+in combat (via Goreography). Every character can attempt to cast a spell (via
+Fundamental Magic). But, their odds are very low.
+
+You can attempt moves even if you don't meet the requirements shown.
+
+Just as the "expert" and "master" levels cause the flip to be done with
+advantage, the "wild" and "novice" levels cause the flip to be done with
+disadvantage.
+
+ * ![2 red symbol](images/move_level_2_red.png){ width=0.5inch } flip with 2 levels of disadvantage
+ * ![1 red symbol](images/move_level_1_red.png){ width=0.5inch } flip with 1 level of disadvantage
+
+If you perform a "wild" level move, and you resolve that flip with a
+*Critical Success card*, you can spend 1 XP to graduate to "novice" level.
+
+If you choose to do so, take the move card and underline or circle the
+"1 red" symbol on it.
+
+
+# Move Reference
+
+In *A Thousand Faces of Adventure*, each move has an obvious context where it’s most likely to make an impact — **Dramatic Action**, **Combat**, **Pursuit**, or **Downtime**. That context hints at the part of the story where the move thrives: blades clashing, secrets unfolding, horses pounding, or quiet moments of growth.
+
+The sections that follow are divided into those four contexts to help you quickly locate the right move for the moment. But don’t mistake that structure for a set of rigid rules. Moves can and do show up outside their "home" context -- a Dramatic Action-centered move might surface in the thick of a chase, or a Combat-centered move might shape a tense negotiation.
+
+What matters is the fiction. Moves trigger when their conditions are met in the story, regardless of the state of a scene. The GM has final say, using *fictional positioning* to determine whether a move applies.
+
+
+
+## Dramatic Action-Centered Moves
+
+### Destiny Forewritten
+
+![Destiny Forewritten card](images/move_destiny_forewritten.png){ width=2.5inch }
+
+Sometimes you plan out something really great, and then you resolve
+a flip, and don't get the results you need.
+
+Invoking Destiny serves as sort of a "mulligan" in those situations, but it
+also provides a way to develop your character's backstory and personality.
+
+After a player makes a flip, and before the consequences of the flip are
+described, any player can declare, "I invoke Destiny!". It may be a player
+other than the player that flipped.
+
+After the declaration, the prior flip is ignored. (It is not *resolved*.)
+
+The declaring player then answers one of these questions about their character:
+
+ * What special preparations equipped them for this moment?
+ * What aspect of their backstory empower them against this challenge?
+ * How does their bond with another PC spur them into action?
+ * What advantage do they take of another character's personality?
+
+Based on the answer, the GM determines which attribute will be tested by
+a new flip.
+The declaring player must spend between 1-3 XP to make a new flip, with one
+level of advantage when spending 2 XP, or two levels of advantage for 3 XP.
+
+The original move is then *resolved* with the result of this new flip.
+If the declaring player was different from the player that triggered the move,
+any results like XP go to the player who played the resolving card.
+
+
+### Use a Magic Item
+
+![Use a Magic Item](images/move_use_a_magic_item.png){ width=2.5inch }
+
+When a character holds a magic item and flows energy into it, the player
+flips Int, and on any result other than ✗, the item activates and the
+effects described on the magic item card happen.
+
+Using a magic item causes it to lose a charge. This loss can be avoided
+with moves like Entreat the Blood-Bound and Channel the Living Light.
+
+Following that, results of ✅︎ and ✔✔ cause a further cost to be incurred,
+as chosen from the list by the GM or the player, respectively.
+
+**Note:** if the magic item being used is a magical weapon,
+another choice is available: "the weapon is damaged".
+
+The RECEIVE CARDS tag: when a player chooses this card during character
+creation or Study Under a Master, they also receive 1 magic item of their
+choice.
+
+
+### Entreat the Blood-Bound
+
+ ![Entreat the Blood-Bound](images/move_entreat_the_blood_bound.png){ width=2.5inch }
+
+If it has not yet been established, when a player first uses this move, it's
+a great time for the GM to ask them a question: "Who or what is the
+Blood-Bound?" <div class="note gmnote">
+
+| **GM Note:** *this is a great way to stretch your*
+| *improv muscles. Say "Yes, and..." no matter if*
+| *they identify the Blood-Bound as tiny, parasitic*
+| *insects or as monstrous, extra-dimensional dark gods.*
+
+</div>
+
+When a player chooses this card during character creation or Study Under a
+Master, they also receive the item Blade of Echoes.
+
+
+### Channel the Living Light
+
+![Channel the Living Light](images/move_channel_the_living_light.png){ width=2.5inch }
+
+If it has not yet been established, when a player first uses this move, it's
+a great time for the GM to ask them: "Who or what is the Living Light?"
+
+When a player chooses this card during character creation or Study Under a
+Master, they also receive the item Sigil of the Living Light.
+
+
+
+### Good Thing I Brought...
+
+![Good Thing I Brought card](images/move_good_thing_i_brought.png){ width=2.5inch }
+
+Adventurers are always finding themselves in tricky situations. Luckily,
+they come prepared with adventuring gear. They have been known to carry
+50 feet of rope, smelling salts, books of racy poems, sometimes even a
+3-day-old pork chop to distract hounds or hungry goblins.
+
+It's a fact. You know this and A Thousand Faces of Adventure knows this, so
+you won't be asked to keep fine-grained notes of every candle and spare
+button in your character's inventory.
+
+Reasonable daily-use items are presumed to be in your character's pack. If
+you're unsure, remember this game is a conversation, so just ask the table.
+
+But sometimes you will be in a situation where having that 50 feet of rope
+or an old pork chop would really *solve a problem* for your character.
+
+When your character reaches into their pack and produces the item that
+solves their current problem or helps them overcome a challenge, just say
+what it is and execute the "Good Thing I Brought..." move.
+
+The Pack cards represent the adventuring gear a character has brought along.
+But you do not need to declare exactly what that gear is until you're in
+a situation where you need something specific.
+
+If the "Good Thing I Brought..." move is executed and the newly "declared"
+equipment is something that can be returned to the backpack after
+use, write its name down on a blank card and exchange that card for the
+"anonymous" Pack card(s) that were the cost of "Good Thing I Brought...".
+
+If 2 Pack cards are spent, and the character ends up with one card returning
+to their backpack, future Encumberance Penalty calculations will change.
+Use the fiction to justify that. Maybe they didn't have
+*exactly* what they needed, so one piece of equipment had to be consumed
+to create the necessary tool, in a MacGuyver-esque fashion.
+
+If the equipment is something that gets consumed immediately when used,
+the 1 or 2 Pack cards just get returned back to the supply.
+
+## Combat-Centered Moves
+
+### Good Cardio
+
+![Good Cardio card](images/move_good_cardio.png){ width=2.5inch }
+
+This card makes a character an especially resilient fighter and athlete.
+
+In a combat encounter, a player will usually trigger an aggressive move like
+Mix It Up or Volley. During their turn in the spotlight, the player can also
+trigger one more move, as long as it has the *FAST* tag.
+Good Cardio is one such card, and allows the character to regain some of
+their lost Stamina points, and stay in the action longer.
+
+Good Cardio has an additional effect that passively prevents a character
+from losing Stamina in the first place. Instead of losing a point of Stamina,
+an Exhaustion token can be placed in the first "slot" of the card. If the
+character goes up *move levels* (see below), a new slot opens up for each
+level the move is increased. Only one token can be placed in a slot.
+
+### Take a Breather
+
+![Take a Breather card](images/move_take_a_breather.png){ width=2.5inch }
+
+**Taking a Breather** is a move that a character can take during combat.
+This action allows a character to regain up to 4 Stamina points.
+
+The player may use either Intelligence or Dexterity to perform the **Take a
+Breather** action.
+
+If they use Intelligence, they say how they execute a tactic or
+recognize a favourable position that lets them gather their breath
+and their wits.
+
+If they use Dexterity, they say how they maneuver into a safe position
+that offers some temporary safety.
+
+Regaining Stamina may be done either by taking cards from the
+*Exhaustion pile* and putting them into the *discard pile*,
+or by returning Exhaustion tokens to the supply.
+
+When recovering cards from the *Exhaustion pile*, the player may choose any
+cards they want, but may not flip them face-up if they are face-down.
+
+When combat or a pursuit ends, and it is appropriate for the narrative
+(e.g. when there's a scene transition and the characters reasonably have
+a few minutes to catch their breath), the players may **Take a Breather**
+using Str as a *FAST* move (ie, no GM move triggers if the result is ✗ or ✅︎).
+
+
+## Pursuit-Centered Moves
+
+### Bravely Run Away
+
+![Bravely Run Away card](images/move_bravely_run_away.png){ width=2.5inch }
+
+When players find themselves on the losing side of a battle, or want to
+avoid a daunting threat, they may choose to run away. If their characters
+are positioned in a way that their escape is possible, according to the
+established fiction, use this move.
+The players temporarily lose narrative control and the GM will say
+where the characters end up.
+
+There may also be a Stamina cost (or Stamina gain) depending on how weighed
+down the characters were by their equipment.
+
+The GM can resolve this move by:
+
+ * putting the characters somewhere completely safe
+ * putting the characters in a place where some (new or old) danger exists,
+   but is, for the moment, not directly threatening the characters
+ * spending a *Shadow point* and starting the Pursuit Mini-game
+ * spending a *Shadow point* and landing the characters in a place where
+   they must directly confront or defy a new danger
+
+
+## Downtime-Centered Moves
+
+### Sharpen and Stitch
+
+![Sharpen and Stitch card](images/move_sharpen__stitch.png){ width=2.5inch }
+
+Sharpen and Stitch is a way to repair damaged items by spending Pack cards.
+
+This move must be executed alongside the Rest move.
+
+
+### Shop / Procure
+
+![Shop / Procure card](images/move_shop__procure.png){ width=2.5inch }
+
+When the Shop / Procure move is used, the scene can be described as an
+everyday shopping trip or a thieving and bribery escapade, or anything
+else that makes sense in the narrative, so long as the mechanical
+outcome would be certain.
+
+The GM presents to the player 4 cards of any mix of items: mundane,
+magical, a special commodity established in the narrative, or even
+something purely decorative. It is ok for the GM and player to discuss
+the items beforehand to any level of detail, and it is also ok for the
+player to outright say what they want to go shopping for.
+
+The GM should be honest with the narrative, stay true to their goals and
+try to provide the kind of fun the player has signaled they want to have.
+
+The GM shouldn't present a player a card the character is unable to
+use.
+
+### Tales of a Weapon
+
+![Tales of a Weapon card](images/move_tales_of_a_weapon.png){ width=2.5inch }
+
+The GM should decide whether the weapon will incur any extra cost when
+calculating an encumbrance penalty.
+Is the item particularly heavy or large? The GM should weigh that
+cost against the weapon's other features.
+
+### Obsessive Contemplation
+
+![Obsessive Contemplation card](images/move_obsessive_contemplation.png){ width=2.5inch }
+
+When using a Precious Item that is just represented by a Pack card,
+swap the Pack card with a new blank Magic Item card and write a description
+and charge capacity on the new card.
+
+![Illustration](images/art_kstramat_bw.png)
+
+**More Power**\
+Some cards show a "power gauge" that indicates the *Might Rank* of an item.
+
+![Power gauge](images/component_card_power_gauge.png){ width=2.5inch }
+
+Weapons and Magic Items received during character creation, have a Might Rank of "1-4". This can be increased later on in the game via the moves Tales of a Weapon and Obsessive Contemplation.
+
+### Healing
+
+Throughout the game, players are asked to decide how their
+characters get hurt, how they respond to being hurt, and how they recover
+from their injuries.
+
+This is a small-scale echo of the whole story - the Hero's Journey itself.
+At the center of the Hero's Journey is a moment of pain that the hero
+must fully endure before finding relief - either through their own action or
+with the help of their friends. The Hero's Journey is a myth that teaches
+us how to take care of ourselves, and so this game holds a puzzle where the
+players to learn how to take care of their characters.
+
+
+### Rest
+
+![Rest card](images/move_rest.png){ width=2.5inch }
+
+*Resting* is an action that a character may take when they are out of combat,
+not traveling, and have several hours to devote to rest (sleeping qualifies).
+
+ * Step 1: Return all *Exhaustion* tokens to the supply
+ * Step 2: Count the *Harm* and *Wound* tokens on your *Exhaustion pile*
+ * Step 3: Keep that many cards (player chooses which ones) in your
+   *Exhaustion pile*, put the rest into your *discard pile*
+ * Step 4: Return one *Harm* token to the supply
+ * Step 5: Say who you blame for your injuries
+
+When resting, magic items that are not being used regain all charges, up
+to their charge capacity. Take green cards from the supply to represent
+the charges.
+
+You may gird all your armour, where applicable.
+Remove all Harm and Wound tokens from your armour cards and from move cards
+that represent armour effectiveness (eg, Like A Second Skin).
+
+Time devoted to *Resting* cannot also be devoted to learning skills,
+studying with a teacher, or any other action that takes mental or physical
+effort.
+
+The Harm token returned to the supply in Step 4 may come from your
+*Exhaustion pile* or from a slot on a move card (eg, Bloody But Unbowed).
+
+It is possible that the object of blame named in step 5 is the character
+themself.
+
+### Seek Help
+
+![Seek Help card](images/move_seek_help.png){ width=2.5inch }
+
+*Seeking Help* is an action that a character may take when they are in a
+peaceful environment where external resources with healing powers are
+available.
+
+Eg, if they are in a primitive camp possessing medicine men or a
+contemporary city with doctors and hospitals or a tranquil oasis infused
+with healing magic.
+
+That the healing powers are *external* is important. Seek Help is a move
+where players acknowledge their characters' limits and cannot do
+everything on their own.
+
+When you spend a day healing (not at The Hearth):
+
+ * Step 1: Describe your character's healing experience
+ * Step 1: Return all *Exhaustion* tokens to the supply
+ * Step 1: Return all *Harm* tokens to the supply
+ * Step 1: Return all *Wound* tokens to the supply
+ * Step 1: Put all the cards in your *Exhaustion pile* into your *discard pile*
+ * Step 1: For every *wound card* you have, draw one *blessing card*
+ * Step 1: Answer the question: "In what way has your PC been brought closer to forgiveness?"
+
+When you spend a day healing at The Hearth:
+
+ * Step 1: Describe your character's healing experience
+ * Step 1: Return all *Exhaustion* tokens to the supply
+ * Step 1: Return all *Harm* tokens to the supply
+ * Step 1: Return all *Wound* tokens to the supply
+ * Step 1: Return all *wound cards* tokens to the supply
+ * Step 1: Put all the cards in your *Exhaustion pile* into your *discard pile*
+ * Step 1: Answer the question: "In what way has your PC been brought closer to peace?"
+
+As with *Resting*, time spent *Seeking Help* cannot also be used in
+activities that take effort.
+
+Magic items that are not being used regain all charges, up to
+their capacity.
+
+You may gird all your armour, where applicable.
+Remove all Harm and Wound tokens from your armour cards.
+
+
+### Study Under a Master
+
+![SUaM card](images/move_study_under_a_master.png){ width=2.5inch }
+
+This move steps your character towards becoming a powerful force in
+the world.
+
+When your character is in a town (a village, city, etc. -- any safe
+place where resources and commerce present themselves), you can spend 2 XP
+to either:
+
+ * Increase the level of a move you already have
+   (See [Move Levels](#move-levels)
+ * Take a new move card from the supply
+
+If you want to take a move card that another player already has or one that
+was scribbled over in a previous campaign, or just has been ruined by spilled
+beer, you can copy the text onto a new card.
+
+
+
 # Player vs Player
 
 This game is a tool for telling stories about a group of characters that
@@ -2359,58 +2209,48 @@ Just as in PvP combat, when one player tries to:
 Secondary effects of cards are not resolved, and the *defender* gets to say what the result was.
 
 
-# 30-hour Campaigns: Green rings
 
-If you are playing the One-Shot Campaign or 9-hour Campaign, you can skip
-this section.
+# Corner-matching Mini-games
 
-## Green rings
+Some moves can be resolved by laying out Deckahedron cards into certain
+shapes such that the the Chinese Zodiac symbols on the corners match up.
 
-<!-- Summary -->
-At the beginning of a 30-hour campaign, some move cards will be put into
-envelopes. When you *Study Under a Master*, you will only be able to choose
-the enveloped cards if you can arrange your current move cards to form the
-number of rings shown on the envelope.
-<!-- /Summary -->
+During corner-matching mini-games, the corner symbols of Wound and Blessing
+cards are *special*. The Blessing cards have a "dragon" symbol,
+which is *wild* -- it matches all other symbols except for the "goat"
+symbols on the Wound cards.
+The corners of Wound cards show the "goat" symbol, which does not match
+any other symbol, not even itself.
 
-`TODO: this bit should go in the GM Guide`
+## Pick Locks
 
-Place the following cards inside the envelope marked with one green ring:
+In the Pick Locks mini-game, the player attempting the move must draw
+three cards from the top of their Deckahedron and put them down on the
+table, face-up.
 
- * Mystic Breathwork
- * Fury
- * Slide
- * Not On My Turf
- * Void Transfusion
+They must then arrange the cards corner-to-corner in a line such that
+the touching corners show the exact same symbol.
 
-Then, place the following cards inside the envelope marked with two green
-rings:
+`TODO: illustration of Pick Locks mini-game`
 
- * Goreography
- * Derring-Do
- * Fundamental Magic
- * Breach the Dam
+At any time during the mini-game, they may put one of the cards into
+their Exhaustion pile (Stamina is lost to mental exhaustion) and replace
+it with a new card from the top of their Deckahedron. The play may do
+this as many times as they like.
 
-The moves inside these envelopes cannot be learned during *Study Under a
-Master* until the character has already built up some skill.
+While the player is attempting the mini-game, play continues at the table,
+with other players making moves and time moving forward in the world
+while the character concentrates on their lockpicking task.
 
-Take a look through the move cards and see that there are partial rings
-printed on them - either in the corners or on the sides.
+At any point in the mini-game, the player can abandon the attempt, and
+the result shall be interpreted as though they flipped an ✗.
 
-When you receive a new move card, arrange your own move cards in such a
-way that the most rings are completed. If your cards can arrange to show
-1 ring, you may remove a card from the single green ring envelope and put
-it in the supply.  If you can arrange them to show 2 rings, you may remove
-a card from either envelope and put it in the supply.
+## Fundamental Magic
 
-![ring arrangements](images/ring_arrangements.png){ width=2.5inch }
+`TODO: illustration of Fundamental Magic mini-game`
 
-For example, if your card arrangement had the cards *Pick Pockets* and
-*Not On My Turf* next to each other, you could complete a ring.
-If you didn't have the *Not On My Turf* card, but instead had the *Fury*
-card, you could arrange it next to *Pick Pockets* to complete a ring.
-
-You do not have to keep your cards in this arrangement while you play.
+The Fundamental Magic mini-game works the same as the Pick Locks mini-game,
+except that the player starts with 4 cards and must create a "box" shape.
 
 
 
@@ -2419,14 +2259,6 @@ You do not have to keep your cards in this arrangement while you play.
 # Appendices
 
 ----
-
-# Diceless Play
-
-Rolling dice is a fun, tactile experience, but not every table has the dice
-that A Thousand Faces of Adventure asks for.
-In that case, it is possible to play without owning the physical dice.
-Each Deckahedron card has symbols that can be used in their place.
-
 
 # Glossary
 

@@ -19,7 +19,7 @@
    enable-background="new 0 0 216 216"
    xml:space="preserve"
    id="svg2"
-   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
    sodipodi:docname="greencard_front.svg"><metadata
      id="metadata496"><rdf:RDF><cc:Work
          rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
@@ -78,18 +78,18 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:window-width="1920"
-     inkscape:window-height="1025"
+     inkscape:window-height="1016"
      id="namedview492"
      showgrid="false"
      inkscape:snap-bbox="true"
      inkscape:snap-bbox-midpoints="true"
-     inkscape:zoom="1.2776918"
-     inkscape:cx="61.714144"
-     inkscape:cy="-43.004943"
+     inkscape:zoom="3.7152776"
+     inkscape:cx="115.2"
+     inkscape:cy="115.2"
      inkscape:window-x="0"
      inkscape:window-y="27"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer5"
+     inkscape:current-layer="layer1"
      inkscape:object-nodes="true"
      inkscape:snap-nodes="false"
      inkscape:snap-object-midpoints="true"
@@ -145,7 +145,28 @@
          transform="scale(0.93750002,0.93750002)"
          d="m -96.400391,107.23438 0,11.89648 -11.894529,0 0,4.95898 11.894529,0 0,11.89454 4.960938,0 0,-11.89454 11.894531,0 0,-4.95898 -11.894531,0 0,-11.89648 z"
          style="display:inline;opacity:1;fill:url(#linearGradient891);fill-opacity:1;stroke:none;stroke-width:3.5041678;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-         inkscape:connector-curvature="0" /></g></g><g
+         inkscape:connector-curvature="0" /></g><g
+       id="g1978"><circle
+         r="31.811581"
+         cy="114.75066"
+         cx="101.25053"
+         id="path1423"
+         style="opacity:1;fill:none;fill-opacity:0.65196078;stroke:#ffffff;stroke-width:1.75781252;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.75980386" /><circle
+         style="opacity:1;fill:none;fill-opacity:0.65196078;stroke:#ffffff;stroke-width:3.89019537;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.7598038"
+         id="circle1968"
+         cx="101.25053"
+         cy="114.75066"
+         r="38.058819" /><circle
+         r="57.957428"
+         cy="114.75066"
+         cx="101.25053"
+         id="circle1970"
+         style="opacity:1;fill:none;fill-opacity:0.65196078;stroke:#ffffff;stroke-width:7.03125007;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.7598038" /><circle
+         style="opacity:1;fill:none;fill-opacity:0.65196078;stroke:#ffffff;stroke-width:3.51562503;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.7598038"
+         id="circle1972"
+         cx="101.25053"
+         cy="114.75066"
+         r="82.614357" /></g></g><g
      inkscape:groupmode="layer"
      id="layer7"
      inkscape:label="gem"
@@ -273,5 +294,6 @@
      x="12.547846"
      y="64.041199"
      style="font-size:3.57441831px;line-height:1.25">@RavenmoreArt</tspan></text>
+
 
 </g></svg>
