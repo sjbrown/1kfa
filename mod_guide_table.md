@@ -595,7 +595,7 @@ that energy leads.
 
 # Universe Creation
 
-##Formatting Note
+## Formatting Note
 
 Throughout this section, you’ll see some text presented as blockquotes.
 
@@ -612,6 +612,26 @@ Before you begin character creation or choose a setting, decide how long your jo
 - **30-Hour Campaign** – A longer story arc, played over multiple sessions.
 
 This choice will affect how quickly characters grow and how tightly scenes are structured. Details of how they differ are presented in the GM Guide.
+
+A Thousand Faces of Adventure is not an "indefinite length" system. A campaign
+will have a beginning, middle, and end, and is designed to tell a particular
+"shape" of story, known as *The Hero's Journey*.
+
+<div class="note">
+
+The study of "hero myth" stories was popularized by author Joseph Campbell
+in his famous book **The Hero with a Thousand Faces**.
+
+</div>
+
+*The Hero's Journey* is a skeleton upon which many successful and popular
+movies and books are arranged: Star Wars, Lord of the Rings, Slumdog
+Millionaire, Die Hard, Beowulf, Lady Bird, the list goes on.
+The rules of A Thousand Faces of Adventure aim to pull the table's
+improvised narrative into the Hero's Journey shape -- the rules are incentives
+to imbue the narrative with the epic and meaningful feelings of these
+popular stories.
+
 
 ---
 

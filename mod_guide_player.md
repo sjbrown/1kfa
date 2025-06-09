@@ -1516,12 +1516,10 @@ Weapons cards describe what the character has armed themself with. These
 cards might describe "weaponry" rather than a single item, as the Many
 Knives card demonstrates.
 
-Weapons have "power": d4, d6, or d10. This determines what die to
-roll when you roll Might. Generally players can increase
-weapon power with the [Tales of a Weapon](#tales-of-a-weapon) move.
-
-The GM should decide if the weaponry incurs any additional costs when
-calculating encumbrance penalties. Is the item particularly heavy or large?
+Weapons have a Might value.  When a character attacks, the Might of the
+attack comes from the Might value of the weapon they used.
+Generally players can increase the Might of their weapons with the
+[Tales of a Weapon](#tales-of-a-weapon) move.
 
 Here are the default weapons available to characters:
 
@@ -1537,8 +1535,8 @@ _ Bow            | Long range, not usable at melee range
 When an armour-clad character would normally take Harm or a Wound, the
 player may put the Harm or Wound token into an appropriate empty slot on
 their Armour card. This represents the character getting lucky, and their
-armour absorbing the attack instead of their body. Better armour has
-more chances to protect its wearer.
+armour absorbing some portion of the attack instead of their body.
+Better armour has more chances to protect its wearer.
 
 ![Slots](images/component_card_slots.png)
 
@@ -1561,8 +1559,8 @@ Any increased encumbrance penalty should be written on the card.
 
 The player should write a descriptive name for the armour like
 "Padded" or "Chainmail" or "Full plate" and write that at the top of a card.
-The description will impact the narrative -- it's hard to sneak or swim in
-full plate armour.
+The description will impact Fictional Positioning -- it's hard to sneak or
+swim in full plate armour.
 
 Here are some example armours:
 
@@ -1596,11 +1594,11 @@ using the same rules as the Armour name-creation above.
 
 The fictional description of the "shield" has mechanical consequences. For
 example, the edge of steel shield could reasonably be used to attack a foe,
-so the character would have 1d4 Might with Mix It Up. But a character
+so the character would have 1-4 Might with Mix It Up. But a character
 with no weapon and only leather bracers on their wrists, the character would
-be "unarmed", doing just 1 Might.
+be "unarmed", dealing just 1 Might.
 
-Blocking Might with a shield is a *FAST* move,
+Blocking an attack with a shield is a *FAST* move,
 and players may not make more than one *FAST* move per turn in the spotlight.
 
 
@@ -1613,7 +1611,7 @@ allegorical like in The Wheel of Time, and it can be linguistic and
 self-aware like in The Invisibles.
 
 To avoid presuming too much about the narrative, the rules do not dictate
-the nature of magic or the "how" of magic. That's for you to decide during
+the nature of magic or the "how" of magic. That's for the table to decide during
 play.
 The rules provide a mechanical foundation and some optional narrative paths.
 You are invited to take this well-tested framework, play with it, and expand
@@ -1621,7 +1619,7 @@ into it.
 
 Is magic woven from subtle threads that pervade the universe? Is it based
 on words of power? Is it high technology hidden in the planet's crust
-by alien benefactors? Is it copied exactly from a concept in your Touchstone
+by alien benefactors? Is it lifted from a concept in your Touchstone
 List? You decide.
 
 The rules give you a way to have scrappy adventurers begin with magic items.
@@ -1654,11 +1652,14 @@ energy" into the item. Then the magical effects happen.
 Some magic effects happen immediately.
 
 Some magic effects persist even after the flow of magical energy into
-the item has ceased. (eg, `_` of Sensation)
+the item has ceased. (eg, ... of Sensation)
 
 Some magic items have the ONGOING tag, and their effects persist
 only as long as magical energy flows into the item. It is up to the
 player to declare when their character ceases the flow of magical energy.
+When used, the player should place a token on the item card, to be a
+reminder that it's effects are ongoing. When the player chooses to end
+the effects, that token should be removed.
 If the flow of magical energy continues, they are not considered *idle*
 for the purposes of the Rest and Seek Help moves.
 
@@ -2022,6 +2023,7 @@ calculating an encumbrance penalty.
 Is the item particularly heavy or large? The GM should weigh that
 cost against the weapon's other features.
 
+
 ### Obsessive Contemplation
 
 ![Obsessive Contemplation card](images/move_obsessive_contemplation.png){ width=2.5inch }
@@ -2117,7 +2119,7 @@ When you spend a day healing at The Hearth:
  * Step 1: Return all *Exhaustion* tokens to the supply
  * Step 1: Return all *Harm* tokens to the supply
  * Step 1: Return all *Wound* tokens to the supply
- * Step 1: Return all *wound cards* tokens to the supply
+ * Step 1: Return all *wound cards* to the supply
  * Step 1: Put all the cards in your *Exhaustion pile* into your *discard pile*
  * Step 1: Answer the question: "In what way has your PC been brought closer to peace?"
 
@@ -2262,9 +2264,6 @@ except that the player starts with 4 cards and must create a "box" shape.
 
 # Glossary
 
-1d4, 1d6, 1d10
-: This is notation that means "one four-sided die", "one six-sided die", etc.
-
 Might
 : the number representing how powerful an attack is
 
@@ -2275,19 +2274,20 @@ depleted
 : the state of a magic item without any remaining charges
 
 halve
-: When you roll dice and *halve* the value, divide by 2 and then round up
+: When you *halve* a value, divide by 2 and then round up
 to the nearest whole number. 4 becomes 2, 3 becomes 2, 2 becomes 1, etc.
 
 idle
-: A magic item is idle only if magical energy is no longer flowing through it
+: A magic item is idle only if magical energy is no longer flowing through it.
+A token should be placed on a magic item card to indicate when magical energy
+is flowing through it.
 
 melee
-: When the details of the fiction put two combatants close enough to each
+: When Fictional Positioning puts two combatants close enough to each
 other such that their handheld weapons might connect
 
 More Power
-: Permanently changing the kind of dice that are rolled when certain Item
-cards are used
+: Permanently changing the Might of certain Item cards
 
 NPC
 : Non-Player Character (a character controlled by the GM)
@@ -2296,7 +2296,7 @@ PC
 : Player Character (a character controlled by a non-GM player)
 
 ranged (or "at range")
-: When the details of the fiction put two combatants far enough apart that
+: When Fictional Positioning puts two combatants far enough apart that
 their handheld weapons could not connect
 
 session
@@ -2304,7 +2304,7 @@ session
 Roughly 3 hours
 
 the supply
-: The area on the table where all the cards and tokens are kept
+: The area on the table where all the cards and tokens are kept when not in use
 
 town
 : Any place that offers food, shelter, exchange of goods, and the company
