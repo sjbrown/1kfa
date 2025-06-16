@@ -500,8 +500,9 @@ When in doubt: step forward. Speak. Choose. Play.
 
 Ludic Listening is attentively observing player behavior to determine
 what kinds of experiences, emotions, and story rhythms resonate with your
-group in real time. It’s not about reading minds or surveying preferences
-in advance -- it's about learning through play.
+group in real time. It's not a mysterious talent only few are born with, and
+it's not a dry post-session survey. It's applying straightforward, specific
+attention during play.
 
 *Ludic* is Latin for "of or relating to play." Ludic Listening means
 paying attention to how other players play -- and letting that shape how
@@ -515,12 +516,19 @@ Players signal their preferences in many ways:
    many guards are posted?”)
  * What they zoom in on (NPC relationships? Environmental detail?
    Item mechanics?)
- * What makes them lean forward, laugh, or get quiet
+ * Body language: What makes them lean forward, laugh, or get quiet
  * Whether they narrate boldly or hesitantly
  * Whether they seem to love solving puzzles, optimizing cards, roleplaying
    emotionally, or just throwing chaos into the mix
+ * How do they interact with the game's resources?
+   * Do they hoard XP tokens or spend freely?
+   * Do they get anxious when their Exhaustion pile grows?
+   * Which cards to they seek to add to their character? Move cards? Item cards?
 
-None of these are right or wrong. The key is noticing.
+If you take a moment every now and then to notice one or two things listed
+above, then ask yourself, "what does that mean about what they want from this
+game?", then you're doing Ludic Listening. The key is just taking a moment
+to apply some attention.
 
 ### How to Use It
 
