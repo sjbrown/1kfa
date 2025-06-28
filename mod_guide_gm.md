@@ -169,9 +169,11 @@ of the setting should regularly confront the characters.
 
 ---
 
-# Toolbox
+# PART 1: TOOLBOX
 
-## Lift From Touchstones
+---
+
+# Lift From Touchstones
 
 One of the first things your group will do when you begin a campaign is
 create a universe -- the fictional setting in which the PCs will be
@@ -202,14 +204,47 @@ stakes of their decisions.
 Give the players inspiring material to help them come up with answers when
 you ask them questions.
 
-## Apply Authority
-### Call for flips
-### Transition Scenes and Interludes
-### Break ties
+# Apply Authority
+## Call for flips
+## Transition Scenes and Interludes
+## Break ties
 
-## Pre-Session Prep
+# Pre-Session Prep
 
-## GM Moves
+The preparation a GM does ahead of a new session is a key tool in a GM's belt.
+
+Between sessions, and *before* your next session starts, run through the
+events of the previous session in your head. Use a Ludic Listening perspective
+-- what signals were players sending last session?.
+What kind of fun did each player seem to seek out or respond to? Was a
+player particularly keen to create backstory, to get into combat, to ask
+a lot of questions about how the world works? Can you think of things to
+go into the next session to provide that kind of fun?
+
+Think about the plot and how you might get your next couple *Journey points*.
+Do you think the characters will make certain decisions? You might imagine 2
+or 3 key decisions the party will be confronted with. For every fork in the
+road, try to imagine how the world and NPCs will respond when the characters
+choose either branch.
+
+That's important. Prepare for *either* case.
+
+There is no *correct* answer for the PCs. Never punish a player for
+making a choice you didn't expect.
+
+Being prepared is different than having a plan. No game ever goes according
+to a plan.
+
+The purpose of preparation is to use your imagination to assemble a cabinet
+of narrative spices. At the beginning, you won't know if you're baking a pie
+or a casserole. You don't even get to see the recipe upfront, it
+is slowly revealed to you as each ingredient is added to the bowl.
+Have some cinnamon and sugar ready, but also have some salt and chili powder.
+
+Wait until you play to find out the details of what happens.
+
+
+# GM Moves
 
 Often the players will move the story forward by having their characters
 talk and do actions that are certain (you don't call for flips unless actions
@@ -237,7 +272,6 @@ and make decisions:
  * Ask players to reveal a card from their Deckahedron (this doesn't count
    as a flip, this is just the GM using randomness to help make a decision)
  * Put on some music
- * Use an improv game
 
 Try to keep up the excitement and pace of play with your GM moves, but also
 know that it's ok to invest a little in making them significant and to pause
@@ -249,7 +283,7 @@ on this list. That's ok, creating honest fictional responses sometimes
 demands it. For example, "deal damage" is a move, but other moves may include
 damage as well.
 
-### A GM move is not restricted to the player move that caused it
+## A GM move is not restricted to the player move that caused it
 
 Understand that when a player resolves a flip with ✗, that doesn't always
 mean that the thing they were attempting fails.
@@ -298,7 +332,7 @@ for your table.
 Always be on the lookout for signals from the players for the kind of fun
 they want to have.
 
-### Escalate the Danger
+## Escalate the Danger
 
 The fictional world is full of danger. Adventurers are constantly being
 surprised by what's around the next corner or the thing that has been
@@ -310,19 +344,19 @@ The location itself can produce danger. Are the PCs on a sinking ship, or
 a crumbling tomb? Announce that the deck they're on floods, or that the
 passage that led them in is now blocked by tons of rubble.
 
-### Reveal an unwelcome truth
+## Reveal an unwelcome truth
 
 An unwelcome truth is a fact the players wish wasn't true: that the room's
 been trapped, maybe, or that the helpful goblin is actually a spy. Reveal
 to the players just how much trouble they're in.
 
-### Show signs of an approaching threat
+## Show signs of an approaching threat
 
 This is one of your most versatile moves. "Threat" means anything bad
 that's on the way. With this move, you just show them that something's
 going to happen unless they do something about it.
 
-### Deal damage
+## Deal damage
 
 When you deal damage, choose one source of damage that's fictionally
 threatening a character and apply it. In combat with a lizard man?
@@ -335,7 +369,7 @@ never need to touch the dice.
 At other times, the amount of damage might be determined by Shadow Points.
 See [Using Shadow Points](#using-shadow-points).
 
-### Use up their resources
+## Use up their resources
 
 Surviving in dangerous places often comes down to supplies. With this
 move, something happens to use up some resource: weapons, armor, magical
@@ -359,7 +393,7 @@ in front of a player:
 Note, **a GM cannot take XP from a player**. Use of XP should always be
 a player choice.
 
-### Turn Their Move Back On Them
+## Turn Their Move Back On Them
 
 Think about the benefits a move might grant a character and turn them around
 in a negative way. Alternately, grant the same advantage to someone who has
@@ -368,7 +402,7 @@ it out for the characters.
 If Ivy has learned of Duke Horst's men approaching from the east, maybe a
 scout has spotted her, too.
 
-### Separate Them
+## Separate Them
 
 There are few things worse than being in the middle of a raging battle with
 blood-thirsty hawkhounds on all sides -- one of those things is being in the
@@ -378,7 +412,7 @@ Separating the characters can mean anything from being pushed apart in the
 heat of battle to being teleported to the far end of the dungeon. Whatever
 way it occurs, it's bound to cause problems.
 
-### Give an opportunity that fits a player's cards or character's background
+## Give an opportunity that fits a player's cards or character's background
 
 Every character has unique move cards for skills that they shine at, or has a
 fictional backstory that can overcome social obstacles or tests of knowledge.
@@ -394,14 +428,14 @@ Traps, ambushes, and locked doors are great examples.
 Need some Derring-Do to avoid giant clock-tower gears?
 Maybe proof of religious or guild affiliation would confer a backstage pass?
 
-### Show a downside to their appearance, reputation, or equipment
+## Show a downside to their appearance, reputation, or equipment
 
 Just as every character shines, they all have their unique weaknesses too. Do
 orcs have a special thirst for elven blood? Is an ongoing flow of magic
 disturbing dangerous forces? The torch that lights the way also draws
 attention from eyes in the dark.
 
-### Offer an opportunity, with or without cost
+## Offer an opportunity, with or without cost
 
 Show them something they want: riches, power, glory. If you want, you can
 associate some cost with it too, of course.
@@ -412,7 +446,7 @@ a solid fictional thing and say, "Helferth's blessings still hang around the
 shattered altar. It's a safe area to rest or plan, but the chanting from the
 ritual chamber is getting louder. What do you do?"
 
-### Tell the requirements or consequences and ask
+## Tell the requirements or consequences and ask
 
 "Ok, everyone flees from the hammer-camels, heading towards the water, but
 let me ask this first: Samwise is wearing plate armour. If he leaves it
@@ -433,21 +467,7 @@ gears, you're going to spend a *Shadow point* to increase the difficulty.
 
 
 
-## Journey Points
-
-When you have time in the spotlight, and the set-up has been established,
-take the opportunity to earn a *Journey point* by taking the plot to another
-milestone in the Hero's Journey.
-
-Look to the [Campaigns section](#campaigns) and
-decide which milestone the current fictional situation is well set-up for.
-
-Remember that the players don't have to bite on every hook. Don't fight it
-when things to go sideways. You can always skip it or try again.
-
-## Shadow Points
-
-## Move the spotlight
+# Move the spotlight
 
 The table's locus of attention is called "the spotlight".
 Participants tend to talk one-at-a-time, while all others wait in
@@ -484,7 +504,7 @@ Move the spotlight fairly around the table -- make sure each player feels like
 they get to contribute evenly with the others.
 
 
-## Ask Questions
+# Ask Questions
 
 A Thousand Faces of Adventure is a conversation. The GM is not the only
 storyteller at the table. **Ask the players questions**
@@ -527,7 +547,7 @@ Use their answer to describe the next scene or introduce the next challenge.
 | Change          | Which old friend or adversary is the first to greet you?
 
 
-### Helping Unsure Players
+## Helping Unsure Players
 
 Sometimes when you ask a player a question, they will simply respond
 "I don't know". This can be a signal that the player isn't having fun, and
@@ -558,7 +578,7 @@ moves).
 Use this as an opportunity to take feedback as well. Have you made the
 situation *clear*? It's ok to have a conversation about the conversation.
 
-## Hooks
+# Hooks
 
 Here are some things to think about to help you invent a hook:
 
@@ -586,9 +606,9 @@ Here are some things to think about to help you invent a hook:
     - How does the incursion of a dreamworld manifest in reality?
 
 
-## Modes of Play
+# Modes of Play
 
-### Dramatic Action
+## Dramatic Action
 
 This game has 2 main types of Dramatic Action, "downtime" and "adventure".
 The game transitions from downtime to adventure and back again to
@@ -612,7 +632,7 @@ Each transition gives the GM a lot of opportunity to shape the narrative,
 so when possible, these transitions should be exploited to earn
 a *Journey point*.
 
-### Downtime
+## Downtime
 
 If the characters are not in a town, the moves available during
 downtime are:
@@ -653,7 +673,7 @@ on the second day -- in that case, narrative consequences should be honestly
 described. What opportunity has been forever lost? What did the evil forces
 accomplish because the heroes lingered?
 
-### Adventure
+## Adventure
 
 The adventure activities are where the PCs take risks and get
 into conflicts. To get out of their literal comfort zone, they must have
@@ -665,23 +685,467 @@ transition from downtime to adventure happens, choose Fateful Moments
 using the procedure [described above](#choose-fateful-moments).
 (If they still had a Fateful Moment, the new Fateful Moment replaces the old)
 
-### Combat Interludes
-### Pursuit Interludes
+## Combat Interludes
+
+`TODO`
+
+## Pursuit Interludes
+
+`TODO`
+
+# Journey Points
+
+When you have time in the spotlight, and the set-up has been established,
+take the opportunity to earn a *Journey point* by taking the plot to another
+milestone in the Hero's Journey.
+
+Look to the [Campaigns section](#campaigns) and
+decide which milestone the current fictional situation is well set-up for.
+
+Remember that the players don't have to bite on every hook. Don't fight it
+when things to go sideways. You can always skip it or try again.
+
+# Shadow Points
+
+`TODO`
+
+---
+
+# PART 2: PROCEDURES
+
+---
+
+
+# Gather Around The Hearth
+
+This is a game where the players play together on the same team.
+
+Before the game begins, establish for *every* PC, what makes them feel most
+at home, and how the characters already know each other.
+
+Go around the table and ask:
+
+> What makes your character feel most at home, or what activity do they
+> find the most comfort or competence in?
+
+Write down the answers.
+
+Then, ask the group to choose by consensus one of these things that they all
+have in common, and ask them to describe why this common thing bonds them
+together and why it makes them comrades that would risk their lives for
+each other.
+
+ * Specific People
+ * Food
+ * Song
+ * Environmental feature
+ * Ritual or festival
+ * Group activity
+
+> This is a game where you all play together on the same team.
+>
+> So, let's bring all these characters together. We're going to decide on
+> something that exists in the world of our Touchstone List that all of
+> these characters value. They value it so much that they are going to
+> team up to defend it - maybe even with their lives.
+>
+> We will call this thing "The Hearth".
+>
+> The Hearth can be a specific person or people. Maybe each character
+> shares a friendly uncle?
+> The Hearth can be food. Do all these characters depend on the fruit
+> of the quartzberry tree?
+> The Hearth can be a song. Is the valley home of these characters always
+> humming with the melodies of the wood elves?
+> The Hearth can be an environmental feature. Does the village home of
+> all these characters depend on the limestone spring for water?
+> The Hearth can be a ritual or festival. On the equinox, must every
+> tribe send a representative to seal the portal to the netherworld?
+> The Hearth can be a group activity. No warrior may abandon the hunt
+> until the beast is caught. Nor may they abandon each other.
+>
+> Those are some examples, but the choice is up to you. What will be
+> The Hearth of this band of adventurers?
+
+This answer will be known as The Hearth.  Write it down on the same sheet
+as the Touchstone List and label it "The Hearth".
+
+Next, go around the table again and ask:
+
+> Briefly, why would your character risk their life for The Hearth?
+
+Write down the answers.
+
+An important aspect of The Hearth is that it must be something that the
+characters can be separated from. When the players are deciding on The
+Hearth, keep this in mind. You will soon need to find an opportunity in
+the narrative to cause the hearth to be broken, forgotten, moved somewhere
+else, corrupted, or otherwise threatened.
+
+The Hearth is necessary, with the Seek Help move, to completely heal from
+wounds.
+
+When the party crosses the first threshold, The Hearth will be made
+inaccessible, and therefore the characters won't be able to fully heal.
+It will be made available again when the second threshold is crossed.
+For details on thresholds, see the [Campaign section](#campaigns).
+
+Use what the players describe to get your first *Journey point*,
+by starting the story out in a place of normalcy, vitality, and comfort.
+Remember, it doesn't have to be a Hobbit hole. Characters might be most at
+home in the middle of a bloody battle.
+
+
+<!--
+### GM Prompt
+
+Similar to the "Choose Fateful Moments" process, the players will now help the
+GM create the first (maybe the *primary*) plot hook in the story.
+
+The players collectively decide on two of the following plot hooks, and the
+GM will decide which one of the two they want to focus on at the beginning
+of the campaign.
+
+ * Capture, obstruct, prevent
+ * Chase or race
+ * Rescue or regain
+ * Reorder, rearrange, fortify
+ * Forbidden act
+
+Look to [Hooks](#hooks) for more details and
+inspiration on each one of these bullets.
+
+The GM does not have to tell the players which of the two was chosen.
+Have the players signaled that they want to be surprised by how the
+plot unfolds?
+Do the players need help getting their characters on the same page?
+The answers will help the GM decide whether to disclose the chosen hook.
+-->
+
+## Paint the Opening Image
+
+Now that the table has established the initial details, it's time to begin.
+
+Shuffle the blessing cards and place them face down in a deck.
+Shuffle the wound cards and place them face down in a deck.
+Put a wound token next to the wound deck so you can tell the difference
+between the wound and blessing decks.
+
+There are many ways to start the narration, so check out the
+[examples](#show-dont-tell) to see some.
+
+Players will probably have a couple questions on their mind when the game
+begins:
+
+ * Where am I?
+ * Where can I go?
+ * Who else is here that I can interact with?
+ * How do I start using my special move cards?
+
+Asking the players questions is a tool that's *always* available to the GM.
+Might establishing more details about the world spark some plot ideas?
+Go around the table and start asking the players for a detail about
+their character or their role in the world of the Touchstone List.
+
+One classic way is to start like some movies start, with an establishing
+shot that gives us a sense of setting. You could narrate a typical
+day-in-the-life scene of NPCs. Or maybe start with the atypical, and narrate
+a scene of trouble brewing.
+
+Another way is to zoom in. Start narrating from a bird's eye view of the
+continent, zoom in to a specific region, then to a city or town, then to a
+neighborhood, then to a building and ending when you're in the room with
+the player's characters.
+
+Everybody at the table has seen movies before, you can use that fact to talk
+about "the camera". You can use words like "pan" and "fade in", and everyone
+will naturally get it.
+
+End your initial narration by confronting them with a problem and asking
+"What do you do?"
+
+
+# Scenes and Stakes
+
+In storytelling - whether in novels or film - scenes are the building blocks
+of the narrative. Each scene presents a specific situation where
+protagonists want something, face opposition, and either succeed, fail, or
+pivot toward a new goal.
+Stakes are the assets (physical, social or informational) that will be won or
+lost as the scene progresses. Stakes are central to scenes: they define what’s
+on the line and give the events emotional weight.
+
+The following procedures translate those narrative principles into a
+collaborative, mechanical structure, helping the table build a dynamic story
+together.
+
+Scenes form around a shared dramatic question: What do the characters want,
+and what might happen if they get it - or don’t?
+
+Winning or losing stakes always shifts the story forward. They're
+not abstract goals - they’re tangible, achievable objectives like "secure the
+alliance" or "find the back door into the castle."
+Winning or losing the stakes determines how the next chapter will begin for
+the protagonists - whether they will meet that chapter open-eyed and
+prepared, or be dragged into its pages by cruel fate.
+
+As you create and play through scenes, remember: every scene matters, risks
+should feel real, and both triumphs and failures carry story weight.
+Everyone at the table is co-authoring a plot full of tension, consequence, and change.
+
+
+## Components for a scene
+
+ * The scene page
+   * Title
+   * primary ✔ progress bar
+   * index cards ready for floating stakes
+   * skull progress bar
+   * (optional) notes
+ * Names of the stakes
+ * ✔ tokens
+ * shadow ✓ tokens
+ * GM Move deck
+
+The progress bars track rising and falling tension. Success earns
+narrative control and resolution; failure introduces complications, twists,
+and setbacks.
+
+The GM Move Deck acts as a tool for escalating drama, injecting new
+developments, or adding pressure when things go wrong - mirroring the kind of
+beats you'd see in a screenplay’s midpoint reversal or at a novel’s crisis.
+
+
+## Procedures for a scene
+
+1. A "scene" is created and described by using the Narrative Authority Waterfall to
+answer the following questions:
+
+ * What do the characters need to advance the story?
+ * Where is an interesting location of the setting to pursue this need?
+ * What content from the Touchstone List is present here?
+ * What significant set pieces are in front of the characters?
+ * What obstacles (if any) are blocking the obvious routes?
+ * Besides the characters, who else is present?
+ * What details of this location are obvious and notable to the characters?
+ * What is the ambiance? Which environmental subtleties might the characters notice? Music? Smells?
+
+All questions must be answered at the beginning of *each* new scene.
+Additional questions and rules for creating scenes will be found in the Campaign
+Guide for the specific chapter the story is in.
+Those sections will inform:
+
+ * The size of the primary ✔ progress bar
+ * The size of the skull progress bar
+ * What an appropriate primary "stake" would be
+
+When all the questions are answered, the table should share an
+understanding of where the PCs are situated, and players will start
+forming ideas on how to contribute to the upcoming Dramatic Action.
+
+Create a title for this scene using the information you now have from answering
+the questions above.
+
+Create the "scene page" from a blank sheet of paper, write the scene's
+title at the top of the page.  Then draw the primary ✔ progress bar and the skull
+progress bar.
+
+Shuffle the GM Move Deck just before beginning a scene. Typically this deck has
+thirteen cards, but its composition can be modified by chapter-specific rules.
+Check the Campaign Guide if any modification is necessary.
+
+2. One "stake" is attached to the primary ✔ progress bar
+
+To ensure a focused and impactful scene, a Primary Stake is defined.
+The Primary Stake is the central goal the party aims to achieve within
+that scene. Think of it as the driving question: "What must the heroes
+accomplish *here* to progress on their quest?"
+
+ * Information
+   * eg, learning the villain's plans
+ * A McGuffin / a tool / a key
+   * eg, components for a magic ritual must be gathered
+ * An ally / an alliance
+   * eg, rescuing someone from a trap to earn their loyalty
+ * Neutralization of a threat
+   * eg, sabotaging the enemy's war machines
+ * Access to a location or path
+   * eg, navigating through a treacherous swamp
+ * Reputation or social status change
+   * eg, being initiated into a secret organization
+
+Follow these steps to set the scene's Primary Stake:
+
+ * Consult the list of categories and suggestions above
+ * Consult the chapter-dependent rules
+ * Consider applying the Narrative Authority Waterfall and Diegetic
+   Dialogues tools
+ * The GM will declare when the stake has resolved in their mind.
+ * Allow some time for clarifying questions, if necessary.
+ * Everyone at the table should now understand "what's at stake".
+ * Create a short name for the stake and write it next to the
+   primary ✔ progress bar
+
+The stake and its name can get re-worked or refined as the narrative develops
+during a scene. Such revision should increase the specificity of the stake.
+For example, it can start as "castle information" and get updated to
+"castle backdoor secret".
+
+A well-defined Primary Stake provides direction, creates tension, and makes
+the outcome of the scene meaningful. While smaller objectives may arise,
+the Primary Stake remains the core focus.
+
+3. The Dramatic Action begins
+
+With the scene and stakes understood, it's time for the players to take
+the reins and initiate the dramatic action. Begin by situating the
+characters' position within the scene. Are they charging into battle?
+Surveying the landscape from afar? Once established, the GM will
+direct the spotlight to a player, prompting them with the inciting
+question: "What do you do?"
+
+The PCs' actions and dialogue drive the plot and trigger Player Moves 
+(see SECTION X). The results of these moves, in turn, determine how the
+scene evolves:
+
+ 1. ✔✔ Double success
+    * two ✔ tokens are added to a ✔ progress bar
+ 2. ✔ Success
+    * one ✔ token is added to a ✔ progress bar
+ 3. ✓ Success & Shadow
+    * one shadow ✓ token is added to a ✔ progress bar
+ 4. ✗ Failure
+    * all shadow ✓ tokens are removed from all progress bars and put in the
+      GM's collection of Shadow Points
+    * Trigger the GM Move Deck (which may increment the skull progress bar)
+
+When there are multiple ✔ progress bars, the GM chooses how to assign the
+tokens based on the intent and narrative outcome of the Player Move.
+
+Thus, as the scene plays out, the progress bars gradually fill.  The scene ends
+when either the scene's primary progress bar or the skull progress bar are
+completed.
+
+
+### Triggering The GM Move Deck
+
+The GM has a deck of cards that they draw from when a Player hits an ✗.
+
+Depending on chapter rules, there are about 3 skull cards in the deck.
+The other cards are:
+
+ 1. Deal damage / Expend stamina & Reshuffle the GM Move Deck
+ 2. Show signs of an approaching threat
+ 3. Escalate the danger / Trigger a combat interlude
+ 4. Reveal an unwelcome truth
+ 5. Offer an opportunity, with a cost
+ 6. Turn their move back on them
+ 7. Tell them the requirements or consequences and ask
+ 8. Show a downside to their appearance, reputation, or equipment
+ 9. Use up their resources
+ 10. Separate them
+ 11. Shadow
+ 12. Shadow
+ 13. Shadow
+ 14. (Only in certain chapters) Shadow
+ 15. (Only in certain chapters) Death
+     * Only causes a character death if flipped *with* another Shadow card,
+       otherwise, it kills a friendly NPC, if no such NPC, it just acts as
+       a Shadow card.
+
+On an ✗, two cards are revealed from the GM Move Deck, and either:
+
+ 1. Any of the revealed cards is a Shadow card:
+    * Ignore the revealed 1-10 card (if any)
+    * Increment the skull progress bar 
+    * Invoke the chapter-specific rules from the Campaign Guide
+ 2. Two of the 1-10 cards are revealed
+    * Using Narrative Authority Waterfall, choose *one* of the two cards and
+      narrate events into the scene that interpret the card
+    * Refer to PAGE X for additional guidance and suggestions for interpreting
+      the narrative effects of these cards.
+
+When the skull progress increments, something negative happens, determined
+by the Chapter rules, and can include such things as:
+
+ * Addition of a floating stake with its own progress bar
+ * Replacement of the primary stake with a less valuable stake
+ * Loss of the primary stake
+ * Jeapordizing something the characters already posess by making it a stake
+ * The forced start of a combat
+   * See PAGE X for rules on starting a combat
+
+
+### Filling the primary ✔ progress bar
+
+There are two ways the primary stake of the scene can be won:
+
+ * When the players fill the ✔ progress bar
+   * When this happens, the achievement of the stakes and a scene epilogue
+     shall be narrated using the Narrative Authority Waterfall
+ * When demanded by the state of the narrative
+   * Narrative is primary.  If the facts of the scene are such that there's
+     no other outcome than the achievement of the stakes, those become the
+     facts of the story
+   * In this case, a new stake or boon may be created for the party to
+     achieve in this scene.  This is likely some "bonus" or "treasure" not
+     tightly tied to the needs of the story
+
+
+### Filling a floating stake's ✔ progress bar
+
+When a floating stake's progress bar is filled, the party achieves
+that benefit.
+
+### Filling the skull progress bar
+
+When the skull progress bar is filled, the scene is "blundered" by the party.
+
+How can a scene end in a bad outcome while the plot still moves forward?
+
+ * The stake is only partially won
+   * It is fragmented or corrupted
+   * It will take additional resources to realize its benefits
+ * Betrayed by a supposed friend
+ * Permanent loss of one or more of the stakes
+ * One of the lost stakes moves forward to a future scene
+ * Death of an ally
+ * Betrayal - new shadow force
+   * In all future scenes, "overcome _blank_ force" stake card is added
+   * With a progress bar of 3.
+ * Ironic reversal - what the characters sought in a stake gets reversed
+ * Haste - the party loses their next opportunity for Downtime
+ * Trigger an Fallout combat interlude
+ * An overpowering force transports the party to a new location
+
+
+# Combat interlude
+
+Foes are created with Stamina progress bars, per formula.
+
+## When a combat interlude begins
+
+ * Gather up all the cards of the GM Move deck
+ * Remove the Shadow cards and replace them with the combat-specific Deal
+   Damage cards
+
+## When a combat interlude ends
+
+ * Gather up all the cards of the Combat deck
+ * Remove the combat-specific Deal Damage cards and replace them with the
+   Shadow cards
+ * If *any* of the PCs have survied the Combat interlude without being
+   incapacitated, one ✔ token is added to a ✔ progress bar
+
+The GM Move Deck instead of "Shadow" cards, has "Deal Damage" cards
+
+The GM Move deck is shuffled going into and exiting from a combat interlude, so
+triggering combat can be a way for players to avoid an upcoming Shadow or
+Death card.
 
 
 
-# Procedures
-
-## Scenes and Stakes
-## Creating Challenges
-### Puzzles
-### Monsters
-### Villains
-## Entering Combat Interludes
-## Exiting Combat Interludes
-## Entering Pursuit Interludes
-## Exiting Pursuit Interludes
-## Campaigns
+# Campaigns
 
 To help you execute a successful and popular *campaign*, the mechanisms
 of the game will generate *Journey points* and *Shadow points*.
@@ -719,7 +1183,7 @@ While you are *incentivized* to produce a narrative with this structure,
 due to the unpredictable nature of what other players will say and the
 randomness of some game procedures, results may vary.
 
-### It's ok to skip it
+## It's ok to skip it
 
 You don't need to get every available *Journey point*. You should especially
 not try to force it if doing so would sacrifice fun for the players. Remember,
@@ -727,7 +1191,7 @@ you're not the only author of this story, and while earning points feels nice,
 you've got other jobs too, like paying attention to the signals the players
 give you about the kind of fun they want to have.
 
-### It's ok to end it
+## It's ok to end it
 
 You may find that you and the players have collectively gone as far as you
 can. Maybe you've reached the deepest, darkest part of the adventure, and
@@ -748,7 +1212,7 @@ just admit that it's over.
 Getting *Journey points* is great, but the reason everyone is here
 sitting around the table is to *have fun*.
 
-### It's ok to blend it
+## It's ok to blend it
 
 The boundaries between chapters do not need to be strict, explicitly defined
 lines. There may be a natural blending between two adjacent chapters as you
@@ -763,7 +1227,7 @@ to complete the ordeal.
 Even when there is a threshold, as in chapters 3 and 7, the different players'
 characters might cross over at different times.
 
-### The lengths vary
+## The lengths vary
 
 The final chapter might go very fast, or it might be a long journey home.
 The first threshold might be crossed so fast that you only notice after the
@@ -1595,673 +2059,14 @@ cross over and **play**, explore our unconsciousness, and find ourselves
 changed by what we confronted, unchained, poked, or set free down there.
 
 
-
----
-
-# First-time Players
-
-To make your job of teaching the rules easier, this guide has
-**scripts**. The scripts are written to be read by you to the players
-at the table.
-
-> Scripts are formatted like this.
-
-If there is a player at the table who has never played A Thousand Faces of
-Adventure before, read the Start Script and play Sarukkan's Chamber.
-
-## Start Script
-
-> Hi everyone! We're going to play A Thousand Faces of Adventure.
-> This is going to be really fun, I'm glad you could join me for this!
-> I'm reading
-> directly from a script that was designed to get us started fast, by
-> going over just enough of the rules for our first session, so please
-> pay attention now so we can get to the fun of the game quickly!
-> 
-> A Thousand Faces of Adventure is a *narrative* game.
-> 
-> It's a storytelling game where we all collaborate and tell the story
-> together.
-> 
-> I'm going to be the GM (it's short for Game Master), so I'm going
-> to be responsible for the events in the world and the side characters
-> (they're called NPCs or Non-Player Characters).
-> 
-> Each one of you is going to play a role, kind of like an actor does.
-> You're going to control one character. You get to tell us everything
-> they think and everything that they say and everything that they do.
-> 
-> Imagine we're making an awesome adventure movie with swords and magic.
-> You're the actors just making stuff up as you go, and I'm a combination
-> of director and cinematographer, trying to fill the story with excitement
-> and drama and also deciding how the scenes go together and where the
-> camera cuts to next.
-> 
-> But let me pause for a minute and get specific about what I mean by
-> "you decide everything your character *does*".
->
-> You can't just say "My character Tyrion runs up to the bad guy and
-> punches him in the head and his head goes flying off".
-> You *can* say "My character runs up to the bad guy and punches him in
-> the head", then, because there's uncertainty about the outcome, and the
-> degree to which Tyrion succeeds would matter in the story we're creating,
-> it's my job as the GM to say you've *triggered a move*.
-> The game rules will then answer the question "does it happen?" and
-> tell us if the bad guy's head actually goes flying off.
->
-> When a *move is triggered*, it's time to use the cards and dice to see
-> what happens next. Triggering moves is a lot of fun. It's fun to succeed
-> and it's fun to fail, because even in failure, new exciting stuff starts
-> happening. When you trigger moves, you impact the narrative, consequences
-> happen, and we're all going to get surprises when cards flip and dice roll.
->
-> Besides face-punching, some other questions that might be answered by
-> triggering moves are:
->
->  * Will the old librarian agree to hide me from my pursuers?
->  * Do I see the giant spider web in my path?
->  * Is there another way out of this burning tavern?
->  * Will this magical scepter work just one more time?
->
-> The game isn't all triggering moves though.
-
-Distribute a character sheet to each player.
-
-> Most of this game is talking. That's why "Say Stuff" is written so boldly
-> on the character sheets. I'm going to be asking you questions, you'll
-> probably have lots of questions for me, and we're going to put everything
-> together to make an epic story. It's gonna have adventure, battles, chases,
-> discoveries, and magic.
->
-> It's a fantasy story, so think dangerous, and take risks.
->
-> Be true to your character's personality. Remember it's sort of like acting.
->
-> Your character will start out as a scrappy adventurer, and rise in power
-> to become a hero. Or villain. Or maybe they'll just die in the attempt.
-> And maybe they'll be resurrected after that.
-> 
-> Each session will be about 3 hours.  We might spend a long time bouncing
-> ideas off one another and dealing with each consequence in an
-> improvisational way, or we might engage in a long battle with lots of dice
-> rolling and card flipping.
-> 
-> There's no predetermined story, we're all in this together, and we're
-> going to play to find out the details of what happens.
-> 
-> This first session will need about 40 minutes of preparation, though.
-> Ten minutes has already gone by with this speech (it's almost over).
->
-> Next, we're going to play Sarukkan's Chamber, a pre-made adventure for
-> you to get the hang of the rules. It will be short. I'll set a timer
-> for 10 minutes and end Sarukkan's Chamber when it goes off.
->
-> Then we'll take 10 minutes to create a Touchstone List for our game.
->
-> Then we'll do 10 minutes of Character Creation.
->
-> And then, the adventure begins.
->
-> Let's start!
-
-## Your Deckahedron
-
-Give each player a Deckahedron.
-
-(Print-and-play and mobile app versions are available at www.1kFA.com)
-
-> Here's a stack of 20 cards, it's called a Deckahedron.
-> You'll use this to see how successful your character is when moves are
-> triggered. It also represents your character's Stamina points, which
-> we'll discuss later.
->
-> Notice the 4 different colored symbols on the edges. They're named
-> Anvil, Blades, Crown, and Dragon. When you *trigger a move*, I'm going
-> to instruct you to flip the top card of your Deckahedron, and we'll see
-> the result on the flipped-over side. There are 4 possible results:
->
-> * ✔✔✔  : this means you succeed at the thing you tried
-> * ✔✔  : this usually means something good happens, but maybe with a downside
-> * ✔  : this usually means something "ok", or not-so-good happens
-> * ✗ : this usually means that I get to say what happens and make my own move
->
-> When I ask you to flip, I'm going to say something like "flip Anvil"
-> or "flip Blades". That means you find the result on the edge that has
-> that symbol.
->
-> When you flip it over, please put it down in a way that everyone can clearly
-> see the result. Try to orient your cards consistently so that we don't get
-> confused about what your result is.
->
-> Let's try it: everybody put your Deckahedron on the table and flip Blades.
-
-Step the players through "flipping Blades" using the instructions in the
-[Player's Guide](mod_guide_player.md)
-
-Make sure each player understands how to execute a flip before you proceed.
-
-## Your base moves
-
-Give each player a Move Booklet
-
-> Here are the basic moves.  You don't have to read this booklet unless you
-> want to. I'll point out moves when they're triggered and we can read them
-> together or you can just let me apply them.
->
-> It's hard for me to do everything though, so the more you can participate,
-> reading the text of your moves, and suggesting narrative outcomes,
-> the smoother the game will run. Once we've had some practice, playing the
-> game will feel like a collaborative story we're creating together.
->
-> The move you'll be triggering the most will probably be Defy Danger, that's
-> why it's on the first page. The moves in the back of the booklet are
-> "downtime" moves which we won't need until much later.
->
-> Let's go through an example of flipping Defy Danger. The move reads from
-> top to bottom. First we would establish in the fiction how your character
-> is defying danger, are they using their Str, Dex, or Int? Once that's
-> decided, we would look at your character sheet to see what value that
-> attribute is.  Let's say they were diving to the ground to avoid a spear
-> that was thrown at them. That's Dex. Let's say their Dex was rank 3, or
-> "Crown". So that's the side of the card we're going to look at.
-> Flip your top card.  What result do you see on the "Crown" side?
->
-> [Take the result, and if it is ✔s, ask the player to help you interpret
-> a potential outcome using the Defy Danger move. If it is ✗, tell them how
-> it would be your turn to make a GM move]
->
-
-## Sarukkan's Chamber
-
-You are going to be running a short tutorial game for 2-3 players. One will
-control a female protagonist character, and one will control a male
-protagonist.  If there is a third player, they will control a prisoner that
-the other two characters discover in the first scene.
-
-First, you will need names for the characters and setting of Sarukkan's
-Chamber. Ask the players these 3 questions. This is an improvisation exercise.
-Its purpose is to get the creative juices flowing and to signal to the
-players that they have input over the story.
-
-Ask the players for the name of a medieval fantasy city name.
-Simply write down the answer. That will be the name of the setting.
-
-Ask "What's a store where women buy clothing?". This time, twist the answer
-a little to create the female protagonist's name. (eg, "Forever 21" might
-turn into "Forva", "The Gap" into "Gappalina")
-
-Ask "What's a city in Europe?". Again, twist this answer to create the male
-protagonist's name with that. Stretch your creativity muscles.
-(eg, "Paris" might turn into "Croissant", Maybe rearrange "London"
-to "Donalo")
-
-    This mini-game is a GM tool. Often, the players will look to you to
-    come up with names of characters or places on the fly. Instead of
-    sitting still and thinking for 30 seconds, you can throw some simple
-    [lateral questions](#lateral-questions) like these back at them.
-
-Ask each player to write down the names you just came up with on their
-character sheet.
-
-Next, instruct the players to fill out the attribute boxes on their
-character sheet like so:
-
- * Both characters have 1 Intelligence (Anvil)
- * The female protagonist has 3 Dexterity (Crown) and 2 Strength (Blades)
- * The male protagonist has 2 Dexterity (Blades) and 3 Strength (Crown)
-
-### Introduce Sarukkan's Chamber
-
-Begin narrating the set-up.
-
-> [Addressing her]
-> _ (female protagonist), you are an acrobat.
-> Your troupe of performers set off on the road to perform in the big
-> city _ (city name). You were really excited, because your big brother lives
-> there, and you haven't seen him since you were 13, and that was 10 years
-> ago.
-> 
-> But your excitement soon turned to horror and despair. On the road, your
-> troupe was overrun by masked horsemen. They attacked fiercely and without
-> mercy. Your caravan guards fought bravely, but were outnumbered. You and
-> your companion, Gwendolyn, were captured.
->
-> [Ask the player]
-> What was Gwendolyn's role in the troupe?
->
-> In the chaos, you remember one phrase uttered by the marauders,
-> "Deliver them to Sarukkan's."
->
-> You endured days of travel shackled in a box, Gwendolyn tried to
-> comfort you both by singing a song from her past,
->
-> [Name the song, or do an impression of Gwendolyn singing a few bars.
->  try to make the song have something to do with Gwendolyn's role in
->  the troupe]
->
-> Finally, you found yourself imprisoned in a small, dark, musty cellar
-> room. Windowless, the only illumination is whatever lamplight filters
-> through the cracks of the door.
->
-> You could hear sounds from the hallway though, and on the second day,
-> you heard Gwendolyn being removed from her cell. After that, only silence.
->
-> [Dramatic pause]
->
-> [Addressing him]
-> _ (male protagonist) you are a thief-catcher.
-> You're not too bright, but your boss, Gandlin, has taken you under his
-> wing and taught you street wisdom. Merchants employ him to recover stolen
-> valuables or they pay for simple retribution against the pilfering
-> scoundrels. You provide the muscle. Gandlin provides the brains.
-> He sniffs them out, you beat 'em up, and each of you shares in the reward.
->
-> That's how it had been. Gandlin has now gone missing.
->
-> He was investigating a series of thefts from
-> private homes. There was some pattern to it -- artifacts or books taken,
-> but no smashed windows or doors. The mystery of it had Gandlin
-> obsessed, working sometimes until dawn.
->
-> [Ask the player]
-> What was Gandlin's favourite breakfast food?
->
-> One dawn it was Gandlin that was taken.
-> 
-> [Describe the scene of Gandlin's disappearance, using the favourite
-> breakfast food to paint the picture]
-> 
-> Following the trail of clues, you came to the locked gate to the yard
-> behind Sarukkan's estate. Sarukkan was a powerful player in _ 's (city name)
-> noble circles, but not much was known of him.
-> 
-> After jumping the wall, you didn't get much farther before you were
-> surprised from behind and knocked out, waking up in a tiny, dirt-floored
-> room in the cellar.
-> 
-> [Addressing both]
-> But tonight, something changed. It was noisy tonight. Footsteps and
-> conversations could be heard upstairs. It was some kind of party.
-> And there were no guard patrols of the cellars. In parallel, but
-> without bumping into each other, you both used the lapse to escape.
-> 
-> You freed yourself from your cell.
-> 
-> In some dark corner you grabbed a reveler and took their elaborate
-> costume and mask for a disguise. Tonight must be a masquerade ball.
-> 
-> With no easy opportunity to exit, you kept evading attention by going
-> upstairs, until you reached the third floor.
-> 
-> From different doors, you simultaneously enter an empty bedchamber.
-
-At this point, take out a blank sheet of paper and draw this
-incomplete map of Sarukkan's Chamber. Then drop a couple tokens
-representing the players' characters on the paper. If you don't have
-tokens, you can use coins or nuts or glass beads, anything handy.
-
-![Draw maps, leave blanks](images/chamber_map.png){ width=7cm }
-
-This map will let everyone know roughly where their character is
-positioned. You don't always need this visual aid, but Sarukkan's
-Chamber is a tutorial, so it's good to have some practice.
-
-When you draw out a map of an environment like this, be very loose
-and fast. Leave blanks. Rely on the imagination of the players to
-fill in the details unless there's something whose position is important
-to draw.
-
-For example, a player might tell you that they look around the chamber for
-an exit, and you might say "There's a large window at the front of
-the room , but it's framed in iron. The ironwork looks old though, maybe
-it's no longer sturdy?". That would be a good point to draw a few lines
-to show where the window is in the room.
-
-> You turn from the door you carefully and silently closed to see across
-> the room, an apparent party guest in full wardrobe.
-> 
-> [Dramatic pause]
-> 
-> One last thing, with these masks on, you don't know this, but you're
-> brother and sister.
-> 
-> What do you do?
-
-
-Start a timer for 10 minutes.
-
-This last question "What do you do?" is very important.
-
-When you describe a situation, always end with this kind of prompt. Portray
-a situation that demands a response. Always.
-
-
-## But now what should I say?
-
-> Where's the *rest* of the script?
-
-If this is your first time being a GM, you might feel intimidated. That's
-ok. Remember, this is not high art, this is improv. You are *playing* to
-find out what happens.
-
-Preparation is the watchword for first-time GMs.
-Read the [Guidance](#guidance) section. Check out some
-[examples](#examples) of how other GMs have run their games.
-
-
-### Sarukkan's Chamber Details - take them or leave them
-
- * Luxurious canopy bed in the middle
- * Chamber is full of esoterica - bookcases and desks overflowing with books,
-   sculptures, candlesticks, and votives
- * Chamber is empty of any adornments, the only feature is a bed and
-   a precise circle of white powder in the center of the room
- * A window at the front of the room - an escape route?
- * An alarm triggers when a guard enters the room?
- * A creepy portrait of Sarukkan, whose eyes follow you as you move
- * A trap-door under the bed - where does it lead?
-
-
-### Goals for Sarukkan's Chamber
-
-Ideally, Sarukkan's Chamber should demonstrate what kind of game
-this is.
-
-A Thousand Faces of Adventure creates plot questions for players to answer:
-
- * Will the brother & sister who haven't seen each other in a
-   decade discover each other's identities?
- * Will the brother & sister escape Sarukkan's imprisonment?
- * Will the brother & sister rescue Gandlin or Gwendolyn?
- * (3rd player variant) Will the reluctant guard choose to obey an
-   evil master, or rebel?
-
-A Thousand Faces of Adventure creates tension and action:
-
- * Potential combat against guards or kitchen staff or Sarukkan himself
- * Potential pursuits involving outsmarting or outmaneuvering pursuers
- * Potential to hatch plans and use available resources to set traps or
-   defy traps that been set for them
- * Potential to use stealth and social manipulation with guards and
-   party guests
-
-Your group's playing of Sarukkan's Chamber doesn't have to *all of this*,
-the players will make choices that surprise you. If they surprise you with
-something unlikely or risky, be ready to declare that moves are triggered,
-but also be ready to say "Yes, and..." to their crazy ideas.
-
-It should also help teach the rules.
-
- * Work in an opportunity for each player to do a Deckahedron flip
- * If a player flips an XP card, that's an opportunity
-   to explain how they earn XP
- * If a player flips the Critical Success card, that's an opportunity
-   to explain the Critical Flip move
- * Ideally there will be a combat scene.
-   (see the [Combat guidelines](#creating-a-combat-encounter))
-   Try to get the PCs to attempt *Mix It Up* or *Volley*
- * When a PC loses Stamina, explain that losing 10 Stamina points
-   will mean the character is incapacitated
- * The brother & sister may trigger *Discern* and *Unfold Mystery* moves
-   when they try to reveal each others' identities
- * The *Discern* move often comes up when having a look around Sarukkan's
-   Chamber itself.
- * If any player-versus-player combat happens, remember to use the PvP
-   combat rules
-
-It should also be a warm-up for your GM skills.
-
- * Remember: "Yes, and..."
- * Move the spotlight - be fair, let all players impact the narrative
- * Manage the pace. Let the PCs have some dialogue, but when it feels like
-   they're hesitating, push quickly to the approaching dangers.
- * Get some guards into the room for a quick fight.
- * As the PCs gain the upper hand, show signs of another threat (maybe
-   the wizard himself approaches - it's ok to tell the story of what's
-   happening *off-camera*)
- * Play Sarukkan's Chamber *honestly*. Set the stakes the same as you would
-   when you play a campaign
- * Observe your players for signals about what kind of fun they enjoy
-
-After Sarukkan's Chamber, the players should now understand how the
-Deckahedron works with character attributes to produce results that affect
-the narrative. Ask the players if they get it, and explain again if there's
-still any confusion.
-
-
-### After the timer goes off
-
-When the 10 minute timer goes off, you have a choice.
-
-Take a look at your friends, are they having fun? Are they smiling, are they
-looking at you eagerly to see what happens next, are they bantering with
-each other about what actions to take, are they having in-character dialogues?
-
-Sarukkan's Chamber is intended as a 10-15 minute tutorial, but if it seems like
-everyone wants more, you can keep it going.
-
-Ask the table if they want to keep going with this scenario. If not, just
-skip forward to [Begin a Campaign](#begin-a-campaign).
-
-But if they do want to continue, add in the next layer of rules before
-jumping back into the action:
-
- * Any character still wearing their elaborate costume should get a card
-   entitled "Costume". This is an Item card.
- * If the characters have acquired any significant items during their
-   adventure so far, also make Item cards for those.
- * The characters do not get any Pack cards, as they were just prisoners
-
-
-### Sarukkan's Chamber 3rd PC variant - The imprisoned guard
-
-If you've got a 3rd player at the table, add a guard character.
-
-Add another 5 minutes to the timer, so now Sarukkan's Chamber will end
-after 15 minutes, not 10.
-
-Ask "What's a domestic brand of beer?". Use that to create the 3rd
-character's name. The guard can be any gender, has 3 Int, 2 Str, and 1 Dex.
-
-Let them know that they'll get introduced about 5 minutes into the story.
-
-After the first two PCs have had a chance to orient themselves to their
-surroundings, and maybe have a dialogue with each other, introduce the
-3rd PC
-
-> [Addressing guard]
-> _ (guard), you are a guard, but also a prisoner awaiting your doom.
->
-> You were the newest hire in Sarukkan's staff, but you didn't even get to
-> collect a week's wage before thing went sideways. Even on day one, you
-> noticed some sketchy stuff going on around here.
->
-> Your supervisor, Yogran the Rat had assigned you the simple duty of yard
-> patrol, and when you passed by the cellar you could swear you heard the
-> sounds of women crying. Yogran sternly rebuffed the complaint you made,
-> and then he set you up.
->
-> [Ask the player]
-> What employee offense does Sarukkan have zero tolerance for?
->
-> [Describe the way Yogran the Rat set up the player's character using that
-> offense]
->
-> The last thing you remember is being told that your soul will be used
-> as fuel in a dark ritual on the night of the ball.
->
-> You awaken now in Sarukkan's chamber, roused from your sleep by the sound
-> of two voices.  You can speak, but your arms and legs are bound.
->
-> [Ask the player]
-> Where in the room are they storing you?
->
-> What do you do?
-
-
----
-
-# Begin a Campaign
-
-
-### The Hearth
-
-This is a game where the players play together on the same team.
-
-Before the game begins, establish for *every* PC, what makes them feel most
-at home, and how the characters already know each other.
-
-Go around the table and ask:
-
-> What makes your character feel most at home, or what activity do they
-> find the most comfort or competence in?
-
-Write down the answers.
-
-Then, ask the group to choose by consensus one of these things that they all
-have in common, and ask them to describe why this common thing bonds them
-together and why it makes them comrades that would risk their lives for
-each other.
-
- * Specific People
- * Food
- * Song
- * Environmental feature
- * Ritual or festival
- * Group activity
-
-> This is a game where you all play together on the same team.
->
-> So, let's bring all these characters together. We're going to decide on
-> something that exists in the world of our Touchstone List that all of
-> these characters value. They value it so much that they are going to
-> team up to defend it - maybe even with their lives.
->
-> We will call this thing "The Hearth".
->
-> The Hearth can be a specific person or people. Maybe each character
-> shares a friendly uncle?
-> The Hearth can be food. Do all these characters depend on the fruit
-> of the quartzberry tree?
-> The Hearth can be a song. Is the valley home of these characters always
-> humming with the melodies of the wood elves?
-> The Hearth can be an environmental feature. Does the village home of
-> all these characters depend on the limestone spring for water?
-> The Hearth can be a ritual or festival. On the equinox, must every
-> tribe send a representative to seal the portal to the netherworld?
-> The Hearth can be a group activity. No warrior may abandon the hunt
-> until the beast is caught. Nor may they abandon each other.
->
-> Those are some examples, but the choice is up to you. What will be
-> The Hearth of this band of adventurers?
-
-This answer will be known as The Hearth.  Write it down on the same sheet
-as the Touchstone List and label it "The Hearth".
-
-Next, go around the table again and ask:
-
-> Briefly, why would your character risk their life for The Hearth?
-
-Write down the answers.
-
-An important aspect of The Hearth is that it must be something that the
-characters can be separated from. When the players are deciding on The
-Hearth, keep this in mind. You will soon need to find an opportunity in
-the narrative to cause the hearth to be broken, forgotten, moved somewhere
-else, corrupted, or otherwise threatened.
-
-The Hearth is necessary, with the Seek Help move, to completely heal from
-wounds.
-
-When the party crosses the first threshold, The Hearth will be made
-inaccessible, and therefore the characters won't be able to fully heal.
-It will be made available again when the second threshold is crossed.
-For details on thresholds, see the [Campaign section](#campaigns).
-
-Use what the players describe to get your first *Journey point*,
-by starting the story out in a place of normalcy, vitality, and comfort.
-Remember, it doesn't have to be a Hobbit hole. Characters might be most at
-home in the middle of a bloody battle.
-
-
-<!--
-### GM Prompt
-
-Similar to the "Choose Fateful Moments" process, the players will now help the
-GM create the first (maybe the *primary*) plot hook in the story.
-
-The players collectively decide on two of the following plot hooks, and the
-GM will decide which one of the two they want to focus on at the beginning
-of the campaign.
-
- * Capture, obstruct, prevent
- * Chase or race
- * Rescue or regain
- * Reorder, rearrange, fortify
- * Forbidden act
-
-Look to [Hooks](#hooks) for more details and
-inspiration on each one of these bullets.
-
-The GM does not have to tell the players which of the two was chosen.
-Have the players signaled that they want to be surprised by how the
-plot unfolds?
-Do the players need help getting their characters on the same page?
-The answers will help the GM decide whether to disclose the chosen hook.
--->
-
-### Begin
-
-Now that the table has established the initial details, it's time to begin.
-
-Shuffle the blessing cards and place them face down in a deck.
-Shuffle the wound cards and place them face down in a deck.
-Put a wound token next to the wound deck so you can tell the difference
-between the wound and blessing decks.
-
-There are many ways to start the narration, so check out the
-[examples](#show-dont-tell) to see some.
-
-Players will probably have a couple questions on their mind when the game
-begins:
-
- * Where am I?
- * Where can I go?
- * Who else is here that I can interact with?
- * How do I start using my special move cards?
-
-Asking the players questions is a tool that's *always* available to the GM.
-Might establishing more details about the world spark some plot ideas?
-Go around the table and start asking the players for a detail about
-their character or their role in the world of the Touchstone List.
-
-One classic way is to start like some movies start, with an establishing
-shot that gives us a sense of setting. You could narrate a typical
-day-in-the-life scene of NPCs. Or maybe start with the atypical, and narrate
-a scene of trouble brewing.
-
-Another way is to zoom in. Start narrating from a bird's eye view of the
-continent, zoom in to a specific region, then to a city or town, then to a
-neighborhood, then to a building and ending when you're in the room with
-the player's characters.
-
-Everybody at the table has seen movies before, you can use that fact to talk
-about "the camera". You can use words like "pan" and "fade in", and everyone
-will naturally get it.
-
-End your initial narration by confronting them with a problem and asking
-"What do you do?"
-
----
-
-# Session 1 Rules
-
----
-
-These rules are split up into sessions. During the first 3-hour session,
-the players will probably just be getting the hang of the the flow of the
-game. In session 2, they will probably experience downtime, and be ready
-to understand how moves interact with each other.
+# Creating Challenges
+## Puzzles
+## Monsters
+## Villains
+# Entering Combat Interludes
+# Exiting Combat Interludes
+# Entering Pursuit Interludes
+# Exiting Pursuit Interludes
 
 
 
@@ -2525,181 +2330,6 @@ powerful weapon a party member already possesses, unless it is the weapon
 created by the Tales of a Weapon move. If the loot has a magical
 effect, it should only have charge capacity of 1.
 
----
-
-# Session 2 rules
-
----
-
-## Prepare
-
-*Before* your next session starts, you should run through the events of the
-previous session in your head. Think especially about signals you got from the
-players. What kind of fun did each player seem to seek out or respond to? Was
-a player particularly keen to create backstory, to get into combat, to ask
-a lot of questions about how the world works? Can you think of things to go
-into the next session to provide that kind of fun?
-
-Think about the plot and how you might get your next couple *Journey points*.
-Do you think the characters will make certain decisions? You might imagine 2
-or 3 key decisions the party will be confronted with. For every fork in the
-road, try to imagine how the world and NPCs will respond when the characters
-choose either branch.
-
-That's important. Prepare for *either* case.
-
-There is no *correct* answer for the characters. Never punish a player for
-making a choice you didn't expect.
-
-Being prepared is different than having a plan. No game ever goes according
-to a plan.
-
-The purpose of preparation is to use your imagination to assemble a cabinet
-of narrative spices. At the beginning, you won't know if you're baking a pie
-or a casserole. You don't even get to see the recipe upfront, it
-is slowly revealed to you as each ingredient is added to the bowl.
-Have some cinnamon and sugar ready, but also have some salt and chili powder.
-
-Wait until you play to find out the details of what happens.
-
-
-## Special Move: The Session Opener
-
-From the second session onward, there is a special move that happens once
-everyone has sat down to play.
-
-### Story Recap
-
-First make sure everyone is on the same page. Remind the table of the
-details of the setting and the characters. Ask the players about what
-they learned about the world or to remind the table of a way their
-character's expressed their personality in the last session. Give your
-recounting of the events that happened in the story so far.
-
-### Ask for Notes
-
-Lead each player through a quick check-in. Everyone, including the GM will
-ask if there's any way they could improve their style of play.
-
-> Each time we start a new session, there's going to be an opportunity for
-> players to ask the table how they can make a bigger contribution to the
-> fun.
-> 
-> I'm going to give each of you a turn, and if you'd like, you can "ask for
-> notes".  You are free to skip it, but this is a great opportunity before
-> you get into character to see if there's anything about your play-style or
-> any choices your character could make that would amplify the experience
-> for everyone.
-> 
-> When asked to give someone feedback, answer honestly and gently. We are
-> giving suggestions for improvement, and these suggestions can be taken to
-> heart or completely ignored. No response is ever required of the person
-> asking for notes.
-> 
-> Never say "you are having fun wrong". It's better to say "There are more
-> fun parts over here if you want to take a look".
-> 
-> After everyone, including myself, has had a turn, all the players get a
-> free experience point for participating in this exercise.
-
-This move's purpose is to practice an open dialogue and help everyone
-*improve* their play. If it feels like bargaining, argumentation,
-excuse-creation, litanizing of sins, the move has not been executed
-correctly. Just take a deep breath and move on.
-
-GMs should particularly try to improve their ability to listen for signals.
-Tell players about the content you added last session in response
-to a signal you got from them. Ask what signals you missed.
-
-### Give Notes
-
-Look at your Touchstone List. Is the group playing the setting and the
-themes and tones you all wanted when you started? Use this either to
-re-focus player decision-making, or to discard / add titles on your
-Touchstone List.
-
-If the players are consistently mis-interpreting a rule or forgetting to
-use rules when they have an opportunity, now is the time to call those out
-and answer their questions.
-
-#### Frequently Given Note: Create Advantages
-
-New players may especially benefit by being reminded about *creating
-advantages* at the beginning of their 2nd session.
-
-After session 1, the players may be realizing that they fail often --
-more than they'd like. Take the opportunity to talk about the odds, and
-what a player can do to improve them.
-
-Some psychological studies have shown that odds feel "fair" only
-when players get wins 60% of the time. Now look at the Deckahedron
-statistics reference.  You'll see that if your players are mostly doing
-standard flips (flips without advantage), they are likely to feel the
-game is unfair.
-
-Explain to your players that getting good outcomes often requires
-*creating advantages*. There are built-in moves like Discern and
-Defend that can be used to create advantages. Explain
-each one of these moves.  Discern should be particularly encouraged if
-you'd like more opportunities to describe the world, environment, and
-NPCs that you're creating.
-
-#### Frequently Given Note: Try Wild Moves
-
-When you begin your 3rd session with new players it might be a good time
-to remind them that they can literally try any of the moves that have
-Dex, Int, or Str printed at the top of the card.
-
-Even if they don't have the card, they can trigger a move by describing
-their character taking that kind of action.
-
-They might even discover their character is good at it (via a Critical Flip).
-
-Another good hint for your players is that a good time to try moves wild is
-when they've built up a +2 advantage.
-
-#### Other Frequently Given Notes
-
-Generally, the Session Opener can be used to help the players absorb more
-of the rules. As the game progresses, their characters will open up new
-ways to be more competent and have a stronger impact on the game world.
-
-This is often a time to open up the Player's Guide and look at one
-particular section. Give the players all the details of one small section
-and answer questions.
-
-Examples:
-
- * Gaining new moves
- * Increasing move levels
- * Getting items with More Power
- * Collecting green rings to earn Level Cards
-
-### Apologia
-
-After running through the events of last session in your mind, you may
-realize you're painted into a corner. When the characters are in a
-situation where you can't imagine a way to keep the game exciting,
-you need to have a conversation with your players.
-
-This is a shared narrative, so it's allowed to retroactively edit.
-Collaborate. Get consent.
-
-### Ceremonialize
-
-If your gaming session includes food or drink, the Session Opener can be
-ceremonialized by refraining from the first bite or the first sip until
-the Session Opener has been completed.
-
-Another idea to add some ritual is to start some exciting,
-adventure-appropriate music when the Session Opener concludes.
-Video game soundtracks, or a soundtrack from one of the titles on your
-Touchstone List are great for this.
-
-### Reward Yourselves
-
-If every player has had a chance to get satisfactory feedback it's time
-to dole out XP. Give a new one to each player.
 
 
 
