@@ -774,7 +774,7 @@ Next, go around the table again and ask:
 
 > Briefly, why would your character risk their life for The Hearth?
 
-Write down the answers.
+Write down the answers on your character sheet.
 
 An important aspect of The Hearth is that it must be something that the
 characters can be separated from. When the players are deciding on The
@@ -861,8 +861,10 @@ Everybody at the table has seen movies before, you can use that fact to talk
 about "the camera". You can use words like "pan" and "fade in", and everyone
 will naturally get it.
 
-End your initial narration by confronting them with a problem and asking
-"What do you do?"
+Narrate this opening image, then move on to constructing the first scene
+and its stakes.  Consult the standard "Scenes and Stakes" procedure and
+the instructions from the guidance for Chapter 1 of your chosen campaign
+length.
 
 
 # Scenes and Stakes
@@ -1005,17 +1007,18 @@ direct the spotlight to a player, prompting them with the inciting
 question: "What do you do?"
 
 The PCs' actions and dialogue drive the plot and trigger Player Moves 
-(see SECTION X). The results of these moves, in turn, determine how the
-scene evolves:
+(see SECTION `TODO`). The results of these moves, in turn, determine how the
+scene evolves, in several ways:
 
- 1. ✔✔ Double success
-    * two ✔ tokens are added to a ✔ progress bar
- 2. ✔ Success
-    * one ✔ token is added to a ✔ progress bar
- 3. ✓ Success & Shadow
-    * one shadow ✓ token is added to a ✔ progress bar
- 4. ✗ Failure
-    * all shadow ✓ tokens are removed from all progress bars and put in the
+ 1. Some moves resolve with green progress tokens added to a progress bar
+    * The player may choose any progress bar (primary or floating) that is
+      present in the scene
+ 3. Some moves resolve with a gray progress token added to a progress bar
+    * Like green tokens, players may choose where to apply these. But these
+      tokens turn into Shadow Points if a ✗ is flipped before the stake is
+      achieved.
+ 4. When a move resolves to ✗:
+    * all gray progress tokens are removed from all progress bars and put in the
       GM's collection of Shadow Points
     * Trigger the GM Move Deck (which may increment the skull progress bar)
 
