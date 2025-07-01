@@ -21,8 +21,8 @@ DEBUG = int(os.environ.get('DEBUG', 1))
 def write_pdf(suffix, raw):
     new_fname = OUTDIR + '/print_and_play_%s.svg' % suffix
     new_pdf_name = OUTDIR + '/print_and_play_%s.pdf' % suffix
-    print 'Writing', new_pdf_name
-    fp = file(new_fname, 'w')
+    print( 'Writing', new_pdf_name)
+    fp = open(new_fname, 'w')
     fp.write(raw)
     fp.close()
     export_pdf(new_fname, new_pdf_name)
@@ -34,6 +34,9 @@ def process_subdir(subdirname, raw_svg):
         x for x in os.listdir(dirpath)
         if (x.endswith('.png') and x != 'back.png')
     ]
+    if not pngs:
+        print(f'\nNO PNGS FOUND IN {dirpath}!\n')
+        return
 
     for i, fname in enumerate(sorted(pngs)):
         if (i % 9) == 0:
@@ -60,9 +63,9 @@ if __name__ == '__main__':
     if not os.path.isdir(OUTDIR):
         os.makedirs(OUTDIR)
     print('Removing dir')
-    print('rm -rf %s/print_and_play*pdf' % OUTDIR)
-    os.system('rm -rf %s/print_and_play*pdf' % OUTDIR)
-    fp = file('%s/print_and_play_move_template.svg' % TEMPLATEDIR)
+    cmd = f'rm -rf {OUTDIR}/print_and_play*pdf'
+    os.system(cmd)
+    fp = open(f'{TEMPLATEDIR}/print_and_play_move_template.svg')
     template = fp.read()
     fp.close()
 
@@ -73,8 +76,8 @@ if __name__ == '__main__':
         process_subdir(name, template)
 
 
-    fname = '%s/print_and_play_deckahedron_template.svg' % TEMPLATEDIR
-    new_pdf_name = OUTDIR + '/print_and_play_deckahedron.pdf'
-    print 'Writing', new_pdf_name
+    fname = f'{TEMPLATEDIR}/print_and_play_deckahedron_template.svg'
+    new_pdf_name = f'{OUTDIR}/print_and_play_deckahedron.pdf'
+    print(f'\nWriting {new_pdf_name}\n')
     export_pdf(fname, new_pdf_name)
 

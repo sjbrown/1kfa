@@ -4,6 +4,7 @@
 import os
 import re
 import sys
+import shutil
 from lxml import etree
 from collections import defaultdict
 
@@ -12,11 +13,12 @@ from version import VERSION
 
 DEBUG = int(os.environ.get('DEBUG', 0))
 SINGLETON = object()
-XLINK='http://www.w3.org/1999/xlink'
+XLINK_NS='http://www.w3.org/1999/xlink'
+SVG_NS="http://www.w3.org/2000/svg"
 
 def run(cmd):
     if DEBUG:
-        print cmd
+        print (cmd)
     os.system(cmd)
 
 def just_basename(fpath):
@@ -26,14 +28,21 @@ def ensure_dirs(filepath):
     if not os.path.isdir(os.path.dirname(filepath)):
         os.makedirs(os.path.dirname(filepath))
 
-def export_png(svg, png, width, height):
+def export_png(svg, png, width, height, references=None):
+    build_dir = '/tmp'
+    if references is None:
+        references = []
+    for fname in references:
+        dirname = os.path.dirname(svg)
+        shutil.copy(f'{dirname}/{fname}', f'{build_dir}')
+
     ensure_dirs(png)
 
-    cmd = 'sed -e "s/VERSION/%s/" %s > /tmp/content.svg' % (VERSION, svg)
+    png_fname = f'{build_dir}/content.svg'
+    cmd = f'sed -e "s/VERSION/{VERSION}/" {svg} > {png_fname}'
     run(cmd)
 
-    cmd_fmt = 'inkscape --export-png=%s --export-width=%s --export-height=%s %s'
-    cmd = cmd_fmt % (png, width, height, '/tmp/content.svg')
+    cmd = f'inkscape --export-type=png --export-filename={png} --export-width={width} --export-height={height} {png_fname}'
     run(cmd)
 
 def export_pdf(svg, pdf):
@@ -46,8 +55,8 @@ def export_pdf(svg, pdf):
 def export_square_png(svg, png):
     return export_png(svg, png, 825, 825)
 
-def export_tall_png(svg, png):
-    return export_png(svg, png, 825, 1125)
+def export_tall_png(svg, png, references=None):
+    return export_png(svg, png, 825, 1125, references)
 
 def format_text_to_tspans(text, keywordFormats):
     """
@@ -85,11 +94,26 @@ def format_text_to_tspans(text, keywordFormats):
     return allTspans
 
 def change_text_text(elem, newtext):
+    #print('change text', newtext[:10], '...')
     tspan = [x for x in elem.iterchildren()
                 if 'tspan' in x.tag][0]
     tspan.text = newtext
 
 def change_flowroot_text(flowroot, newtext, style, ideal_num_chars):
+
+    #print('change_flowroot_text', f'{locals()}', len(newtext))
+
+    if not style.get('font-size'):
+        if ideal_num_chars and len(newtext) < (ideal_num_chars / 1.5):
+            # Make it bigger
+            style.update({'font-size': '11px'})
+        if ideal_num_chars and len(newtext) > (ideal_num_chars):
+            # Make it smaller
+            style.update({'font-size': '9px'})
+        if ideal_num_chars and len(newtext)*2 > (ideal_num_chars):
+            # Make it EVEN SMALLER
+            style.update({'font-size': '7px'})
+
     flowpara = [x for x in flowroot.iterchildren()
                 if 'flowPara' in x.tag][0]
     flowroot.remove(flowpara)
@@ -114,27 +138,23 @@ def change_flowroot_text(flowroot, newtext, style, ideal_num_chars):
                 'More Power':   {'style': "text-decoration:underline;text-decoration-color:#00a000" },
                 }):
             paraclone.append(tspan)
+        if style:
+            #print('got style', style)
+            for k,v in style.items():
+                #print('doing', k,v)
+                paraclone.attrib['style'] = re.sub(
+                  f'{k}:[^;]+',
+                  f'{k}:{v};',
+                  paraclone.attrib['style']
+                )
+                #print('pcs', paraclone.attrib['style'])
 
         flowroot.append(paraclone)
     num_lines = i
 
-    if ideal_num_chars and len(newtext) < (ideal_num_chars / 1.5):
-        # Make it bigger
-        style.update({'font-size': '11px'})
-    if ideal_num_chars and len(newtext) > (ideal_num_chars - num_lines*20):
-        # Make it smaller
-        style.update({'font-size': '9px'})
-
-    if style:
-        for k,v in style.items():
-            flowroot.attrib['style'] = re.sub(
-              k+':[^;]+;',
-              k+':'+v+';',
-              flowroot.attrib['style']
-            )
 
 def get_attrib(node, attr, default=SINGLETON):
-    for ns in [''] + node.nsmap.values():
+    for ns in [''] + list(node.nsmap.values()):
         key = '{%s}%s' % (ns, attr)
         try:
             x = node.attrib[key]
@@ -169,12 +189,11 @@ def get_elems(node, tag):
     raise Exception('elements "%s" not found in node %s' % (attr, node))
 
 class DOM(object):
-    def __init__(self, svg_file):
-        self._local_dir = os.path.dirname(svg_file) or '.'
-        fp = file(svg_file)
-        c = fp.read()
-        c = c.replace('VERSION', VERSION)
-        fp.close()
+    def __init__(self, svg_filename):
+        self._local_dir = os.path.dirname(svg_filename) or '.'
+        with open(svg_filename, 'rb') as fp:
+          c = fp.read()
+        c = c.replace(b'VERSION', bytes(VERSION, 'utf-8'))
         self.dom = etree.fromstring(c)
         self.titles = [x for x in self.dom.getiterator()
                        if x.tag == '{http://www.w3.org/2000/svg}title']
@@ -186,10 +205,11 @@ class DOM(object):
             for x in self.dom.getchildren()
             if x.attrib.get('{http://www.inkscape.org/namespaces/inkscape}groupmode') == 'layer'
         }
+        self.references = []
 
     def layer_hide(self, layer_label):
         if DEBUG:
-            print 'HIDING LAYER', layer_label, 'OF', self.layers.keys()
+            print( 'HIDING LAYER', layer_label, 'OF', self.layers.keys())
         self.layers[layer_label].attrib['style'] = 'display:none'
 
     def layer_show(self, layer_label):
@@ -204,7 +224,7 @@ class DOM(object):
 
     def svg_to_symbol(self, symbol_id):
         svg_node = self.dom.getiterator().next()
-        print 'defs', get_elems(svg_node, 'defs')
+        #print( 'defs', get_elems(svg_node, 'defs'))
         [ svg_node.remove(e) for e in get_elems(svg_node, 'defs') ]
         [ svg_node.remove(e) for e in get_elems(svg_node, 'namedview') ]
         [ svg_node.remove(e) for e in get_elems(svg_node, 'metadata') ]
@@ -225,6 +245,25 @@ class DOM(object):
                 return elem
         raise KeyError('ID not found: %s' % node_id)
 
+    def insert_use_symbol(self, pos_elem_id, use_href):
+        pos_elem = self.by_id(pos_elem_id)
+        cx = float(pos_elem.get('cx')) - 10
+        cy = float(pos_elem.get('cy')) - 10
+
+        nsmap = {None: SVG_NS, 'xlink': XLINK_NS}
+        use = etree.Element(f"{{{SVG_NS}}}use", nsmap=nsmap)
+        use.set(f"{{{XLINK_NS}}}href", use_href)
+        
+        wrapper = etree.Element(f"{{{SVG_NS}}}g", nsmap=nsmap)
+        wrapper.set("transform", f"translate({cx},{cy})")
+        wrapper.append(use)
+
+        pos_elem.addnext(wrapper)
+        fname, anchor = use_href.split('#')
+        self.references.append(fname)
+
+
+
     def insert_layer_as_symbol(self, layer_name):
         fpath, layer_label = uri.split('#')
         if not os.path.isabs(fpath):
@@ -233,10 +272,10 @@ class DOM(object):
         orig_width = get_attrib(s_dom.dom, 'viewBox').split()[2]
         orig_height = get_attrib(s_dom.dom, 'viewBox').split()[3]
         symbol = s_dom.layers[layer_label]
-        print ''
-        print 'symbol'
-        print '-------------------------'
-        print etree.tostring(symbol)
+        print( '')
+        print( 'symbol')
+        print( '-------------------------')
+        print( etree.tostring(symbol))
         symbol_id = layer_label
         symbol.attrib['id'] = symbol_id
         set_attrib(symbol, 'x', '0')
@@ -250,28 +289,27 @@ class DOM(object):
 
     def replace_nodes_with_symbols(self, symbol_id):
         symbol = self.by_id(symbol_id)
-        print 'syid', symbol_id
-        print 'keys', self.title_to_elements.keys()
+        #print( 'syid', symbol_id)
+        #print( 'keys', self.title_to_elements.keys())
         for key in self.title_to_elements.keys():
             if not (key.startswith('use-') and key.endswith(symbol_id)):
                 continue
             for node in self.title_to_elements[key]:
-                print ''
-                print key
-                print '-------------------------'
-                print etree.tostring(node)
+                #print( '')
+                #print( key)
+                #print( '-------------------------')
+                #print( etree.tostring(node))
                 old_width = float(get_attrib(node, 'width'))
                 old_height = float(get_attrib(node, 'height'))
                 symbol_width = float(get_attrib(symbol, 'data-orig-width'))
                 symbol_height = float(get_attrib(symbol, 'data-orig-height'))
-                print '3333333333333'
-                print old_width, old_height, symbol_width, symbol_height
+                #print( old_width, old_height, symbol_width, symbol_height)
                 xpct = '%3.3f%%' % (symbol_width / old_width)
                 ypct = '%3.3f%%' % (symbol_height / old_height)
                 newnode = etree.SubElement(node.getparent(), 'use')
                 #'<use x="0" y="0" width="100%" height="100%" xlink:href="" />'
                 newnode.attrib['id'] = 'clone_' + symbol_id
-                newnode.attrib['{%s}href' % XLINK] = '#' + symbol_id
+                newnode.attrib['{%s}href' % XLINK_NS] = '#' + symbol_id
                 set_attrib(newnode, 'x', get_attrib(node, 'x'))
                 set_attrib(newnode, 'y', get_attrib(node, 'y'))
                 set_attrib(newnode, 'width', xpct)
@@ -282,9 +320,13 @@ class DOM(object):
         for e in self.title_to_elements[title]:
             e.getparent().remove(e)
 
+    def cut_element_by_id(self, elem_id):
+        e = self.by_id(elem_id)
+        e.getparent().remove(e)
+
     def cut_layer(self, layer_label):
         e = self.layers[layer_label]
-        if e.getparent():
+        if e.getparent() is not None:
             e.getparent().remove(e)
 
     def add_layer(self, layerNode):
@@ -314,24 +356,29 @@ class DOM(object):
             else:
                 raise Exception('what the fuc')
 
-    def replace_h1(self, newtext):
-        style = {}
+    def replace_h1(self, newtext, style=None):
+        if style is None:
+            style = {}
         if len(newtext) >= 17:
             words = newtext.split()
-            midpoint = len(words)/2
+            midpoint = int(len(words)/2)
             line1 = ' '.join(words[:midpoint])
             line2 = ' '.join(words[midpoint:])
             newtext = line1 + '\n' + line2
-            style = { 'font-size': '16px', 'line-height': '90%' }
+            style = { 'font-size': '16px', 'line-height': '0.8' }
         return self.replace_text('h1', newtext, style=style)
 
     def write_file(self, svg_filename):
+        dirname = os.path.dirname(svg_filename)
         if DEBUG:
-            print 'writing file...'
-            print svg_filename
-        fp = file(svg_filename, 'w')
-        fp.write(etree.tostring(self.dom))
+            print('writing file(s)...')
+            print(svg_filename)
+            print(self.references)
+        fp = open(svg_filename, 'w')
+        fp.write(str(etree.tostring(self.dom), 'utf-8'))
         fp.close()
+        for fname in self.references:
+            shutil.copy(fname, f'{dirname}/{fname}')
 
 
 

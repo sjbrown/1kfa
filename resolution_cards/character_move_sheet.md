@@ -1,10 +1,200 @@
 
+# Defy Danger
+```python3
+attrs = ['Str', 'Dex', 'Int']
+flags = ['FAST']
+levels = []
+component = 'booklet'
+custom_number = 1
+style_details = {'font-size': '8px'}
+style_one_check = {'font-size': '11px'}
+style_two_check = {'font-size': '11px'}
+style_three_check = {'font-size': '11px'}
+```
+
+    ✗: 
+    ----
+    ✓: GM answers one question. [shadow point]
+    ----
+    ✔: GM answers one question.
+    ----
+    ✔✔: Success [gray progress]
+
+**Details**: Act despite an imminent threat. Answer one question:
+ * How do you affront, power through or endure? Flip Str
+ * How do you avoid, evade, or act fast? Flip Dex
+ * How do you abide the mental demands, or apply your wits? Flip Int
+
+GM Questions:
+ * What new complication arises?
+ * What cost must be paid?
+ * What disadvantage does this create?
+ * What hard bargain or ugly choice must be made?
+    
+
+
+# Discern
+```python3
+attrs = ['Int']
+flags = []
+levels = []
+component = 'booklet'
+custom_number = 3
+style_one_check = {'font-size': '10px'}
+style_two_check = {'font-size': '10px'}
+style_three_check = {'font-size': '10px'}
+```
+
+    ✗: 
+    ----
+    ✓: Ask the GM 1 question from the list
+    ----
+    ✔: Ask the GM 2 questions from the list
+    ----
+    ✔✔: Ask the GM 2 questions from the list [gray progress]
+
+**Details**: Answer:
+How do you closely study a situation or person?
+
+For each question asked of the GM, place a green token on this card. Whenever the gained information is acted on by anyone in the party, they may take +1 advantage and remove a token from this card.
+ * What here is useful or valuable to me?
+ * What happened here recently?
+ * What is about to happen?
+ * What should I be on the lookout for?
+ * Who's really in control here?
+ * What here is not what it appears to be?
+    
+
+
+# Unfold Mystery
+```python3
+attrs = ['Int']
+flags = []
+levels = []
+component = 'booklet'
+custom_number = 2
+style_details = {'font-size': '10px'}
+style_one_check = {'font-size': '9px'}
+style_two_check = {'font-size': '9px'}
+style_three_check = {'font-size': '9px'}
+```
+
+    ✗: 
+    ----
+    ✓: After applying progress, create a one-unit floating stake with the newly understood information. [gray progress]
+    ----
+    ✔: After applying progress, create a one-unit floating stake with the newly understood information. [green progress]
+    ----
+    ✔✔: After applying progress, create a two-unit floating stake with the newly understood information. [2x green progress]
+
+**Details**:
+Answer:
+How do you apply deduction, lived experience, or special knowledge to reveal something that lets the party get a new grip on the situation or that can be used to further their goals?
+
+Place a token on this card. Remove the token when the floating stake has been achieved or when the current scene ends.
+
+
+
+# Destiny Forewritten
+```python3
+attrs = []
+flags = ['FAST']
+levels = []
+component = 'booklet'
+custom_number = 5
+style_details = {'font-size': '12px'}
+```
+
+    ✗: 
+    ----
+    ✓: 
+    ----
+    ✔: 
+    ----
+    ✔✔: 
+
+**Details**: After you flip, and before the GM describes the consequence of that flip, declare "I invoke Destiny".
+
+Spend 1 XP and answer:
+How has something in your past prepared you for this situation?
+
+Then ignore the original flip and flip again (using the same advantage / disadvantage as before).
+
+After that, spend XP 1-for-1 to bump up the result
+    
+
+
+# Parley
+```python3
+attrs = ['Int']
+flags = []
+level_start = '0'
+levels = ['0', 'g1']
+component = 'booklet'
+custom_number = 4
+style_details = {'font-size': '10px'}
+style_one_check = {'font-size': '10px'}
+style_two_check = {'font-size': '10px'}
+style_three_check = {'font-size': '10px'}
+```
+
+    ✗: 
+    ----
+    ✓: They demand concrete assurance or exchange, right now. [gray progress]
+    ----
+    ✔: They demand concrete assurance or exchange, right now. [green progress]
+    ----
+    ✔✔: They make a deal. Make a promise and get what you want. [gray progress, green progress]
+
+**Details**: Answer:
+How do you use leverage to manipulate an NPC?
+
+"Leverage" is something they need or want.
+
+If your leverage is promises or threats without clear evidence, flip with 1 level of disadvantage.
+
+
+
+# Good thing I brought...
+```python3
+attrs = []
+flags = []
+levels = []
+component = 'booklet'
+custom_number = 6
+```
+
+    ✗: 
+    ----
+    ✓: 
+    ----
+    ✔: 
+    ----
+    ✔✔: 
+
+**Details**: See SVG
+
+Spend (2 Pack) and answer:
+
+ * What equipment did you bring along to aid in the current situation?
+ * What was consumed or broken?
+
+OR
+
+Spend (1 XP + 1 Pack) and answer:
+
+ * What equipment did you bring along to aid in the current situation?
+
+
+    
 
 # Mix It Up
 ```python3
 attrs = ['Str']
 flags = []
 levels = []
+component = 'combat'
+custom_number = 1
 ```
 
     ✗: 
@@ -15,22 +205,26 @@ levels = []
     ----
     ✔✔: Reveal Might and choose
 
-**Details**: On a ✔✔✔, you can choose one:
+**Details**: Answer:
+How do you meet your foe in close-range combat?
+
+On a ✔✔, you can choose one:
  * Avoid the foe's attack
  * Add your attack Might
 
- The foe's attack can be any GM move made directly with that NPC or monster.
+The foe's attack can be their Might or their Special Ability.
 
- Some attacks may have additional effects depending on the triggering action, the circumstances, or the weapons involved
-
- Without a melee weapon, a character deals 1 Might.
+Without a melee weapon, a character deals 1 Might.
 
 
 # Volley
 ```python3
 attrs = ['Dex']
 flags = []
+level_start = '0'
 levels = ['0', 'g1']
+component = 'combat'
+custom_number = 2
 ```
 
     ✗: 
@@ -41,62 +235,13 @@ levels = ['0', 'g1']
     ----
     ✔✔: Reveal Might.
 
-**Details**: Send a volley flying with your ranged weapon.
- Choices:
+**Details**: Answer:
+How do you send a volley flying with your ranged weapon?
+
+Choices:
  * You have to move to get the shot, placing you in danger of the GM's choice
  * You have to take what you can get - halve your Might
  * You have to take several shots - lose 1 PACK
-
-
-# Parley
-```python3
-attrs = ['Int']
-flags = []
-levels = ['0', 'g1']
-```
-
-    ✗: 
-    ----
-    ✓: They demand concrete assurance or exchange, right now. | gray progress
-    ----
-    ✔: They demand concrete assurance or exchange, right now. | green progress
-    ----
-    ✔✔: They make a deal. Make a promise and get what you want. | 2x green progress
-
-**Details**: Using leverage, manipulate an NPC. "Leverage" is something they need or want.
-
- If your leverage is promises or threats without clear evidence, flip with 1 level of disadvantage.
-    
-
-
-# Avoid, Abide, Affront
-```python3
-attrs = ['Str', 'Dex', 'Int']
-flags = []
-levels = []
-```
-
-    ✗: 
-    ----
-    ✓: Make progress. GM answers one question, you answer a second.
-    ----
-    ✔: Partial success.  GM answers one question.
-    ----
-    ✔✔: Success | one gray progress
-
-**Details**: When you act despite an imminent threat, say how you deal with it and flip.
- If you do it...
- * by powering through or enduring, flip Str
- * by getting out of the way or acting fast, flip Dex
- * with quick wits or via mental fortitude, flip Int
-
-Questions:
-
- * What new complication arises?
- * What cost must be paid?
- * What disadvantage does this create?
- * What hard bargain or ugly choice must be made?
-    
 
 
 # Defend
@@ -104,6 +249,7 @@ Questions:
 attrs = ['Str']
 flags = []
 levels = []
+component = 'combat'
 ```
 
     ✗: 
@@ -125,60 +271,12 @@ levels = []
     
 
 
-# Discern
-```python3
-attrs = ['Int']
-flags = []
-levels = []
-```
-
-    ✗: 
-    ----
-    ✓: Ask the GM 1 question from the list
-    ----
-    ✔: Ask the GM 2 questions from the list
-    ----
-    ✔✔: Ask the GM 3 questions from the list
-
-**Details**: Closely study a situation or person, ask the GM your question(s). For each question, place a green token on this card. Whenever the information gained is acted upon by anyone in the party, take +1 advantage and remove a token from this card.
- * What here is useful or valuable to me?
- * What happened here recently?
- * What is about to happen?
- * What should I be on the lookout for?
- * Who's really in control here?
- * What here is not what it appears to be?
-    
-
-
-# Unfold Mystery
-```python3
-attrs = ['Int']
-flags = []
-levels = []
-```
-
-    ✗: 
-    ----
-    ✓: Create a one-unit stake in the new scene with the newly understood information. | one gray progress
-    ----
-    ✔: Create a one-unit stake in the new scene with the newly understood information. | one green progress
-    ----
-    ✔✔: Create a two-unit stake in the new scene with the newly understood information. | two green progress
-
-**Details**: State facts about the world or the people in it.
- Consult your accumulated knowledge about something.
-
- (You may always do this through the normal course of playing the game, but when the GM doubts the fact or judges that the fact would provide significant benefit to the players, the Unfold Mystery move is triggered)
-
- On a ✅, the GM may ask you "How do you know this?".
-    
-
-
 # Rest
 ```python3
 attrs = []
 flags = []
 levels = []
+component = 'downtime'
 ```
 
     ✗: 
@@ -211,6 +309,7 @@ levels = []
 attrs = []
 flags = []
 levels = []
+component = 'downtime'
 ```
 
     ✗: 
@@ -241,22 +340,29 @@ levels = []
 attrs = ['INT', 'DEX']
 flags = []
 levels = []
+component = 'combat'
+custom_number = 4
 ```
 
-    ✗: GM Move
+    ✗:
     ----
-    ✓: New complication. See below.  Regain 2 exhausted cards of your choice | gray progress
+    ✓: GM answers one question below.  Regain 1 random exhausted card
     ----
-    ✔: Find a strategic safe spot / avoid attention.  Regain 2 exhausted cards of your choice | green progress
+    ✔: Find a strategic safe spot / avoid attention.  Regain 1 exhausted card of your choice
     ----
-    ✔✔: Find a strategic safe spot / avoid attention.  Regain 2 exhausted cards of your choice | 2x green progress
+    ✔✔: Find a strategic safe spot / avoid attention.  Regain 2 exhausted cards of your choice [gray progress]
 
-**Details**: Spend an uninterrupted moment to catch your breath.
-You can't Take a Breather twice in a row.
-Flip Int to find a strategic safe spot. On failure: There's something wrong with the spot
-Flip Dex to avoid attention. On failure: Foe moves to a spot where you're disadvantaged
+**Details**: Spend an uninterrupted moment to catch your breath.  Answer:
+ * When using Int: What strategic safe spot did you find?
+ * When using Dex: How did you avoid or temporarily escape attention?
 
-At the moment you're safe and exit the action (combat is over, pursuit ends), you can flip Str and Take a Breather as a Fast move.
+Place a token on this card. After your next move, remove it and regain 1 random exhausted card.
+
+GM Questions:
+ * What new danger does this spot invite?
+ * How did a foe move to a spot where you're disadvantaged?
+
+When a Combat Interlude or Pursuit Interlude ends, you may flip Str and Take a Breather as a Fast move.
     
 
 
@@ -265,6 +371,8 @@ At the moment you're safe and exit the action (combat is over, pursuit ends), yo
 attrs = []
 flags = ['UNENCUMBERED']
 levels = []
+component = 'combat'
+custom_number = 5
 ```
 
     ✗: 
@@ -291,63 +399,12 @@ Encumbrance Penalty: Count up all your Item and Pack cards.
 
 
 
-# Destiny Forewritten
-```python3
-attrs = []
-flags = ['IMMEDIATE']
-levels = []
-```
-
-    ✗: 
-    ----
-    ✓: 
-    ----
-    ✔: 
-    ----
-    ✔✔: 
-
-**Details**: After you flip, and before the GM describes the consequence of that flip, declare "I invoke Destiny".
-
-Start the flashback by spending 1 XP and describing how something in the character's past prepared them for this situation. Then ignore the original flip and flip again (using the same advantage / disadvantage as before).
-
-After that, spend XP 1-for-1 to bump up the result
-    
-
-
-# Good thing I brought...
-```python3
-attrs = []
-flags = []
-levels = []
-```
-
-    ✗: 
-    ----
-    ✓: 
-    ----
-    ✔: 
-    ----
-    ✔✔: 
-
-**Details**: See SVG
-
-Spend (2 Pack) and answer:
-
- * What equipment did you bring along to aid in the current situation?
- * What was consumed or broken?
-
-OR
-
-Spend (1 XP + 1 Pack) and answer:
-
- * What equipment did you bring along to aid in the current situation?
-
-
 # Study under a master
 ```python3
 attrs = []
 flags = []
 levels = []
+component = 'downtime'
 ```
 
     ✗: 
@@ -373,6 +430,7 @@ Choose:
 attrs = []
 flags = []
 levels = []
+component = 'downtime'
 ```
 
     ✗: 
@@ -400,6 +458,7 @@ Also, any time you're in town, you can spend 1 PRECIOUS Pack card to gain 2 norm
 attrs = []
 flags = []
 levels = []
+component = 'downtime'
 ```
 
     ✗: 
@@ -423,15 +482,16 @@ Spend 1 more XP to add a magical power (capacity: 1 charge) to the weapon, and t
 attrs = ['INT']
 flags = []
 levels = ['0', 'g1']
+component = 'downtime'
 ```
 
-    ✗: GM Move
+    ✗:
     ----
-    ✓: Spend Pack at a rate of 2-to-1 to remove red cards | gray progress
+    ✓: Spend Pack at a rate of 2-to-1 to remove red cards [gray progress]
     ----
-    ✔: A Pack spent may remove 1 red card | green progress
+    ✔: A Pack spent may remove 1 red card [green progress]
     ----
-    ✔✔: A Pack spent may remove 2 red cards | 2x green progress
+    ✔✔: A Pack spent may remove 2 red cards [2x green progress]
 
 **Details**: While resting, spend Pack to repair damage to items.
 
@@ -467,7 +527,7 @@ Say how your character's practice has finally paid off, or how they had an insig
 # Good Cardio
 ```python3
 attrs = ['STR']
-flags = ['IMMEDIATE']
+flags = ['FAST']
 levels = ['r2', 'r1', '0', 'g1', 'g2']
 ```
 
@@ -487,7 +547,7 @@ When you would expend Stamina from physical effort, put token(s) on this card's 
 # And This Is For...
 ```python3
 attrs = ['STR']
-flags = ['IMMEDIATE']
+flags = ['FAST']
 levels = ['r2', 'r1', '0', 'g1', 'g2']
 ```
 
@@ -674,7 +734,7 @@ levels = []
     ----
     ✔: Answer one question.
     ----
-    ✔✔: Answer one question. | green progress
+    ✔✔: Answer one question. [green progress]
 
 **Details**: Make contact with, and hold your own against, the spirit of a wild beast.
 
@@ -738,7 +798,7 @@ levels = ['r2', 'r1', '0', 'g1', 'g2']
 # Goreography
 ```python3
 attrs = ['DEX']
-flags = ['IMMEDIATE']
+flags = ['FAST']
 levels = ['r1', '0', 'g1']
 ```
 
@@ -764,13 +824,13 @@ flags = []
 levels = ['r2', 'r1', '0', 'g1']
 ```
 
-    ✗: GM Move
+    ✗:
     ----
-    ✓: Place 1 token on this card | gray progress
+    ✓: Place 1 token on this card [gray progress]
     ----
-    ✔: Place 2 tokens on this card | green progress
+    ✔: Place 2 tokens on this card [green progress]
     ----
-    ✔✔: Place 3 tokens on this card | 2x green progress
+    ✔✔: Place 3 tokens on this card [2x green progress]
 
 **Details**: Spend a moment to survey a dangerous area for traps, ambushes and secrets. Flip to supply this card with tokens. Spend the tokens 1-for-1 as you go warily onward to ask these questions:
  *  Is there a hidden danger here and if so, what activates it? 
@@ -787,9 +847,9 @@ flags = ['UNENCUMBERED']
 levels = ['r2', 'r1', '0', 'g1', 'g2']
 ```
 
-    ✗: GM Move
+    ✗:
     ----
-    ✓: gray progress
+    ✓: [gray progress]
     ----
     ✔: The GM will offer you two options between suspicion, danger, or cost | green progress
     ----
@@ -811,13 +871,13 @@ flags = []
 levels = ['r2', 'r1', '0', 'g1', 'g2']
 ```
 
-    ✗: GM Move
+    ✗:
     ----
-    ✓: gray progress
+    ✓: [gray progress]
     ----
-    ✔: The GM will offer you two options between suspicion, danger, or cost | green progress
+    ✔: The GM will offer you two options between suspicion, danger, or cost [green progress]
     ----
-    ✔✔: Success | 2x green progress
+    ✔✔: Success [2x green progress]
 
 **Details**: A "key" is just a little brass stick with some cleverness carved into it. If you've brought your own cleverness, then any stick will do.
 
@@ -832,13 +892,13 @@ flags = ['UNENCUMBERED']
 levels = ['r2', 'r1', '0', 'g1', 'g2']
 ```
 
-    ✗: GM Move
+    ✗: 
     ----
-    ✓: gray progress
+    ✓: [gray progress]
     ----
-    ✔: Choose 1 | green progress
+    ✔: Choose 1 [green progress]
     ----
-    ✔✔: Choose 2 | 2x green progress
+    ✔✔: Choose 2 [2x green progress]
 
 **Details**: Attack a surprised or defenseless foe with a melee weapon. Choices:
  *  You don’t get into melee with them 
@@ -853,7 +913,7 @@ Encumbrance Penalty: You cannot perform this move if your count of Item and Pack
 # Weak Spot
 ```python3
 attrs = ['INT']
-flags = ['IMMEDIATE']
+flags = ['FAST']
 levels = ['r2', 'r1', '0', 'g1']
 ```
 
@@ -880,13 +940,13 @@ flags = []
 levels = ['r1', '0', 'g1', 'g2']
 ```
 
-    ✗: GM Move
+    ✗:
     ----
-    ✓: Choose 1 and the foe manages 1 Might against you | gray progress
+    ✓: Choose 1 and the foe manages 1 Might against you [gray progress]
     ----
-    ✔: Choose 1 | green progress
+    ✔: Choose 1 [green progress]
     ----
-    ✔✔: Choose 2 | 2x green progress
+    ✔✔: Choose 2 [2x green progress]
 
 **Details**: See SVG
 
@@ -978,13 +1038,13 @@ flags = []
 levels = ['r2', 'r1', '0', 'g1']
 ```
 
-    ✗: GM Move
+    ✗:
     ----
-    ✓: gray progress
+    ✓: [gray progress]
     ----
-    ✔: 1 Might. Choose an option | green progress
+    ✔: 1 Might. Choose an option [green progress]
     ----
-    ✔✔: Reveal Might (or choose 1 Might) and choose an option | 2x green progress
+    ✔✔: Reveal Might (or choose 1 Might) and choose an option [2x green progress]
 
 **Details**: Name a specific target you're aiming for when you attack at range.
  *  Head: add a second Might reveal
@@ -1003,13 +1063,13 @@ flags = []
 levels = ['r1', '0', 'g1', 'g2']
 ```
 
-    ✗: You succumb to a danger you did not see | GM Move
+    ✗:
     ----
-    ✓: They see your plan and respond | gray progress
+    ✓: They see your plan and respond [gray progress]
     ----
-    ✔: They succumb to the danger's effects | green progress
+    ✔: They succumb to the danger's effects [green progress]
     ----
-    ✔✔: They succumb to the danger and cannot respond to your next action | 2x green progress
+    ✔✔: They succumb to the danger and cannot respond to your next action [2x green progress]
 
 **Details**: Put an environmental hazard between you and a foe and goad them to approach.
 
@@ -1048,13 +1108,13 @@ flags = []
 levels = ['r2', 'r1', '0', 'g1']
 ```
 
-    ✗: GM Move
+    ✗:
     ----
     ✓: You arrive, the GM answers one question
     ----
-    ✔: You arrive, the GM answers one question | gray progress
+    ✔: You arrive, the GM answers one question [gray progress]
     ----
-    ✔✔: Smooth move | green progress
+    ✔✔: Smooth move [green progress]
 
 **Details**: Name an aspect of the environment that the GM hasn't described yet. Make it something that will help you get into an advantageous position. Jump, clamber, swing, etc. to that position.
 
@@ -1092,13 +1152,13 @@ flags = ['RECEIVE CARDS']
 levels = ['r2', 'r1', '0', 'g1', 'g2']
 ```
 
-    ✗: The spell / effect fails. The GM will say how | GM Move
+    ✗:
     ----
-    ✓: The spell / effect is cast, GM chooses | gray progress
+    ✓: The spell / effect is cast, GM chooses
     ----
-    ✔: The spell / effect is cast and choose | green progress
+    ✔: The spell / effect is cast and choose [gray progress]
     ----
-    ✔✔: The spell / effect is successfully cast | 2x green progress
+    ✔✔: The spell / effect is successfully cast [green progress]
 
 **Details**: Lose 1 charge.
 
@@ -1145,13 +1205,13 @@ flags = ['RECEIVE CARDS']
 levels = ['r2', 'r1', '0', 'g1']
 ```
 
-    ✗: GM Move
+    ✗:
     ----
-    ✓: Expend 3 Stamina | gray progress
+    ✓: Expend 3 Stamina
     ----
-    ✔: Expend 2 Stamina | green progress
+    ✔: Expend 2 Stamina [gray progress]
     ----
-    ✔✔: Expend 2 Stamina, take a Blessing Card | 2x green progress
+    ✔✔: Expend 2 Stamina, take a Blessing Card [2x green progress]
 
 **Details**: See SVG
 
@@ -1169,7 +1229,7 @@ Sigil of the Living Light does not count for your Encumbrance Penalty.
 # Unknown Benefactor
 ```python3
 attrs = []
-flags = ['IMMEDIATE']
+flags = ['FAST']
 levels = []
 ```
 
@@ -1229,7 +1289,7 @@ levels = []
     ----
     ✔: Answer one question.
     ----
-    ✔✔: Answer one question. | green progress
+    ✔✔: Answer one question. [green progress]
 
 **Details**: Maintaining skin contact with an undepleted magical item, attune to the universe.
 
@@ -1253,17 +1313,20 @@ flags = []
 levels = ['r2', 'r1', '0', 'g1', 'g2']
 ```
 
-    ✗: GM Move
+    ✗:
     ----
-    ✓: Expend 3 Stamina, put this card face-down until you rest | gray progress
+    ✓: Expend 3 Stamina
     ----
-    ✔: Expend 2 Stamina, put this card face-down until you rest | green progress
+    ✔: Expend 2 Stamina
     ----
-    ✔✔: Expend 1 Stamina | 2x green progress
+    ✔✔: Expend 1 Stamina [green progress]
 
-**Details**: Without need of a magic item, cast a spell having the effect of a magic item you've seen before. Describe what it takes out of you.
+**Details**: Without need of a magic item, cast a spell having the effect of a magic item you've seen before.
 
-Flip Int or do the Fundamental Magic mini-game
+Answer:
+What does channeling this way take out of you
+
+Place a token on this card.  Remove the token when you Take a Breather.
     
 
 
@@ -1274,13 +1337,13 @@ flags = []
 levels = ['r2', 'r1', '0', 'g1']
 ```
 
-    ✗: GM Move
+    ✗:
     ----
-    ✓: The spell is countered, the item is depleted | gray progress
+    ✓: The spell is countered, the item is depleted [gray progress]
     ----
-    ✔: The spell is countered, the item loses a charge | green progress
+    ✔: The spell is countered, the item loses a charge [gray progress]
     ----
-    ✔✔: The spell is countered and has no effect on you | 2x green progress
+    ✔✔: The spell is countered and has no effect on you [gray progress]
 
 **Details**: When you attempt to counter a magical effect that will otherwise affect you, stake one undepleted magical item on the defense and flip
     
@@ -1293,13 +1356,13 @@ flags = []
 levels = ['r2', 'r1', '0', 'g1', 'g2']
 ```
 
-    ✗: The item is destroyed | GM Move
+    ✗:
     ----
-    ✓: The item is depleted.  Expend 2 stamina from mental exhaustion | gray progress
+    ✓: The item is depleted.  Expend 2 stamina from mental exhaustion
     ----
-    ✔: The item is depleted | green progress
+    ✔: The item is depleted
     ----
-    ✔✔: The item loses 1 charge | 2x green progress
+    ✔✔: The item loses 1 charge [green progress]
 
 **Details**: Use this instead of Use a Magic Item. Describe a new source (neither the Blood-Bound nor the Living Light) of magical energy in the universe that rushes into your magical item. Choose:
  *  ignore its limitations 
@@ -1349,13 +1412,13 @@ flags = []
 levels = ['r2', 'r1', '0', 'g1']
 ```
 
-    ✗: GM Move
+    ✗:
     ----
-    ✓: Spend 1 XP, expend 1 Stamina | gray progress
+    ✓: Spend 1 XP, expend 1 Stamina [gray progress]
     ----
-    ✔: Spend 1 XP, expend 1 Stamina | green progress
+    ✔: Spend 1 XP, expend 1 Stamina [green progress]
     ----
-    ✔✔: Spend 1 XP | 2x green progress
+    ✔✔: Spend 1 XP [2x green progress]
 
 **Details**: First, get their attention. Then, without saying it outright, but by mysterious wiles and unspoken language, change an NPC's mind. Describe your tricks and say what you changed:
  *  They strongly believe a new fact 

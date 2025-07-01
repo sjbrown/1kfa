@@ -1,4 +1,4 @@
-#! /usr/bin/env python
+#! /usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 
@@ -8,12 +8,13 @@ import sys
 import string
 from pprint import pprint, pformat
 from tall_cards import cards
+import parse_character_moves
 from version import VERSION
 
-DIR = '/tmp/cards_v' + VERSION
-
+from lxml import etree
 from svg_dom import DOM, export_png, export_tall_png, ensure_dirs
 
+DIR = '/tmp/cards_v' + VERSION
 DEBUG = int(os.environ.get('DEBUG', 1))
 
 def filenamify(s):
@@ -23,12 +24,25 @@ def filenamify(s):
     x = x.replace(' ', '_')
     return x
 
+def insert_progress_symbols(dom, card):
+    def do_insert(key, position_id):
+        if card.progress[key]:
+            code = ''.join(card.progress[key])
+            href = f'progress_symbols.svg#{code}_progress'
+            dom.insert_use_symbol(position_id, href)
+    do_insert('✓', 'circle_progress_pos1')
+    do_insert('✔', 'circle_progress_pos2')
+    do_insert('✔✔', 'circle_progress_pos3')
+    dom.cut_element_by_id('circle_progress_pos1')
+    dom.cut_element_by_id('circle_progress_pos2')
+    dom.cut_element_by_id('circle_progress_pos3')
 
 def filter_dom_elements(dom, card):
     cut_these = [
       'spacer',
-      'mod_str', 'mod_int', 'mod_dex', 'mod_bond',
-      'mod_str/dex/int', 'mod_int/dex', 'mod_dex/str',
+      'mod_str', 'mod_int', 'mod_dex',
+      'mod_dexint', 'mod_dexstr', 'mod_intstr',
+      'mod_dexintstr',
       'wiz_ne', 'wiz_e', 'wiz_se', 'wiz_sw', 'wiz_w', 'wiz_nw',
       'rogue_ne', 'rogue_e', 'rogue_se', 'rogue_sw', 'rogue_w', 'rogue_nw',
       'fighter_ne', 'fighter_e', 'fighter_se', 'fighter_sw', 'fighter_w', 'fighter_nw',
@@ -43,6 +57,7 @@ def filter_dom_elements(dom, card):
       'spot_level_start_0', 'spot_level_start_g1', 'spot_level_start_g2',
       'C', 'CC/F', 'CC/W', 'CC/R',
       'campaign',
+      'circle_progress_pos1', 'circle_progress_pos2', 'circle_progress_pos3',
     ]
     card_spots = card.get('spots') or {}
     has_card_spots = any(card_spots[x] for x in card_spots)
@@ -53,8 +68,6 @@ def filter_dom_elements(dom, card):
     ]
     dom.layer_hide('template')
     dom.layer_show('std_heading')
-    #print 'Checks: ', checks
-    #print 'Has card spots: ', has_card_spots
 
     # first, turn on / off the 'flags'
     for key in dom.layers:
@@ -109,10 +122,9 @@ def filter_dom_elements(dom, card):
             if 'spot_' in key:
                 dom.cut_layer(key)
             elif 'std_' in key:
-                #print 'Showing', key
+                print( 'Showing', key)
                 dom.layer_show(key)
             if not card.get('slash_check') and 'slash_check' in key:
-                #print 'hiding ot: ', key
                 dom.layer_hide(key)
             if not card.get('two_check') and 'two_check' in key:
                 dom.layer_hide(key)
@@ -169,6 +181,9 @@ def filter_dom_elements(dom, card):
     if card.get('reqs'):
         cut_these.remove(card['reqs'])
 
+    if card.get('progress'):
+        insert_progress_symbols(dom, card)
+
     if card.get('campaign'):
         cut_these.remove('campaign')
 
@@ -177,12 +192,23 @@ def filter_dom_elements(dom, card):
 
     if card.get('circles'):
         [cut_these.remove(x) for x in card['circles']]
-    if card.get('attr'):
-        keep = 'mod_' + card['attr'].lower()
-        cut_these.remove(keep)
+    sattrs = ''.join(sorted(x.lower() for x in card.get('attrs', [])))
+    if sattrs == 'dex':
+        cut_these.remove('mod_dex')
+    elif sattrs == 'int':
+        cut_these.remove('mod_int')
+    elif sattrs == 'str':
+        cut_these.remove('mod_str')
+    elif sattrs == 'dexint':
+        cut_these.remove('mod_dexint')
+    elif sattrs == 'dexstr':
+        cut_these.remove('mod_dexstr')
+    elif sattrs == 'intstr':
+        cut_these.remove('mod_intstr')
+    elif sattrs == 'dexintstr':
+        cut_these.remove('mod_dexintstr')
     else:
-        cut_these.append('mod_shield')
-        cut_these.append('flip')
+        cut_these.append('g_flip_shield')
 
     for x in cut_these:
         dom.cut_element(x)
@@ -219,7 +245,7 @@ def one_blank_3lines_front():
     svg_filename = DIR + '/deck_card_face_3lines.svg'
     png_filename = DIR + '/deck_card_face_3lines.png'
     dom.write_file(svg_filename)
-    export_tall_png(svg_filename, png_filename)
+    export_tall_png(svg_filename, png_filename, references=self.references)
 
 
 
@@ -227,12 +253,11 @@ def make_card_dom(card):
     dom = DOM('tall_card_front.svg')
 
     if DEBUG:
-        print '\nWorking on ' + card['title']
-        print '\n'
+        print( f'\nWorking on {card["title"]}\n')
         pprint(card)
 
-    if card.get('levels') and not card.get('level_start'):
-        raise Exception("Levels only works with level_start")
+    #if card.levels and not card.'level_start'):
+        #raise Exception("Levels only works with level_start")
 
     filter_dom_elements(dom, card)
 
@@ -253,29 +278,34 @@ def make_card_dom(card):
         dom.replace_text('card_tags_text', tag_text)
 
     if card.get('one_check'):
-        dom.replace_text('words_one_check', card['one_check'], ideal_num_chars=40)
+        dom.replace_text('words_one_check', card['one_check'], ideal_num_chars=40,
+                         style=card.get('style_one_check'))
     if card.get('slash_check'):
         dom.replace_text('words_left', card['slash_check'], ideal_num_chars=30)
         dom.replace_text('spot_words_left', card['slash_check'], ideal_num_chars=30)
     elif card.get('two_check'):
         dom.replace_text('words_left', card['two_check'], ideal_num_chars=30)
         dom.replace_text('spot_words_left', card['two_check'], ideal_num_chars=30)
-        dom.replace_text('words_two_check', card['two_check'], ideal_num_chars=40)
+        dom.replace_text('words_two_check', card['two_check'], ideal_num_chars=40,
+                         style=card.get('style_two_check'))
     else:
         # Card has nothing to do with flips
         dom.replace_text('spot_words_left', '')
         dom.replace_text('words_left', '')
     dom.replace_text('words_right', card['three_check'], ideal_num_chars=20)
     dom.replace_text('spot_words_right', card['three_check'], ideal_num_chars=20)
-    dom.replace_text('words_three_check', card['three_check'], ideal_num_chars=40)
+    dom.replace_text('words_three_check', card['three_check'], ideal_num_chars=40,
+                     style=card.get('style_three_check'))
 
     if card.get('one_check') or card.get('slash_check') or card.get('two_check'):
-        dom.replace_text('desc_detail', card['desc_detail'],
-                         ideal_num_chars=200)
+        #print('-- with checks -------------desc_detail')
+        dom.replace_text('desc_detail', card['details'],
+                         ideal_num_chars=130, style=card.get('style_details', None))
     else:
-        dom.replace_text('desc_detail', card['desc_detail'],
-                         ideal_num_chars=400)
-    dom.replace_h1(card['title'])
+        #print('---------------desc_detail', card.get('style_details'))
+        dom.replace_text('desc_detail', card['details'],
+                         ideal_num_chars=400, style=card.get('style_details', None))
+    dom.replace_h1(card['title'], style=card.get('style_title'))
 
     return dom
 
@@ -296,6 +326,7 @@ def component_type(card):
 
 def card_filenames(card, i):
     dirpath = '%s/%s/' % (DIR, component_type(card))
+    os.makedirs(dirpath, exist_ok=True)
 
     # Create the svg file and export a PNG
     number = card.get('custom_number', (i+1))
@@ -326,8 +357,8 @@ def make_deck(cards):
             if not dom:
                 dom = make_card_dom(card)
         except:
-            print 'FAIL'
-            print 'card:'
+            print( 'FAIL' )
+            print( 'card:' )
             pprint(card)
             raise
 
@@ -335,7 +366,7 @@ def make_deck(cards):
 
         dom.write_file(svg_filename)
 
-        export_tall_png(svg_filename, png_filename)
+        export_tall_png(svg_filename, png_filename, dom.references)
 
 
 def make_documentation_images(cards):
@@ -376,18 +407,26 @@ if __name__ == '__main__':
     if not os.path.exists(DIR):
         os.makedirs(DIR)
 
+    filtered = parse_character_moves.handy_moves('character_move_sheet.md')
+    if len(sys.argv) > 1:
+        card_grep = sys.argv[1]
+        filtered = [c for c in filtered
+                    if card_grep.lower() in c['title'].lower()]
+    """
     import parse_cards_csv
 
     if len(sys.argv) > 1:
         card_grep = sys.argv[1]
         filtered = cards + parse_cards_csv.get_objs(card_grep)
         if DEBUG:
-            print 'filtering for', card_grep
+            print( 'filtering for', card_grep)
         filtered = [c for c in filtered
           if card_grep.lower() in c['title'].lower()]
     else:
         filtered = cards + parse_cards_csv.get_objs()
+    """
 
     make_deck(filtered)
-    make_documentation_images(filtered)
+
+    print(f'\n\nFinished.  Output to {DIR}')
 
