@@ -28,7 +28,7 @@ def insert_progress_symbols(dom, card):
     def do_insert(key, position_id):
         if card.progress[key]:
             code = ''.join(card.progress[key])
-            href = f'progress_symbols.svg#{code}_progress'
+            href = f'symbols_progress.svg#{code}_progress'
             dom.insert_use_symbol(position_id, href)
     do_insert('✓', 'circle_progress_pos1')
     do_insert('✔', 'circle_progress_pos2')
@@ -122,7 +122,7 @@ def filter_dom_elements(dom, card):
             if 'spot_' in key:
                 dom.cut_layer(key)
             elif 'std_' in key:
-                print( 'Showing', key)
+                #print( 'Showing', key)
                 dom.layer_show(key)
             if not card.get('slash_check') and 'slash_check' in key:
                 dom.layer_hide(key)
