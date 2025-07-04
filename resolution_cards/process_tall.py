@@ -37,6 +37,18 @@ def insert_progress_symbols(dom, card):
     dom.cut_element_by_id('circle_progress_pos2')
     dom.cut_element_by_id('circle_progress_pos3')
 
+def insert_shadow_point_symbols(dom, card):
+    def do_insert(key, position_id):
+        if card.shadow_points[key]:
+            href = f'symbols_shadow_point.svg#shadow_point'
+            dom.insert_use_symbol(position_id, href)
+    do_insert('✓', 'circle_shadow_pos1')
+    do_insert('✔', 'circle_shadow_pos2')
+    do_insert('✔✔', 'circle_shadow_pos3')
+    dom.cut_element_by_id('circle_shadow_pos1')
+    dom.cut_element_by_id('circle_shadow_pos2')
+    dom.cut_element_by_id('circle_shadow_pos3')
+
 def filter_dom_elements(dom, card):
     cut_these = [
       'spacer',
@@ -184,6 +196,9 @@ def filter_dom_elements(dom, card):
     if card.get('progress'):
         insert_progress_symbols(dom, card)
 
+    if card.get('shadow_points'):
+        insert_shadow_point_symbols(dom, card)
+
     if card.get('campaign'):
         cut_these.remove('campaign')
 
@@ -192,6 +207,12 @@ def filter_dom_elements(dom, card):
 
     if card.get('circles'):
         [cut_these.remove(x) for x in card['circles']]
+
+    if not ''.join(card.results.values()):
+        # All are empty strings: {'✓': '', '✔': '', '✔✔': '', '✗': ''}
+        # hide the '3lines' layer
+        dom.layer_hide('3lines')
+
     sattrs = ''.join(sorted(x.lower() for x in card.get('attrs', [])))
     if sattrs == 'dex':
         cut_these.remove('mod_dex')
@@ -346,8 +367,8 @@ def make_deck(cards):
     export_tall_png('equipment_back1.svg', DIR + '/magic_deck/back.png')
     export_tall_png('equipment_back2.svg', DIR + '/mundane_deck/back.png')
 
-    export_tall_png('tall_card_stats.svg', DIR + '/booklet/face18_stats.png')
-    export_tall_png('tall_card_hints.svg', DIR + '/booklet/face19_hints.png')
+    export_tall_png('tall_card_stats.svg', DIR + '/dramatic_action/face18_stats.png')
+    export_tall_png('tall_card_hints.svg', DIR + '/dramatic_action/face19_hints.png')
 
     #one_blank_3lines_front()
 

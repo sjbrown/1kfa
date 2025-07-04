@@ -4,7 +4,7 @@
 attrs = ['Str', 'Dex', 'Int']
 flags = ['FAST']
 levels = []
-component = 'booklet'
+component = 'dramatic_action'
 custom_number = 1
 style_details = {'font-size': '8px'}
 style_one_check = {'font-size': '11px'}
@@ -21,9 +21,9 @@ style_three_check = {'font-size': '11px'}
     ✔✔: Success [gray progress]
 
 **Details**: Act despite an imminent threat. Answer one question:
- * How do you affront, power through or endure? Flip Str
+ * How do you power through or endure? Flip Str
  * How do you avoid, evade, or act fast? Flip Dex
- * How do you abide the mental demands, or apply your wits? Flip Int
+ * How do you focus, predict, or apply your wits? Flip Int
 
 GM Questions:
  * What new complication arises?
@@ -38,7 +38,7 @@ GM Questions:
 attrs = ['Int']
 flags = []
 levels = []
-component = 'booklet'
+component = 'dramatic_action'
 custom_number = 3
 style_one_check = {'font-size': '10px'}
 style_two_check = {'font-size': '10px'}
@@ -71,7 +71,7 @@ For each question asked of the GM, place a green token on this card. Whenever th
 attrs = ['Int']
 flags = []
 levels = []
-component = 'booklet'
+component = 'dramatic_action'
 custom_number = 2
 style_details = {'font-size': '10px'}
 style_one_check = {'font-size': '9px'}
@@ -100,7 +100,7 @@ Place a token on this card. Remove the token when the floating stake has been ac
 attrs = []
 flags = ['FAST']
 levels = []
-component = 'booklet'
+component = 'dramatic_action'
 custom_number = 5
 style_details = {'font-size': '12px'}
 ```
@@ -130,7 +130,7 @@ attrs = ['Int']
 flags = []
 level_start = '0'
 levels = ['0', 'g1']
-component = 'booklet'
+component = 'dramatic_action'
 custom_number = 4
 style_details = {'font-size': '10px'}
 style_one_check = {'font-size': '10px'}
@@ -160,8 +160,9 @@ If your leverage is promises or threats without clear evidence, flip with 1 leve
 attrs = []
 flags = []
 levels = []
-component = 'booklet'
+component = 'dramatic_action'
 custom_number = 6
+style_details = {'font-size': '11px'}
 ```
 
     ✗: 
@@ -172,19 +173,16 @@ custom_number = 6
     ----
     ✔✔: 
 
-**Details**: See SVG
-
-Spend (2 Pack) and answer:
-
+**Details**: Spend 2 Pack and answer:
  * What equipment did you bring along to aid in the current situation?
  * What was consumed or broken?
 
 OR
 
 Spend (1 XP + 1 Pack) and answer:
-
  * What equipment did you bring along to aid in the current situation?
 
+If it follows from your answer, create and name an Item card.
 
     
 
@@ -195,6 +193,10 @@ flags = []
 levels = []
 component = 'combat'
 custom_number = 1
+style_details = {'font-size': '9px'}
+style_one_check = {'font-size': '10px'}
+style_two_check = {'font-size': '10px'}
+style_three_check = {'font-size': '10px'}
 ```
 
     ✗: 
@@ -214,8 +216,6 @@ On a ✔✔, you can choose one:
 
 The foe's attack can be their Might or their Special Ability.
 
-Without a melee weapon, a character deals 1 Might.
-
 
 # Volley
 ```python3
@@ -225,6 +225,10 @@ level_start = '0'
 levels = ['0', 'g1']
 component = 'combat'
 custom_number = 2
+style_details = {'font-size': '9px'}
+style_one_check = {'font-size': '10px'}
+style_two_check = {'font-size': '10px'}
+style_three_check = {'font-size': '10px'}
 ```
 
     ✗: 
@@ -244,96 +248,6 @@ Choices:
  * You have to take several shots - lose 1 PACK
 
 
-# Defend
-```python3
-attrs = ['Str']
-flags = []
-levels = []
-component = 'combat'
-```
-
-    ✗: 
-    ----
-    ✓: Choose how to split the Might of the attack between yourself and the thing you defend
-    ----
-    ✔: Spend 1 XP, Choose 1
-    ----
-    ✔✔: Spend 1 XP, Choose 2
-
-**Details**: Stand in defense of a person, item, or location that is under attack. The attack is redirected from the thing you defend to yourself. You may spend XP to choose:
- * Halve the attack's effect or damage
- * Open up the attacker to an ally giving +1 advantage against the attacker
- * Attack them with your Might
-
- This move can interrupt an attack against an ally if you are in range and Might has not yet been revealed.
-
- Place a green token on this card until you Take a Breather
-    
-
-
-# Rest
-```python3
-attrs = []
-flags = []
-levels = []
-component = 'downtime'
-```
-
-    ✗: 
-    ----
-    ✓: 
-    ----
-    ✔: 
-    ----
-    ✔✔: 
-
-**Details**: When not travelling, with a day to devote to rest, do the following:
-
- * Step 1: Return all Exhaustion tokens to the supply
- * Step 2: Count the Harm and Wound tokens on your Exhaustion pile
- * Step 3: Keep that many cards in your Exhaustion pile, put the rest into your discard pile
- * Step 4: Return one Harm token to the supply
- * Step 5: Say who you blame for your injuries
-
- Magic items left idle regain their charges up to their capacity
-
- Gird all your armour
- (remove Harm and Wound tokens from it)
-
- Learning skills, studying, or any action that takes mental or physical effort is not available when Resting.
-    
-
-
-# Seek Help
-```python3
-attrs = []
-flags = []
-levels = []
-component = 'downtime'
-```
-
-    ✗: 
-    ----
-    ✓: 
-    ----
-    ✔: 
-    ----
-    ✔✔: 
-
-**Details**: When in a peaceful environment where external resources with healing powers are available:
-
- * Step 1: Describe your healing experience
- * Step 2: Return all Exhaustion tokens to the supply
- * Step 3: Return all Harm tokens to the supply
- * Step 4: Count the Wound tokens on your Exhaustion pile
- * Step 5: Keep that many cards in your Exhaustion pile, put the rest into your discard pile
- * Step 6: Return all Wound cards to the supply
- * Step 7: Say who you are closer to forgiving
- * Step 8: If you are at The Hearth, return all Wound tokens to the supply
-
- As with Rest, idle magic items regain their charges. Gird all your armour. Seeking Help leaves no time for activities that take effort.
-    
-
 
 # Take a Breather
 ```python3
@@ -342,6 +256,10 @@ flags = []
 levels = []
 component = 'combat'
 custom_number = 4
+style_details = {'font-size': '7px'}
+style_one_check = {'font-size': '10px'}
+style_two_check = {'font-size': '10px'}
+style_three_check = {'font-size': '10px'}
 ```
 
     ✗:
@@ -350,11 +268,11 @@ custom_number = 4
     ----
     ✔: Find a strategic safe spot / avoid attention.  Regain 1 exhausted card of your choice
     ----
-    ✔✔: Find a strategic safe spot / avoid attention.  Regain 2 exhausted cards of your choice [gray progress]
+    ✔✔: Find a strategic safe spot / avoid attention.  Regain 2 exhausted cards of your choice
 
 **Details**: Spend an uninterrupted moment to catch your breath.  Answer:
- * When using Int: What strategic safe spot did you find?
- * When using Dex: How did you avoid or temporarily escape attention?
+ * Using Int: What strategic safe spot did you find?
+ * Using Dex: How did you avoid or temporarily escape attention?
 
 Place a token on this card. After your next move, remove it and regain 1 random exhausted card.
 
@@ -362,7 +280,7 @@ GM Questions:
  * What new danger does this spot invite?
  * How did a foe move to a spot where you're disadvantaged?
 
-When a Combat Interlude or Pursuit Interlude ends, you may flip Str and Take a Breather as a Fast move.
+When a Combat or Pursuit ends, you may Take a Breather as a Fast move, flipping Str.
     
 
 
@@ -392,19 +310,54 @@ The GM either starts a Pursuit Interlude or answers the question:
  * Where does the character end up?
 
 Encumbrance Penalty: Count up all your Item and Pack cards.
- *  If you have less than 3, regain 2 Stamina points
+ *  If you have fewer than 3, regain 2 Stamina points
  *  If you have 3-4, expend 1 stamina point
  *  If you have 5-6, expend 2 stamina points
  *  If you have more than 6, expend 3 stamina points
 
 
 
-# Study under a master
+# Defend
+```python3
+attrs = ['Str']
+flags = []
+levels = []
+component = 'combat'
+style_details = {'font-size': '8px'}
+style_one_check = {'font-size': '10px'}
+style_two_check = {'font-size': '10px'}
+style_three_check = {'font-size': '10px'}
+```
+
+    ✗: 
+    ----
+    ✓: [shadow point] Choose 1
+    ----
+    ✔: Choose 1
+    ----
+    ✔✔: Choose up to 2
+
+**Details**: Answer: How do you stand in defense of your ward?
+
+This move can interrupt a GM Move if you are in range and Might has not yet been revealed.
+Place a green token on this card until you Take a Breather.
+
+Choose:
+ * Split the attack's Might between yourself and your ward
+ * Spend 1 XP: Halve the attack's effect or damage
+ * Spend 1 XP: Hit back at the attacker with your Might
+ * Spend 1 XP: Distract the attacker, giving an ally advantage against them
+    
+
+
+# Rest
 ```python3
 attrs = []
 flags = []
 levels = []
 component = 'downtime'
+custom_number = 1
+style_details = {'font-size': '10px'}
 ```
 
     ✗: 
@@ -415,12 +368,76 @@ component = 'downtime'
     ----
     ✔✔: 
 
-**Details**: Spend your day in town learning new skills.
+**Details**: When not travelling, with a day to devote to rest, do the following:
 
-Spend 2 XP and tell a story with the GM about how you found a teacher who helped you improve your skills.
+ * Step 1: Move all your exhausted cards to the Discard pile
+ * Step 2: Remove all Harm and Wound tokens from your armour
+ * Step 3: Recharge idle magic items up to their capacity
+ * Step 4: (Optional) Return one Harm token from your stats to the supply, expend 1 Stamina
+ * Step 5: Answer: who do you blame for your injuries?
 
-Choose:
- *  Level up in a move -- place a green card on it. 
+ Learning skills, studying, or any action that takes mental or physical effort is not available when Resting.
+    
+
+
+# Seek Help
+```python3
+attrs = []
+flags = []
+levels = []
+component = 'downtime'
+custom_number = 2
+style_details = {'font-size': '9px'}
+```
+
+    ✗: 
+    ----
+    ✓: 
+    ----
+    ✔: 
+    ----
+    ✔✔: 
+
+**Details**: When in a peaceful environment where external resources with healing powers are available:
+
+ * Step 1: Answer: what person or spirit here do you appeal to for help?
+ * Step 2: Move all Exhausted cards to the Discard pile
+ * Step 3: Remove all Harm and Wound tokens from your armour
+ * Step 4: Recharge idle magic items up to their capacity
+ * Step 4: (Optional) Return two Harm tokens from your stats to the supply, expend 1 Stamina
+ * Step 8: If you are at The Hearth, return all Wound cards to the supply
+ * Step 7: Answer: who you are closer to forgiving?
+
+As with Rest, Seeking Help leaves no time for activities that take effort.
+    
+
+
+# Study under a master
+```python3
+attrs = []
+flags = []
+levels = []
+component = 'downtime'
+custom_number = 3
+style_details = {'font-size': '11px'}
+```
+
+    ✗: 
+    ----
+    ✓: 
+    ----
+    ✔: 
+    ----
+    ✔✔: 
+
+**Details**: Answer:
+How do you spend your day in town learning new skills?
+What teacher taught you here?
+
+Spend 2 XP.
+
+Choose one:
+ *  Level up in a move
  *  Gain new skills -- take a new move card
     
 
@@ -431,6 +448,8 @@ attrs = []
 flags = []
 levels = []
 component = 'downtime'
+custom_number = 4
+style_details = {'font-size': '10px'}
 ```
 
     ✗: 
@@ -441,7 +460,9 @@ component = 'downtime'
     ----
     ✔✔: 
 
-**Details**: Spend your day in town in the acquisition of new gear. The GM will tell you who is selling and hand you 4 cards from the Item deck. To keep one of the cards, you must buy or barter.
+**Details**: Spend your day in town in the acquisition of new gear.
+
+The GM will tell you who is selling and hand you 4 cards from the Item deck. To keep one of the cards, you must buy or barter.
 Choose:
  *  Spend 1 PRECIOUS Pack 
  *  Spend 1 XP + 1 Pack 
@@ -531,7 +552,7 @@ flags = ['FAST']
 levels = ['r2', 'r1', '0', 'g1', 'g2']
 ```
 
-    ✗: Shadow point
+    ✗:
     ----
     ✓: Regain 1 exhausted card of your choice.  Your foe moves to a position of advantage.
     ----
@@ -551,7 +572,7 @@ flags = ['FAST']
 levels = ['r2', 'r1', '0', 'g1', 'g2']
 ```
 
-    ✗: Shadow point
+    ✗:
     ----
     ✓: 
     ----
@@ -566,11 +587,11 @@ levels = ['r2', 'r1', '0', 'g1', 'g2']
 # Where It Hurts
 ```python3
 attrs = ['DEX', 'STR']
-flags = ['IMMEDIATE']
+flags = ['FAST']
 levels = ['r1', '0', 'g1']
 ```
 
-    ✗: Shadow point
+    ✗:
     ----
     ✓: 
     ----
@@ -779,11 +800,11 @@ Or, when an ally is Parleying, loom imposingly nearby.  Flip Str and if it's bet
 # Fury
 ```python3
 attrs = ['STR']
-flags = ['IMMEDIATE']
+flags = ['FAST']
 levels = ['r2', 'r1', '0', 'g1', 'g2']
 ```
 
-    ✗: Shadow point
+    ✗:
     ----
     ✓: Add 1 Might
     ----
@@ -802,7 +823,7 @@ flags = ['FAST']
 levels = ['r1', '0', 'g1']
 ```
 
-    ✗: Shadow point
+    ✗:
     ----
     ✓: GM Chooses 1.  Turn this card face-down until you Take a Breather
     ----
@@ -917,7 +938,7 @@ flags = ['FAST']
 levels = ['r2', 'r1', '0', 'g1']
 ```
 
-    ✗: Shadow point
+    ✗:
     ----
     ✓: Choose 1
     ----
@@ -957,7 +978,7 @@ Before you are engaged in melee, charge in (expend Stamina) and then choose:
  * perform another move right now, ignoring its Encumbrance Penalty
 
 
-# Find Shadows
+# Vanish
 ```python3
 attrs = []
 flags = ['UNENCUMBERED']

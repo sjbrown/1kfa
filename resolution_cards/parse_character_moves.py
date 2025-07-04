@@ -40,29 +40,51 @@ class CaseInsensitiveDotDict(dict):
     #def __repr__(self):
         #return f"{type(self).__name__}({dict(self)})"
 
+def parse_out_shadow_points(results):
+    shadowpoint_pattern = re.compile(
+        r'^(.*?)'            # (1) reluctantly grab all chars up to…
+        r'\[('               # literal “ [ ” then start group(2)
+          r'\S*shadow point' # any whitespace chars, then “shadow point”
+          r'\S*'             # then more whitespace chars
+        r')\]'               # close the bracket and the group
+        r'(.*)',             # remainder goes in group (3)
+        re.IGNORECASE,
+    )
+
+    shadow_points = {}
+    new_results = {}
+    
+    for key, body in results.items():
+        m = shadowpoint_pattern.search(body)
+        if not m:
+            shadow_points[key] = None
+        else:
+            body = m.group(1).strip() + ' ' + m.group(3).strip()
+            shadow_points[key] = 'shadow point'
+        new_results[key] = body
+
+    return new_results, shadow_points
+
 def parse_out_progress(results):
-    pattern = re.compile(r'(.*)(\[[^\]]*progress[^\]]*\])', re.IGNORECASE)
-    # 1) Capture everything up to the first “[…]”
-    # 2) Inside the brackets, insist on “progress” (case-insensitive)
-    pattern = re.compile(
+    progress_pattern = re.compile(
         r'^(.*?)'            # (1) reluctantly grab all chars up to…
         r'\[('               # literal “ [ ” then start group(2)
           r'[^\]]*?progress' # any non-] chars, then “progress”
           r'[^\]]*?'         # then more non-] chars, reluctantly
-        r')\]',              # close the bracket and the group
+        r')\]'              # close the bracket and the group
+        r'(.*)',             # remainder goes in group (3)
         re.IGNORECASE        # make “Progress” / “PROGRESS” match too
     )
 
     progress = {}
     new_results = {}
     
-    for key, val in results.items():
-        m = pattern.search(val)
+    for key, body in results.items():
+        m = progress_pattern.search(body)
         if not m:
             progress[key] = None
-            new_results[key] = results[key]
         else:
-            new_results[key] = m.group(1).strip()
+            body = m.group(1).strip() + ' ' + m.group(3).strip()
             prog_str = m.group(2).strip().lower()
             if prog_str == 'gray progress':
                 progress[key] = ['gray']
@@ -74,6 +96,7 @@ def parse_out_progress(results):
                 progress[key] = ['green', 'green']
             else:
                 raise Exception(f'Could not parse progress "{prog_str}"')
+        new_results[key] = body
 
     return new_results, progress
 
@@ -133,6 +156,7 @@ def parse_detail_sections(text):
         results = dict(re.findall(r'([✗✓✔]{1,2}): *(.*)\n', body))
         #print(f'\nresults {results}\n')
         results, progress = parse_out_progress(results)
+        results, shadow_points = parse_out_shadow_points(results)
         # grab **Details** section
         dm = re.search(r'\*\*Details\*\*:\s*(.*)', body, re.DOTALL)
         details = dm.group(1).strip() if dm else ""
@@ -141,6 +165,7 @@ def parse_detail_sections(text):
             'Deckahedron Move': name,
             'results': results,
             'progress': progress,
+            'shadow_points': shadow_points,
             'details': details,
             'effect': details,
             'mod': d.get('attrs', ''),

@@ -1087,6 +1087,28 @@
    style="display:inline">
   <g
    inkscape:groupmode="layer"
+   inkscape:label="shadowpoint_3lines_positions"
+   id="layer50-1"
+   style="display:inline"
+   sodipodi:insensitive="true"><circle
+   style="fill:#ff00ff;stroke:none"
+   id="circle_shadow_pos1"
+   cx="53"
+   cy="80"
+   r="3" /><circle
+   style="fill:#ff00ff;stroke:none"
+   id="circle_shadow_pos2"
+   cx="53"
+   cy="118"
+   r="3" /><circle
+   style="fill:#ff00ff;stroke:none"
+   id="circle_shadow_pos3"
+   cx="53"
+   cy="155"
+   r="3" />
+  </g>
+  <g
+   inkscape:groupmode="layer"
    inkscape:label="prog_3lines_positions"
    id="layer50"
    style="display:inline"

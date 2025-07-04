@@ -5,7 +5,7 @@ import random
 from collections import defaultdict, OrderedDict
 
 class Card:
-    component = 'booklet'
+    component = 'dramatic_action'
 
 def parse(s):
     retval = ''
