@@ -1022,9 +1022,6 @@ scene evolves, in several ways:
       GM's collection of Shadow Points
     * Trigger the GM Move Deck (which may increment the skull progress bar)
 
-When there are multiple ✔ progress bars, the GM chooses how to assign the
-tokens based on the intent and narrative outcome of the Player Move.
-
 Thus, as the scene plays out, the progress bars gradually fill.  The scene ends
 when either the scene's primary progress bar or the skull progress bar are
 completed.
@@ -1083,7 +1080,7 @@ by the Chapter rules, and can include such things as:
 
 There are two ways the primary stake of the scene can be won:
 
- * When the players fill the ✔ progress bar
+ * When the players fill the primary progress bar
    * When this happens, the achievement of the stakes and a scene epilogue
      shall be narrated using the Narrative Authority Waterfall
  * When demanded by the state of the narrative
@@ -1122,6 +1119,15 @@ How can a scene end in a bad outcome while the plot still moves forward?
  * An overpowering force transports the party to a new location
 
 
+## Closing a scene
+
+ 1. Clear any tokens from Unfold Mystery
+ 2. For any unfinished floating stake, move it near the GM sheet. The GM answers one question:
+   * In what location is this lost or buried?
+   * What foe now posesses or controls this?
+   * Behind what riddle is this hidden?
+
+
 # Combat interlude
 
 Foes are created with Stamina progress bars, per formula.
@@ -1132,13 +1138,15 @@ Foes are created with Stamina progress bars, per formula.
  * Remove the Shadow cards and replace them with the combat-specific Deal
    Damage cards
 
-## When a combat interlude ends
+## Closing a combat interlude
 
+ * All players may use the Take a Breather move, flipping Str.
  * Gather up all the cards of the Combat deck
  * Remove the combat-specific Deal Damage cards and replace them with the
    Shadow cards
- * If *any* of the PCs have survied the Combat interlude without being
-   incapacitated, one ✔ token is added to a ✔ progress bar
+ * If *any* of the PCs have survived the Combat interlude without being
+   incapacitated, one ✔ token is added to a ✔ progress bar, players choice
+ * If *all* of the PCs survived, add one more ✔ token
 
 The GM Move Deck instead of "Shadow" cards, has "Deal Damage" cards
 
