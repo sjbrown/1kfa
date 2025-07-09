@@ -323,6 +323,7 @@ attrs = ['Str']
 flags = []
 levels = []
 component = 'combat'
+custom_number = 3
 style_details = {'font-size': '8px'}
 style_one_check = {'font-size': '10px'}
 style_two_check = {'font-size': '10px'}

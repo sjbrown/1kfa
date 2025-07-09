@@ -2212,7 +2212,7 @@
      inkscape:groupmode="layer"
      id="layer7"
      inkscape:label="Thessaly"
-     style="display:none">
+     style="display:inline">
     <image
        width="51.663273"
        height="107.16022"
@@ -2665,7 +2665,7 @@
      inkscape:groupmode="layer"
      id="layer10"
      inkscape:label="Garran Vael"
-     style="display:inline">
+     style="display:none">
     <text
        xml:space="preserve"
        style="font-weight:300;font-size:11.2889px;line-height:1.25;font-family:'URW Bookman';-inkscape-font-specification:'URW Bookman, Light';stroke-width:0.264583"
