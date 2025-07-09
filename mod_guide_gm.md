@@ -205,266 +205,77 @@ Give the players inspiring material to help them come up with answers when
 you ask them questions.
 
 # Apply Authority
+
+In *A Thousand Faces of Adventure*, the GM holds certain narrative authority.
+Like a chorus, this game sings with collaboration, but to keep the rhythm,
+someone must conduct the ups and downs. That's you.
+
+The Table Guide introduced the *Narrative Authority Waterfall*: even when
+the GM is answering the game's questions, you are not alone. You can pose
+those questions to the table, harvest their visions, even pause to riff.
+But in some moments of play, authority rests with the GM alone.
+
 ## Call for flips
+
+As a player describes their PC's action, it is your judgement that decides
+when that matches the trigger for a move.  **You call for the flip**.
+Players should feel empowered to suggest that they're triggering a move, and
+Buttons and Beats lets them request help in framing their PC's actions so that
+it aligns with the move, but you decide when the player's description, the
+fictional positioning and the required conditions for the move are all aligned.
+This is essential, because flips invoke mechanics: card draws, resource changes,
+and fictional momentum.
+Without a referee to declare when the flip begins, the game can stall, or the
+mechanisms can disengage from contact with the story.
+
+So listen for move triggers. Name them aloud. Tell the player which move they've
+triggered, and guide them through the flip.
+
 ## Transition Scenes and Interludes
+
+Combat and Pursuit interludes have bright borders.
+Mechanical procedures fire when they begin and end.
+You declare their start and end and let the other players know that it's time to
+invoke the rules assigned to those transitions.
+
+When there is administrative work to be done, like the creation of foes on blank
+cards, it may help to enlist the other players.  Ask each player to take a blank
+card and what foe to identify on each, along with the size of the foe's progress
+bar.  This keeps everyone engaged, and speeds things along.
+
 ## Break ties
 
-# Pre-Session Prep
+When there's disagreement at the table, whether about tone, about rules, about what's
+possible in the world, the ultimate decision lies with you.
 
-The preparation a GM does ahead of a new session is a key tool in a GM's belt.
+You should listen. You can offer to resolve by consensus or even vote.
+But at the end of the day, *you must be able to break the tie*.
 
-Between sessions, and *before* your next session starts, run through the
-events of the previous session in your head. Use a Ludic Listening perspective
--- what signals were players sending last session?.
-What kind of fun did each player seem to seek out or respond to? Was a
-player particularly keen to create backstory, to get into combat, to ask
-a lot of questions about how the world works? Can you think of things to
-go into the next session to provide that kind of fun?
+This applies when:
 
-Think about the plot and how you might get your next couple *Journey points*.
-Do you think the characters will make certain decisions? You might imagine 2
-or 3 key decisions the party will be confronted with. For every fork in the
-road, try to imagine how the world and NPCs will respond when the characters
-choose either branch.
+* There's ambiguity about whether a move was triggered.
+* Two players imagine a scene continuing in different directions.
+* A PC tries to act in a way that feels "out of bounds" for the Touchstone List.
 
-That's important. Prepare for *either* case.
+In order to keep the game's momentum, adjudicate fairly, but quickly. When you
+are called to break a tie, do it decisively and then keep moving.
 
-There is no *correct* answer for the PCs. Never punish a player for
-making a choice you didn't expect.
 
-Being prepared is different than having a plan. No game ever goes according
-to a plan.
+# Journey Points
 
-The purpose of preparation is to use your imagination to assemble a cabinet
-of narrative spices. At the beginning, you won't know if you're baking a pie
-or a casserole. You don't even get to see the recipe upfront, it
-is slowly revealed to you as each ingredient is added to the bowl.
-Have some cinnamon and sugar ready, but also have some salt and chili powder.
+When you have time in the spotlight, and the set-up has been established,
+take the opportunity to earn a *Journey point* by taking the plot to another
+milestone in the Hero's Journey.
 
-Wait until you play to find out the details of what happens.
+Look to the [Campaigns section](#campaigns) and
+decide which milestone the current fictional situation is well set-up for.
 
+Remember that the players don't have to bite on every hook. Don't fight it
+when things to go sideways. You can always skip it or try again.
 
-# GM Moves
+# Shadow Points
 
-Often the players will move the story forward by having their characters
-talk and do actions that are certain (you don't call for flips unless actions
-or consequences are uncertain), so there may be long stretches where a GM
-doesn't need to jump in.
-
-But when your turn comes, here are the options available to shake things up:
-
- * Escalate the danger
- * Reveal an unwelcome truth
- * Show signs of an approaching threat
- * Deal damage
- * Use up their resources
- * Turn their move back on them
- * Separate them
- * Give an opportunity that fits a player's cards or character's background
- * Show a downside to their appearance, reputation, or equipment
- * Offer an opportunity, with or without cost
- * Tell them the requirements or consequences and ask
-
-During the execution of a GM move, tools may be employed to generate ideas
-and make decisions:
-
- * Ask players questions
- * Ask players to reveal a card from their Deckahedron (this doesn't count
-   as a flip, this is just the GM using randomness to help make a decision)
- * Put on some music
-
-Try to keep up the excitement and pace of play with your GM moves, but also
-know that it's ok to invest a little in making them significant and to pause
-for a second to think through some repercussions. Will the move you make
-drive the story toward your next *Journey point*?
-
-Note that the move you execute in play may actually overlap multiple moves
-on this list. That's ok, creating honest fictional responses sometimes
-demands it. For example, "deal damage" is a move, but other moves may include
-damage as well.
-
-## A GM move is not restricted to the player move that caused it
-
-Understand that when a player resolves a flip with ✗, that doesn't always
-mean that the thing they were attempting fails.
-
-The GM is free to let the character accomplish the thing, but may use the
-flip result to bring new action and intrigue into the story.
-
-Let's say a player's character is a thief infiltrating a stronghold, hired
-to steal a fabled yellow amulet. Maybe the character attempts to climb over
-a wall to avoid being seen by guards. Consider the following consequences
-of an ✗:
-
- * You fail to get over in time and the guards start yelling and pulling at
-   your boots
-   (Escalate the danger)
- * You climb over, but as you do so, you overhear the guards in friendly
-   conversation with someone that sounds a lot like the fence that hired you
-   for this caper
-   (Reveal an unwelcome truth)
- * You climb over. You pause for a second to listen for the guards' passing.
-   You hear their footsteps slow, then stop. Have they found something?
-   Suddenly, one barks an order "Get to the tower and sound the alarm. Run!"
-   (Show signs of an approaching threat)
- * You climb over. The camera pans up to the dark sky, we see grey feathered
-   beasts with the faces of birdlike wolves, each flap of their wings loud and
-   ominous. Their tails end in a glowing yellow shape extremely similar to the
-   description of the amulet.
-   (Show signs of an approaching threat)
-
-The first example is pretty straightforward, a thing was tried, it
-failed, the character suffers the direct consequences.
-
-In the remaining three examples, the character got to the other side of the
-wall safely. A fictional cue triggered the move, the mechanisms of the rules
-were engaged, and then the GM chose to create new, separate, fictional
-badness. The fiction produced by the engaging the rules does not have to be
-constrained to the fiction that engaged them.
-
-The last example does something even more strange. It talks about a
-disembodied "camera" and portrays a scene to the *players*, but not to the
-*characters*. This is a fun stylistic choice, but it may not please every
-group. If you describe the world like a movie, you're asking players to be
-audience, not actors. Listen to your players to decide if this is right
-for your table.
-
-Always be on the lookout for signals from the players for the kind of fun
-they want to have.
-
-## Escalate the Danger
-
-The fictional world is full of danger. Adventurers are constantly being
-surprised by what's around the next corner or the thing that has been
-stalking them from the shadows.
-
-Monsters have special attacks. Use these special attacks.
-
-The location itself can produce danger. Are the PCs on a sinking ship, or
-a crumbling tomb? Announce that the deck they're on floods, or that the
-passage that led them in is now blocked by tons of rubble.
-
-## Reveal an unwelcome truth
-
-An unwelcome truth is a fact the players wish wasn't true: that the room's
-been trapped, maybe, or that the helpful goblin is actually a spy. Reveal
-to the players just how much trouble they're in.
-
-## Show signs of an approaching threat
-
-This is one of your most versatile moves. "Threat" means anything bad
-that's on the way. With this move, you just show them that something's
-going to happen unless they do something about it.
-
-## Deal damage
-
-When you deal damage, choose one source of damage that's fictionally
-threatening a character and apply it. In combat with a lizard man?
-It stabs you. Fell off the old bridge? Land on a rock.
-
-Failed moves like Mix It Up and Defy Danger can base their damage on
-a die roll. When a player takes damage, tell them what to roll. You
-never need to touch the dice.
-
-At other times, the amount of damage might be determined by Shadow Points.
-See [Using Shadow Points](#using-shadow-points).
-
-## Use up their resources
-
-Surviving in dangerous places often comes down to supplies. With this
-move, something happens to use up some resource: weapons, armor, magical
-item charges, ongoing magical effects. You don’t always have to use it
-up permanently.
-
-A sword might be flung to the other side of the room. Walking across
-the shimmering barrier might end any ongoing magic effects, etc.
-
-An easy way to decide on what resource to use up is to look to the cards
-in front of a player:
-
- * End ONGOING effects of magic items
- * Remove green cards from magic items for temporary charge loss
- * Reduce magic item charge capacity
- * Place black-side red cards on mundane items for damage
- * Take away Pack cards
- * Take away Item cards (careful with this one - use only when appropriate)
- * Take away marker tokens (ie, those created by Where It Hurts, etc.)
-
-Note, **a GM cannot take XP from a player**. Use of XP should always be
-a player choice.
-
-## Turn Their Move Back On Them
-
-Think about the benefits a move might grant a character and turn them around
-in a negative way. Alternately, grant the same advantage to someone who has
-it out for the characters.
-
-If Ivy has learned of Duke Horst's men approaching from the east, maybe a
-scout has spotted her, too.
-
-## Separate Them
-
-There are few things worse than being in the middle of a raging battle with
-blood-thirsty hawkhounds on all sides -- one of those things is being in the
-middle of that battle with no one at your back.
-
-Separating the characters can mean anything from being pushed apart in the
-heat of battle to being teleported to the far end of the dungeon. Whatever
-way it occurs, it's bound to cause problems.
-
-## Give an opportunity that fits a player's cards or character's background
-
-Every character has unique move cards for skills that they shine at, or has a
-fictional backstory that can overcome social obstacles or tests of knowledge.
-
-Present an opportunity that plays into one character's domain.
-
-It doesn't have to be a character that's in the current scene though.
-Sometimes a locked door stands between you and treasure and there's no
-lock-picking expert in sight. This is an invitation for invention, bargaining,
-and creativity.
-
-Traps, ambushes, and locked doors are great examples.
-Need some Derring-Do to avoid giant clock-tower gears?
-Maybe proof of religious or guild affiliation would confer a backstage pass?
-
-## Show a downside to their appearance, reputation, or equipment
-
-Just as every character shines, they all have their unique weaknesses too. Do
-orcs have a special thirst for elven blood? Is an ongoing flow of magic
-disturbing dangerous forces? The torch that lights the way also draws
-attention from eyes in the dark.
-
-## Offer an opportunity, with or without cost
-
-Show them something they want: riches, power, glory. If you want, you can
-associate some cost with it too, of course.
-
-Remember to lead with the fiction. You don't say, "This area isn't dangerous
-so you can make camp here, if you're willing to take the time." You make it
-a solid fictional thing and say, "Helferth's blessings still hang around the
-shattered altar. It's a safe area to rest or plan, but the chanting from the
-ritual chamber is getting louder. What do you do?"
-
-## Tell the requirements or consequences and ask
-
-"Ok, everyone flees from the hammer-camels, heading towards the water, but
-let me ask this first: Samwise is wearing plate armour. If he leaves it
-behind on the bank of the river, will someone else provide a distraction so
-he can remove it? Or Samwise can keep it on and clumsily swim, but he will
-lose 1 Stamina."
-
-This move is particularly good when they want something that's not covered
-by a player move, or they've failed a move. They can do it, sure, but they'll
-have to pay the price. Or, they can do it, but there will be consequences.
-
-Base the requirements or consequences in the fiction and make them clear
-to the characters, not just the players.
-
-This can also be a good move to underscore particularly tricky dangers. Let
-the players know that if they attempt to dive between the giant clockwork
-gears, you're going to spend a *Shadow point* to increase the difficulty.
-
+`TODO`
 
 
 # Move the spotlight
@@ -473,24 +284,25 @@ The table's locus of attention is called "the spotlight".
 Participants tend to talk one-at-a-time, while all others wait in
 excited anticipation.
 
-The GM is tasked with managing the "when" of the spotlight. When does one
-player's contribution end, and the next player's begin? When has a player
-said something that triggers a move? When is it time for the players to all
-sit back and suffer or delight as the GM describes the consequences of
-their decisions?
+Turn-taking is not rigid, instead the GM is tasked with managing the
+"who and when" of the spotlight.
+When does one player's contribution end, and the next player's begin?
+When has a player said something that triggers a move? When is it time
+for the players to all sit back and suffer or delight as the GM describes
+the consequences of their decisions?
 
 Never let a player's time in the spotlight be inconsequential. A player
-might wait 10 minutes for their moment to arrive, so if their whole turn in the
-spotlight ends with "nothing happens", that player's experience will suffer.
-Give them an opportunity for something. This doesn't mean they have to slay
-a demon on every turn, merely getting a big laugh can be "something".
+might wait 10 minutes for their moment to arrive, so they won't be having
+fun if their whole turn in the spotlight ends with "nothing happens".
+Give them an opportunity to impact the table. This doesn't mean they have
+to slay a demon on every turn, merely getting a big laugh can be "impact".
 
 Remember, this is a collaborative story.  Laughter and excitement
 are the rewards for everyone.
 
 Allow the players to naturally move the spotlight among themselves.
 
-As the GM, you may take a turn in the spotlight:
+As the GM, you yourself will take a turn in the spotlight:
 
  * when someone flips ✗
  * as specifically instructed by a move a player is executing
@@ -498,10 +310,53 @@ As the GM, you may take a turn in the spotlight:
  * when a character encounters something you've been preparing for
 
 Usually your turn in the spotlight will be spent making a **GM move**.
-But it may also just be general narration.
+But it may also just be general narration. Remember the Narrative Authority
+Waterfall - you can always lean on other players to improvise the answers
+called for by the game.
 
 Move the spotlight fairly around the table -- make sure each player feels like
 they get to contribute evenly with the others.
+
+
+# Hooks
+
+Hooks are seeds of story.
+They are places for players to hang their attention.
+A good hook is something that tugs at the characters (and players) emotionally,
+mythically, or viscerally.
+
+Use them to kick off a session (while answering the questions of Scene creation),
+shift a quiet scene into motion (while resolving a GM move), or deepen a player's
+investment in the world (during table-talk or Diegetic Dialogue).
+
+ * Capture, Obstruct, Prevent
+    - What is "loose" and causing trouble?
+    - What is in the wrong hands or needs to be brought back into the fold?
+    - What message or delivery must not be allowed to reach its destination?
+ * Chase or Race
+    - Who else has already begun seeking out the prize?
+    - How long until a threat arrives here?
+    - How might the hunter become the hunted?
+ * Rescue or Regain
+    - Who or what was taken, and where does it rightfully belong?
+    - What power does the precious thing posses?
+    - Who's identity or status is tied to the missing thing?
+ * Re-order, Rearrange, Fortify
+    - What is unbalanced, and what effect does that have on the world?
+    - Who is not doing their job?
+    - What special protection needs to be put around The Hearth?
+ * Forbidden Act
+    - What is the rule that must not be broken?
+    - Who forbids it?
+    - What power structure does the rule support?
+    - How do the elite grant themselves secret exceptions?
+ * Contrast the Mundane with the Fantastic
+    - What impossible ability or beauty is displayed by a creature or NPC?
+    - What region or artifact is breaking the rules of the universe?
+    - How does the incursion of a dreamworld manifest in reality?
+
+Use this list when searching for an answer to one of the game's questions, or
+during your preparation between sessions.
 
 
 # Ask Questions
@@ -523,6 +378,11 @@ examples of asking questions and using the answers. You can always go back
 and pull more buckets up from that well. If a character is religious, ask
 them what their gods would have to say. If there's a halfling in the party,
 ask how hungry the current scene makes them.
+
+The scene-creation questions can always be revisited after the Dramatic Action
+has begun.  Maybe the actions of the players have changed something in the
+scene.  Pick something from the scene-creation question list and ask the players
+that question again, focusing on what's changed.
 
 Try asking the players to describe outcomes. For example, if a player's
 character is in a fight with a goblin and the player deals a full 10 points
@@ -551,9 +411,8 @@ Use their answer to describe the next scene or introduce the next challenge.
 
 Sometimes when you ask a player a question, they will simply respond
 "I don't know". This can be a signal that the player isn't having fun, and
-might need some direction. It can be difficult to just make stuff up about
-a character that doesn't really exist moving around in a purely
-imagined world.
+might need some direction. It can be difficult to make stuff up on the spot
+about purely imagined characters moving around in purely imagined worlds.
 
 Think about how this player has signaled what they've found fun. Do they
 seem to enjoy the *fictional* parts of the game, or the *mechanical* parts?
@@ -561,8 +420,9 @@ seem to enjoy the *fictional* parts of the game, or the *mechanical* parts?
 If they're enjoying the fiction, ask them what would happen to this character
 if this was a movie, or use the titles from the Touchstone List. Ask them if
 they're ok with their character being put in jeopardy, or if that makes them
-uncomfortable. Ask them what the character's *most immediate* motivation might
-be.
+uncomfortable. Ask them which of the established stakes the character is most
+likely to pay attention to. Or, independent of the stakes, ask what the
+character's *immediate, intrinsic* motivation might be.
 
 If they're enjoying the mechanical game, ask them what resource they're
 after: XP? precious items? powerful weapons? new moves? Then ask what they
@@ -571,150 +431,58 @@ necessary steps to get what they want.
 
 In either case, you're nudging them towards making a decision to accomplish
 a goal. They might need to accept that getting what they want means taking
-a risk. In fact, the game is designed to reward more XP to riskier choices
-(triggering lower-level moves is more likely to generate XP than higher-level
-moves).
+a risk.
 
 Use this as an opportunity to take feedback as well. Have you made the
 situation *clear*? It's ok to have a conversation about the conversation.
 
-# Hooks
+# Pre-Session Prep
 
-Here are some things to think about to help you invent a hook:
+A Thousand Faces of Adventure is designed to just sit down and start playing.
+For a One-Shot campaign, you'll be able to just read the rules and then be
+able to play a full game once the players assemble around the table, without
+any additional preparation.
 
- * Capture, Obstruct, Prevent
-    - What is "loose" and causing trouble?
-    - What is in the wrong hands or needs to be brought back into the fold?
- * Chase or Race
-    - Who else has already begun seeking out the prize?
-    - How long until a threat arrives here?
-    - How might the hunter become the hunted?
- * Rescue or Regain
-    - Who or what was taken, and where does it rightfully belong?
-    - What power does the precious thing posses?
- * Re-order, Rearrange, Fortify
-    - What is unbalanced, and what effect does that have on the world?
-    - Who is not doing their job?
-    - What special protection needs to be put around The Hearth?
- * Forbidden Act
-    - What is the rule that must not be broken?
-    - Who forbids it?
-    - What power structure does the rule support?
- * Contrast the Mundane with the Fantastic
-    - What impossible ability or beauty is displayed by a creature or NPC?
-    - What region or artifact is breaking the rules of the universe?
-    - How does the incursion of a dreamworld manifest in reality?
+But for the 9-hour and 30-hour campaigns, there will be time between sessions,
+and that can be used to ready some drama and surprises. The preparation a GM
+does ahead of a new session is a key tool in a GM's belt.
 
+Between sessions, run through the
+events of the previous session in your head. Use a Ludic Listening perspective
+-- what signals were players sending last session?
+What kind of fun did each player seem to seek out or respond to? Was a
+player particularly keen to create backstory, to get into combat, to ask
+a lot of questions about how the world works? Can you think of things to
+go into the next session to provide that kind of fun?
 
-# Modes of Play
+Think about the plot and how you might get your next couple *Journey points*.
+Do you think the characters will make certain decisions? You might imagine 2
+or 3 key decisions the party will be confronted with. For every fork in the
+road, try to imagine how the world and NPCs will respond when the characters
+choose either branch.
 
-## Dramatic Action
+That's important. Prepare for *either* case.
 
-This game has 2 main types of Dramatic Action, "downtime" and "adventure".
-The game transitions from downtime to adventure and back again to
-downtime, repeating in a "loop".
+There is no *correct* answer for the PCs. Never punish a player for
+making a choice you didn't expect.
 
-Adventure activities involve risk, exploration, and confrontation.
-Adventuring will incur costs on the characters in the form of injury,
-damage to items, and spent magical charges, but it will also
-let the players build up resources like XP and loot.
+Being prepared is different than having a plan. No game ever goes according
+to a plan.
 
-Downtime activities are less risky. In these activities, the costs and
-benefits are known upfront, like shopping, healing, and studying.
-When injuries and treasures have built up, the players will seek a
-**town** (any place whose inhabitants offer services and trade)
-to salve their hurts, exchange their loot for exciting new
-gear, and learn new skills.
-With that done, the players should be hungry to put their new skills
-and gear to use, and thus head out again for adventure.
+The purpose of preparation is to use your imagination to assemble a cabinet
+of narrative spices. At the beginning, you won't know if you're baking a pie
+or a casserole. You don't even get to see the recipe upfront, it
+is slowly revealed to you as each ingredient is added to the bowl.
+Have some cinnamon and sugar ready, but also have some salt and chili powder.
 
-Each transition gives the GM a lot of opportunity to shape the narrative,
-so when possible, these transitions should be exploited to earn
-a *Journey point*.
+Wait until you play to find out the details of what happens.
 
-## Downtime
-
-If the characters are not in a town, the moves available during
-downtime are:
-
- * Rest
- * Sharpen and Stitch
- * Seek Help (only if it makes narrative sense)
- * Tales of a Weapon
-
-In a town, three additional moves are available:
-
- * Study Under a Master
- * Shop / Procure
- * Obsessive Contemplation
-
-There is an important choice that a player must make during downtime, and
-that is, what to spend their time doing. Their character can't do everything
-in one day. In particular, in one day these moves are mutually exclusive:
-
- * Rest
- * Study Under a Master
- * Shop / Procure
- * Obsessive Contemplation
-
-Additionally, Sharpen and Stitch can only be done while resting, so it is
-effectively mutually exclusive with the latter 3 moves.
-
-If the GM wants to give the players' characters a second day in town before
-any action takes place, a *Journey point* must be spent.
-(See [Using Journey Points](#using-journey-points))
-
-Otherwise, on the second day, the GM should present some situation that
-demands immediate attention. Put something at risk if necessary. Remember,
-this is a world of danger, nothing is safe or sacred.
-
-The players may still ignore the situation and keep performing downtime moves
-on the second day -- in that case, narrative consequences should be honestly
-described. What opportunity has been forever lost? What did the evil forces
-accomplish because the heroes lingered?
-
-## Adventure
-
-The adventure activities are where the PCs take risks and get
-into conflicts. To get out of their literal comfort zone, they must have
-motivations.
-
-If the players at the table are not yet inventing their own motivations for
-their characters, Fateful Moment cards can be assigned again -- when the
-transition from downtime to adventure happens, choose Fateful Moments
-using the procedure [described above](#choose-fateful-moments).
-(If they still had a Fateful Moment, the new Fateful Moment replaces the old)
-
-## Combat Interludes
-
-`TODO`
-
-## Pursuit Interludes
-
-`TODO`
-
-# Journey Points
-
-When you have time in the spotlight, and the set-up has been established,
-take the opportunity to earn a *Journey point* by taking the plot to another
-milestone in the Hero's Journey.
-
-Look to the [Campaigns section](#campaigns) and
-decide which milestone the current fictional situation is well set-up for.
-
-Remember that the players don't have to bite on every hook. Don't fight it
-when things to go sideways. You can always skip it or try again.
-
-# Shadow Points
-
-`TODO`
 
 ---
 
 # PART 2: PROCEDURES
 
 ---
-
 
 # Gather Around The Hearth
 
@@ -867,7 +635,252 @@ the instructions from the guidance for Chapter 1 of your chosen campaign
 length.
 
 
-# Scenes and Stakes
+# Nesting Structures and Transitions
+
+The gameplay of A Thousand Faces of Adventure is structured like this:
+
+![Nested Structure](images/nested_structure.png){ width=7cm }
+
+Campaigns are made up of chapters.  Chapters are made up of scenes.
+Scenes start with Dramatic Action, and transition to Combat and Pursuit
+Interludes and back to Dramatic Action.
+
+Each tranisition has some small set of procedures.  Scenes open and close.
+Stakes and foes get introduced.
+
+In addition, the 9-hour and 30-hour campaigns cointain "Downtime scenes",
+wherein characters rest, develop skills, and research lore.
+
+The following few chapters will introduce these concepts starting from the
+most granular (Dramatic Action, Combat and Pursuit Interludes) and ending
+with the broadest (Chapters).
+
+
+# Dramatic Action
+
+## Dramatic Action GM Moves
+
+Often the players will move the story forward by having their characters
+talk and do actions that are certain (you don't call for flips unless actions
+or consequences are uncertain), so there may be long stretches where a GM
+doesn't need to jump in.
+
+But when your turn comes, here are the options available to shake things up:
+
+ * Escalate the danger
+ * Reveal an unwelcome truth
+ * Show signs of an approaching threat
+ * Deal damage
+ * Use up their resources
+ * Turn their move back on them
+ * Separate them
+ * Give an opportunity that fits a player's cards or character's background
+ * Show a downside to their appearance, reputation, or equipment
+ * Offer an opportunity, with or without cost
+ * Tell them the requirements or consequences and ask
+
+During the execution of a GM move, tools may be employed to generate ideas
+and make decisions:
+
+ * Ask players questions
+ * Ask players to reveal a card from their Deckahedron (this doesn't count
+   as a flip, this is just the GM using randomness to help make a decision)
+ * Put on some music
+
+Try to keep up the excitement and pace of play with your GM moves, but also
+know that it's ok to invest a little in making them significant and to pause
+for a second to think through some repercussions. Will the move you make
+drive the story toward your next *Journey point*?
+
+Note that the move you execute in play may actually overlap multiple moves
+on this list. That's ok, creating honest fictional responses sometimes
+demands it. For example, "deal damage" is a move, but other moves may include
+damage as well.
+
+### A GM move is not restricted to the player move that caused it
+
+Understand that when a player resolves a flip with ✗, that doesn't always
+mean that the thing they were attempting fails.
+
+The GM is free to let the character accomplish the thing, but may use the
+flip result to bring new action and intrigue into the story.
+
+Let's say a player's character is a thief infiltrating a stronghold, hired
+to steal a fabled yellow amulet. Maybe the character attempts to climb over
+a wall to avoid being seen by guards. Consider the following consequences
+of an ✗:
+
+ * You fail to get over in time and the guards start yelling and pulling at
+   your boots
+   (Escalate the danger)
+ * You climb over, but as you do so, you overhear the guards in friendly
+   conversation with someone that sounds a lot like the fence that hired you
+   for this caper
+   (Reveal an unwelcome truth)
+ * You climb over. You pause for a second to listen for the guards' passing.
+   You hear their footsteps slow, then stop. Have they found something?
+   Suddenly, one barks an order "Get to the tower and sound the alarm. Run!"
+   (Show signs of an approaching threat)
+ * You climb over. The camera pans up to the dark sky, we see grey feathered
+   beasts with the faces of birdlike wolves, each flap of their wings loud and
+   ominous. Their tails end in a glowing yellow shape extremely similar to the
+   description of the amulet.
+   (Show signs of an approaching threat)
+
+The first example is pretty straightforward, a thing was tried, it
+failed, the character suffers the direct consequences.
+
+In the remaining three examples, the character got to the other side of the
+wall safely. A fictional cue triggered the move, the mechanisms of the rules
+were engaged, and then the GM chose to create new, separate, fictional
+badness. The fiction produced by the engaging the rules does not have to be
+constrained to the fiction that engaged them.
+
+The last example does something even more strange. It talks about a
+disembodied "camera" and portrays a scene to the *players*, but not to the
+*characters*. This is a fun stylistic choice, but it may not please every
+group. If you describe the world like a movie, you're asking players to be
+audience, not actors. Listen to your players to decide if this is right
+for your table.
+
+Always be on the lookout for signals from the players for the kind of fun
+they want to have.
+
+### Escalate the Danger
+
+The fictional world is full of danger. Adventurers are constantly being
+surprised by what's around the next corner or the thing that has been
+stalking them from the shadows.
+
+Monsters have special attacks. Use these special attacks.
+
+The location itself can produce danger. Are the PCs on a sinking ship, or
+a crumbling tomb? Announce that the deck they're on floods, or that the
+passage that led them in is now blocked by tons of rubble.
+
+### Reveal an unwelcome truth
+
+An unwelcome truth is a fact the players wish wasn't true: that the room's
+been trapped, maybe, or that the helpful goblin is actually a spy. Reveal
+to the players just how much trouble they're in.
+
+### Show signs of an approaching threat
+
+This is one of your most versatile moves. "Threat" means anything bad
+that's on the way. With this move, you just show them that something's
+going to happen unless they do something about it.
+
+### Deal damage
+
+When you deal damage, choose one source of damage that's fictionally
+threatening a character and apply it. In combat with a lizard man?
+It stabs you. Fell off the old bridge? Land on a rock.
+
+Failed moves like Mix It Up and Defy Danger can base their damage on
+a die roll. When a player takes damage, tell them what to roll. You
+never need to touch the dice.
+
+At other times, the amount of damage might be determined by Shadow Points.
+See [Using Shadow Points](#using-shadow-points).
+
+### Use up their resources
+
+Surviving in dangerous places often comes down to supplies. With this
+move, something happens to use up some resource: weapons, armor, magical
+item charges, ongoing magical effects. You don’t always have to use it
+up permanently.
+
+A sword might be flung to the other side of the room. Walking across
+the shimmering barrier might end any ongoing magic effects, etc.
+
+An easy way to decide on what resource to use up is to look to the cards
+in front of a player:
+
+ * End ONGOING effects of magic items
+ * Remove green cards from magic items for temporary charge loss
+ * Reduce magic item charge capacity
+ * Place black-side red cards on mundane items for damage
+ * Take away Pack cards
+ * Take away Item cards (careful with this one - use only when appropriate)
+ * Take away marker tokens (ie, those created by Where It Hurts, etc.)
+
+Note, **a GM cannot take XP from a player**. Use of XP should always be
+a player choice.
+
+### Turn Their Move Back On Them
+
+Think about the benefits a move might grant a character and turn them around
+in a negative way. Alternately, grant the same advantage to someone who has
+it out for the characters.
+
+If Ivy has learned of Duke Horst's men approaching from the east, maybe a
+scout has spotted her, too.
+
+### Separate Them
+
+There are few things worse than being in the middle of a raging battle with
+blood-thirsty hawkhounds on all sides -- one of those things is being in the
+middle of that battle with no one at your back.
+
+Separating the characters can mean anything from being pushed apart in the
+heat of battle to being teleported to the far end of the dungeon. Whatever
+way it occurs, it's bound to cause problems.
+
+### Give an opportunity that fits a player's cards or character's background
+
+Every character has unique move cards for skills that they shine at, or has a
+fictional backstory that can overcome social obstacles or tests of knowledge.
+
+Present an opportunity that plays into one character's domain.
+
+It doesn't have to be a character that's in the current scene though.
+Sometimes a locked door stands between you and treasure and there's no
+lock-picking expert in sight. This is an invitation for invention, bargaining,
+and creativity.
+
+Traps, ambushes, and locked doors are great examples.
+Need some Derring-Do to avoid giant clock-tower gears?
+Maybe proof of religious or guild affiliation would confer a backstage pass?
+
+### Show a downside to their appearance, reputation, or equipment
+
+Just as every character shines, they all have their unique weaknesses too. Do
+orcs have a special thirst for elven blood? Is an ongoing flow of magic
+disturbing dangerous forces? The torch that lights the way also draws
+attention from eyes in the dark.
+
+### Offer an opportunity, with or without cost
+
+Show them something they want: riches, power, glory. If you want, you can
+associate some cost with it too, of course.
+
+Remember to lead with the fiction. You don't say, "This area isn't dangerous
+so you can make camp here, if you're willing to take the time." You make it
+a solid fictional thing and say, "Helferth's blessings still hang around the
+shattered altar. It's a safe area to rest or plan, but the chanting from the
+ritual chamber is getting louder. What do you do?"
+
+### Tell the requirements or consequences and ask
+
+"Ok, everyone flees from the hammer-camels, heading towards the water, but
+let me ask this first: Samwise is wearing plate armour. If he leaves it
+behind on the bank of the river, will someone else provide a distraction so
+he can remove it? Or Samwise can keep it on and clumsily swim, but he will
+lose 1 Stamina."
+
+This move is particularly good when they want something that's not covered
+by a player move, or they've failed a move. They can do it, sure, but they'll
+have to pay the price. Or, they can do it, but there will be consequences.
+
+Base the requirements or consequences in the fiction and make them clear
+to the characters, not just the players.
+
+This can also be a good move to underscore particularly tricky dangers. Let
+the players know that if they attempt to dive between the giant clockwork
+gears, you're going to spend a *Shadow point* to increase the difficulty.
+
+
+# Adventure Scenes and Stakes
 
 In storytelling - whether in novels or film - scenes are the building blocks
 of the narrative. Each scene presents a specific situation where
@@ -876,6 +889,9 @@ pivot toward a new goal.
 Stakes are the assets (physical, social or informational) that will be won or
 lost as the scene progresses. Stakes are central to scenes: they define what’s
 on the line and give the events emotional weight.
+
+The adventure scenes are where the PCs take risks and get
+into conflicts.
 
 The following procedures translate those narrative principles into a
 collaborative, mechanical structure, helping the table build a dynamic story
@@ -896,7 +912,327 @@ should feel real, and both triumphs and failures carry story weight.
 Everyone at the table is co-authoring a plot full of tension, consequence, and change.
 
 
-## Components for a scene
+## Combat Interludes
+
+As the narrative develops, the PCs will be faced with challenges and conflicts.
+Sometimes they will be confronted with NPCs or monsters who mean to do them
+harm. Nonviolent options like negotiation or escape may still be valid in
+these situations, but players will often choose to confront their antagonists
+with steel.
+
+Combat encounters don't have to be simple zero-sum games. Think about the
+narrative stakes as well. When swords are drawn, put something besides life
+and limb in jeopardy -- information, resources, social standing, risk of alarm.
+
+When a scene breaks out in violence, you'll need to get some blank cards
+and write down a few stats for the party's foes.
+
+If the foe is a fear-inducing monster, keep in mind the rules of the
+[Monsters](#monsters) chapter as you step through this process.
+
+
+### When a combat interlude begins
+
+ * Gather up all the cards of the GM Move deck
+ * Remove the Shadow cards and replace them with the combat-specific Deal
+   Damage cards
+
+For each foe, get a blank card and write down some details:
+First, write down the names of each foe.
+Beside each name, write the foe's Might (d4, d6, d10).
+Beside that, draw a progress bar for their Stamina.
+
+![GM Worksheet](images/gm_worksheet_filled.png){ width=7cm }
+
+For monsters or foes with high Might or stamina, spend *Shadow points*
+according to this table.
+
+| Shadow points       | Foe augmentation
+|---------------------|------------------
+| 2                   | Might d6
+| 4                   | Might d10
+| 1                   | monster has 11-15 stamina
+| 2                   | monster has 16-20 stamina
+| 1 per               | monster special attack / immunity
+
+
+Foes' Stamina and Might should be realistically scaled
+to the "scrappy adventurer" level of the players.
+Help the players estimate the threat they face by giving the foes fitting
+descriptions.
+This table should help.
+
+|                   | Stamina points | Might
+|-------------------|----------------|-------------
+| Children          | 2              | 1
+| Civilians         | 4              | 1 - 1d4
+| Bouncers, Guards  | 5-6            | 1d4
+| Trained Soldiers, Elite Guards  | 7-10 | 1d4 - 1d6
+| Monsters          | 5-20           | 1d4 - 1d10
+| Villains          | 5-10           | 1d4 - 1d10
+
+
+Generally, human opponents will have 1 Might when unarmed and 1d4
+Might when armed. Save greater Might for monsters and special
+villains.
+
+Remember that foes' power can be exerted in more ways than just their
+Stamina and Might. Challenges may arise from the antagonist's superior
+knowledge of the environment, magical abilities, political connections,
+or other types of fictional positioning.
+
+As you spend more time playing, you will find it faster and easier to
+create these encounters and write up the stats in the GM Worksheet. If the
+players at your table are signaling that they enjoy the challenge of combat
+encounters and mastering the combat mechanisms embodied by their characters,
+then you can use the appendix
+[Mathematical Combat Balance](#appendix-1-mathematical-combat-balance)
+to create encounters that are more objectively balanced and satisfy the type
+of player that delights in system mastery.
+
+However, If all that math feels a little too "gamey" for your table, just
+wing it.
+Create encounters as demanded by the established fiction, or take the
+following pre-balanced examples as a starting point, and adjust as you please.
+
+### Example combat encounters
+
+#### Easy - A pair of guards taken by surprise
+
+`TODO: illustration`
+
+The PCs way is blocked by a pair of guards who are sleeping or distracted by a
+game of dice. They have 6 stamina points, and short swords (1d4 Might).
+As long as the PCs don't bungle their approach, they will have an opportunity
+to attack first or attack from range.
+
+If the guards believe they have no hope of winning, they will flee or give up
+and beg for mercy.
+
+#### Medium - A lieutenant and his soldiers
+
+`TODO: illustration`
+
+The PCs turn a corner or open a door and stumble into a planning session
+presided over by a lieutenant and his subordinates (there are as many
+subordinates as there are PCs).
+They are the swords-first, questions-later types and attack immediately at
+close range. The 3 soldiers have 6 stamina points and do 1d4 Might.
+The lieutenant has 8 stamina points and Might of 1d6.
+
+The lieutenant will never surrender, but if the rest of their allies are cut
+down, a single soldier left standing may lose his nerve and give up.
+
+#### Hard - The swamp beast
+
+`TODO: illustration`
+
+The PCs are surprised by a *thing* that springs up from the muck and launches
+a surprise attack.
+
+The beast is introduced when a player flips an ✗, so the GM makes the "Escalate
+the danger" move and additionally deals 1d4 damage to one of the PCs as the
+beast makes glancing contact with its fierce claws.
+
+This thing fights to the death and has 12 stamina points. It bites and slashes
+for 1d10 Might.
+
+Special attack: the beast can disappear into the muddy terrain and later
+spring up behind the most vulnerable PC, as long as that PC is standing in
+the beast's territory.
+
+### Give hints
+
+Players will perceive the game as either "fair" or "unfair" partly based
+on how the foes are described by the GM before the combat begins. Always
+describe the confrontation in a way that hints at the difficulty.
+
+ * The two guards *exchange an unsure look and step forward*
+ * The salty pirate flashes his blade, but *simultaneously takes a step
+   backwards towards his ship*
+
+ * The golem is *gargantuan and covered in scars from many battles*
+ * The *horde* of undead wolves stare at you with *unrelenting hunger*
+ * The old woman with the walking stick is *unfazed by your threats* and,
+   *after looking you up and down, turns away with an air of dismissal*
+
+
+### The feel of combat
+
+In combat, it's ok if play gets more formulaic. Some players enjoy
+the "abnegation" of a tit-for-tat combat scene that lasts tens of minutes.
+This can be a combination of exciting and relaxing. Give your players
+opportunities to press their favourite buttons.
+
+That said, some players don't seek abnegation. What kinds of signals are
+your players giving you? Maybe they want to get through combat faster. If
+so, when you make your moves, you can think cinematically. Continually raise
+the stakes for both sides during the scene. Think dangerous. No character
+or set piece needs to be safe or sacred.
+
+### The Combat Spotlight
+
+Combat can play out in whatever way feels natural and follows from the
+fiction. That said, it can be taxing on a GM to come up with new, creative
+responses in combat because flips are happening frequently. So, to relieve
+some of that pressure, here are some formats to follow that guide the
+table through a combat encounter.
+
+This game doesn't have turns, but it's ok if moving the spotlight
+during combat makes it feel that way.
+
+#### Format 1
+
+This format is simple, and gives the players the most agency.
+
+  - Give each player a "turn" where they will probably trigger an aggressive
+    combat move like Mix It Up or Volley
+  - Pay attention to *FAST* combat moves that may have triggered
+  - Execute the moves, make cool stuff happen as consequences
+  - Go around the table until all the opponents flee or are incapacitated
+  - Any ✗ results may usually be interpreted as "your enemies attack". Choose
+    some opponents that weren't *just* in a Mix It Up, and declare they
+    attack one of the player's characters. Apply Might against that
+    character. Use an Might die from one attacker, and add 1 attack
+    power for each other attacker
+
+#### Format 2
+
+This format makes the opponents more of a threat.
+
+ * Give each player a "turn" where they will probably trigger an aggressive
+   combat move like Mix It Up or Volley, call that a "player round"
+ * Pay attention to *FAST* combat moves that may have triggered
+ * After player turns are complete, and the players look to you to see
+   what happens next, execute an "NPC round"
+ * Identify the opponents that didn't interact during the "player round"
+ * Describe how all of those opponents team up on one of the player's
+   characters, and call for one Defy Danger flip.
+   (move the "danger" spotlight fairly, but also try to put pressure on any
+   players with more than 3 unspent XP)
+ * Failing the Defy Danger flip results in the player's character suffering
+   the opponents' attack. You can calculate Might thusly:
+      * ✗ : one Might die from the lead attacker,
+        and add 1 Might (not die) for each other attacker
+      * ✅︎ : no Might die is rolled,
+        but 1 Might per attacker (so 3 foes = 3 Might)
+
+#### Format 3
+
+This format imagines the opponents as particularly quick and aggressive.
+
+  - Give each player a "turn" where they will trigger a move
+  - Pay attention to *FAST* combat moves that may have triggered
+  - When describing the outcome of a player's move, also describe how the
+    opponents take aggressive action.
+  - Keeping the spotlight on that player, have them respond to the actions
+    of their foes, usually by needing to follow their first flip with a
+    Defy Danger flip.
+  - Allow players to avoid the opponent's aggressive action if their first
+    flip specifically provided for it, and it makes sense in the narrative.
+    (See Backstab, Bum Rush, Volley)
+
+
+#### Your Format
+
+These combat format suggestions are just that - suggestions. Players often
+think up creative solutions or approaches that you won't have predicted
+beforehand, and that might break one of the above formats.
+The key is to be true to the established fiction. Also realize that you have
+power to introduce facts into the fiction. For instance, by the GM move
+you choose in response to player's failed flips.
+
+A GM's role is not to be the opponent of the players. You're not trying to
+make their characters *die*. On the contrary, you should be a *fan* of the
+characters. The best story is one where they struggle, but succeed.
+
+
+
+### Closing a combat interlude
+
+ * All players may use the Take a Breather move, flipping Str.
+ * Gather up all the cards of the Combat deck
+ * Remove the combat-specific Deal Damage cards and replace them with the
+   Shadow cards
+ * If *any* of the PCs have survived the Combat interlude without being
+   incapacitated, one ✔ token is added to a ✔ progress bar, players choice
+ * If *all* of the PCs survived, add one more ✔ token
+
+The GM Move Deck instead of "Shadow" cards, has "Deal Damage" cards
+
+The GM Move deck is shuffled going into and exiting from a combat interlude, so
+triggering combat can be a way for players to avoid an upcoming Shadow or
+Death card.
+
+#### Loot
+
+After combat, the players may propose that their characters sift through
+the battlefield looking for valuables. Let the characters find whatever you
+think would be most fun, or something inspired by the Touchstone List, or
+ask the players questions to figure out what boons or treasure were won from
+their adversaries.
+
+Sometimes nobody will have a concrete idea of what the loot was, and that's
+okay too.
+
+If the characters slay a pack of werewolves, and then search the bodies,
+and the table can't immediately come up with an idea for what beneficial
+gear was dropped by feral, nearly naked humanoids, you can write
+"What we found on the werewolves" on a blank card, and give that to one
+of the players.
+
+Later in the game, when the rules demand Item or Pack cards be spent, the
+"What we found on the werewolves" card may be spent, if the players can
+justify it. It can even be considered *precious* if the fiction supports it.
+
+If the loot is a weapon, its power should not be greater than the most
+powerful weapon a party member already possesses, unless it is the weapon
+created by the Tales of a Weapon move. If the loot has a magical
+effect, it should only have charge capacity of 1.
+
+
+## Pursuit Interludes
+
+`TODO`
+
+### Entering Pursuit Interludes
+
+`TODO`
+
+### Closing a Pursuit Interlude
+
+`TODO`
+
+
+
+# Scenes
+
+This game has 2 types of Scene, "downtime" and "adventure".
+The game transitions from downtime to adventure and back again to
+downtime, repeating in a "loop".
+
+Adventure activities involve risk, exploration, and confrontation.
+Adventuring will incur costs on the characters in the form of injury,
+damage to items, and spent magical charges, but it will also
+let the players build up resources like XP and loot.
+
+Downtime activities are less risky. In these activities, the costs and
+benefits are known upfront, like shopping, healing, and studying.
+When injuries and treasures have built up, the players will seek a
+**town** (any place whose inhabitants offer services and trade)
+to salve their hurts, exchange their loot for exciting new
+gear, and learn new skills.
+With that done, the players should be hungry to put their new skills
+and gear to use, and thus head out again for adventure.
+
+Each transition gives the GM a lot of opportunity to shape the narrative,
+so when possible, these transitions should be exploited to earn
+a *Journey point*.
+
+
+## Adventure Scenes
+
+### Components for an Adventure Scene
 
  * The scene page
    * Title
@@ -918,7 +1254,7 @@ developments, or adding pressure when things go wrong - mirroring the kind of
 beats you'd see in a screenplay’s midpoint reversal or at a novel’s crisis.
 
 
-## Procedures for a scene
+### Procedures for an Adventure Scene
 
 1. A "scene" is created and described by using the Narrative Authority Waterfall to
 answer the following questions:
@@ -1119,7 +1455,7 @@ How can a scene end in a bad outcome while the plot still moves forward?
  * An overpowering force transports the party to a new location
 
 
-## Closing a scene
+### Closing an Adventure Scene
 
  1. Clear any tokens from Unfold Mystery
  2. For any unfinished floating stake, move it near the GM sheet. The GM answers one question:
@@ -1128,31 +1464,47 @@ How can a scene end in a bad outcome while the plot still moves forward?
    * Behind what riddle is this hidden?
 
 
-# Combat interlude
 
-Foes are created with Stamina progress bars, per formula.
+## Downtime Scenes
 
-## When a combat interlude begins
+If the characters are not in a town, the moves available during
+downtime are:
 
- * Gather up all the cards of the GM Move deck
- * Remove the Shadow cards and replace them with the combat-specific Deal
-   Damage cards
+ * Rest
+ * Sharpen and Stitch
+ * Seek Help (only if it makes narrative sense)
+ * Tales of a Weapon
 
-## Closing a combat interlude
+In a town, three additional moves are available:
 
- * All players may use the Take a Breather move, flipping Str.
- * Gather up all the cards of the Combat deck
- * Remove the combat-specific Deal Damage cards and replace them with the
-   Shadow cards
- * If *any* of the PCs have survived the Combat interlude without being
-   incapacitated, one ✔ token is added to a ✔ progress bar, players choice
- * If *all* of the PCs survived, add one more ✔ token
+ * Study Under a Master
+ * Shop / Procure
+ * Obsessive Contemplation
 
-The GM Move Deck instead of "Shadow" cards, has "Deal Damage" cards
+There is an important choice that a player must make during downtime, and
+that is, what to spend their time doing. Their character can't do everything
+in one day. In particular, in one day these moves are mutually exclusive:
 
-The GM Move deck is shuffled going into and exiting from a combat interlude, so
-triggering combat can be a way for players to avoid an upcoming Shadow or
-Death card.
+ * Rest
+ * Study Under a Master
+ * Shop / Procure
+ * Obsessive Contemplation
+
+Additionally, Sharpen and Stitch can only be done while resting, so it is
+effectively mutually exclusive with the latter 3 moves.
+
+If the GM wants to give the players' characters a second day in town before
+any action takes place, a *Journey point* must be spent.
+(See [Using Journey Points](#using-journey-points))
+
+Otherwise, on the second day, the GM should present some situation that
+demands immediate attention. Put something at risk if necessary. Remember,
+this is a world of danger, nothing is safe or sacred.
+
+The players may still ignore the situation and keep performing downtime moves
+on the second day -- in that case, narrative consequences should be honestly
+described. What opportunity has been forever lost? What did the evil forces
+accomplish because the heroes lingered?
 
 
 
@@ -2070,279 +2422,6 @@ cross over and **play**, explore our unconsciousness, and find ourselves
 changed by what we confronted, unchained, poked, or set free down there.
 
 
-# Creating Challenges
-## Puzzles
-## Monsters
-## Villains
-# Entering Combat Interludes
-# Exiting Combat Interludes
-# Entering Pursuit Interludes
-# Exiting Pursuit Interludes
-
-
-
-# Creating A Combat Encounter
-
-As the narrative develops, the PCs will be faced with challenges and conflicts.
-Sometimes they will be confronted with NPCs or monsters who mean to do them
-harm. Nonviolent options like negotiation or escape may still be valid in
-these situations, but players will often choose to confront their antagonists
-with steel.
-
-Combat encounters don't have to be simple zero-sum games. Think about the
-narrative stakes as well. When swords are drawn, put something besides life
-and limb in jeopardy -- information, resources, social standing, risk of alarm.
-
-When a scene breaks out in violence, you'll need to get your GM worksheet
-and write down a few stats for the party's foes.
-
-If the foe is a fear-inducing monster, keep in mind the rules of the
-[Monsters](#monsters) chapter as you step through this process.
-
-First, write down the names of each foe.
-Beside each name, write the foe's Might (d4, d6, d10).
-Beside that, draw ticks or spaces for their Stamina points.
-
-![GM Worksheet](images/gm_worksheet_filled.png){ width=7cm }
-
-For monsters or foes with high Might or stamina, spend *Shadow points*
-according to this table.
-
-| Shadow points       | Foe augmentation
-|---------------------|------------------
-| 2                   | Might d6
-| 4                   | Might d10
-| 1                   | monster has 11-15 stamina
-| 2                   | monster has 16-20 stamina
-| 1 per               | monster special attack / immunity
-
-
-Foes' Stamina and Might should be realistically scaled
-to the "scrappy adventurer" level of the players.
-Help the players estimate the threat they face by giving the foes fitting
-descriptions.
-This table should help.
-
-|                   | Stamina points | Might
-|-------------------|----------------|-------------
-| Children          | 2              | 1
-| Civilians         | 4              | 1 - 1d4
-| Bouncers, Guards  | 5-6            | 1d4
-| Trained Soldiers, Elite Guards  | 7-10 | 1d4 - 1d6
-| Monsters          | 5-20           | 1d4 - 1d10
-| Villains          | 5-10           | 1d4 - 1d10
-
-
-Generally, human opponents will have 1 Might when unarmed and 1d4
-Might when armed. Save greater Might for monsters and special
-villains.
-
-Remember that foes' power can be exerted in more ways than just their
-Stamina and Might. Challenges may arise from the antagonist's superior
-knowledge of the environment, magical abilities, political connections,
-or other types of fictional positioning.
-
-As you spend more time playing, you will find it faster and easier to
-create these encounters and write up the stats in the GM Worksheet. If the
-players at your table are signaling that they enjoy the challenge of combat
-encounters and mastering the combat mechanisms embodied by their characters,
-then you can use the appendix
-[Mathematical Combat Balance](#appendix-1-mathematical-combat-balance)
-to create encounters that are more objectively balanced and satisfy the type
-of player that delights in system mastery.
-
-However, If all that math feels a little too "gamey" for your table, just
-wing it.
-Create encounters as demanded by the established fiction, or take the
-following pre-balanced examples as a starting point, and adjust as you please.
-
-## Example combat encounters
-
-### Easy - A pair of guards taken by surprise
-
-`TODO: illustration`
-
-The PCs way is blocked by a pair of guards who are sleeping or distracted by a
-game of dice. They have 6 stamina points, and short swords (1d4 Might).
-As long as the PCs don't bungle their approach, they will have an opportunity
-to attack first or attack from range.
-
-If the guards believe they have no hope of winning, they will flee or give up
-and beg for mercy.
-
-### Medium - A lieutenant and his soldiers
-
-`TODO: illustration`
-
-The PCs turn a corner or open a door and stumble into a planning session
-presided over by a lieutenant and his subordinates (there are as many
-subordinates as there are PCs).
-They are the swords-first, questions-later types and attack immediately at
-close range. The 3 soldiers have 6 stamina points and do 1d4 Might.
-The lieutenant has 8 stamina points and Might of 1d6.
-
-The lieutenant will never surrender, but if the rest of their allies are cut
-down, a single soldier left standing may lose his nerve and give up.
-
-### Hard - The swamp beast
-
-`TODO: illustration`
-
-The PCs are surprised by a *thing* that springs up from the muck and launches
-a surprise attack.
-
-The beast is introduced when a player flips an ✗, so the GM makes the "Escalate
-the danger" move and additionally deals 1d4 damage to one of the PCs as the
-beast makes glancing contact with its fierce claws.
-
-This thing fights to the death and has 12 stamina points. It bites and slashes
-for 1d10 Might.
-
-Special attack: the beast can disappear into the muddy terrain and later
-spring up behind the most vulnerable PC, as long as that PC is standing in
-the beast's territory.
-
-### Give hints
-
-Players will perceive the game as either "fair" or "unfair" partly based
-on how the foes are described by the GM before the combat begins. Always
-describe the confrontation in a way that hints at the difficulty.
-
- * The two guards *exchange an unsure look and step forward*
- * The salty pirate flashes his blade, but *simultaneously takes a step
-   backwards towards his ship*
-
- * The golem is *gargantuan and covered in scars from many battles*
- * The *horde* of undead wolves stare at you with *unrelenting hunger*
- * The old woman with the walking stick is *unfazed by your threats* and,
-   *after looking you up and down, turns away with an air of dismissal*
-
-
-## The feel of combat
-
-In combat, it's ok if play gets more formulaic. Some players enjoy
-the "abnegation" of a tit-for-tat combat scene that lasts tens of minutes.
-This can be a combination of exciting and relaxing. Give your players
-opportunities to press their favourite buttons.
-
-That said, some players don't seek abnegation. What kinds of signals are
-your players giving you? Maybe they want to get through combat faster. If
-so, when you make your moves, you can think cinematically. Continually raise
-the stakes for both sides during the scene. Think dangerous. No character
-or set piece needs to be safe or sacred.
-
-## The Combat Spotlight
-
-Combat can play out in whatever way feels natural and follows from the
-fiction. That said, it can be taxing on a GM to come up with new, creative
-responses in combat because flips are happening frequently. So, to relieve
-some of that pressure, here are some formats to follow that guide the
-table through a combat encounter.
-
-This game doesn't have turns, but it's ok if moving the spotlight
-during combat makes it feel that way.
-
-### Format 1
-
-This format is simple, and gives the players the most agency.
-
-  - Give each player a "turn" where they will probably trigger an aggressive
-    combat move like Mix It Up or Volley
-  - Pay attention to *FAST* combat moves that may have triggered
-  - Execute the moves, make cool stuff happen as consequences
-  - Go around the table until all the opponents flee or are incapacitated
-  - Any ✗ results may usually be interpreted as "your enemies attack". Choose
-    some opponents that weren't *just* in a Mix It Up, and declare they
-    attack one of the player's characters. Apply Might against that
-    character. Use an Might die from one attacker, and add 1 attack
-    power for each other attacker
-
-### Format 2
-
-This format makes the opponents more of a threat.
-
- * Give each player a "turn" where they will probably trigger an aggressive
-   combat move like Mix It Up or Volley, call that a "player round"
- * Pay attention to *FAST* combat moves that may have triggered
- * After player turns are complete, and the players look to you to see
-   what happens next, execute an "NPC round"
- * Identify the opponents that didn't interact during the "player round"
- * Describe how all of those opponents team up on one of the player's
-   characters, and call for one Defy Danger flip.
-   (move the "danger" spotlight fairly, but also try to put pressure on any
-   players with more than 3 unspent XP)
- * Failing the Defy Danger flip results in the player's character suffering
-   the opponents' attack. You can calculate Might thusly:
-      * ✗ : one Might die from the lead attacker,
-        and add 1 Might (not die) for each other attacker
-      * ✅︎ : no Might die is rolled,
-        but 1 Might per attacker (so 3 foes = 3 Might)
-
-### Format 3
-
-This format imagines the opponents as particularly quick and aggressive.
-
-  - Give each player a "turn" where they will trigger a move
-  - Pay attention to *FAST* combat moves that may have triggered
-  - When describing the outcome of a player's move, also describe how the
-    opponents take aggressive action.
-  - Keeping the spotlight on that player, have them respond to the actions
-    of their foes, usually by needing to follow their first flip with a
-    Defy Danger flip.
-  - Allow players to avoid the opponent's aggressive action if their first
-    flip specifically provided for it, and it makes sense in the narrative.
-    (See Backstab, Bum Rush, Volley)
-
-
-### Your Format
-
-These combat format suggestions are just that - suggestions. Players often
-think up creative solutions or approaches that you won't have predicted
-beforehand, and that might break one of the above formats.
-The key is to be true to the established fiction. Also realize that you have
-power to introduce facts into the fiction. For instance, by the GM move
-you choose in response to player's failed flips.
-
-A GM's role is not to be the opponent of the players. You're not trying to
-make their characters *die*. On the contrary, you should be a *fan* of the
-characters. The best story is one where they struggle, but succeed.
-
-
-## Ending A Combat Interlude
-
-### Marking Progress
-
- * No PCs are incapacitated: 2 green progress 
- * Some, but not all PC are incapacitated: 1 green progress 
-
-### Loot
-
-After combat, the players may propose that their characters sift through
-the battlefield looking for valuables. Let the characters find whatever you
-think would be most fun, or something inspired by the Touchstone List, or
-ask the players questions to figure out what boons or treasure were won from
-their adversaries.
-
-Sometimes nobody will have a concrete idea of what the loot was, and that's
-okay too.
-
-If the characters slay a pack of werewolves, and then search the bodies,
-and the table can't immediately come up with an idea for what beneficial
-gear was dropped by feral, nearly naked humanoids, you can write
-"What we found on the werewolves" on a blank card, and give that to one
-of the players.
-
-Later in the game, when the rules demand Item or Pack cards be spent, the
-"What we found on the werewolves" card may be spent, if the players can
-justify it. It can even be considered *precious* if the fiction supports it.
-
-If the loot is a weapon, its power should not be greater than the most
-powerful weapon a party member already possesses, unless it is the weapon
-created by the Tales of a Weapon move. If the loot has a magical
-effect, it should only have charge capacity of 1.
-
-
-
 
 # Using Journey Points
 
@@ -2713,10 +2792,11 @@ constant, rejecting the change that a hero must accept to truly be a hero.
 
 ---
 
-#Appendices
+# APPENDICIES
 
+---
 
-## Appendix 1 - Mathematical Combat Balance
+# Appendix 1 - Mathematical Combat Balance
 
 This is a simple 3-step process.
 
@@ -2724,7 +2804,7 @@ This is a simple 3-step process.
  2. Create the foes
  3. Augment the foes
 
-### Calculate Party Power
+## Calculate Party Power
 
 Party Power is an estimate of the PCs' combined effectiveness in combat.
 The fundamental premise is that if a 10-stamina-1d4-damage PC repeatedly
@@ -2735,7 +2815,7 @@ Party Power is an easy number to calculate, based on each PC in the scene.
 
 ` Party power = (10 × (# of PCs)) + (# of XP the PCs have) `
 
-### Create the foes
+## Create the foes
 
 Use the Party Power to figure out the number of foes the PCs will face
 and what attributes those foes will have.
@@ -2761,7 +2841,7 @@ the foes (6 if the foes are human, or 10 if the foes are monsters).
     40 ÷ 10 is 4, so there are 4 foes. All of the Party Power has been
     allocated into Stamina points.
 
-### Augment the foes
+## Augment the foes
 
 After deciding how many foes the PCs face, continue to use the above table
 to allocate the remainder of the Party Power.
@@ -2774,14 +2854,14 @@ Foe augmentation then proceeds by spending Shadow points as described in
 [Creating A Combat Encounter](#creating-a-combat-encounter).
 
 
-## Ludic Listening Tips
+# Ludic Listening Tips
 
 
 Your job as a GM is to listen and look for signals from the players about
 what *kind* of fun they want to have, and then to insert that kind of fun
 into the game.
 
-### Signals From Components
+## Signals From Components
 
 An easy signal to notice is the physical material sitting in front of each
 player. If it's in front of a player, their choice has put it there, and
@@ -2800,7 +2880,7 @@ What is the state of a player's Deckahedron and XP? Is there opportunity to
 play with the tension of stamina and wounds? Is the player waiting to spend
 XP during epic action sequences?
 
-### Subtler Signals
+## Subtler Signals
 
 Catching signals is different for every GM. It's a skill that develops with
 time and its never expressed in quite the same way. Being sensitive to your
@@ -2831,7 +2911,7 @@ questions. Your table is be unique, and you're all working together to
 create the kinds of fun that are most rewarding.
 
 
-## Attribution
+# Attribution
 
 Some of this text is from Dungeon World Copyright 2012,
 Sage Kobold Productions; Authors Sage LaTorra and Adam Koebel.
@@ -2843,9 +2923,9 @@ Special thanks to Avery Alder.
 Additional Consultation Adam Koebel.
 
 
-## Optional rules
+# Optional rules
 
-### Character Creation: Choosing move cards
+## Character Creation: Choosing move cards
 
 For experienced players, moves can be chosen by drafting cards.
 
