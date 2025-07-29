@@ -54,10 +54,9 @@ Playing as a GM, you will:
  * describe scenes
  * give Non-Player Characters (NPCs) names, voices, motivations,
    and behavior
- * confront the other players with challenges and dangers
+ * confront the PCs with challenges and dangers
  * ask the other players questions
  * gain and spend Journey Points and Shadow Points
- * take some notes in your GM Worksheet
  * administer the Narrative Authority Waterfall
  * deeply practice Ludic Listening
 
@@ -87,22 +86,18 @@ is called a *campaign*.
 
 There are 3 supported campaign lengths: **One-Shot** -- a campaign that
 begins and ends in a single session, **9-hour** -- a campaign that takes
-3 sessions, and **30-hour**, which spans up to 10 sessions.
+3 sessions, and **30-hour**, which can span up to 10 sessions.
 
 New players should start with a One-Shot campaign.
 
 ## Organization
 
-This guide covers a lot of ground, from conversations that happen before
-the game has even started, to the connection stories have to our inner
-humanity, to how many points of damage a trap incurs.
+This guide covers a lot of ground, from the stance to take when playing
+as a GM, to the connection stories have to our inner humanity,
+to how many points of damage a trap incurs.
 
-It is recommended that you read the guide once over, and then use it as
-reference, picking particular sections to concentrate on one-at-a-time.
-
-If you'd rather start by getting a taste of what this game is all about,
-you are recommended start with the [First-time Players](#first-time-players)
-section, and then come back to the beginning.
+Read the guide once over, and then keep it handy so you can refer to
+the rules, picking particular sections to concentrate on one-at-a-time.
 
 <div class="note">
 
@@ -117,55 +112,72 @@ of conveying just what the game is and how it is played.
 
 </div>
 
-This guide will equip you with the following information:
-
- * Campaigns: The structure of the narrative
- * Guidance: How to execute your role as GM
- * The procedure to walk first-time players through
- * Procedures for specific game activities
- * Appendices - extra detail and optional rules
 
 ## The Role of the GM in A Thousand Faces of Adventure
 
 The GM is part narrator, part host, part referee. It's a lot! How does a GM
 *play* this game?
 
-Crucially, know that the GM is a **player** who *makes moves*.
-Primarily, when an ✗ gets flipped, you get to make a move.
+Crucially, know that the GM is a **player** who *responds to questions
+asked by the game*. Each of the procedures prompts the GM with questions.
+When an ✗ gets flipped, the GM Move deck will prompt you with questions.
+When a scene begins, you are prompted with a list of questions.
 
-You also get to make a move when:
+Additionally, a GM will gather and spend 2 resources: Shadow Points
+(representing looming dangers and difficulties) and
+Journey Points (representing divine favor, miracles, and supernatural
+balance).
 
- * Everyone at the table looks to you
- * A PC takes an action that you have especially prepared for
+These are currency of the narrative marketplace, they're the syntax of
+satisfying drama.
+Just as players narrate their character's moves and manage their resources
+to overcome danger, you answer questions and manage points to shape the
+world, heighten tension, and evoke myth.
 
-Always **Describe the immediate situation around the characters**. This
-is how you start a session, how you get things rolling after a snack break,
-get back on track after a great joke: tell them what the situation is in
-concrete terms.
+As a GM, playing well is not just measured in the abundance of points you
+spend, but how you use them to shape the story.
 
-Use detail and *senses* to draw them in. The situation isn't just an orc
-charging you, it's an orc painted in blood swinging a hammer and screaming
-orcish battle prayers. You can leverage a lack of information, too. The
-sound of clattering armor and shuffling feet, for instance.
+The way you apply your resources and answer your questions should always aim to:
 
-The situation around the players is rarely "everything's great, nothing to
-worry about". They're adventurers going on adventures -- give them something
-to react to.
+**Portray the world of the Touchstone List**
 
- * Fill the characters' lives with adventure
+Players are called to the table to inhabit a fantasy world shaped by the
+stories on the Touchstone List. When the GM speaks, we should see echoes of
+the chosen titles, whether grim kingdoms or cartoonish bombast. Use references,
+set up identical love triangles or political chain reactions, steal entire
+set pieces.
 
-**Filling the characters' lives with adventure** means working with the
-players to create a world that's engaging and dynamic. Adventurers are
-always caught up in some dangerous situation or another -- encourage and
-foster that kind of action in the game.
+**Fill the PCs' lives with adventure**
 
-Always portray a setting in motion -- someplace significant with creatures
-big and small pursuing their own goals. As the players come into
-conflict with that setting and its denizens, action is inevitable. You’ll
-honestly portray the repercussions of that action.
+As you answer questions, keep the world in motion.
+Push the characters toward hard choices, dangerous crossroads, and surprising truths.
+Let their actions matter. Let their foes
+grow bolder. Let the moon rise red over a broken peace, and put the PCs at
+the crux.
 
 Introduce challenges. Unfriendly NPCs, monsters, puzzles, or the troubles
 of the setting should regularly confront the characters.
+
+When in doubt, escalate. Put the reward of meaning behind the gate of action.
+Enshrine narrative resolution at the journey's end, but put risky choices along
+that path.
+
+**Play to Find Out What Happens**
+
+GMing is not recitation. Do not deliver a prewritten tale.
+You are at the table, along with the other players, to discover the myth as it unfolds.
+
+The rules will guide. The cards will provoke. The players will surprise.
+Welcome all of it. Build scenes that ask questions you do not already know
+the answers to. Let the story shift when players make a bold choice, or
+when fate turns a card against them.
+
+You will have ideas ready to summon, and theories for how the mysteries
+might resolve. You will anticipate monsters and prepare situations drawn from
+the Touchstone List. That is good. Use this cache to support play, selecting
+what fits when providence calls.
+Let them give way when play reshapes the course of the story.
+
 
 ---
 
@@ -176,44 +188,48 @@ of the setting should regularly confront the characters.
 # Lift From Touchstones
 
 One of the first things your group will do when you begin a campaign is
-create a universe -- the fictional setting in which the PCs will be
-adventuring. We call this setting the [Touchstone List](#establish-touchstones).
+create a universe -- the fictional setting in which the PCs will have
+their adventure. This setting is called the [Touchstone List](#establish-touchstones).
 
-A Thousand Faces of Adventure is about characters who have decided to
-take up an adventure in the hopes of fulfilling a strong need. It's your job
-to participate in that by showing the players a mysterious and dangerous
-world in which their characters can find that adventure.
-Without the player characters in the world, calamity would ruin something
-precious.
-Maybe even the whole world would fall into chaos or destruction -- it might
-still, even with them.
+A Thousand Faces of Adventure is about characters who choose to
+take up an adventure in pursuit of something they deeply need. It's your job
+to show the players the mysterious and dangerous world where their PCs
+find that adventure.
+Without the brave actions of the PCs in the world, calamity will certainly
+ruin something precious.
+Without the PCs, maybe the whole world would fall into chaos or destruction
+-- and maybe it still will, even with them.
 It's up to you to portray the fantastic and bizarre elements of that world.
 Show the players the wonders of the world they're in and encourage them to
 react to it.
 
-Always know that the Touchstone List is there to support you in portraying
+The Touchstone List is here to support you in portraying
 this world. Look at the titles written there. Remember those books,
 movies and TV shows, and lift something directly from those stories. Lift
 animals, characters, set pieces, environments, situations,
 lift whole cities if you want to.
 Remember Picasso's words: "Good artists copy, great artists steal".
 
-The main point is to describe and emphasize the fictional situation to the
-players at the table. Give the players details so that they can grasp the
-stakes of their decisions.
-Give the players inspiring material to help them come up with answers when
-you ask them questions.
+Always give the players details they can work with.
+ * Describe fictional situation at multiple zoom levels
+ * Emphasize the details that are important to, and graspable by, the PCs
+ * Offer cool, weird, inspiring material, so when players are asked questions,
+   their minds are already swimming with ideas
+
+Show a Touchstone-inspired world worth saving, and let the players show you
+what kind of heroes they want to be.
 
 # Apply Authority
 
 In *A Thousand Faces of Adventure*, the GM holds certain narrative authority.
 Like a chorus, this game sings with collaboration, but to keep the rhythm,
-someone must conduct the ups and downs. That's you.
+someone must conduct the swells and silences. That's you.
 
 The Table Guide introduced the *Narrative Authority Waterfall*: even when
 the GM is answering the game's questions, you are not alone. You can pose
-those questions to the table, harvest their visions, even pause to riff.
-But in some moments of play, authority rests with the GM alone.
+those questions to the table, then harvest what comes up from the
+responses, riffs, and digressions. But in some moments of play,
+authority rests with the GM alone.
 
 ## Call for flips
 
@@ -263,19 +279,44 @@ are called to break a tie, do it decisively and then keep moving.
 
 # Journey Points
 
-When you have time in the spotlight, and the set-up has been established,
-take the opportunity to earn a *Journey point* by taking the plot to another
-milestone in the Hero's Journey.
+Journey Points are the GM's rarest resource, gained when the story resonates
+with a specific note of the Hero's Journey. Each Chapter (see Campaigns) holds
+an opportunity to gain a Journey Point when a specific narrative condition is
+met.
+The conditions vary chapter by chapter. For example:
+ * In Chapter One of the One-Shot Campaign, gain a Journey Point when the
+   PCs cross a threshold by making a true choice.
+ * In Chapter Two, gain one if you hold zero Shadow Points when the chapter
+   closes.
 
-Look to the [Campaigns section](#campaigns) and
-decide which milestone the current fictional situation is well set-up for.
+Journey Points are a reward for weaving meaningful, resonant narrative beats
+into the campaign's arc. But remember that the players don't have to bite on
+every hook. Allow the story to surprise you. Don't fight it when things to go
+sideways. You can always skip it or try again.
 
-Remember that the players don't have to bite on every hook. Don't fight it
-when things to go sideways. You can always skip it or try again.
+Spending Journey Points allows you to make bold, mythic interventions:
+A dead hero stirs, gasping. A chariot of starlight streaks through the sky.
+A fearful community finally takes up arms in alliance.
+
+Find the full rules for gaining and spending Journey Points in PART 2: PROCEDURES.
+
 
 # Shadow Points
 
-`TODO`
+Where Journey Points reflect the epic arc, Shadow Points are much more
+grounded, and much more volatile. Shadow Points are gained during play as
+an output of certain card flips (usually when a player’s fate takes a
+darker turn).
+
+They're the GM's moment-to-moment currency, spending them lets you
+ * Strengthen the foes and monsters confronting the PCs
+ * Spring ambushes and load traps
+ * Wrest narrative control with a sudden GM Move
+
+Shadow Points are meant to be spent freely and often. They are the teeth
+of the hidden horrors. They are the fuel strethening the shadow.
+
+The rules for gaining and spending Shadow Points are in PART 2: PROCEDURES.
 
 
 # Move the spotlight
@@ -535,14 +576,15 @@ each other.
 > Those are some examples, but the choice is up to you. What will be
 > The Hearth of this band of adventurers?
 
-This answer will be known as The Hearth.  Write it down on the same sheet
-as the Touchstone List and label it "The Hearth".
+This answer will be known as The Hearth.  Write it down in the space provided
+on the GM Sheet.
 
 Next, go around the table again and ask:
 
 > Briefly, why would your character risk their life for The Hearth?
 
-Write down the answers on your character sheet.
+As each player answers this question, have them write the answer down
+on their character sheet, and move a Shadow Point onto the GM Sheet.
 
 An important aspect of The Hearth is that it must be something that the
 characters can be separated from. When the players are deciding on The
@@ -625,9 +667,9 @@ continent, zoom in to a specific region, then to a city or town, then to a
 neighborhood, then to a building and ending when you're in the room with
 the player's characters.
 
-Everybody at the table has seen movies before, you can use that fact to talk
-about "the camera". You can use words like "pan" and "fade in", and everyone
-will naturally get it.
+Use everyone's familiarity with movies to talk about "the camera". Cinema
+jargon like "pan" and "fade in", can be effective at lining up the
+imaginations of the table.
 
 Narrate this opening image, then move on to constructing the first scene
 and its stakes.  Consult the standard "Scenes and Stakes" procedure and
@@ -637,19 +679,26 @@ length.
 
 # Nesting Structures and Transitions
 
-The gameplay of A Thousand Faces of Adventure is structured like this:
+The gameplay of A Thousand Faces of Adventure unfolds in nested layers:
 
 ![Nested Structure](images/nested_structure.png){ width=7cm }
 
+The diagram shows how gameplay zooms in from large arcs (Campaigns)
+to moment-to-moment choices (Dramatic Action, Combat, Pursuit),
+with each layer connected by structured transitions.
+
 Campaigns are made up of chapters.  Chapters are made up of scenes.
-Scenes start with Dramatic Action, and transition to Combat and Pursuit
-Interludes and back to Dramatic Action.
+Scenes always open with Dramatic Action (decisions, roleplay, investigation).
+From there, based on cards and Fictional Positioning, they transition
+into Combat or Pursuit Interludes and cycle back to Dramatic Action.
 
 Each tranisition has some small set of procedures.  Scenes open and close.
 Stakes and foes get introduced.
 
 In addition, the 9-hour and 30-hour campaigns cointain "Downtime scenes",
-wherein characters rest, develop skills, and research lore.
+wherein characters rest, develop skills, and research lore. Downtime scenes
+provide space for transformation: characters heal, train, and unravel
+mysteries between the more action-oriented scenes.
 
 The following few chapters will introduce these concepts starting from the
 most granular (Dramatic Action, Combat and Pursuit Interludes) and ending
@@ -658,198 +707,134 @@ with the broadest (Chapters).
 
 # Dramatic Action
 
+**Dramatic Action** is the part of the scene where you're in the thick of
+the story. It's the conversational heart of a scene,
+it contains the conversations, investigations, schemes and other decisive
+steps of the PCs -- anything that transpires before a chase or combat begins.
+
+In this most versatile and open-ended mode of play, PCs might:
+
+ * **Debate** a suspicious village elder.
+ * **Ransack** a ruined library for forbidden texts.
+ * **Cast spells** to divine an enemy’s true nature.
+ * **Bargain** with a reluctant god.
+ * **Forge a plan** in hushed whispers behind enemy lines.
+
+Think of Dramatic Action as the ground state of a scene, where the
+scene settles to between moments of intense violence or chaos. It's where
+characters pursue their goals through cleverness, magic, skill, or social
+pressure, setting up tension, transformation, and surprise. If Combat and
+Pursuit are the game's storms, Dramatic Action is the weather before and
+after.
+
+During Dramatic Action, players will trigger specific moves, but much
+will also unfold via roleplay and Diegetic Dialogue. The next section will
+guide you through the GM Moves of Dramatic Action, outlining the specific
+ways the GM can shake things up when it's their turn.
+
 ## Dramatic Action GM Moves
 
-Often the players will move the story forward by having their characters
-talk and do actions that are certain (you don't call for flips unless actions
-or consequences are uncertain), so there may be long stretches where a GM
-doesn't need to jump in.
+The players will execute plans and anticipate challenges.  Their characters
+will make progress and overcome obstacles. But stories of excitement and
+adventure must not be without surprise: schemes gone awry, dangers unforseen,
+and occasional calamity. That's where GM Moves come in.
 
-But when your turn comes, here are the options available to shake things up:
+GM Moves are typically invoked when a player flips an ✗, but you can also
+spend a Shadow Point to perform one when you decide, interrupting
+the rhythm of player moves like a sudden trumpet blast.  When an ✗ is flipped,
+you'll reveal two cards from the GM Deck and pick one.  When using a Shadow
+Point to perform a GM Move, you can choose any of the moves from the GM Deck
+or the GM Discard Pile.
 
- * Escalate the danger
- * Reveal an unwelcome truth
- * Show signs of an approaching threat
- * Deal damage
- * Use up their resources
- * Turn their move back on them
+During Dramatic Action, these are the available GM Moves:
+
+ * Escalate the danger 
+ * Deal damage 
+ * Pivot 
+ * A price too dear
+ * A threat approaches 
+ * All eyes upon them 
+ * Use up their resources 
  * Separate them
- * Give an opportunity that fits a player's cards or character's background
- * Show a downside to their appearance, reputation, or equipment
- * Offer an opportunity, with or without cost
- * Tell them the requirements or consequences and ask
 
-During the execution of a GM move, tools may be employed to generate ideas
-and make decisions:
+These will be detailed in an upcoming section.
 
- * Ask players questions
- * Ask players to reveal a card from their Deckahedron (this doesn't count
-   as a flip, this is just the GM using randomness to help make a decision)
- * Put on some music
-
-Try to keep up the excitement and pace of play with your GM moves, but also
-know that it's ok to invest a little in making them significant and to pause
-for a second to think through some repercussions. Will the move you make
-drive the story toward your next *Journey point*?
-
-Note that the move you execute in play may actually overlap multiple moves
-on this list. That's ok, creating honest fictional responses sometimes
-demands it. For example, "deal damage" is a move, but other moves may include
-damage as well.
-
-### A GM move is not restricted to the player move that caused it
-
-Understand that when a player resolves a flip with ✗, that doesn't always
-mean that the thing they were attempting fails.
-
-The GM is free to let the character accomplish the thing, but may use the
-flip result to bring new action and intrigue into the story.
-
-Let's say a player's character is a thief infiltrating a stronghold, hired
-to steal a fabled yellow amulet. Maybe the character attempts to climb over
-a wall to avoid being seen by guards. Consider the following consequences
-of an ✗:
-
- * You fail to get over in time and the guards start yelling and pulling at
-   your boots
-   (Escalate the danger)
- * You climb over, but as you do so, you overhear the guards in friendly
-   conversation with someone that sounds a lot like the fence that hired you
-   for this caper
-   (Reveal an unwelcome truth)
- * You climb over. You pause for a second to listen for the guards' passing.
-   You hear their footsteps slow, then stop. Have they found something?
-   Suddenly, one barks an order "Get to the tower and sound the alarm. Run!"
-   (Show signs of an approaching threat)
- * You climb over. The camera pans up to the dark sky, we see grey feathered
-   beasts with the faces of birdlike wolves, each flap of their wings loud and
-   ominous. Their tails end in a glowing yellow shape extremely similar to the
-   description of the amulet.
-   (Show signs of an approaching threat)
-
-The first example is pretty straightforward, a thing was tried, it
-failed, the character suffers the direct consequences.
-
-In the remaining three examples, the character got to the other side of the
-wall safely. A fictional cue triggered the move, the mechanisms of the rules
-were engaged, and then the GM chose to create new, separate, fictional
-badness. The fiction produced by the engaging the rules does not have to be
-constrained to the fiction that engaged them.
-
-The last example does something even more strange. It talks about a
-disembodied "camera" and portrays a scene to the *players*, but not to the
-*characters*. This is a fun stylistic choice, but it may not please every
-group. If you describe the world like a movie, you're asking players to be
-audience, not actors. Listen to your players to decide if this is right
-for your table.
-
-Always be on the lookout for signals from the players for the kind of fun
-they want to have.
+When selecting a GM Move, remember to follow the fiction and consider what
+you might add to the narrative to drive the story toward your next
+*Journey Point*.
 
 ### Escalate the Danger
+
+`TODO: an image of the card`
+
+```
+Answer: 
+    What aspect of the environment or the arrayed adversaries puts the
+    party in more danger? 
+Choose one: 
+ * Remove an advantage-granting token from the party 
+ * Use a special ability of a foe (that doesn't deal damage) 
+ * Establish fictional positioning for an obstruction or restriction 
+ * Start a combat interlude 
+```
 
 The fictional world is full of danger. Adventurers are constantly being
 surprised by what's around the next corner or the thing that has been
 stalking them from the shadows.
 
-Monsters have special attacks. Use these special attacks.
+Monsters and foes have special attacks. Use these special attacks.
 
 The location itself can produce danger. Are the PCs on a sinking ship, or
 a crumbling tomb? Announce that the deck they're on floods, or that the
 passage that led them in is now blocked by tons of rubble.
 
-### Reveal an unwelcome truth
 
-An unwelcome truth is a fact the players wish wasn't true: that the room's
-been trapped, maybe, or that the helpful goblin is actually a spy. Reveal
-to the players just how much trouble they're in.
+### Deal Damage
 
-### Show signs of an approaching threat
+`TODO: an image of the card`
 
-This is one of your most versatile moves. "Threat" means anything bad
-that's on the way. With this move, you just show them that something's
-going to happen unless they do something about it.
+```
+By default, deal 1-4 damage.  Optionally use a Shadow Point to bump it
+up to 1-6, or 2 Shadow Points to bump it up to 2-10.
 
-### Deal damage
+Shuffle the GM Move Deck
+```
 
 When you deal damage, choose one source of damage that's fictionally
 threatening a character and apply it. In combat with a lizard man?
 It stabs you. Fell off the old bridge? Land on a rock.
 
-Failed moves like Mix It Up and Defy Danger can base their damage on
-a die roll. When a player takes damage, tell them what to roll. You
-never need to touch the dice.
+### Pivot 
 
-At other times, the amount of damage might be determined by Shadow Points.
-See [Using Shadow Points](#using-shadow-points).
+`TODO: an image of the card`
 
-### Use up their resources
+```
+Take narrative control.
+Answer: 
+    What actions transpire that drastically alter the dramatic action? 
+Choose: 
+ * Transition to combat interlude 
+ * Transition to pursuit interlude 
+ * Rename any existing stakes and reintroduce the scene 
+Then: 
+Shuffle the GM Move Deck
+```
 
-Surviving in dangerous places often comes down to supplies. With this
-move, something happens to use up some resource: weapons, armor, magical
-item charges, ongoing magical effects. You don’t always have to use it
-up permanently.
+This is your "blank canvas" move.
+"Suddenly Ogres"
+"Ambush Launches, Trap doors swallow"
 
-A sword might be flung to the other side of the room. Walking across
-the shimmering barrier might end any ongoing magic effects, etc.
 
-An easy way to decide on what resource to use up is to look to the cards
-in front of a player:
+### A price too dear
 
- * End ONGOING effects of magic items
- * Remove green cards from magic items for temporary charge loss
- * Reduce magic item charge capacity
- * Place black-side red cards on mundane items for damage
- * Take away Pack cards
- * Take away Item cards (careful with this one - use only when appropriate)
- * Take away marker tokens (ie, those created by Where It Hurts, etc.)
+`TODO: an image of the card`
 
-Note, **a GM cannot take XP from a player**. Use of XP should always be
-a player choice.
-
-### Turn Their Move Back On Them
-
-Think about the benefits a move might grant a character and turn them around
-in a negative way. Alternately, grant the same advantage to someone who has
-it out for the characters.
-
-If Ivy has learned of Duke Horst's men approaching from the east, maybe a
-scout has spotted her, too.
-
-### Separate Them
-
-There are few things worse than being in the middle of a raging battle with
-blood-thirsty hawkhounds on all sides -- one of those things is being in the
-middle of that battle with no one at your back.
-
-Separating the characters can mean anything from being pushed apart in the
-heat of battle to being teleported to the far end of the dungeon. Whatever
-way it occurs, it's bound to cause problems.
-
-### Give an opportunity that fits a player's cards or character's background
-
-Every character has unique move cards for skills that they shine at, or has a
-fictional backstory that can overcome social obstacles or tests of knowledge.
-
-Present an opportunity that plays into one character's domain.
-
-It doesn't have to be a character that's in the current scene though.
-Sometimes a locked door stands between you and treasure and there's no
-lock-picking expert in sight. This is an invitation for invention, bargaining,
-and creativity.
-
-Traps, ambushes, and locked doors are great examples.
-Need some Derring-Do to avoid giant clock-tower gears?
-Maybe proof of religious or guild affiliation would confer a backstage pass?
-
-### Show a downside to their appearance, reputation, or equipment
-
-Just as every character shines, they all have their unique weaknesses too. Do
-orcs have a special thirst for elven blood? Is an ongoing flow of magic
-disturbing dangerous forces? The torch that lights the way also draws
-attention from eyes in the dark.
-
-### Offer an opportunity, with or without cost
+```
+If they refuse to pay it, flip a new GM move 
+Answer: 
+    What obstacle or complication arises, and what is the unfair price a PC can pay to overcome it? 
+If they pay it, they can choose whether the GM deck gets reshuffled 
+```
 
 Show them something they want: riches, power, glory. If you want, you can
 associate some cost with it too, of course.
@@ -859,8 +844,6 @@ so you can make camp here, if you're willing to take the time." You make it
 a solid fictional thing and say, "Helferth's blessings still hang around the
 shattered altar. It's a safe area to rest or plan, but the chanting from the
 ritual chamber is getting louder. What do you do?"
-
-### Tell the requirements or consequences and ask
 
 "Ok, everyone flees from the hammer-camels, heading towards the water, but
 let me ask this first: Samwise is wearing plate armour. If he leaves it
@@ -878,6 +861,141 @@ to the characters, not just the players.
 This can also be a good move to underscore particularly tricky dangers. Let
 the players know that if they attempt to dive between the giant clockwork
 gears, you're going to spend a *Shadow point* to increase the difficulty.
+
+
+### A threat approaches 
+
+
+`TODO: an image of the card`
+
+```
+Add a shadow point. And: 
+Add a new floating stake or foe card, not yet in this scene 
+Answer: 
+What negative consequence will arise if the party does not deal with this threat? 
+Use a shadow point. And: 
+Add an existing floating stake or floating foe adversary NPC to the scene 
+Answer: 
+What activates this threat, and how does it initiate contact with the party 
+```
+This is one of your most versatile moves. "Threat" means anything bad
+that's on the way. With this move, you just show them that something's
+going to happen unless they do something about it.
+
+
+### All eyes upon them 
+
+`TODO: an image of the card`
+
+```
+Answer: 
+What downside of the PC's appearance, reputation or equipment arises? 
+Place a disadvantage token on the player's: 
+ * Deckahedron
+ * Item card 
+ * Move card 
+That will take effect for their next flip that involves it 
+```
+
+Just as every character shines, they all have their unique weaknesses too. Do
+orcs have a special thirst for elven blood? Is an ongoing flow of magic
+disturbing dangerous forces? The torch that lights the way also draws
+attention from eyes in the dark.
+
+
+### Use up their resources 
+
+`TODO: an image of the card`
+
+```
+Answer: 
+What supply got used up, or what hand of the shadow rested away a PC's resource? 
+Choose: 
+ * End ONGOING effects of magic items
+ * Remove green cards from the magic items 
+ * Reduce magic item charge capacity 
+ * Damage mundane items 
+ * Spend a shadow point and take away an item card 
+ * Spend a shadow point and take away an item card. Then choose to spend a Shadow point and make a second choice
+```
+
+Surviving in dangerous places often comes down to supplies. With this
+move, something happens to use up some resource: weapons, armor, magical
+item charges, ongoing magical effects. You don’t always have to use it
+up permanently.
+
+A sword might be flung to the other side of the room. Walking across
+the shimmering barrier might end any ongoing magic effects, etc.
+
+An easy way to decide on what resource to use up is to look to the cards
+in front of a player:
+
+Note, **a GM can never take XP from a player**. Use of XP should always be
+a player choice.
+
+
+### Separate them
+
+`TODO: an image of the card`
+
+```
+???
+```
+
+There are few things worse than being in the middle of a raging battle with
+blood-thirsty hawkhounds on all sides -- one of those things is being in the
+middle of that battle with no one at your back.
+
+Separating the characters can mean anything from being pushed apart in the
+heat of battle to being teleported to the far end of the dungeon. Whatever
+way it occurs, it's bound to cause problems.
+
+
+
+
+
+### A GM move is more than an outcome of move that caused it
+
+Understand that when a player resolves a flip with ✗, that doesn't always
+mean that the thing they were attempting fails.
+
+The GM is free to let the character accomplish the thing, but may use the
+flip result to bring new twists into the story.
+
+Let's say a player's character is a thief infiltrating a stronghold, hired
+to steal a fabled yellow amulet. Maybe the character attempts to climb over
+a wall to avoid being seen by guards. Consider the following narrative
+consequences of a player flipping ✗:
+
+ * You fail to get over in time and the guards start yelling and pulling at
+   your boots
+   (Escalate the danger)
+ * You climb over. But there are more guards patrolling on this side of the
+   wall! You see the tower where the amulet is stored. Either make a dash
+   now, and an alarm will be raised throughout the stronghold, or climb back
+   over and confront the original guards.
+   (A Price Too Dear)
+ * You climb over. The camera pans up to the dark sky, we see grey feathered
+   beasts with the faces of birdlike wolves, each flap of their wings loud and
+   ominous. Their tails end in a glowing yellow shape extremely similar to the
+   description of the amulet.
+   (A Threat Approaches)
+
+The first example is pretty straightforward, a thing was tried, it
+failed, the character suffers the direct consequences.
+
+In the remaining examples, the character got to the other side of the
+wall safely. A fictional cue triggered the move, the mechanisms of the rules
+were engaged, and then the GM chose to create new, separate, fictional
+badness. The fiction produced by the engaging the rules does not have to be
+constrained to the fiction that engaged them.
+
+The last example does something even more strange. It talks about a
+disembodied "camera" and portrays a scene to the *players*, but not to the
+*characters*. This is a fun stylistic choice, but it may not please every
+group. If you describe the world like a movie, you're asking players to be
+audience, not actors. Ludic Listening can help you decide if this technique
+is right for your table.
 
 
 # Adventure Scenes and Stakes
