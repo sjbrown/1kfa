@@ -697,8 +697,8 @@ Stakes and foes get introduced.
 
 In addition, the 9-hour and 30-hour campaigns cointain "Downtime scenes",
 wherein characters rest, develop skills, and research lore. Downtime scenes
-provide space for transformation: characters heal, train, and unravel
-mysteries between the more action-oriented scenes.
+provide space for transformation: characters heal, train, and set course for
+new goals between the more action-demanding scenes.
 
 The following few chapters will introduce these concepts starting from the
 most granular (Dramatic Action, Combat and Pursuit Interludes) and ending
@@ -707,10 +707,11 @@ with the broadest (Chapters).
 
 # Dramatic Action
 
-**Dramatic Action** is the part of the scene where you're in the thick of
-the story. It's the conversational heart of a scene,
+**Dramatic Action** is the part of the scene where PCs are in the thick of
+the story. It's the circulatory system of a scene,
 it contains the conversations, investigations, schemes and other decisive
-steps of the PCs -- anything that transpires before a chase or combat begins.
+steps of the PCs. Questions are taken in turn with revelations and cycle
+back and forth, unless and until a chase or combat gets invoked.
 
 In this most versatile and open-ended mode of play, PCs might:
 
@@ -748,13 +749,13 @@ or the GM Discard Pile.
 
 During Dramatic Action, these are the available GM Moves:
 
- * Escalate the danger 
- * Deal damage 
- * Pivot 
+ * Escalate the danger
+ * Deal damage
+ * Pivot
  * A price too dear
- * A threat approaches 
- * All eyes upon them 
- * Use up their resources 
+ * A threat approaches
+ * All eyes upon them
+ * Use up their resources
  * Separate them
 
 These will be detailed in an upcoming section.
@@ -1042,76 +1043,80 @@ Combat encounters don't have to be simple zero-sum games. Think about the
 narrative stakes as well. When swords are drawn, put something besides life
 and limb in jeopardy -- information, resources, social standing, risk of alarm.
 
-When a scene breaks out in violence, you'll need to get some blank cards
-and write down a few stats for the party's foes.
-
-If the foe is a fear-inducing monster, keep in mind the rules of the
-[Monsters](#monsters) chapter as you step through this process.
+If the PCs engage with a fear-inducing monster, use the guidance in the
+[Monsters](#monsters) section as you step through this process.
 
 
 ### When a combat interlude begins
 
- * Gather up all the cards of the GM Move deck
- * Remove the Shadow cards and replace them with the combat-specific Deal
-   Damage cards
+ * Take the GM Combat Move Deck. As indicated by the bottom of each card,
+   remove any cards that are not intended for the current Chapter.
+ * Have a small stack of index cards for foes and hazards.
 
-For each foe, get a blank card and write down some details:
-First, write down the names of each foe.
-Beside each name, write the foe's Might (d4, d6, d10).
-Beside that, draw a progress bar for their Stamina.
+Take a number index cards. By default, take one fewer than the number
+of PCs. Each card represents a foe or hazard. You can add more foes by
+spending Shadow Points, per the table below.
 
-![GM Worksheet](images/gm_worksheet_filled.png){ width=7cm }
+The combat interlude can include a mix of foes and hazards. Foes are NPCs or monsters intending to harm the PCs.  Hazards are aspects of the environment
+that threaten the PCs (eg, fire, collapsing ceilings, toxic mud, panicked crowd).
+There must be at least one foe in a combat interlude.
 
-For monsters or foes with high Might or stamina, spend *Shadow points*
-according to this table.
+Remember to let the fiction lead.  Start with what the scene promises:
+cultists, the ogre, the collapsing bridge, the whispering glyphs.
+Use what feels congruent to the facts of the scene already established,
+but remember that you're also allowed to surprise the players.
+
+For each foe or hazard, get a blank card and write down some details:
+First, write down a name.
+Beside each name, write the Might (d4, d6, d10), d4 being the default.
+Beside that, draw a progress bar for their Stamina. Each foe gets 5
+Stamina by default, optionally increased with Shadow Points per the
+table below.
+
+Each foe may have a special ability. Either choose one from this list,
+or invent your own:
+
+ * **Cleave**: When this foe deals damage, also deal 1 damage to another
+   PC within range
+ * **Entrap**: Add a "Trapped" hazard to the targetted PC, which prevents
+   them from fleeing
+ * **Thieve**: Move one of the PC's items to any foe in the scene, or
+   destroy one of the PC's PACK
+ * **Heal**: Restore 2 stamina to any foe in the scene
+ * **Poison**: Place a token on the PC's Take a Breather move. Until the
+   token is removed by a Rest or Seek Help, Take a Breather regains one
+   fewer Stamina for the PC
+ * **Magical Taint**: Place a token on any PC's magical item. Until the
+   end of the scene, apply a disadvantage to using that item.
+ * **Command**: Choose two of this foe's minions and for each, either move
+   it to endanger a PC or deal its damage if a PC is already endangered by it.
+ * **Explode**: Deal damage equal to this threat's remaining Stamina to
+   all PCs within range. Remove this threat.
+
+To augment a combat interlude, spend *Shadow points* according to this table.
 
 | Shadow points       | Foe augmentation
 |---------------------|------------------
-| 2                   | Might d6
-| 4                   | Might d10
-| 1                   | monster has 11-15 stamina
-| 2                   | monster has 16-20 stamina
-| 1 per               | monster special attack / immunity
+| 2                   | Raise Might to d6
+| 3                   | Raise Might to d10
+| 1                   | Raise Stamina to 10
+| 2                   | Raise Stamina to 15
+| 3                   | Raise Stamina to 20
+| 1                   | Add a special attack / ability
+| 3                   | Add another foe
 
-
-Foes' Stamina and Might should be realistically scaled
-to the "scrappy adventurer" level of the players.
-Help the players estimate the threat they face by giving the foes fitting
-descriptions.
-This table should help.
-
-|                   | Stamina points | Might
-|-------------------|----------------|-------------
-| Children          | 2              | 1
-| Civilians         | 4              | 1 - 1d4
-| Bouncers, Guards  | 5-6            | 1d4
-| Trained Soldiers, Elite Guards  | 7-10 | 1d4 - 1d6
-| Monsters          | 5-20           | 1d4 - 1d10
-| Villains          | 5-10           | 1d4 - 1d10
-
-
-Generally, human opponents will have 1 Might when unarmed and 1d4
-Might when armed. Save greater Might for monsters and special
-villains.
 
 Remember that foes' power can be exerted in more ways than just their
 Stamina and Might. Challenges may arise from the antagonist's superior
 knowledge of the environment, magical abilities, political connections,
 or other types of fictional positioning.
 
-As you spend more time playing, you will find it faster and easier to
-create these encounters and write up the stats in the GM Worksheet. If the
-players at your table are signaling that they enjoy the challenge of combat
-encounters and mastering the combat mechanisms embodied by their characters,
-then you can use the appendix
-[Mathematical Combat Balance](#appendix-1-mathematical-combat-balance)
-to create encounters that are more objectively balanced and satisfy the type
-of player that delights in system mastery.
+When your cards have been created, paint the combat scene. Describe
+the threats that present to the PCs.  If the fiction that launched this
+combat interlude support it, move certain index cards adjacent
+to a player's character sheet to indicate that the PC is endangered by
+this threat as the combat begins.
 
-However, If all that math feels a little too "gamey" for your table, just
-wing it.
-Create encounters as demanded by the established fiction, or take the
-following pre-balanced examples as a starting point, and adjust as you please.
 
 ### Example combat encounters
 
