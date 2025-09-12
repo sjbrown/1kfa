@@ -1049,15 +1049,16 @@ If the PCs engage with a fear-inducing monster, use the guidance in the
 
 ### When a combat interlude begins
 
- * Take the GM Combat Move Deck. As indicated by the bottom of each card,
-   remove any cards that are not intended for the current Chapter.
+ * Prepare and shuffle the GM Combat Move Deck. As indicated by the bottom of
+   each card, remove any cards that are not intended for the current Chapter.
  * Have a small stack of index cards for foes and hazards.
 
 Take a number index cards. By default, take one fewer than the number
-of PCs. Each card represents a foe or hazard. You can add more foes by
+of PCs. Each card represents a foe or hazard. More can be added by
 spending Shadow Points, per the table below.
 
-The combat interlude can include a mix of foes and hazards. Foes are NPCs or monsters intending to harm the PCs.  Hazards are aspects of the environment
+The combat interlude can include a mix of foes and hazards. Foes are NPCs
+or monsters intending to harm the PCs.  Hazards are aspects of the environment
 that threaten the PCs (eg, fire, collapsing ceilings, toxic mud, panicked crowd).
 There must be at least one foe in a combat interlude.
 
@@ -1066,7 +1067,7 @@ cultists, the ogre, the collapsing bridge, the whispering glyphs.
 Use what feels congruent to the facts of the scene already established,
 but remember that you're also allowed to surprise the players.
 
-For each foe or hazard, get a blank card and write down some details:
+For each foe or hazard, write some details on a blank card:
 First, write down a name.
 Beside each name, write the Might (d4, d6, d10), d4 being the default.
 Beside that, draw a progress bar for their Stamina. Each foe gets 5
@@ -1102,7 +1103,7 @@ To augment a combat interlude, spend *Shadow points* according to this table.
 | 1                   | Raise Stamina to 10
 | 2                   | Raise Stamina to 15
 | 3                   | Raise Stamina to 20
-| 1                   | Add a special attack / ability
+| 1                   | Add a special ability
 | 3                   | Add another foe
 
 
@@ -1111,11 +1112,56 @@ Stamina and Might. Challenges may arise from the antagonist's superior
 knowledge of the environment, magical abilities, political connections,
 or other types of fictional positioning.
 
-When your cards have been created, paint the combat scene. Describe
-the threats that present to the PCs.  If the fiction that launched this
-combat interlude support it, move certain index cards adjacent
-to a player's character sheet to indicate that the PC is endangered by
-this threat as the combat begins.
+Next, place the cards either in the middle of the table, or adjacent to
+a player's character sheet. Use this placement to indicate whether a
+PC is currently *endangered* by that threat. Follow the fiction here, paying
+mind to how near and present the threats and PCs had been previously
+described.
+
+When the index cards have been filled and placed, paint the combat scene.
+Describe the threats that present to the PCs.
+
+From this point forward,
+the party is in combat and the game shifts to one-at-a-time turn-taking.
+In each round, the party of players will first take their turns, choosing
+the order among themselves, then the GM will take a turn. Rounds proceed
+until all foes or all PCs are defeated, or until a Pursuit Interlude is
+triggered.
+
+### Player Combat Turns
+
+On a player's turn, they may make one or two moves, but only two if one of
+them is labelled *FAST*.
+
+When a PC is *endangered* by a threat, the player has a choice to make when
+their turn comes: either make their moves and then suffer the Might of the
+threat at the end of their turn, or use Defy Danger as one of their two moves.
+If they successfully defy the danger, they do not suffer the threat's Might
+on their turn.  If their Defy Danger succeeds with ✔✔, they can choose to move
+the threat's card away from their character sheet, back to the center of
+the table, and their PC is no longer *endangered*.
+
+If a PC is *endangered* by mutliple threats, a single Defy Danger move will
+apply to all of them.
+
+### GM Combat Turns
+
+After each player has had a turn in a round, the GM takes their turn.
+
+On the GM's turn, they first apply the Might of any threat that is currently
+*endangering* a PC.  As the Might is applied, the GM describes how the
+threat has harmed the PC. If there are no *endangering* threats, this part
+of the turn is skipped.
+
+Then, the GM can take half (rounded up) of the threats in the scene and move
+them to *endanger* PCs. Threats can be moved from the table center or from
+positions adjacent to other PCs. At each movement of a threat, the GM shall
+describe how the threat newly applies to the targetted PC.
+
+Finally, the GM can declare that any of the foes in the scene are fleeing. The
+cards for those foes are moved adjacent to the GM Sheet. If the players decide
+to pursue the fleeing foes before the round ends, a Pursuit Interlude begins.
+Otherwise the fleeing foes are removed from the combat at the end of the round.
 
 
 ### Example combat encounters
