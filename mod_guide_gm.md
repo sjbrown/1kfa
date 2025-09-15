@@ -1053,14 +1053,41 @@ If the PCs engage with a fear-inducing monster, use the guidance in the
    each card, remove any cards that are not intended for the current Chapter.
  * Have a small stack of index cards for foes and hazards.
 
+Like during Dramatic Action, when a player resolves a move with an ✗,
+the GM will draw 2 cards from the GM Combat Move Deck and choose 1 to
+invoke. Using them is a bit more straightforward, as there are no skull
+cards.
+
+ 1. Deal damage / Expend stamina & reshuffle this deck.
+ 1. Use a special ability / attack & reshuffle this deck.
+ 1. Reinforcement - a new threat appears
+ 1. Disarm - a PC's weapon or item is damaged, stolen, or has a magical charge wasted
+ 1. Imperiled Beloved - an NPC or Macguffin is endangered by one of the
+    threats. If the threat is not engaged this round that beloved is forfeited.
+ 1. Tactical Advance - place two tokens on threat card(s), indicating a
+    level of disadvantage any player faces when dealing with that threat
+    (max of 2 per card)
+ 1. Echo the Mythic Fear - a foe takes on a terrifying aspect or makes a baneful promise.
+    place a red token on a player's deckahedron, indicating a disadvantage that must
+    be taken on their next flip.
+ 1. Glory in the Violence - a foe rallies its allies against the party. Add 1 stamina
+    to each of the arrayed threats, but add one gray progress and a token to the
+    glorying foe so that the next PC to act against it takes an advantage.
+ 1. (only in some chapters) Separation Trigger - targetted PC can not act for 1 round
+ 1. (only in some chapters) Revelation Trigger - temptation - targetted PC gets a 
+    threat called "tempted" (infinite stamina) put on them, subsequently,
+    they can only defy danger until they hit ✔✔.
+ 1. (only in some chapters) Reunion Trigger - the father or family held hostage
+
 Take a number index cards. By default, take one fewer than the number
 of PCs. Each card represents a foe or hazard. More can be added by
 spending Shadow Points, per the table below.
 
-The combat interlude can include a mix of foes and hazards. Foes are NPCs
-or monsters intending to harm the PCs.  Hazards are aspects of the environment
-that threaten the PCs (eg, fire, collapsing ceilings, toxic mud, panicked crowd).
-There must be at least one foe in a combat interlude.
+The combat interlude can include a mix of foes and hazards, categorically
+called "threats". Foes are NPCs or monsters intending to harm the PCs.
+Hazards are aspects of the environment that threaten the PCs (eg, fire,
+collapsing ceilings, toxic mud, panicked crowd).  There must be at least
+one foe in a combat interlude.
 
 Remember to let the fiction lead.  Start with what the scene promises:
 cultists, the ogre, the collapsing bridge, the whispering glyphs.
@@ -1104,6 +1131,7 @@ To augment a combat interlude, spend *Shadow points* according to this table.
 | 2                   | Raise Stamina to 15
 | 3                   | Raise Stamina to 20
 | 1                   | Add a special ability
+| 2                   | Add another hazard
 | 3                   | Add another foe
 
 
@@ -1148,10 +1176,12 @@ apply to all of them.
 
 After each player has had a turn in a round, the GM takes their turn.
 
-On the GM's turn, they first apply the Might of any threat that is currently
-*endangering* a PC.  As the Might is applied, the GM describes how the
-threat has harmed the PC. If there are no *endangering* threats, this part
-of the turn is skipped.
+On the GM's turn, they first apply the Might of any one threat that is
+currently *endangering* a PC.  As the Might is applied, the GM describes
+how the threat has harmed the PC. If there are no *endangering* threats,
+the GM may instead trigger a special ability of any of the threats in
+the table center. If none of these abilities are relevant or applicable,
+this first part of the GM turn is skipped.
 
 Then, the GM can take half (rounded up) of the threats in the scene and move
 them to *endanger* PCs. Threats can be moved from the table center or from
@@ -1161,72 +1191,20 @@ describe how the threat newly applies to the targetted PC.
 Finally, the GM can declare that any of the foes in the scene are fleeing. The
 cards for those foes are moved adjacent to the GM Sheet. If the players decide
 to pursue the fleeing foes before the round ends, a Pursuit Interlude begins.
-Otherwise the fleeing foes are removed from the combat at the end of the round.
+Otherwise the fleeing foes are removed from the combat at the end of the next
+round.
+
+If any of the fleeing foes are carrying an item, this item will be lost if the
+foe successfully flees, perhaps to become a Stake for a later scene of the game.
 
 
 ### Example combat encounters
 
-#### Easy - A pair of guards taken by surprise
-
 `TODO: illustration`
-
-The PCs way is blocked by a pair of guards who are sleeping or distracted by a
-game of dice. They have 6 stamina points, and short swords (1d4 Might).
-As long as the PCs don't bungle their approach, they will have an opportunity
-to attack first or attack from range.
-
-If the guards believe they have no hope of winning, they will flee or give up
-and beg for mercy.
-
-#### Medium - A lieutenant and his soldiers
-
-`TODO: illustration`
-
-The PCs turn a corner or open a door and stumble into a planning session
-presided over by a lieutenant and his subordinates (there are as many
-subordinates as there are PCs).
-They are the swords-first, questions-later types and attack immediately at
-close range. The 3 soldiers have 6 stamina points and do 1d4 Might.
-The lieutenant has 8 stamina points and Might of 1d6.
-
-The lieutenant will never surrender, but if the rest of their allies are cut
-down, a single soldier left standing may lose his nerve and give up.
-
-#### Hard - The swamp beast
-
-`TODO: illustration`
-
-The PCs are surprised by a *thing* that springs up from the muck and launches
-a surprise attack.
-
-The beast is introduced when a player flips an ✗, so the GM makes the "Escalate
-the danger" move and additionally deals 1d4 damage to one of the PCs as the
-beast makes glancing contact with its fierce claws.
-
-This thing fights to the death and has 12 stamina points. It bites and slashes
-for 1d10 Might.
-
-Special attack: the beast can disappear into the muddy terrain and later
-spring up behind the most vulnerable PC, as long as that PC is standing in
-the beast's territory.
-
-### Give hints
-
-Players will perceive the game as either "fair" or "unfair" partly based
-on how the foes are described by the GM before the combat begins. Always
-describe the confrontation in a way that hints at the difficulty.
-
- * The two guards *exchange an unsure look and step forward*
- * The salty pirate flashes his blade, but *simultaneously takes a step
-   backwards towards his ship*
-
- * The golem is *gargantuan and covered in scars from many battles*
- * The *horde* of undead wolves stare at you with *unrelenting hunger*
- * The old woman with the walking stick is *unfazed by your threats* and,
-   *after looking you up and down, turns away with an air of dismissal*
+`TODO: text`
 
 
-### The feel of combat
+### Ludic Listening: The feel of combat
 
 In combat, it's ok if play gets more formulaic. Some players enjoy
 the "abnegation" of a tit-for-tat combat scene that lasts tens of minutes.
@@ -1239,107 +1217,27 @@ so, when you make your moves, you can think cinematically. Continually raise
 the stakes for both sides during the scene. Think dangerous. No character
 or set piece needs to be safe or sacred.
 
-### The Combat Spotlight
-
-Combat can play out in whatever way feels natural and follows from the
-fiction. That said, it can be taxing on a GM to come up with new, creative
-responses in combat because flips are happening frequently. So, to relieve
-some of that pressure, here are some formats to follow that guide the
-table through a combat encounter.
-
-This game doesn't have turns, but it's ok if moving the spotlight
-during combat makes it feel that way.
-
-#### Format 1
-
-This format is simple, and gives the players the most agency.
-
-  - Give each player a "turn" where they will probably trigger an aggressive
-    combat move like Mix It Up or Volley
-  - Pay attention to *FAST* combat moves that may have triggered
-  - Execute the moves, make cool stuff happen as consequences
-  - Go around the table until all the opponents flee or are incapacitated
-  - Any ✗ results may usually be interpreted as "your enemies attack". Choose
-    some opponents that weren't *just* in a Mix It Up, and declare they
-    attack one of the player's characters. Apply Might against that
-    character. Use an Might die from one attacker, and add 1 attack
-    power for each other attacker
-
-#### Format 2
-
-This format makes the opponents more of a threat.
-
- * Give each player a "turn" where they will probably trigger an aggressive
-   combat move like Mix It Up or Volley, call that a "player round"
- * Pay attention to *FAST* combat moves that may have triggered
- * After player turns are complete, and the players look to you to see
-   what happens next, execute an "NPC round"
- * Identify the opponents that didn't interact during the "player round"
- * Describe how all of those opponents team up on one of the player's
-   characters, and call for one Defy Danger flip.
-   (move the "danger" spotlight fairly, but also try to put pressure on any
-   players with more than 3 unspent XP)
- * Failing the Defy Danger flip results in the player's character suffering
-   the opponents' attack. You can calculate Might thusly:
-      * ✗ : one Might die from the lead attacker,
-        and add 1 Might (not die) for each other attacker
-      * ✅︎ : no Might die is rolled,
-        but 1 Might per attacker (so 3 foes = 3 Might)
-
-#### Format 3
-
-This format imagines the opponents as particularly quick and aggressive.
-
-  - Give each player a "turn" where they will trigger a move
-  - Pay attention to *FAST* combat moves that may have triggered
-  - When describing the outcome of a player's move, also describe how the
-    opponents take aggressive action.
-  - Keeping the spotlight on that player, have them respond to the actions
-    of their foes, usually by needing to follow their first flip with a
-    Defy Danger flip.
-  - Allow players to avoid the opponent's aggressive action if their first
-    flip specifically provided for it, and it makes sense in the narrative.
-    (See Backstab, Bum Rush, Volley)
-
-
-#### Your Format
-
-These combat format suggestions are just that - suggestions. Players often
-think up creative solutions or approaches that you won't have predicted
-beforehand, and that might break one of the above formats.
-The key is to be true to the established fiction. Also realize that you have
-power to introduce facts into the fiction. For instance, by the GM move
-you choose in response to player's failed flips.
-
-A GM's role is not to be the opponent of the players. You're not trying to
-make their characters *die*. On the contrary, you should be a *fan* of the
-characters. The best story is one where they struggle, but succeed.
-
-
 
 ### Closing a combat interlude
 
  * All players may use the Take a Breather move, flipping Str.
- * Gather up all the cards of the Combat deck
- * Remove the combat-specific Deal Damage cards and replace them with the
-   Shadow cards
+ * Put away the Combat GM Move Deck and return to the Dramatic Action GM
+   Move Deck
  * If *any* of the PCs have survived the Combat interlude without being
    incapacitated, one ✔ token is added to a ✔ progress bar, players choice
  * If *all* of the PCs survived, add one more ✔ token
 
-The GM Move Deck instead of "Shadow" cards, has "Deal Damage" cards
-
-The GM Move deck is shuffled going into and exiting from a combat interlude, so
-triggering combat can be a way for players to avoid an upcoming Shadow or
-Death card.
+Note, The GM Move decks are shuffled going into and exiting from a combat
+interlude, so triggering combat is a valid way for players to avoid an
+upcoming Shadow or Death card.
 
 #### Loot
 
-After combat, the players may propose that their characters sift through
-the battlefield looking for valuables. Let the characters find whatever you
-think would be most fun, or something inspired by the Touchstone List, or
-ask the players questions to figure out what boons or treasure were won from
-their adversaries.
+After winning combat, the players may propose that their characters sift
+through the battlefield looking for valuables. Let the characters find
+whatever you think would be most fun, or something inspired by the
+Touchstone List, or ask the players questions to figure out what boons or
+treasure were won from their adversaries.
 
 Sometimes nobody will have a concrete idea of what the loot was, and that's
 okay too.

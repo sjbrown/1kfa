@@ -18,7 +18,7 @@ style_three_check = {'font-size': '11px'}
     ----
     ✔: GM answers one question.
     ----
-    ✔✔: Success [gray progress]
+    ✔✔: Success [gray progress] OR move threat to table center
 
 **Details**: Act despite an imminent threat. Answer one question:
  * How do you power through or endure? Flip Str
@@ -26,7 +26,7 @@ style_three_check = {'font-size': '11px'}
  * How do you focus, predict, or apply your wits? Flip Int
 
 GM Questions:
- * What new complication arises?
+ * What new complication or hazard arises?
  * What cost must be paid?
  * What disadvantage does this create?
  * What hard bargain or ugly choice must be made?
