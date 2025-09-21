@@ -1326,14 +1326,14 @@ beats you'd see in a screenplay’s midpoint reversal or at a novel’s crisis.
 1. A "scene" is created and described by using the Narrative Authority Waterfall to
 answer the following questions:
 
- * What do the characters need to advance the story?
+ * What do the PCs need to advance the story?
  * Where is an interesting location of the setting to pursue this need?
  * What content from the Touchstone List is present here?
  * What significant set pieces are in front of the characters?
  * What obstacles (if any) are blocking the obvious routes?
  * Besides the characters, who else is present?
  * What details of this location are obvious and notable to the characters?
- * What is the ambiance? Which environmental subtleties might the characters notice? Music? Smells?
+ * What is the ambiance? Which environmental subtleties might the characters notice? Lighting? Weather? Sounds? Smells?
 
 All questions must be answered at the beginning of *each* new scene.
 Additional questions and rules for creating scenes will be found in the Campaign
