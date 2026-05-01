@@ -81,3 +81,13 @@ if __name__ == '__main__':
     print(f'\nWriting {new_pdf_name}\n')
     export_pdf(fname, new_pdf_name)
 
+    fname = f'{TEMPLATEDIR}/print_and_play_deckahedron_template_B1.svg'
+    new_pdf_name = f'{OUTDIR}/print_and_play_deckahedron_B1.pdf'
+    print(f'\nWriting {new_pdf_name}\n')
+    export_pdf(fname, new_pdf_name)
+
+    fname = f'{TEMPLATEDIR}/print_and_play_deckahedron_template_B2.svg'
+    new_pdf_name = f'{OUTDIR}/print_and_play_deckahedron_B2.pdf'
+    print(f'\nWriting {new_pdf_name}\n')
+    export_pdf(fname, new_pdf_name)
+

@@ -12,6 +12,7 @@ from svg_dom import DOM, export_square_png
 from version import VERSION
 
 FACE_SVG = 'deckahedron_face.svg'
+OUTDIR = '/tmp/cards_square'
 
 '''
  title_to_element
@@ -176,15 +177,16 @@ def filter_dom_elements(dom, card, deck_title, dice_rule):
 
 
 def make_back_card():
-    raw_svg = file('deckahedron_back.svg').read()
+    raw_svg = open('deckahedron_back.svg').read()
     raw_svg = raw_svg.replace('VERSION', VERSION)
-    back_svg_filename = '/tmp/cards/back.svg'
-    fp = file(back_svg_filename, 'w')
+    back_svg_filename = f'{OUTDIR}/back.svg'
+    #print(f'writing {back_svg_filename} ...')
+    fp = open(back_svg_filename, 'w')
     fp.write(raw_svg)
     fp.close()
     dom = get_dom_for_printing(back_svg_filename)
     dom.write_file(back_svg_filename)
-    export_square_png(back_svg_filename, '/tmp/cards/back.png')
+    export_square_png(back_svg_filename, f'{OUTDIR}/back.png')
 
 def make_deck(deck_number):
 
@@ -194,7 +196,7 @@ def make_deck(deck_number):
         dom.layer_show('registration_marks')
         dom.layer_show('zodiac')
         dom.layer_show('center_symbols')
-        dom.layer_show('checks_xs')
+        dom.layer_show('resolution')
         dom.layer_show('d6')
         dom.layer_show('d4')
 
@@ -206,15 +208,15 @@ def make_deck(deck_number):
         # --- for numeral-style cards ----
         dice_rule = dice_print_rules[i][0]
 
-        print 'dice rule %s %s' % (i, dice_rule)
+        #print 'dice rule %s %s' % (i, dice_rule)
 
         filter_dom_elements(dom, card, deck_title, dice_rule)
         zargs = [spot_it_map[x] for x in calc_zodiac(i)]
         set_zodiac(dom, *zargs)
 
         # Create the svg file and export a PNG
-        svg_filename = '/tmp/cards/deck_%s_card_face%02d.svg' % (deck_number, (i+1))
-        png_filename = '/tmp/cards/deck_%s_card_face%02d.png' % (deck_number, (i+1))
+        svg_filename = f'{OUTDIR}/deck_%s_card_face%02d.svg' % (deck_number, (i+1))
+        png_filename = f'{OUTDIR}/deck_%s_card_face%02d.png' % (deck_number, (i+1))
 
         dom.write_file(svg_filename)
 
@@ -226,14 +228,14 @@ def make_blessing_deck():
         dom.layer_hide('wound')
         dom.layer_show('zodiac')
         dom.layer_show('center_symbols')
-        dom.layer_show('checks_xs')
+        dom.layer_show('resolution')
 
         filter_dom_elements(dom, card, '', [0,0])
         set_zodiac(dom, 'dragon', 'dragon', 'dragon', 'dragon')
 
         # Create the svg file and export a PNG
-        svg_filename = '/tmp/cards/blessing/deck_blessing_card_face%s.svg' % ((i+1))
-        png_filename = '/tmp/cards/blessing/deck_blessing_card_face%s.png' % ((i+1))
+        svg_filename = f'{OUTDIR}/blessing/deck_blessing_card_face%s.svg' % ((i+1))
+        png_filename = f'{OUTDIR}/blessing/deck_blessing_card_face%s.png' % ((i+1))
 
         dom.write_file(svg_filename)
 
@@ -245,14 +247,14 @@ def make_wound_deck():
         dom = get_dom_for_printing(FACE_SVG)
         dom.layer_show('zodiac')
         dom.layer_show('wound')
-        dom.layer_show('checks_xs')
+        dom.layer_show('resolution')
 
         filter_dom_elements(dom, card, '', [0,0])
         set_zodiac(dom, 'goat', 'goat', 'goat', 'goat')
 
         # Create the svg file and export a PNG
-        svg_filename = '/tmp/cards/wounds/deck_wound_card_face%s.svg' % ((i+1))
-        png_filename = '/tmp/cards/wounds/deck_wound_card_face%s.png' % ((i+1))
+        svg_filename = f'{OUTDIR}/wounds/deck_wound_card_face%s.svg' % ((i+1))
+        png_filename = f'{OUTDIR}/wounds/deck_wound_card_face%s.png' % ((i+1))
 
         dom.write_file(svg_filename)
 
@@ -260,31 +262,31 @@ def make_wound_deck():
 
 def make_green_deck():
     svg_filename = 'greencard_front.svg'
-    png_filename = '/tmp/cards/green/greencard_front.png'
+    png_filename = f'{OUTDIR}/green/greencard_front.png'
     dom = get_dom_for_printing(svg_filename)
-    svg_filename = '/tmp/cards/green/' + svg_filename
+    svg_filename = f'{OUTDIR}/green/' + svg_filename
     dom.write_file(svg_filename)
     export_square_png(svg_filename, png_filename)
 
     svg_filename = 'greencard_back.svg'
-    png_filename = '/tmp/cards/green/back.png'
+    png_filename = f'{OUTDIR}/green/back.png'
     dom = get_dom_for_printing(svg_filename)
-    svg_filename = '/tmp/cards/green/' + svg_filename
+    svg_filename = f'{OUTDIR}/green/' + svg_filename
     dom.write_file(svg_filename)
     export_square_png(svg_filename, png_filename)
 
 def make_red_deck():
     svg_filename = 'redcard_front.svg'
-    png_filename = '/tmp/cards/red/redcard_front.png'
+    png_filename = f'{OUTDIR}/red/redcard_front.png'
     dom = get_dom_for_printing(svg_filename)
-    svg_filename = '/tmp/cards/red/' + svg_filename
+    svg_filename = f'{OUTDIR}/red/' + svg_filename
     dom.write_file(svg_filename)
     export_square_png(svg_filename, png_filename)
 
     svg_filename = 'redcard_back.svg'
-    png_filename = '/tmp/cards/red/back.png'
+    png_filename = f'{OUTDIR}/red/back.png'
     dom = get_dom_for_printing(svg_filename)
-    svg_filename = '/tmp/cards/red/' + svg_filename
+    svg_filename = f'{OUTDIR}/red/' + svg_filename
     dom.write_file(svg_filename)
     export_square_png(svg_filename, png_filename)
 
@@ -297,19 +299,19 @@ def get_dom_for_printing(fname):
     return dom
 
 if __name__ == '__main__':
-    if not os.path.exists('/tmp/cards'):
-        os.makedirs('/tmp/cards')
-    if not os.path.exists('/tmp/cards/wounds'):
-        os.makedirs('/tmp/cards/wounds')
-    if not os.path.exists('/tmp/cards/blessing'):
-        os.makedirs('/tmp/cards/blessing')
-    if not os.path.exists('/tmp/cards/red'):
-        os.makedirs('/tmp/cards/red')
-    if not os.path.exists('/tmp/cards/green'):
-        os.makedirs('/tmp/cards/green')
+    if not os.path.exists(OUTDIR):
+        os.makedirs(OUTDIR)
+    if not os.path.exists(f'{OUTDIR}/wounds'):
+        os.makedirs(f'{OUTDIR}/wounds')
+    if not os.path.exists(f'{OUTDIR}/blessing'):
+        os.makedirs(f'{OUTDIR}/blessing')
+    if not os.path.exists(f'{OUTDIR}/red'):
+        os.makedirs(f'{OUTDIR}/red')
+    if not os.path.exists(f'{OUTDIR}/green'):
+        os.makedirs(f'{OUTDIR}/green')
     make_back_card()
-    shutil.copy('/tmp/cards/back.png', '/tmp/cards/wounds/back.png')
-    shutil.copy('/tmp/cards/back.png', '/tmp/cards/blessing/back.png')
+    shutil.copy(f'{OUTDIR}/back.png', f'{OUTDIR}/wounds/back.png')
+    shutil.copy(f'{OUTDIR}/back.png', f'{OUTDIR}/blessing/back.png')
     make_green_deck()
     make_red_deck()
     if os.environ.get('PARALLEL'):
