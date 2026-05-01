@@ -1051,7 +1051,7 @@ If the PCs engage with a fear-inducing monster, use the guidance in the
 
  * Prepare and shuffle the GM Combat Move Deck. As indicated by the bottom of
    each card, remove any cards that are not intended for the current Chapter.
- * Have a small stack of index cards for foes and hazards.
+ * Have ready a small stack of index cards for foes and hazards.
 
 Like during Dramatic Action, when a player resolves a move with an ✗,
 the GM will draw 2 cards from the GM Combat Move Deck and choose 1 to
@@ -1110,11 +1110,12 @@ or invent your own:
    them from fleeing
  * **Thieve**: Move one of the PC's items to any foe in the scene, or
    destroy one of the PC's PACK
+ * **Rend**: When this foe deals damage, double it
  * **Heal**: Restore 2 stamina to any foe in the scene
  * **Poison**: Place a token on the PC's Take a Breather move. Until the
    token is removed by a Rest or Seek Help, Take a Breather regains one
    fewer Stamina for the PC
- * **Magical Taint**: Place a token on any PC's magical item. Until the
+ * **Corruption**: Place a token on any PC's magical item. Until the
    end of the scene, apply a disadvantage to using that item.
  * **Command**: Choose two of this foe's minions and for each, either move
    it to endanger a PC or deal its damage if a PC is already endangered by it.
@@ -1141,7 +1142,7 @@ knowledge of the environment, magical abilities, political connections,
 or other types of fictional positioning.
 
 Next, place the cards either in the middle of the table, or adjacent to
-a player's character sheet. Use this placement to indicate whether a
+a player's character sheet. The placement indicates whether a
 PC is currently *endangered* by that threat. Follow the fiction here, paying
 mind to how near and present the threats and PCs had been previously
 described.
@@ -1158,7 +1159,7 @@ triggered.
 
 ### Player Combat Turns
 
-On a player's turn, they may make one or two moves, but only two if one of
+On a player's turn, they may make one or two moves, but *two* only if one of
 them is labelled *FAST*.
 
 When a PC is *endangered* by a threat, the player has a choice to make when
@@ -1227,8 +1228,8 @@ or set piece needs to be safe or sacred.
    incapacitated, one ✔ token is added to a ✔ progress bar, players choice
  * If *all* of the PCs survived, add one more ✔ token
 
-Note, The GM Move decks are shuffled going into and exiting from a combat
-interlude, so triggering combat is a valid way for players to avoid an
+Strategy note: The GM Move decks are shuffled going into and exiting from a
+combat interlude, so triggering combat is a valid way for players to avoid an
 upcoming Shadow or Death card.
 
 #### Loot
