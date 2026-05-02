@@ -777,7 +777,7 @@ you might add to the narrative to drive the story toward your next
 
 `TODO: an image of the card`
 
-```card_gm
+```card_gm_dramatic_action
 Answer: 
     What aspect of the environment or the arrayed adversaries puts the
     party in more danger? 
@@ -803,7 +803,7 @@ passage that led them in is now blocked by tons of rubble.
 
 `TODO: an image of the card`
 
-```card_gm
+```card_gm_dramatic_action
 By default, deal 1-4 damage.  Optionally use a Shadow Point to bump it
 up to 1-6, or 2 Shadow Points to bump it up to 2-10.
 
@@ -818,7 +818,7 @@ It stabs you. Fell off the old bridge? Land on a rock.
 
 `TODO: an image of the card`
 
-```card_gm
+```card_gm_dramatic_action
 Take narrative control.
 Answer: 
     What actions transpire that drastically alter the dramatic action?
@@ -839,7 +839,7 @@ This is your "blank canvas" move.
 
 `TODO: an image of the card`
 
-```card_gm
+```card_gm_dramatic_action
 If they refuse to pay it, flip a new GM move 
 Answer: 
     What obstacle or complication arises, and what is the unfair price a PC can pay to overcome it? 
@@ -878,7 +878,7 @@ gears, you're going to spend a *Shadow point* to increase the difficulty.
 
 `TODO: an image of the card`
 
-```card_gm
+```card_gm_dramatic_action
 Add a shadow point. And: 
 Add a new floating stake or foe card, not yet in this scene 
 Answer: 
@@ -897,7 +897,7 @@ going to happen unless they do something about it.
 
 `TODO: an image of the card`
 
-```card_gm
+```card_gm_dramatic_action
 Answer: 
 What downside of the PC's appearance, reputation or equipment arises? 
 Place a disadvantage token on the player's: 
@@ -917,7 +917,7 @@ attention from eyes in the dark.
 
 `TODO: an image of the card`
 
-```card_gm
+```card_gm_dramatic_action
 Answer: 
 What supply got used up, or what hand of the shadow rested away a PC's resource? 
 Choose: 
@@ -948,7 +948,7 @@ a player choice.
 
 `TODO: an image of the card`
 
-```card_gm
+```card_gm_dramatic_action
 Add a new stake card titled "Reunite the party" with a progress bar of 3.
 
 Until it is acheived, the separated PCs cannot aid each other with teamwork
@@ -1070,26 +1070,19 @@ the GM will draw 2 cards from the GM Combat Move Deck and choose 1 to
 invoke. Using them is a bit more straightforward, as there are no skull
 cards.
 
- 1. Deal damage / Expend stamina & reshuffle this deck.
- 1. Use a special ability / attack & reshuffle this deck.
- 1. Reinforcement - a new threat appears
- 1. Disarm - a PC's weapon or item is damaged, stolen, or has a magical charge wasted
- 1. Imperiled Beloved - an NPC or Macguffin is endangered by one of the
-    threats. If the threat is not engaged this round that beloved is forfeited.
- 1. Tactical Advance - place two tokens on threat card(s), indicating a
-    level of disadvantage any player faces when dealing with that threat
-    (max of 2 per card)
- 1. Echo the Mythic Fear - a foe takes on a terrifying aspect or makes a baneful promise.
-    place a red token on a player's deckahedron, indicating a disadvantage that must
-    be taken on their next flip.
- 1. Glory in the Violence - a foe rallies its allies against the party. Add 1 stamina
-    to each of the arrayed threats, but add one gray progress and a token to the
-    glorying foe so that the next PC to act against it takes an advantage.
- 1. (only in some chapters) Separation Trigger - targetted PC can not act for 1 round
- 1. (only in some chapters) Revelation Trigger - temptation - targetted PC gets a 
-    threat called "tempted" (infinite stamina) put on them, subsequently,
-    they can only defy danger until they hit ✔✔.
- 1. (only in some chapters) Reunion Trigger - the father or family held hostage
+ 1. Deal damage
+ 1. Use a special ability
+ 1. Reinforcement
+ 1. Disarm
+ 1. Imperil the Beloved
+ 1. Tactical Advance
+ 1. Echo the Mythic Fear
+ 1. Glory in the Violence
+ 1. (only in some chapters) Separation Trigger
+ 1. (only in some chapters) Revelation Trigger
+ 1. (only in some chapters) Reunion Trigger
+
+Each Combat Interlude GM Move is described in detail below.
 
 Take a number index cards. By default, take one fewer than the number
 of PCs. Each card represents a foe or hazard. More can be added by
@@ -1168,6 +1161,93 @@ In each round, the party of players will first take their turns, choosing
 the order among themselves, then the GM will take a turn. Rounds proceed
 until all foes or all PCs are defeated, or until a Pursuit Interlude is
 triggered.
+
+### Combat GM Moves
+
+#### Deal damage
+
+```card_gm_combat
+Choose a Threat, and apply their Might to a PC.
+
+reshuffle this deck.
+```
+
+#### Use a special ability / attack
+
+```card_gm_combat
+Choose a Threat, and apply their Special Ability.
+
+reshuffle this deck.
+```
+
+#### Reinforcement
+
+```card_gm_combat
+a new Threat appears
+```
+
+#### Disarm
+
+```card_gm_combat
+A PC's weapon or item is damaged, stolen, or has a magical charge wasted
+```
+
+#### Imperil the Beloved 
+
+```card_gm_combat
+An NPC or Macguffin is endangered by a Threat.
+If the Threat is not engaged this round that beloved is forfeited.
+```
+
+#### Tactical Advance 
+
+```card_gm_combat
+Place two tokens on threat card(s), indicating a
+level of disadvantage any player faces when dealing with that Threat
+(max of 2 per card)
+```
+
+#### Echo the Mythic Fear 
+
+```card_gm_combat
+A Foe takes on a terrifying aspect or makes a baneful promise.
+place a red token on a player's deckahedron, indicating a disadvantage that must
+be taken on their next flip.
+```
+
+#### Glory in the Violence 
+
+```card_gm_combat
+A Foe rallies its allies against the party. Add 1 stamina
+to each of the arrayed Threats, but add one gray progress and a token to the
+glorying Foe so that the next PC to act against it takes an advantage.
+```
+
+#### Separation Trigger 
+
+```card_gm_combat
+(gated to some chapters)
+
+targetted PC can not act for 1 round
+```
+
+#### Revelation Trigger 
+
+```card_gm_combat
+(gated to some chapters)
+
+temptation - targetted PC gets a threat called "tempted" (infinite stamina)
+put on them, subsequently, they can only defy danger until they hit ✔✔.
+```
+
+#### Reunion Trigger 
+
+```card_gm_combat
+(gated to some chapters)
+
+the father or family held hostage
+```
+
 
 ### Player Combat Turns
 
