@@ -537,19 +537,13 @@ Go around the table and ask:
 > What makes your character feel most at home, or what activity do they
 > find the most comfort or competence in?
 
-Write down the answers.
+Follow up questions might be needed. Listen for vulnerability. Where does each
+character feel safe enough to be themselves, to let their guard down? This will
+shape the beginning of the story.
 
-Then, ask the group to choose by consensus one of these things that they all
-have in common, and ask them to describe why this common thing bonds them
-together and why it makes them comrades that would risk their lives for
-each other.
+Write down each player's answer.
 
- * Specific People
- * Food
- * Song
- * Environmental feature
- * Ritual or festival
- * Group activity
+Then read aloud:
 
 > This is a game where you all play together on the same team.
 >
@@ -559,7 +553,18 @@ each other.
 > team up to defend it - maybe even with their lives.
 >
 > We will call this thing "The Hearth".
->
+
+By consensus, the table chooses one of these options:
+
+ * Specific People
+ * Food
+ * Song
+ * Environmental feature
+ * Ritual or festival
+ * Group activity
+
+The **Lift From Touchstones** tool might be applied here.
+
 > The Hearth can be a specific person or people. Maybe each character
 > shares a friendly uncle?
 > The Hearth can be food. Do all these characters depend on the fruit
@@ -575,6 +580,10 @@ each other.
 >
 > Those are some examples, but the choice is up to you. What will be
 > The Hearth of this band of adventurers?
+
+With follow up questions, make sure everyone agrees why this common thing bonds them
+together and why it makes them comrades that would risk their lives for
+each other.
 
 This answer will be known as The Hearth.  Write it down in the space provided
 on the GM Sheet.
