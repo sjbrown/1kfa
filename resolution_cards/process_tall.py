@@ -367,8 +367,8 @@ def make_deck(cards):
     export_tall_png('equipment_back1.svg', DIR + '/magic_deck/back.png')
     export_tall_png('equipment_back2.svg', DIR + '/mundane_deck/back.png')
 
-    export_tall_png('tall_card_stats.svg', DIR + '/dramatic_action/face18_stats.png')
-    export_tall_png('tall_card_hints.svg', DIR + '/dramatic_action/face19_hints.png')
+    #export_tall_png('tall_card_stats.svg', DIR + '/dramatic_action/face18_stats.png')
+    #export_tall_png('tall_card_hints.svg', DIR + '/dramatic_action/face19_hints.png')
 
     #one_blank_3lines_front()
 
