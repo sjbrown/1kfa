@@ -282,7 +282,7 @@ If you can't think of a follow-up question, you can default to this one:
 
 This conversation might also add details to the world, such as what kinds of species and religions exist.
 
-- What species is your character — human, or something else from our Touchstone List?
+- What is your character's species or kin — human, or something else from our Touchstone List?
 - Is your character righteous, hewing to moral norms, or do they get their hands dirty, taking opportunities wherever they find them?
 - What work or calling defines your character’s life — how do they earn respect, survive, or make trouble?
 - Does your character believe in gods? Is there some kind of spiritual practice or religious organization for them?
