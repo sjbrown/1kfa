@@ -782,10 +782,10 @@ Answer:
     What aspect of the environment or the arrayed adversaries puts the
     party in more danger? 
 Choose one: 
- * Remove an advantage-granting token from the party 
- * Use a special ability of a foe (that doesn't deal damage) 
- * Establish fictional positioning for an obstruction or restriction 
- * Start a combat interlude 
+ * Remove an advantage-granting token from the party
+ * Use a special ability of a foe (that doesn't deal damage)
+ * Establish fictional positioning for an obstruction or restriction
+ * Start a combat interlude
 ```
 
 The fictional world is full of danger. Adventurers are constantly being
@@ -814,18 +814,18 @@ When you deal damage, choose one source of damage that's fictionally
 threatening a character and apply it. In combat with a lizard man?
 It stabs you. Fell off the old bridge? Land on a rock.
 
-### Pivot 
+### Pivot
 
 `TODO: an image of the card`
 
 ```
 Take narrative control.
 Answer: 
-    What actions transpire that drastically alter the dramatic action? 
+    What actions transpire that drastically alter the dramatic action?
 Choose: 
- * Transition to combat interlude 
- * Transition to pursuit interlude 
- * Rename any existing stakes and reintroduce the scene 
+ * Transition to combat interlude
+ * Transition to pursuit interlude
+ * Rename any existing stakes and reintroduce the scene
 Then: 
 Shuffle the GM Move Deck
 ```
@@ -949,7 +949,10 @@ a player choice.
 `TODO: an image of the card`
 
 ```
-???
+Add a new stake card titled "Reunite the party" with a progress bar of 3.
+
+Until it is acheived, the separated PCs cannot aid each other with teamwork
+flips.
 ```
 
 There are few things worse than being in the middle of a raging battle with
@@ -1442,26 +1445,24 @@ completed.
 
 ### Triggering The GM Move Deck
 
-The GM has a deck of cards that they draw from when a Player hits an ✗.
+The GM has a deck of cards that activate as described above.
 
 Depending on chapter rules, there are about 3 skull cards in the deck.
 The other cards are:
 
- 1. Deal damage / Expend stamina & Reshuffle the GM Move Deck
- 2. Show signs of an approaching threat
- 3. Escalate the danger / Trigger a combat interlude
- 4. Reveal an unwelcome truth
- 5. Offer an opportunity, with a cost
- 6. Turn their move back on them
- 7. Tell them the requirements or consequences and ask
- 8. Show a downside to their appearance, reputation, or equipment
- 9. Use up their resources
- 10. Separate them
+ 1. Escalate the danger
+ 2. Deal damage
+ 3. Pivot
+ 4. A price too dear
+ 5. A threat approaches
+ 6. All eyes upon them
+ 7. Use up their resources
+ 8. Separate them
+ 9. Shadow
+ 10. Shadow
  11. Shadow
- 12. Shadow
- 13. Shadow
- 14. (Only in certain chapters) Shadow
- 15. (Only in certain chapters) Death
+ 12. (Only in certain chapters) Shadow
+ 13. (Only in certain chapters) Death
      * Only causes a character death if flipped *with* another Shadow card,
        otherwise, it kills a friendly NPC, if no such NPC, it just acts as
        a Shadow card.
@@ -1469,13 +1470,13 @@ The other cards are:
 On an ✗, two cards are revealed from the GM Move Deck, and either:
 
  1. Any of the revealed cards is a Shadow card:
-    * Ignore the revealed 1-10 card (if any)
-    * Increment the skull progress bar 
+    * Ignore the other revealed card (if any)
+    * Increment the skull progress bar
     * Invoke the chapter-specific rules from the Campaign Guide
- 2. Two of the 1-10 cards are revealed
+ 2. Otherwise:
     * Using Narrative Authority Waterfall, choose *one* of the two cards and
       narrate events into the scene that interpret the card
-    * Refer to PAGE X for additional guidance and suggestions for interpreting
+    * Refer to [PAGE X] for additional guidance and suggestions for interpreting
       the narrative effects of these cards.
 
 When the skull progress increments, something negative happens, determined
@@ -1486,7 +1487,7 @@ by the Chapter rules, and can include such things as:
  * Loss of the primary stake
  * Jeapordizing something the characters already posess by making it a stake
  * The forced start of a combat
-   * See PAGE X for rules on starting a combat
+   * See [PAGE X] for rules on starting a combat
 
 
 ### Filling the primary ✔ progress bar
