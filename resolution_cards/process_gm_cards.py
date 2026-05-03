@@ -12,8 +12,8 @@ Example:
     python3 process_gm_cards.py ~/1kfa/mod_guide_gm.md ~/Desktop/gm-cards
 
 The script finds two sections in the guide:
-  1. Dramatic Action GM Moves  — ### headings with fenced-code card blocks
-  2. Combat GM Move Deck       — ordered list items under "When a combat interlude begins"
+  1. Dramatic Action GM Moves  — card_gm_dramatic_action fenced blocks
+  2. Combat GM Move Deck       — card_gm_combat fenced blocks
 
 It regenerates only files whose source content has changed (based on a hash
 stored in a sidecar file), so incremental runs are fast.
@@ -37,7 +37,6 @@ W, H = 750, 1050
 RADIUS = 24
 
 COLORS = {
-    # Accent bar colors — assigned per card title in ACCENT_MAP below
     "damage":   "#C0410E",
     "shadow":   "#3C3489",
     "neutral":  "#5F5E5A",
@@ -46,7 +45,6 @@ COLORS = {
     "fear":     "#533489",
     "rally":    "#1D9E75",
     "chapter":  "#854F0B",
-    # Fixed palette
     "offwhite": "#F8F6F1",
     "ink":      "#1A1917",
     "muted":    "#5F5E5A",
@@ -55,22 +53,20 @@ COLORS = {
     "divider":  "#DDDBD3",
 }
 
-# Map card title keywords → accent color key.
-# Checked case-insensitively against the start of the title.
 ACCENT_MAP = [
-    ("escalate",    "damage"),
-    ("deal damage", "damage"),
-    ("pivot",       "pivot"),
-    ("price",       "neutral"),
-    ("threat",      "shadow"),
-    ("all eyes",    "neutral"),
-    ("use up",      "resource"),
-    ("separate",    "neutral"),
-    # combat
+    ("escalate",        "damage"),
+    ("deal damage",     "damage"),
+    ("pivot",           "pivot"),
+    ("price",           "neutral"),
+    ("threat",          "shadow"),
+    ("all eyes",        "neutral"),
+    ("use up",          "resource"),
+    ("separate",        "neutral"),
     ("special ability", "damage"),
     ("reinforcement",   "neutral"),
     ("disarm",          "neutral"),
     ("imperiled",       "shadow"),
+    ("imperil",         "shadow"),
     ("tactical",        "shadow"),
     ("echo",            "fear"),
     ("glory",           "rally"),
@@ -82,7 +78,6 @@ ACCENT_MAP = [
 FONT_SERIF = "Georgia, 'Times New Roman', serif"
 FONT_SANS  = "Helvetica Neue, Arial, sans-serif"
 
-# Wrap width in characters for body text and prompts
 WRAP_BODY   = 37
 WRAP_PROMPT = 36
 WRAP_BULLET = 37
@@ -92,39 +87,19 @@ WRAP_BULLET = 37
 # Markdown parsing
 # ---------------------------------------------------------------------------
 
-# Matches a fenced block with a specific language tag, capturing the content.
-# Group 1 = fence tag suffix (e.g. "dramatic_action" or "combat")
-# Group 2 = block content
-_FENCE_RE = re.compile(
-    r'```card_gm_(\w+)\n(.*?)```',
-    re.DOTALL
-)
-
-# Looks backward from a fence for the nearest ### or #### heading above it.
+_FENCE_RE = re.compile(r'```card_gm_(\w+)\n(.*?)```', re.DOTALL)
+# Match ### or #### headings
 _HEADING_RE = re.compile(r'#{3,4} (.+)')
-
-# chapter_gated flag: present in the fence tag or content
 _CHAPTER_TAG = 'chapter_gated'
 
 
 def _heading_before(text, fence_start):
-    """Return the nearest ### heading text that precedes fence_start."""
     preceding = text[:fence_start]
     headings = _HEADING_RE.findall(preceding)
     return headings[-1].strip() if headings else None
 
 
 def extract_dramatic_action_cards(text):
-    """
-    Scans the full document for ```card_gm_dramatic_action fences.
-    Each fence is one card. The ### heading immediately above it is the title.
-
-    Each card dict:
-        title       str
-        deck_label  "Dramatic Action"
-        raw_block   str   verbatim fence content
-        chapter     False (DA cards are never chapter-gated)
-    """
     cards = []
     for m in _FENCE_RE.finditer(text):
         tag, raw_block = m.group(1), m.group(2)
@@ -145,18 +120,6 @@ def extract_dramatic_action_cards(text):
 
 
 def extract_combat_cards(text):
-    """
-    Scans the full document for ```card_gm_combat fences.
-    Each fence is one card. The ### heading immediately above it is the title.
-
-    chapter=True when the fence tag is ```card_gm_combat_chapter_gated.
-
-    Each card dict:
-        title       str
-        deck_label  "Combat"
-        raw_block   str   verbatim fence content
-        chapter     bool
-    """
     cards = []
     for m in _FENCE_RE.finditer(text):
         tag, raw_block = m.group(1), m.group(2)
@@ -182,36 +145,6 @@ def extract_combat_cards(text):
 # ---------------------------------------------------------------------------
 
 def parse_card_block(raw_block, title):
-    """
-    Converts the verbatim fenced-block text into structured fields the SVG
-    renderer uses.
-
-    The guide's card blocks use a loose, inconsistent format. This parser
-    handles all observed patterns:
-
-      Answer:           — italic prompt, may span indented continuation lines
-          indented text       e.g. Escalate the Danger, Pivot
-      Answer:           — prompt on the same line
-      inline text       e.g. "What negative consequence..."
-
-      Choose one:       — section label followed by bullet list
-       * bullet
-       * bullet
-
-      Plain prose       — body text (Deal Damage: "By default, deal 1-4 damage.")
-
-      Rule footer lines — contain "shuffle", "reshuffle", "maximum", or start
-                          with "Then:" and don't introduce a new section.
-
-    "A threat approaches" has two parallel option groups with no Choose/Answer
-    wrapper — they're recognised by the "Add a shadow point." / "Use a shadow
-    point." opener and treated as labelled sections.
-
-    Returns:
-        prompt    str or None   — the Answer: text, rendered in italic
-        sections  list of dicts — each {"label": str|None, "bullets": [str], "text": str|None}
-        rule      str or None   — footer rule text
-    """
     RULE_PAT  = re.compile(r'\b(shuffle|reshuffle|maximum)\b', re.I)
     LABEL_PAT = re.compile(
         r'^(Choose\b|Then\b|Place\b|If they\b|Add a shadow point|Use a shadow point)'
@@ -220,12 +153,9 @@ def parse_card_block(raw_block, title):
     BULLET_PAT = re.compile(r'^\s*\*\s+')
 
     lines = raw_block.strip().splitlines()
-
     prompt     = None
     sections   = []
     rule_lines = []
-
-    # Working state for the current section being accumulated
     cur_label   = None
     cur_bullets = []
     cur_texts   = []
@@ -246,16 +176,11 @@ def parse_card_block(raw_block, title):
         raw = lines[i]
         line = raw.strip()
 
-        # ── blank ──
         if not line:
             i += 1
             continue
 
-        # ── rule footer ──
-        # "Then:\nShuffle..." pattern: "Then:" alone on a line followed by
-        # a shuffle line. Also catches inline "Then: Shuffle …"
         if re.match(r'^Then\s*:', line, re.I):
-            # peek: if next non-blank line is a rule, absorb both
             j = i + 1
             while j < len(lines) and not lines[j].strip():
                 j += 1
@@ -263,34 +188,26 @@ def parse_card_block(raw_block, title):
                 rule_lines.append(lines[j].strip())
                 i = j + 1
             else:
-                # "Then:" followed by non-rule — treat as section label
                 flush()
                 cur_label = line.rstrip(':')
                 i += 1
             continue
 
         if RULE_PAT.search(line) and not BULLET_PAT.match(raw):
-            # Only treat as a footer rule if the rule keyword appears early in
-            # the line (i.e. it IS the point of the line, not buried in prose).
-            # "Shuffle the GM Move Deck" → keyword at pos 0 → rule. ✓
-            # "Expend stamina & reshuffle this deck" → keyword at pos 17 → body. ✓
             rule_pos = RULE_PAT.search(line).start()
             if rule_pos <= len(line) // 2:
                 rule_lines.append(line)
                 i += 1
                 continue
 
-        # ── Answer: prompt ──
         if ANSWER_PAT.match(line):
             inline = ANSWER_PAT.sub('', line).strip()
             parts  = [inline] if inline else []
-            # collect indented continuation lines
             i += 1
             while i < len(lines):
                 nxt = lines[i]
                 if not nxt.strip():
                     break
-                # indented by 2+ spaces relative to "Answer:"
                 if re.match(r'  ', nxt):
                     parts.append(nxt.strip())
                     i += 1
@@ -300,21 +217,17 @@ def parse_card_block(raw_block, title):
                 prompt = " ".join(parts)
             continue
 
-        # ── bullet ──
         if BULLET_PAT.match(raw):
             cur_bullets.append(BULLET_PAT.sub('', raw).strip())
             i += 1
             continue
 
-        # ── section label ──
         if LABEL_PAT.match(line):
             flush()
             cur_label = line.rstrip(':').rstrip('.')
             i += 1
             continue
 
-        # ── plain text ──
-        # Accumulate into current section's text, joining continuation lines
         flush()
         cur_texts = [line]
         i += 1
@@ -331,7 +244,6 @@ def parse_card_block(raw_block, title):
         flush()
 
     flush()
-
     rule = " ".join(rule_lines).strip() or None
     return {"prompt": prompt, "sections": sections, "rule": rule}
 
@@ -348,7 +260,6 @@ def esc(s):
 
 
 def wrap(text, width):
-    """Word-wrap returning list of strings."""
     return textwrap.wrap(text, width=width) or [""]
 
 
@@ -369,28 +280,23 @@ def slug(title):
 # ---------------------------------------------------------------------------
 
 def render_svg(card):
-    """
-    Renders a complete Inkscape-compatible SVG string for one card dict.
-    card keys: title, deck_label, raw_block, chapter
-    """
-    title     = card["title"]
+    title      = card["title"]
     deck_label = card["deck_label"]
-    chapter   = card["chapter"]
-    raw_block = card["raw_block"]
+    chapter    = card["chapter"]
+    raw_block  = card["raw_block"]
 
-    parsed = parse_card_block(raw_block, title)
+    parsed   = parse_card_block(raw_block, title)
     prompt   = parsed["prompt"]
     sections = parsed["sections"]
     rule     = parsed["rule"]
 
-    accent = accent_for(title)
+    accent  = accent_for(title)
     card_id = "svg_" + slug(title)
     docname = slug(title) + ".svg"
 
     out = []
-    a = out.append  # shorthand
+    a = out.append
 
-    # ── SVG header with Inkscape namespaces ──
     a(f'<svg')
     a(f'   viewBox="0 0 {W} {H}"')
     a(f'   width="2.5in"')
@@ -425,61 +331,56 @@ def render_svg(card):
     a(f'    </clipPath>')
     a(f'  </defs>')
 
-    # ── Card background ──
+    # Background
     a(f'  <rect x="0" y="0" width="{W}" height="{H}" rx="{RADIUS}" ry="{RADIUS}"')
     a(f'        fill="{COLORS["offwhite"]}" clip-path="url(#card-clip)"/>')
-    # Accent bar
     a(f'  <rect x="0" y="0" width="{W}" height="14" fill="{accent}"')
     a(f'        clip-path="url(#card-clip)"/>')
-    # Border
     a(f'  <rect x="1.5" y="1.5" width="{W-3}" height="{H-3}" rx="{RADIUS}" ry="{RADIUS}"')
     a(f'        fill="none" stroke="{COLORS["border"]}" stroke-width="3"/>')
-    # Chapter-gated footer band
+
     if chapter:
         a(f'  <rect x="0" y="{H-52}" width="{W}" height="52" fill="{accent}"')
         a(f'        opacity="0.12" clip-path="url(#card-clip)"/>')
         a(f'  <text x="{W//2}" y="{H-22}" text-anchor="middle"')
-        a(f'        font-family="{FONT_SANS}" font-size="22" font-weight="600"')
+        a(f'        font-family="{FONT_SANS}" font-size="26" font-weight="600"')
         a(f'        fill="{accent}" letter-spacing="2">CHAPTER-GATED</text>')
 
-    # ── Header ──
+    # Header
     a(f'  <text x="54" y="80" text-anchor="start"')
-    a(f'        font-family="{FONT_SANS}" font-size="22" font-weight="normal"')
+    a(f'        font-family="{FONT_SANS}" font-size="26" font-weight="normal"')
     a(f'        fill="{COLORS["rule"]}" letter-spacing="2">{esc(deck_label.upper())}</text>')
 
-    # Title — may wrap at 24 chars
     title_lines = wrap(title, 24)
     title_y = 130
     for i, tl in enumerate(title_lines):
         a(f'  <text x="54" y="{title_y + i * 52}"')
-        a(f'        font-family="{FONT_SERIF}" font-size="54" font-weight="bold"')
+        a(f'        font-family="{FONT_SERIF}" font-size="65" font-weight="bold"')
         a(f'        fill="{COLORS["ink"]}">{esc(tl)}</text>')
 
     header_bottom = title_y + len(title_lines) * 52 + 10
 
-    # Divider under header
     a(f'  <line x1="54" y1="{header_bottom + 4}" x2="{W - 54}" y2="{header_bottom + 4}"')
     a(f'        stroke="{COLORS["divider"]}" stroke-width="1.5"/>')
 
     cy = header_bottom + 48
 
-    # ── Prompt (italic serif) ──
+    # Prompt
     if prompt:
         for ln in wrap(prompt, WRAP_PROMPT):
             a(f'  <text x="54" y="{cy}"')
-            a(f'        font-family="{FONT_SERIF}" font-size="28" font-style="italic"')
+            a(f'        font-family="{FONT_SERIF}" font-size="34" font-style="italic"')
             a(f'        fill="{COLORS["muted"]}">{esc(ln)}</text>')
             cy += 38
         cy += 14
 
-    # ── Sections ──
+    # Sections
     first_section = True
     for sec in sections:
         label   = sec["label"]
         bullets = sec["bullets"]
         text    = sec["text"]
 
-        # Divider between sections (but not before the first)
         if not first_section and (label or bullets or text):
             a(f'  <line x1="54" y1="{cy}" x2="{W - 54}" y2="{cy}"')
             a(f'        stroke="{COLORS["divider"]}" stroke-width="1.5"/>')
@@ -489,40 +390,39 @@ def render_svg(card):
         if label:
             display_label = label if label.endswith(":") else label + ":"
             a(f'  <text x="54" y="{cy}" text-anchor="start"')
-            a(f'        font-family="{FONT_SANS}" font-size="24" font-weight="600"')
+            a(f'        font-family="{FONT_SANS}" font-size="29" font-weight="600"')
             a(f'        fill="{COLORS["rule"]}">{esc(display_label)}</text>')
             cy += 36
 
         for b in bullets:
             blines = wrap(b, WRAP_BULLET)
             a(f'  <text x="62" y="{cy}" font-family="{FONT_SANS}"')
-            a(f'        font-size="26" fill="{COLORS["rule"]}">·</text>')
+            a(f'        font-size="31" fill="{COLORS["rule"]}">·</text>')
             for j, bl in enumerate(blines):
                 a(f'  <text x="82" y="{cy + j * 34}"')
-                a(f'        font-family="{FONT_SANS}" font-size="26"')
+                a(f'        font-family="{FONT_SANS}" font-size="31"')
                 a(f'        fill="{COLORS["ink"]}">{esc(bl)}</text>')
             cy += len(blines) * 34 + 10
 
         if text:
             for ln in wrap(text, WRAP_BODY):
                 a(f'  <text x="54" y="{cy}"')
-                a(f'        font-family="{FONT_SANS}" font-size="26"')
+                a(f'        font-family="{FONT_SANS}" font-size="31"')
                 a(f'        fill="{COLORS["ink"]}">{esc(ln)}</text>')
                 cy += 36
             cy += 8
 
-    # ── Rule footer ──
+    # Rule footer
     if rule:
         footer_y = H - (100 if chapter else 70)
         a(f'  <line x1="54" y1="{footer_y - 20}" x2="{W - 54}" y2="{footer_y - 20}"')
         a(f'        stroke="{COLORS["divider"]}" stroke-width="1.5"/>')
         for i, rl in enumerate(wrap(rule, 42)):
             a(f'  <text x="54" y="{footer_y + i * 32}"')
-            a(f'        font-family="{FONT_SANS}" font-size="24"')
+            a(f'        font-family="{FONT_SANS}" font-size="29"')
             a(f'        fill="{COLORS["rule"]}">{esc(rl)}</text>')
 
     a('</svg>')
-
     return "\n".join(out) + "\n"
 
 
@@ -558,10 +458,6 @@ def content_hash(s):
 
 
 def filename_for(card, index, total):
-    """
-    Produces a stable, sortable filename.
-    da_01_escalate_the_danger.svg  /  cb_01_deal_damage.svg
-    """
     prefix = "da" if card["deck_label"] == "Dramatic Action" else "cb"
     n = str(index + 1).zfill(2)
     return f"{prefix}_{n}_{slug(card['title'])}.svg"
@@ -575,19 +471,10 @@ def main():
     parser = argparse.ArgumentParser(
         description="Generate GM Move Deck SVG cards from mod_guide_gm.md"
     )
-    parser.add_argument(
-        "guide",
-        help="Full path to mod_guide_gm.md"
-    )
-    parser.add_argument(
-        "output_dir",
-        help="Directory to write SVG files into (created if it doesn't exist)"
-    )
-    parser.add_argument(
-        "--force",
-        action="store_true",
-        help="Regenerate all files even if content hasn't changed"
-    )
+    parser.add_argument("guide", help="Full path to mod_guide_gm.md")
+    parser.add_argument("output_dir", help="Directory to write SVG files into")
+    parser.add_argument("--force", action="store_true",
+                        help="Regenerate all files even if content hasn't changed")
     args = parser.parse_args()
 
     guide_path = os.path.expanduser(args.guide)
@@ -601,14 +488,8 @@ def main():
     with open(guide_path, encoding="utf-8") as f:
         text = f.read()
 
-    # Parse both decks
     da_cards     = extract_dramatic_action_cards(text)
     combat_cards = extract_combat_cards(text)
-
-    if not da_cards:
-        print("WARNING: No Dramatic Action cards found. Check guide structure.")
-    if not combat_cards:
-        print("WARNING: No Combat cards found. Check guide structure.")
 
     all_cards = (
         [(c, i, len(da_cards))     for i, c in enumerate(da_cards)] +
@@ -620,25 +501,22 @@ def main():
     skipped = 0
 
     for card, index, total in all_cards:
-        fname   = filename_for(card, index, total)
-        svg     = render_svg(card)
-        h       = content_hash(svg)
+        fname = filename_for(card, index, total)
+        svg   = render_svg(card)
+        h     = content_hash(svg)
 
         if not args.force and hashes.get(fname) == h:
             skipped += 1
             continue
 
-        filepath = os.path.join(out_dir, fname)
-        with open(filepath, "w", encoding="utf-8") as f:
+        with open(os.path.join(out_dir, fname), "w", encoding="utf-8") as f:
             f.write(svg)
         hashes[fname] = h
         written += 1
         print(f"  wrote  {fname}")
 
     save_hashes(out_dir, hashes)
-
-    total_cards = len(all_cards)
-    print(f"\nDone. {written} written, {skipped} unchanged. ({total_cards} total cards)")
+    print(f"\nDone. {written} written, {skipped} unchanged. ({len(all_cards)} total cards)")
     if written > 0:
         print(f"Output: {out_dir}")
 
