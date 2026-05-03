@@ -1094,8 +1094,7 @@ levels = ['r1', '0', 'g1', 'g2']
 
 **Details**: Put an environmental hazard between you and a foe and goad them to approach.
 
-On ✗: you succumb to a danger you did not see
-    
+Use an existing hazard, or spend one XP to create one.
 
 
 # Not On My Turf
