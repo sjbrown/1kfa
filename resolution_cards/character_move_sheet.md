@@ -594,13 +594,13 @@ levels = ['r1', '0', 'g1']
 
     ✗:
     ----
-    ✓: 
+    ✓: 1 red token
     ----
-    ✔: 1 red token
+    ✔: 2 red tokens (max)
     ----
-    ✔✔: 2 red tokens max.
+    ✔✔: 3 red tokens (max)
 
-**Details**: When you reveal Might, say how your attack was focused on a part of the foe's body. You may turn points of Might into red tokens that are placed on a marker representing this foe. Afterwards, any player can discard one of those red tokens to take +1 advantage against the foe.
+**Details**: When you reveal Might, say how your attack was focused on a part of the foe's body. You may turn points of Might into red tokens that are placed on this foe's card. Afterwards, any player may take +1 advantage against the foe for any red token discarded.
     
 
 
@@ -738,9 +738,8 @@ Your encumbrance penalty for this shield or armour is one fewer than normal
 
 When someone stands in your way, or you face a dangerous threshold, answer and proceed. Then the GM answers the second question
 
-*  How did this armour or symbol will earn you passage? 
+ *  How did this armour or symbol will earn you passage?
  *  Does the armour need to be surrendered or destroyed?
-    
 
 
 # Apex Predator
@@ -1188,7 +1187,6 @@ Choices:
  *  lose 1 charge on all your other magic items 
  *  reduce the charge capacity of this item by 1
 
-On ✗: the effect fails or misfires, the GM will say how
     
 
 
@@ -1391,7 +1389,7 @@ levels = ['r2', 'r1', '0', 'g1', 'g2']
  *  double its effects
 
 The effects happen no matter what.
-On ✗: The item is destroyed and you are marked by the new source.
+On ✓, answer: how are you marked by the new source?
     
 
 
