@@ -964,8 +964,37 @@ heat of battle to being teleported to the far end of the dungeon. Whatever
 way it occurs, it's bound to cause problems.
 
 
+### Shadow
 
+`TODO: an image of the card`
 
+```card_gm_dramatic_action 4x
+(gated to some chapters)
+
+👻
+
+Shadow
+
+```
+
+### Death
+
+`TODO: an image of the card`
+
+```card_gm_dramatic_action
+(gated to some chapters)
+
+💀
+
+DEATH.
+
+Choose an incapacitated PC. They are lost to death.
+
+If none are incapacitated, incapacitate one.
+
+You may spend a Journey point to instead cheat death and
+instead lose an allied NPC to death.
+```
 
 ### A GM move is more than an outcome of move that caused it
 
