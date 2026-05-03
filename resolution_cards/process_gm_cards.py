@@ -100,8 +100,8 @@ _FENCE_RE = re.compile(
     re.DOTALL
 )
 
-# Looks backward from a fence for the nearest ### heading above it.
-_HEADING_RE = re.compile(r'### (.+)')
+# Looks backward from a fence for the nearest ### or #### heading above it.
+_HEADING_RE = re.compile(r'#{3,4} (.+)')
 
 # chapter_gated flag: present in the fence tag or content
 _CHAPTER_TAG = 'chapter_gated'
