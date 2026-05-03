@@ -87,7 +87,7 @@ WRAP_BULLET = 37
 # Markdown parsing
 # ---------------------------------------------------------------------------
 
-_FENCE_RE = re.compile(r'```card_gm_(\w+)\n(.*?)```', re.DOTALL)
+_FENCE_RE = re.compile(r'```card_gm_(\w+)(?:\s+(\d+)x)?\n(.*?)```', re.DOTALL)
 # Match ### or #### headings
 _HEADING_RE = re.compile(r'#{3,4} (.+)')
 _CHAPTER_TAG = 'chapter_gated'
@@ -102,18 +102,20 @@ def _heading_before(text, fence_start):
 def extract_dramatic_action_cards(text):
     cards = []
     for m in _FENCE_RE.finditer(text):
-        tag, raw_block = m.group(1), m.group(2)
+        tag, multiplier, raw_block = m.group(1), m.group(2), m.group(3)
         if tag != 'dramatic_action':
             continue
         if not raw_block.strip() or raw_block.strip() == '???':
             continue
         title = _heading_before(text, m.start()) or "Untitled"
-        cards.append({
-            "title":      title,
-            "deck_label": "Dramatic Action",
-            "raw_block":  raw_block,
-            "chapter":    False,
-        })
+        count = int(multiplier) if multiplier else 1
+        for _ in range(count):
+            cards.append({
+                "title":      title,
+                "deck_label": "Dramatic Action",
+                "raw_block":  raw_block,
+                "chapter":    False,
+            })
     if not cards:
         sys.exit("ERROR: No ```card_gm_dramatic_action fences found in the guide.")
     return cards
@@ -122,7 +124,7 @@ def extract_dramatic_action_cards(text):
 def extract_combat_cards(text):
     cards = []
     for m in _FENCE_RE.finditer(text):
-        tag, raw_block = m.group(1), m.group(2)
+        tag, raw_block = m.group(1), m.group(3)
         if not tag.startswith('combat'):
             continue
         if not raw_block.strip():
@@ -294,6 +296,9 @@ def render_svg(card):
     card_id = "svg_" + slug(title)
     docname = slug(title) + ".svg"
 
+    # Shadow and Death cards get a black header band with white text
+    dark_card = title.lower() in ('shadow', 'death')
+
     out = []
     a = out.append
 
@@ -334,8 +339,14 @@ def render_svg(card):
     # Background
     a(f'  <rect x="0" y="0" width="{W}" height="{H}" rx="{RADIUS}" ry="{RADIUS}"')
     a(f'        fill="{COLORS["offwhite"]}" clip-path="url(#card-clip)"/>')
-    a(f'  <rect x="0" y="0" width="{W}" height="14" fill="{accent}"')
-    a(f'        clip-path="url(#card-clip)"/>')
+    if dark_card:
+        # Full black header band from top down to just below the title
+        header_band_h = 200
+        a(f'  <rect x="0" y="0" width="{W}" height="{header_band_h}" fill="#1A1917"')
+        a(f'        clip-path="url(#card-clip)"/>')
+    else:
+        a(f'  <rect x="0" y="0" width="{W}" height="14" fill="{accent}"')
+        a(f'        clip-path="url(#card-clip)"/>')
     a(f'  <rect x="1.5" y="1.5" width="{W-3}" height="{H-3}" rx="{RADIUS}" ry="{RADIUS}"')
     a(f'        fill="none" stroke="{COLORS["border"]}" stroke-width="3"/>')
 
@@ -347,16 +358,19 @@ def render_svg(card):
         a(f'        fill="{accent}" letter-spacing="2">CHAPTER-GATED</text>')
 
     # Header
+    deck_label_color = "#FFFFFF" if dark_card else COLORS["rule"]
+    title_color      = "#FFFFFF" if dark_card else COLORS["ink"]
+
     a(f'  <text x="54" y="80" text-anchor="start"')
     a(f'        font-family="{FONT_SANS}" font-size="26" font-weight="normal"')
-    a(f'        fill="{COLORS["rule"]}" letter-spacing="2">{esc(deck_label.upper())}</text>')
+    a(f'        fill="{deck_label_color}" letter-spacing="2">{esc(deck_label.upper())}</text>')
 
     title_lines = wrap(title, 24)
     title_y = 130
     for i, tl in enumerate(title_lines):
         a(f'  <text x="54" y="{title_y + i * 52}"')
         a(f'        font-family="{FONT_SERIF}" font-size="65" font-weight="bold"')
-        a(f'        fill="{COLORS["ink"]}">{esc(tl)}</text>')
+        a(f'        fill="{title_color}">{esc(tl)}</text>')
 
     header_bottom = title_y + len(title_lines) * 52 + 10
 

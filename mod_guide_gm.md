@@ -969,7 +969,6 @@ way it occurs, it's bound to cause problems.
 `TODO: an image of the card`
 
 ```card_gm_dramatic_action 4x
-(gated to some chapters)
 
 👻
 
