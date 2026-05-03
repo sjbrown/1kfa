@@ -76,7 +76,6 @@ def filter_dom_elements(dom, card):
                     card.get('two_check'), card.get('three_check')]
         if x not in (None, '')
     ]
-    dom.layer_hide('template')
     dom.layer_show('std_heading')
 
     # first, turn on / off the 'flags'
