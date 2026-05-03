@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 """
-gm_card_generator.py
-====================
+process_gm_cards.py
+===================
 Parses mod_guide_gm.md and generates Inkscape-compatible SVG playing cards
 (2.5 x 3.5 in, 750x1050 px viewBox) for the GM Move Deck.
 
 Usage:
-    python3 gm_card_generator.py <path/to/mod_guide_gm.md> <output_directory>
+    python3 process_gm_cards.py <path/to/mod_guide_gm.md> <output_directory>
 
 Example:
-    python3 gm_card_generator.py ~/1kfa/mod_guide_gm.md ~/Desktop/gm-cards
+    python3 process_gm_cards.py ~/1kfa/mod_guide_gm.md ~/Desktop/gm-cards
 
 The script finds two sections in the guide:
   1. Dramatic Action GM Moves  — ### headings with fenced-code card blocks
@@ -92,127 +92,88 @@ WRAP_BULLET = 37
 # Markdown parsing
 # ---------------------------------------------------------------------------
 
+# Matches a fenced block with a specific language tag, capturing the content.
+# Group 1 = fence tag suffix (e.g. "dramatic_action" or "combat")
+# Group 2 = block content
+_FENCE_RE = re.compile(
+    r'```card_gm_(\w+)\n(.*?)```',
+    re.DOTALL
+)
+
+# Looks backward from a fence for the nearest ### heading above it.
+_HEADING_RE = re.compile(r'### (.+)')
+
+# chapter_gated flag: present in the fence tag or content
+_CHAPTER_TAG = 'chapter_gated'
+
+
+def _heading_before(text, fence_start):
+    """Return the nearest ### heading text that precedes fence_start."""
+    preceding = text[:fence_start]
+    headings = _HEADING_RE.findall(preceding)
+    return headings[-1].strip() if headings else None
+
+
 def extract_dramatic_action_cards(text):
     """
-    Finds the 'Dramatic Action GM Moves' section and returns a list of
-    card dicts parsed from each ### heading + fenced code block.
+    Scans the full document for ```card_gm_dramatic_action fences.
+    Each fence is one card. The ### heading immediately above it is the title.
 
-    Each card dict has keys:
+    Each card dict:
         title       str
-        deck_label  str  ("Dramatic Action")
-        raw_block   str  (verbatim content of the ``` fence)
-        chapter     bool (always False for DA cards)
+        deck_label  "Dramatic Action"
+        raw_block   str   verbatim fence content
+        chapter     False (DA cards are never chapter-gated)
     """
-    # Find the section bounded by "## Dramatic Action GM Moves" and the next ##
-    section_match = re.search(
-        r'## Dramatic Action GM Moves\b.*?(?=\n## |\Z)',
-        text, re.DOTALL
-    )
-    if not section_match:
-        sys.exit("ERROR: Could not find '## Dramatic Action GM Moves' section in the guide.")
-
-    section = section_match.group(0)
-
-    # Split into ### subsections
-    subsections = re.split(r'\n(?=### )', section)
-
     cards = []
-    for sub in subsections:
-        heading = re.match(r'### (.+)', sub)
-        if not heading:
+    for m in _FENCE_RE.finditer(text):
+        tag, raw_block = m.group(1), m.group(2)
+        if tag != 'dramatic_action':
             continue
-        title = heading.group(1).strip()
-
-        # Skip meta-sections that aren't actual move cards
-        if re.search(r'(GM move is more than|triggering|journey point)', title, re.I):
+        if not raw_block.strip() or raw_block.strip() == '???':
             continue
-
-        # Extract the fenced code block (the card face)
-        fence = re.search(r'```\n(.*?)```', sub, re.DOTALL)
-        raw_block = fence.group(1) if fence else ""
-
-        if not raw_block.strip():
-            continue
-
+        title = _heading_before(text, m.start()) or "Untitled"
         cards.append({
             "title":      title,
             "deck_label": "Dramatic Action",
             "raw_block":  raw_block,
             "chapter":    False,
         })
-
+    if not cards:
+        sys.exit("ERROR: No ```card_gm_dramatic_action fences found in the guide.")
     return cards
 
 
 def extract_combat_cards(text):
     """
-    Finds the ordered list under '### When a combat interlude begins' and
-    returns one card dict per list item.
+    Scans the full document for ```card_gm_combat fences.
+    Each fence is one card. The ### heading immediately above it is the title.
 
-    Card face content is synthesised from the list item text because the
-    combat deck has no fenced-code card blocks in the source — only the
-    list that enumerates the cards.
+    chapter=True when the fence tag is ```card_gm_combat_chapter_gated.
 
     Each card dict:
         title       str
-        deck_label  str  ("Combat")
-        raw_block   str  (synthesised card text, same format as DA blocks)
+        deck_label  "Combat"
+        raw_block   str   verbatim fence content
         chapter     bool
     """
-    # Find the numbered list
-    section_match = re.search(
-        r'### When a combat interlude begins\b(.*?)(?=\n### |\Z)',
-        text, re.DOTALL
-    )
-    if not section_match:
-        sys.exit("ERROR: Could not find '### When a combat interlude begins' section.")
-
-    section = section_match.group(0)
-
-    # Collect all ordered list items (possibly multi-line with indented continuation)
-    # Pattern: lines starting with " 1. " or "    " continuation
-    raw_items = []
-    current = None
-    for line in section.splitlines():
-        ol_match = re.match(r'\s{1,3}1\.\s+(.*)', line)
-        continuation = re.match(r'\s{4,}(.*)', line) if current is not None else None
-        if ol_match:
-            if current is not None:
-                raw_items.append(current)
-            current = ol_match.group(1).strip()
-        elif continuation and current is not None:
-            current = current + " " + continuation.group(1).strip()
-        else:
-            if current is not None:
-                raw_items.append(current)
-                current = None
-    if current is not None:
-        raw_items.append(current)
-
     cards = []
-    for item in raw_items:
-        chapter = bool(re.match(r'\(only in some chapters\)', item, re.I))
-        # Strip the chapter prefix if present
-        item_clean = re.sub(r'^\(only in some chapters\)\s*', '', item, flags=re.I).strip()
-
-        # Parse "Title - description" or "Title / description"
-        title_body = re.split(r'\s*[-/&]\s*', item_clean, maxsplit=1)
-        title = title_body[0].strip()
-        body  = title_body[1].strip() if len(title_body) > 1 else ""
-
-        # Normalise title capitalisation
-        title = title.strip().rstrip('.')
-
-        # Build a synthetic raw_block in the same style as DA fenced blocks
-        raw_block = body if body else title
-
+    for m in _FENCE_RE.finditer(text):
+        tag, raw_block = m.group(1), m.group(2)
+        if not tag.startswith('combat'):
+            continue
+        if not raw_block.strip():
+            continue
+        title   = _heading_before(text, m.start()) or "Untitled"
+        chapter = _CHAPTER_TAG in tag
         cards.append({
             "title":      title,
             "deck_label": "Combat",
             "raw_block":  raw_block,
             "chapter":    chapter,
         })
-
+    if not cards:
+        sys.exit("ERROR: No ```card_gm_combat fences found in the guide.")
     return cards
 
 
@@ -222,123 +183,157 @@ def extract_combat_cards(text):
 
 def parse_card_block(raw_block, title):
     """
-    Parses a raw fenced-code block (or synthesised string for combat cards)
-    into structured fields the SVG renderer uses.
+    Converts the verbatim fenced-block text into structured fields the SVG
+    renderer uses.
 
-    Returns a dict:
-        prompt        str or None
-        sections      list of section dicts:
-                          {"label": str or None, "bullets": [str], "text": str or None}
-        rule          str or None   (line(s) ending with "Deck" or "deck" or "reshuffle")
+    The guide's card blocks use a loose, inconsistent format. This parser
+    handles all observed patterns:
+
+      Answer:           — italic prompt, may span indented continuation lines
+          indented text       e.g. Escalate the Danger, Pivot
+      Answer:           — prompt on the same line
+      inline text       e.g. "What negative consequence..."
+
+      Choose one:       — section label followed by bullet list
+       * bullet
+       * bullet
+
+      Plain prose       — body text (Deal Damage: "By default, deal 1-4 damage.")
+
+      Rule footer lines — contain "shuffle", "reshuffle", "maximum", or start
+                          with "Then:" and don't introduce a new section.
+
+    "A threat approaches" has two parallel option groups with no Choose/Answer
+    wrapper — they're recognised by the "Add a shadow point." / "Use a shadow
+    point." opener and treated as labelled sections.
+
+    Returns:
+        prompt    str or None   — the Answer: text, rendered in italic
+        sections  list of dicts — each {"label": str|None, "bullets": [str], "text": str|None}
+        rule      str or None   — footer rule text
     """
+    RULE_PAT  = re.compile(r'\b(shuffle|reshuffle|maximum)\b', re.I)
+    LABEL_PAT = re.compile(
+        r'^(Choose\b|Then\b|Place\b|If they\b|Add a shadow point|Use a shadow point)'
+    )
+    ANSWER_PAT = re.compile(r'^Answer\s*:\s*', re.I)
+    BULLET_PAT = re.compile(r'^\s*\*\s+')
+
     lines = raw_block.strip().splitlines()
 
-    # --- Identify rule lines (footer) ---
-    RULE_PAT = re.compile(
-        r'(shuffle|reshuffle|then:|maximum)', re.I
-    )
-
-    prompt   = None
-    sections = []
+    prompt     = None
+    sections   = []
     rule_lines = []
 
-    current_label   = None
-    current_bullets = []
-    current_texts   = []
+    # Working state for the current section being accumulated
+    cur_label   = None
+    cur_bullets = []
+    cur_texts   = []
 
-    def flush_section():
-        if current_label or current_bullets or current_texts:
+    def flush():
+        nonlocal cur_label, cur_bullets, cur_texts
+        text = " ".join(cur_texts).strip() or None
+        if cur_label or cur_bullets or text:
             sections.append({
-                "label":   current_label,
-                "bullets": list(current_bullets),
-                "text":    " ".join(current_texts).strip() or None,
+                "label":   cur_label,
+                "bullets": list(cur_bullets),
+                "text":    text,
             })
+        cur_label, cur_bullets, cur_texts = None, [], []
 
     i = 0
     while i < len(lines):
-        line = lines[i].rstrip()
+        raw = lines[i]
+        line = raw.strip()
 
-        # Skip empty lines
-        if not line.strip():
+        # ── blank ──
+        if not line:
             i += 1
             continue
 
-        # Bullet item:  " * text"
-        if re.match(r'\s*\*\s+', line):
-            bullet_text = re.sub(r'\s*\*\s+', '', line).strip()
-            current_bullets.append(bullet_text)
-            i += 1
+        # ── rule footer ──
+        # "Then:\nShuffle..." pattern: "Then:" alone on a line followed by
+        # a shuffle line. Also catches inline "Then: Shuffle …"
+        if re.match(r'^Then\s*:', line, re.I):
+            # peek: if next non-blank line is a rule, absorb both
+            j = i + 1
+            while j < len(lines) and not lines[j].strip():
+                j += 1
+            if j < len(lines) and RULE_PAT.search(lines[j]):
+                rule_lines.append(lines[j].strip())
+                i = j + 1
+            else:
+                # "Then:" followed by non-rule — treat as section label
+                flush()
+                cur_label = line.rstrip(':')
+                i += 1
             continue
 
-        # Answer / prompt line
-        if re.match(r'Answer\s*:', line, re.I):
-            # Collect the prompt — may span next line(s) if indented
-            prompt_parts = []
+        if RULE_PAT.search(line) and not BULLET_PAT.match(raw):
+            # Only treat as a footer rule if the rule keyword appears early in
+            # the line (i.e. it IS the point of the line, not buried in prose).
+            # "Shuffle the GM Move Deck" → keyword at pos 0 → rule. ✓
+            # "Expend stamina & reshuffle this deck" → keyword at pos 17 → body. ✓
+            rule_pos = RULE_PAT.search(line).start()
+            if rule_pos <= len(line) // 2:
+                rule_lines.append(line)
+                i += 1
+                continue
+
+        # ── Answer: prompt ──
+        if ANSWER_PAT.match(line):
+            inline = ANSWER_PAT.sub('', line).strip()
+            parts  = [inline] if inline else []
+            # collect indented continuation lines
             i += 1
             while i < len(lines):
-                nxt = lines[i].rstrip()
+                nxt = lines[i]
                 if not nxt.strip():
                     break
-                if re.match(r'\s{2,}', nxt):
-                    prompt_parts.append(nxt.strip())
+                # indented by 2+ spaces relative to "Answer:"
+                if re.match(r'  ', nxt):
+                    parts.append(nxt.strip())
                     i += 1
                 else:
                     break
-            if prompt_parts:
-                prompt = " ".join(prompt_parts)
-            else:
-                # Inline prompt on same line: "Answer: foo"
-                inline = re.sub(r'Answer\s*:\s*', '', line, flags=re.I).strip()
-                if inline:
-                    prompt = inline
+            if parts:
+                prompt = " ".join(parts)
             continue
 
-        # Rule / footer lines
-        if RULE_PAT.search(line):
-            rule_lines.append(line.strip())
+        # ── bullet ──
+        if BULLET_PAT.match(raw):
+            cur_bullets.append(BULLET_PAT.sub('', raw).strip())
             i += 1
             continue
 
-        # Section label lines: "Choose:", "Choose one:", "Then:", bare label
-        if re.match(r'(Choose|Then|Place|Add|Use|If they|Option)', line.strip(), re.I):
-            flush_section()
-            current_label   = line.strip().rstrip(':').strip()
-            current_bullets = []
-            current_texts   = []
+        # ── section label ──
+        if LABEL_PAT.match(line):
+            flush()
+            cur_label = line.rstrip(':').rstrip('.')
             i += 1
             continue
 
-        # Plain text
-        flush_section()
-        current_label   = None
-        current_bullets = []
-        current_texts   = [line.strip()]
+        # ── plain text ──
+        # Accumulate into current section's text, joining continuation lines
+        flush()
+        cur_texts = [line]
         i += 1
-        # Collect continuation lines
         while i < len(lines):
-            nxt = lines[i].rstrip()
-            if not nxt.strip() or re.match(r'\s*\*\s+', nxt):
+            nxt = lines[i].strip()
+            if not nxt:
                 break
-            if re.match(r'(Choose|Then|Place|Add|Use|Answer|If they|Option)', nxt.strip(), re.I):
+            if BULLET_PAT.match(lines[i]) or ANSWER_PAT.match(nxt):
                 break
-            if RULE_PAT.search(nxt):
+            if LABEL_PAT.match(nxt) or (RULE_PAT.search(nxt) and RULE_PAT.search(nxt).start() <= len(nxt) // 2):
                 break
-            current_texts.append(nxt.strip())
+            cur_texts.append(nxt)
             i += 1
-        flush_section()
-        current_label   = None
-        current_bullets = []
-        current_texts   = []
+        flush()
 
-    flush_section()
+    flush()
 
     rule = " ".join(rule_lines).strip() or None
-
-    return {
-        "prompt":   prompt,
-        "sections": sections,
-        "rule":     rule,
-    }
+    return {"prompt": prompt, "sections": sections, "rule": rule}
 
 
 # ---------------------------------------------------------------------------
