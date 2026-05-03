@@ -575,7 +575,7 @@ levels = ['r2', 'r1', '0', 'g1', 'g2']
 
     ✗:
     ----
-    ✓: 
+    ✓: 1 Might [shadow point]
     ----
     ✔: 1 Might
     ----
@@ -879,7 +879,7 @@ levels = ['r2', 'r1', '0', 'g1', 'g2']
 **Details**: While they're not looking at you, unburden someone of something they're carrying
 
 Encumbrance Penalty: expend stamina points from mental exhaustion. Count up all your Item and Pack cards.
-*  If you have 3-4, expend 1 stamina point 
+ *  If you have 3-4, expend 1 stamina point 
  *  If you have 5-6, expend 2 stamina points 
  *  If you have more than 6, expend 3 stamina points
     
