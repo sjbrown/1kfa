@@ -1,13 +1,11 @@
 #! /usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-
 import os
 import re
 import sys
 import string
 from pprint import pprint, pformat
-from tall_cards import cards
 import parse_character_moves
 from version import VERSION
 
@@ -134,7 +132,6 @@ def filter_dom_elements(dom, card):
             if 'spot_' in key:
                 dom.cut_layer(key)
             elif 'std_' in key:
-                #print( 'Showing', key)
                 dom.layer_show(key)
             if not card.get('slash_check') and 'slash_check' in key:
                 dom.layer_hide(key)
@@ -235,7 +232,6 @@ def filter_dom_elements(dom, card):
         dom.cut_element(x)
 
 
-
 def one_blank_3lines_front():
     dom = DOM('tall_card_front.svg')
 
@@ -262,23 +258,20 @@ def one_blank_3lines_front():
         elif '3lines' in key:
             dom.layer_show(key)
 
-    # Create the svg file and export a PNG
     svg_filename = DIR + '/deck_card_face_3lines.svg'
-    png_filename = DIR + '/deck_card_face_3lines.png'
     dom.write_file(svg_filename)
-    export_tall_png(svg_filename, png_filename, references=self.references)
-
+    # PNG export intentionally omitted — run make_deck_pngs() locally
 
 
 def make_card_dom(card):
     dom = DOM('tall_card_front.svg')
 
     if DEBUG:
-        print( f'\nWorking on {card["title"]}\n')
+        print(f'\nWorking on {card["title"]}\n')
         pprint(card)
 
-    #if card.levels and not card.'level_start'):
-        #raise Exception("Levels only works with level_start")
+    #if card.levels and not card.get('level_start'):
+    #    raise Exception("Levels only works with level_start")
 
     filter_dom_elements(dom, card)
 
@@ -319,16 +312,15 @@ def make_card_dom(card):
                      style=card.get('style_three_check'))
 
     if card.get('one_check') or card.get('slash_check') or card.get('two_check'):
-        #print('-- with checks -------------desc_detail')
         dom.replace_text('desc_detail', card['details'],
                          ideal_num_chars=130, style=card.get('style_details', None))
     else:
-        #print('---------------desc_detail', card.get('style_details'))
         dom.replace_text('desc_detail', card['details'],
                          ideal_num_chars=400, style=card.get('style_details', None))
     dom.replace_h1(card['title'], style=card.get('style_title'))
 
     return dom
+
 
 def custom_card_dom(card):
     tail = filenamify(card['title'])
@@ -336,6 +328,7 @@ def custom_card_dom(card):
     if os.path.isfile(fpath):
         return DOM(fpath)
     return None
+
 
 def component_type(card):
     if card.get('component'):
@@ -345,11 +338,11 @@ def component_type(card):
     else:
         return 'move_deck'
 
+
 def card_filenames(card, i):
     dirpath = '%s/%s/' % (DIR, component_type(card))
     os.makedirs(dirpath, exist_ok=True)
 
-    # Create the svg file and export a PNG
     number = card.get('custom_number', (i+1))
     svg_filename = dirpath + 'face%02d_%s.svg' % (
         number,
@@ -361,7 +354,27 @@ def card_filenames(card, i):
     )
     return svg_filename, png_filename
 
-def make_deck(cards):
+
+def make_deck_svgs(cards):
+    """Write all card SVG files. No Inkscape required."""
+    for i, card in enumerate(cards):
+        try:
+            dom = custom_card_dom(card)
+            if not dom:
+                dom = make_card_dom(card)
+        except:
+            print('FAIL')
+            print('card:')
+            pprint(card)
+            raise
+
+        svg_filename, _ = card_filenames(card, i)
+        dom.write_file(svg_filename)
+        print(f'  wrote  {svg_filename}')
+
+
+def make_deck_pngs(cards):
+    """Export all PNGs via Inkscape."""
     export_tall_png('tall_card_back2.svg', DIR + '/move_deck/back.png')
     export_tall_png('tall_card_back2.svg', DIR + '/starter/back.png')
     export_tall_png('equipment_back1.svg', DIR + '/magic_deck/back.png')
@@ -370,24 +383,11 @@ def make_deck(cards):
     #export_tall_png('tall_card_stats.svg', DIR + '/dramatic_action/face18_stats.png')
     #export_tall_png('tall_card_hints.svg', DIR + '/dramatic_action/face19_hints.png')
 
-    #one_blank_3lines_front()
-
     for i, card in enumerate(cards):
-        try:
-            dom = custom_card_dom(card)
-            if not dom:
-                dom = make_card_dom(card)
-        except:
-            print( 'FAIL' )
-            print( 'card:' )
-            pprint(card)
-            raise
-
         svg_filename, png_filename = card_filenames(card, i)
-
-        dom.write_file(svg_filename)
-
+        dom = DOM(svg_filename)
         export_tall_png(svg_filename, png_filename, dom.references)
+        print(f'  exported  {png_filename}')
 
 
 def make_documentation_images(cards):
@@ -411,8 +411,8 @@ def make_documentation_images(cards):
             outfile.close()
 
             export_png(tmp_template_filename, doc_img_filename, 381, 381)
-
     """
+
 
 def make_deck_from_svg_dir(dirpath, fpart=None):
     for fname in os.listdir(dirpath):
@@ -421,7 +421,7 @@ def make_deck_from_svg_dir(dirpath, fpart=None):
                 continue
             base = os.path.splitext(fname)[0]
             png_filename = DIR + '/%s.png' % base
-            export_tall_png(dirpath + '/' +fname, png_filename)
+            export_tall_png(dirpath + '/' + fname, png_filename)
 
 
 if __name__ == '__main__':
@@ -429,25 +429,15 @@ if __name__ == '__main__':
         os.makedirs(DIR)
 
     filtered = parse_character_moves.handy_moves('character_move_sheet.md')
-    if len(sys.argv) > 1:
-        card_grep = sys.argv[1]
+
+    card_grep = next((a for a in sys.argv[1:] if not a.startswith('--')), None)
+    if card_grep:
         filtered = [c for c in filtered
                     if card_grep.lower() in c['title'].lower()]
-    """
-    import parse_cards_csv
 
-    if len(sys.argv) > 1:
-        card_grep = sys.argv[1]
-        filtered = cards + parse_cards_csv.get_objs(card_grep)
-        if DEBUG:
-            print( 'filtering for', card_grep)
-        filtered = [c for c in filtered
-          if card_grep.lower() in c['title'].lower()]
-    else:
-        filtered = cards + parse_cards_csv.get_objs()
-    """
+    make_deck_svgs(filtered)
 
-    make_deck(filtered)
+    if '--no-pngs' not in sys.argv:
+        make_deck_pngs(filtered)
 
-    print(f'\n\nFinished.  Output to {DIR}')
-
+    print(f'\n\nFinished. Output in {DIR}')
