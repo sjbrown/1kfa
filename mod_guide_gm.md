@@ -1169,6 +1169,8 @@ triggered.
 ```card_gm_combat
 Choose a Threat, and apply their Might to a PC.
 
+Eg, choose Pirate Leroy.  Read their Might, apply it to the PC they were endangering.
+
 reshuffle this deck.
 ```
 
