@@ -733,9 +733,7 @@ In this most versatile and open-ended mode of play, PCs might:
 Think of Dramatic Action as the ground state of a scene, where the
 scene settles to between moments of intense violence or chaos. It's where
 characters pursue their goals through cleverness, magic, skill, or social
-pressure, setting up tension, transformation, and surprise. If Combat and
-Pursuit are the game's storms, Dramatic Action is the weather before and
-after.
+navigation, setting up tension, transformation, and surprise.
 
 During Dramatic Action, players will trigger specific moves, but much
 will also unfold via roleplay and Diegetic Dialogue. The next section will
@@ -1474,9 +1472,9 @@ forming ideas on how to contribute to the upcoming Dramatic Action.
 Create a title for this scene using the information you now have from answering
 the questions above.
 
-Create the "scene page" from a blank sheet of paper, write the scene's
-title at the top of the page.  Then draw the primary ✔ progress bar and the skull
-progress bar.
+Create the "scene page" from a blank sheet of paper or from a template in the
+[TODO: Game Resources]. Write the scene's title at the top of the page. 
+Then draw the primary ✔ progress bar and the skull progress bar.
 
 Shuffle the GM Move Deck just before beginning a scene. Typically this deck has
 thirteen cards, but its composition can be modified by chapter-specific rules.
@@ -1523,10 +1521,10 @@ A well-defined Primary Stake provides direction, creates tension, and makes
 the outcome of the scene meaningful. While smaller objectives may arise,
 the Primary Stake remains the core focus.
 
-3. The Dramatic Action begins
+3. The Forward Action begins
 
 With the scene and stakes understood, it's time for the players to take
-the reins and initiate the dramatic action. Begin by situating the
+the reins and initiate the forward action. Begin by situating the
 characters' position within the scene. Are they charging into battle?
 Surveying the landscape from afar? Once established, the GM will
 direct the spotlight to a player, prompting them with the inciting
@@ -1557,8 +1555,7 @@ completed.
 
 The GM has a deck of cards that activate as described above.
 
-Depending on chapter rules, there are about 3 skull cards in the deck.
-The other cards are:
+The cards are:
 
  1. Escalate the danger
  2. Deal damage
@@ -1571,23 +1568,24 @@ The other cards are:
  9. Shadow
  10. Shadow
  11. Shadow
- 12. (Only in certain chapters) Shadow
+ 12. Shadow
  13. (Only in certain chapters) Death
      * Only causes a character death if flipped *with* another Shadow card,
        otherwise, it kills a friendly NPC, if no such NPC, it just acts as
        a Shadow card.
 
-On an ✗, two cards are revealed from the GM Move Deck, and either:
+On an ✗, two cards are revealed from the GM Move Deck.
 
- 1. Any of the revealed cards is a Shadow card:
-    * Ignore the other revealed card (if any)
-    * Increment the skull progress bar
-    * Invoke the chapter-specific rules from the Campaign Guide
- 2. Otherwise:
-    * Using Narrative Authority Waterfall, choose *one* of the two cards and
-      narrate events into the scene that interpret the card
-    * Refer to [PAGE X] for additional guidance and suggestions for interpreting
-      the narrative effects of these cards.
+If any Shadow Cards are revealed, immediately increment the skull progress bar.
+
+Using Narrative Authority Waterfall, choose *one* of the two cards and
+narrate events into the scene that interpret the card.
+Refer to [PAGE X] for additional guidance and suggestions for interpreting
+the narrative effects of these cards.
+
+If one of the Shadow Cards is chosen, use one of the Shadow Card Moves
+from your current Chapter.  After using the move, remove it from consideration
+until the Chapter ends.
 
 When the skull progress increments, something negative happens, determined
 by the Chapter rules, and can include such things as:
@@ -1813,6 +1811,12 @@ The procedure of creating [The Hearth](#the-hearth) in the
 [Character Creation](#character-creation) section should virtually guarantee
 a *Journey point* here.
 
+```journey_point_requirement
+Gain a Journey Point when each PCs has had a turn in the spotlight to exhibit
+competence, luxuriate in comfort, receive warmth from an NPC, or apply
+kindness without expectation of repayment.
+```
+
 Give the players a chance to establish what "normal" is for their characters.
 This is an environment that they can manage. They know what to expect here,
 and to survive here requires no fundamental change on their part.
@@ -1871,16 +1875,28 @@ And it may develop into something more specifc, eg:
 
 The progress bar for the primary stake should be **7 units long**
 
-The skull progress bar should be **3 units long**
+The skull progress bar should be **4 units long**
 
-**When the skull progress bar increments**, answer one of the following
-questions:
+**When the skull progress bar increments**:
+
+ 1. The first time, do nothing.
+ 1. The second and third time, answer one of the questions below.
+ 1. The fourth time, blunder the scene
+
+Questions:
 
  * What violence pierces the illusion of peace? What ambush or fight erupts?
    * Start a Combat Scene
  * Who among the Hearth's allies is now captured, transformed, or killed?
  * What sudden divide or betrayal shatters the community’s trust?
  * Which innocents were swindled, vows were broken, or alliances shattered?
+
+### Chapter 1 Shadow Card Moves
+
+ * Evidence of Autumn
+ * Promises Made
+ * Visit the Fruit of Old Grief
+
 
 
 <a name="one-shot-ch-2" />
@@ -1914,6 +1930,12 @@ If the players choose to step their characters through the threshold,
 if all of them cross the threshold and step away from their ordinary world
 into a mysterious world of danger and adventure, gain a *Journey point*.
 
+```journey_point_requirement
+Gain a Journey Point when the PCs step voluntarily through the threshold.
+They must all cross the threshold and step away from their ordinary world
+into a mysterious world of danger and adventure.
+```
+
 Otherwise, you'll have to push them through. Create a cave-in, a magical
 force-field, or reveal something that unveils mystery
 in the world they inhabit: eg, a seeming ally is actually a betrayer,
@@ -1944,7 +1966,7 @@ Create the primary stake along these lines:
 
 The progress bar for the primary stake should be **7 units long**
 
-The skull progress bar should be **3 units long**
+The skull progress bar should be **4 units long**
 
 **When the skull progress bar increments**, answer one of the following
 questions:
@@ -1957,6 +1979,16 @@ questions:
  * How has the now Hearth broken beyond any existing plan to recover it?
  * Which essential resource or ally is blocked from crossing the threshold?
  * How must the PCs now cross unknowingly or involuntarily?
+
+**When the skull progress bar increments the 4th time**, instead blunder
+the scene.
+
+### Chapter 2 Shadow Card Moves
+
+ * A Nightmare Becomes Real
+ * Bewildering of Concsience
+ * Unmasking of the Heart
+
 
 
 <a name="one-shot-ch-3" />
@@ -2030,6 +2062,11 @@ If the PCs win *all* the stakes of the Chapter, and there are no remaining
 Shadow points on the GM sheet at that moment, then a *Journey point* has
 been won.
 
+```journey_point_requirement
+Gain a Journey Point when the PCs win *all* the stakes of the Chapter,
+and there are no remaining Shadow points on the GM sheet at that moment.
+```
+
 ### Chapter 3 Scene procedures
 
 During scene establishment, use the Narrative Authority Waterfall to **answer
@@ -2051,8 +2088,7 @@ The progress bar for the primary stake should be **10 units long**
 
 The skull progress bar should be **3 units long**
 
-For the duration of Chapter 3, **add the 4th Shadow Card and the
-Death Card to the GM Move Deck**.
+For the duration of Chapter 3, **add the Death Card to the GM Move Deck**.
 
 **When the skull progress bar increments**, answer one of the following
 questions:
@@ -2069,9 +2105,11 @@ questions:
  * What abomination or monster emerges?
    * Create a new 3-unit stake with the creature's name.
 
-**If both a Shadow Card and Death Card are flipped**, answer the question:
+### Chapter 3 Shadow Card Moves
 
- * Which PC is killed? How? Why?
+ * Procession of the Lost
+ * Promises Broken
+ * Water the Tree of New Grief
 
 
 <a name="one-shot-ch-4" />
@@ -2114,6 +2152,10 @@ This can play out in many ways:
 
 Gain your final *Journey point* if you can hit this note.
 
+```journey_point_requirement
+Gain a Journey Point when the PCs all have a turn in the spotlight to
+exhibit their change.
+```
 
 ### Chapter 4 Scene procedures
 
@@ -2147,6 +2189,12 @@ questions:
  * How is the prize lost or destroyed in order to restore balance?
  * How is the rekindling of the Hearth shown to be only temporary, fragile,
    or partial?
+
+### Chapter 4 Shadow Card Moves
+
+ * Harken to Cracks in the Mending
+ * Promises Kept
+ * Bury Your Dead
 
 
 # 9-hour Campaign
@@ -2255,6 +2303,10 @@ the phrase down on the same sheet as the Touchstone List.
 If you do this, gain a *Journey point* and aim to move the plot to the next
 phase.
 
+```journey_point_requirement
+Gain a Journey Point when the PCs make an accord around a common goal.
+```
+
 This threatening force will progress no matter the characters' choices and will
 pervade the narrative. A common narrative device in movies is "The Refusal of
 the Call" wherein the protagonists deny the Call to Adventure. If the PCs
@@ -2343,10 +2395,17 @@ You achieve your GM goal in the **Search** phase if
  * you gave each player a chance to "level up" their character and use their
    new skills or items
  * and you used at least one *Journey point*
- * and you used all the circled *Shadow points* you circled at the beginning
+ * and you used all the *Shadow points* you circled at the beginning
 
 If you do this, gain a *Journey point* and aim to move the plot to the next
 phase.
+
+```journey_point_requirement
+Gain a Journey Point when:
+ * each PC had a chance to "level up"
+ * and you used at least one *Journey point*
+ * and you used all the *Shadow points* circled at the Chapter beginning
+```
 
 
 <a name="9-hour-ch-5" />
@@ -2404,6 +2463,11 @@ If each character answered "stay", "sacrifice", or "abandon" to any of the
 questions above, or if any player switched from "Lucky" to "Heroic", gain
 a *Journey point*.
 
+```journey_point_requirement
+Gain a Journey Point when each PC answered "Stay", "Sacrifice" or "Abandon"
+to any of the Chapter 5 questions.
+```
+
 
 <a name="9-hour-ch-6" />
 
@@ -2435,6 +2499,11 @@ When you're ready, set up a challenge in the narrative, then draw a circle
 around **all** of the unused *Shadow points* on your GM Worksheet.
 To earn the *Journey point* of this chapter, use all the circled points
 before the characters get a chance to Rest.
+
+```journey_point_requirement
+Gain a Journey Point when all of the circled Shadow Points are used before
+any PC has a chance to Rest.
+```
 
 ### Death Is Real Here
 
@@ -2487,6 +2556,16 @@ or obstacle that embodies:
  * rejection of emotional growth
  * rejection that this story must end
 
+```journey_point_requirement
+Gain a Journey Point when the PCs are confronted with a monster, challenge,
+or obstacle that embodies:
+ * grief: anger, bargaining, depression, denial
+ * rejection of how the characters have changed
+ * rejection of emotional growth
+ * rejection that this story must end
+```
+
+
 
 <a name="9-hour-ch-8" />
 
@@ -2504,6 +2583,10 @@ defeat the Threshold Guardian, or if that chapter was skipped, they will have
 to come to terms with where they've been and who they are now.
 Each character's story resolves differently. Where does their new
 power lie? Items? Skills? Relationships? Knowledge? Something else?
+
+```journey_point_requirement
+Gain a Journey Point when any PC can make good on a promise made in Chapter 1
+```
 
 ### The Chapter 8 Move: Reveal The Hearth
 
