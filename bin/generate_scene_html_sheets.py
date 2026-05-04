@@ -180,18 +180,15 @@ def extract_chapter_questions(block: str, chapter_num: int) -> list[str]:
 def extract_stake_ideas(block: str) -> list[str]:
     """Extract stake ideas from the chapter scene procedures."""
     proc_section = re.search(r'### Chapter \d+ Scene procedures(.*?)(?=###|\Z)', block, re.DOTALL)
-    if not proc_section:
-        return []
+    search_text = proc_section.group(1) if proc_section else block
 
-    text = proc_section.group(1)
-
-    # Find the "Create the primary stake along these lines" list
-    stake_match = re.search(
-        r'(?:Create the primary stake|primary stake)[^\n]*\n((?:\s*\*[^\n]+\n?)+)',
-        text, re.IGNORECASE
+    # Find the region between the stake intro and the progress bar line
+    stake_region = re.search(
+        r'(?:Create the primary\s+stake|Create the primary stake|primary stake)[^\n]*\n(.*?)(?=The progress bar for the primary stake)',
+        search_text, re.IGNORECASE | re.DOTALL
     )
-    if stake_match:
-        return parse_bullet_list(stake_match.group(1))
+    if stake_region:
+        return parse_bullet_list(stake_region.group(1))
 
     return []
 
