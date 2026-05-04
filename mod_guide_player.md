@@ -189,21 +189,26 @@ table can read them right-side-up.
 
 The GM reads aloud:
 
-> These are called Move Cards. You're going to take turns choosing, and I’ll be here to explain how they work and answer questions.
+> These are called Move Cards. You're going to take turns choosing, and
+> I'll be here to explain how they work and answer questions.
 >
-> This process will give each of you three Move Cards — your character’s special starting gifts, talents, or powers.
+> This process will give each of you three Move Cards. Move Cards are your
+> character’s special starting gifts, talents, or powers.
 >
 > Later in the game, you’ll be able to “Study Under a Master” to gain more.
 >
-> There are a lot of choices here, and we don’t want to get bogged down in the details. For now, you’re just choosing by title.\
-> Read through *just the titles* and ask yourself, “Does this sound like something I’d want my character to do?”
+> There are a lot of choices here, and we don’t want to get bogged down
+> in the details. For now, you’re just choosing by title.\
+> Read through *just the titles* and ask yourself, “Does this sound like
+> something I'd want my character to do?”
 >
 > We’ll learn how the cards work later.\
-> This game is about improvisation, not perfection — so go with your gut and pick three cards that look fun to you.
+> This game is about improvisation, not perfection — so go with your gut
+> and pick three cards that look fun to you.
 
 Players should use **The Rule Beneath All Rules** to determine pick order.
 
-Once each player has three Move Cards, move on to the next step. Hold onto them — these are the seeds of your character's legend.
+Once each player has three Move Cards, move on to the next step.
 
 
 ## Choose Dex / Int / Str
