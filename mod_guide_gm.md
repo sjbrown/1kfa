@@ -1093,7 +1093,7 @@ If the PCs engage with a fear-inducing monster, use the guidance in the
 
 Like during Dramatic Action, when a player resolves a move with an ✗,
 the GM will draw 2 cards from the GM Combat Move Deck and choose 1 to
-invoke. Using them is a bit more straightforward, as there are no skull
+invoke. Using them is a bit more straightforward, as there are no shadow
 cards.
 
  1. Deal damage
@@ -2313,6 +2313,29 @@ the Call" wherein the protagonists deny the Call to Adventure. If the PCs
 refuse their call, continue ramping up the tension and expose the downsides of
 that choice. It will lead naturally to Chapter 3.
 
+### Chapter 2 Scene procedures
+
+Create the primary stake along these lines:
+
+ * TODO
+ * TODO
+
+The progress bar for the primary stake should be **5 units long**
+
+The skull progress bar should be **3 units long**
+
+**When the skull progress bar increments**, answer one of the following
+questions:
+
+ * TODO
+ * TODO
+
+### Chapter 2 Shadow Card Moves
+
+ * TODO
+ * TODO
+
+
 
 <a name="9-hour-ch-3" />
 
@@ -2407,6 +2430,29 @@ Gain a Journey Point when:
  * and you used all the *Shadow points* circled at the Chapter beginning
 ```
 
+### Chapter 4 Scene procedures
+
+Create the primary stake along these lines:
+
+ * TODO
+ * TODO
+
+The progress bar for the primary stake should be **5 units long**
+
+The skull progress bar should be **3 units long**
+
+**When the skull progress bar increments**, answer one of the following
+questions:
+
+ * TODO
+ * TODO
+
+### Chapter 2 Shadow Card Moves
+
+ * TODO
+ * TODO
+
+
 
 <a name="9-hour-ch-5" />
 
@@ -2468,6 +2514,29 @@ Gain a Journey Point when each PC answered "Stay", "Sacrifice" or "Abandon"
 to any of the Chapter 5 questions.
 ```
 
+### Chapter 5 Scene procedures
+
+Create the primary stake along these lines:
+
+ * TODO
+ * TODO
+
+The progress bar for the primary stake should be **5 units long**
+
+The skull progress bar should be **3 units long**
+
+**When the skull progress bar increments**, answer one of the following
+questions:
+
+ * TODO
+ * TODO
+
+### Chapter 2 Shadow Card Moves
+
+ * TODO
+ * TODO
+
+
 
 <a name="9-hour-ch-6" />
 
@@ -2509,6 +2578,29 @@ any PC has a chance to Rest.
 
 Just as in the One-Shot campaign's Chapter 3, in this Chapter, the consequence
 for full Stamina loss is death.
+
+### Chapter 6 Scene procedures
+
+Create the primary stake along these lines:
+
+ * TODO
+ * TODO
+
+The progress bar for the primary stake should be **5 units long**
+
+The skull progress bar should be **3 units long**
+
+**When the skull progress bar increments**, answer one of the following
+questions:
+
+ * TODO
+ * TODO
+
+### Chapter 2 Shadow Card Moves
+
+ * TODO
+ * TODO
+
 
 
 <a name="9-hour-ch-7" />
@@ -2565,6 +2657,29 @@ or obstacle that embodies:
  * rejection that this story must end
 ```
 
+### Chapter 7 Scene procedures
+
+Create the primary stake along these lines:
+
+ * TODO
+ * TODO
+
+The progress bar for the primary stake should be **5 units long**
+
+The skull progress bar should be **3 units long**
+
+**When the skull progress bar increments**, answer one of the following
+questions:
+
+ * TODO
+ * TODO
+
+### Chapter 2 Shadow Card Moves
+
+ * TODO
+ * TODO
+
+
 
 
 <a name="9-hour-ch-8" />
@@ -2584,9 +2699,6 @@ to come to terms with where they've been and who they are now.
 Each character's story resolves differently. Where does their new
 power lie? Items? Skills? Relationships? Knowledge? Something else?
 
-```journey_point_requirement
-Gain a Journey Point when any PC can make good on a promise made in Chapter 1
-```
 
 ### The Chapter 8 Move: Reveal The Hearth
 
@@ -2611,6 +2723,33 @@ re-imagined or its inheritor is revealed. All the PCs now have a chance to
 fully heal their wounds.
 
 For every wound healed, gain another *Journey point*.
+
+```journey_point_requirement
+Gain a Journey Point when any PC heals a wound at the Hearth.
+```
+
+### Chapter 8 Scene procedures
+
+Create the primary stake along these lines:
+
+ * TODO
+ * TODO
+
+The progress bar for the primary stake should be **5 units long**
+
+The skull progress bar should be **3 units long**
+
+**When the skull progress bar increments**, answer one of the following
+questions:
+
+ * TODO
+ * TODO
+
+### Chapter 2 Shadow Card Moves
+
+ * TODO
+ * TODO
+
 
 
 # 30-hour Campaign
@@ -2648,7 +2787,7 @@ with **zero** *Journey points*.
 
 In Book 3, *Shadow points* grow at double the normal rate:
 
- * ✅︎ gains you 2 *Shadow points*
+ * Gain 2 Shadow Points every time a Player's move indicates gaining 1
  * on *FAST* moves, ✗ gains you 4 *Shadow points*
 
 Chapter 7 of Book 3 can return the PCs to their original home or wherever
