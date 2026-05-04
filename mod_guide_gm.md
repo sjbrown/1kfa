@@ -348,7 +348,7 @@ As the GM, you yourself will take a turn in the spotlight:
  * when someone flips ✗
  * as specifically instructed by a move a player is executing
  * when everyone looks to you to see what happens
- * when a character encounters something you've been preparing for
+ * when a PC encounters something you've been preparing for
 
 Usually your turn in the spotlight will be spent making a **GM move**.
 But it may also just be general narration. Remember the Narrative Authority
