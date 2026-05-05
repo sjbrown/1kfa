@@ -2601,7 +2601,8 @@ questions:
 
 ### Chapter 2 Shadow Card Moves
 
- * TODO
+ * Anti-transcendence. What festering secret does a foe reveal?
+   * Add 10 stamina points and a special ability to that foe
  * TODO
 
 
