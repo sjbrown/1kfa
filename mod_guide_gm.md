@@ -314,7 +314,8 @@ They're the GM's moment-to-moment currency, spending them lets you
  * Wrest narrative control with a sudden GM Move
 
 Shadow Points are meant to be spent freely and often. They are the teeth
-of the hidden horrors. They are the fuel strethening the shadow.
+of the hidden horrors. They are the darkness from whence the shadow's
+branches spring.
 
 The rules for gaining and spending Shadow Points are in PART 2: PROCEDURES.
 
@@ -588,12 +589,14 @@ each other.
 This answer will be known as The Hearth.  Write it down in the space provided
 on the GM Sheet.
 
-Next, go around the table again and ask:
+Next, ask each player to hold a Shadow Point token in their hand. Go around
+the table and ask:
 
 > Briefly, why would your character risk their life for The Hearth?
 
-As each player answers this question, have them write the answer down
-on their character sheet, and move a Shadow Point onto the GM Sheet.
+As each player answers this question, they return the Shadow Point to you
+and you place it on your GM Sheet. Players should write the answer down
+on their character sheet.
 
 An important aspect of The Hearth is that it must be something that the
 characters can be separated from. When the players are deciding on The
