@@ -2331,8 +2331,8 @@ questions:
 
 ### Chapter 2 Shadow Card Moves
 
- * TODO
- * TODO
+ * Immolated Herald: In what fire does the messenger become silenced?
+ * Refusal's Cost: What dire price is paid by an NPC for a PC's lack of strength or action?
 
 
 
@@ -2363,6 +2363,30 @@ Another way to dramatize the threshold crossing is to make the choice about
 whether or not to enter the mysterious world *alone*. Maybe the portal is
 closing, maybe their NPC allies are buying them time. Maybe these PC
 halflings are the only ones who will fit into the goblin armor.
+
+### Chapter 3 Scene procedures
+
+Create the primary stake along these lines:
+
+ * TODO
+ * TODO
+
+The progress bar for the primary stake should be **5 units long**
+
+The skull progress bar should be **3 units long**
+
+**When the skull progress bar increments**, answer one of the following
+questions:
+
+ * TODO
+ * TODO
+
+### Chapter 3 Shadow Card Moves
+
+ * The Guardian Knows Your Name - What very personal animus is revealed by the shadow forces?
+ * Divided At the Threshold - Which PC is suddenly pulled across the threshold?
+
+
 
 <a name="9-hour-ch-4" />
 
@@ -2446,10 +2470,10 @@ questions:
  * TODO
  * TODO
 
-### Chapter 2 Shadow Card Moves
+### Chapter 4 Shadow Card Moves
 
- * TODO
- * TODO
+ * Alliances Waver - what friendship or alliance is compromised by external tension?
+ * A New Scent on the Wind - what predator singles out one or more of the PCs?
 
 
 
@@ -2532,8 +2556,8 @@ questions:
 
 ### Chapter 2 Shadow Card Moves
 
- * TODO
- * TODO
+ * A Premise Breaks - what fundamental belief fails its test here at this moment?
+ * Apparitions Solidify - what loss from earlier in the story arrives now with monstrous weight?
 
 
 
@@ -2595,11 +2619,13 @@ questions:
  * TODO
  * TODO
 
-### Chapter 2 Shadow Card Moves
+### Chapter 6 Shadow Card Moves
 
  * Anti-transcendence. What festering secret does a foe reveal?
    * Add 10 stamina points and a special ability to that foe
- * TODO
+ * The Boon Is Cursed: what darkness has penetrated the prize they sought?
+ * One Must Stay: Escape is possible for most, but not for all. Who must stay behind?
+ * The Ordeal Reawakens: What thing they thought they defeated rises again, changed?
 
 
 
@@ -2674,10 +2700,11 @@ questions:
  * TODO
  * TODO
 
-### Chapter 2 Shadow Card Moves
+### Chapter 7 Shadow Card Moves
 
- * TODO
- * TODO
+ * The World Moved On: How has the PCs time away shown to have alienated them from their home?
+ * Grief at the Gate: Each PC swears a vow for or against something on the other side.
+ * Bury Your Dead
 
 
 
@@ -2745,10 +2772,10 @@ questions:
  * TODO
  * TODO
 
-### Chapter 2 Shadow Card Moves
+### Chapter 8 Shadow Card Moves
 
- * TODO
- * TODO
+ * Harken to Cracks in the Mending
+ * Promises Kept
 
 
 
