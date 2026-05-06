@@ -900,6 +900,9 @@ results apply only for the player who played it.
 If there are any negative consequences (damage, danger, etc) from the
 result, **all the participating PCs must suffer them**.
 
+Lastly, the GM collects a Shadow Point for every player that flipped
+an ✗ during the teamwork flip.
+
 
 ## Using Moves / Rhythms of Play
 

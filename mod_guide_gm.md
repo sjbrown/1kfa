@@ -568,14 +568,19 @@ The **Lift From Touchstones** tool might be applied here.
 
 > The Hearth can be a specific person or people. Maybe each character
 > shares a friendly uncle?
+>
 > The Hearth can be food. Do all these characters depend on the fruit
 > of the quartzberry tree?
+>
 > The Hearth can be a song. Is the valley home of these characters always
 > humming with the melodies of the wood elves?
+>
 > The Hearth can be an environmental feature. Does the village home of
 > all these characters depend on the limestone spring for water?
+>
 > The Hearth can be a ritual or festival. On the equinox, must every
 > tribe send a representative to seal the portal to the netherworld?
+>
 > The Hearth can be a group activity. No warrior may abandon the hunt
 > until the beast is caught. Nor may they abandon each other.
 >
@@ -618,31 +623,22 @@ Remember, it doesn't have to be a Hobbit hole. Characters might be most at
 home in the middle of a bloody battle.
 
 
-<!--
-### GM Prompt
+### Inspire the inciting incident
 
-Similar to the "Choose Fateful Moments" process, the players will now help the
-GM create the first (maybe the *primary*) plot hook in the story.
+Remind the table of the Touchstone List, and ask:
 
-The players collectively decide on two of the following plot hooks, and the
-GM will decide which one of the two they want to focus on at the beginning
-of the campaign.
+> What are some examples of inciting incidents from these stories?
+>
+> What did a protagonist of that story do that set off the action?
+>
+> Capture, obstruct, prevent
+> Chase or race
+> Rescue or regain
+> Reorder, rearrange, fortify
+> Uttering a taboo, Enacting a forbidden rite
 
- * Capture, obstruct, prevent
- * Chase or race
- * Rescue or regain
- * Reorder, rearrange, fortify
- * Forbidden act
+Write down a couple of these examples.
 
-Look to [Hooks](#hooks) for more details and
-inspiration on each one of these bullets.
-
-The GM does not have to tell the players which of the two was chosen.
-Have the players signaled that they want to be surprised by how the
-plot unfolds?
-Do the players need help getting their characters on the same page?
-The answers will help the GM decide whether to disclose the chosen hook.
--->
 
 ## Paint the Opening Image
 
