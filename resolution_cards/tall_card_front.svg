@@ -34,7 +34,7 @@
    id="namedview726"
    showgrid="false"
    inkscape:zoom="0.87303225"
-   inkscape:cx="-6.8725983"
+   inkscape:cx="-32.072126"
    inkscape:cy="169.52409"
    inkscape:window-x="0"
    inkscape:window-y="0"
@@ -700,7 +700,7 @@
      y="314.92059"
      style="font-size:7.5px;line-height:1.25">9hr / 30hr Campaign</tspan></text>
 </g><g
-   style="display:inline"
+   style="display:none"
    inkscape:label="positions"
    id="layer5"
    inkscape:groupmode="layer"

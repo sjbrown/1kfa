@@ -77,6 +77,7 @@ def filter_dom_elements(dom, card):
         if x not in (None, '')
     ]
     dom.layer_show('std_heading')
+    dom.layer_hide('positions')
 
     # first, turn on / off the 'flags'
     for key in dom.layers:

@@ -23,23 +23,27 @@ SRC_PLAYER=$BUILDDIR/mod_guide_player.md
 cp $KFAREPO/mod_guide_player.md $SRC_PLAYER
 SRC_GM=$BUILDDIR/mod_guide_gm.md
 cp $KFAREPO/mod_guide_gm.md $SRC_GM
+SRC_TABLE=$BUILDDIR/mod_guide_table.md
+cp $KFAREPO/mod_guide_table.md $SRC_TABLE
 
 DATE=$(date -I)
 source $KFAREPO/resolution_cards/version.py
 
 sed --in-place -e "s/VERSION/$VERSION/" $SRC_PLAYER
 sed --in-place -e "s/VERSION/$VERSION/" $SRC_GM
+sed --in-place -e "s/VERSION/$VERSION/" $SRC_TABLE
 
 python3 $KFAREPO/bin/preprocess_guides.py $SRC_PLAYER
 python3 $KFAREPO/bin/preprocess_guides.py $SRC_GM
+python3 $KFAREPO/bin/preprocess_guides.py $SRC_TABLE
 
-#-s                puts the utf-8 header in
-#--self-contained  puts data: URLs in
+#--standalone      puts the utf-8 header in
+#--embed-resources puts data: URLs in
 #-t html           to HTML
 pandoc \
  --from=markdown+line_blocks \
- -s \
- --self-contained \
+ --standalone \
+ --embed-resources \
  --include-in-header=$PUBLISH/tracking.html \
  --toc \
  -t html \
@@ -49,14 +53,25 @@ pandoc \
 
 pandoc \
  --from=markdown+line_blocks \
- -s \
- --self-contained \
+ --standalone \
+ --embed-resources \
  --include-in-header=$PUBLISH/tracking.html \
  --toc \
  -t html \
  --css=$PUBLISH/markdown.css \
  --metadata pagetitle="1kFA GM Guide" \
  $SRC_GM -o $BUILDDIR/1kfa_guide_gm.html
+
+pandoc \
+ --from=markdown+line_blocks \
+ --standalone \
+ --embed-resources \
+ --include-in-header=$PUBLISH/tracking.html \
+ --toc \
+ -t html \
+ --css=$PUBLISH/markdown.css \
+ --metadata pagetitle="1kFA Table Guide" \
+ $SRC_TABLE -o $BUILDDIR/1kfa_guide_table.html
 
 cd $BUILDDIR
 
@@ -83,3 +98,21 @@ pandoc \
   $BUILDDIR/gm_phone_pdf_src.md --pdf-engine=xelatex \
   --from=markdown+line_blocks \
   -o $BUILDDIR/1kfa_guide_gm_phone.pdf
+
+cat $PUBLISH/frontmatter_table.yml $SRC_TABLE > $BUILDDIR/table_pdf_src.md
+pandoc \
+  $BUILDDIR/table_pdf_src.md --pdf-engine=xelatex \
+  --from=markdown+line_blocks \
+  -o $BUILDDIR/1kfa_guide_table.pdf
+
+cat $PUBLISH/frontmatter_table_phone.yml $SRC_TABLE > $BUILDDIR/table_phone_pdf_src.md
+pandoc \
+  $BUILDDIR/table_phone_pdf_src.md --pdf-engine=xelatex \
+  --from=markdown+line_blocks \
+  -o $BUILDDIR/1kfa_guide_table_phone.pdf
+
+
+python3 $KFAREPO/bin/build_smart_toc.py \
+  $BUILDDIR/1kfa_guide_player.html \
+  $BUILDDIR/1kfa_guide_gm.html \
+  $BUILDDIR/1kfa_guide_table.html
