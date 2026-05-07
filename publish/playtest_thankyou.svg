@@ -2,20 +2,20 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="210mm"
    height="297mm"
    viewBox="0 0 744.09448819 1052.3622047"
    id="svg2"
    version="1.1"
-   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
-   sodipodi:docname="playtest_thankyou.svg">
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   sodipodi:docname="playtest_thankyou.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
   <defs
      id="defs4">
     <clipPath
@@ -30,10 +30,10 @@
        inkscape:collect="always"
        style="color-interpolation-filters:sRGB"
        id="filter35345-5-7"
-       x="-0.099351496"
-       width="1.1987031"
-       y="-0.13706446"
-       height="1.2741289">
+       x="-0.10649363"
+       width="1.2129873"
+       y="-0.14007736"
+       height="1.2801547">
       <feGaussianBlur
          inkscape:collect="always"
          stdDeviation="3.2026665"
@@ -43,9 +43,9 @@
        inkscape:collect="always"
        style="color-interpolation-filters:sRGB"
        id="filter35345-2"
-       x="-0.099351496"
-       width="1.1987031"
-       y="-0.13706446"
+       x="-0.099351498"
+       width="1.198703"
+       y="-0.13706445"
        height="1.2741289">
       <feGaussianBlur
          inkscape:collect="always"
@@ -69,19 +69,22 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.234323"
-     inkscape:cx="554.20605"
-     inkscape:cy="330.12651"
+     inkscape:cx="554.14993"
+     inkscape:cy="653.79969"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1920"
-     inkscape:window-height="1016"
+     inkscape:window-height="1011"
      inkscape:window-x="0"
-     inkscape:window-y="27"
+     inkscape:window-y="0"
      inkscape:window-maximized="1"
      inkscape:snap-nodes="false"
      inkscape:snap-bbox="true"
-     inkscape:snap-bbox-midpoints="true" />
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:showpageshadow="2"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -254,7 +257,7 @@
          sodipodi:role="line"
          x="161.40558"
          y="766.03778"
-         id="tspan4642">http://www.1kfa.com/playtest_files or just email me a mailing</tspan><tspan
+         id="tspan4642">http://www.1kfa.com/ or just email me a mailing</tspan><tspan
          style="font-size:15px;line-height:1.25"
          id="tspan6312"
          sodipodi:role="line"
