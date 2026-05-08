@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+import string
 import re, ast, sys
 from pprint import pprint
 from collections import defaultdict
@@ -183,14 +185,56 @@ def parse_detail_sections(text):
             'three_check':results.get('✔✔', ''),
         }
         detail_map[name].update(d)
-    return detail_map
+
+    as_list = [CaseInsensitiveDotDict(x) for x in detail_map.values()]
+    set_slugs(as_list)
+
+    return sorted(as_list, key=lambda x: x.slug)
+
+def component_type(card):
+    if card.get('component'):
+        return card.get('component')
+    elif card.get('equipment'):
+        return 'mundane_deck'
+    else:
+        return 'move_deck'
+
+def filenamify(s):
+    x = s.lower()
+    l = [c for c in x if c in (' ' + string.ascii_lowercase)]
+    x = ''.join(l)
+    x = x.replace(' ', '_')
+    return x
+
+def set_slugs(cards):
+    enumerations = defaultdict(dict)
+    for card in cards:
+        com = component_type(card)
+        enumeration = enumerations[com]
+        numbers = list(enumeration.keys())
+        next_number = max([0] + numbers) + 1
+        custom_number = int(card.get('custom_number', 0))
+        if custom_number:
+            found = enumeration.get(custom_number)
+            if found:
+                enumeration[next_number] = found
+            enumeration[custom_number] = card
+        else:
+            enumeration[next_number] = card
+    for com, enumeration in enumerations.items():
+        for num, card in enumeration.items():
+            groups = card.get('groups')
+            if groups:
+                group_slug = '_' + '_'.join(groups)
+            else:
+                group_slug = ''
+            name_slug = filenamify(card['title'])
+            card['slug'] =  f'{com}/face{group_slug}{num:02d}_{name_slug}'
+
 
 def handy_moves(md_path):
     text = open(md_path, encoding='utf-8').read()
-    moves = []
-    for key, val in parse_detail_sections(text).items():
-        moves.append(CaseInsensitiveDotDict(val))
-    return moves
+    return parse_detail_sections(text)
 
 def main(md_path):
     text = open(md_path, encoding='utf-8').read()

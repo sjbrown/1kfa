@@ -362,34 +362,18 @@ def custom_card_dom(card):
     return None
 
 
-def component_type(card):
-    if card.get('component'):
-        return card.get('component')
-    elif card.get('equipment'):
-        return 'mundane_deck'
-    else:
-        return 'move_deck'
-
-
-def card_filenames(card, i):
-    dirpath = '%s/%s/' % (DIR, component_type(card))
+def card_filenames(card):
+    slugpath = f'{DIR}/{card.slug}'
+    dirpath = os.path.dirname(slugpath)
     os.makedirs(dirpath, exist_ok=True)
 
-    number = card.get('custom_number', (i+1))
-    svg_filename = dirpath + 'face%02d_%s.svg' % (
-        number,
-        filenamify(card['title'])
-    )
-    png_filename = dirpath + 'face%02d_%s.png' % (
-        number,
-        filenamify(card['title'])
-    )
+    svg_filename = f'{slugpath}.svg'
+    png_filename = f'{slugpath}.png'
     return svg_filename, png_filename
 
 
 def make_deck_svgs(cards):
-    """Write all card SVG files. No Inkscape required."""
-    for i, card in enumerate(cards):
+    for card in cards:
         try:
             dom = custom_card_dom(card)
             if not dom:
@@ -400,7 +384,7 @@ def make_deck_svgs(cards):
             pprint(card)
             raise
 
-        svg_filename, _ = card_filenames(card, i)
+        svg_filename, _ = card_filenames(card)
         dom.write_file(svg_filename)
         print(f'  wrote  {svg_filename}')
 
@@ -415,8 +399,8 @@ def make_deck_pngs(cards):
     #export_tall_png('tall_card_stats.svg', DIR + '/dramatic_action/face18_stats.png')
     #export_tall_png('tall_card_hints.svg', DIR + '/dramatic_action/face19_hints.png')
 
-    for i, card in enumerate(cards):
-        svg_filename, png_filename = card_filenames(card, i)
+    for card in cards:
+        svg_filename, png_filename = card_filenames(card)
         dom = DOM(svg_filename)
         export_tall_png(svg_filename, png_filename, dom.references)
         print(f'  exported  {png_filename}')

@@ -1,6 +1,7 @@
 
 # Defy Danger
 ```python3
+groups = []
 attrs = ['Str', 'Dex', 'Int']
 flags = ['FAST']
 levels = []
@@ -34,6 +35,7 @@ GM Questions:
 
 # Discern
 ```python3
+groups = []
 attrs = ['Int']
 flags = []
 levels = []
@@ -65,6 +67,7 @@ For each question asked, place a green token on this card. Whenever the gained i
 
 # Unfold Mystery
 ```python3
+groups = []
 attrs = ['Int']
 flags = []
 levels = []
@@ -93,6 +96,7 @@ Place a token on this card. Remove the token when the floating stake has been ac
 
 # Destiny Forewritten
 ```python3
+groups = []
 attrs = []
 flags = ['FAST']
 levels = []
@@ -122,6 +126,7 @@ After that, spend XP 1-for-1 to bump up the result
 
 # Parley
 ```python3
+groups = []
 attrs = ['Int']
 flags = []
 level_start = '0'
@@ -153,6 +158,7 @@ If your leverage is promises or threats without clear evidence, flip with 1 leve
 
 # Good thing I brought...
 ```python3
+groups = []
 attrs = []
 flags = []
 levels = []
@@ -184,6 +190,7 @@ If it follows from your answer, create and name an Item card.
 
 # Mix It Up
 ```python3
+groups = []
 attrs = ['Str']
 flags = []
 levels = []
@@ -214,6 +221,7 @@ The foe's attack can be their Might or their Special Ability.
 
 # Volley
 ```python3
+groups = []
 attrs = ['Dex']
 flags = []
 level_start = '0'
@@ -246,6 +254,7 @@ Choices:
 
 # Take a Breather
 ```python3
+groups = []
 attrs = ['INT', 'DEX']
 flags = []
 levels = []
@@ -280,6 +289,7 @@ When a Combat or Pursuit ends, you may Take a Breather as a Fast move, flipping 
 
 # Bravely Run Away
 ```python3
+groups = []
 attrs = []
 flags = ['UNENCUMBERED']
 levels = []
@@ -310,6 +320,7 @@ Encumbrance Penalty: Count up all your Item and Pack cards. Regain or expend sta
 
 # Defend
 ```python3
+groups = []
 attrs = ['Str']
 flags = []
 levels = []
@@ -343,6 +354,7 @@ Place a token on this card until you Take a Breather. Choose:
 
 # Rest
 ```python3
+groups = []
 attrs = []
 flags = []
 levels = []
@@ -371,6 +383,7 @@ Learning skills, studying, or any action that takes mental or physical effort is
 
 # Seek Help
 ```python3
+groups = []
 attrs = []
 flags = []
 levels = []
@@ -401,6 +414,7 @@ Like Rest, Seeking Help leaves no time for effortful actions.
 
 # Study under a master
 ```python3
+groups = []
 attrs = []
 flags = []
 levels = []
@@ -431,6 +445,7 @@ Choose one:
 
 # Shop / Procure
 ```python3
+groups = []
 attrs = []
 flags = []
 levels = []
@@ -462,6 +477,7 @@ Also, any time you're in town, you can spend 1 PRECIOUS Pack card to gain 2 norm
 
 # Tales of a Weapon
 ```python3
+groups = []
 attrs = []
 flags = []
 levels = []
@@ -486,6 +502,7 @@ Spend 1 more XP to add a magical power (capacity: 1 charge) to the weapon, and t
 
 # Sharpen & Stitch
 ```python3
+groups = []
 attrs = ['INT']
 flags = []
 levels = ['0', 'g1']
@@ -510,6 +527,7 @@ At a town, you may forego the flip, and together with the GM, decide who there i
 
 # Critical Flip
 ```python3
+groups = []
 attrs = []
 flags = []
 levels = []
@@ -535,6 +553,7 @@ Say how your character's practice has finally paid off, or how they had an insig
 
 # Good Cardio
 ```python3
+groups = ['A']
 attrs = ['STR']
 flags = ['FAST']
 levels = ['r2', 'r1', '0', 'g1', 'g2']
@@ -555,6 +574,7 @@ When you would expend Stamina from physical effort, put token(s) on this card's 
 
 # And This Is For...
 ```python3
+groups = []
 attrs = ['STR']
 flags = ['FAST']
 levels = ['r2', 'r1', '0', 'g1', 'g2']
@@ -574,6 +594,7 @@ levels = ['r2', 'r1', '0', 'g1', 'g2']
 
 # Where It Hurts
 ```python3
+groups = []
 attrs = ['DEX', 'STR']
 flags = ['FAST']
 levels = ['r1', '0', 'g1']
@@ -593,6 +614,7 @@ levels = ['r1', '0', 'g1']
 
 # Tied with Her Ribbon
 ```python3
+groups = []
 attrs = []
 flags = []
 levels = []
@@ -616,6 +638,7 @@ If separated from your weapon, say how thinking of her reminds you of your origi
 
 # Like A Second Skin
 ```python3
+groups = ['9hour']
 attrs = []
 flags = []
 levels = []
@@ -642,6 +665,7 @@ Slot for 1 harm OR 1 wound
 
 # Go Berserk!
 ```python3
+groups = []
 attrs = []
 flags = ['IMMEDIATE']
 levels = []
@@ -665,6 +689,7 @@ To regain your wits, you must Take a Breather.
 
 # Bloody But Unbowed
 ```python3
+groups = ['9hour']
 attrs = []
 flags = []
 levels = []
@@ -687,6 +712,7 @@ including every Harm token on this card's slots
 
 # Mystic Breathwork
 ```python3
+groups = ['9hour']
 attrs = []
 flags = []
 levels = []
@@ -706,6 +732,7 @@ levels = []
 
 # It Belonged to My Father
 ```python3
+groups = []
 attrs = []
 flags = []
 levels = []
@@ -731,6 +758,7 @@ When someone stands in your way, or you face a dangerous threshold, answer and p
 
 # Apex Predator
 ```python3
+groups = []
 attrs = ['Int', 'Str']
 flags = []
 levels = []
@@ -760,6 +788,7 @@ Questions:
 
 # Intimidate
 ```python3
+groups = []
 attrs = []
 flags = []
 levels = []
@@ -781,6 +810,7 @@ Or, when an ally is Parleying, loom imposingly nearby.  Flip Str and if it's bet
 
 # Fury
 ```python3
+groups = []
 attrs = ['STR']
 flags = ['FAST']
 levels = ['r2', 'r1', '0', 'g1', 'g2']
@@ -800,6 +830,7 @@ levels = ['r2', 'r1', '0', 'g1', 'g2']
 
 # Goreography
 ```python3
+groups = []
 attrs = ['DEX']
 flags = ['FAST']
 levels = ['r1', '0', 'g1']
@@ -827,6 +858,7 @@ Place a token on this card until you Take a Breather.
 
 # It's a Trap!
 ```python3
+groups = []
 attrs = ['INT']
 flags = []
 levels = ['r2', 'r1', '0', 'g1']
@@ -853,6 +885,7 @@ As you go warily onward, spend a token at any time to ask the GM:
 
 # Pick Pockets
 ```python3
+groups = []
 attrs = ['DEX']
 flags = ['UNENCUMBERED']
 levels = ['r2', 'r1', '0', 'g1', 'g2']
@@ -877,6 +910,7 @@ Encumbrance Penalty: expend stamina from mental exhaustion. Count up all your It
 
 # Pick Locks
 ```python3
+groups = []
 attrs = ['DEX']
 flags = []
 levels = ['r2', 'r1', '0', 'g1', 'g2']
@@ -898,6 +932,7 @@ Flip Dex, or do the Pick Locks mini-game.
 
 # Backstab
 ```python3
+groups = ['A']
 attrs = ['DEX']
 flags = ['UNENCUMBERED']
 levels = ['r2', 'r1', '0', 'g1', 'g2']
@@ -925,6 +960,7 @@ Encumbrance: If you have more than 3 Item and Pack cards, you cannot Backstab.
 
 # Weak Spot
 ```python3
+groups = []
 attrs = ['INT']
 flags = ['FAST']
 levels = ['r2', 'r1', '0', 'g1']
@@ -949,6 +985,7 @@ Choices:
 
 # Bum Rush
 ```python3
+groups = []
 attrs = ['DEX', 'STR']
 flags = []
 levels = ['r1', '0', 'g1', 'g2']
@@ -973,6 +1010,7 @@ Before you are engaged in melee, charge in (expend Stamina) and then choose:
 
 # Vanish
 ```python3
+groups = []
 attrs = []
 flags = ['UNENCUMBERED']
 levels = []
@@ -997,6 +1035,7 @@ Encumbrance Penalty: expend stamina points from mental exhaustion. Count up all 
 
 # I'm Only Here for the Job
 ```python3
+groups = []
 attrs = []
 flags = []
 levels = []
@@ -1021,6 +1060,7 @@ If you are ever offered payment to betray the party, you must destroy or give up
 
 # Slide
 ```python3
+groups = []
 attrs = []
 flags = ['UNENCUMBERED']
 levels = []
@@ -1050,6 +1090,7 @@ Encumbrance Penalty: expend stamina points. Count up all your Item and Pack card
 
 # Called Shot
 ```python3
+groups = []
 attrs = ['DEX']
 flags = []
 levels = ['r2', 'r1', '0', 'g1']
@@ -1075,6 +1116,7 @@ If the target is surprised or defenseless, flip with one level of advantage.
 
 # Come and get me
 ```python3
+groups = []
 attrs = ['INT']
 flags = []
 levels = ['r1', '0', 'g1', 'g2']
@@ -1095,6 +1137,7 @@ Use an existing hazard, or spend one XP to create one.
 
 # Not On My Turf
 ```python3
+groups = []
 attrs = []
 flags = []
 levels = []
@@ -1119,6 +1162,7 @@ levels = []
 
 # Derring-Do
 ```python3
+groups = []
 attrs = ['DEX']
 flags = []
 levels = ['r2', 'r1', '0', 'g1']
@@ -1145,6 +1189,7 @@ Questions
 
 # Sangfroid
 ```python3
+groups = []
 attrs = []
 flags = []
 levels = []
@@ -1164,6 +1209,7 @@ levels = []
 
 # Use a Magic Item
 ```python3
+groups = ['A']
 attrs = ['INT']
 flags = ['RECEIVE CARDS']
 levels = ['r2', 'r1', '0', 'g1', 'g2']
@@ -1189,6 +1235,7 @@ Choices:
 
 # Entreat the Blood-Bound
 ```python3
+groups = []
 attrs = []
 flags = ['RECEIVE CARDS']
 levels = []
@@ -1216,6 +1263,7 @@ Also, Blade of Echoes does not count for your encumbrance penalty
 
 # Channel the Living Light
 ```python3
+groups = []
 attrs = ['INT']
 flags = ['RECEIVE CARDS']
 levels = ['r2', 'r1', '0', 'g1']
@@ -1244,6 +1292,7 @@ Sigil of the Living Light does not count for your Encumbrance Penalty.
 
 # Unknown Benefactor
 ```python3
+groups = ['9hour']
 attrs = []
 flags = ['FAST']
 levels = []
@@ -1272,6 +1321,7 @@ Anytime afterward, remove the token to confront an authority as being your unkno
 
 # Void Transfusion
 ```python3
+groups = ['9hour']
 attrs = []
 flags = []
 levels = []
@@ -1295,6 +1345,7 @@ If the cards are recharged above their capacity, place that number of white-side
 
 # Reach Out With Your Feelings
 ```python3
+groups = []
 attrs = ['Int']
 flags = []
 levels = []
@@ -1321,6 +1372,7 @@ Improved attunement reduces incoming attack Might by 1. When allies concentrate 
 
 # Fundamental Magic
 ```python3
+groups = []
 attrs = ['INT']
 flags = []
 levels = ['r2', 'r1', '0', 'g1', 'g2']
@@ -1345,6 +1397,7 @@ Place a token on this card.  Remove the token when you Take a Breather.
 
 # Counterspell
 ```python3
+groups = []
 attrs = ['INT']
 flags = []
 levels = ['r2', 'r1', '0', 'g1']
@@ -1366,6 +1419,7 @@ Stake one undepleted magical item on the defense
 
 # Breach the Dam
 ```python3
+groups = ['9hour']
 attrs = ['INT']
 flags = []
 levels = ['r2', 'r1', '0', 'g1', 'g2']
@@ -1393,6 +1447,7 @@ Choose, then Answer:
 
 # Obsessive Contemplation
 ```python3
+groups = []
 attrs = []
 flags = []
 levels = []
@@ -1425,6 +1480,7 @@ If it is a weapon, choose:
 
 # Suggestive Subtlety
 ```python3
+groups = []
 attrs = ['INT']
 flags = []
 levels = ['r2', 'r1', '0', 'g1']

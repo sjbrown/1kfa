@@ -34,7 +34,7 @@ MARGIN_X = (PAGE_W - COLS * CARD_W) / 2
 MARGIN_Y = (PAGE_H - ROWS * CARD_H) / 2
 
 # Card palette
-CARD_BG        = "#1a1a2e"
+CARD_BG        = "#4a4a4a"
 CARD_BORDER    = "#c8a96e"
 TRAIT_BG       = "#0f0f1e"
 TITLE_COLOR    = "#f0e6d3"
@@ -49,38 +49,13 @@ CORNER_R = 8
 def load_moves(md_path: str) -> list[dict]:
     """
     Load moves via handy_moves(), then sort:
-
-    1. Cards with the same .component are grouped together on the same
-       sheets; component==None cards form their own group.
-    2. Within a group, cards with a .custom_number value come first (sorted
-       numerically); cards without custom_number (or None) follow in their
-       original parse order.
-    3. Component groups themselves are ordered by COMPONENT_ORDER; any
-       component not in that dict sorts after the known ones.
     """
     script_dir = os.path.dirname(os.path.abspath(__file__))
     if script_dir not in sys.path:
         sys.path.insert(0, script_dir)
 
     from parse_character_moves import handy_moves
-
-    raw = handy_moves(md_path)
-
-    moves = []
-    for m in raw:
-        moves.append({
-            "name":      m["title"],
-            "attrs":     [a.upper() for a in (m["attr"] or [])],
-            "component": m["component"],
-            "_sort_key": f"{m.get('component') or 'zzz'}-{m.get('custom_number') or 999:04d}",
-        })
-
-    moves.sort(key=lambda m: m["_sort_key"])
-
-    for m in moves:
-        del m["_sort_key"]
-
-    return moves
+    return handy_moves(md_path)
 
 
 # ---------------------------------------------------------------------------
@@ -105,10 +80,8 @@ def split_title(name: str) -> list[str]:
 
 
 def card_svg(move: dict, x: float, y: float) -> str:
-    name  = move["name"]
-    attrs = move["attrs"]
 
-    lines = split_title(name)
+    lines = split_title(move.title)
     n = len(lines)
     fsize  = FSIZE_1_LINE if n == 1 else (FSIZE_2_LINE if n == 2 else FSIZE_3_LINE)
     line_h = fsize * 1.18
@@ -137,8 +110,8 @@ def card_svg(move: dict, x: float, y: float) -> str:
     footer_h = CARD_H * 0.22
     footer_y = CARD_H - footer_h
 
-    if attrs:
-        trait_str   = "  \u00b7  ".join(attrs)
+    if move.attrs:
+        trait_str   = "  \u00b7  ".join(move.attrs)
         trait_color = TRAIT_COLOR
         trait_fsize = 22
     else:
