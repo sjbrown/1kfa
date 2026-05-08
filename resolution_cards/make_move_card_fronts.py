@@ -84,7 +84,7 @@ def card_image_element(png_path: str, x: int, y: int) -> str:
     preserveAspectRatio="none" />"""
 
 
-def make_sheet(card_paths: list, sheet_index: int, output_dir: str):
+def make_sheet(stub: str, card_paths: list, sheet_index: int, output_dir: str):
     elements = []
     for slot, png_path in enumerate(card_paths):
         col = slot % COLS
@@ -120,7 +120,7 @@ def make_sheet(card_paths: list, sheet_index: int, output_dir: str):
   </g>
 </svg>"""
 
-    out_path = os.path.join(output_dir, f"move_card_fronts_sheet{sheet_index:02d}.svg")
+    out_path = os.path.join(output_dir, f"{stub}_sheet{sheet_index:02d}.svg")
     with open(out_path, "w") as f:
         f.write(svg)
     print(f"  wrote {out_path}")
@@ -154,7 +154,8 @@ def main():
 
     for sheet_idx in range(num_sheets):
         batch = pngs[sheet_idx * CARDS_PER_SHEET : (sheet_idx + 1) * CARDS_PER_SHEET]
-        make_sheet(batch, sheet_idx + 1, args.output_dir)
+        stub = os.path.basename(args.input_dir)
+        make_sheet(stub, batch, sheet_idx + 1, args.output_dir)
 
     print("Done.")
 

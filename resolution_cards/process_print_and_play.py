@@ -58,6 +58,21 @@ def process_subdir(subdirname, raw_svg):
         suffix = subdirname + '%02d' % counter
         write_pdf(suffix, raw_svg_copy)
 
+def process_move_card_faces():
+    for name in os.listdir(CARDSDIR):
+        subdir = f'{CARDSDIR}/{name}'
+        if not os.path.isdir(subdir):
+            continue
+        print('Processing', name)
+        cmd = f'python make_move_card_fronts.py --input-dir {subdir} --output-dir {OUTDIR}'
+        os.system(cmd)
+    for name in os.listdir(OUTDIR):
+        if 'sheet' in name and name.endswith('svg'):
+            svg_name = f'{OUTDIR}/{name}'
+            pdf_name = svg_name[:-4] + '.pdf'
+            print(f'Processing {svg_name} -> {pdf_name}')
+            export_pdf(svg_name, pdf_name)
+
 
 if __name__ == '__main__':
     if not os.path.isdir(OUTDIR):
@@ -65,16 +80,8 @@ if __name__ == '__main__':
     print('Removing dir')
     cmd = f'rm -rf {OUTDIR}/print_and_play*pdf'
     os.system(cmd)
-    fp = open(f'{TEMPLATEDIR}/print_and_play_move_template.svg')
-    template = fp.read()
-    fp.close()
 
-    for name in os.listdir(CARDSDIR):
-        if not os.path.isdir(CARDSDIR + '/' + name):
-            continue
-        print('Processing', name)
-        process_subdir(name, template)
-
+    process_move_card_faces()
 
     fname = f'{TEMPLATEDIR}/print_and_play_deckahedron_template.svg'
     new_pdf_name = f'{OUTDIR}/print_and_play_deckahedron.pdf'
