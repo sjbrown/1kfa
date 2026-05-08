@@ -64,12 +64,12 @@ def process_move_card_faces():
         if not os.path.isdir(subdir):
             continue
         print('Processing', name)
-        cmd = f'python make_move_card_fronts.py --input-dir {subdir} --output-dir {OUTDIR}'
+        cmd = f'python make_move_card_fronts.py --input-dir {subdir} --output-dir {CARDSDIR}'
         os.system(cmd)
-    for name in os.listdir(OUTDIR):
+    for name in os.listdir(CARDSDIR):
         if 'sheet' in name and name.endswith('svg'):
-            svg_name = f'{OUTDIR}/{name}'
-            pdf_name = svg_name[:-4] + '.pdf'
+            svg_name = f'{CARDSDIR}/{name}'
+            pdf_name = f'{OUTDIR}/{name}'[:-4] + '.pdf'
             print(f'Processing {svg_name} -> {pdf_name}')
             export_pdf(svg_name, pdf_name)
 
