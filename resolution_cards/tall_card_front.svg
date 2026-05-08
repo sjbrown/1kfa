@@ -33,13 +33,13 @@
    inkscape:window-height="1011"
    id="namedview726"
    showgrid="false"
-   inkscape:zoom="0.87303225"
-   inkscape:cx="-32.072126"
-   inkscape:cy="169.52409"
+   inkscape:zoom="2.4693081"
+   inkscape:cx="21.463502"
+   inkscape:cy="152.26937"
    inkscape:window-x="0"
    inkscape:window-y="0"
    inkscape:window-maximized="1"
-   inkscape:current-layer="layer9"
+   inkscape:current-layer="layer10"
    inkscape:snap-bbox="true"
    inkscape:snap-bbox-midpoints="true"
    inkscape:object-nodes="true"
@@ -522,7 +522,7 @@
    inkscape:groupmode="layer"
    id="layer44"
    inkscape:label="card_reqs"
-   style="display:inline"
+   style="display:none"
    sodipodi:insensitive="true"><rect
      rx="7.4416909"
      y="295.22162"
@@ -677,8 +677,8 @@
    inkscape:groupmode="layer"
    id="layer46"
    inkscape:label="card_campaign"
-   sodipodi:insensitive="true"
-   style="display:inline"><rect
+   style="display:inline"
+   sodipodi:insensitive="true"><rect
    style="display:inline;opacity:1;fill:#ffffff;fill-opacity:1;stroke:#4d4d4d;stroke-width:1.60824;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
    id="rect_campaign"
    width="80"
@@ -864,7 +864,7 @@
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:FreeSerif;-inkscape-font-specification:FreeSerif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
    id="flowRoot_description5189"><title
-     id="title5197">desc_detail</title><flowRegion
+     id="title5197">desc_detail_half</title><flowRegion
      id="flowRegion5191"><use
        x="0"
        y="0"
@@ -873,7 +873,7 @@
        width="100%"
        height="100%" /></flowRegion><flowPara
      id="flowPara5195"
-     style="font-size:12.5px;line-height:1.25">description blah blah</flowPara></flowRoot><flowRoot
+     style="font-size:12.5px;line-height:1.25">desc_detail_half ideal lines:7 xxx xxx xxx xx</flowPara></flowRoot><flowRoot
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:FreeSerif;-inkscape-font-specification:FreeSerif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
    id="flowRoot_one_check6381"><title
@@ -886,7 +886,13 @@
        width="100%"
        height="100%" /></flowRegion><flowPara
      id="flowPara6387"
-     style="font-size:10px;line-height:1.1">words_one_check blah</flowPara></flowRoot><flowRoot
+     style="font-size:10px;line-height:1.1">words_one_check lines:3 xxx xxx xxx</flowPara><flowPara
+     style="font-size:10px;line-height:1.1"
+     id="flowPara765" /><flowPara
+     style="font-size:10px;line-height:1.1"
+     id="flowPara767" /><flowPara
+     style="font-size:10px;line-height:1.1"
+     id="flowPara819" /></flowRoot><flowRoot
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:FreeSerif;-inkscape-font-specification:FreeSerif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
    id="flowRoot_two_check6389"><title
@@ -899,7 +905,7 @@
        width="100%"
        height="100%" /></flowRegion><flowPara
      id="flowPara6395"
-     style="font-size:10px;line-height:1.1">words_two_check blah</flowPara></flowRoot><flowRoot
+     style="font-size:10px;line-height:1.1">words_two_check lines:3 xxx xxx xxx</flowPara></flowRoot><flowRoot
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:FreeSerif;-inkscape-font-specification:FreeSerif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
    id="flowRoot_three_check6397"><title
@@ -912,7 +918,7 @@
        width="100%"
        height="100%" /></flowRegion><flowPara
      id="flowPara5104"
-     style="font-size:10px;line-height:1.1">words_three_check blah</flowPara></flowRoot>
+     style="font-size:10px;line-height:1.1">words_three_check lines:3 xxx xxx xx</flowPara></flowRoot>
    <g
    id="g_result_2"><circle
      id="path9254"
@@ -959,8 +965,7 @@
    inkscape:groupmode="layer"
    id="layer12"
    inkscape:label="std_0lines"
-   style="display:none"
-   sodipodi:insensitive="true"><rect
+   style="display:inline"><rect
      y="66.493774"
      x="0.15213937"
      height="4"
@@ -976,7 +981,7 @@
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:FreeSerif;-inkscape-font-specification:FreeSerif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      id="flowRoot5147"><title
-       id="title5155">desc_detail</title><flowRegion
+       id="title5155">desc_detail_full</title><flowRegion
        id="flowRegion5149"><use
          x="0"
          y="0"
@@ -984,8 +989,8 @@
          id="use5151"
          width="100%"
          height="100%" /></flowRegion><flowPara
-       id="flowPara5153"
-       style="font-size:12.5px;line-height:1.25">desc_detail description blah blah</flowPara></flowRoot></g><g
+       style="font-size:12.5px;line-height:1.25"
+       id="flowPara818">desc_detail_full description lines:14 xx</flowPara></flowRoot></g><g
    inkscape:groupmode="layer"
    id="layer10"
    inkscape:label="std_heading"
@@ -1011,8 +1016,8 @@
    style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:0%;font-family:OptimusPrinceps;-inkscape-font-specification:'OptimusPrinceps Medium';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
    xml:space="preserve"><title
      id="title4724-6">flip</title><tspan
-     y="72.395142"
-     x="21.42292"
+     y="67"
+     x="21"
      id="tspan4508-1-7"
      sodipodi:role="line"
      style="font-size:12.9794px;line-height:1.25">Flip</tspan></text>
@@ -1042,12 +1047,12 @@
        width="100%"
        height="100%" /></flowRegion><flowPara
      id="flowPara6174"
-     style="font-size:22.5px;line-height:1.25">HelloWorld</flowPara></flowRoot>
+     style="font-size:22.5px;line-height:1.25">Title lines:2 xxx xx</flowPara></flowRoot>
 </g><g
    inkscape:groupmode="layer"
    id="layer49"
    inkscape:label="std_3lines_card_flags"
-   style="display:none"
+   style="display:inline"
    sodipodi:insensitive="true"><rect
    rx="5"
    y="173.07632"
@@ -1066,7 +1071,7 @@
      x="67.653625"
      id="tspan5469"
      sodipodi:role="line"
-     style="font-size:11.25px;line-height:1.25">flags</tspan></text>
+     style="font-size:11.25px;line-height:1.25">flags xxx xxx xxx</tspan></text>
 </g><g
    inkscape:groupmode="layer"
    id="layer48"
@@ -1090,7 +1095,7 @@
      id="tspan5395"
      x="67.68586"
      y="71.083305"
-     style="font-size:11.25px;line-height:1.25">flags</tspan></text>
+     style="font-size:11.25px;line-height:1.25">flags xxx xxx xxx</tspan></text>
 </g><g
    inkscape:groupmode="layer"
    id="layer14"

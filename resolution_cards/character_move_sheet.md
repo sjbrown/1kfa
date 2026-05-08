@@ -6,10 +6,10 @@ flags = ['FAST']
 levels = []
 component = 'dramatic_action'
 custom_number = 1
-style_details = {'font-size': '8px'}
+style_details = {'font-size': '11px'}
 style_one_check = {'font-size': '11px'}
 style_two_check = {'font-size': '11px'}
-style_three_check = {'font-size': '11px'}
+style_three_check = {'font-size': '10px'}
 ```
 
     ✗: 
@@ -23,14 +23,13 @@ style_three_check = {'font-size': '11px'}
 **Details**: Act despite an imminent threat. Answer one question:
  * How do you power through or endure? Flip Str
  * How do you avoid, evade, or act fast? Flip Dex
- * How do you focus, predict, or apply your wits? Flip Int
+ * How do you focus, predict, or outwit? Flip Int
 
 GM Questions:
  * What new complication or hazard arises?
  * What cost must be paid?
  * What disadvantage does this create?
  * What hard bargain or ugly choice must be made?
-    
 
 
 # Discern
@@ -53,13 +52,11 @@ style_three_check = {'font-size': '10px'}
     ----
     ✔✔: Ask the GM 2 questions from the list [gray progress]
 
-**Details**: Answer:
-How do you closely study a situation or person?
+**Details**: Closely study a situation or person
 
-For each question asked of the GM, place a green token on this card. Whenever the gained information is acted on by anyone in the party, they may take +1 advantage and remove a token from this card.
+For each question asked, place a green token on this card. Whenever the gained information is acted on by anyone in the party, they take +1 advantage and remove a token from this card.
  * What here is useful or valuable to me?
  * What happened here recently?
- * What is about to happen?
  * What should I be on the lookout for?
  * Who's really in control here?
  * What here is not what it appears to be?
@@ -73,7 +70,6 @@ flags = []
 levels = []
 component = 'dramatic_action'
 custom_number = 2
-style_details = {'font-size': '10px'}
 style_one_check = {'font-size': '9px'}
 style_two_check = {'font-size': '9px'}
 style_three_check = {'font-size': '9px'}
@@ -173,13 +169,13 @@ style_details = {'font-size': '11px'}
     ----
     ✔✔: 
 
-**Details**: Spend 2 Pack and answer:
+**Details**: Spend 2 PACK and answer:
  * What equipment did you bring along to aid in the current situation?
  * What was consumed or broken?
 
 OR
 
-Spend (1 XP + 1 Pack) and answer:
+Spend (1 XP + 1 PACK) and answer:
  * What equipment did you bring along to aid in the current situation?
 
 If it follows from your answer, create and name an Item card.
@@ -193,7 +189,7 @@ flags = []
 levels = []
 component = 'combat'
 custom_number = 1
-style_details = {'font-size': '9px'}
+style_details = {'font-size': '10px'}
 style_one_check = {'font-size': '10px'}
 style_two_check = {'font-size': '10px'}
 style_three_check = {'font-size': '10px'}
@@ -207,8 +203,7 @@ style_three_check = {'font-size': '10px'}
     ----
     ✔✔: Reveal Might and choose
 
-**Details**: Answer:
-How do you meet your foe in close-range combat?
+**Details**: Answer: How do you meet your foe in close-range combat?
 
 On a ✔✔, you can choose one:
  * Avoid the foe's attack
@@ -225,7 +220,7 @@ level_start = '0'
 levels = ['0', 'g1']
 component = 'combat'
 custom_number = 2
-style_details = {'font-size': '9px'}
+style_details = {'font-size': '11px'}
 style_one_check = {'font-size': '10px'}
 style_two_check = {'font-size': '10px'}
 style_three_check = {'font-size': '10px'}
@@ -256,7 +251,6 @@ flags = []
 levels = []
 component = 'combat'
 custom_number = 4
-style_details = {'font-size': '7px'}
 style_one_check = {'font-size': '10px'}
 style_two_check = {'font-size': '10px'}
 style_three_check = {'font-size': '10px'}
@@ -271,14 +265,14 @@ style_three_check = {'font-size': '10px'}
     ✔✔: Find a strategic safe spot / avoid attention.  Regain 2 exhausted cards of your choice
 
 **Details**: Spend an uninterrupted moment to catch your breath.  Answer:
- * Using Int: What strategic safe spot did you find?
- * Using Dex: How did you avoid or temporarily escape attention?
+ * Int: What safe spot did you find?
+ * Dex: How did you avoid attention?
 
 Place a token on this card. After your next move, remove it and regain 1 random exhausted card.
 
 GM Questions:
  * What new danger does this spot invite?
- * How did a foe move to a spot where you're disadvantaged?
+ * What foe takes the advantage?
 
 When a Combat or Pursuit ends, you may Take a Breather as a Fast move, flipping Str.
     
@@ -301,19 +295,16 @@ custom_number = 5
     ----
     ✔✔: 
 
-**Details**: See SVG
+**Details**: As long as you're not cornered or surrounded, escape your foes.
 
-As long as you're not cornered or surrounded, escape your foes.
-
-The GM either starts a Pursuit Interlude or answers the question:
-
+The GM either starts a Pursuit or answers the question:
  * Where does the character end up?
 
-Encumbrance Penalty: Count up all your Item and Pack cards.
- *  If you have fewer than 3, regain 2 Stamina points
- *  If you have 3-4, expend 1 stamina point
- *  If you have 5-6, expend 2 stamina points
- *  If you have more than 6, expend 3 stamina points
+Encumbrance Penalty: Count up all your Item and Pack cards. Regain or expend stamina:
+ *  If you have fewer than 3, regain 2
+ *  If you have 3-4, expend 1
+ *  If you have 5-6, expend 2
+ *  If you have more than 6, expend 3
 
 
 
@@ -324,7 +315,7 @@ flags = []
 levels = []
 component = 'combat'
 custom_number = 3
-style_details = {'font-size': '8px'}
+style_details = {'font-size': '11px'}
 style_one_check = {'font-size': '10px'}
 style_two_check = {'font-size': '10px'}
 style_three_check = {'font-size': '10px'}
@@ -340,14 +331,13 @@ style_three_check = {'font-size': '10px'}
 
 **Details**: Answer: How do you stand in defense of your ward?
 
-This move can interrupt a GM Move if you are in range and Might has not yet been revealed.
-Place a green token on this card until you Take a Breather.
+Optionally, this interrupts a GM Move.
 
-Choose:
- * Split the attack's Might between yourself and your ward
- * Spend 1 XP: Halve the attack's effect or damage
- * Spend 1 XP: Hit back at the attacker with your Might
- * Spend 1 XP: Distract the attacker, giving an ally advantage against them
+Place a token on this card until you Take a Breather. Choose:
+ * Divert half the attack Might to yourself
+ * 1 XP: Halve the attack's effect or damage
+ * 1 XP: Hit back at the foe with your Might
+ * 1 XP: Distract the foe, giving an ally advantage
     
 
 
@@ -358,7 +348,6 @@ flags = []
 levels = []
 component = 'downtime'
 custom_number = 1
-style_details = {'font-size': '10px'}
 ```
 
     ✗: 
@@ -369,16 +358,15 @@ style_details = {'font-size': '10px'}
     ----
     ✔✔: 
 
-**Details**: When not travelling, with a day to devote to rest, do the following:
+**Details**: With a day to devote to rest, do the following:
 
- * Step 1: Move all your exhausted cards to the Discard pile
- * Step 2: Remove all Harm and Wound tokens from your armour
- * Step 3: Recharge idle magic items up to their capacity
- * Step 4: (Optional) Return one Harm token from your stats to the supply, expend 1 Stamina
- * Step 5: Answer: who do you blame for your injuries?
+ 1: Move all your exhausted cards to the Discard pile
+ 2: Remove all Harm and Wound tokens from your armour
+ 3: Recharge idle magic items up to their capacity
+ 4: (Optional) Return one Harm token from your stats to the supply, expend 1 Stamina
+ 5: Answer: who do you blame for your injuries?
 
- Learning skills, studying, or any action that takes mental or physical effort is not available when Resting.
-    
+Learning skills, studying, or any action that takes mental or physical effort is not available when at Rest.
 
 
 # Seek Help
@@ -388,7 +376,6 @@ flags = []
 levels = []
 component = 'downtime'
 custom_number = 2
-style_details = {'font-size': '9px'}
 ```
 
     ✗: 
@@ -399,18 +386,17 @@ style_details = {'font-size': '9px'}
     ----
     ✔✔: 
 
-**Details**: When in a peaceful environment where external resources with healing powers are available:
+**Details**: In a peaceful environment where healing powers are available:
 
- * Step 1: Answer: what person or spirit here do you appeal to for help?
- * Step 2: Move all Exhausted cards to the Discard pile
- * Step 3: Remove all Harm and Wound tokens from your armour
- * Step 4: Recharge idle magic items up to their capacity
- * Step 4: (Optional) Return two Harm tokens from your stats to the supply, expend 1 Stamina
- * Step 8: If you are at The Hearth, return all Wound cards to the supply
- * Step 7: Answer: who you are closer to forgiving?
+ 1: Answer: what person or spirit here do you appeal to for help?
+ 2: Move Exhausted cards to the Discard pile
+ 3: Remove Harm and Wound tokens from your armour
+ 4: Recharge idle magic items
+ 5: Return Harm tokens from your traits
+ 6: At The Hearth, return all Wound cards to the supply
+ 7: Answer: who you are closer to forgiving?
 
-As with Rest, Seeking Help leaves no time for activities that take effort.
-    
+Like Rest, Seeking Help leaves no time for effortful actions.
 
 
 # Study under a master
@@ -450,7 +436,6 @@ flags = []
 levels = []
 component = 'downtime'
 custom_number = 4
-style_details = {'font-size': '10px'}
 ```
 
     ✗: 
@@ -465,11 +450,11 @@ style_details = {'font-size': '10px'}
 
 The GM will tell you who is selling and hand you 4 cards from the Item deck. To keep one of the cards, you must buy or barter.
 Choose:
- *  Spend 1 PRECIOUS Pack 
- *  Spend 1 XP + 1 Pack 
+ *  Spend 1 PRECIOUS PACK
+ *  Spend 1 XP + 1 PACK
  *  Spend 1 XP + 1 of your Item cards
 
-Any gained magic items have capacity for just 1 charge.
+Gained magic items have 1 charge capacity.
 
 Also, any time you're in town, you can spend 1 PRECIOUS Pack card to gain 2 normal Pack cards
     
@@ -505,17 +490,19 @@ attrs = ['INT']
 flags = []
 levels = ['0', 'g1']
 component = 'downtime'
+style_details = {'font-size': '11px'}
+style_one_check = {'font-size': '10px'}
 ```
 
     ✗:
     ----
-    ✓: Spend Pack at a rate of 2-to-1 to remove red cards [gray progress]
+    ✓: Spend PACK at a rate of 2-to-1 to remove red cards
     ----
-    ✔: A Pack spent may remove 1 red card [green progress]
+    ✔: A PACK spent may remove 1 red card
     ----
-    ✔✔: A Pack spent may remove 2 red cards [2x green progress]
+    ✔✔: A PACK spent may remove 2 red cards
 
-**Details**: While resting, spend Pack to repair damage to items.
+**Details**: While resting, spend PACK to repair damage to items.
 
 At a town, you may forego the flip, and together with the GM, decide who there is willing to fully repair all of your items in exchange for one of your cards that they find Precious.
     
@@ -623,7 +610,7 @@ levels = []
 
 Your encumbrance penalty for this weapon is one fewer than normal.
 
-If separated from your weapon, say how thinking of her reminds you of who you are or the people you come from and every move that aids your reunion with your weapon gets +1 advantage.
+If separated from your weapon, say how thinking of her reminds you of your origins or your kin and every move that aids your reunion with your weapon gets +1 advantage.
     
 
 
@@ -722,6 +709,7 @@ levels = []
 attrs = []
 flags = []
 levels = []
+style_details = {'font-size': '11px'}
 ```
 
     ✗: 
@@ -732,14 +720,13 @@ levels = []
     ----
     ✔✔: 
 
-**Details**: Put this card behind an armour or shield card. It is marked with a symbol of the person who taught you the ropes or was supposed to protect you.
+**Details**: Put this card behind an armour or shield card. It is marked with a symbol of the person who taught you the ropes or who was supposed to protect you.
 
 Your encumbrance penalty for this shield or armour is one fewer than normal
 
 When someone stands in your way, or you face a dangerous threshold, answer and proceed. Then the GM answers the second question
-
- *  How did this armour or symbol will earn you passage?
- *  Does the armour need to be surrendered or destroyed?
+ * Are you regarded as friend or enemy of the sentry?
+ * Passage is granted under what conditions?
 
 
 # Apex Predator
@@ -747,6 +734,7 @@ When someone stands in your way, or you face a dangerous threshold, answer and p
 attrs = ['Int', 'Str']
 flags = []
 levels = []
+style_details = {'font-size': '10.5px'}
 ```
 
     ✗: 
@@ -757,20 +745,14 @@ levels = []
     ----
     ✔✔: Answer one question. [green progress]
 
-**Details**: Make contact with, and hold your own against, the spirit of a wild beast.
+**Details**: Contact and contend with the spirit of a wild beast.
 
-Place a green token on this card until you Take a Breather
-
-While this token remains,
-
-During combat, take + 1 advantage when you Discern or look for a Weak Spot
-
-If you are in pursuit of a fleeing or hidden foe, take +1 advantage to Called Shot or It's a Trap!
+Place a token on this card until you Take a Breather.  While this token remains:
+Take +1 advantage when you Discern, look for a Weak Spot, make a Called Shot, or detect when It's a Trap!
 
 Questions:
-
  * What hunger does the spirit transmit?
- * What sense feels sharper?
+ * Which of your senses feels overwhelmed?
  * What sacrifice does the spirit demand?
 
 
@@ -821,20 +803,25 @@ levels = ['r2', 'r1', '0', 'g1', 'g2']
 attrs = ['DEX']
 flags = ['FAST']
 levels = ['r1', '0', 'g1']
+style_details = {'font-size': '11px'}
 ```
 
     ✗:
     ----
-    ✓: GM Chooses 1.  Turn this card face-down until you Take a Breather
+    ✓: Choose 1 [shadow point]
     ----
-    ✔: Choose 1.  Turn this card face-down until you Take a Breather
+    ✔: Choose 1
     ----
-    ✔✔: Choose 2.  Turn this card face-down until you Take a Breather
+    ✔✔: Choose 2
 
-**Details**: After successfully striking a foe in melee, flip and choose. You may choose an option more than once. Choices:
- *  hit another foe during your attack 
- *  disable your foe's armour 
- *  disarm your foe
+**Details**: Answer: How do you follow up a melee strike with a gymnastic pounce or devilish flourish?
+
+You may choose an option more than once. Choose:
+ *  hit another foe during your attack
+ *  disable your foe's Special Ability
+ *  reduce your foe's Might
+
+Place a token on this card until you Take a Breather.
     
 
 
@@ -853,12 +840,15 @@ levels = ['r2', 'r1', '0', 'g1']
     ----
     ✔✔: Place 3 tokens on this card [2x green progress]
 
-**Details**: Spend a moment to survey a dangerous area for traps, ambushes and secrets. Flip to supply this card with tokens. Spend the tokens 1-for-1 as you go warily onward to ask these questions:
+**Details**: Answer: How do you survey a dangerous area for traps, ambushes and secrets?
+
+Flip to supply this card with tokens.
+
+As you go warily onward, spend a token at any time to ask the GM:
  *  Is there a hidden danger here and if so, what activates it? 
- *  What does the hidden danger do when activated? 
- *  What else is hidden here? 
- *  How can the danger be disabled?
-    
+ *  What does the danger do when activated?
+ *  What else is hidden here?
+ *  How can the danger be nullified?
 
 
 # Pick Pockets
@@ -870,18 +860,18 @@ levels = ['r2', 'r1', '0', 'g1', 'g2']
 
     ✗:
     ----
-    ✓: [gray progress]
+    ✓: [gray progress] The GM will offer you two options between suspicion, danger, or cost
     ----
-    ✔: The GM will offer you two options between suspicion, danger, or cost | green progress
+    ✔: The GM will offer you two options between suspicion, danger, or cost [green progress]
     ----
-    ✔✔: Success | 2x green progress
+    ✔✔: Success [2x green progress]
 
 **Details**: While they're not looking at you, unburden someone of something they're carrying
 
-Encumbrance Penalty: expend stamina points from mental exhaustion. Count up all your Item and Pack cards.
- *  If you have 3-4, expend 1 stamina point 
- *  If you have 5-6, expend 2 stamina points 
- *  If you have more than 6, expend 3 stamina points
+Encumbrance Penalty: expend stamina from mental exhaustion. Count up all your Item and Pack cards.
+ *  If you have 3-4, expend 1 stamina
+ *  If you have 5-6, expend 2 stamina
+ *  If you have more than 6, expend 3 stamina
     
 
 
@@ -894,7 +884,7 @@ levels = ['r2', 'r1', '0', 'g1', 'g2']
 
     ✗:
     ----
-    ✓: [gray progress]
+    ✓: [gray progress] The GM will offer you two options between suspicion, danger, or cost
     ----
     ✔: The GM will offer you two options between suspicion, danger, or cost [green progress]
     ----
@@ -911,24 +901,26 @@ Flip Dex, or do the Pick Locks mini-game.
 attrs = ['DEX']
 flags = ['UNENCUMBERED']
 levels = ['r2', 'r1', '0', 'g1', 'g2']
+style_details = {'font-size': '10.5px'}
 ```
 
     ✗: 
     ----
-    ✓: [gray progress]
+    ✓: [gray progress] Choose 1
     ----
     ✔: Choose 1 [green progress]
     ----
-    ✔✔: Choose 2 [2x green progress]
+    ✔✔: Choose 2 [green progress]
 
-**Details**: Attack a surprised or defenseless foe with a melee weapon. Choices:
- *  You don’t get into melee with them 
- *  Attack them with your attack Might + 1-6 Might
- *  You create a +1 advantage for the next player who attacks this foe 
+**Details**: Answer: How do you attack a surprised or defenseless foe with a melee weapon? 
+
+Choose:
+ *  You don’t get into melee with them
+ *  Attack them with your attack Might + d6
+ *  Create a +1 advantage for an ally to attack this foe
  *  Reduce their attack Might one step
 
-Encumbrance Penalty: You cannot perform this move if your count of Item and Pack cards is more than 3
-    
+Encumbrance: If you have more than 3 Item and Pack cards, you cannot Backstab.
 
 
 # Weak Spot
@@ -936,6 +928,7 @@ Encumbrance Penalty: You cannot perform this move if your count of Item and Pack
 attrs = ['INT']
 flags = ['FAST']
 levels = ['r2', 'r1', '0', 'g1']
+style_details = {'font-size': '11px'}
 ```
 
     ✗:
@@ -946,7 +939,7 @@ levels = ['r2', 'r1', '0', 'g1']
     ----
     ✔✔: Choose 2
 
-**Details**: Scope out a foe with your perspicacious eyes and declare what weakness you observed
+**Details**: Answer: How do you scope out a foe with your perspicacious eyes? What weakness do you observe?
 
 Choices:
  * When anyone attacks this weakness, they add 1-4 Might
@@ -1022,7 +1015,7 @@ levels = []
  *  get leverage on a PC or NPC 
  *  gain a magic item card you can keep secret from everyone, even the GM
 
-If you are ever offered payment to betray the party, you must destroy or leave behind all your precious items to deny the payment.
+If you are ever offered payment to betray the party, you must destroy or give up all your precious items to deny the payment.
     
 
 
@@ -1045,6 +1038,9 @@ levels = []
 
 Answer honestly: Do they even remember seeing you there?
 
+Slide away any endangering threat cards.
+If you have gained any Item cards in this scene, add 1 green progress to any stake.
+
 Encumbrance Penalty: expend stamina points. Count up all your Item and Pack cards.
 *  If you have 3-4, expend 1 stamina point 
  *  If you have 5-6, expend 2 stamina points 
@@ -1061,14 +1057,14 @@ levels = ['r2', 'r1', '0', 'g1']
 
     ✗:
     ----
-    ✓: [gray progress]
+    ✓: 1 Might. GM will say how the target responds
     ----
-    ✔: 1 Might. Choose an option [green progress]
+    ✔: 1 Might. Choose an option
     ----
-    ✔✔: Reveal Might (or choose 1 Might) and choose an option [2x green progress]
+    ✔✔: Reveal Might (or choose 0 Might) and choose an option [green progress]
 
 **Details**: Name a specific target you're aiming for when you attack at range.
- *  Head: add a second Might reveal
+ *  Head: add your Might again
  *  Arms: They drop anything they're holding
  *  Legs: They're hobbled and slow moving
  *  Other: GM will say what happens
@@ -1126,23 +1122,24 @@ levels = []
 attrs = ['DEX']
 flags = []
 levels = ['r2', 'r1', '0', 'g1']
+style_details = {'font-size': '10.5px'}
 ```
 
     ✗:
     ----
-    ✓: You arrive, the GM answers one question
+    ✓: You arrive. GM answers one question
     ----
-    ✔: You arrive, the GM answers one question [gray progress]
+    ✔: You arrive. GM answers one question [gray progress]
     ----
-    ✔✔: Smooth move [green progress]
+    ✔✔: Pure grace [green progress]
 
-**Details**: Name an aspect of the environment that the GM hasn't described yet. Make it something that will help you get into an advantageous position. Jump, clamber, swing, etc. to that position.
+**Details**: Answer: What aspect of the environment is here that will help you get into an advantageous position? How do you jump, clamber, or swing to that position?
 
 Place a token on this card, and remove it when you act with the advantage granted by your new
 position.
 
 Questions
- * Why is this more tenuous than you originally thought?
+ * What limits the time you can spend here?
  * What did it cost you to get here?
 
 
@@ -1170,6 +1167,7 @@ levels = []
 attrs = ['INT']
 flags = ['RECEIVE CARDS']
 levels = ['r2', 'r1', '0', 'g1', 'g2']
+style_details = {'font-size': '11px'}
 ```
 
     ✗:
@@ -1194,6 +1192,7 @@ Choices:
 attrs = []
 flags = ['RECEIVE CARDS']
 levels = []
+style_details = {'font-size': '11px'}
 ```
 
     ✗: 
@@ -1204,15 +1203,13 @@ levels = []
     ----
     ✔✔: 
 
-**Details**: Carefully sacrifice your blood.
+**Details**: Carefully sacrifice your blood. Answer: What does it sound or smell like when you do this?
 
-Place a green token on this card and take a Wound card into your Discard pile.
+Place a token on this card and take a Wound card into your Discard pile.
 
 When you Rest or Seek Help, you may return the token and the Wound card.
 
 Until the Wound is healed, using magical items does not cost the usual 1 charge (though charges may be lost via other effects)
-
-What does it sound or smell like when you do this?
 
 Also, Blade of Echoes does not count for your encumbrance penalty
 
@@ -1250,6 +1247,7 @@ Sigil of the Living Light does not count for your Encumbrance Penalty.
 attrs = []
 flags = ['FAST']
 levels = []
+style_details = {'font-size': '11px'}
 ```
 
     ✗: 
@@ -1300,6 +1298,7 @@ If the cards are recharged above their capacity, place that number of white-side
 attrs = ['Int']
 flags = []
 levels = []
+style_details = {'font-size': '10.5px'}
 ```
 
     ✗: 
@@ -1310,19 +1309,14 @@ levels = []
     ----
     ✔✔: Answer one question. [green progress]
 
-**Details**: Maintaining skin contact with an undepleted magical item, attune to the universe.
+**Details**: Answer: How does maintaining skin contact with an undepleted magical item attune you to the universe?
 
-Place a green token on this card until you Take a Breather
-
-While this token remains,
-
-You have an extra split-second reaction time. Lose 1 fewer Stamina from physical exhaustion when attacked.
-
-You can share mindful wisdom with an ally while they perform Called Shot or It's a Trap!, and they get +1 advantage
-
+ * What mindful wisdom do you intone for allies?
  * What forms are suggested by the universe's rippling?
- * What covert malice hides under overt compassion?
- * What covert compassion hides under overt malice?
+ * What covert malice fouls the air itself?
+
+Place a token here until you Take a Breather. While it remains:
+Improved attunement reduces incoming attack Might by 1. When allies concentrate their focus, they get +1 advantage
 
 
 # Fundamental Magic
@@ -1343,7 +1337,7 @@ levels = ['r2', 'r1', '0', 'g1', 'g2']
 **Details**: Without need of a magic item, cast a spell having the effect of a magic item you've seen before.
 
 Answer:
-What does channeling this way take out of you
+What does channeling this way take out of you?
 
 Place a token on this card.  Remove the token when you Take a Breather.
     
@@ -1364,7 +1358,9 @@ levels = ['r2', 'r1', '0', 'g1']
     ----
     ✔✔: The spell is countered and has no effect on you [gray progress]
 
-**Details**: When you attempt to counter a magical effect that will otherwise affect you, stake one undepleted magical item on the defense and flip
+**Details**: Counter a magical effect that will otherwise affect you.
+
+Stake one undepleted magical item on the defense
     
 
 
@@ -1373,6 +1369,7 @@ levels = ['r2', 'r1', '0', 'g1']
 attrs = ['INT']
 flags = []
 levels = ['r2', 'r1', '0', 'g1', 'g2']
+style_details = {'font-size': '10.5px'}
 ```
 
     ✗:
@@ -1383,12 +1380,14 @@ levels = ['r2', 'r1', '0', 'g1', 'g2']
     ----
     ✔✔: The item loses 1 charge [green progress]
 
-**Details**: Use this instead of Use a Magic Item. Describe a new source (neither the Blood-Bound nor the Living Light) of magical energy in the universe that rushes into your magical item. Choose:
- *  ignore its limitations 
- *  double its effects
+**Details**: Use this instead of Use a Magic Item. Its effects happen no matter what.
 
-The effects happen no matter what.
-On ✓, answer: how are you marked by the new source?
+Choose, then Answer:
+ *  Ignore the item's limitations
+ *  Double the item's effects
+
+ * What new source (neither the Blood-Bound nor the Living Light) of magical energy rushes into your magical item?
+ * Are you marked by the new source? How?
     
 
 
@@ -1397,6 +1396,7 @@ On ✓, answer: how are you marked by the new source?
 attrs = []
 flags = []
 levels = []
+style_details = {'font-size': '10.5px'}
 ```
 
     ✗: 
@@ -1421,7 +1421,6 @@ If it is a weapon, choose:
  *  it gains More Power 
  *  its appearance has magically changed 
  *  it is imbued with a magical effect from an item you possess, with one charge capacity
-    
 
 
 # Suggestive Subtlety
@@ -1439,7 +1438,8 @@ levels = ['r2', 'r1', '0', 'g1']
     ----
     ✔✔: Spend 1 XP [2x green progress]
 
-**Details**: First, get their attention. Then, without saying it outright, but by mysterious wiles and unspoken language, change an NPC's mind. Describe your tricks and say what you changed:
+**Details**: First, get their attention. Then, without saying it outright, but by mysterious wiles and unspoken language, change an NPC's mind.
+Describe your tricks and say what you changed:
  *  They strongly believe a new fact 
  *  They judge an old belief to be a lie 
  *  They ignore a previous concern 

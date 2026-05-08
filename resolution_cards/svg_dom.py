@@ -58,6 +58,110 @@ def export_square_png(svg, png):
 def export_tall_png(svg, png, references=None):
     return export_png(svg, png, 825, 1125, references)
 
+CHAR_WIDTHS = {
+    '+': 2.2, '-': 2.2, '*': 2.2, '?': 2.0,
+    'W': 2.1, 'M': 2.1,
+    'Y': 2.0, 'A': 2.0, 'C': 2.0, 'D': 2.0, 'N': 2.0,
+    'O': 2.0, 'U': 2.0, 'R': 2.0, 'H': 2.0,
+    'w': 2.0, 'm': 2.0,
+    'o': 1.2, 'b': 1.2, 'd': 1.2, 'p': 1.2, 'g': 1.2,
+    'i': 0.5, 'l': 0.5, '|': 0.5, '!': 0.5,
+    "'": 0.5, ',': 0.5, '.': 0.5, ';': 0.5, ':': 0.5,
+    'f': 0.7, 'r': 0.7, 't': 0.7,
+    ' ': 1.0,
+}
+
+def char_width(c):
+    return CHAR_WIDTHS.get(c, 1.0)
+
+def word_width(word):
+    return sum(char_width(c) for c in word)
+
+def analyze_text(newtext):
+    """
+    Analyze newtext for weighted visual width, one entry per line.
+
+    Characters are assigned proportional weights: wide characters like 'W'
+    and 'm' count as 2.0; narrow characters like 'i' and '.' count as 0.5;
+    spaces count as 1.0; most characters count as 1.0. Hard newlines are
+    respected as line boundaries.
+
+    Returns a list of dicts, one per input line:
+      - 'words':          list of (word_str, weighted_width) pairs
+      - 'weighted_width': total weighted width (words + inter-word spaces)
+      - 'word_count':     number of words on the line
+      - 'char_count':     raw character count (excluding the newline itself)
+
+    Examples:
+
+        >>> analyze_text("Roll with advantage.")
+        [{'words': [('Roll', 3.0), ('with', 4.2), ('advantage.', 9.2)],
+          'weighted_width': 18.4, 'word_count': 3, 'char_count': 20}]
+
+        >>> analyze_text("Mill")   # all wide/narrow chars
+        [{'words': [('Mill', 3.5)], 'weighted_width': 3.5,
+          'word_count': 1, 'char_count': 4}]
+
+        >>> analyze_text("Illuminate the Wound\\nwith Willpower.")
+        [{'words': [('Illuminate', 9.2), ('the', 2.7), ('Wound', 6.0)],
+          'weighted_width': 19.9, 'word_count': 3, 'char_count': 20},
+         {'words': [('with', 4.2), ('Willpower.', 9.7)],
+          'weighted_width': 14.9, 'word_count': 2, 'char_count': 15}]
+    """
+    results = []
+    for line in newtext.split('\n'):
+        words = line.split()
+        word_widths = [(w, word_width(w)) for w in words]
+        space_total = char_width(' ') * max(0, len(words) - 1)
+        weighted_width = sum(ww for _, ww in word_widths) + space_total
+        results.append({
+            'words': word_widths,
+            'weighted_width': weighted_width,
+            'word_count': len(words),
+            'char_count': len(line),
+        })
+    return results
+
+def wrap_text(newtext, capacity):
+    """
+    Split newtext into lines where each line's weighted_width <= capacity.
+    Hard newlines in newtext are treated as mandatory line breaks.
+
+    Returns a list of line strings.
+
+    Examples:
+
+        >>> wrap_text("Roll with advantage.", 20)
+        ['Roll with advantage.']
+
+        >>> wrap_text("When you Withdraw from a fight, say how you get away.", 20)
+        ['When you Withdraw', 'from a fight, say', 'how you get away.']
+
+        >>> wrap_text("Illuminate the Wound\\nwith Willpower.", 20)
+        ['Illuminate the Wound', 'with Willpower.']
+    """
+    output_lines = []
+
+    for input_line in analyze_text(newtext):
+        current_words = []
+        current_width = 0.0
+
+        for word, ww in input_line['words']:
+            space = char_width(' ') if current_words else 0.0
+            if current_words and current_width + space + ww > capacity:
+                output_lines.append(' '.join(current_words))
+                current_words = [word]
+                current_width = ww
+            else:
+                current_words.append(word)
+                current_width += space + ww
+
+        if current_words:
+            output_lines.append(' '.join(current_words))
+
+    return output_lines
+
+
 def format_text_to_tspans(text, keywordFormats):
     """
     keywordFormats looks like this: {
@@ -93,13 +197,103 @@ def format_text_to_tspans(text, keywordFormats):
     allTspans.append(currentTspan)
     return allTspans
 
+
 def change_text_text(elem, newtext):
     #print('change text', newtext[:10], '...')
     tspan = [x for x in elem.iterchildren()
                 if 'tspan' in x.tag][0]
     tspan.text = newtext
 
-def change_flowroot_text(flowroot, newtext, style, ideal_num_chars):
+KEYWORD_FORMATS = {
+    'Stamina':       {'style': 'text-decoration:underline;text-decoration-color:#e0e0e0', 'dx': '13.0 0 5'},
+    'Harm':          {'style': 'text-decoration:underline;text-decoration-color:#c17cd5', 'dx': '4.0'},
+    'Wound':         {'style': 'text-decoration:underline;text-decoration-color:#0f0000', 'dx': '4.0'},
+    'Str':           {'style': 'font-family:OptimusPrinceps'},
+    'Int':           {'style': 'font-family:OptimusPrinceps'},
+    'Dex':           {'style': 'font-family:OptimusPrinceps'},
+    'PACK':          {'style': 'font-family:OptimusPrinceps'},
+    'advantage':     {'fill': '#003a00'},
+    'Advantage':     {'fill': '#003a00'},
+    'disadvantage':  {'fill': '#3f0000'},
+    'Disadvantage':  {'fill': '#3f0000'},
+    '____':          {'fill': '#ffffff', 'style': 'text-decoration:underline;text-decoration-color:#000000'},
+    'More Power':    {'style': 'text-decoration:underline;text-decoration-color:#00a000'},
+}
+
+def flowroot_text_force_width(flowroot, text, style):
+    print('----')
+    print(text)
+    print('----')
+    raise ValueError('#'*50)
+
+def change_flowroot_text(flowroot, newtext, style, max_lines=None, capacity=None):
+
+    print(f'  MAXLINES {max_lines}   CAP {capacity}')
+
+    def _font_size(style, flowpara):
+        """Read font-size from flowPara style attribute. Returns float (px)."""
+        m = re.search(r'([\d.]+)px', style.get('font-size', ''))
+        if not m:
+            print('no style font size')
+            m = re.search(r'font-size:\s*([\d.]+)px', flowpara.attrib.get('style', ''))
+        if m:
+            print(f'font size {m.group(1)}')
+            return float(m.group(1))
+        raise ValueError("Could not get font size")
+
+    flowpara = [x for x in flowroot.iterchildren() if 'flowPara' in x.tag][0]
+
+    # Extract capacity and max lines from the placeholder text.
+    placeholder = flowpara.text or ''
+    if max_lines == None:
+        lines_match = re.search(r'lines:(\d+)', placeholder)
+        if lines_match:
+            max_lines = int(lines_match.group(1))
+        else:
+            max_lines = 1
+    if not capacity:
+        capacity = len(placeholder)
+
+    autowrap_text = wrap_text(newtext, capacity)
+    print(autowrap_text)
+    estimated_wraps = len(autowrap_text)
+    if estimated_wraps > max_lines:
+        FONT_SIZE_STEP = 2.0  # px reduction per retry
+        current_size = _font_size(style, flowpara)
+        next_size = current_size - FONT_SIZE_STEP
+        if next_size <= 8.0:
+            return flowroot_text_force_width(flowroot, autowrap_text, style)
+        ratio = current_size / next_size
+        next_max_lines = int(max_lines * (ratio + .1))
+        next_capacity = int(capacity * (ratio + .12))
+        msg = (
+            f'\n===\n'
+            f'Text too long: wraps to {estimated_wraps} lines\n'
+            f'  font-size {current_size}px → next {next_size}px\n'
+            f'  max lines {max_lines} → {next_max_lines}\n'
+            f'  capacity {capacity} →  {next_capacity}'
+        )
+        print(msg)
+        style.update({'font-size': f'{next_size}px'})
+        return change_flowroot_text(flowroot, newtext, style,
+            next_max_lines, next_capacity)
+
+    flowroot.remove(flowpara)
+    for line in newtext.split('\n'):
+        paraclone = etree.fromstring(etree.tostring(flowpara))
+        paraclone.text = ''
+        for tspan in format_text_to_tspans(line, KEYWORD_FORMATS):
+            paraclone.append(tspan)
+        if style:
+            for k, v in style.items():
+                paraclone.attrib['style'] = re.sub(
+                    f'{k}:[^;]+',
+                    f'{k}:{v};',
+                    paraclone.attrib['style']
+                )
+        flowroot.append(paraclone)
+
+def x_change_flowroot_text(flowroot, newtext, style):
 
     #print('change_flowroot_text', f'{locals()}', len(newtext))
 
@@ -125,11 +319,12 @@ def change_flowroot_text(flowroot, newtext, style, ideal_num_chars):
         for tspan in format_text_to_tspans(line, {
                 'Stamina': {'style': "text-decoration:underline;text-decoration-color:#e0e0e0", 'dx': '13.0 0 5' },
                 'Harm':    {'style': "text-decoration:underline;text-decoration-color:#c17cd5", 'dx': '4.0' },
-                'Wound':   {'style': "text-decoration:underline;text-decoration-color:#0f0000", 'dx': '4.0' },
+                'Wound':   {'style': "text-decoration:underline", 'fill':"#0f0000", 'dx': '4.0' },
                 'Str':   {'style': "font-family:OptimusPrinceps" },
                 'Int':   {'style': "font-family:OptimusPrinceps" },
                 'Dex':   {'style': "font-family:OptimusPrinceps" },
                 'PACK':   {'style': "font-family:OptimusPrinceps" },
+                'Encumbrance':   {'style': "text-decoration:underline" },
                 'advantage':   {'fill': "#003a00" },
                 'Advantage':   {'fill': "#003a00" },
                 'disadvantage':   {'fill': "#3f0000" },
@@ -202,7 +397,7 @@ class DOM(object):
             self.title_to_elements[t.text].append(t.getparent())
         self.layers = {
             x.attrib['{http://www.inkscape.org/namespaces/inkscape}label'] : x
-            for x in self.dom.getchildren()
+            for x in self.dom.iter()
             if x.attrib.get('{http://www.inkscape.org/namespaces/inkscape}groupmode') == 'layer'
         }
         self.references = []
@@ -339,7 +534,6 @@ class DOM(object):
         self,
         title,
         newtext,
-        ideal_num_chars=None,
         style=None,
         keywordFormats=None
     ):
@@ -350,7 +544,7 @@ class DOM(object):
 
         for elem in self.title_to_elements[title]:
             if 'flowRoot' in elem.tag:
-                change_flowroot_text(elem, newtext, style, ideal_num_chars)
+                change_flowroot_text(elem, newtext, style)
             elif 'text' in elem.tag:
                 change_text_text(elem, newtext)
             else:
