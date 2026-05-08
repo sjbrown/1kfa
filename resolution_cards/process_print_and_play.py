@@ -95,8 +95,13 @@ if __name__ == '__main__':
     process_move_card_faces()
     process_deckahedron_card_faces()
 
-    fname = f'{TEMPLATEDIR}/print_and_play_deckahedron_template.svg'
-    new_pdf_name = f'{OUTDIR}/print_and_play_deckahedron.pdf'
+    fname = f'{TEMPLATEDIR}/character_sheet.svg'
+    new_pdf_name = f'{OUTDIR}/character_sheet.pdf'
+    print(f'\nWriting {new_pdf_name}\n')
+    export_pdf(fname, new_pdf_name)
+
+    fname = f'{TEMPLATEDIR}/gm_sheet.svg'
+    new_pdf_name = f'{OUTDIR}/gm_sheet.pdf'
     print(f'\nWriting {new_pdf_name}\n')
     export_pdf(fname, new_pdf_name)
 
