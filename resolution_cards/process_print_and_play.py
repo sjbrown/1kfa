@@ -4,7 +4,9 @@
 import os
 import re
 import sys
+import glob
 import string
+import shutil
 from pprint import pprint, pformat
 from tall_cards import cards
 from process_tall import filenamify
@@ -16,7 +18,7 @@ CARDSDIR = '/tmp/cards_v' + VERSION
 OUTDIR = '/tmp/1kfa_pnp_build'
 TEMPLATEDIR = os.environ.get('KFAREPO', '..') + '/resolution_cards'
 
-DEBUG = int(os.environ.get('DEBUG', 1))
+DEBUG = int(os.environ.get('DEBUG', 0))
 
 def write_pdf(suffix, raw):
     new_fname = OUTDIR + '/print_and_play_%s.svg' % suffix
@@ -59,31 +61,44 @@ def process_subdir(subdirname, raw_svg):
         write_pdf(suffix, raw_svg_copy)
 
 def process_move_card_faces():
+    cmd = f'python make_move_card_backs.py --output-dir {CARDSDIR} --export-pdfs character_move_sheet.md'
+    os.system(cmd)
+    pdfs_list = ' '.join(glob.glob(f'{CARDSDIR}/move_card_backs*pdf'))
+    cmd = f'pdfunite {pdfs_list} {OUTDIR}/move_card_backs.pdf'
+    os.system(cmd)
+
     for name in os.listdir(CARDSDIR):
         subdir = f'{CARDSDIR}/{name}'
         if not os.path.isdir(subdir):
             continue
-        print('Processing', name)
-        cmd = f'python make_move_card_fronts.py --input-dir {subdir} --output-dir {CARDSDIR}'
+        print('Processing', subdir)
+        cmd = f'python make_move_card_fronts.py --input-dir {subdir} --output-dir {CARDSDIR} --export-pdfs'
         os.system(cmd)
-    for name in os.listdir(CARDSDIR):
-        if 'sheet' in name and name.endswith('svg'):
-            svg_name = f'{CARDSDIR}/{name}'
-            pdf_name = f'{OUTDIR}/{name}'[:-4] + '.pdf'
-            print(f'Processing {svg_name} -> {pdf_name}')
-            export_pdf(svg_name, pdf_name)
+
+        pdfs_list = ' '.join(glob.glob(f'{CARDSDIR}/*{name}*pdf'))
+        cmd = f'pdfunite {pdfs_list} {OUTDIR}/moves_{name}.pdf'
+        os.system(cmd)
 
 def process_deckahedron_card_faces():
     DH_DIR = '/tmp/cards_square/'
     print(f'Processing {DH_DIR}')
     cmd = f'python make_square_card_fronts.py --input-dir {DH_DIR} --output-dir {DH_DIR}'
     os.system(cmd)
+    pdfs_list = ''
     for name in os.listdir(DH_DIR):
         if 'sheet' in name and name.endswith('svg'):
             svg_name = f'{DH_DIR}/{name}'
             pdf_name = f'{OUTDIR}/{name}'[:-4] + '.pdf'
             print(f'Processing {svg_name} -> {pdf_name}')
             export_pdf(svg_name, pdf_name)
+            pdfs_list += ' ' + pdf_name
+
+    cmd = f'pdfunite {pdfs_list} {OUTDIR}/print_and_play_deckahedrons.pdf'
+    os.system(cmd)
+
+    if not DEBUG:
+        cmd = f'rm -rf {pdfs_list}'
+        os.system(cmd)
 
 if __name__ == '__main__':
     if not os.path.isdir(OUTDIR):

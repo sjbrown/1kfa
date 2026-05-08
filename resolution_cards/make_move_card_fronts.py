@@ -19,6 +19,7 @@ import os
 import glob
 import math
 import argparse
+import subprocess
 
 # --- PNG geometry ---
 PNG_W = 825
@@ -84,7 +85,7 @@ def card_image_element(png_path: str, x: int, y: int) -> str:
     preserveAspectRatio="none" />"""
 
 
-def make_sheet(stub: str, card_paths: list, sheet_index: int, output_dir: str):
+def make_sheet(stub: str, card_paths: list, sheet_index: int, output_dir: str, export_pdf):
     elements = []
     for slot, png_path in enumerate(card_paths):
         col = slot % COLS
@@ -124,6 +125,14 @@ def make_sheet(stub: str, card_paths: list, sheet_index: int, output_dir: str):
     with open(out_path, "w") as f:
         f.write(svg)
     print(f"  wrote {out_path}")
+
+    if export_pdf:
+        pdf_path = out_path[:-4] + '.pdf'
+        print(f"  exporting {pdf_path} ...")
+        subprocess.run(
+            ["inkscape", f"--export-pdf={pdf_path}", out_path],
+        check=True,
+        )
     return out_path
 
 
@@ -138,6 +147,11 @@ def main():
         "--output-dir",
         default="/tmp/cards_v0.95",
         help="Output directory for sheet SVGs",
+    )
+    parser.add_argument(
+        "--export-pdfs",
+        action="store_true",
+        help="After writing SVGs, run Inkscape to export each as a PDF.",
     )
     args = parser.parse_args()
 
@@ -155,7 +169,8 @@ def main():
     for sheet_idx in range(num_sheets):
         batch = pngs[sheet_idx * CARDS_PER_SHEET : (sheet_idx + 1) * CARDS_PER_SHEET]
         stub = os.path.basename(args.input_dir)
-        make_sheet(stub, batch, sheet_idx + 1, args.output_dir)
+        make_sheet(stub, batch, sheet_idx + 1, args.output_dir, args.export_pdfs)
+
 
     print("Done.")
 
