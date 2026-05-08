@@ -28345,17 +28345,18 @@
          id="title32373">d6_6</title>
     </path>
   </g>
+  <!-- RESOLUTION -->
   <g
      style="display:inline"
      inkscape:label="resolution"
      id="layer4"
      inkscape:groupmode="layer">
     <g
-       id="g31386-4"
+       id="g-anvil-one-x"
        style="display:inline"
        transform="matrix(-1.44,0,0,-1.44,334.86818,313.61241)">
       <title
-         id="title31441-9">anvil_one_x</title>
+         id="title-anvil-one-x">anvil_one_x</title>
       <g
          style="display:inline"
          id="g12605-9"
@@ -28378,10 +28379,10 @@
       </g>
     </g>
     <g
-       id="g31595"
+       id="g-anvil-three-check"
        transform="matrix(-1.2,0,0,-1.2,237.43717,227.85385)">
       <title
-         id="title31606">anvil_three_check</title>
+         id="title-anvil-three-check">anvil_three_check</title>
       <g
          id="g31579"
          transform="translate(-7.3508005,-1.8588272)">
@@ -28427,9 +28428,9 @@
     </g>
     <g
        transform="rotate(180,97.14919,109.39387)"
-       id="g31571">
+       id="g-anvil-one-check">
       <title
-         id="title31575">anvil_one_check</title>
+         id="title-anvil-one-check">anvil_one_check</title>
       <path
          inkscape:connector-curvature="0"
          id="path23407"
@@ -28443,10 +28444,10 @@
     </g>
     <g
        transform="rotate(180,131.40935,118.07542)"
-       id="g31695"
+       id="g-anvil-two-check"
        style="display:inline">
       <title
-         id="title31703">anvil_two_check</title>
+         id="title-anvil-two-check">anvil_two_check</title>
       <g
          transform="matrix(0.95,0,0,0.95,38.421353,21.159861)"
          id="g31612">
@@ -28467,11 +28468,11 @@
       </g>
     </g>
     <g
-       id="g31386-4-7"
+       id="g-blades-one-x"
        style="display:inline"
        transform="matrix(0,1.44,-1.44,0,313.5481,-118.72225)">
       <title
-         id="title31441-9-6">blades_one_x</title>
+         id="title-blades-one-x">blades_one_x</title>
       <g
          style="display:inline"
          id="g12605-9-8"
@@ -28494,11 +28495,11 @@
       </g>
     </g>
     <g
-       id="g31595-4"
+       id="g-blades-three-check"
        style="display:inline"
        transform="matrix(0,1.2,-1.2,0,227.78954,-21.291256)">
       <title
-         id="title31606-0">blades_three_check</title>
+         id="title-blades-three-check">blades_three_check</title>
       <g
          id="g31579-3"
          transform="translate(-7.3508005,-1.8588272)">
@@ -28544,10 +28545,10 @@
     </g>
     <g
        transform="rotate(90,98.43796,120.28549)"
-       id="g31571-2"
+       id="g-blades-one-check"
        style="display:inline">
       <title
-         id="title31575-4">blades_one_check</title>
+         id="title-blades-one-check">blades_one_check</title>
       <path
          inkscape:connector-curvature="0"
          id="path23407-9"
@@ -28561,10 +28562,10 @@
     </g>
     <g
        transform="rotate(90,141.37966,94.706873)"
-       id="g31695-1"
+       id="g-blades-two-check"
        style="display:inline">
       <title
-         id="title31703-2">blades_two_check</title>
+         id="title-blades-two-check">blades_two_check</title>
       <g
          transform="matrix(0.95,0,0,0.95,38.421353,21.159861)"
          id="g31612-0">
@@ -28585,13 +28586,13 @@
       </g>
     </g>
     <g
-       id="g31386-4-8"
+       id="g-crown-one-x"
        style="display:inline"
        transform="matrix(0,-1.44,1.44,0,-97.611226,334.86695)"
        inkscape:transform-center-x="49.699733"
        inkscape:transform-center-y="-0.12801129">
       <title
-         id="title31441-9-3">crown_one_x</title>
+         id="title-crown-one-x">crown_one_x</title>
       <g
          style="display:inline"
          id="g12605-9-87"
@@ -28614,13 +28615,13 @@
       </g>
     </g>
     <g
-       id="g31595-0"
+       id="g-crown-three-check"
        style="display:inline"
        transform="matrix(0,-1.2,1.2,0,-11.852653,237.43591)"
        inkscape:transform-center-x="49.635951"
        inkscape:transform-center-y="-0.27476831">
       <title
-         id="title31606-5">crown_three_check</title>
+         id="title-crown-three-check">crown_three_check</title>
       <g
          id="g31579-0"
          transform="translate(-7.3508005,-1.8588272)">
@@ -28666,12 +28667,12 @@
     </g>
     <g
        transform="rotate(-90,121.33392,141.48356)"
-       id="g31695-4"
+       id="g-crown-two-check"
        style="display:inline"
        inkscape:transform-center-x="49.635925"
        inkscape:transform-center-y="-0.27476042">
       <title
-         id="title31703-6">crown_two_check</title>
+         id="title-crown-two-check">crown_two_check</title>
       <g
          transform="matrix(0.95,0,0,0.95,38.421353,21.159861)"
          id="g31612-9">
@@ -28693,12 +28694,12 @@
     </g>
     <g
        transform="rotate(-90,95.755284,98.541856)"
-       id="g31571-5"
+       id="g-crown-one-check"
        style="display:inline"
        inkscape:transform-center-x="49.699741"
        inkscape:transform-center-y="-0.12802226">
       <title
-         id="title31575-9">crown_one_check</title>
+         id="title-crown-one-check">crown_one_check</title>
       <path
          inkscape:connector-curvature="0"
          id="path23407-4"
@@ -28711,13 +28712,13 @@
          style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none" />
     </g>
     <g
-       id="g31386-4-3"
+       id="g-dragon-one-x"
        style="display:inline"
        transform="matrix(1.44,0,0,1.44,-119.35044,-97.808592)"
        inkscape:transform-center-x="0.35547571"
        inkscape:transform-center-y="-49.895303">
       <title
-         id="title31441-9-7">dragon_one_x</title>
+         id="title-dragon-one-x">dragon_one_x</title>
       <g
          style="display:inline"
          id="g12605-9-9"
@@ -28740,13 +28741,13 @@
       </g>
     </g>
     <g
-       id="g31595-1"
+       id="g-dragon-three-check"
        style="display:inline"
        transform="matrix(1.2,0,0,1.2,-21.919415,-12.050013)"
        inkscape:transform-center-x="0.2087298"
        inkscape:transform-center-y="-49.831515">
       <title
-         id="title31606-9">dragon_three_check</title>
+         id="title-dragon-three-check">dragon_three_check</title>
       <g
          id="g31579-4"
          transform="translate(-7.3508005,-1.8588272)">
@@ -28792,12 +28793,12 @@
     </g>
     <g
        transform="translate(-47.300952,-20.347019)"
-       id="g31695-7"
+       id="g-dragon-two-check"
        style="display:inline"
        inkscape:transform-center-x="0.20871581"
        inkscape:transform-center-y="-49.831508">
       <title
-         id="title31703-3">dragon_two_check</title>
+         id="title-dragon-two-check">dragon_two_check</title>
       <g
          transform="matrix(0.95,0,0,0.95,38.421353,21.159861)"
          id="g31612-3">
@@ -28819,12 +28820,12 @@
     </g>
     <g
        transform="translate(21.219359,-2.9839231)"
-       id="g31571-4"
+       id="g-dragon-one-check"
        style="display:inline"
        inkscape:transform-center-x="0.35547271"
        inkscape:transform-center-y="-49.895296">
       <title
-         id="title31575-3">dragon_one_check</title>
+         id="title-dragon-one-check">dragon_one_check</title>
       <path
          inkscape:connector-curvature="0"
          id="path23407-7"
@@ -28837,6 +28838,7 @@
          style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none" />
     </g>
   </g>
+  <!-- END RESOLUTION -->
   <g
      style="display:none"
      inkscape:label="exhaustion_center"
