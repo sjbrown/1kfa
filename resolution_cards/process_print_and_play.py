@@ -73,6 +73,17 @@ def process_move_card_faces():
             print(f'Processing {svg_name} -> {pdf_name}')
             export_pdf(svg_name, pdf_name)
 
+def process_deckahedron_card_faces():
+    DH_DIR = '/tmp/cards_square/'
+    print(f'Processing {DH_DIR}')
+    cmd = f'python make_square_card_fronts.py --input-dir {DH_DIR} --output-dir {DH_DIR}'
+    os.system(cmd)
+    for name in os.listdir(DH_DIR):
+        if 'cards_square_sheet' in name and name.endswith('svg'):
+            svg_name = f'{DH_DIR}/{name}'
+            pdf_name = f'{OUTDIR}/{name}'[:-4] + '.pdf'
+            print(f'Processing {svg_name} -> {pdf_name}')
+            export_pdf(svg_name, pdf_name)
 
 if __name__ == '__main__':
     if not os.path.isdir(OUTDIR):
@@ -82,19 +93,11 @@ if __name__ == '__main__':
     os.system(cmd)
 
     process_move_card_faces()
+    process_deckahedron_card_faces()
 
     fname = f'{TEMPLATEDIR}/print_and_play_deckahedron_template.svg'
     new_pdf_name = f'{OUTDIR}/print_and_play_deckahedron.pdf'
     print(f'\nWriting {new_pdf_name}\n')
     export_pdf(fname, new_pdf_name)
 
-    fname = f'{TEMPLATEDIR}/print_and_play_deckahedron_template_B1.svg'
-    new_pdf_name = f'{OUTDIR}/print_and_play_deckahedron_B1.pdf'
-    print(f'\nWriting {new_pdf_name}\n')
-    export_pdf(fname, new_pdf_name)
-
-    fname = f'{TEMPLATEDIR}/print_and_play_deckahedron_template_B2.svg'
-    new_pdf_name = f'{OUTDIR}/print_and_play_deckahedron_B2.pdf'
-    print(f'\nWriting {new_pdf_name}\n')
-    export_pdf(fname, new_pdf_name)
 

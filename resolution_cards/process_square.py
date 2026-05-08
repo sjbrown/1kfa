@@ -314,6 +314,8 @@ if __name__ == '__main__':
     shutil.copy(f'{OUTDIR}/back.png', f'{OUTDIR}/blessing/back.png')
     make_green_deck()
     make_red_deck()
+    shutil.copy(f'./symbols_results.svg', f'{OUTDIR}/symbols_results.svg')
+    shutil.copy(f'./symbols_results.svg', f'/tmp/symbols_results.svg')
     if os.environ.get('PARALLEL'):
         from multiprocessing import Pool
         from functools import partial
