@@ -79,7 +79,7 @@ def process_deckahedron_card_faces():
     cmd = f'python make_square_card_fronts.py --input-dir {DH_DIR} --output-dir {DH_DIR}'
     os.system(cmd)
     for name in os.listdir(DH_DIR):
-        if 'cards_square_sheet' in name and name.endswith('svg'):
+        if 'sheet' in name and name.endswith('svg'):
             svg_name = f'{DH_DIR}/{name}'
             pdf_name = f'{OUTDIR}/{name}'[:-4] + '.pdf'
             print(f'Processing {svg_name} -> {pdf_name}')

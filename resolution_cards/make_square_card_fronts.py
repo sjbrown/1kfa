@@ -108,7 +108,7 @@ def main():
 
     for sheet_idx in range(num_sheets):
         batch = pngs[sheet_idx * CARDS_PER_SHEET : (sheet_idx + 1) * CARDS_PER_SHEET]
-        stub = os.path.basename(args.input_dir)
+        stub = os.path.basename(args.input_dir.rstrip('/'))
         make_sheet(stub, batch, sheet_idx + 1, args.output_dir)
 
     print("Done.")
