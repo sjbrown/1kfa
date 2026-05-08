@@ -122,6 +122,27 @@ def card_svg(move: dict, x: float, y: float) -> str:
     trait_cy = footer_y + footer_h / 2 + trait_fsize * 0.35
     sep_y    = footer_y + 1
 
+    groups = move.get('groups') or []
+    group_tag_svg = ""
+    if groups:
+        tag_fsize = 9
+        tag_label = "  ·  ".join(g.upper() for g in groups)
+        tag_pad_x = 6
+        tag_pad_y = 3
+        tag_h = tag_fsize + tag_pad_y * 2
+        tag_w = len(tag_label) * tag_fsize * 0.6 + tag_pad_x * 2
+        tag_x = CARD_W - tag_w - 4
+        tag_y = CARD_H - tag_h - 4
+        group_tag_svg = (
+            f'<rect x="{tag_x:.1f}" y="{tag_y:.1f}" '
+            f'width="{tag_w:.1f}" height="{tag_h:.1f}" '
+            f'rx="3" ry="3" fill="{TRAIT_BG}" opacity="0.9"/>'
+            f'<text x="{tag_x + tag_pad_x:.1f}" y="{tag_y + tag_pad_y + tag_fsize * 0.85:.1f}" '
+            f'font-family="\'Gill Sans\', \'Trebuchet MS\', Arial, sans-serif" '
+            f'font-size="{tag_fsize}" font-weight="bold" letter-spacing="1" '
+            f'fill="{TRAIT_COLOR}" opacity="0.7">{_xml(tag_label)}</text>'
+        )
+
     return f"""\
 <g transform="translate({x:.2f},{y:.2f})">
   <rect x="0" y="0" width="{CARD_W}" height="{CARD_H}"
@@ -143,6 +164,7 @@ def card_svg(move: dict, x: float, y: float) -> str:
         font-size="{trait_fsize}" font-weight="bold"
         letter-spacing="3"
         fill="{trait_color}">{_xml(trait_str)}</text>
+  {group_tag_svg}
 </g>
 """
 
