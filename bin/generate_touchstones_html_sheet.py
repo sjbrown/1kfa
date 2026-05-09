@@ -28,6 +28,7 @@ from render_sheet_html import (
     read_aloud,
     rule_note,
     section_head,
+    export_pdf,
 )
 
 
@@ -337,6 +338,10 @@ def main():
         "--output-dir", default=".",
         help="Directory for the output HTML file (default: current directory)"
     )
+    parser.add_argument(
+        "--export-pdf", action="store_true",
+        help="Also render the HTML to PDF using headless Chromium"
+    )
     args = parser.parse_args()
 
     if not os.path.exists(args.guide):
@@ -368,6 +373,13 @@ def main():
 
     print(f"  -> {out_path}")
 
+    if args.export_pdf:
+        pdf_path = out_path.replace(".html", ".pdf")
+        print(f"  rendering PDF...")
+        export_pdf(out_path, pdf_path)
+        print(f"  -> {pdf_path}")
+
 
 if __name__ == "__main__":
     main()
+

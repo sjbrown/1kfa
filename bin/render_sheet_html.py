@@ -49,6 +49,27 @@ def bullet_list_to_html(items: list) -> list:
     """
     return [spans_to_html(spans) for spans in items]
 
+def export_pdf(html_path: str, pdf_path: str) -> None:
+    """Render html_path to pdf_path using headless Chromium via Playwright."""
+    from playwright.sync_api import sync_playwright
+    with sync_playwright() as p:
+        browser = p.chromium.launch()
+        page = browser.new_page(viewport={"width": 816, "height": 1056})
+        page.goto(f"file://{os.path.abspath(html_path)}")
+        page.wait_for_timeout(2000)  # allow web fonts to load
+        # Strip screen-only body styles so the .page div sits flush at the origin.
+        page.add_style_tag(
+            content="body { background: white !important; padding: 0 !important; } .page { box-shadow: none !important; border-radius: 0 !important; margin: 0 !important; }"
+        )
+        page.pdf(
+            path=pdf_path,
+            format="Letter",
+            print_background=True,
+            margin={"top": "0", "bottom": "0", "left": "0", "right": "0"},
+        )
+        browser.close()
+
+
 
 # ── COMPONENT HELPERS ─────────────────────────────────────────────────────────
 
@@ -110,6 +131,10 @@ CSS_BASE = """
   @media print {
     body { background: white; padding: 0; }
     .page { box-shadow: none; margin: 0; border-radius: 0; }
+    * {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
   }
 
   body {
