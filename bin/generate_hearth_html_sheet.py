@@ -17,6 +17,22 @@ import os
 import re
 import sys
 from dataclasses import dataclass, field
+from parse_quickstart_data import (
+    extract_all_blockquotes,
+    extract_blockquote,
+    parse_inline_md,
+    spans_to_plain,
+)
+from render_sheet_html import (
+    CSS_BASE,
+    cb,
+    checklist_item,
+    read_aloud,
+    rule_note,
+    section_head,
+    spans_to_html,
+)
+
 
 
 # ---------------------------------------------------------------------------
@@ -26,110 +42,18 @@ from dataclasses import dataclass, field
 @dataclass
 class HearthData:
     at_home_read_aloud: str         # "What makes your character feel most at home..."
-    at_home_followup: str           # "Follow up questions might be needed..."
+    at_home_followup: list          # span list
     choose_hearth_read_aloud: str   # "This is a game where you all play together..."
     hearth_examples_read_aloud: str # "The Hearth can be a specific person..."
     hearth_options: list            # ["Specific People", "Food", ...]
-    make_sure_note: str             # "With follow up questions, make sure everyone agrees..."
-    must_be_separated_note: str     # "An important aspect of The Hearth is that it must..."
+    make_sure_note: list            # span list
+    must_be_separated_note: list    # span list
     risk_life_read_aloud: str       # "Briefly, why would your character risk..."
 
 
 # ---------------------------------------------------------------------------
 # Parser helpers
 # ---------------------------------------------------------------------------
-
-def md_to_html_inline(text: str) -> str:
-    """Convert inline markdown bold/italic to HTML."""
-    text = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', text)
-    text = re.sub(r'\*(.+?)\*', r'<em>\1</em>', text)
-    return text
-
-
-def extract_first_blockquote(text: str) -> str:
-    """
-    Extract the first contiguous blockquote block from text.
-    Returns HTML-ready string.
-    """
-    lines = []
-    in_quote = False
-    for line in text.splitlines():
-        m = re.match(r'^>\s?(.*)', line)
-        if m:
-            in_quote = True
-            lines.append(m.group(1))
-        elif in_quote:
-            break
-
-    if not lines:
-        return ""
-
-    paragraphs = []
-    current = []
-    for line in lines:
-        stripped = line.rstrip('\\').strip()
-        stripped = md_to_html_inline(stripped)
-        if stripped == "":
-            if current:
-                paragraphs.append(" ".join(current))
-                current = []
-        else:
-            current.append(stripped)
-    if current:
-        paragraphs.append(" ".join(current))
-
-    return "<br><br>\n        ".join(paragraphs)
-
-
-def extract_all_blockquotes(text: str) -> list:
-    """Extract all contiguous blockquote blocks from text in order."""
-    results = []
-    current = []
-
-    for line in text.splitlines():
-        m = re.match(r'^>\s?(.*)', line)
-        if m:
-            current.append(m.group(1))
-        else:
-            if current:
-                paragraphs = []
-                para = []
-                for l in current:
-                    stripped = l.rstrip('\\').strip()
-                    stripped = md_to_html_inline(stripped)
-                    if stripped == "":
-                        if para:
-                            paragraphs.append(" ".join(para))
-                            para = []
-                    else:
-                        para.append(stripped)
-                if para:
-                    paragraphs.append(" ".join(para))
-                q = "<br><br>\n        ".join(paragraphs)
-                if q:
-                    results.append(q)
-                current = []
-
-    if current:
-        paragraphs = []
-        para = []
-        for l in current:
-            stripped = l.rstrip('\\').strip()
-            stripped = md_to_html_inline(stripped)
-            if stripped == "":
-                if para:
-                    paragraphs.append(" ".join(para))
-                    para = []
-            else:
-                para.append(stripped)
-        if para:
-            paragraphs.append(" ".join(para))
-        q = "<br><br>\n        ".join(paragraphs)
-        if q:
-            results.append(q)
-
-    return results
-
 
 def parse_hearth_options(text: str) -> list:
     """Parse the bullet list of Hearth options."""
@@ -164,7 +88,7 @@ def parse_hearth(text: str) -> HearthData:
     at_home_followup = ""
     if after_q1_m:
         at_home_followup = " ".join(after_q1_m.group(1).strip().splitlines()).strip()
-        at_home_followup = md_to_html_inline(at_home_followup)
+        at_home_followup = parse_inline_md(at_home_followup)
 
     # Quote 2: "This is a game where you all play together..."
     choose_hearth_read_aloud = quotes[1] if len(quotes) > 1 else ""
@@ -180,7 +104,7 @@ def parse_hearth(text: str) -> HearthData:
         r'(With follow up questions, make sure everyone agrees[^.]+\.)',
         section
     )
-    make_sure_note = md_to_html_inline(make_sure_m.group(1).strip()) if make_sure_m else ""
+    make_sure_note = parse_inline_md(make_sure_m.group(1).strip()) if make_sure_m else []
 
     # "An important aspect of The Hearth is that it must be something..."
     must_be_m = re.search(
@@ -190,7 +114,7 @@ def parse_hearth(text: str) -> HearthData:
     must_be_separated_note = ""
     if must_be_m:
         must_be_separated_note = " ".join(must_be_m.group(1).split()).strip()
-        must_be_separated_note = md_to_html_inline(must_be_separated_note)
+        must_be_separated_note = parse_inline_md(must_be_separated_note)
 
     # Hearth options — bullet list between quotes 2 and 3
     # Find the section between "By consensus" and the Lift From Touchstones line
@@ -229,157 +153,7 @@ def parse_hearth(text: str) -> HearthData:
 # CSS
 # ---------------------------------------------------------------------------
 
-CSS = """
-  @import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
-
-  :root {
-    --ink:      #1A1917;
-    --light:    #F5F2EB;
-    --mid:      #E0DDD5;
-    --rule:     #888780;
-    --accent:   #3C3489;
-    --warm:     #854F0B;
-    --danger:   #C0410E;
-    --green:    #0F6E56;
-  }
-
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-
-  @media print {
-    body { background: white; padding: 0; }
-    .page { box-shadow: none; margin: 0; border-radius: 0; }
-  }
-
-  body {
-    background: #ccc;
-    font-family: 'Space Mono', monospace;
-    font-size: 10.5px;
-    color: var(--ink);
-    padding: 1.5rem;
-  }
-
-  .page {
-    background: white;
-    width: 8.5in;
-    min-height: 11in;
-    margin: 0 auto;
-    padding: 0.45in 0.45in 0.4in;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
-    border-radius: 2px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 1fr auto;
-    gap: 0 0.28in;
-  }
-
-  .header {
-    grid-column: 1 / -1;
-    border-bottom: 2.5px solid var(--ink);
-    padding-bottom: 0.1in;
-    margin-bottom: 0.16in;
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-  }
-
-  .guide-badge {
-    display: inline-block;
-    background: var(--ink);
-    color: white;
-    font-family: 'IM Fell English', serif;
-    font-size: 11px;
-    padding: 2px 8px;
-    margin-bottom: 5px;
-    letter-spacing: 0.04em;
-  }
-
-  .header h1 {
-    font-family: 'IM Fell English', serif;
-    font-size: 24px;
-    line-height: 1;
-    letter-spacing: 0.01em;
-  }
-
-  .header-right {
-    text-align: right;
-    font-size: 8px;
-    color: var(--rule);
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    line-height: 1.8;
-    padding-bottom: 2px;
-  }
-
-  .col-left  { grid-column: 1; }
-  .col-right { grid-column: 2; }
-
-  .footer {
-    grid-column: 1 / -1;
-    border-top: 1px solid var(--mid);
-    margin-top: 0.12in;
-    padding-top: 6px;
-    font-size: 7.5px;
-    color: var(--rule);
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-  }
-
-  .section { margin-bottom: 0.13in; }
-
-  .section-head {
-    font-size: 7.5px;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    color: white;
-    background: var(--ink);
-    padding: 3px 7px;
-    margin-bottom: 7px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
-  .section-head.accent  { background: var(--accent); }
-  .section-head.warm    { background: var(--warm); }
-  .section-head.green   { background: var(--green); }
-
-  .checklist { list-style: none; padding: 0; }
-  .checklist li {
-    display: flex;
-    align-items: flex-start;
-    gap: 7px;
-    padding: 3px 0;
-    border-bottom: 0.5px solid var(--mid);
-    font-size: 10px;
-    line-height: 1.4;
-  }
-  .checklist li:last-child { border-bottom: none; }
-
-  .cb {
-    width: 12px;
-    height: 12px;
-    border: 1.5px solid var(--ink);
-    flex-shrink: 0;
-    margin-top: 1px;
-  }
-
-  .read-aloud {
-    font-style: italic;
-    font-size: 9.5px;
-    color: var(--accent);
-    border-left: 2px solid var(--accent);
-    padding: 3px 7px;
-    margin-bottom: 6px;
-    line-height: 1.5;
-  }
-
-  .rule-note {
-    font-size: 9px;
-    color: var(--rule);
-    line-height: 1.5;
-    margin-bottom: 5px;
-  }
-  .rule-note strong { color: var(--ink); }
-
+CSS = CSS_BASE + """
   .hearth-options {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -478,29 +252,6 @@ CSS = """
 # HTML helpers
 # ---------------------------------------------------------------------------
 
-def cb() -> str:
-    return '<span class="cb"></span>'
-
-def section_head(label: str, color: str = "") -> str:
-    cls = ("section-head " + color).strip()
-    return f'      <div class="{cls}">{label}</div>\n'
-
-def read_aloud(text: str, style: str = "") -> str:
-    s = f' style="{style}"' if style else ""
-    return f'      <div class="read-aloud"{s}>\n        &ldquo;{text}&rdquo;\n      </div>\n'
-
-def rule_note(text: str, style: str = "") -> str:
-    s = f' style="{style}"' if style else ""
-    return f'      <p class="rule-note"{s}>{text}</p>\n'
-
-def checklist_item(text: str) -> str:
-    return f'        <li>{cb()}<span>{text}</span></li>\n'
-
-
-# ---------------------------------------------------------------------------
-# Hardcoded content not in the guide
-# ---------------------------------------------------------------------------
-
 COMPONENTS = [
     "One Deckahedron per player, shuffled",
     "Blessing card deck &mdash; shuffled, face-down",
@@ -541,7 +292,7 @@ def render_left_column(data: HearthData) -> str:
         f'      <div class="step-block accent">\n'
         f'        <div class="step-title"><strong>1 &middot; What Makes You Feel At Home?</strong></div>\n'
         f'{read_aloud(data.at_home_read_aloud, "margin-bottom:6px;")}'
-        f'{rule_note(data.at_home_followup, "margin-bottom:6px;")}'
+        f'{rule_note(spans_to_html(data.at_home_followup), "margin-bottom:6px;")}'
         f'        <table class="pc-table">\n'
         f'          <thead><tr><th>PC</th><th>What makes them feel at home</th></tr></thead>\n'
         f'          <tbody>\n'
@@ -575,14 +326,14 @@ def render_right_column(data: HearthData) -> str:
         f'    <div class="section">\n'
         f'{section_head("The Hearth &mdash; Read Aloud Examples", "accent")}'
         f'{read_aloud(data.hearth_examples_read_aloud, "margin-bottom:7px;")}'
-        f'{rule_note(data.make_sure_note)}'
+        f'{rule_note(spans_to_html(data.make_sure_note))}'
         f'    </div>\n\n'
 
         # Record The Hearth + Step 3
         f'    <div class="section">\n'
         f'{section_head("Record The Hearth", "green")}'
         f'{rule_note("Record on the GM Sheet.", "margin-bottom:4px;")}'
-        f'{rule_note(data.must_be_separated_note, "margin-bottom:6px;")}'
+        f'{rule_note(spans_to_html(data.must_be_separated_note), "margin-bottom:6px;")}'
 
         f'      <div class="step-block green">\n'
         f'        <div class="step-title"><strong>3 &middot; Why Would You Risk Your Life For The Hearth?</strong></div>\n'
@@ -673,14 +424,14 @@ def main():
 
     data = parse_hearth(text)
 
-    print(f"  at-home read-aloud:   {len(data.at_home_read_aloud)} chars")
-    print(f"  at-home followup:     {data.at_home_followup[:60]!r}...")
-    print(f"  choose-hearth r/a:    {len(data.choose_hearth_read_aloud)} chars")
-    print(f"  examples read-aloud:  {len(data.hearth_examples_read_aloud)} chars")
+    print(f"  at-home read-aloud:   {len(data.at_home_read_aloud)} paragraphs")
+    print(f"  at-home followup:     {spans_to_plain(data.at_home_followup)[:60]!r}...")
+    print(f"  choose-hearth r/a:    {len(data.choose_hearth_read_aloud)} paragraphs")
+    print(f"  examples read-aloud:  {len(data.hearth_examples_read_aloud)} paragraphs")
     print(f"  hearth options:       {data.hearth_options}")
-    print(f"  make-sure note:       {data.make_sure_note[:60]!r}...")
-    print(f"  must-be-separated:    {data.must_be_separated_note[:60]!r}...")
-    print(f"  risk-life read-aloud: {len(data.risk_life_read_aloud)} chars")
+    print(f"  make-sure note:       {spans_to_plain(data.make_sure_note)[:60]!r}...")
+    print(f"  must-be-separated:    {spans_to_plain(data.must_be_separated_note)[:60]!r}...")
+    print(f"  risk-life read-aloud: {len(data.risk_life_read_aloud)} paragraphs")
 
     html = render_sheet(data)
     filename = "sheet_gm_guide_hearth.html"

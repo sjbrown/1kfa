@@ -17,6 +17,19 @@ import os
 import re
 import sys
 from dataclasses import dataclass, field
+from parse_quickstart_data import (
+    extract_all_blockquotes,
+    extract_blockquote,
+)
+from render_sheet_html import (
+    CSS_BASE,
+    cb,
+    checklist_item,
+    read_aloud,
+    rule_note,
+    section_head,
+)
+
 
 
 # ---------------------------------------------------------------------------
@@ -26,102 +39,18 @@ from dataclasses import dataclass, field
 @dataclass
 class UniverseCreationData:
     campaign_options: list          # [{"name": str, "desc": str}, ...]
-    intro_read_aloud: str           # blockquote before Step 1
-    step_a_read_aloud: str          # Step 1: Brainstorm Titles blockquote
-    step_b_read_aloud: str          # Step 2: Narrow the List blockquote
+    intro_read_aloud: list          # blockquote paragraphs
+    step_a_read_aloud: list         # blockquote paragraphs
+    step_b_read_aloud: list         # blockquote paragraphs
     step_b_notes: list              # non-blockquote guidance after Step 2 quote
-    step_c_read_aloud: str          # Step 3: Set Expectations blockquote
+    step_c_read_aloud: list         # blockquote paragraphs
     step_c_note: str                # prose note after Step 3 questions
-    finally_read_aloud: str         # closing "Finally, who will you be" blockquote
+    finally_read_aloud: list        # blockquote paragraphs
 
 
 # ---------------------------------------------------------------------------
 # Parser
 # ---------------------------------------------------------------------------
-
-def extract_blockquote(text: str) -> str:
-    """
-    Extract the first contiguous blockquote (> lines) from text.
-    Strips '> ' prefixes, resolves line continuations, returns HTML-ready string.
-    Blank '>' lines become paragraph breaks (<br><br>).
-    """
-    lines = []
-    in_quote = False
-    for line in text.splitlines():
-        m = re.match(r'^>\s?(.*)', line)
-        if m:
-            in_quote = True
-            lines.append(m.group(1))
-        elif in_quote:
-            break  # stop at first non-quote line after we've started
-
-    if not lines:
-        return ""
-
-    paragraphs = []
-    current = []
-    for line in lines:
-        stripped = line.rstrip('\\').strip()
-        if stripped == "":
-            if current:
-                paragraphs.append(" ".join(current))
-                current = []
-        else:
-            current.append(stripped)
-    if current:
-        paragraphs.append(" ".join(current))
-
-    return "<br><br>\n        ".join(paragraphs)
-
-
-def extract_all_blockquotes(text: str) -> list:
-    """
-    Extract all blockquote blocks from text in order.
-    Each contiguous run of '> ' lines is one block.
-    """
-    results = []
-    current = []
-    for line in text.splitlines():
-        m = re.match(r'^>\s?(.*)', line)
-        if m:
-            current.append(m.group(1))
-        else:
-            if current:
-                # Process this block
-                paragraphs = []
-                para = []
-                for l in current:
-                    stripped = l.rstrip('\\').strip()
-                    if stripped == "":
-                        if para:
-                            paragraphs.append(" ".join(para))
-                            para = []
-                    else:
-                        para.append(stripped)
-                if para:
-                    paragraphs.append(" ".join(para))
-                q = "<br><br>\n        ".join(paragraphs)
-                if q:
-                    results.append(q)
-                current = []
-    if current:
-        paragraphs = []
-        para = []
-        for l in current:
-            stripped = l.rstrip('\\').strip()
-            if stripped == "":
-                if para:
-                    paragraphs.append(" ".join(para))
-                    para = []
-            else:
-                para.append(stripped)
-        if para:
-            paragraphs.append(" ".join(para))
-        q = "<br><br>\n        ".join(paragraphs)
-        if q:
-            results.append(q)
-    return results
-
 
 def parse_campaign_options(section: str) -> list:
     """
@@ -251,277 +180,11 @@ def parse_universe_creation(text: str) -> UniverseCreationData:
 # CSS
 # ---------------------------------------------------------------------------
 
-CSS = """
-  @import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
-
-  :root {
-    --ink:      #1A1917;
-    --light:    #F5F2EB;
-    --mid:      #E0DDD5;
-    --rule:     #888780;
-    --accent:   #3C3489;
-    --warm:     #854F0B;
-    --danger:   #C0410E;
-    --green:    #0F6E56;
-  }
-
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-
-  @media print {
-    body { background: white; padding: 0; }
-    .page { box-shadow: none; margin: 0; border-radius: 0; }
-  }
-
-  body {
-    background: #ccc;
-    font-family: 'Space Mono', monospace;
-    font-size: 10.5px;
-    color: var(--ink);
-    padding: 1.5rem;
-  }
-
-  .page {
-    background: white;
-    width: 8.5in;
-    min-height: 11in;
-    margin: 0 auto;
-    padding: 0.45in 0.45in 0.4in;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
-    border-radius: 2px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 1fr auto;
-    gap: 0 0.28in;
-  }
-
-  .header {
-    grid-column: 1 / -1;
-    border-bottom: 2.5px solid var(--ink);
-    padding-bottom: 0.1in;
-    margin-bottom: 0.16in;
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-  }
-
-  .guide-badge {
-    display: inline-block;
-    background: var(--ink);
-    color: white;
-    font-family: 'IM Fell English', serif;
-    font-size: 11px;
-    padding: 2px 8px;
-    margin-bottom: 5px;
-    letter-spacing: 0.04em;
-  }
-
-  .header h1 {
-    font-family: 'IM Fell English', serif;
-    font-size: 24px;
-    line-height: 1;
-    letter-spacing: 0.01em;
-  }
-
-  .header-right {
-    text-align: right;
-    font-size: 8px;
-    color: var(--rule);
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    line-height: 1.8;
-    padding-bottom: 2px;
-  }
-
-  .col-left  { grid-column: 1; }
-  .col-right { grid-column: 2; }
-
-  .footer {
-    grid-column: 1 / -1;
-    border-top: 1px solid var(--mid);
-    margin-top: 0.12in;
-    padding-top: 6px;
-    font-size: 7.5px;
-    color: var(--rule);
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-  }
-
-  .section { margin-bottom: 0.15in; }
-
-  .section-head {
-    font-size: 7.5px;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    color: white;
-    background: var(--ink);
-    padding: 3px 7px;
-    margin-bottom: 7px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
-  .section-head.accent { background: var(--accent); }
-  .section-head.warm   { background: var(--warm); }
-  .section-head.green  { background: var(--green); }
-
-  .campaign-picker {
-    display: flex;
-    border: 1.5px solid var(--ink);
-    margin-bottom: 8px;
-  }
-
-  .campaign-option {
-    flex: 1;
-    padding: 7px 6px;
-    text-align: center;
-    border-right: 1px solid var(--mid);
-  }
-  .campaign-option:last-child { border-right: none; }
-
-  .campaign-circle {
-    width: 18px;
-    height: 18px;
-    border: 1.5px solid var(--ink);
-    border-radius: 50%;
-    display: inline-block;
-    margin-bottom: 4px;
-  }
-
-  .campaign-name {
-    font-size: 9.5px;
-    font-weight: 700;
-    display: block;
-    letter-spacing: 0.03em;
-  }
-
-  .campaign-desc {
-    font-size: 8px;
-    color: var(--rule);
-    display: block;
-    margin-top: 2px;
-    line-height: 1.4;
-  }
-
-  .checklist { list-style: none; padding: 0; }
-
-  .checklist li {
-    display: flex;
-    align-items: flex-start;
-    gap: 7px;
-    padding: 3px 0;
-    border-bottom: 0.5px solid var(--mid);
-    font-size: 10px;
-    line-height: 1.4;
-  }
-  .checklist li:last-child { border-bottom: none; }
-
-  .cb {
-    width: 12px;
-    height: 12px;
-    border: 1.5px solid var(--ink);
-    flex-shrink: 0;
-    margin-top: 1px;
-  }
-
-  .touchstone-box {
-    border: 2px solid var(--ink);
-    padding: 8px 10px;
-    background: var(--light);
-    margin-bottom: 8px;
-  }
-
-  .touchstone-label {
-    font-size: 7.5px;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    color: var(--rule);
-    margin-bottom: 6px;
-  }
-
-  .touchstone-entry {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 5px;
-  }
-
-  .touchstone-num {
-    font-family: 'IM Fell English', serif;
-    font-size: 18px;
-    color: var(--mid);
-    flex-shrink: 0;
-    width: 16px;
-    text-align: center;
-  }
-
-  .touchstone-line {
-    flex: 1;
-    border-bottom: 1.5px solid var(--ink);
-    height: 20px;
-  }
-
-  .step-block {
-    border-left: 3px solid var(--mid);
-    padding-left: 8px;
-    margin-bottom: 8px;
-  }
-  .step-block.accent { border-left-color: var(--accent); }
-  .step-block.warm   { border-left-color: var(--warm); }
-
-  .step-title {
-    font-size: 8px;
-    text-transform: uppercase;
-    letter-spacing: 0.18em;
-    color: var(--rule);
-    margin-bottom: 5px;
-  }
-  .step-title strong { color: var(--ink); }
-
-  .read-aloud {
-    font-style: italic;
-    font-size: 9.5px;
-    color: var(--accent);
-    border-left: 2px solid var(--accent);
-    padding: 3px 7px;
-    margin-bottom: 6px;
-    line-height: 1.5;
-  }
-
-  .rule-note {
-    font-size: 9px;
-    color: var(--rule);
-    line-height: 1.5;
-    margin-bottom: 6px;
-  }
-  .rule-note strong { color: var(--ink); }
-"""
+CSS = CSS_BASE
 
 
 # ---------------------------------------------------------------------------
 # HTML helpers
-# ---------------------------------------------------------------------------
-
-def cb() -> str:
-    return '<span class="cb"></span>'
-
-def section_head(label: str, color: str = "") -> str:
-    cls = ("section-head " + color).strip()
-    return f'      <div class="{cls}">{label}</div>\n'
-
-def read_aloud(text: str, style: str = "") -> str:
-    s = f' style="{style}"' if style else ""
-    return f'      <div class="read-aloud"{s}>\n        &ldquo;{text}&rdquo;\n      </div>\n'
-
-def rule_note(text: str, style: str = "") -> str:
-    s = f' style="{style}"' if style else ""
-    return f'      <p class="rule-note"{s}>{text}</p>\n'
-
-def checklist_item(text: str) -> str:
-    return f'        <li>{cb()}<span>{text}</span></li>\n'
-
-
-# ---------------------------------------------------------------------------
-# Column renderers
 # ---------------------------------------------------------------------------
 
 COMPONENTS = [
@@ -689,12 +352,12 @@ def main():
     data = parse_universe_creation(text)
 
     print(f"  campaign options:    {[o['name'] for o in data.campaign_options]}")
-    print(f"  intro read-aloud:   {len(data.intro_read_aloud)} chars")
-    print(f"  step A read-aloud:  {len(data.step_a_read_aloud)} chars")
-    print(f"  step B read-aloud:  {len(data.step_b_read_aloud)} chars")
+    print(f"  intro read-aloud:   {len(data.intro_read_aloud)} paragraphs")
+    print(f"  step A read-aloud:  {len(data.step_a_read_aloud)} paragraphs")
+    print(f"  step B read-aloud:  {len(data.step_b_read_aloud)} paragraphs")
     print(f"  step B notes:       {len(data.step_b_notes)}")
-    print(f"  step C read-aloud:  {len(data.step_c_read_aloud)} chars")
-    print(f"  finally read-aloud: {len(data.finally_read_aloud)} chars")
+    print(f"  step C read-aloud:  {len(data.step_c_read_aloud)} paragraphs")
+    print(f"  finally read-aloud: {len(data.finally_read_aloud)} paragraphs")
 
     html = render_sheet(data)
     filename = "sheet_table_guide_universe_creation.html"

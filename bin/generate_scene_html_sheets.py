@@ -23,6 +23,14 @@ import os
 import argparse
 from dataclasses import dataclass, field
 from typing import Optional
+from parse_quickstart_data import (
+    parse_bullet_list,
+    spans_to_plain,
+)
+from render_sheet_html import (
+    spans_to_html,
+)
+
 
 
 # ── DATA STRUCTURES ──────────────────────────────────────────────────────────
@@ -280,15 +288,6 @@ def extract_transition(block: str, campaign: str, chapter_num: int) -> str:
         return "The campaign ends here. The story is complete."
 
     return f"Move toward {next_label}"
-
-
-def parse_bullet_list(text: str) -> list[str]:
-    """Parse a markdown bullet list into a list of strings."""
-    items = re.findall(r'^\s*\*\s+(.+)$', text, re.MULTILINE)
-    return [i.strip() for i in items if i.strip()]
-
-
-# ── GENERAL SCENE QUESTIONS ───────────────────────────────────────────────────
 
 def parse_general_scene_questions(text: str) -> list[str]:
     """
@@ -730,15 +729,15 @@ def boxes(n: int) -> str:
 def skull_boxes(n: int) -> str:
     return '<div class="skull-boxes">' + '<div class="skull-box"></div>' * n + '</div>'
 
-def q_items(questions: list[str]) -> str:
+def q_items(questions: list) -> str:
     return '\n'.join(
-        f'        <div class="q-item">{cb()}<span>{q}</span></div>'
+        f'        <div class="q-item">{cb()}<span>{spans_to_html(q)}</span></div>'
         for q in questions
     )
 
-def arrow_items(items: list[str]) -> str:
+def arrow_items(items: list) -> str:
     return '\n'.join(
-        f'        <div class="arrow-item"><span class="arrow-sym">→</span><span>{item}</span></div>'
+        f'        <div class="arrow-item"><span class="arrow-sym">→</span><span>{spans_to_html(item)}</span></div>'
         for item in items
     )
 

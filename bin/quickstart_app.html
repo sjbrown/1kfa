@@ -1,0 +1,1557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Thousand Faces of Adventure</title>
+<script src="gamedata.js"></script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* ── TOKENS ──────────────────────────────────────────────────────────── */
+:root {
+  --ink:     #1A1917;
+  --paper:   #F5F2EB;
+  --mid:     #E0DDD5;
+  --rule:    #9A9590;
+  --accent:  #3C3489;
+  --warm:    #854F0B;
+  --danger:  #C0410E;
+  --green:   #0F6E56;
+  --gold:    #C8A96E;
+  --font-serif: 'IM Fell English', Georgia, serif;
+  --font-mono:  'Space Mono', 'Courier New', monospace;
+  --page-max: 860px;
+  --r: 3px;
+}
+
+/* ── RESET ───────────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; }
+body {
+  font-family: var(--font-mono);
+  background: var(--ink);
+  color: var(--paper);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+button { cursor: pointer; font-family: inherit; }
+input, textarea, select { font-family: inherit; }
+
+/* ── LAYOUT ──────────────────────────────────────────────────────────── */
+.app { max-width: var(--page-max); margin: 0 auto; padding: 0 1.5rem 4rem; }
+.view { display: none; }
+.view.active { display: block; }
+
+/* ── MASTHEAD ────────────────────────────────────────────────────────── */
+.masthead {
+  border-bottom: 1px solid #333;
+  padding: 1.25rem 0 1rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.masthead-title { font-family: var(--font-serif); font-size: 1.1rem; color: var(--gold); letter-spacing: 0.02em; }
+.masthead-sub   { font-size: 0.65rem; color: var(--rule); text-transform: uppercase; letter-spacing: 0.18em; }
+.btn-ghost {
+  background: none; border: none; color: var(--rule);
+  font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.12em; padding: 0;
+}
+.btn-ghost:hover { color: var(--paper); }
+
+/* ── TYPOGRAPHY ──────────────────────────────────────────────────────── */
+.section-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.25em; color: var(--rule); margin-bottom: 0.5rem; }
+.page-title    { font-family: var(--font-serif); font-size: 2.4rem; line-height: 1.1; color: var(--paper); margin-bottom: 0.35rem; }
+.page-subtitle { font-size: 0.75rem; color: var(--rule); text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 2.5rem; }
+
+/* ── READ-ALOUD ──────────────────────────────────────────────────────── */
+.read-aloud {
+  border-left: 3px solid var(--accent);
+  padding: 0.9rem 1.1rem;
+  margin-bottom: 1.25rem;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: #c8c4f0;
+  line-height: 1.65;
+}
+.read-aloud p + p { margin-top: 0.75rem; }
+.read-aloud .bullet::before { content: '– '; color: var(--rule); }
+.read-aloud.warm  { border-color: var(--warm);   color: #e8c090; }
+.read-aloud.green { border-color: var(--green);  color: #90d0b8; }
+
+/* ── GM NOTE ─────────────────────────────────────────────────────────── */
+.gm-note {
+  font-size: 0.75rem; color: var(--rule);
+  border-left: 2px solid #333;
+  padding: 0.4rem 0.75rem; margin-bottom: 0.75rem; line-height: 1.5;
+}
+.gm-note strong { color: var(--paper); }
+
+/* ── STEP HEADER ─────────────────────────────────────────────────────── */
+.step-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem; }
+.step-num    { font-family: var(--font-serif); font-size: 2.5rem; color: var(--gold); line-height: 1; flex-shrink: 0; min-width: 2rem; text-align: right; }
+.step-name   { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--rule); line-height: 1.3; }
+.step-name strong { display: block; font-size: 1rem; text-transform: none; letter-spacing: 0; color: var(--paper); font-weight: 400; font-family: var(--font-serif); }
+.divider { border: none; border-top: 1px solid #2a2a2a; margin: 2rem 0; }
+
+/* ── BUTTONS ─────────────────────────────────────────────────────────── */
+.btn-primary {
+  display: inline-block; background: var(--paper); color: var(--ink);
+  border: none; padding: 0.75rem 1.75rem;
+  font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.2em;
+  border-radius: var(--r); font-family: var(--font-mono); font-weight: 700;
+  transition: opacity 0.15s;
+}
+.btn-primary:hover { opacity: 0.88; }
+.btn-primary:disabled { opacity: 0.35; cursor: default; }
+.btn-secondary {
+  display: inline-block; background: none; color: var(--rule);
+  border: 1.5px solid #333; padding: 0.75rem 1.75rem;
+  font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.2em;
+  border-radius: var(--r); font-family: var(--font-mono);
+  transition: color 0.15s, border-color 0.15s;
+}
+.btn-secondary:hover { color: var(--paper); border-color: #555; }
+.action-row { display: flex; align-items: center; gap: 1rem; margin-top: 2rem; flex-wrap: wrap; }
+
+/* ── CAMPAIGN PICKER ─────────────────────────────────────────────────── */
+.campaign-options { display: grid; grid-template-columns: repeat(3,1fr); gap: 0.75rem; margin-bottom: 2rem; }
+.campaign-option {
+  border: 1.5px solid #333; padding: 1rem; background: none; color: var(--paper);
+  text-align: left; transition: border-color 0.15s, background 0.15s; border-radius: var(--r);
+}
+.campaign-option:hover  { border-color: var(--accent); }
+.campaign-option.selected { border-color: var(--accent); background: rgba(60,52,137,0.15); }
+.campaign-option .opt-name { font-family: var(--font-serif); font-size: 1.1rem; display: block; margin-bottom: 0.2rem; }
+.campaign-option .opt-desc { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--rule); }
+
+/* ── TITLE CHIPS ─────────────────────────────────────────────────────── */
+.titles-grid { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem; min-height: 2rem; }
+.title-chip {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: #111; border: 1.5px solid #333; border-radius: 2px;
+  padding: 0.3rem 0.65rem; font-size: 0.8rem;
+  cursor: pointer; transition: border-color 0.15s, background 0.15s; user-select: none;
+}
+.title-chip:hover   { border-color: #555; }
+.title-chip.circled { border-color: var(--gold); background: rgba(200,169,110,0.12); color: var(--gold); }
+.chip-label  { pointer-events: none; }
+.chip-remove { background: none; border: none; color: #555; font-size: 0.9rem; line-height: 1; padding: 0; }
+.chip-remove:hover { color: var(--danger); }
+
+/* ── TOUCHSTONE THUMBNAILS ───────────────────────────────────────────── */
+.chip-thumb {
+  width: 28px; height: 38px; object-fit: cover; border-radius: 1px;
+  display: block; flex-shrink: 0; opacity: 0.85; transition: opacity 0.2s;
+}
+.title-chip.circled .chip-thumb { opacity: 1; }
+
+.touchstone-showcase {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+.showcase-plus {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -60%);
+  font-family: var(--font-mono);
+  font-size: 9rem;
+  color: var(--gold);
+  opacity: 1;
+  pointer-events: none;
+  user-select: none;
+  line-height: 1;
+  z-index: 1;
+}
+.ts-card {
+  border: 1.5px solid var(--gold); border-radius: var(--r);
+  background: rgba(200,169,110,0.06); overflow: hidden;
+  display: flex; flex-direction: column;
+}
+.ts-card-thumb {
+  width: 100%; aspect-ratio: 2/3; object-fit: cover;
+  display: block; background: #111;
+}
+.ts-card-label {
+  padding: 0.5rem 0.65rem;
+  font-family: var(--font-serif); font-size: 0.9rem;
+  color: var(--gold); font-style: italic; line-height: 1.3;
+}
+
+.add-title-row { display: flex; gap: 0.5rem; margin-bottom: 1.25rem; }
+.title-input {
+  flex: 1; background: #111; border: 1.5px solid #333; border-radius: var(--r);
+  padding: 0.6rem 0.85rem; color: var(--paper); font-size: 0.875rem;
+  transition: border-color 0.15s;
+}
+.title-input:focus { outline: none; border-color: var(--accent); }
+.btn-add {
+  background: var(--accent); color: white; border: none;
+  padding: 0.6rem 1.1rem; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em;
+  border-radius: var(--r); transition: opacity 0.15s;
+}
+.btn-add:hover { opacity: 0.85; }
+
+/* ── CHARACTER CREATION ──────────────────────────────────────────────── */
+.player-tabs {
+  display: flex; gap: 0; margin-bottom: 1.5rem;
+  border-bottom: 1px solid #333;
+}
+.player-tab {
+  background: none; border: none; color: var(--rule);
+  font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em;
+  padding: 0.5rem 1rem 0.6rem; border-bottom: 2px solid transparent;
+  margin-bottom: -1px; transition: color 0.15s, border-color 0.15s;
+}
+.player-tab:hover  { color: var(--paper); }
+.player-tab.active { color: var(--gold); border-bottom-color: var(--gold); }
+.btn-add-player {
+  background: none; border: 1.5px dashed #333; color: var(--rule);
+  font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.15em;
+  padding: 0.35rem 0.75rem; border-radius: var(--r); margin-left: auto; align-self: center;
+  transition: border-color 0.15s, color 0.15s;
+}
+.btn-add-player:hover { border-color: #555; color: var(--paper); }
+
+.cc-section { margin-bottom: 1.75rem; }
+
+/* Player name input */
+.player-name-input {
+  width: 100%; background: #111; border: 1.5px solid #333; border-radius: var(--r);
+  padding: 0.6rem 0.85rem; color: var(--paper); font-size: 1rem;
+  transition: border-color 0.15s; margin-bottom: 1rem;
+  font-family: var(--font-serif);
+}
+.player-name-input:focus { outline: none; border-color: var(--gold); }
+.player-name-input::placeholder { color: #444; font-style: italic; }
+
+/* Worldcloth questions */
+.wc-question {
+  margin-bottom: 1rem;
+}
+.wc-q-text {
+  font-size: 0.85rem; color: var(--paper); margin-bottom: 0.4rem;
+  font-style: italic; font-family: var(--font-serif);
+}
+.wc-answer {
+  width: 100%; background: #111; border: 1.5px solid #333; border-radius: var(--r);
+  padding: 0.5rem 0.75rem; color: var(--paper); font-size: 0.8rem;
+  transition: border-color 0.15s; resize: none; min-height: 2.4rem;
+}
+.wc-answer:focus { outline: none; border-color: var(--accent); }
+
+/* Initiation grid */
+.initiation-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.4rem; margin-bottom: 1rem;
+}
+.init-option {
+  background: #111; border: 1.5px solid #333; border-radius: var(--r);
+  padding: 0.45rem 0.65rem; font-size: 0.75rem; color: var(--rule);
+  text-align: left; transition: border-color 0.15s, color 0.15s, background 0.15s;
+}
+.init-option:hover   { border-color: #555; color: var(--paper); }
+.init-option.chosen  { border-color: var(--danger); color: var(--paper); background: rgba(192,65,14,0.12); }
+
+/* ── HEARTH ──────────────────────────────────────────────────────────── */
+.hearth-options-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem; margin-bottom: 1rem;
+}
+.hearth-option {
+  background: #111; border: 1.5px solid #333; border-radius: var(--r);
+  padding: 0.6rem 0.85rem; font-size: 0.85rem; color: var(--rule);
+  text-align: left; transition: border-color 0.15s, color 0.15s, background 0.15s;
+  font-family: var(--font-serif);
+}
+.hearth-option:hover   { border-color: #555; color: var(--paper); }
+.hearth-option.chosen  { border-color: var(--warm); color: var(--paper); background: rgba(133,79,11,0.15); }
+
+.hearth-name-input {
+  width: 100%; background: #111; border: 1.5px solid #333; border-radius: var(--r);
+  padding: 0.6rem 0.85rem; color: var(--paper); font-size: 0.95rem;
+  border-color: var(--warm); transition: border-color 0.15s; margin-bottom: 0.5rem;
+  font-family: var(--font-serif);
+}
+.hearth-name-input:focus { outline: none; border-color: var(--gold); }
+.hearth-name-input::placeholder { color: #444; font-style: italic; }
+
+/* PC Hearth answers table */
+.hearth-table { width: 100%; border-collapse: collapse; margin-bottom: 1rem; font-size: 0.8rem; }
+.hearth-table th {
+  text-align: left; font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.15em;
+  color: var(--rule); padding: 0 0 0.4rem; border-bottom: 1px solid #2a2a2a;
+  font-weight: 400;
+}
+.hearth-table td { padding: 0.4rem 0; border-bottom: 1px solid #1f1f1f; vertical-align: top; }
+.hearth-table td:first-child { width: 7rem; color: var(--rule); font-size: 0.75rem; padding-right: 1rem; }
+.hearth-answer {
+  width: 100%; background: none; border: none; border-bottom: 1px solid #333;
+  color: var(--paper); font-size: 0.8rem; padding: 0.2rem 0; font-family: var(--font-mono);
+  transition: border-color 0.15s;
+}
+.hearth-answer:focus { outline: none; border-bottom-color: var(--accent); }
+.hearth-answer::placeholder { color: #333; }
+
+/* ── GAME LIST ───────────────────────────────────────────────────────── */
+.game-list { list-style: none; margin-bottom: 1.5rem; }
+.game-item {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0.75rem 0; border-bottom: 1px solid #222; gap: 1rem;
+}
+.game-item:first-child { border-top: 1px solid #222; }
+.game-meta   { flex: 1; min-width: 0; }
+.game-name   { font-family: var(--font-serif); font-size: 1.05rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.game-detail { font-size: 0.65rem; color: var(--rule); text-transform: uppercase; letter-spacing: 0.12em; margin-top: 0.15rem; }
+.btn-resume  { background: none; border: 1.5px solid #333; color: var(--paper); padding: 0.35rem 0.75rem; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.15em; border-radius: var(--r); white-space: nowrap; transition: border-color 0.15s; }
+.btn-resume:hover { border-color: var(--accent); }
+.btn-delete  { background: none; border: none; color: #444; font-size: 1rem; padding: 0.2rem; transition: color 0.15s; }
+.btn-delete:hover { color: var(--danger); }
+
+/* ── SUMMARY ─────────────────────────────────────────────────────────── */
+.summary-card { border: 1.5px solid #2a2a2a; border-radius: var(--r); padding: 1.25rem 1.5rem; margin-bottom: 1rem; }
+.summary-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--rule); margin-bottom: 0.4rem; }
+.summary-value { font-family: var(--font-serif); font-size: 1.1rem; }
+.touchstone-pill { background: rgba(200,169,110,0.12); border: 1px solid var(--gold); color: var(--gold); font-size: 0.8rem; padding: 0.25rem 0.65rem; border-radius: 2px; }
+.touchstone-final-list { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.5rem; }
+
+.summary-players { margin-top: 0.5rem; }
+.summary-player { font-size: 0.85rem; color: var(--rule); padding: 0.25rem 0; border-bottom: 1px solid #222; }
+.summary-player:last-child { border-bottom: none; }
+.summary-player strong { color: var(--paper); font-weight: 400; font-family: var(--font-serif); }
+
+/* ── TOAST ───────────────────────────────────────────────────────────── */
+.toast {
+  position: fixed; bottom: 1.5rem; right: 1.5rem;
+  background: var(--green); color: white;
+  padding: 0.6rem 1.1rem; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.15em;
+  border-radius: var(--r); opacity: 0; transform: translateY(0.5rem);
+  transition: opacity 0.2s, transform 0.2s; pointer-events: none;
+}
+.toast.show { opacity: 1; transform: translateY(0); }
+
+/* ── PROGRESS BAR ────────────────────────────────────────────────────── */
+.flow-progress {
+  display: flex; gap: 0.3rem; margin-bottom: 2rem; align-items: center;
+}
+.flow-step {
+  height: 3px; flex: 1; background: #2a2a2a; border-radius: 2px;
+  transition: background 0.3s;
+}
+.flow-step.done    { background: var(--accent); }
+.flow-step.current { background: var(--gold); }
+
+/* ── PRIVACY NOTE ────────────────────────────────────────────────────── */
+.privacy-note {
+  border: 1.5px solid #2a2a2a; border-radius: var(--r);
+  padding: 1rem 1.25rem; margin-bottom: 2rem;
+}
+.privacy-note-text {
+  font-family: var(--font-serif); font-size: 1.05rem; color: var(--paper);
+  margin-bottom: 0.6rem; line-height: 1.4;
+}
+.privacy-note-fine {
+  font-size: 0.68rem; color: var(--rule); line-height: 1.6;
+  font-family: var(--font-mono);
+}
+
+/* ── PLAYERS ENTRY ───────────────────────────────────────────────────── */
+.players-entry {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+.player-entry-card {
+  background: #111;
+  border: 1.5px solid #333;
+  border-radius: var(--r);
+  padding: 1rem 1.1rem 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: border-color 0.15s;
+  position: relative;
+}
+.player-entry-card:focus-within { border-color: var(--accent); }
+.player-entry-card.gm-card:focus-within { border-color: var(--accent); }
+.player-role-badge {
+  font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.2em;
+  color: var(--rule); line-height: 1;
+}
+.player-entry-input {
+  background: none; border: none; border-bottom: 1px solid #2a2a2a;
+  color: var(--paper); font-size: 1.25rem;
+  font-family: var(--font-serif); padding: 0.1rem 0;
+  transition: border-color 0.15s; width: 100%;
+}
+.player-entry-input:focus    { outline: none; border-bottom-color: var(--accent); }
+.player-entry-input::placeholder { color: #2e2e2e; font-style: italic; }
+.player-entry-remove {
+  position: absolute; top: 0.5rem; right: 0.6rem;
+  background: none; border: none; color: #2a2a2a; font-size: 1rem; padding: 0;
+  transition: color 0.15s;
+}
+.player-entry-remove:hover { color: var(--danger); }
+
+/* ── PHASE SLIDE TRANSITION ──────────────────────────────────────────── */
+.phase-header-wrap,
+.phase-actions-wrap {
+  position: relative;
+  overflow: hidden;
+}
+.phase-header {
+  transition: transform 0.38s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity   0.38s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.phase-actions {
+  transition: transform 0.38s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity   0.38s cubic-bezier(0.4, 0, 0.2, 1);
+}
+/* B variants sit below by default (ready to slide up) */
+.phase-header-below,
+.phase-actions-below {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  transform: translateY(40px);
+  opacity: 0;
+  pointer-events: none;
+}
+/* narrowing = true: A slides up+out, B slides up+in */
+.narrowing .phase-header-below,
+.narrowing .phase-actions-below {
+  position: relative;
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+.narrowing #phase-header-a,
+.narrowing #phase-actions-a {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  transform: translateY(-40px);
+  opacity: 0;
+  pointer-events: none;
+}
+/* Chip grid: in narrow mode hide remove buttons, chips become selectable */
+.narrowing .chip-remove  { opacity: 0; pointer-events: none; }
+.narrowing .title-chip   { cursor: pointer; }
+
+/* C sits below B by default */
+.phase-header-c,
+.phase-actions-c {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  transform: translateY(40px);
+  opacity: 0;
+  pointer-events: none;
+}
+/* .imagining: B slides up+out, C slides up+in, chip grid hidden */
+.imagining .phase-header-c,
+.imagining .phase-actions-c {
+  position: relative;
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+.imagining #phase-header-b,
+.imagining #phase-actions-b {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  transform: translateY(-40px);
+  opacity: 0;
+  pointer-events: none;
+}
+/* hide chip grid and add-title row when in C */
+.imagining #titles-brainstorm,
+.imagining .add-title-row { display: none; }
+
+/* ── RESPONSIVE ──────────────────────────────────────────────────────── */
+@media (max-width: 580px) {
+  .campaign-options, .initiation-grid, .hearth-options-grid { grid-template-columns: 1fr; }
+  .page-title { font-size: 1.8rem; }
+}
+</style>
+</head>
+<body>
+<div class="app">
+
+  <!-- MASTHEAD -->
+  <header class="masthead">
+    <div>
+      <div class="masthead-title">A Thousand Faces of Adventure</div>
+      <div class="masthead-sub" id="masthead-phase">Setup</div>
+    </div>
+    <button class="btn-ghost" id="btn-show-games">Saved Games</button>
+  </header>
+
+  <!-- ── VIEW: GAME LIST ──────────────────────────────────────────────── -->
+  <section class="view" id="view-games">
+    <div class="section-label">Saved Games</div>
+    <h1 class="page-title">Your Games</h1>
+    <p class="page-subtitle">Pick up where you left off, or start fresh</p>
+    <ul class="game-list" id="game-list"></ul>
+    <div class="action-row">
+      <button class="btn-primary" id="btn-new-game">New Game</button>
+    </div>
+  </section>
+
+  <!-- ── VIEW: WHO'S AT THE TABLE ──────────────────────────────────────── -->
+  <section class="view" id="view-players">
+    <div class="section-label">Before we begin</div>
+    <h1 class="page-title">Who's at the table?</h1>
+    <p class="page-subtitle">Enter the GM's name, then one name per player</p>
+
+    <div class="privacy-note">
+      <div class="privacy-note-text">
+        Everything you type here stays on this device.
+        Nothing is sent to any server. Ever.
+      </div>
+      <div class="privacy-note-fine">
+        For the curious: all game data is stored in your browser's IndexedDB —
+        a local database that never leaves your machine. No accounts, no
+        network requests, no telemetry.
+      </div>
+    </div>
+
+    <div class="players-entry" id="players-entry"></div>
+
+    <button class="btn-add-player" id="btn-add-player-entry" style="margin-bottom:1.5rem;">
+      + Add player
+    </button>
+
+    <div class="action-row">
+      <button class="btn-primary" id="btn-players-next" disabled>Continue →</button>
+      <button class="btn-secondary" id="btn-players-back">← Back</button>
+    </div>
+  </section>
+
+  <!-- ── VIEW: CAMPAIGN PICKER ────────────────────────────────────────── -->
+  <section class="view" id="view-campaign">
+    <div class="flow-progress">
+      <div class="flow-step done"></div>
+      <div class="flow-step current"></div>
+      <div class="flow-step"></div>
+      <div class="flow-step"></div>
+      <div class="flow-step"></div>
+    </div>
+    <div class="section-label">Step 1 of 4</div>
+    <h1 class="page-title">Campaign Length</h1>
+    <p class="page-subtitle">Shapes how quickly characters grow and scenes are structured</p>
+    <div class="campaign-options" id="campaign-options"></div>
+  </section>
+
+  <!-- ── VIEW: TOUCHSTONE WORKSHOP ────────────────────────────────────── -->
+  <section class="view" id="view-touchstones">
+    <div class="flow-progress">
+      <div class="flow-step done"></div>
+      <div class="flow-step done"></div>
+      <div class="flow-step current"></div>
+      <div class="flow-step"></div>
+      <div class="flow-step"></div>
+    </div>
+
+    <!-- Phase A header (slides out), Phase B header (slides in) -->
+    <div class="phase-header-wrap">
+      <div class="phase-header" id="phase-header-a">
+        <div class="section-label">Step 2 of 4 · Brainstorm</div>
+        <div class="step-header">
+          <div class="step-num">A</div>
+          <div class="step-name"><span>Touchstones</span><strong>Write titles from pop culture</strong></div>
+        </div>
+        <div class="read-aloud" id="ra-intro"></div>
+        <div class="read-aloud" id="ra-step-a"></div>
+        <div class="add-title-row">
+          <input class="title-input" id="title-input" type="text" placeholder="e.g. Lord of the Rings, Princess Mononoke…" maxlength="80">
+          <button class="btn-add" id="btn-add-title">Add</button>
+        </div>
+      </div>
+      <div class="phase-header phase-header-below" id="phase-header-b">
+        <div class="section-label">Step 2 of 4 · Narrow</div>
+        <div class="step-header">
+          <div class="step-num">B</div>
+          <div class="step-name"><span>Touchstones</span><strong>Circle one title each</strong></div>
+        </div>
+        <div class="read-aloud" id="ra-step-b"></div>
+        <div id="gm-notes-b"></div>
+      </div>
+    </div>
+
+    <!-- Chips — shared between phases, mode toggled via CSS class on parent -->
+    <div class="titles-grid" id="titles-brainstorm"></div>
+
+    <!-- Phase A actions (slide out) / Phase B actions (slide in) -->
+    <div class="phase-actions-wrap">
+      <div class="phase-actions" id="phase-actions-a">
+        <div class="action-row">
+          <button class="btn-primary" id="btn-to-narrow">Narrow the List →</button>
+          <button class="btn-secondary" id="btn-a-back">← Back</button>
+        </div>
+      </div>
+      <div class="phase-actions phase-actions-below" id="phase-actions-b">
+        <div class="action-row">
+          <button class="btn-primary" id="btn-to-imagine">Set Expectations →</button>
+          <button class="btn-secondary" id="btn-b-back">← Brainstorm</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phase C header (slides in from below after B) -->
+    <div class="phase-header phase-header-c" id="phase-header-c">
+      <div class="section-label">Step 2 of 4 · Imagine</div>
+      <div class="step-header">
+        <div class="step-num">C</div>
+        <div class="step-name"><span>Touchstones</span><strong>Set expectations</strong></div>
+      </div>
+      <div class="touchstone-showcase" id="touchstone-showcase"></div>
+      <div class="read-aloud" id="ra-step-c"></div>
+      <p class="gm-note" id="gm-note-c"></p>
+      <div class="read-aloud" id="ra-finally"></div>
+    </div>
+    <div class="phase-actions phase-actions-c" id="phase-actions-c">
+      <div class="action-row">
+        <button class="btn-primary" id="btn-to-chargen">Character Creation →</button>
+        <button class="btn-secondary" id="btn-c-back">← Back</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── VIEW: CHARACTER CREATION ─────────────────────────────────────── -->
+  <section class="view" id="view-chargen">
+    <div class="flow-progress">
+      <div class="flow-step done"></div>
+      <div class="flow-step done"></div>
+      <div class="flow-step done"></div>
+      <div class="flow-step current"></div>
+      <div class="flow-step"></div>
+    </div>
+    <div class="section-label">Step 3 of 4</div>
+    <h1 class="page-title">Character Creation</h1>
+    <p class="page-subtitle">One player at a time — GM reads aloud, player answers</p>
+
+    <!-- Player tabs -->
+    <div class="player-tabs" id="player-tabs"></div>
+
+    <!-- Per-player form — rendered dynamically -->
+    <div id="player-form"></div>
+
+    <div class="action-row">
+      <button class="btn-primary" id="btn-to-hearth">The Hearth →</button>
+      <button class="btn-secondary" id="btn-chargen-back">← Touchstones</button>
+    </div>
+  </section>
+
+  <!-- ── VIEW: THE HEARTH ──────────────────────────────────────────────── -->
+  <section class="view" id="view-hearth">
+    <div class="flow-progress">
+      <div class="flow-step done"></div>
+      <div class="flow-step done"></div>
+      <div class="flow-step done"></div>
+      <div class="flow-step done"></div>
+      <div class="flow-step current"></div>
+    </div>
+    <div class="section-label">Step 4 of 4</div>
+    <h1 class="page-title">Gather Around the Hearth</h1>
+    <p class="page-subtitle">GM-led — whole table together</p>
+
+    <!-- Step 1: At home -->
+    <div class="cc-section">
+      <div class="step-header">
+        <div class="step-num">1</div>
+        <div class="step-name"><span>Hearth</span><strong>What makes you feel at home?</strong></div>
+      </div>
+      <div class="read-aloud warm" id="ra-at-home"></div>
+      <p class="gm-note" id="gm-note-followup"></p>
+      <table class="hearth-table" id="hearth-at-home-table">
+        <thead><tr><th>Player</th><th>What makes them feel at home</th></tr></thead>
+        <tbody id="hearth-at-home-body"></tbody>
+      </table>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Step 2: Choose The Hearth -->
+    <div class="cc-section">
+      <div class="step-header">
+        <div class="step-num">2</div>
+        <div class="step-name"><span>Hearth</span><strong>Choose The Hearth</strong></div>
+      </div>
+      <div class="read-aloud warm" id="ra-choose-hearth"></div>
+      <p class="gm-note" style="margin-bottom:0.75rem;">By consensus, choose one:</p>
+      <div class="hearth-options-grid" id="hearth-options-grid"></div>
+      <div class="read-aloud warm" id="ra-hearth-examples"></div>
+      <p class="gm-note" id="gm-note-make-sure"></p>
+
+      <label class="section-label" style="display:block;margin-top:1rem;margin-bottom:0.35rem;">The Hearth is:</label>
+      <input class="hearth-name-input" id="hearth-name-input" type="text" placeholder="e.g. The limestone spring that feeds the valley…" maxlength="120">
+      <p class="gm-note" id="gm-note-separated"></p>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Step 3: Risk life -->
+    <div class="cc-section">
+      <div class="step-header">
+        <div class="step-num">3</div>
+        <div class="step-name"><span>Hearth</span><strong>Why would you risk your life for it?</strong></div>
+      </div>
+      <div class="read-aloud warm" id="ra-risk-life"></div>
+      <table class="hearth-table" id="hearth-risk-table">
+        <thead><tr><th>Player</th><th>Why they'd risk their life</th></tr></thead>
+        <tbody id="hearth-risk-body"></tbody>
+      </table>
+    </div>
+
+    <div class="action-row">
+      <button class="btn-primary" id="btn-hearth-finish">Save &amp; Finish →</button>
+      <button class="btn-secondary" id="btn-hearth-back">← Character Creation</button>
+    </div>
+  </section>
+
+  <!-- ── VIEW: SUMMARY ─────────────────────────────────────────────────── -->
+  <section class="view" id="view-summary">
+    <div class="section-label">Setup Complete</div>
+    <h1 class="page-title">Ready to Play</h1>
+    <p class="page-subtitle">Hand off to the GM Guide at Chapter 1</p>
+
+    <div class="summary-card">
+      <div class="summary-label">Campaign</div>
+      <div class="summary-value" id="sum-campaign">—</div>
+    </div>
+    <div class="summary-card">
+      <div class="summary-label">Touchstone List</div>
+      <div class="touchstone-final-list" id="sum-touchstones"></div>
+    </div>
+    <div class="summary-card">
+      <div class="summary-label">Players</div>
+      <div class="summary-players" id="sum-players"></div>
+    </div>
+    <div class="summary-card">
+      <div class="summary-label">The Hearth</div>
+      <div class="summary-value" id="sum-hearth">—</div>
+    </div>
+
+    <div class="action-row">
+      <button class="btn-primary" id="btn-save">Save</button>
+      <button class="btn-secondary" id="btn-sum-back">← Edit Hearth</button>
+    </div>
+  </section>
+
+</div><!-- /.app -->
+<div class="toast" id="toast">Saved</div>
+
+<script>
+// ── DATA REFS ──────────────────────────────────────────────────────────
+let lastGMName = localStorage.getItem('1kfa_gm_name') || '';
+const uc = GAMEDATA.universe_creation;
+const cc = GAMEDATA.character_creation;
+const h  = GAMEDATA.hearth;
+
+// ── THUMBNAIL FETCH ────────────────────────────────────────────────────
+// Cache: title (lowercase) -> url string | null
+const thumbCache = {};
+
+async function fetchThumb(title) {
+  const key = title.toLowerCase();
+  if (key in thumbCache) return thumbCache[key];
+
+  // 1. Wikipedia REST summary
+  try {
+    const slug = encodeURIComponent(title.replace(/ /g, '_'));
+    const res  = await fetch(
+      `https://en.wikipedia.org/api/rest_v1/page/summary/${slug}`,
+      { headers: { Accept: 'application/json' } }
+    );
+    if (res.ok) {
+      const d = await res.json();
+      if (d.thumbnail?.source) {
+        // Prefer larger image: bump width param if present
+        const url = d.thumbnail.source.replace(/\/\d+px-/, '/120px-');
+        thumbCache[key] = url;
+        return url;
+      }
+    }
+  } catch (_) {}
+
+  // 2. Google Books fallback
+  try {
+    const q   = encodeURIComponent(title);
+    const res = await fetch(
+      `https://www.googleapis.com/books/v1/volumes?q=${q}&maxResults=1`
+    );
+    if (res.ok) {
+      const d = await res.json();
+      const img = d.items?.[0]?.volumeInfo?.imageLinks;
+      const url = img?.thumbnail || img?.smallThumbnail;
+      if (url) {
+        // Google Books URLs use http; force https
+        thumbCache[key] = url.replace(/^http:/, 'https:');
+        return thumbCache[key];
+      }
+    }
+  } catch (_) {}
+
+  thumbCache[key] = null;
+  return null;
+}
+
+async function fetchAndCacheThumb(title) {
+  // Store on state.titles entry so it persists across renders
+  const entry = state.titles.find(t => t.text === title);
+  if (!entry) return;
+  if (entry.thumb !== undefined) return;   // already attempted
+  entry.thumb = null;                       // mark in-flight
+  const url = await fetchThumb(title);
+  entry.thumb = url;
+  // Re-render narrow chips to show it
+  renderNarrow();
+  renderShowcase();
+}
+
+// ── HELPERS ────────────────────────────────────────────────────────────
+function spansToHTML(spans) {
+  return spans.map(s =>
+    s.type === 'bold'   ? `<strong>${s.text}</strong>` :
+    s.type === 'italic' ? `<em>${s.text}</em>` :
+    s.text
+  ).join('');
+}
+
+function blockquoteToHTML(paras) {
+  return paras.map(p => {
+    const html = spansToHTML(p.spans);
+    return p.type === 'bullet' ? `<span class="bullet">${html}</span>` : `<p>${html}</p>`;
+  }).join('');
+}
+
+function el(id) { return document.getElementById(id); }
+
+function showToast(msg = 'Saved') {
+  const t = el('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2200);
+}
+
+// ── VIEW / PHASE ───────────────────────────────────────────────────────
+const ALL_VIEWS = ['games','players','campaign','touchstones','chargen','hearth','summary'];
+
+function showView(name) {
+  ALL_VIEWS.forEach(v => el('view-'+v).classList.toggle('active', v === name));
+  const labels = {
+    games:       'Saved Games',
+    players:     'Who\'s at the table?',
+    campaign:    'Step 1 · Campaign',
+    touchstones: 'Step 2 · Touchstones',
+    chargen:     'Step 3 · Characters',
+    hearth:      'Step 4 · The Hearth',
+    summary:     'Setup Complete',
+  };
+  el('masthead-phase').textContent = labels[name] || '';
+  window.scrollTo(0, 0);
+}
+
+function showPhase(name) {
+  const ts = el('view-touchstones');
+  if (name === 'a') {
+    ts.classList.remove('narrowing', 'imagining');
+  } else if (name === 'b') {
+    ts.classList.remove('imagining');
+    ts.classList.add('narrowing');
+    renderBrainstorm();
+  } else if (name === 'c') {
+    ts.classList.add('narrowing', 'imagining');
+    renderShowcase();
+  }
+}
+
+// ── INDEXEDDB ──────────────────────────────────────────────────────────
+let db;
+const DB_NAME = '1kfa', DB_VER = 2, STORE = 'games';
+
+function openDB() {
+  return new Promise((res, rej) => {
+    const req = indexedDB.open(DB_NAME, DB_VER);
+    req.onupgradeneeded = e => {
+      const d = e.target.result;
+      if (!d.objectStoreNames.contains(STORE))
+        d.createObjectStore(STORE, { keyPath: 'id' });
+    };
+    req.onsuccess = e => { db = e.target.result; res(db); };
+    req.onerror   = e => rej(e.target.error);
+  });
+}
+function dbAll()        { return new Promise((r,j) => { const q = db.transaction(STORE,'readonly').objectStore(STORE).getAll(); q.onsuccess=()=>r(q.result); q.onerror=e=>j(e); }); }
+function dbPut(rec)     { return new Promise((r,j) => { const q = db.transaction(STORE,'readwrite').objectStore(STORE).put(rec); q.onsuccess=()=>r(); q.onerror=e=>j(e); }); }
+function dbDelete(id)   { return new Promise((r,j) => { const q = db.transaction(STORE,'readwrite').objectStore(STORE).delete(id); q.onsuccess=()=>r(); q.onerror=e=>j(e); }); }
+
+// ── STATE ──────────────────────────────────────────────────────────────
+let state = null;
+
+
+// ── PLAYERS ENTRY VIEW ─────────────────────────────────────────────────
+function renderPlayersEntry() {
+  const container = el('players-entry');
+  container.innerHTML = '';
+
+  // GM card (full width)
+  const gmCard = document.createElement('div');
+  gmCard.className = 'player-entry-card gm-card';
+  gmCard.innerHTML = `
+    <span class="player-role-badge">GM</span>
+    <input class="player-entry-input" id="entry-gm" type="text"
+           placeholder="Name…" maxlength="40"
+           value="${state.gm_name || ''}">
+  `;
+  container.appendChild(gmCard);
+
+  // Player cards
+  (state.player_names || []).forEach((name, i) => {
+    const card = document.createElement('div');
+    card.className = 'player-entry-card';
+    card.innerHTML = `
+      <span class="player-role-badge">Player ${i+1}</span>
+      <input class="player-entry-input" data-pidx="${i}" type="text"
+             placeholder="Name…" maxlength="40" value="${name}">
+      <button class="player-entry-remove" data-remove="${i}" title="Remove">×</button>
+    `;
+    container.appendChild(card);
+  });
+
+  // Wire remove buttons
+  container.querySelectorAll('[data-remove]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      savePlayersForm();
+      state.player_names.splice(+btn.dataset.remove, 1);
+      renderPlayersEntry();
+      validatePlayersNext();
+    });
+  });
+
+  // Wire any-input -> validate
+  container.querySelectorAll('input').forEach(inp => {
+    inp.addEventListener('input', validatePlayersNext);
+  });
+
+  validatePlayersNext();
+}
+
+function savePlayersForm() {
+  const gmEl = el('entry-gm');
+  if (gmEl) {
+    state.gm_name = gmEl.value.trim();
+    if (state.gm_name) {
+      lastGMName = state.gm_name;
+      localStorage.setItem('1kfa_gm_name', lastGMName);
+    }
+  }
+  document.querySelectorAll('[data-pidx]').forEach(inp => {
+    state.player_names[+inp.dataset.pidx] = inp.value.trim();
+  });
+}
+
+function validatePlayersNext() {
+  const gmOk = (el('entry-gm')?.value || '').trim().length > 0;
+  const anyPlayer = (state.player_names || []).some(n => n.trim().length > 0)
+    || document.querySelectorAll('[data-pidx]').length > 0;
+  el('btn-players-next').disabled = !gmOk;
+}
+
+function freshState() {
+  return {
+    id:          crypto.randomUUID(),
+    campaign:    null,
+    gm_name:     lastGMName,
+    player_names: ['', ''],  // raw name strings from entry screen
+    titles:      [],     // [{text, circled}]
+    players:     [],     // populated from player_names before chargen
+    hearth: {
+      choice:       null,    // one of hearth.hearth_options
+      name:         '',      // freetext description
+      risk_answers: [],      // parallel to players
+    },
+    createdAt: Date.now(),
+    updatedAt: Date.now(),
+  };
+}
+
+function freshPlayer(name = '') {
+  return {
+    name,
+    wc_answers:  Array(cc.worldcloth_questions.length).fill(''),
+    initiation:  null,
+  };
+}
+
+// ── STATIC READ-ALOUDS ─────────────────────────────────────────────────
+function populateReadAlouds() {
+  el('ra-intro').innerHTML         = blockquoteToHTML(uc.intro);
+  el('ra-step-a').innerHTML        = blockquoteToHTML(uc.step_a);
+  el('ra-step-b').innerHTML        = blockquoteToHTML(uc.step_b);
+  el('ra-step-c').innerHTML        = blockquoteToHTML(uc.step_c);
+  el('ra-finally').innerHTML       = blockquoteToHTML(uc.finally);
+  el('gm-note-c').textContent      = uc.step_c_note;
+  el('gm-notes-b').innerHTML       = uc.step_b_notes.map(n => `<p class="gm-note">${n}</p>`).join('');
+
+  el('ra-at-home').innerHTML       = blockquoteToHTML(h.at_home_read_aloud);
+  el('gm-note-followup').innerHTML = spansToHTML(h.at_home_followup);
+  el('ra-choose-hearth').innerHTML = blockquoteToHTML(h.choose_hearth_read_aloud);
+  el('ra-hearth-examples').innerHTML = blockquoteToHTML(h.hearth_examples_read_aloud);
+  el('gm-note-make-sure').innerHTML  = spansToHTML(h.make_sure_note);
+  el('gm-note-separated').innerHTML  = spansToHTML(h.must_be_separated_note);
+  el('ra-risk-life').innerHTML       = blockquoteToHTML(h.risk_life_read_aloud);
+
+  // Hearth option buttons
+  const grid = el('hearth-options-grid');
+  grid.innerHTML = '';
+  h.hearth_options.forEach(opt => {
+    const btn = document.createElement('button');
+    btn.className = 'hearth-option';
+    btn.textContent = opt;
+    btn.addEventListener('click', () => {
+      state.hearth.choice = opt;
+      grid.querySelectorAll('.hearth-option').forEach(b => b.classList.remove('chosen'));
+      btn.classList.add('chosen');
+    });
+    grid.appendChild(btn);
+  });
+}
+
+// ── CAMPAIGN PICKER ────────────────────────────────────────────────────
+function renderCampaignOptions() {
+  const container = el('campaign-options');
+  container.innerHTML = '';
+  uc.campaign_options.forEach(opt => {
+    const btn = document.createElement('button');
+    btn.className = 'campaign-option' + (state && state.campaign === opt.name ? ' selected' : '');
+    btn.innerHTML = `<span class="opt-name">${opt.name}</span><span class="opt-desc">${opt.desc}</span>`;
+    btn.addEventListener('click', () => {
+      state.campaign = opt.name;
+      container.querySelectorAll('.campaign-option').forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+      showView('touchstones');
+      showPhase('a');
+    });
+    container.appendChild(btn);
+  });
+}
+
+// ── TITLE CHIPS ────────────────────────────────────────────────────────
+function renderBrainstorm() {
+  renderChips(el('titles-brainstorm'), 'brainstorm');
+}
+function renderNarrow() {
+  renderBrainstorm();
+}
+function renderChips(container, mode) {
+  container.innerHTML = '';
+  const narrowing = el('view-touchstones').classList.contains('narrowing');
+  state.titles.forEach((t, i) => {
+    const chip = document.createElement('span');
+    chip.className = 'title-chip' + (t.circled ? ' circled' : '');
+
+    // Thumbnail when circled — real image or gradient fallback
+    if (t.circled) {
+      const img = document.createElement('img');
+      img.className = 'chip-thumb';
+      img.src = t.thumb || gradientSVG(t.text, 28, 38);
+      img.alt = '';
+      img.draggable = false;
+      chip.appendChild(img);
+    }
+
+    const label = document.createElement('span');
+    label.className = 'chip-label';
+    label.textContent = t.text;
+    chip.appendChild(label);
+
+    // Remove button always rendered; CSS hides it in narrow mode
+    const rm = document.createElement('button');
+    rm.className = 'chip-remove'; rm.textContent = '×'; rm.title = 'Remove';
+    rm.addEventListener('click', e => {
+      e.stopPropagation();
+      state.titles.splice(i, 1);
+      renderBrainstorm();
+    });
+    chip.appendChild(rm);
+
+    // Click on chip: in narrow mode toggle circle; in brainstorm mode no-op
+    chip.addEventListener('click', () => {
+      if (!el('view-touchstones').classList.contains('narrowing')) return;
+      if (state.titles[i].circled) {
+        // Uncircle
+        state.titles[i].circled = false;
+      } else {
+        // Circle — if already 3 circled, bump the oldest (lowest index)
+        const circled = state.titles.filter(t => t.circled);
+        if (circled.length >= 3) {
+          const oldest = state.titles.find(t => t.circled);
+          if (oldest) oldest.circled = false;
+        }
+        state.titles[i].circled = true;
+        if (state.titles[i].thumb === undefined)
+          fetchAndCacheThumb(t.text);
+      }
+      renderBrainstorm();
+      renderShowcase();
+    });
+
+    container.appendChild(chip);
+  });
+}
+
+// ── TITLE GRADIENT ─────────────────────────────────────────────────────
+// Deterministic hash → two dark colours + angle for fallback thumbnail SVG.
+// Palette of pleasing dark base hues; hash selects and shifts them.
+function titleGradient(title) {
+  // djb2 hash
+  let h = 5381;
+  for (let i = 0; i < title.length; i++)
+    h = (((h << 5) + h) + title.charCodeAt(i)) >>> 0;
+
+  // Pull three independent values from different parts of the hash
+  const hue1  = h % 360;
+  const hue2  = (hue1 + 40 + ((h >> 8) % 80)) % 360;   // 40–120° apart
+  const angle = (h >> 16) % 360;
+
+  // Dark, saturated colours with controlled lightness
+  const sat = 55 + ((h >> 24) % 25);  // 55–80%
+  const l1  = 18 + ((h >> 12) % 10);  // 18–28%  (deep)
+  const l2  = 28 + ((h >> 20) % 14);  // 28–42%  (slightly lighter)
+
+  const c1 = `hsl(${hue1},${sat}%,${l1}%)`;
+  const c2 = `hsl(${hue2},${sat}%,${l2}%)`;
+
+  return { c1, c2, angle };
+}
+
+function gradientSVG(title, w = 120, h = 180) {
+  const g = titleGradient(title);
+  // Encode as data URI so it works inline without a server
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}">` +
+    `<defs><linearGradient id="g" x1="0" y1="0" ` +
+    `x2="${+(Math.cos((g.angle * Math.PI) / 180).toFixed(3))}" ` +
+    `y2="${+(Math.sin((g.angle * Math.PI) / 180).toFixed(3))}" ` +
+    `gradientUnits="objectBoundingBox">` +
+    `<stop offset="0%" stop-color="${g.c1}"/>` +
+    `<stop offset="100%" stop-color="${g.c2}"/>` +
+    `</linearGradient></defs>` +
+    `<rect width="${w}" height="${h}" fill="url(#g)"/>` +
+    `</svg>`;
+  return 'data:image/svg+xml,' + encodeURIComponent(svg);
+}
+
+function renderShowcase() {
+  const el_ = el('touchstone-showcase');
+  if (!el_) return;
+  const circled = state.titles.filter(t => t.circled);
+  if (!circled.length) { el_.innerHTML = ''; return; }
+
+  const cards = circled.map(t => {
+    const src = t.thumb || gradientSVG(t.text);
+    return `<div class="ts-card">
+      <img class="ts-card-thumb" src="${src}" alt="${t.text}" loading="lazy">
+      <div class="ts-card-label">${t.text}</div>
+    </div>`;
+  }).join('');
+
+  // + signs float over gutters between cards (at 1/3 and 2/3 of container width)
+  const plusSigns = circled.length > 1
+    ? [33.33, 66.66].slice(0, circled.length - 1)
+        .map(pct => `<span class="showcase-plus" style="left:${pct}%">+</span>`)
+        .join('')
+    : '';
+
+  el_.innerHTML = cards + plusSigns;
+}
+
+function addTitle(text) {
+  const parts = text.split(',').map(s => s.trim()).filter(Boolean);
+  if (!parts.length) return;
+  let added = false;
+  parts.forEach(part => {
+    if (!state.titles.some(t => t.text.toLowerCase() === part.toLowerCase())) {
+      state.titles.push({ text: part, circled: false });
+      added = true;
+    }
+  });
+  if (added) renderBrainstorm();
+}
+
+// ── CHARACTER CREATION ─────────────────────────────────────────────────
+let currentPlayerIdx = 0;
+
+function renderPlayerTabs() {
+  const tabs = el('player-tabs');
+  tabs.innerHTML = '';
+  state.players.forEach((p, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'player-tab' + (i === currentPlayerIdx ? ' active' : '');
+    btn.textContent = p.name || `Player ${i+1}`;
+    btn.addEventListener('click', () => { saveCurrentPlayerForm(); currentPlayerIdx = i; renderPlayerTabs(); renderPlayerForm(); });
+    tabs.appendChild(btn);
+  });
+  // Add player button (max 6)
+  if (state.players.length < 6) {
+    const add = document.createElement('button');
+    add.className = 'btn-add-player';
+    add.textContent = '+ Player';
+    add.addEventListener('click', () => {
+      saveCurrentPlayerForm();
+      state.players.push(freshPlayer(`Player ${state.players.length + 1}`));
+      currentPlayerIdx = state.players.length - 1;
+      renderPlayerTabs();
+      renderPlayerForm();
+      syncHearthTable();
+    });
+    tabs.appendChild(add);
+  }
+}
+
+function renderPlayerForm() {
+  const p = state.players[currentPlayerIdx];
+  const form = el('player-form');
+  form.innerHTML = '';
+
+  // Name
+  const nameSection = document.createElement('div');
+  nameSection.className = 'cc-section';
+  nameSection.innerHTML = `
+    <div class="read-aloud">${blockquoteToHTML(cc.name_read_aloud)}</div>
+    <input class="player-name-input" id="pf-name" type="text"
+           placeholder="Character name…" maxlength="60" value="${p.name}">
+  `;
+  form.appendChild(nameSection);
+
+  // Traits read-aloud
+  const traitsSection = document.createElement('div');
+  traitsSection.className = 'cc-section';
+  traitsSection.innerHTML = `
+    <div class="step-header">
+      <div class="step-num">①</div>
+      <div class="step-name"><span>Character</span><strong>Assign Traits</strong></div>
+    </div>
+    <div class="read-aloud">${blockquoteToHTML(cc.traits_read_aloud)}</div>
+  `;
+  form.appendChild(traitsSection);
+
+  // Worldcloth questions
+  const wcSection = document.createElement('div');
+  wcSection.className = 'cc-section';
+  wcSection.innerHTML = `
+    <div class="step-header">
+      <div class="step-num">②</div>
+      <div class="step-name"><span>Character</span><strong>Worldcloth Questions</strong></div>
+    </div>
+    <p class="gm-note" style="margin-bottom:1rem;">${spansToHTML(cc.worldcloth_followup)} Ask one. Listen. Move on.</p>
+  `;
+  cc.worldcloth_questions.forEach((q, qi) => {
+    const div = document.createElement('div');
+    div.className = 'wc-question';
+    div.innerHTML = `
+      <div class="wc-q-text">${spansToHTML(q)}</div>
+      <textarea class="wc-answer" id="pf-wc-${qi}" rows="1" placeholder="Answer…">${p.wc_answers[qi] || ''}</textarea>
+    `;
+    wcSection.appendChild(div);
+  });
+  form.appendChild(wcSection);
+
+  // Initiation
+  const initSection = document.createElement('div');
+  initSection.className = 'cc-section';
+  initSection.innerHTML = `
+    <div class="step-header">
+      <div class="step-num">③</div>
+      <div class="step-name"><span>Character</span><strong>Initiation to Dark Gardens</strong></div>
+    </div>
+    <div class="read-aloud">${blockquoteToHTML(cc.initiation_read_aloud)}</div>
+    <p class="gm-note" style="margin-bottom:0.75rem;">The player on their left reads two options aloud. They pick one.</p>
+    <div class="initiation-grid" id="pf-init-grid"></div>
+  `;
+  form.appendChild(initSection);
+
+  // Populate initiation options
+  const grid = el('pf-init-grid');
+  cc.initiation_options.forEach((opt, oi) => {
+    const btn = document.createElement('button');
+    btn.className = 'init-option' + (p.initiation === oi ? ' chosen' : '');
+    btn.textContent = spansToHTML(opt);
+    btn.addEventListener('click', () => {
+      state.players[currentPlayerIdx].initiation = oi;
+      grid.querySelectorAll('.init-option').forEach(b => b.classList.remove('chosen'));
+      btn.classList.add('chosen');
+    });
+    grid.appendChild(btn);
+  });
+
+  // Auto-expand textareas
+  form.querySelectorAll('.wc-answer').forEach(ta => {
+    ta.addEventListener('input', () => {
+      ta.style.height = 'auto';
+      ta.style.height = ta.scrollHeight + 'px';
+    });
+    // Trigger on load
+    ta.style.height = 'auto';
+    ta.style.height = ta.scrollHeight + 'px';
+  });
+}
+
+function saveCurrentPlayerForm() {
+  const p = state.players[currentPlayerIdx];
+  const nameEl = el('pf-name');
+  if (nameEl) p.name = nameEl.value.trim() || `Player ${currentPlayerIdx + 1}`;
+  cc.worldcloth_questions.forEach((_, qi) => {
+    const ta = el(`pf-wc-${qi}`);
+    if (ta) p.wc_answers[qi] = ta.value;
+  });
+}
+
+// ── HEARTH ─────────────────────────────────────────────────────────────
+function syncHearthTable() {
+  // Ensure risk_answers array matches players length
+  while (state.hearth.risk_answers.length < state.players.length)
+    state.hearth.risk_answers.push('');
+  state.hearth.risk_answers = state.hearth.risk_answers.slice(0, state.players.length);
+}
+
+function renderHearthView() {
+  syncHearthTable();
+
+  // Restore chosen hearth option
+  el('hearth-options-grid').querySelectorAll('.hearth-option').forEach(btn => {
+    btn.classList.toggle('chosen', btn.textContent === state.hearth.choice);
+  });
+
+  // Hearth name
+  el('hearth-name-input').value = state.hearth.name || '';
+
+  // At-home table
+  const atHomeBody = el('hearth-at-home-body');
+  atHomeBody.innerHTML = '';
+  state.players.forEach((p, i) => {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td>${p.name || `Player ${i+1}`}</td>
+      <td><input class="hearth-answer" data-at="${i}" type="text"
+                 value="${(state.hearth.at_home_answers || [])[i] || ''}"
+                 placeholder="What makes them feel at home…"></td>
+    `;
+    atHomeBody.appendChild(tr);
+  });
+
+  // Risk-life table
+  const riskBody = el('hearth-risk-body');
+  riskBody.innerHTML = '';
+  state.players.forEach((p, i) => {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td>${p.name || `Player ${i+1}`}</td>
+      <td><input class="hearth-answer" data-risk="${i}" type="text"
+                 value="${state.hearth.risk_answers[i] || ''}"
+                 placeholder="Why they'd risk their life…"></td>
+    `;
+    riskBody.appendChild(tr);
+  });
+}
+
+function saveHearthForm() {
+  state.hearth.name = el('hearth-name-input').value.trim();
+  state.hearth.at_home_answers = state.hearth.at_home_answers || [];
+  document.querySelectorAll('[data-at]').forEach(inp => {
+    state.hearth.at_home_answers[+inp.dataset.at] = inp.value;
+  });
+  document.querySelectorAll('[data-risk]').forEach(inp => {
+    state.hearth.risk_answers[+inp.dataset.risk] = inp.value;
+  });
+}
+
+// ── SUMMARY ────────────────────────────────────────────────────────────
+function renderSummary() {
+  el('sum-campaign').textContent = state.campaign || '—';
+
+  const circled = state.titles.filter(t => t.circled);
+  const show = circled.length ? circled : state.titles;
+  el('sum-touchstones').innerHTML = show.map(t => `<span class="touchstone-pill">${t.text}</span>`).join('');
+
+  el('sum-players').innerHTML = state.players.map(p =>
+    `<div class="summary-player"><strong>${p.name || '—'}</strong>${p.initiation !== null ? ' · ' + spansToHTML(cc.initiation_options[p.initiation]) : ''}</div>`
+  ).join('');
+
+  el('sum-hearth').textContent = state.hearth.name || state.hearth.choice || '—';
+}
+
+// ── GAME LIST ──────────────────────────────────────────────────────────
+async function renderGameList() {
+  const games = (await dbAll()).sort((a,b) => b.updatedAt - a.updatedAt);
+  const list = el('game-list');
+  list.innerHTML = '';
+  if (!games.length) {
+    list.innerHTML = '<li style="padding:1rem 0;color:var(--rule);font-size:0.8rem;">No saved games yet.</li>';
+    return;
+  }
+  games.forEach(g => {
+    const li = document.createElement('li');
+    li.className = 'game-item';
+    const circled = (g.titles||[]).filter(t=>t.circled);
+    const preview = circled.length ? circled.map(t=>t.text).join(', ')
+      : (g.titles||[]).map(t=>t.text).join(', ') || 'No titles';
+    const date = new Date(g.updatedAt).toLocaleDateString();
+    const hearth = g.hearth?.name || g.hearth?.choice || '';
+    li.innerHTML = `
+      <div class="game-meta">
+        <div class="game-name">${g.campaign || 'No campaign'}</div>
+        <div class="game-detail">${date}${hearth ? ' · ' + hearth : ''} · ${preview}</div>
+      </div>
+      <button class="btn-resume" data-id="${g.id}">Resume</button>
+      <button class="btn-delete" data-id="${g.id}" title="Delete">×</button>
+    `;
+    list.appendChild(li);
+  });
+  list.querySelectorAll('.btn-resume').forEach(btn =>
+    btn.addEventListener('click', () => loadGame(btn.dataset.id)));
+  list.querySelectorAll('.btn-delete').forEach(btn =>
+    btn.addEventListener('click', async () => {
+      if (!confirm('Delete this game?')) return;
+      await dbDelete(btn.dataset.id);
+      renderGameList();
+    }));
+}
+
+async function loadGame(id) {
+  const games = await dbAll();
+  const g = games.find(x => x.id === id);
+  if (!g) return;
+  state = {
+    hearth: { choice: null, name: '', risk_answers: [], at_home_answers: [] },
+    players: [freshPlayer('Player 1')],
+    ...g
+  };
+  currentPlayerIdx = 0;
+  // Warm thumb cache from saved state
+  (g.titles || []).forEach(t => {
+    if (t.thumb !== undefined) thumbCache[t.text.toLowerCase()] = t.thumb;
+  });
+  renderCampaignOptions();
+  renderBrainstorm();
+  renderNarrow();
+  renderSummary();
+  showView('summary');
+}
+
+async function saveGame() {
+  state.updatedAt = Date.now();
+  await dbPut({ ...state });
+  showToast('Saved');
+}
+
+// ── WIRE UP ────────────────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', async () => {
+  await openDB();
+  populateReadAlouds();
+
+  // Masthead
+  el('btn-show-games').addEventListener('click', async () => {
+    await renderGameList(); showView('games');
+  });
+
+  // Game list
+  el('btn-new-game').addEventListener('click', () => {
+    state = freshState();
+    renderPlayersEntry();
+    showView('players');
+  });
+
+  // Players entry
+  el('btn-add-player-entry').addEventListener('click', () => {
+    savePlayersForm();
+    state.player_names.push('');
+    renderPlayersEntry();
+    // Focus the new input
+    const inputs = document.querySelectorAll('[data-pidx]');
+    if (inputs.length) inputs[inputs.length-1].focus();
+  });
+  el('btn-players-next').addEventListener('click', () => {
+    savePlayersForm();
+    // Sync players array from player_names (drop empties)
+    const names = state.player_names.filter(n => n.trim());
+    state.players = names.length
+      ? names.map(n => freshPlayer(n))
+      : [freshPlayer('Player 1')];
+    currentPlayerIdx = 0;
+    renderCampaignOptions();
+    renderBrainstorm();
+    showView('campaign');
+  });
+  el('btn-players-back').addEventListener('click', async () => {
+    savePlayersForm();
+    await renderGameList();
+    showView('games');
+  });
+
+
+  // Phase A
+  el('btn-add-title').addEventListener('click', () => {
+    addTitle(el('title-input').value); el('title-input').value = ''; el('title-input').focus();
+  });
+  el('title-input').addEventListener('keydown', e => {
+    if (e.key === 'Enter') { addTitle(e.target.value); e.target.value = ''; }
+  });
+  el('btn-to-narrow').addEventListener('click', () => showPhase('b'));
+  el('btn-a-back').addEventListener('click', () => showView('campaign'));
+
+  // Phase B
+  el('btn-to-imagine').addEventListener('click', () => showPhase('c'));
+  el('btn-b-back').addEventListener('click', () => showPhase('a'));
+
+  // Phase C
+  el('btn-to-chargen').addEventListener('click', async () => {
+    await saveGame();
+    currentPlayerIdx = 0;
+    renderPlayerTabs();
+    renderPlayerForm();
+    showView('chargen');
+  });
+  el('btn-c-back').addEventListener('click', () => showPhase('b'));
+
+  // Character creation
+  el('btn-to-hearth').addEventListener('click', async () => {
+    saveCurrentPlayerForm();
+    await saveGame();
+    renderPlayerTabs();   // refresh names
+    renderHearthView();
+    showView('hearth');
+  });
+  el('btn-chargen-back').addEventListener('click', () => { saveCurrentPlayerForm(); showView('touchstones'); showPhase('c'); });
+
+  // Hearth
+  el('btn-hearth-finish').addEventListener('click', async () => {
+    saveHearthForm();
+    await saveGame();
+    renderSummary();
+    showView('summary');
+  });
+  el('btn-hearth-back').addEventListener('click', () => {
+    saveHearthForm();
+    currentPlayerIdx = 0;
+    renderPlayerTabs();
+    renderPlayerForm();
+    showView('chargen');
+  });
+
+  // Summary
+  el('btn-save').addEventListener('click', saveGame);
+  el('btn-sum-back').addEventListener('click', () => {
+    saveHearthForm();
+    renderHearthView();
+    showView('hearth');
+  });
+
+  // Boot
+  await renderGameList();
+  showView('games');
+});
+</script>
+</body>
+</html>

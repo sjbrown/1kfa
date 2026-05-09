@@ -17,6 +17,25 @@ import os
 import re
 import sys
 from dataclasses import dataclass, field
+from parse_quickstart_data import (
+    extract_all_blockquotes,
+    extract_blockquote,
+    parse_bullet_list,
+    parse_inline_md,
+    spans_to_plain,
+)
+from render_sheet_html import (
+    CSS_BASE,
+    blockquote_to_html,
+    bullet_list_to_html,
+    cb,
+    checklist_item,
+    read_aloud,
+    rule_note,
+    section_head,
+    spans_to_html,
+)
+
 
 
 # ---------------------------------------------------------------------------
@@ -29,7 +48,7 @@ class CharacterCreationData:
     traits_read_aloud: str          # blockquote from Choose Dex/Int/Str
     name_read_aloud: str            # blockquote from Choose a Name
     worldcloth_questions: list      # list of question strings
-    worldcloth_followup: str        # default follow-up line
+    worldcloth_followup: list       # default follow-up line (span list)
     initiation_read_aloud: str      # last blockquote from Initiation (the "To choose..." one)
     initiation_options: list        # list of option strings
     receive_cards: list             # [{"move": str, "item": str}, ...]
@@ -38,118 +57,6 @@ class CharacterCreationData:
 # ---------------------------------------------------------------------------
 # Parser helpers
 # ---------------------------------------------------------------------------
-
-def extract_blockquote(text: str) -> str:
-    """
-    Extract the first contiguous blockquote from text.
-    Returns HTML-ready string with <br><br> paragraph breaks.
-    """
-    lines = []
-    in_quote = False
-    for line in text.splitlines():
-        m = re.match(r'^>\s?(.*)', line)
-        if m:
-            in_quote = True
-            lines.append(m.group(1))
-        elif in_quote:
-            break
-
-    if not lines:
-        return ""
-
-    paragraphs = []
-    current = []
-    for line in lines:
-        stripped = line.rstrip('\\').strip()
-        # strip markdown bold/italic for HTML rendering
-        stripped = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', stripped)
-        stripped = re.sub(r'\*(.+?)\*', r'<em>\1</em>', stripped)
-        if stripped == "" or stripped == ">":
-            if current:
-                paragraphs.append(" ".join(current))
-                current = []
-        else:
-            # Handle bullet lines inside blockquotes
-            if stripped.startswith("- "):
-                if current:
-                    paragraphs.append(" ".join(current))
-                    current = []
-                paragraphs.append("&ndash;&nbsp;" + stripped[2:])
-            else:
-                current.append(stripped)
-    if current:
-        paragraphs.append(" ".join(current))
-
-    return "<br><br>\n        ".join(paragraphs)
-
-
-def extract_all_blockquotes(text: str) -> list:
-    """Extract all contiguous blockquote blocks from text."""
-    results = []
-    current = []
-    for line in text.splitlines():
-        m = re.match(r'^>\s?(.*)', line)
-        if m:
-            current.append(m.group(1))
-        else:
-            if current:
-                paragraphs = []
-                para = []
-                for l in current:
-                    stripped = l.rstrip('\\').strip()
-                    stripped = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', stripped)
-                    stripped = re.sub(r'\*(.+?)\*', r'<em>\1</em>', stripped)
-                    if stripped == "":
-                        if para:
-                            paragraphs.append(" ".join(para))
-                            para = []
-                    elif stripped.startswith("- "):
-                        if para:
-                            paragraphs.append(" ".join(para))
-                            para = []
-                        paragraphs.append("&ndash;&nbsp;" + stripped[2:])
-                    else:
-                        para.append(stripped)
-                if para:
-                    paragraphs.append(" ".join(para))
-                q = "<br><br>\n        ".join(paragraphs)
-                if q:
-                    results.append(q)
-                current = []
-    if current:
-        paragraphs = []
-        para = []
-        for l in current:
-            stripped = l.rstrip('\\').strip()
-            stripped = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', stripped)
-            stripped = re.sub(r'\*(.+?)\*', r'<em>\1</em>', stripped)
-            if stripped == "":
-                if para:
-                    paragraphs.append(" ".join(para))
-                    para = []
-            elif stripped.startswith("- "):
-                if para:
-                    paragraphs.append(" ".join(para))
-                    para = []
-                paragraphs.append("&ndash;&nbsp;" + stripped[2:])
-            else:
-                para.append(stripped)
-        if para:
-            paragraphs.append(" ".join(para))
-        q = "<br><br>\n        ".join(paragraphs)
-        if q:
-            results.append(q)
-    return results
-
-
-def parse_bullet_list(text: str) -> list:
-    return [
-        re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>',
-        re.sub(r'\*(.+?)\*', r'<em>\1</em>', m.group(1).strip()))
-        for m in re.finditer(r'^\s*[-*]\s+(.+)$', text, re.MULTILINE)
-        if m.group(1).strip()
-    ]
-
 
 def parse_move_card_table(text: str) -> list:
     """Parse the | Number of PCs | Additional Cards | table."""
@@ -171,9 +78,7 @@ def parse_receive_cards(text: str) -> list:
     for m in re.finditer(r'[-*]\s+\*\*(.+?)\*\*\s*[—-]+\s*(?:take\s+)?(.+)', section_m.group(1)):
         move = m.group(1).strip()
         item = m.group(2).strip().rstrip('.')
-        # strip italic markers
-        item = re.sub(r'\*(.+?)\*', r'<em>\1</em>', item)
-        items.append({"move": move, "item": item})
+        items.append({"move": move, "item": parse_inline_md(item)})
     return items
 
 
@@ -196,7 +101,7 @@ def parse_worldcloth_questions(text: str) -> tuple:
     followup = ""
     fu_m = re.search(r'you can default to this one:\s*\n\s*[-*]\s+(.+)', section)
     if fu_m:
-        followup = fu_m.group(1).strip()
+        followup = parse_inline_md(fu_m.group(1).strip())
 
     # The 7 questions are the bullet list after "This conversation might also add details..."
     q_section_m = re.search(
@@ -303,158 +208,7 @@ def parse_character_creation(text: str) -> CharacterCreationData:
 # CSS
 # ---------------------------------------------------------------------------
 
-CSS = """
-  @import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
-
-  :root {
-    --ink:      #1A1917;
-    --light:    #F5F2EB;
-    --mid:      #E0DDD5;
-    --rule:     #888780;
-    --accent:   #3C3489;
-    --warm:     #854F0B;
-    --danger:   #C0410E;
-    --green:    #0F6E56;
-  }
-
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-
-  @media print {
-    body { background: white; padding: 0; }
-    .page { box-shadow: none; margin: 0; border-radius: 0; }
-  }
-
-  body {
-    background: #ccc;
-    font-family: 'Space Mono', monospace;
-    font-size: 10.5px;
-    color: var(--ink);
-    padding: 1.5rem;
-  }
-
-  .page {
-    background: white;
-    width: 8.5in;
-    min-height: 11in;
-    margin: 0 auto;
-    padding: 0.45in 0.45in 0.4in;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
-    border-radius: 2px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 1fr auto;
-    gap: 0 0.28in;
-  }
-
-  .header {
-    grid-column: 1 / -1;
-    border-bottom: 2.5px solid var(--ink);
-    padding-bottom: 0.1in;
-    margin-bottom: 0.16in;
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-  }
-
-  .guide-badge {
-    display: inline-block;
-    background: var(--ink);
-    color: white;
-    font-family: 'IM Fell English', serif;
-    font-size: 11px;
-    padding: 2px 8px;
-    margin-bottom: 5px;
-    letter-spacing: 0.04em;
-  }
-
-  .header h1 {
-    font-family: 'IM Fell English', serif;
-    font-size: 24px;
-    line-height: 1;
-    letter-spacing: 0.01em;
-  }
-
-  .header-right {
-    text-align: right;
-    font-size: 8px;
-    color: var(--rule);
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    line-height: 1.8;
-    padding-bottom: 2px;
-  }
-
-  .col-left  { grid-column: 1; }
-  .col-right { grid-column: 2; }
-
-  .footer {
-    grid-column: 1 / -1;
-    border-top: 1px solid var(--mid);
-    margin-top: 0.12in;
-    padding-top: 6px;
-    font-size: 7.5px;
-    color: var(--rule);
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-  }
-
-  .section { margin-bottom: 0.13in; }
-
-  .section-head {
-    font-size: 7.5px;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    color: white;
-    background: var(--ink);
-    padding: 3px 7px;
-    margin-bottom: 7px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
-  .section-head.accent  { background: var(--accent); }
-  .section-head.warm    { background: var(--warm); }
-  .section-head.green   { background: var(--green); }
-  .section-head.danger  { background: var(--danger); }
-
-  .checklist { list-style: none; padding: 0; }
-  .checklist li {
-    display: flex;
-    align-items: flex-start;
-    gap: 7px;
-    padding: 3px 0;
-    border-bottom: 0.5px solid var(--mid);
-    font-size: 10px;
-    line-height: 1.4;
-  }
-  .checklist li:last-child { border-bottom: none; }
-
-  .cb {
-    width: 12px;
-    height: 12px;
-    border: 1.5px solid var(--ink);
-    flex-shrink: 0;
-    margin-top: 1px;
-  }
-
-  .read-aloud {
-    font-style: italic;
-    font-size: 9.5px;
-    color: var(--accent);
-    border-left: 2px solid var(--accent);
-    padding: 3px 7px;
-    margin-bottom: 6px;
-    line-height: 1.5;
-  }
-
-  .rule-note {
-    font-size: 9px;
-    color: var(--rule);
-    line-height: 1.5;
-    margin-bottom: 5px;
-  }
-  .rule-note strong { color: var(--ink); }
-
+CSS = CSS_BASE + """
   .data-table {
     width: 100%;
     border-collapse: collapse;
@@ -564,29 +318,6 @@ CSS = """
 # HTML helpers
 # ---------------------------------------------------------------------------
 
-def cb() -> str:
-    return '<span class="cb"></span>'
-
-def section_head(label: str, color: str = "") -> str:
-    cls = ("section-head " + color).strip()
-    return f'      <div class="{cls}">{label}</div>\n'
-
-def read_aloud(text: str, style: str = "") -> str:
-    s = f' style="{style}"' if style else ""
-    return f'      <div class="read-aloud"{s}>\n        &ldquo;{text}&rdquo;\n      </div>\n'
-
-def rule_note(text: str, style: str = "") -> str:
-    s = f' style="{style}"' if style else ""
-    return f'      <p class="rule-note"{s}>{text}</p>\n'
-
-def checklist_item(text: str) -> str:
-    return f'        <li>{cb()}<span>{text}</span></li>\n'
-
-
-# ---------------------------------------------------------------------------
-# Column renderers
-# ---------------------------------------------------------------------------
-
 COMPONENTS = [
     "Character sheet &mdash; one per player",
     "Deckahedron (20 cards) per player &mdash; or use the app",
@@ -650,14 +381,13 @@ def render_left_column(data: CharacterCreationData) -> str:
 def render_right_column(data: CharacterCreationData) -> str:
     # Worldcloth questions
     q_items = "".join(
-        f'        <li><span class="q-sym">&rarr;</span><span>{q}</span></li>\n'
+        f'        <li><span class="q-sym">&rarr;</span><span>{spans_to_html(q)}</span></li>\n'
         for q in data.worldcloth_questions
     )
 
     followup_html = ""
     if data.worldcloth_followup:
-        fu = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>',
-             re.sub(r'\*(.+?)\*', r'<em>\1</em>', data.worldcloth_followup))
+        fu = spans_to_html(data.worldcloth_followup)
         followup_html = (
             f'      <div class="followup-box">\n'
             f'        <strong>Default follow-up:</strong> &ldquo;{fu}&rdquo;\n'
@@ -666,14 +396,14 @@ def render_right_column(data: CharacterCreationData) -> str:
 
     # Initiation options grid
     init_items = "".join(
-        f'        <div class="init-item"><span class="q-sym">&middot;</span><span>{opt}</span></div>\n'
+        f'        <div class="init-item"><span class="q-sym">&middot;</span><span>{spans_to_html(opt)}</span></div>\n'
         for opt in data.initiation_options
     )
 
     # Weapons & Items checklist — build dynamically from parsed receive_cards
     weapons_items = [checklist_item("2 Pack cards")]
     for rc in data.receive_cards:
-        weapons_items.append(checklist_item(f'<strong>{rc["move"]}</strong> &mdash; {rc["item"]}'))
+        weapons_items.append(checklist_item(f'<strong>{rc["move"]}</strong> &mdash; {spans_to_html(rc["item"])}'))
     weapons_items.append(checklist_item("2 Item cards"))
     weapons_items.append(checklist_item("Mark Magic Item Charges"))
     weapons_html = "".join(weapons_items)
@@ -782,11 +512,11 @@ def main():
     data = parse_character_creation(text)
 
     print(f"  move card table rows: {len(data.move_card_table)}")
-    print(f"  traits read-aloud:    {len(data.traits_read_aloud)} chars")
-    print(f"  name read-aloud:      {len(data.name_read_aloud)} chars")
+    print(f"  traits read-aloud:    {len(data.traits_read_aloud)} paragraphs")
+    print(f"  name read-aloud:      {len(data.name_read_aloud)} paragraphs")
     print(f"  worldcloth questions: {len(data.worldcloth_questions)}")
-    print(f"  worldcloth follow-up: {data.worldcloth_followup[:40]!r}...")
-    print(f"  initiation read-aloud:{len(data.initiation_read_aloud)} chars")
+    print(f"  worldcloth follow-up: {data.worldcloth_followup!r:.60}")
+    print(f"  initiation read-aloud:{len(data.initiation_read_aloud)} paragraphs")
     print(f"  initiation options:   {len(data.initiation_options)}")
     print(f"  receive cards:        {len(data.receive_cards)}")
 

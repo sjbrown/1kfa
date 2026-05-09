@@ -20,6 +20,18 @@ import os
 import re
 import sys
 from dataclasses import dataclass
+from parse_quickstart_data import (
+    parse_inline_md,
+)
+from render_sheet_html import (
+    CSS_BASE,
+    cb,
+    checklist_item,
+    rule_note,
+    section_head,
+    spans_to_html,
+)
+
 
 
 # ---------------------------------------------------------------------------
@@ -35,12 +47,6 @@ class CombatData:
 # ---------------------------------------------------------------------------
 # Parser helpers
 # ---------------------------------------------------------------------------
-
-def md_to_html_inline(text: str) -> str:
-    text = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', text)
-    text = re.sub(r'\*(.+?)\*', r'<em>\1</em>', text)
-    return text
-
 
 def parse_augmentation_table(text: str) -> list:
     """
@@ -67,7 +73,7 @@ def parse_augmentation_table(text: str) -> list:
         re.MULTILINE
     ):
         cost   = m.group(1).strip()
-        effect = md_to_html_inline(m.group(2).strip())
+        effect = spans_to_html(parse_inline_md(m.group(2).strip()))
         rows.append({"cost": cost, "effect": effect})
     return rows
 
@@ -95,7 +101,7 @@ def parse_special_abilities(text: str) -> list:
     ):
         name = m.group(1).strip()
         desc = " ".join(m.group(2).split())  # collapse whitespace
-        desc = md_to_html_inline(desc)
+        desc = spans_to_html(parse_inline_md(desc))
         abilities.append({"name": name, "desc": desc})
     return abilities
 
@@ -110,127 +116,7 @@ def parse_combat(text: str) -> CombatData:
 # CSS
 # ---------------------------------------------------------------------------
 
-CSS = """
-  @import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
-
-  :root {
-    --ink:      #1A1917;
-    --light:    #F5F2EB;
-    --mid:      #E0DDD5;
-    --rule:     #888780;
-    --accent:   #3C3489;
-    --warm:     #854F0B;
-    --danger:   #C0410E;
-    --green:    #0F6E56;
-  }
-
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-
-  @media print {
-    body { background: white; padding: 0; }
-    .page { box-shadow: none; margin: 0; border-radius: 0; }
-  }
-
-  body {
-    background: #ccc;
-    font-family: 'Space Mono', monospace;
-    font-size: 10px;
-    color: var(--ink);
-    padding: 1.5rem;
-  }
-
-  .page {
-    background: white;
-    width: 8.5in;
-    min-height: 11in;
-    margin: 0 auto;
-    padding: 0.38in 0.42in 0.35in;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
-    border-radius: 2px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 1fr auto;
-    gap: 0 0.26in;
-  }
-
-  .header {
-    grid-column: 1 / -1;
-    border-bottom: 2.5px solid var(--ink);
-    padding-bottom: 0.08in;
-    margin-bottom: 0.13in;
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-  }
-  .guide-badge {
-    display: inline-block;
-    background: var(--danger);
-    color: white;
-    font-family: 'IM Fell English', serif;
-    font-size: 11px;
-    padding: 2px 8px;
-    margin-bottom: 5px;
-    letter-spacing: 0.04em;
-  }
-  .header h1 {
-    font-family: 'IM Fell English', serif;
-    font-size: 24px;
-    line-height: 1;
-    letter-spacing: 0.01em;
-  }
-  .header-right {
-    text-align: right;
-    font-size: 8px;
-    color: var(--rule);
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    line-height: 1.8;
-    padding-bottom: 2px;
-  }
-
-  .col-left  { grid-column: 1; }
-  .col-right { grid-column: 2; }
-
-  .footer {
-    grid-column: 1 / -1;
-    border-top: 1px solid var(--mid);
-    margin-top: 0.1in;
-    padding-top: 5px;
-    font-size: 7.5px;
-    color: var(--rule);
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .section { margin-bottom: 0.11in; }
-
-  .section-head {
-    font-size: 7px;
-    text-transform: uppercase;
-    letter-spacing: 0.22em;
-    color: white;
-    background: var(--ink);
-    padding: 3px 7px;
-    margin-bottom: 6px;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-  }
-  .section-head.danger  { background: var(--danger); }
-  .section-head.accent  { background: var(--accent); }
-  .section-head.green   { background: var(--green); }
-  .section-head.warm    { background: var(--warm); }
-
-  .rule-note {
-    font-size: 8.5px;
-    color: var(--rule);
-    line-height: 1.5;
-    margin-bottom: 4px;
-  }
-  .rule-note strong { color: var(--ink); }
-
+CSS = CSS_BASE + """
   .checklist { list-style: none; padding: 0; }
   .checklist li {
     display: flex;
@@ -317,25 +203,6 @@ CSS = """
 
 # ---------------------------------------------------------------------------
 # HTML helpers
-# ---------------------------------------------------------------------------
-
-def cb() -> str:
-    return '<span class="cb"></span>'
-
-def section_head(label: str, color: str = "") -> str:
-    cls = ("section-head " + color).strip()
-    return f'      <div class="{cls}">{label}</div>\n'
-
-def rule_note(text: str, style: str = "") -> str:
-    s = f' style="{style}"' if style else ""
-    return f'      <p class="rule-note"{s}>{text}</p>\n'
-
-def checklist_item(text: str) -> str:
-    return f'        <li>{cb()}<span>{text}</span></li>\n'
-
-
-# ---------------------------------------------------------------------------
-# Hardcoded content
 # ---------------------------------------------------------------------------
 
 SETUP_ITEMS = [
