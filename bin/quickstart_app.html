@@ -383,7 +383,7 @@ input, textarea, select { font-family: inherit; }
 }
 .sum-ts-card {
   display: flex; flex-direction: column;
-  border: 1px solid var(--gold); border-radius: var(--r);
+  border: 1px solid rgba(200,169,110,0.25); border-radius: var(--r);
   overflow: hidden; width: 4.5rem; flex-shrink: 0;
 }
 .sum-ts-thumb {
@@ -615,7 +615,6 @@ input, textarea, select { font-family: inherit; }
 }
 .sum-ts-card:hover {
   border-color: var(--gold);
-  border-width: 2.5px;
   box-shadow: 0 0 0 2px rgba(200,169,110,0.3);
 }
 
@@ -882,10 +881,6 @@ input, textarea, select { font-family: inherit; }
       <div class="pc-grid" id="sum-players"></div>
     </div>
 
-    <div class="action-row">
-      <button class="btn-primary" id="btn-save">Save</button>
-      <button class="btn-secondary" id="btn-sum-back">← Edit Hearth</button>
-    </div>
   </section>
 
 </div><!-- /.app -->
@@ -1773,12 +1768,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   });
 
   // Summary
-  el('btn-save').addEventListener('click', saveGame);
-  el('btn-sum-back').addEventListener('click', () => {
-    saveHearthForm();
-    renderHearthView();
-    showView('hearth');
-  });
 
   // Boot
   await renderGameList();
