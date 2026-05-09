@@ -618,6 +618,38 @@ input, textarea, select { font-family: inherit; }
   box-shadow: 0 0 0 2px rgba(200,169,110,0.3);
 }
 
+/* ── DELETE ZONE ─────────────────────────────────────────────────────── */
+.delete-zone {
+  margin-top: 2.5rem; padding-top: 1.5rem;
+  border-top: 1px solid #1e1e1e;
+  display: flex; flex-direction: column; gap: 0.75rem;
+}
+.btn-delete-game {
+  background: none; border: none;
+  color: var(--rule); font-size: 0.65rem;
+  text-transform: uppercase; letter-spacing: 0.15em;
+  padding: 0; align-self: flex-start;
+  transition: color 0.15s;
+}
+.btn-delete-game:hover { color: var(--danger); }
+.delete-confirm {
+  display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;
+}
+.delete-confirm[hidden] { display: none; }
+.delete-label {
+  display: flex; align-items: center; gap: 0.5rem;
+  font-size: 0.75rem; color: var(--rule); cursor: pointer;
+}
+.delete-label input[type="checkbox"] { accent-color: var(--danger); }
+.btn-delete-confirm {
+  background: var(--danger); color: white; border: none;
+  padding: 0.45rem 1rem; font-size: 0.7rem;
+  text-transform: uppercase; letter-spacing: 0.15em;
+  border-radius: var(--r); font-family: var(--font-mono);
+  transition: opacity 0.15s;
+}
+.btn-delete-confirm:hover { opacity: 0.85; }
+
 /* ── RESPONSIVE ──────────────────────────────────────────────────────── */
 @media (max-width: 580px) {
   .campaign-options, .initiation-grid, .hearth-options-grid { grid-template-columns: 1fr; }
@@ -881,6 +913,16 @@ input, textarea, select { font-family: inherit; }
       <div class="pc-grid" id="sum-players"></div>
     </div>
 
+    <div class="delete-zone" id="delete-zone">
+      <button class="btn-delete-game" id="btn-delete-game">Delete</button>
+      <div class="delete-confirm" id="delete-confirm" hidden>
+        <label class="delete-label">
+          <input type="checkbox" id="delete-check">
+          <span id="delete-label-text">Yes, delete this game</span>
+        </label>
+        <button class="btn-delete-confirm" id="btn-delete-confirm" hidden>DELETE</button>
+      </div>
+    </div>
   </section>
 
 </div><!-- /.app -->
@@ -1537,6 +1579,15 @@ function saveHearthForm() {
 // ── SUMMARY ────────────────────────────────────────────────────────────
 function renderSummary() {
   const hearth = state.hearth?.name || state.hearth?.choice || '';
+  const deleteLabelEl = el('delete-label-text');
+  if (deleteLabelEl) deleteLabelEl.textContent = `Yes, delete “${hearth || 'this game'}”`;
+  // Reset delete UI
+  const deleteConfirm = el('delete-confirm');
+  if (deleteConfirm) { deleteConfirm.hidden = true; }
+  const deleteCheck = el('delete-check');
+  if (deleteCheck) deleteCheck.checked = false;
+  const deleteConfirmBtn = el('btn-delete-confirm');
+  if (deleteConfirmBtn) deleteConfirmBtn.hidden = true;
 
   el('sum-world-heading').textContent = hearth || state.campaign || '—';
   el('sum-campaign-label').textContent = hearth ? (state.campaign || '') : '';
@@ -1768,6 +1819,28 @@ document.addEventListener('DOMContentLoaded', async () => {
   });
 
   // Summary
+
+
+  // Delete game
+  el('btn-delete-game').addEventListener('click', () => {
+    const confirm = el('delete-confirm');
+    confirm.hidden = !confirm.hidden;
+    // Reset state when toggled
+    el('delete-check').checked = false;
+    el('btn-delete-confirm').hidden = true;
+  });
+
+  el('delete-check').addEventListener('change', e => {
+    el('btn-delete-confirm').hidden = !e.target.checked;
+  });
+
+  el('btn-delete-confirm').addEventListener('click', async () => {
+    if (!state?.id) return;
+    await dbDelete(state.id);
+    state = null;
+    await renderGameList();
+    showView('games');
+  });
 
   // Boot
   await renderGameList();
