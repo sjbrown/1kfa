@@ -4,9 +4,50 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>A Thousand Faces of Adventure</title>
-<script src="gamedata.js"></script>
+<!-- ══ DEV ONLY — DELETE BEFORE SHIP ══════════════════════════════════
+     Inline gamedata so the app works without running emit_gamedata.py.
+     Replace with <script src="gamedata.js"></script> for production.
+     ════════════════════════════════════════════════════════════════ -->
+<script>
+const GAMEDATA = {
+  "universe_creation": {
+    "campaign_options": [
+      {"name": "One-Shot", "desc": "Single session"},
+      {"name": "9-Hour Campaign", "desc": "3 sessions"},
+      {"name": "30-Hour Campaign", "desc": "10 sessions"}
+    ],
+    "intro": [{"type":"para","spans":[{"type":"text","text":"Before we start an adventure, we need to figure out what kind of world your characters come from. We'll go through a 3-step process to build what's called a Touchstone List. This will help define the setting and give us something to consult when your characters push the envelope and we ask \"is that even possible in this world?\""}]}],
+    "step_a": [{"type":"para","spans":[{"type":"text","text":"Everyone, grab a pen or pencil and write a few titles from pop culture on this piece of paper. Think of books, movies, games, comics and shows whose settings inspire your imagination. Think of ones where you've imagined yourself inside those stories and thought about what decisions you would have made if you were those characters."}]},{"type":"para","spans":[{"type":"text","text":"Don't overthink it, and don't criticize or reject anyone's title. This is pure brainstorming — let ideas flow freely. We'll stop when everyone has added a few."}]}],
+    "step_b": [{"type":"para","spans":[{"type":"text","text":"For step two, we're going to narrow it down. Each of us will take a turn circling "},{"type":"bold","text":"one"},{"type":"text","text":" title on the list. You can circle your own, or someone else's — but only choose one, and don't circle one that's already been chosen."}]}],
+    "step_b_notes": ["Watch for: genres incompatible with the rules (machine guns, interstellar travel). PCs should start <strong>scrappy</strong> — not super-powered. Titles must be known to everyone at the table.","If more than 3 are circled, <strong>GM selects the final 3</strong>."],
+    "step_c": [{"type":"para","spans":[{"type":"text","text":"This is our \"Touchstone List\": [read the titles]"}]},{"type":"para","spans":[{"type":"text","text":"Imagine this mashed-up universe."}]},{"type":"para","spans":[{"type":"text","text":"What kind of world could mash up pieces of each circled title?"}]},{"type":"para","spans":[{"type":"text","text":"What palette of colors shines in the brightness of day?  What hues swirl in the night sky? What are its dominant features? What secrets lie hidden in the small places? What folk live there? Do their children play happily in the sun? What monsters lurk in the darkness? What weakness do the ambitious and powerful exploit?"}]}],
+    "step_c_note": "These questions don't need to be answered procedurally — they're here to stir the imagination. But if the table does start imagining out-loud, keep that discussion going for as long as it is productive.",
+    "finally": [{"type":"para","spans":[{"type":"text","text":"Finally, who will "},{"type":"italic","text":"you"},{"type":"text","text":" be in this world?"}]},{"type":"para","spans":[{"type":"italic","text":"A Thousand Faces of Adventure"},{"type":"text","text":" is a game about a group of scrappy adventurers who grow in power as we play. Your character will begin with gifts beyond the ordinary, but they'll still need to fight, suffer, and strive to transform into the hero Destiny demands."}]}]
+  },
+  "character_creation": {
+    "traits_read_aloud": [{"type":"para","spans":[{"type":"text","text":"Your character has three traits: Dexterity, Intelligence, and Strength. Find those on the character sheet. They describe "},{"type":"italic","text":"how"},{"type":"text","text":" your character acts, solves problems, and overcomes adversity."}]},{"type":"para","spans":[{"type":"text","text":"You'll assign "},{"type":"bold","text":"6 points"},{"type":"text","text":" across these three traits to give them a rank."}]},{"type":"bullet","spans":[{"type":"text","text":"You must assign at least "},{"type":"bold","text":"Anvil (1)"},{"type":"text","text":" to each trait."}]},{"type":"bullet","spans":[{"type":"text","text":"No trait can go above "},{"type":"bold","text":"Dragon (4)"},{"type":"text","text":"."}]},{"type":"bullet","spans":[{"type":"text","text":"You have exactly 6 points to spend."}]},{"type":"para","spans":[{"type":"text","text":"Think about what your character relies on when the world turns against them. Are they fast? Cunning? Strong? What are they not so great at?"}]}],
+    "worldcloth_questions": [[{"type":"text","text":"What is your character's species or kin — human, or something else from our Touchstone List?"}],[{"type":"text","text":"Is your character righteous, hewing to moral norms, or do they get their hands dirty, taking opportunities wherever they find them?"}],[{"type":"text","text":"What work or calling defines your character's life — how do they earn respect, survive, or make trouble?"}],[{"type":"text","text":"Does your character believe in gods? Is there some kind of spiritual practice or religious organization for them?"}],[{"type":"text","text":"What kind of life does your character know best — wandering the wilds, the streets of a city, or somewhere in between?"}],[{"type":"text","text":"How old was your character when they had their closest encounter with Death? Were they its witness -- or its agent?"}],[{"type":"text","text":"What station does your character hold in the world's eyes — and what happens when they step into a crowd?"}]],
+    "worldcloth_followup": [{"type":"text","text":"Why does that complicate your character's life?"}],
+    "name_read_aloud": [{"type":"para","spans":[{"type":"text","text":"Now let's give your character a name."}]},{"type":"para","spans":[{"type":"text","text":"You can invent one, borrow from your favorite fantasy stories, or draw inspiration from the Touchstone List."}]},{"type":"para","spans":[{"type":"text","text":"Don't worry about getting it perfect. Choose something that feels fun to say, or that makes you curious about who this person might become."}]}],
+    "initiation_read_aloud": [{"type":"para","spans":[{"type":"text","text":"Since this is a game about taking risks, I'm going to give you an opportunity to get some bonuses when you get risky. We're going to create what are called "},{"type":"bold","text":"Initiations to Dark Gardens"},{"type":"text","text":"."}]},{"type":"para","spans":[{"type":"text","text":"An Initiation to Dark Gardens is a thematic goal your character might try to achieve during the story. You'll write it in the designated spot on your character sheet, and place an "},{"type":"bold","text":"XP token"},{"type":"text","text":" and a "},{"type":"bold","text":"✔ token"},{"type":"text","text":" there as well."}]},{"type":"para","spans":[{"type":"text","text":"When your character "},{"type":"italic","text":"takes a big risk"},{"type":"text","text":" to pursue this goal, you'll earn XP, and the ✔ token will advance a scene's progress bar. (We'll explain how those effects work later.)"}]},{"type":"para","spans":[{"type":"text","text":"To choose your Initiation to Dark Gardens, the player on your left will read you two options from a list. You'll pick one, and that becomes your character's personal Initiation to Dark Gardens.  You then read propose 2 different options to the player on your right and everyone will take their turn like that."}]}],
+    "initiation_options": [[{"type":"text","text":"Expose an embarrassment"}],[{"type":"text","text":"Locate a prize"}],[{"type":"text","text":"Extract a secret"}],[{"type":"text","text":"Become enamored"}],[{"type":"text","text":"Sell your services"}],[{"type":"text","text":"Break down a barrier"}],[{"type":"text","text":"Choose a side"}],[{"type":"text","text":"Be an agent of justice"}],[{"type":"text","text":"Take pity on the desperate"}],[{"type":"text","text":"Start a grudge"}],[{"type":"text","text":"Consort with the unsavory"}],[{"type":"text","text":"Believe an impossible claim"}],[{"type":"text","text":"Get called out on your boasting"}],[{"type":"text","text":"Claims the XP token"}],[{"type":"text","text":"Advances a ✔ token to a scene's progress bar of their choice"}]],
+    "receive_cards": [{"move":"Use a Magic Item","item":[{"type":"text","text":"1 magic item of your choice"}]},{"move":"Channel the Living Light","item":[{"type":"italic","text":"Sigil of the Living Light"}]},{"move":"Entreat the Blood Bound","item":[{"type":"italic","text":"Blade of Echoes"}]}]
+  },
+  "hearth": {
+    "at_home_read_aloud": [{"type":"para","spans":[{"type":"text","text":"What makes your character feel most at home, or what activity do they find the most comfort or competence in?"}]}],
+    "at_home_followup": [{"type":"text","text":"Listen for vulnerability. Where does each character feel safe enough to be themselves, to let their guard down? This will shape the beginning of the story.  Write down each player's answer."}],
+    "hearth_options": ["Specific People","Food","Song","Environmental feature","Ritual or festival","Group activity"],
+    "choose_hearth_read_aloud": [{"type":"para","spans":[{"type":"text","text":"This is a game where you all play together on the same team."}]},{"type":"para","spans":[{"type":"text","text":"So, let's bring all these characters together. We're going to decide on something that exists in the world of our Touchstone List that all of these characters value. They value it so much that they are going to team up to defend it - maybe even with their lives."}]},{"type":"para","spans":[{"type":"text","text":"We will call this thing \"The Hearth\"."}]}],
+    "hearth_examples_read_aloud": [{"type":"para","spans":[{"type":"text","text":"The Hearth can be a specific person or people. Maybe each character shares a friendly uncle?"}]},{"type":"para","spans":[{"type":"text","text":"The Hearth can be food. Do all these characters depend on the fruit of the quartzberry tree?"}]},{"type":"para","spans":[{"type":"text","text":"The Hearth can be a song. Is the valley home of these characters always humming with the melodies of the wood elves?"}]},{"type":"para","spans":[{"type":"text","text":"The Hearth can be an environmental feature. Does the village home of all these characters depend on the limestone spring for water?"}]},{"type":"para","spans":[{"type":"text","text":"The Hearth can be a ritual or festival. On the equinox, must every tribe send a representative to seal the portal to the netherworld?"}]},{"type":"para","spans":[{"type":"text","text":"The Hearth can be a group activity. No warrior may abandon the hunt until the beast is caught. Nor may they abandon each other."}]},{"type":"para","spans":[{"type":"text","text":"Those are some examples, but the choice is up to you. What will be The Hearth of this band of adventurers?"}]}],
+    "make_sure_note": [{"type":"text","text":"With follow up questions, make sure everyone agrees why this common thing bonds them\ntogether and why it makes them comrades that would risk their lives for\neach other."}],
+    "must_be_separated_note": [{"type":"text","text":"An important aspect of The Hearth is that it must be something that the characters can be separated from. When the players are deciding on The Hearth, keep this in mind."}],
+    "risk_life_read_aloud": [{"type":"para","spans":[{"type":"text","text":"Briefly, why would your character risk their life for The Hearth?"}]}]
+  }
+};
+</script>
+<!-- ══ END DEV ONLY ══════════════════════════════════════════════════ -->
 <style>
-@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
 
 /* ── TOKENS ──────────────────────────────────────────────────────────── */
 :root {
@@ -19,7 +60,7 @@
   --danger:  #C0410E;
   --green:   #0F6E56;
   --gold:    #C8A96E;
-  --font-serif: 'IM Fell English', Georgia, serif;
+  --font-serif: 'Tinos', Georgia, serif;
   --font-mono:  'Space Mono', 'Courier New', monospace;
   --page-max: 860px;
   --r: 3px;
@@ -299,28 +340,88 @@ input, textarea, select { font-family: inherit; }
 .game-list { list-style: none; margin-bottom: 1.5rem; }
 .game-item {
   display: flex; align-items: center; justify-content: space-between;
-  padding: 0.75rem 0; border-bottom: 1px solid #222; gap: 1rem;
+  padding: 0.75rem 0.5rem; border: 1.5px solid transparent;
+  border-bottom-color: #222; gap: 1rem;
+  cursor: pointer; border-radius: var(--r);
+  transition: border-color 0.15s;
+  margin: 0 -0.5rem;
 }
-.game-item:first-child { border-top: 1px solid #222; }
-.game-meta   { flex: 1; min-width: 0; }
+.game-item:hover { border-color: var(--gold); }
+.game-meta   { display: flex; align-items: center; gap: 0.75rem; flex: 1; min-width: 0; }
+.game-text   { flex: 1; min-width: 0; }
 .game-name   { font-family: var(--font-serif); font-size: 1.05rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .game-detail { font-size: 0.65rem; color: var(--rule); text-transform: uppercase; letter-spacing: 0.12em; margin-top: 0.15rem; }
-.btn-resume  { background: none; border: 1.5px solid #333; color: var(--paper); padding: 0.35rem 0.75rem; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.15em; border-radius: var(--r); white-space: nowrap; transition: border-color 0.15s; }
-.btn-resume:hover { border-color: var(--accent); }
-.btn-delete  { background: none; border: none; color: #444; font-size: 1rem; padding: 0.2rem; transition: color 0.15s; }
-.btn-delete:hover { color: var(--danger); }
+.game-players {
+  font-size: 0.7rem; color: var(--rule); text-align: right;
+  line-height: 1.5; flex-shrink: 0; max-width: 9rem;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
 
 /* ── SUMMARY ─────────────────────────────────────────────────────────── */
-.summary-card { border: 1.5px solid #2a2a2a; border-radius: var(--r); padding: 1.25rem 1.5rem; margin-bottom: 1rem; }
-.summary-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--rule); margin-bottom: 0.4rem; }
+.summary-card {
+  border: 1.5px solid #2a2a2a; border-radius: var(--r);
+  padding: 1.25rem 1.5rem; margin-bottom: 1rem;
+}
+.summary-label {
+  font-size: 0.6rem; text-transform: uppercase;
+  letter-spacing: 0.2em; color: var(--rule); margin-bottom: 0.4rem;
+}
 .summary-value { font-family: var(--font-serif); font-size: 1.1rem; }
-.touchstone-pill { background: rgba(200,169,110,0.12); border: 1px solid var(--gold); color: var(--gold); font-size: 0.8rem; padding: 0.25rem 0.65rem; border-radius: 2px; }
-.touchstone-final-list { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.5rem; }
 
-.summary-players { margin-top: 0.5rem; }
-.summary-player { font-size: 0.85rem; color: var(--rule); padding: 0.25rem 0; border-bottom: 1px solid #222; }
-.summary-player:last-child { border-bottom: none; }
-.summary-player strong { color: var(--paper); font-weight: 400; font-family: var(--font-serif); }
+/* World card */
+.world-card-inner {
+  display: flex; align-items: flex-start;
+  justify-content: space-between; gap: 1.5rem;
+}
+.world-card-text { flex: 1; min-width: 0; }
+.world-heading {
+  font-family: var(--font-serif); font-size: 1.4rem;
+  color: var(--paper); line-height: 1.2; margin-bottom: 0.35rem;
+}
+.world-card-thumbs {
+  display: flex; align-items: flex-start; gap: 0.4rem; flex-shrink: 0;
+}
+.sum-ts-card {
+  display: flex; flex-direction: column;
+  border: 1px solid var(--gold); border-radius: var(--r);
+  overflow: hidden; width: 4.5rem; flex-shrink: 0;
+}
+.sum-ts-thumb {
+  width: 4.5rem; height: 6.5rem;
+  object-fit: cover; display: block;
+}
+.sum-ts-label {
+  padding: 0.3rem 0.35rem;
+  font-size: 0.6rem; color: var(--gold);
+  font-family: var(--font-serif); font-style: italic;
+  line-height: 1.25; word-break: break-word;
+}
+.sum-ts-plus {
+  font-family: var(--font-mono); font-size: 1.25rem;
+  color: var(--gold); align-self: center;
+  flex-shrink: 0; line-height: 1; padding-bottom: 1.25rem;
+}
+
+/* PC grid */
+.pc-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  gap: 0.75rem; margin-top: 0.5rem;
+}
+.pc-card {
+  border-radius: var(--r); padding: 0.8rem 0.95rem;
+  color: var(--paper);
+}
+.pc-name {
+  font-family: var(--font-serif); font-size: 1.25rem;
+  font-weight: 400; line-height: 1.2; margin-bottom: 0.25rem;
+}
+.pc-player { font-size: 0.85rem; color: rgba(255,255,255,0.5); margin-bottom: 0.4rem; }
+.pc-initiation { font-size: 0.8rem; color: rgba(255,255,255,0.7); line-height: 1.4; }
+
+@media (max-width: 520px) {
+  .world-card-inner { flex-direction: column; }
+  .world-card-thumbs { margin-top: 0.75rem; }
+}
 
 /* ── TOAST ───────────────────────────────────────────────────────────── */
 .toast {
@@ -468,6 +569,56 @@ input, textarea, select { font-family: inherit; }
 .imagining #titles-brainstorm,
 .imagining .add-title-row { display: none; }
 
+/* ── HAMBURGER MENU ──────────────────────────────────────────────────── */
+.hamburger {
+  background: none; border: none; padding: 4px;
+  display: flex; flex-direction: column; gap: 5px;
+  cursor: pointer;
+}
+.hamburger span {
+  display: block; width: 22px; height: 2px;
+  background: var(--rule);
+  transition: background 0.15s, transform 0.25s, opacity 0.2s;
+  transform-origin: center;
+}
+.hamburger:hover span { background: var(--paper); }
+
+
+/* ── GAME LIST THUMBNAILS ────────────────────────────────────────────── */
+.game-thumbs {
+  display: flex; align-items: center; gap: 4px;
+  margin-bottom: 0.3rem;
+}
+.game-thumb {
+  width: 2rem; height: 2rem;
+  object-fit: cover; border-radius: 2px;
+  display: block; flex-shrink: 0;
+}
+.game-thumb-plus {
+  font-size: 0.75rem; color: var(--gold);
+  line-height: 1; flex-shrink: 0;
+  font-family: var(--font-mono);
+}
+
+/* ── SUMMARY INTERACTIVITY ───────────────────────────────────────────── */
+#sum-world-card {
+  cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+#sum-world-card:hover {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 2px rgba(200,169,110,0.25);
+}
+.sum-ts-card {
+  transition: border-color 0.15s, box-shadow 0.15s;
+  cursor: pointer;
+}
+.sum-ts-card:hover {
+  border-color: var(--gold);
+  border-width: 2.5px;
+  box-shadow: 0 0 0 2px rgba(200,169,110,0.3);
+}
+
 /* ── RESPONSIVE ──────────────────────────────────────────────────────── */
 @media (max-width: 580px) {
   .campaign-options, .initiation-grid, .hearth-options-grid { grid-template-columns: 1fr; }
@@ -484,30 +635,31 @@ input, textarea, select { font-family: inherit; }
       <div class="masthead-title">A Thousand Faces of Adventure</div>
       <div class="masthead-sub" id="masthead-phase">Setup</div>
     </div>
-    <button class="btn-ghost" id="btn-show-games">Saved Games</button>
+    <button class="hamburger" id="btn-show-games" aria-label="Home">
+      <span></span><span></span><span></span>
+    </button>
   </header>
 
   <!-- ── VIEW: GAME LIST ──────────────────────────────────────────────── -->
   <section class="view" id="view-games">
-    <div class="section-label">Saved Games</div>
     <h1 class="page-title">Your Games</h1>
     <p class="page-subtitle">Pick up where you left off, or start fresh</p>
-    <ul class="game-list" id="game-list"></ul>
-    <div class="action-row">
+    <div class="action-row" style="margin-top:0;margin-bottom:1.5rem;">
       <button class="btn-primary" id="btn-new-game">New Game</button>
     </div>
+    <ul class="game-list" id="game-list"></ul>
   </section>
 
   <!-- ── VIEW: WHO'S AT THE TABLE ──────────────────────────────────────── -->
   <section class="view" id="view-players">
     <div class="section-label">Before we begin</div>
     <h1 class="page-title">Who's at the table?</h1>
-    <p class="page-subtitle">Enter the GM's name, then one name per player</p>
+    <p class="page-subtitle">Enter the names of everyone at your table</p>
 
     <div class="privacy-note">
       <div class="privacy-note-text">
         Everything you type here stays on this device.
-        Nothing is sent to any server. Ever.
+        Nothing is sent to any server. <u>Ever.</u>
       </div>
       <div class="privacy-note-fine">
         For the curious: all game data is stored in your browser's IndexedDB —
@@ -586,7 +738,7 @@ input, textarea, select { font-family: inherit; }
     <div class="phase-actions-wrap">
       <div class="phase-actions" id="phase-actions-a">
         <div class="action-row">
-          <button class="btn-primary" id="btn-to-narrow">Narrow the List →</button>
+          <button class="btn-primary" id="btn-to-narrow" disabled>Narrow the List →</button>
           <button class="btn-secondary" id="btn-a-back">← Back</button>
         </div>
       </div>
@@ -706,7 +858,7 @@ input, textarea, select { font-family: inherit; }
 
     <div class="action-row">
       <button class="btn-primary" id="btn-hearth-finish">Save &amp; Finish →</button>
-      <button class="btn-secondary" id="btn-hearth-back">← Character Creation</button>
+      <button class="btn-secondary" id="btn-hearth-back" style="display:none">← Character Creation</button>
     </div>
   </section>
 
@@ -716,21 +868,18 @@ input, textarea, select { font-family: inherit; }
     <h1 class="page-title">Ready to Play</h1>
     <p class="page-subtitle">Hand off to the GM Guide at Chapter 1</p>
 
-    <div class="summary-card">
-      <div class="summary-label">Campaign</div>
-      <div class="summary-value" id="sum-campaign">—</div>
+    <div class="summary-card" id="sum-world-card">
+      <div class="world-card-inner">
+        <div class="world-card-text">
+          <div class="world-heading" id="sum-world-heading">—</div>
+          <div class="summary-label" id="sum-campaign-label"></div>
+        </div>
+        <div class="world-card-thumbs" id="sum-touchstones"></div>
+      </div>
     </div>
     <div class="summary-card">
-      <div class="summary-label">Touchstone List</div>
-      <div class="touchstone-final-list" id="sum-touchstones"></div>
-    </div>
-    <div class="summary-card">
-      <div class="summary-label">Players</div>
-      <div class="summary-players" id="sum-players"></div>
-    </div>
-    <div class="summary-card">
-      <div class="summary-label">The Hearth</div>
-      <div class="summary-value" id="sum-hearth">—</div>
+      <div class="summary-label">PCs</div>
+      <div class="pc-grid" id="sum-players"></div>
     </div>
 
     <div class="action-row">
@@ -855,6 +1004,9 @@ function showView(name) {
 
 function showPhase(name) {
   const ts = el('view-touchstones');
+  // Hide back button if returning to an already-started touchstone session
+  const backBtn = el('btn-a-back');
+  if (backBtn) backBtn.style.display = state && state.titles.length > 0 ? 'none' : '';
   if (name === 'a') {
     ts.classList.remove('narrowing', 'imagining');
   } else if (name === 'b') {
@@ -864,6 +1016,17 @@ function showPhase(name) {
   } else if (name === 'c') {
     ts.classList.add('narrowing', 'imagining');
     renderShowcase();
+    // Adapt the primary action based on whether we're in edit mode
+    const chargenBtn = el('btn-to-chargen');
+    if (chargenBtn) {
+      if (state && state.hearth?.saved) {
+        chargenBtn.textContent = 'Save';
+        chargenBtn.dataset.editMode = 'true';
+      } else {
+        chargenBtn.textContent = 'Character Creation →';
+        chargenBtn.dataset.editMode = '';
+      }
+    }
   }
 }
 
@@ -915,7 +1078,7 @@ function renderPlayersEntry() {
       <span class="player-role-badge">Player ${i+1}</span>
       <input class="player-entry-input" data-pidx="${i}" type="text"
              placeholder="Name…" maxlength="40" value="${name}">
-      <button class="player-entry-remove" data-remove="${i}" title="Remove">×</button>
+      <button class="player-entry-remove" tabindex="-1" data-remove="${i}" title="Remove">×</button>
     `;
     container.appendChild(card);
   });
@@ -954,9 +1117,10 @@ function savePlayersForm() {
 
 function validatePlayersNext() {
   const gmOk = (el('entry-gm')?.value || '').trim().length > 0;
-  const anyPlayer = (state.player_names || []).some(n => n.trim().length > 0)
-    || document.querySelectorAll('[data-pidx]').length > 0;
   el('btn-players-next').disabled = !gmOk;
+  // GM counts as 1; max 6 total means max 5 player slots
+  const addBtn = el('btn-add-player-entry');
+  if (addBtn) addBtn.style.display = (state.player_names || []).length >= 5 ? 'none' : '';
 }
 
 function freshState() {
@@ -971,6 +1135,7 @@ function freshState() {
       choice:       null,    // one of hearth.hearth_options
       name:         '',      // freetext description
       risk_answers: [],      // parallel to players
+      saved:        false,   // true once Save & Finish pressed at least once
     },
     createdAt: Date.now(),
     updatedAt: Date.now(),
@@ -1041,6 +1206,8 @@ function renderCampaignOptions() {
 // ── TITLE CHIPS ────────────────────────────────────────────────────────
 function renderBrainstorm() {
   renderChips(el('titles-brainstorm'), 'brainstorm');
+  const btn = el('btn-to-narrow');
+  if (btn) btn.disabled = state.titles.length < 3;
 }
 function renderNarrow() {
   renderBrainstorm();
@@ -1326,6 +1493,11 @@ function renderHearthView() {
 
   // Hearth name
   el('hearth-name-input').value = state.hearth.name || '';
+  // Show/hide back button depending on whether hearth has been saved before
+  const hearthBack = el('btn-hearth-back');
+  const hearthFinish = el('btn-hearth-finish');
+  if (hearthBack) hearthBack.style.display = state.hearth?.saved ? 'none' : '';
+  if (hearthFinish) hearthFinish.textContent = state.hearth?.saved ? 'Save' : 'Save & Finish →';
 
   // At-home table
   const atHomeBody = el('hearth-at-home-body');
@@ -1369,17 +1541,58 @@ function saveHearthForm() {
 
 // ── SUMMARY ────────────────────────────────────────────────────────────
 function renderSummary() {
-  el('sum-campaign').textContent = state.campaign || '—';
+  const hearth = state.hearth?.name || state.hearth?.choice || '';
+
+  el('sum-world-heading').textContent = hearth || state.campaign || '—';
+  el('sum-campaign-label').textContent = hearth ? (state.campaign || '') : '';
 
   const circled = state.titles.filter(t => t.circled);
   const show = circled.length ? circled : state.titles;
-  el('sum-touchstones').innerHTML = show.map(t => `<span class="touchstone-pill">${t.text}</span>`).join('');
+  el('sum-touchstones').innerHTML = show.map((t, i) => {
+    const src = t.thumb || gradientSVG(t.text, 72, 104);
+    const plus = i < show.length - 1
+      ? '<span class="sum-ts-plus">+</span>' : '';
+    return `<div class="sum-ts-card">
+        <img class="sum-ts-thumb" src="${src}" alt="${t.text}">
+        <div class="sum-ts-label">${t.text}</div>
+      </div>${plus}`;
+  }).join('');
 
-  el('sum-players').innerHTML = state.players.map(p =>
-    `<div class="summary-player"><strong>${p.name || '—'}</strong>${p.initiation !== null ? ' · ' + spansToHTML(cc.initiation_options[p.initiation]) : ''}</div>`
-  ).join('');
+  // Wire world card → hearth edit
+  setTimeout(() => {
+    const worldCard = el('sum-world-card');
+    if (worldCard) {
+      worldCard.onclick = e => {
+        // Only if not clicking a thumb (thumbs handle themselves)
+        if (!e.target.closest('.sum-ts-card')) {
+          renderHearthView();
+          showView('hearth');
+        }
+      };
+    }
+    // Wire each thumb → touchstone edit (phase b, narrow mode)
+    el('sum-touchstones').querySelectorAll('.sum-ts-card').forEach(card => {
+      card.onclick = e => {
+        e.stopPropagation();
+        showView('touchstones');
+        showView('touchstones');
+        showPhase('a');
+      };
+    });
+  }, 0);
 
-  el('sum-hearth').textContent = state.hearth.name || state.hearth.choice || '—';
+  el('sum-players').innerHTML = state.players.map((p, i) => {
+    const init = p.initiation !== null && p.initiation !== undefined
+      ? spansToHTML(cc.initiation_options[p.initiation]) : '';
+    const charName = p.name || '—';
+    const playerName = (state.player_names || [])[i] || '';
+    const g = titleGradient(charName);
+    const bg = `linear-gradient(${g.angle}deg, ${g.c1}, ${g.c2})`;
+    return `<div class="pc-card" style="background:${bg}">
+      <div class="pc-name">${charName}${playerName ? ` <span class="pc-player">(${playerName})</span>` : ''}</div>
+      ${init ? `<div class="pc-initiation">${init}</div>` : ''}
+    </div>`;
+  }).join('');
 }
 
 // ── GAME LIST ──────────────────────────────────────────────────────────
@@ -1395,28 +1608,41 @@ async function renderGameList() {
     const li = document.createElement('li');
     li.className = 'game-item';
     const circled = (g.titles||[]).filter(t=>t.circled);
-    const preview = circled.length ? circled.map(t=>t.text).join(', ')
-      : (g.titles||[]).map(t=>t.text).join(', ') || 'No titles';
     const date = new Date(g.updatedAt).toLocaleDateString();
     const hearth = g.hearth?.name || g.hearth?.choice || '';
+
+    // Thumbnail strip — only if titles have been circled
+    let thumbsHTML = '';
+    if (circled.length) {
+      const parts = circled.map((t, i) => {
+        const src = t.thumb || gradientSVG(t.text, 32, 32);
+        const plus = i < circled.length - 1
+          ? '<span class="game-thumb-plus">+</span>' : '';
+        return `<img class="game-thumb" src="${src}" alt="${t.text}">${plus}`;
+      }).join('');
+      thumbsHTML = `<div class="game-thumbs">${parts}</div>`;
+    }
+
+    const gameName = hearth || g.campaign || 'No campaign';
+    const detail   = [g.campaign, date].filter(Boolean).join(' · ');
+    const allNames = [g.gm_name, ...(g.player_names || [])]
+      .filter(Boolean)
+      .join(', ');
+
     li.innerHTML = `
       <div class="game-meta">
-        <div class="game-name">${g.campaign || 'No campaign'}</div>
-        <div class="game-detail">${date}${hearth ? ' · ' + hearth : ''} · ${preview}</div>
+        ${thumbsHTML}
+        <div class="game-text">
+          <div class="game-name">${gameName}</div>
+          <div class="game-detail">${detail}</div>
+        </div>
+        ${allNames ? `<div class="game-players">${allNames}</div>` : ''}
       </div>
-      <button class="btn-resume" data-id="${g.id}">Resume</button>
-      <button class="btn-delete" data-id="${g.id}" title="Delete">×</button>
     `;
+    li.addEventListener('click', () => loadGame(g.id));
     list.appendChild(li);
   });
-  list.querySelectorAll('.btn-resume').forEach(btn =>
-    btn.addEventListener('click', () => loadGame(btn.dataset.id)));
-  list.querySelectorAll('.btn-delete').forEach(btn =>
-    btn.addEventListener('click', async () => {
-      if (!confirm('Delete this game?')) return;
-      await dbDelete(btn.dataset.id);
-      renderGameList();
-    }));
+
 }
 
 async function loadGame(id) {
@@ -1508,10 +1734,15 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Phase C
   el('btn-to-chargen').addEventListener('click', async () => {
     await saveGame();
-    currentPlayerIdx = 0;
-    renderPlayerTabs();
-    renderPlayerForm();
-    showView('chargen');
+    if (el('btn-to-chargen').dataset.editMode === 'true') {
+      renderSummary();
+      showView('summary');
+    } else {
+      currentPlayerIdx = 0;
+      renderPlayerTabs();
+      renderPlayerForm();
+      showView('chargen');
+    }
   });
   el('btn-c-back').addEventListener('click', () => showPhase('b'));
 
@@ -1528,6 +1759,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Hearth
   el('btn-hearth-finish').addEventListener('click', async () => {
     saveHearthForm();
+    state.hearth.saved = true;
     await saveGame();
     renderSummary();
     showView('summary');
