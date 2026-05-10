@@ -1352,21 +1352,28 @@ input, textarea, select { font-family: inherit; }
 
 /* ── CHARACTER CREATION ──────────────────────────────────────────────── */
 .player-tabs {
-  display: flex; gap: 0; margin-bottom: 1.5rem;
-  border-bottom: 1px solid #333;
+  margin-top: 1.25rem;
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem; margin-bottom: 1.5rem;
 }
 .player-tab {
-  background: none; border: none; color: var(--rule);
-  font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em;
-  padding: 0.5rem 1rem 0.6rem; border-bottom: 2px solid transparent;
-  margin-bottom: -1px; transition: color 0.15s, border-color 0.15s;
+  border: none; border-radius: var(--r);
+  font-size: 0.75rem; font-family: var(--font-serif);
+  padding: 0.65rem 0.5rem;
+  color: rgba(255,255,255,0.9);
+  text-align: center; cursor: pointer;
+  transition: opacity 0.15s, box-shadow 0.15s;
+  box-shadow: none;
 }
-.player-tab:hover  { color: var(--paper); }
-.player-tab.active { color: var(--gold); border-bottom-color: var(--gold); }
+.player-tab:hover  { opacity: 0.85; }
+.player-tab.active {
+  box-shadow: 0 0 0 2.5px var(--gold), 0 2px 8px rgba(0,0,0,0.4);
+  opacity: 1;
+}
 .btn-add-player {
   background: none; border: 1.5px dashed #333; color: var(--rule);
   font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.15em;
-  padding: 0.35rem 0.75rem; border-radius: var(--r); margin-left: auto; align-self: center;
+  padding: 0.35rem 0.75rem; border-radius: var(--r);
   transition: border-color 0.15s, color 0.15s;
 }
 .btn-add-player:hover { border-color: #555; color: var(--paper); }
@@ -1376,7 +1383,7 @@ input, textarea, select { font-family: inherit; }
 /* Player name input */
 .player-name-input {
   width: 100%; background: #111; border: 1.5px solid #333; border-radius: var(--r);
-  padding: 0.6rem 0.85rem; color: var(--paper); font-size: 1rem;
+  padding: 0.6rem 0.85rem; color: var(--paper); font-size: 2rem;
   transition: border-color 0.15s; margin-bottom: 1rem;
   font-family: var(--font-serif);
 }
@@ -1522,13 +1529,31 @@ input, textarea, select { font-family: inherit; }
 }
 .pc-card {
   border-radius: var(--r); padding: 0.8rem 0.95rem;
-  color: var(--paper);
+  color: var(--paper); cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color 0.15s;
 }
+.pc-card:hover { border-color: var(--gold); }
 .pc-name {
   font-family: var(--font-serif); font-size: 1.25rem;
   font-weight: 400; line-height: 1.2; margin-bottom: 0.25rem;
 }
 .pc-player { font-size: 0.85rem; color: rgba(255,255,255,0.5); margin-bottom: 0.4rem; }
+.pc-move-cards {
+  display: flex; gap: 0.5rem; flex-wrap: wrap;
+  margin-top: 0.75rem;
+}
+.pc-move-card {
+  flex: 1; min-width: 0;
+  aspect-ratio: 3 / 4;
+}
+.pc-move-card .move-card-inner {
+  width: 100%; height: 100%;
+  box-shadow: 1px 2px 5px rgba(0,0,0,0.5);
+}
+.pc-move-card .spot-card-title { font-size: 0.75rem; }
+.pc-move-card .spot-card-attr  { font-size: 0.45rem; }
+
 .pc-initiation { font-size: 0.8rem; color: rgba(255,255,255,0.7); line-height: 1.4; }
 
 @media (max-width: 520px) {
@@ -1732,15 +1757,13 @@ input, textarea, select { font-family: inherit; }
 }
 
 /* ── DOWNLOAD ZONE ───────────────────────────────────────────────────── */
-.download-zone {
-  margin-top: 2rem;
-  display: flex; flex-direction: column; gap: 0.6rem;
-  align-items: flex-start;
+.summary-footer-actions {
+  display: flex; gap: 0.75rem; margin-top: 2rem; flex-wrap: wrap;
 }
 .btn-download { font-size: 0.7rem; padding: 0.5rem 1.1rem; }
 .download-hint {
   font-size: 0.7rem; color: var(--rule);
-  line-height: 1.5; font-style: italic;
+  line-height: 1.5; font-style: italic; margin-top: 0.5rem;
 }
 .download-hint[hidden] { display: none; }
 
@@ -1888,20 +1911,34 @@ input, textarea, select { font-family: inherit; }
 }
 .card-picker-close:hover { color: var(--paper); }
 
+/* ── MOVE CARD ADDITIONS ─────────────────────────────────────────────── */
+/* All cards in MC2/MC3 use spot-filled so card is centered */
+.move-card-spot.spot-filled {
+  display: flex; align-items: center; justify-content: center;
+}
+/* Selected in MC2: darkorange-to-gold gradient behind the card */
+.move-card-spot.spot-selected {
+  background-image: linear-gradient(to top, darkorange, gold);
+}
+/* Player badge overlay in MC3 */
+.mc-spot-player-badge {
+  position: absolute; inset: 0;
+  border-radius: 8px;
+  opacity: 0.55;
+  pointer-events: none;
+}
+/* Player picker pills */
+.player-pill {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0.6rem 0.85rem; margin-bottom: 0.4rem;
+  border-radius: var(--r); cursor: pointer;
+  font-family: var(--font-serif); font-size: 1rem;
+  transition: opacity 0.15s;
+}
+.player-pill:hover { opacity: 0.85; }
+.player-pill-count { font-size: 0.7rem; opacity: 0.7; font-family: var(--font-mono); }
+
 /* ── DELETE ZONE ─────────────────────────────────────────────────────── */
-.delete-zone {
-  margin-top: 2.5rem; padding-top: 1.5rem;
-  border-top: 1px solid #1e1e1e;
-  display: flex; flex-direction: column; gap: 0.75rem;
-}
-.btn-delete-game {
-  background: none; border: none;
-  color: var(--rule); font-size: 0.65rem;
-  text-transform: uppercase; letter-spacing: 0.15em;
-  padding: 0; align-self: flex-start;
-  transition: color 0.15s;
-}
-.btn-delete-game:hover { color: var(--danger); }
 .delete-confirm {
   display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;
 }
@@ -2083,29 +2120,50 @@ input, textarea, select { font-family: inherit; }
       <div class="flow-step"></div>
       <div class="flow-step"></div>
     </div>
-    <div class="section-label">Step 3 of 5</div>
-    <h1 class="page-title">Choose Move Cards</h1>
-    <p class="page-subtitle" id="movecards-subtitle">Each player selects their starting moves</p>
+    <div class="section-label" id="mc-section-label">Step 3 of 5</div>
 
-    <p class="movecards-instruction">This screen guides you through laying out and choosing cards at your table. Do the following steps in real life.<br><br>Place all three cards marked with an <strong>"A"</strong> in the corner face down in the top row.</p>
-
-    <!-- Floating card picker -->
-    <div class="card-picker-overlay" id="card-picker-overlay" hidden>
-      <div class="card-picker" id="card-picker">
-        <div class="card-picker-label">Choose a card for this spot</div>
-        <div class="card-picker-grid" id="card-picker-grid"></div>
-        <button class="card-picker-close" id="card-picker-close">Cancel</button>
+    <!-- Floating player picker (step 3) -->
+    <div class="card-picker-overlay" id="player-picker-overlay" hidden>
+      <div class="card-picker" id="player-picker">
+        <div class="card-picker-label">Who chooses this card?</div>
+        <div id="player-picker-list"></div>
+        <button class="card-picker-close" id="player-picker-close">Cancel</button>
       </div>
     </div>
 
-    <div class="move-card-grid" id="move-card-grid"></div>
+    <!-- Phase 1: Lay out A cards -->
+    <div id="mc-phase-1">
+      <h1 class="page-title">Move Cards</h1>
+      <p class="movecards-instruction">Follow these steps laying out and choosing cards at your table. Do the following steps in real life.<br><br>Place all three cards marked with an <strong>"A"</strong> in the corner face down in the top row.</p>
+      <div class="move-card-grid" id="mc1-grid"></div>
+      <div class="action-row">
+        <button class="btn-primary" id="btn-mc1-next">Next →</button>
+        <button class="btn-secondary" id="btn-mc1-back">← Touchstones</button>
+      </div>
+    </div>
 
-    <div class="action-row">
-      <button class="btn-primary" id="btn-movecards-next">Continue Character Creation →</button>
-      <button class="btn-secondary" id="btn-movecards-back">← Touchstones</button>
+    <!-- Phase 2: GM selects additional cards -->
+    <div id="mc-phase-2" style="display:none">
+      <h1 class="page-title">Move Cards</h1>
+      <p class="movecards-instruction" id="mc2-instruction"></p>
+      <div class="move-card-grid" id="mc2-grid"></div>
+      <div class="action-row">
+        <button class="btn-primary" id="btn-mc2-next" disabled>Next →</button>
+        <button class="btn-secondary" id="btn-mc2-back">← Back</button>
+      </div>
+    </div>
+
+    <!-- Phase 3: Players claim cards -->
+    <div id="mc-phase-3" style="display:none">
+      <h1 class="page-title">Choose Your Cards</h1>
+      <div class="read-aloud" id="mc3-read-aloud"></div>
+      <div class="move-card-grid" id="mc3-grid"></div>
+      <div class="action-row">
+        <button class="btn-primary" id="btn-mc3-next" disabled>Continue Character Creation →</button>
+        <button class="btn-secondary" id="btn-mc3-back">← Back</button>
+      </div>
     </div>
   </section>
-
   <!-- ── VIEW: CHARACTER CREATION ─────────────────────────────────────── -->
   <section class="view" id="view-chargen">
     <div class="flow-progress">
@@ -2118,7 +2176,10 @@ input, textarea, select { font-family: inherit; }
     </div>
     <div class="section-label">Step 4 of 5</div>
     <h1 class="page-title">Character Creation</h1>
-    <p class="page-subtitle">One player at a time — GM reads aloud, player answers</p>
+    <p class="page-subtitle">Flesh out your character</p>
+
+    <!-- Section nav -->
+    <div class="character-reqs" id="character-reqs"></div>
 
     <!-- Player tabs -->
     <div class="player-tabs" id="player-tabs"></div>
@@ -2175,7 +2236,7 @@ input, textarea, select { font-family: inherit; }
       <p class="gm-note" id="gm-note-make-sure"></p>
 
       <label class="section-label" style="display:block;margin-top:1rem;margin-bottom:0.35rem;">The Hearth is:</label>
-      <input class="hearth-name-input" id="hearth-name-input" type="text" placeholder="e.g. The limestone spring that feeds the valley…" maxlength="120">
+      <input class="hearth-name-input" id="hearth-name-input" type="text" placeholder="e.g. The limestone spring that feeds the valley…" maxlength="120" oninput="state.hearth.name=this.value;autoSave()">
       <p class="gm-note" id="gm-note-separated"></p>
     </div>
 
@@ -2220,19 +2281,17 @@ input, textarea, select { font-family: inherit; }
       <div class="pc-grid" id="sum-players"></div>
     </div>
 
-    <div class="download-zone">
+    <div class="summary-footer-actions">
       <button class="btn-secondary btn-download" id="btn-download">Download</button>
-      <p class="download-hint" id="download-hint" hidden>Use this JSON file to move your game to another browser or device.</p>
+      <button class="btn-secondary btn-delete-game" id="btn-delete-game">Delete</button>
     </div>
-    <div class="delete-zone" id="delete-zone">
-      <button class="btn-delete-game" id="btn-delete-game">Delete</button>
-      <div class="delete-confirm" id="delete-confirm" hidden>
-        <label class="delete-label">
-          <input type="checkbox" id="delete-check">
-          <span id="delete-label-text">Yes, delete this game</span>
-        </label>
-        <button class="btn-delete-confirm" id="btn-delete-confirm" hidden>DELETE</button>
-      </div>
+    <p class="download-hint" id="download-hint" hidden>Use this JSON file to move your game to another browser or device.</p>
+    <div class="delete-confirm" id="delete-confirm" hidden>
+      <label class="delete-label">
+        <input type="checkbox" id="delete-check">
+        <span id="delete-label-text">Yes, delete this game</span>
+      </label>
+      <button class="btn-delete-confirm" id="btn-delete-confirm" hidden>DELETE</button>
     </div>
   </section>
 
@@ -2295,8 +2354,8 @@ async function fetchThumb(title) {
 }
 
 async function fetchAndCacheThumb(title) {
-  // Store on state.titles entry so it persists across renders
-  const entry = state.titles.find(t => t.text === title);
+  // Store on state.touchstones entry so it persists across renders
+  const entry = state.touchstones.find(t => t.text === title);
   if (!entry) return;
   if (entry.thumb !== undefined) return;   // already attempted
   entry.thumb = null;                       // mark in-flight
@@ -2355,7 +2414,7 @@ function showPhase(name) {
   const ts = el('view-touchstones');
   // Hide back button if returning to an already-started touchstone session
   const backBtn = el('btn-a-back');
-  if (backBtn) backBtn.style.display = state && state.titles.length > 0 ? 'none' : '';
+  if (backBtn) backBtn.style.display = state && state.touchstones.length > 0 ? 'none' : '';
   if (name === 'a') {
     ts.classList.remove('narrowing', 'imagining');
   } else if (name === 'b') {
@@ -2404,146 +2463,226 @@ let state = null;
 
 
 
-// ── MOVE CARD GRID ─────────────────────────────────────────────────────
+// ── MOVE CARD STATE ────────────────────────────────────────────────────
 const aMoves = (GAMEDATA.moves || []).filter(m => m.groups.includes('A'));
-// Track which A-move is in each of the 3 A-spots (null = empty)
-let aSpotAssignments    = [null, null, null];
-let additionalAssignments = [];  // indexed by (spotIdx - 3)
 
-function renderMoveCardGrid() {
-  const playerCount = state.players.length || 1;
+function playerGradientCSS(name) {
+  const g = titleGradient(name || '?');
+  return `linear-gradient(${g.angle}deg, ${g.c1}, ${g.c2})`;
+}
+
+function initMoveCardState() {
+  const playerCount = state.pcs.length || 1;
   const tableEntry  = (cc.move_card_table || [])
     .find(row => parseInt(row.players) === playerCount);
   const additional  = tableEntry ? parseInt(tableEntry.cards) : 0;
-  const total       = 3 + additional;
+  state.move_card_state = {
+    a_spots:          [null, null, null],
+    gm_selected:      [],
+    player_assigned:  {},
+    additional_count: additional,
+  };
+}
 
-  const grid = el('move-card-grid');
+function availableAdditionalMoves() {
+  const isOneShot = state.campaignLength === 'One-Shot';
+  return (GAMEDATA.moves || []).filter(m =>
+    m.component === null &&
+    !m.groups.includes('A') &&
+    !(isOneShot && m.groups.includes('9hour'))
+  ).sort((a, b) => a.title.localeCompare(b.title));
+}
+
+// ── SHARED CARD HTML ───────────────────────────────────────────────────
+function moveCardInnerHTML(move) {
+  return `
+    <div class="card-body-top">
+      <div class="spot-card-title">${move.title}</div>
+    </div>
+    <div class="card-body-bottom">
+      <hr class="spot-card-rule">
+      <div class="spot-card-attr">${move.attrs.join(' \xb7 ')}</div>
+    </div>`;
+}
+function moveCardHTML(move) {
+  return `<div class="move-card-inner">${moveCardInnerHTML(move)}</div>`;
+}
+
+// ── PHASE 1 ────────────────────────────────────────────────────────────
+// Local display state for MC1 — not persisted to app state
+let mc1Display = [null, null, null];
+
+function renderMC1() {
+  const grid = el('mc1-grid');
   grid.innerHTML = '';
-
-  const allAFilled = aSpotAssignments.every(m => m !== null);
-
-  for (let i = 0; i < total; i++) {
-    const spot = document.createElement('div');
-    const assigned = i < 3 ? aSpotAssignments[i] : null;
-
-    if (i < 3 && assigned) {
-      // Filled A-spot: show card, clickable to swap
-      spot.className = 'move-card-spot spot-a spot-filled';
-      spot.innerHTML = `
-        <div class="move-card-inner">
-          <div class="card-body-top">
-            <div class="spot-card-title">${assigned.title}</div>
-          </div>
-          <div class="card-body-bottom">
-            <hr class="spot-card-rule">
-            <div class="spot-card-attr">${assigned.attrs.join(' · ')}</div>
-          </div>
-        </div>`;
-      spot.addEventListener('click', () => openCardPicker(i));
-    } else if (i < 3) {
-      // Empty A-spot: always clickable
-      spot.className = 'move-card-spot spot-a';
-      spot.addEventListener('click', () => openCardPicker(i));
-    } else if (allAFilled) {
-      // Additional spots unlock only once all 3 A-spots are filled
-      const addIdx = i; // capture for closure
-      const addAssigned = additionalAssignments[i - 3] || null;
-      if (addAssigned) {
-        spot.className = 'move-card-spot spot-a spot-filled';
-        spot.innerHTML = `
-          <div class="move-card-inner">
-            <div class="card-body-top">
-              <div class="spot-card-title">${addAssigned.title}</div>
-            </div>
-            <div class="card-body-bottom">
-              <hr class="spot-card-rule">
-              <div class="spot-card-attr">${addAssigned.attrs.join(' · ')}</div>
-            </div>
-          </div>`;
-        spot.addEventListener('click', () => openAdditionalPicker(addIdx));
-      } else {
-        spot.className = 'move-card-spot spot-a';
-        spot.addEventListener('click', () => openAdditionalPicker(addIdx));
-      }
-    } else {
-      // Not yet unlocked
-      spot.className = 'move-card-spot';
-    }
+  grid.style.cssText = 'grid-template-columns:repeat(3,1fr);gap:4rem;padding:0 4rem;margin-bottom:2rem;';
+  for (let i = 0; i < 3; i++) {
+    const spot     = document.createElement('div');
+    const assigned = mc1Display[i];
+    spot.className = 'move-card-spot spot-a' + (assigned ? ' spot-filled' : '');
+    if (assigned) spot.innerHTML = moveCardHTML(assigned);
+    spot.addEventListener('click', () => {
+      const taken = mc1Display.filter((m, j) => m !== null && j !== i).map(m => m.title);
+      const avail = aMoves.filter(m => !taken.includes(m.title));
+      const cur   = mc1Display[i];
+      const ci    = cur ? avail.findIndex(m => m.title === cur.title) : -1;
+      mc1Display[i] = avail[(ci + 1) % avail.length];
+      renderMC1();
+    });
     grid.appendChild(spot);
   }
-
-  el('movecards-subtitle').textContent =
-    `${playerCount} player${playerCount !== 1 ? 's' : ''} · 3 starting cards + ${additional} additional = ${total} total`;
 }
 
-function openCardPicker(spotIdx) {
-  // Available A-moves: not assigned to another spot
-  const taken = aSpotAssignments
-    .filter((m, i) => m !== null && i !== spotIdx)
-    .map(m => m.title);
-  const available = aMoves.filter(m => !taken.includes(m.title));
+// ── PHASE 2 ────────────────────────────────────────────────────────────
+function renderMC2() {
+  const mcs         = state.move_card_state;
+  const total       = mcs.additional_count;
+  const playerNames = state.pcs.map(p => p.player_name || p.name).filter(Boolean);
+  const touchstones = state.touchstones.filter(t => t.circled).map(t => t.text);
+  const tsText      = touchstones.length ? touchstones.join(', ') : 'the Touchstone List';
 
-  const pickerGrid = el('card-picker-grid');
-  pickerGrid.innerHTML = '';
-  available.forEach(move => {
-    const card = document.createElement('div');
-    card.className = 'picker-card';
-    card.innerHTML = `
-      <div class="picker-card-top">
-        <div class="picker-card-title">${move.title}</div>
-      </div>
-      <div class="picker-card-bottom">
-        <hr class="picker-card-rule">
-        <div class="picker-card-attr">${move.attrs.join(' · ')}</div>
-      </div>`;
-    card.addEventListener('click', () => {
-      aSpotAssignments[spotIdx] = move;
-      closeCardPicker();
-      renderMoveCardGrid();
+  el('mc2-instruction').innerHTML =
+    `Next, the GM will select <strong>${total}</strong> more Move Cards to be available for ` +
+    playerNames.map(n => `<strong>${n}</strong>`).join(', ') +
+    ` to select. Choose cards that resonate with <em>${tsText}</em>, ` +
+    `or ones that look interesting, or just ` +
+    `<a href="#" id="mc2-random" style="color:var(--gold)">choose at random \uD83C\uDFB2</a>.`;
+
+  setTimeout(() => {
+    const r = el('mc2-random');
+    if (r) r.addEventListener('click', e => {
+      e.preventDefault();
+      const pool = availableAdditionalMoves();
+      const shuffled = [...pool].sort(() => Math.random() - 0.5).slice(0, total);
+      mcs.gm_selected = shuffled.map(m => m.title);
+      renderMC2();
     });
-    pickerGrid.appendChild(card);
+  }, 0);
+
+  const all  = availableAdditionalMoves();
+  const grid = el('mc2-grid');
+  grid.innerHTML = '';
+  grid.style.cssText = 'grid-template-columns:repeat(3,1fr);gap:4rem;padding:0 4rem;margin-bottom:2rem;';
+
+  all.forEach(move => {
+    const sel      = mcs.gm_selected.includes(move.title);
+    const pidx     = mcs.player_assigned[move.title] ?? null;
+    const locked   = pidx !== null;
+    const spot     = document.createElement('div');
+    spot.className = 'move-card-spot spot-a spot-filled' + (sel ? ' spot-selected' : '');
+    spot.innerHTML = `<div class="move-card-inner">${moveCardInnerHTML(move)}</div>`;
+    if (locked) {
+      spot.style.backgroundImage = playerGradientCSS(state.pcs[pidx]?.name || '');
+      spot.style.cursor = 'default';
+    } else {
+      spot.addEventListener('click', () => {
+        if (sel) {
+          mcs.gm_selected = mcs.gm_selected.filter(t => t !== move.title);
+        } else if (mcs.gm_selected.length < total) {
+          mcs.gm_selected.push(move.title);
+        }
+        renderMC2();
+      });
+    }
+    grid.appendChild(spot);
+  });
+  const mc2btn = el('btn-mc2-next');
+  const nSel   = mcs.gm_selected.length;
+  mc2btn.disabled    = nSel !== total;
+  mc2btn.textContent = nSel === total ? 'Next →' : `Next → (${nSel} of ${total} selected)`;
+}
+
+// ── PHASE 3 ────────────────────────────────────────────────────────────
+function renderMC3() {
+  const mcs = state.move_card_state;
+  el('mc3-read-aloud').innerHTML = blockquoteToHTML(cc.move_cards_read_aloud || []);
+
+  const aCards   = mcs.a_spots.filter(Boolean);
+  const addCards = availableAdditionalMoves().filter(m => mcs.gm_selected.includes(m.title));
+  const allCards = [...aCards, ...addCards];
+
+  const grid = el('mc3-grid');
+  grid.innerHTML = '';
+  grid.style.cssText = 'grid-template-columns:repeat(3,1fr);gap:4rem;padding:0 4rem;margin-bottom:2rem;';
+
+  allCards.forEach(move => {
+    const pidx = mcs.player_assigned[move.title] ?? null;
+    const spot = document.createElement('div');
+    spot.className      = 'move-card-spot spot-a spot-filled';
+    spot.style.position = 'relative';
+    if (pidx !== null) {
+      spot.style.backgroundImage = playerGradientCSS(state.pcs[pidx]?.name || '');
+    } else {
+      spot.style.backgroundImage = '';
+    }
+    spot.innerHTML = `<div class="move-card-inner">${moveCardInnerHTML(move)}</div>`;
+    spot.addEventListener('click', () => {
+      if (mcs.player_assigned[move.title] !== undefined) {
+        delete mcs.player_assigned[move.title];
+        renderMC3(); saveGame();
+      } else {
+        openPlayerPicker(move.title);
+      }
+    });
+    grid.appendChild(spot);
+  });
+  updateMC3Next();
+}
+
+function updateMC3Next() {
+  const counts = {};
+  Object.values(state.move_card_state.player_assigned).forEach(i => {
+    counts[i] = (counts[i] || 0) + 1;
+  });
+  el('btn-mc3-next').disabled = !state.pcs.every((_, i) => (counts[i] || 0) >= 3);
+}
+
+function openPlayerPicker(moveTitle) {
+  const mcs    = state.move_card_state;
+  const list   = el('player-picker-list');
+  list.innerHTML = '';
+
+  state.pcs.forEach((p, i) => {
+    // Cards owned by this player, in assignment order
+    const ownedEntries = Object.entries(mcs.player_assigned)
+      .filter(([, pi]) => pi === i);
+    const n = ownedEntries.length;
+
+    const pill = document.createElement('div');
+    pill.className        = 'player-pill';
+    pill.style.background = playerGradientCSS(p.name || '');
+    pill.style.color      = '#fff';
+    pill.innerHTML = `<span>${p.name || `Player ${i+1}`}</span><span class="player-pill-count">(${n} card${n !== 1 ? 's' : ''})</span>`;
+    pill.addEventListener('click', () => {
+      if (n >= 3) {
+        // Bump the first card they received
+        delete mcs.player_assigned[ownedEntries[0][0]];
+      }
+      mcs.player_assigned[moveTitle] = i;
+      closePlayerPicker(); renderMC3(); saveGame();
+    });
+    list.appendChild(pill);
   });
 
-  el('card-picker-overlay').removeAttribute('hidden');
+  el('player-picker-overlay').removeAttribute('hidden');
 }
 
-
-function openAdditionalPicker(spotIdx) {
-  const taken = [
-    ...aSpotAssignments,
-    ...additionalAssignments,
-  ].filter(m => m !== null && m !== (additionalAssignments[spotIdx - 3] || null))
-   .map(m => m.title);
-  const available = (GAMEDATA.moves || [])
-    .filter(m => m.component === null && !m.groups.includes('A') && !taken.includes(m.title));
-
-  const pickerGrid = el('card-picker-grid');
-  pickerGrid.innerHTML = '';
-  available.forEach(move => {
-    const card = document.createElement('div');
-    card.className = 'picker-card';
-    card.innerHTML = `
-      <div class="picker-card-top">
-        <div class="picker-card-title">${move.title}</div>
-      </div>
-      <div class="picker-card-bottom">
-        <hr class="picker-card-rule">
-        <div class="picker-card-attr">${move.attrs.join(' · ')}</div>
-      </div>`;
-    card.addEventListener('click', () => {
-      additionalAssignments[spotIdx - 3] = move;
-      closeCardPicker();
-      renderMoveCardGrid();
-    });
-    pickerGrid.appendChild(card);
-  });
-
-  el('card-picker-overlay').removeAttribute('hidden');
+function closePlayerPicker() {
+  el('player-picker-overlay').setAttribute('hidden', '');
 }
 
-function closeCardPicker() {
-  el('card-picker-overlay').setAttribute('hidden', '');
+// ── MC PHASE NAV ────────────────────────────────────────────────────────
+function showMCPhase(n) {
+  if (!state?.move_card_state) initMoveCardState();
+  [1,2,3].forEach(i => el(`mc-phase-${i}`).style.display = i === n ? '' : 'none');
+  window.scrollTo(0, 0);
+  el('mc-section-label').textContent = `Step 3 of 5 \xb7 Part ${n} of 3`;
+  if (n === 1) renderMC1();
+  if (n === 2) renderMC2();
+  if (n === 3) renderMC3();
 }
+
+function renderMoveCardGrid() { /* legacy compat — no-op */ }
 
 // ── PLAYERS ENTRY VIEW ─────────────────────────────────────────────────
 function renderPlayersEntry() {
@@ -2617,15 +2756,15 @@ function validatePlayersNext() {
 function freshState() {
   return {
     id:          crypto.randomUUID(),
-    campaign:    null,
+    campaignLength: null,
     gm_name:     lastGMName,
-    player_names: ['', ''],  // raw name strings from entry screen
-    titles:      [],     // [{text, circled}]
-    players:     [],     // populated from player_names before chargen
+    player_names: ['', ''],  // entry-screen scratch; converted to pcs[i].player_name on Continue
+    touchstones:  [],     // [{text, circled}]
+    pcs:         [],     // populated from player_names before chargen
     hearth: {
       choice:       null,    // one of hearth.hearth_options
       name:         '',      // freetext description
-      risk_answers: [],      // parallel to players
+      risk_answers: [],      // parallel to pcs
       saved:        false,   // true once Save & Finish pressed at least once
     },
     createdAt: Date.now(),
@@ -2633,11 +2772,12 @@ function freshState() {
   };
 }
 
-function freshPlayer(name = '') {
+function freshPlayer(name = '', playerName = '') {
   return {
-    name,
-    wc_answers:  Array(cc.worldcloth_questions.length).fill(''),
-    initiation:  null,
+    name,          // character name
+    player_name:   playerName, // person at the table
+    wc_answers:    Array(cc.worldcloth_questions.length).fill(''),
+    initiation:    null,
   };
 }
 
@@ -2681,10 +2821,10 @@ function renderCampaignOptions() {
   container.innerHTML = '';
   uc.campaign_options.forEach(opt => {
     const btn = document.createElement('button');
-    btn.className = 'campaign-option' + (state && state.campaign === opt.name ? ' selected' : '');
+    btn.className = 'campaign-option' + (state && state.campaignLength === opt.name ? ' selected' : '');
     btn.innerHTML = `<span class="opt-name">${opt.name}</span><span class="opt-desc">${opt.desc}</span>`;
     btn.addEventListener('click', () => {
-      state.campaign = opt.name;
+      state.campaignLength = opt.name;
       container.querySelectorAll('.campaign-option').forEach(b => b.classList.remove('selected'));
       btn.classList.add('selected');
       showView('touchstones');
@@ -2698,7 +2838,7 @@ function renderCampaignOptions() {
 function renderBrainstorm() {
   renderChips(el('titles-brainstorm'), 'brainstorm');
   const btn = el('btn-to-narrow');
-  if (btn) btn.disabled = state.titles.length < 3;
+  if (btn) btn.disabled = state.touchstones.length < 3;
 }
 function renderNarrow() {
   renderBrainstorm();
@@ -2706,7 +2846,7 @@ function renderNarrow() {
 function renderChips(container, mode) {
   container.innerHTML = '';
   const narrowing = el('view-touchstones').classList.contains('narrowing');
-  state.titles.forEach((t, i) => {
+  state.touchstones.forEach((t, i) => {
     const chip = document.createElement('span');
     chip.className = 'title-chip' + (t.circled ? ' circled' : '');
 
@@ -2730,7 +2870,7 @@ function renderChips(container, mode) {
     rm.className = 'chip-remove'; rm.textContent = '×'; rm.title = 'Remove';
     rm.addEventListener('click', e => {
       e.stopPropagation();
-      state.titles.splice(i, 1);
+      state.touchstones.splice(i, 1);
       renderBrainstorm();
     });
     chip.appendChild(rm);
@@ -2738,18 +2878,18 @@ function renderChips(container, mode) {
     // Click on chip: in narrow mode toggle circle; in brainstorm mode no-op
     chip.addEventListener('click', () => {
       if (!el('view-touchstones').classList.contains('narrowing')) return;
-      if (state.titles[i].circled) {
+      if (state.touchstones[i].circled) {
         // Uncircle
-        state.titles[i].circled = false;
+        state.touchstones[i].circled = false;
       } else {
         // Circle — if already 3 circled, bump the oldest (lowest index)
-        const circled = state.titles.filter(t => t.circled);
+        const circled = state.touchstones.filter(t => t.circled);
         if (circled.length >= 3) {
-          const oldest = state.titles.find(t => t.circled);
+          const oldest = state.touchstones.find(t => t.circled);
           if (oldest) oldest.circled = false;
         }
-        state.titles[i].circled = true;
-        if (state.titles[i].thumb === undefined)
+        state.touchstones[i].circled = true;
+        if (state.touchstones[i].thumb === undefined)
           fetchAndCacheThumb(t.text);
       }
       renderBrainstorm();
@@ -2804,7 +2944,7 @@ function gradientSVG(title, w = 120, h = 180) {
 function renderShowcase() {
   const el_ = el('touchstone-showcase');
   if (!el_) return;
-  const circled = state.titles.filter(t => t.circled);
+  const circled = state.touchstones.filter(t => t.circled);
   if (!circled.length) { el_.innerHTML = ''; return; }
 
   const cards = circled.map(t => {
@@ -2830,8 +2970,8 @@ function addTitle(text) {
   if (!parts.length) return;
   let added = false;
   parts.forEach(part => {
-    if (!state.titles.some(t => t.text.toLowerCase() === part.toLowerCase())) {
-      state.titles.push({ text: part, circled: false });
+    if (!state.touchstones.some(t => t.text.toLowerCase() === part.toLowerCase())) {
+      state.touchstones.push({ text: part, circled: false });
       added = true;
     }
   });
@@ -2841,45 +2981,176 @@ function addTitle(text) {
 // ── CHARACTER CREATION ─────────────────────────────────────────────────
 let currentPlayerIdx = 0;
 
+
+// ── CHARACTER REQS NAV ─────────────────────────────────────────────────
+let activeReqSection = 'name';
+
+const REQ_SECTIONS = [
+  { key: 'name',       label: 'Name' },
+  { key: 'traits',     label: 'Traits' },
+  { key: 'worldcloth', label: 'Worldcloth Questions' },
+  { key: 'initiation', label: 'Initiation to Dark Gardens' },
+];
+
+function isReqDone(key) {
+  if (key === 'name')
+    return state.pcs.every(pc => pc.name && pc.name.trim());
+  if (key === 'initiation')
+    return state.pcs.every(pc => pc.initiation !== null && pc.initiation !== undefined);
+  if (key === 'worldcloth')
+    return state.pcs.every(pc => (pc.wc_answers || []).some(a => a && a.trim()));
+  return false;
+}
+
+function renderCharacterReqs() {
+  const container = el('character-reqs');
+  if (!container) return;
+  container.innerHTML = '';
+  const row = document.createElement('div');
+  row.className = 'action-row';
+  row.style.marginTop = '0';
+  REQ_SECTIONS.forEach(({ key, label }) => {
+    const done   = isReqDone(key);
+    const active = key === activeReqSection;
+    const btn    = document.createElement('button');
+    btn.className = 'btn-primary' + (active ? ' active' : '');
+    btn.style.fontSize = '0.65rem';
+    btn.style.padding  = '0.55rem 0.75rem';
+    btn.innerHTML = `<span class="req-indicator">${done ? '⮿' : '⭘'}</span><br>${label}`;
+    btn.addEventListener('click', () => {
+      activeReqSection = key;
+      renderCharacterReqs();
+      renderActiveSection();
+    });
+    row.appendChild(btn);
+  });
+  container.appendChild(row);
+}
 function renderPlayerTabs() {
   const tabs = el('player-tabs');
   tabs.innerHTML = '';
-  state.players.forEach((p, i) => {
-    const btn = document.createElement('button');
-    btn.className = 'player-tab' + (i === currentPlayerIdx ? ' active' : '');
-    btn.textContent = p.name || `Player ${i+1}`;
-    btn.addEventListener('click', () => { saveCurrentPlayerForm(); currentPlayerIdx = i; renderPlayerTabs(); renderPlayerForm(); });
-    tabs.appendChild(btn);
-  });
-  // Add player button (max 6)
-  if (state.players.length < 6) {
-    const add = document.createElement('button');
-    add.className = 'btn-add-player';
-    add.textContent = '+ Player';
-    add.addEventListener('click', () => {
+  state.pcs.forEach((p, i) => {
+    const pName = p.player_name || '';
+    const btn   = document.createElement('button');
+    btn.className          = 'player-tab' + (i === currentPlayerIdx ? ' active' : '');
+    btn.textContent        = p.name || pName || `Player ${i+1}`;
+    btn.style.background   = playerGradientCSS(pName);
+    btn.addEventListener('click', () => {
       saveCurrentPlayerForm();
-      state.players.push(freshPlayer(`Player ${state.players.length + 1}`));
-      currentPlayerIdx = state.players.length - 1;
+      currentPlayerIdx = i;
       renderPlayerTabs();
       renderPlayerForm();
-      syncHearthTable();
     });
-    tabs.appendChild(add);
-  }
+    tabs.appendChild(btn);
+  });
 }
 
-function renderPlayerForm() {
-  const p = state.players[currentPlayerIdx];
+
+function renderActiveSection() {
+  const p    = state.pcs[currentPlayerIdx];
   const form = el('player-form');
   form.innerHTML = '';
 
-  // Name
+  if (activeReqSection === 'name') {
+    const sec = document.createElement('div');
+    sec.className = 'cc-section';
+    sec.innerHTML = `
+      <div class="read-aloud">${blockquoteToHTML(cc.name_read_aloud)}</div>
+      <input class="player-name-input" id="pf-name" type="text"
+             placeholder="Character name…" maxlength="60" value="${p.name}"
+             oninput="state.pcs[currentPlayerIdx].name=this.value.trim();renderCharacterReqs();autoSave()">
+    `;
+    form.appendChild(sec);
+
+  } else if (activeReqSection === 'traits') {
+    const sec = document.createElement('div');
+    sec.className = 'cc-section';
+    sec.innerHTML = `
+      <div class="step-header">
+        <div class="step-num">①</div>
+        <div class="step-name"><span>Character</span><strong>Assign Traits</strong></div>
+      </div>
+      <div class="read-aloud">${blockquoteToHTML(cc.traits_read_aloud)}</div>
+    `;
+    form.appendChild(sec);
+
+  } else if (activeReqSection === 'worldcloth') {
+    const sec = document.createElement('div');
+    sec.className = 'cc-section';
+    sec.innerHTML = `
+      <div class="step-header">
+        <div class="step-num">②</div>
+        <div class="step-name"><span>Character</span><strong>Worldcloth Questions</strong></div>
+      </div>
+      <p class="gm-note" style="margin-bottom:1rem;">${spansToHTML(cc.worldcloth_followup)} Ask one. Listen. Move on.</p>
+    `;
+    cc.worldcloth_questions.forEach((q, qi) => {
+      const div = document.createElement('div');
+      div.className = 'wc-question';
+      div.innerHTML = `
+        <div class="wc-q-text">${spansToHTML(q)}</div>
+        <textarea class="wc-answer" id="pf-wc-${qi}" rows="1" placeholder="Answer…">${p.wc_answers[qi] || ''}</textarea>
+      `;
+      sec.appendChild(div);
+    });
+    form.appendChild(sec);
+    form.querySelectorAll('.wc-answer').forEach(ta => {
+      ta.addEventListener('input', () => {
+        ta.style.height='auto'; ta.style.height=ta.scrollHeight+'px';
+        const qi = +ta.id.replace('pf-wc-','');
+        state.pcs[currentPlayerIdx].wc_answers[qi] = ta.value;
+        renderCharacterReqs(); autoSave();
+      });
+      ta.style.height='auto'; ta.style.height=ta.scrollHeight+'px';
+    });
+
+  } else if (activeReqSection === 'initiation') {
+    const sec = document.createElement('div');
+    sec.className = 'cc-section';
+    sec.innerHTML = `
+      <div class="step-header">
+        <div class="step-num">③</div>
+        <div class="step-name"><span>Character</span><strong>Initiation to Dark Gardens</strong></div>
+      </div>
+      <div class="read-aloud">${blockquoteToHTML(cc.initiation_read_aloud)}</div>
+      <p class="gm-note" style="margin-bottom:0.75rem;">The player on their left reads two options aloud. They pick one.</p>
+      <div class="initiation-grid" id="pf-init-grid"></div>
+    `;
+    form.appendChild(sec);
+    const grid = el('pf-init-grid');
+    cc.initiation_options.forEach((opt, oi) => {
+      const btn = document.createElement('button');
+      btn.className = 'init-option' + (p.initiation === oi ? ' chosen' : '');
+      btn.textContent = spansToHTML(opt);
+      btn.addEventListener('click', () => {
+        state.pcs[currentPlayerIdx].initiation = oi;
+        grid.querySelectorAll('.init-option').forEach(b => b.classList.remove('chosen'));
+        btn.classList.add('chosen');
+        renderCharacterReqs(); autoSave();
+      });
+      grid.appendChild(btn);
+    });
+  }
+}
+function renderPlayerForm() {
+  // activeReqSection persists across player tab switches
+  renderCharacterReqs();
+  renderActiveSection();
+}
+
+function renderPlayerForm_OLD() {
+  const p = state.pcs[currentPlayerIdx];
+  const form = el('player-form');
+  form.innerHTML = '';
+
+  // Name (kept for reference, no longer called)
   const nameSection = document.createElement('div');
   nameSection.className = 'cc-section';
   nameSection.innerHTML = `
     <div class="read-aloud">${blockquoteToHTML(cc.name_read_aloud)}</div>
     <input class="player-name-input" id="pf-name" type="text"
-           placeholder="Character name…" maxlength="60" value="${p.name}">
+           placeholder="Character name…" maxlength="60" value="${p.name}"
+           oninput="state.pcs[currentPlayerIdx].name=this.value.trim();renderCharacterReqs();autoSave()">
   `;
   form.appendChild(nameSection);
 
@@ -2937,7 +3208,7 @@ function renderPlayerForm() {
     btn.className = 'init-option' + (p.initiation === oi ? ' chosen' : '');
     btn.textContent = spansToHTML(opt);
     btn.addEventListener('click', () => {
-      state.players[currentPlayerIdx].initiation = oi;
+      state.pcs[currentPlayerIdx].initiation = oi;
       grid.querySelectorAll('.init-option').forEach(b => b.classList.remove('chosen'));
       btn.classList.add('chosen');
     });
@@ -2950,14 +3221,13 @@ function renderPlayerForm() {
       ta.style.height = 'auto';
       ta.style.height = ta.scrollHeight + 'px';
     });
-    // Trigger on load
     ta.style.height = 'auto';
     ta.style.height = ta.scrollHeight + 'px';
   });
-}
+} // end renderPlayerForm_OLD
 
 function saveCurrentPlayerForm() {
-  const p = state.players[currentPlayerIdx];
+  const p = state.pcs[currentPlayerIdx];
   const nameEl = el('pf-name');
   if (nameEl) p.name = nameEl.value.trim() || `Player ${currentPlayerIdx + 1}`;
   cc.worldcloth_questions.forEach((_, qi) => {
@@ -2969,9 +3239,9 @@ function saveCurrentPlayerForm() {
 // ── HEARTH ─────────────────────────────────────────────────────────────
 function syncHearthTable() {
   // Ensure risk_answers array matches players length
-  while (state.hearth.risk_answers.length < state.players.length)
+  while (state.hearth.risk_answers.length < state.pcs.length)
     state.hearth.risk_answers.push('');
-  state.hearth.risk_answers = state.hearth.risk_answers.slice(0, state.players.length);
+  state.hearth.risk_answers = state.hearth.risk_answers.slice(0, state.pcs.length);
 }
 
 function renderHearthView() {
@@ -2993,13 +3263,14 @@ function renderHearthView() {
   // At-home table
   const atHomeBody = el('hearth-at-home-body');
   atHomeBody.innerHTML = '';
-  state.players.forEach((p, i) => {
+  state.pcs.forEach((p, i) => {
     const tr = document.createElement('tr');
     tr.innerHTML = `
       <td>${p.name || `Player ${i+1}`}</td>
       <td><input class="hearth-answer" data-at="${i}" type="text"
                  value="${(state.hearth.at_home_answers || [])[i] || ''}"
-                 placeholder="What makes them feel at home…"></td>
+                 placeholder="What makes them feel at home…"
+                 oninput="state.hearth.at_home_answers=state.hearth.at_home_answers||[];state.hearth.at_home_answers[${i}]=this.value;autoSave()"></td>
     `;
     atHomeBody.appendChild(tr);
   });
@@ -3007,13 +3278,14 @@ function renderHearthView() {
   // Risk-life table
   const riskBody = el('hearth-risk-body');
   riskBody.innerHTML = '';
-  state.players.forEach((p, i) => {
+  state.pcs.forEach((p, i) => {
     const tr = document.createElement('tr');
     tr.innerHTML = `
       <td>${p.name || `Player ${i+1}`}</td>
       <td><input class="hearth-answer" data-risk="${i}" type="text"
                  value="${state.hearth.risk_answers[i] || ''}"
-                 placeholder="Why they'd risk their life…"></td>
+                 placeholder="Why they'd risk their life…"
+                 oninput="state.hearth.risk_answers[${i}]=this.value;autoSave()"></td>
     `;
     riskBody.appendChild(tr);
   });
@@ -3043,11 +3315,11 @@ function renderSummary() {
   const deleteConfirmBtn = el('btn-delete-confirm');
   if (deleteConfirmBtn) deleteConfirmBtn.hidden = true;
 
-  el('sum-world-heading').textContent = hearth || state.campaign || '—';
-  el('sum-campaign-label').textContent = hearth ? (state.campaign || '') : '';
+  el('sum-world-heading').textContent = hearth || state.campaignLength || '—';
+  el('sum-campaign-label').textContent = hearth ? (state.campaignLength || '') : '';
 
-  const circled = state.titles.filter(t => t.circled);
-  const show = circled.length ? circled : state.titles;
+  const circled = state.touchstones.filter(t => t.circled);
+  const show = circled.length ? circled : state.touchstones;
   el('sum-touchstones').innerHTML = show.map((t, i) => {
     const src = t.thumb || gradientSVG(t.text, 72, 104);
     const plus = i < show.length - 1
@@ -3081,16 +3353,41 @@ function renderSummary() {
     });
   }, 0);
 
-  el('sum-players').innerHTML = state.players.map((p, i) => {
+  const mcs = state.move_card_state;
+  el('sum-players').innerHTML = state.pcs.map((p, i) => {
     const init = p.initiation !== null && p.initiation !== undefined
       ? spansToHTML(cc.initiation_options[p.initiation]) : '';
-    const charName = p.name || '—';
-    const playerName = (state.player_names || [])[i] || '';
-    const g = titleGradient(charName);
-    const bg = `linear-gradient(${g.angle}deg, ${g.c1}, ${g.c2})`;
-    return `<div class="pc-card" style="background:${bg}">
+    const charName   = p.name || '—';
+    const playerName = p.player_name || '';
+    const bg = playerGradientCSS(playerName);
+
+    // Move cards assigned to this player
+    let moveChips = '';
+    if (mcs?.player_assigned) {
+      const allMoves = (GAMEDATA.moves || []);
+      const myMoves = Object.entries(mcs.player_assigned)
+        .filter(([, pi]) => pi === i)
+        .map(([title]) => {
+          const move = allMoves.find(m => m.title === title) || { title, attrs: [] };
+          return `<div class="pc-move-card">
+            <div class="move-card-inner">
+              <div class="card-body-top"><div class="spot-card-title">${move.title}</div></div>
+              <div class="card-body-bottom">
+                <hr class="spot-card-rule">
+                <div class="spot-card-attr">${move.attrs.join(' · ')}</div>
+              </div>
+            </div>
+          </div>`;
+        });
+      if (myMoves.length) {
+        moveChips = `<div class="pc-move-cards">${myMoves.join('')}</div>`;
+      }
+    }
+
+    return `<div class="pc-card" data-pc-idx="${i}" style="background:${bg}">
       <div class="pc-name">${charName}${playerName ? ` <span class="pc-player">(${playerName})</span>` : ''}</div>
       ${init ? `<div class="pc-initiation">${init}</div>` : ''}
+      ${moveChips}
     </div>`;
   }).join('');
 }
@@ -3107,7 +3404,7 @@ async function renderGameList() {
   games.forEach(g => {
     const li = document.createElement('li');
     li.className = 'game-item';
-    const circled = (g.titles||[]).filter(t=>t.circled);
+    const circled = (g.touchstones || []).filter(t=>t.circled);
     const date = new Date(g.updatedAt).toLocaleDateString();
     const hearth = g.hearth?.name || g.hearth?.choice || '';
 
@@ -3123,9 +3420,9 @@ async function renderGameList() {
       thumbsHTML = `<div class="game-thumbs">${parts}</div>`;
     }
 
-    const gameName = hearth || g.campaign || 'No campaign';
-    const detail   = [g.campaign, date].filter(Boolean).join(' · ');
-    const allNames = [g.gm_name, ...(g.player_names || [])]
+    const gameName = hearth || g.campaignLength || 'No campaign';
+    const detail   = [g.campaignLength, date].filter(Boolean).join(' · ');
+    const allNames = [g.gm_name, ...(g.pcs || []).map(p => p.player_name || '')]
       .filter(Boolean)
       .join(', ');
 
@@ -3151,12 +3448,12 @@ async function loadGame(id) {
   if (!g) return;
   state = {
     hearth: { choice: null, name: '', risk_answers: [], at_home_answers: [] },
-    players: [freshPlayer('Player 1')],
+    pcs: [freshPlayer('Player 1')],
     ...g
   };
   currentPlayerIdx = 0;
   // Warm thumb cache from saved state
-  (g.titles || []).forEach(t => {
+  (g.touchstones || []).forEach(t => {
     if (t.thumb !== undefined) thumbCache[t.text.toLowerCase()] = t.thumb;
   });
   renderCampaignOptions();
@@ -3170,6 +3467,12 @@ async function saveGame() {
   state.updatedAt = Date.now();
   await dbPut({ ...state });
   showToast('Saved');
+}
+
+let autoSaveTimer = null;
+function autoSave() {
+  clearTimeout(autoSaveTimer);
+  autoSaveTimer = setTimeout(saveGame, 800);
 }
 
 // ── WIRE UP ────────────────────────────────────────────────────────────
@@ -3202,9 +3505,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     savePlayersForm();
     // Sync players array from player_names (drop empties)
     const names = state.player_names.filter(n => n.trim());
-    state.players = names.length
-      ? names.map(n => freshPlayer(n))
-      : [freshPlayer('Player 1')];
+    state.pcs = names.length
+      ? names.map(n => freshPlayer('', n))
+      : [freshPlayer('', 'Player 1')];
     currentPlayerIdx = 0;
     renderCampaignOptions();
     renderBrainstorm();
@@ -3238,26 +3541,38 @@ document.addEventListener('DOMContentLoaded', async () => {
       renderSummary();
       showView('summary');
     } else {
-      renderMoveCardGrid();
+      initMoveCardState();
+      showMCPhase(1);
       showView('movecards');
     }
   });
   el('btn-c-back').addEventListener('click', () => showPhase('b'));
 
-  el('card-picker-close').addEventListener('click', closeCardPicker);
-  el('card-picker-overlay').addEventListener('click', e => { if (e.target === el('card-picker-overlay')) closeCardPicker(); });
+  // Player picker
+  el('player-picker-close').addEventListener('click', closePlayerPicker);
+  el('player-picker-overlay').addEventListener('click', e => {
+    if (e.target === el('player-picker-overlay')) closePlayerPicker();
+  });
 
-  // Move cards
-  el('btn-movecards-next').addEventListener('click', () => {
-    currentPlayerIdx = 0;
+  // Move cards phase 1
+  el('btn-mc1-next').addEventListener('click', () => {
+    // Populate a_spots with all A-moves — cosmetic phase is done
+    state.move_card_state.a_spots = [...aMoves];
+    showMCPhase(2);
+  });
+  el('btn-mc1-back').addEventListener('click', () => { showView('touchstones'); showPhase('c'); });
+
+  // Move cards phase 2
+  el('btn-mc2-next').addEventListener('click', () => showMCPhase(3));
+  el('btn-mc2-back').addEventListener('click', () => showMCPhase(1));
+
+  // Move cards phase 3
+  el('btn-mc3-next').addEventListener('click', () => {
     renderPlayerTabs();
     renderPlayerForm();
     showView('chargen');
   });
-  el('btn-movecards-back').addEventListener('click', () => {
-    showView('touchstones');
-    showPhase('c');
-  });
+  el('btn-mc3-back').addEventListener('click', () => showMCPhase(2));
 
   // Character creation
   el('btn-to-hearth').addEventListener('click', async () => {
@@ -3267,7 +3582,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     renderHearthView();
     showView('hearth');
   });
-  el('btn-chargen-back').addEventListener('click', () => { saveCurrentPlayerForm(); renderMoveCardGrid(); showView('movecards'); });
+  el('btn-chargen-back').addEventListener('click', () => { saveCurrentPlayerForm(); showMCPhase(3); showView('movecards'); });
 
   // Hearth
   el('btn-hearth-finish').addEventListener('click', async () => {
@@ -3279,7 +3594,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   });
   el('btn-hearth-back').addEventListener('click', () => {
     saveHearthForm();
-    currentPlayerIdx = 0;
     renderPlayerTabs();
     renderPlayerForm();
     showView('chargen');
@@ -3294,7 +3608,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const blob = new Blob([json], { type: 'application/json' });
     const url  = URL.createObjectURL(blob);
     const a    = document.createElement('a');
-    const name = (state.hearth?.name || state.campaign || 'game').replace(/[^a-z0-9]/gi, '_').toLowerCase();
+    const name = (state.hearth?.name || state.campaignLength || 'game').replace(/[^a-z0-9]/gi, '_').toLowerCase();
     const now  = new Date();
     const date = now.getFullYear().toString()
       + String(now.getMonth() + 1).padStart(2, '0')
@@ -3352,6 +3666,17 @@ document.addEventListener('DOMContentLoaded', async () => {
     state = null;
     await renderGameList();
     showView('games');
+  });
+
+  // PC card → Move Cards step 3
+  el('sum-players').addEventListener('click', e => {
+    const card = e.target.closest('.pc-card');
+    if (card) {
+      const idx = parseInt(card.dataset.pcIdx, 10);
+      if (!isNaN(idx)) currentPlayerIdx = idx;
+      showMCPhase(3);
+      showView('movecards');
+    }
   });
 
   // Boot
