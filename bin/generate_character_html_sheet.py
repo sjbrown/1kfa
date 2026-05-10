@@ -45,6 +45,7 @@ from render_sheet_html import (
 @dataclass
 class CharacterCreationData:
     move_card_table: list           # [{"players": str, "cards": str}, ...]
+    move_cards_read_aloud: list     # blockquote from Choose Move Cards
     traits_read_aloud: str          # blockquote from Choose Dex/Int/Str
     name_read_aloud: str            # blockquote from Choose a Name
     worldcloth_questions: list      # list of question strings
@@ -156,8 +157,10 @@ def parse_character_creation(text: str) -> CharacterCreationData:
         section, re.DOTALL
     )
     move_card_table = []
+    move_cards_read_aloud = []
     if move_card_section_m:
         move_card_table = parse_move_card_table(move_card_section_m.group(1))
+        move_cards_read_aloud = extract_blockquote(move_card_section_m.group(1))
 
     # Traits read-aloud
     traits_section_m = re.search(
@@ -194,6 +197,7 @@ def parse_character_creation(text: str) -> CharacterCreationData:
 
     return CharacterCreationData(
         move_card_table=move_card_table,
+        move_cards_read_aloud=move_cards_read_aloud,
         traits_read_aloud=traits_read_aloud,
         name_read_aloud=name_read_aloud,
         worldcloth_questions=worldcloth_questions,

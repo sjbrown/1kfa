@@ -20,11 +20,26 @@ import sys
 
 # Allow running from repo root
 sys.path.insert(0, os.path.join(os.path.dirname(__file__)))
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'resolution_cards'))
 
 from parse_quickstart_data import spans_to_plain
 from generate_touchstones_html_sheet import parse_universe_creation
 from generate_character_html_sheet import parse_character_creation
 from generate_hearth_html_sheet import parse_hearth
+from parse_character_moves import handy_moves
+
+
+def parse_move_cards(moves_md: str) -> list:
+    """Return filtered move card data with only title, attrs, and groups."""
+    all_moves = handy_moves(moves_md)
+    return [
+        {
+            'title':  m['title'],
+            'attrs':  m.get('attrs', []),
+            'groups': m.get('groups', []),
+        }
+        for m in all_moves
+    ]
 
 
 def spans_to_js(spans: list) -> list:
@@ -40,7 +55,7 @@ def blockquote_to_js(bq: list) -> list:
     ]
 
 
-def build_gamedata(table_md_path: str, player_md_path: str, gm_md_path: str) -> dict:
+def build_gamedata(table_md_path: str, player_md_path: str, gm_md_path: str, moves_md: str) -> dict:
     with open(table_md_path, encoding='utf-8') as f:
         table_text = f.read()
     with open(player_md_path, encoding='utf-8') as f:
@@ -51,6 +66,8 @@ def build_gamedata(table_md_path: str, player_md_path: str, gm_md_path: str) -> 
     uc   = parse_universe_creation(table_text)
     cc   = parse_character_creation(player_text)
     hearth = parse_hearth(gm_text)
+
+    moves = parse_move_cards(moves_md)
 
     return {
         'universe_creation': {
@@ -64,6 +81,8 @@ def build_gamedata(table_md_path: str, player_md_path: str, gm_md_path: str) -> 
             'finally':       blockquote_to_js(uc.finally_read_aloud),
         },
         'character_creation': {
+            'move_card_table':        cc.move_card_table,
+            'move_cards_read_aloud':  blockquote_to_js(cc.move_cards_read_aloud),
             'traits_read_aloud':      blockquote_to_js(cc.traits_read_aloud),
             'worldcloth_questions':   [spans_to_js(q) for q in cc.worldcloth_questions],
             'worldcloth_followup':    spans_to_js(cc.worldcloth_followup),
@@ -85,6 +104,7 @@ def build_gamedata(table_md_path: str, player_md_path: str, gm_md_path: str) -> 
             'must_be_separated_note':      spans_to_js(hearth.must_be_separated_note),
             'risk_life_read_aloud':        blockquote_to_js(hearth.risk_life_read_aloud),
         },
+        'moves': moves,
     }
 
 
@@ -95,18 +115,20 @@ def main():
     parser.add_argument('table_md',  help='Path to mod_guide_table.md')
     parser.add_argument('player_md', help='Path to mod_guide_player.md')
     parser.add_argument('gm_md',     help='Path to mod_guide_gm.md')
-    parser.add_argument('--output', default='web/gamedata.js',
-                        help='Output path (default: web/gamedata.js)')
+    parser.add_argument('--moves-md', default='resolution_cards/character_move_sheet.md',
+                        help='Path to character_move_sheet.md')
+    parser.add_argument('--output', default='/tmp/1kfa_quickstart.js',
+                        help='Output path (default: /tmp/1kfa_quickstart.js)')
     args = parser.parse_args()
 
-    for path in [args.table_md, args.player_md, args.gm_md]:
+    for path in [args.table_md, args.player_md, args.gm_md, args.moves_md]:
         if not os.path.exists(path):
             print(f'Error: {path} not found.', file=sys.stderr)
             sys.exit(1)
 
     os.makedirs(os.path.dirname(args.output) or '.', exist_ok=True)
 
-    gamedata = build_gamedata(args.table_md, args.player_md, args.gm_md)
+    gamedata = build_gamedata(args.table_md, args.player_md, args.gm_md, args.moves_md)
     js = 'const GAMEDATA = ' + json.dumps(gamedata, indent=2, ensure_ascii=False) + ';\n'
 
     with open(args.output, 'w', encoding='utf-8') as f:
@@ -126,6 +148,7 @@ def main():
     print(f'    hearth:')
     print(f'      hearth_options:        {len(h["hearth_options"])}')
     print(f'      examples paragraphs:   {len(h["hearth_examples_read_aloud"])}')
+    print(f'    moves: {len(gamedata["moves"])} total')
 
 
 if __name__ == '__main__':

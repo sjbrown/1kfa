@@ -5,44 +5,1101 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>A Thousand Faces of Adventure</title>
 <!-- ══ DEV ONLY — DELETE BEFORE SHIP ══════════════════════════════════
-     Inline gamedata so the app works without running emit_gamedata.py.
+     Inline gamedata so the app works without running generate_quickstart_json.py.
      Replace with <script src="gamedata.js"></script> for production.
      ════════════════════════════════════════════════════════════════ -->
 <script>
 const GAMEDATA = {
   "universe_creation": {
     "campaign_options": [
-      {"name": "One-Shot", "desc": "Single session"},
-      {"name": "9-Hour Campaign", "desc": "3 sessions"},
-      {"name": "30-Hour Campaign", "desc": "10 sessions"}
+      {
+        "name": "One-Shot",
+        "desc": "Single session"
+      },
+      {
+        "name": "9-Hour Campaign",
+        "desc": "3 sessions"
+      },
+      {
+        "name": "30-Hour Campaign",
+        "desc": "10 sessions"
+      }
     ],
-    "intro": [{"type":"para","spans":[{"type":"text","text":"Before we start an adventure, we need to figure out what kind of world your characters come from. We'll go through a 3-step process to build what's called a Touchstone List. This will help define the setting and give us something to consult when your characters push the envelope and we ask \"is that even possible in this world?\""}]}],
-    "step_a": [{"type":"para","spans":[{"type":"text","text":"Everyone, grab a pen or pencil and write a few titles from pop culture on this piece of paper. Think of books, movies, games, comics and shows whose settings inspire your imagination. Think of ones where you've imagined yourself inside those stories and thought about what decisions you would have made if you were those characters."}]},{"type":"para","spans":[{"type":"text","text":"Don't overthink it, and don't criticize or reject anyone's title. This is pure brainstorming — let ideas flow freely. We'll stop when everyone has added a few."}]}],
-    "step_b": [{"type":"para","spans":[{"type":"text","text":"For step two, we're going to narrow it down. Each of us will take a turn circling "},{"type":"bold","text":"one"},{"type":"text","text":" title on the list. You can circle your own, or someone else's — but only choose one, and don't circle one that's already been chosen."}]}],
-    "step_b_notes": ["Watch for: genres incompatible with the rules (machine guns, interstellar travel). PCs should start <strong>scrappy</strong> — not super-powered. Titles must be known to everyone at the table.","If more than 3 are circled, <strong>GM selects the final 3</strong>."],
-    "step_c": [{"type":"para","spans":[{"type":"text","text":"This is our \"Touchstone List\": [read the titles]"}]},{"type":"para","spans":[{"type":"text","text":"Imagine this mashed-up universe."}]},{"type":"para","spans":[{"type":"text","text":"What kind of world could mash up pieces of each circled title?"}]},{"type":"para","spans":[{"type":"text","text":"What palette of colors shines in the brightness of day?  What hues swirl in the night sky? What are its dominant features? What secrets lie hidden in the small places? What folk live there? Do their children play happily in the sun? What monsters lurk in the darkness? What weakness do the ambitious and powerful exploit?"}]}],
-    "step_c_note": "These questions don't need to be answered procedurally — they're here to stir the imagination. But if the table does start imagining out-loud, keep that discussion going for as long as it is productive.",
-    "finally": [{"type":"para","spans":[{"type":"text","text":"Finally, who will "},{"type":"italic","text":"you"},{"type":"text","text":" be in this world?"}]},{"type":"para","spans":[{"type":"italic","text":"A Thousand Faces of Adventure"},{"type":"text","text":" is a game about a group of scrappy adventurers who grow in power as we play. Your character will begin with gifts beyond the ordinary, but they'll still need to fight, suffer, and strive to transform into the hero Destiny demands."}]}]
+    "intro": [
+      {
+        "type": "para",
+        "spans": [
+          {
+            "type": "text",
+            "text": "Before we start an adventure, we need to figure out what kind of world your characters come from. We'll go through a 3-step process to build what's called a Touchstone List. This will help define the setting and give us something to consult when your characters push the envelope and we ask \"is that even possible in this world?\""
+          }
+        ]
+      }
+    ],
+    "step_a": [
+      {
+        "type": "para",
+        "spans": [
+          {
+            "type": "text",
+            "text": "Everyone, grab a pen or pencil and write a few titles from pop culture on this piece of paper. Think of books, movies, games, comics and shows whose settings inspire your imagination. Think of ones where you've imagined yourself inside those stories and thought about what decisions you would have made if you were those characters."
+          }
+        ]
+      },
+      {
+        "type": "para",
+        "spans": [
+          {
+            "type": "text",
+            "text": "Don’t overthink it, and don’t criticize or reject anyone’s title. This is pure brainstorming — let ideas flow freely. We’ll stop when everyone has added a few."
+          }
+        ]
+      }
+    ],
+    "step_b": [
+      {
+        "type": "para",
+        "spans": [
+          {
+            "type": "text",
+            "text": "For step two, we’re going to narrow it down. Each of us will take a turn circling "
+          },
+          {
+            "type": "bold",
+            "text": "one"
+          },
+          {
+            "type": "text",
+            "text": " title on the list. You can circle your own, or someone else’s — but only choose one, and don’t circle one that’s already been chosen."
+          }
+        ]
+      }
+    ],
+    "step_b_notes": [
+      "Watch for: genres incompatible with the rules (machine guns, interstellar travel). PCs should start <strong>scrappy</strong> — not super-powered. Titles must be known to everyone at the table.",
+      "If more than 3 are circled, <strong>GM selects the final 3</strong>."
+    ],
+    "step_c": [
+      {
+        "type": "para",
+        "spans": [
+          {
+            "type": "text",
+            "text": "This is our \"Touchstone List\": [read the titles]"
+          }
+        ]
+      },
+      {
+        "type": "para",
+        "spans": [
+          {
+            "type": "text",
+            "text": "Imagine this mashed-up universe."
+          }
+        ]
+      },
+      {
+        "type": "para",
+        "spans": [
+          {
+            "type": "text",
+            "text": "What kind of world could mash up pieces of each circled title?"
+          }
+        ]
+      },
+      {
+        "type": "para",
+        "spans": [
+          {
+            "type": "text",
+            "text": "What palette of colors shines in the brightness of day?  What hues swirl in the night sky? What are its dominant features? What secrets lie hidden in the small places? What folk live there? Do their children play happily in the sun? What monsters lurk in the darkness? What weakness do the ambitious and powerful exploit?"
+          }
+        ]
+      }
+    ],
+    "step_c_note": "These questions don’t need to be answered procedurally — they're here to stir the imagination. But if the table does start imagining out-loud, keep that discussion going for as long as it is productive.",
+    "finally": [
+      {
+        "type": "para",
+        "spans": [
+          {
+            "type": "text",
+            "text": "Finally, who will "
+          },
+          {
+            "type": "italic",
+            "text": "you"
+          },
+          {
+            "type": "text",
+            "text": " be in this world?"
+          }
+        ]
+      },
+      {
+        "type": "para",
+        "spans": [
+          {
+            "type": "italic",
+            "text": "A Thousand Faces of Adventure"
+          },
+          {
+            "type": "text",
+            "text": " is a game about a group of scrappy adventurers who grow in power as we play. Your character will begin with gifts beyond the ordinary, but they'll still need to fight, suffer, and strive to transform into the hero Destiny demands."
+          }
+        ]
+      }
+    ]
   },
   "character_creation": {
-    "traits_read_aloud": [{"type":"para","spans":[{"type":"text","text":"Your character has three traits: Dexterity, Intelligence, and Strength. Find those on the character sheet. They describe "},{"type":"italic","text":"how"},{"type":"text","text":" your character acts, solves problems, and overcomes adversity."}]},{"type":"para","spans":[{"type":"text","text":"You'll assign "},{"type":"bold","text":"6 points"},{"type":"text","text":" across these three traits to give them a rank."}]},{"type":"bullet","spans":[{"type":"text","text":"You must assign at least "},{"type":"bold","text":"Anvil (1)"},{"type":"text","text":" to each trait."}]},{"type":"bullet","spans":[{"type":"text","text":"No trait can go above "},{"type":"bold","text":"Dragon (4)"},{"type":"text","text":"."}]},{"type":"bullet","spans":[{"type":"text","text":"You have exactly 6 points to spend."}]},{"type":"para","spans":[{"type":"text","text":"Think about what your character relies on when the world turns against them. Are they fast? Cunning? Strong? What are they not so great at?"}]}],
-    "worldcloth_questions": [[{"type":"text","text":"What is your character's species or kin — human, or something else from our Touchstone List?"}],[{"type":"text","text":"Is your character righteous, hewing to moral norms, or do they get their hands dirty, taking opportunities wherever they find them?"}],[{"type":"text","text":"What work or calling defines your character's life — how do they earn respect, survive, or make trouble?"}],[{"type":"text","text":"Does your character believe in gods? Is there some kind of spiritual practice or religious organization for them?"}],[{"type":"text","text":"What kind of life does your character know best — wandering the wilds, the streets of a city, or somewhere in between?"}],[{"type":"text","text":"How old was your character when they had their closest encounter with Death? Were they its witness -- or its agent?"}],[{"type":"text","text":"What station does your character hold in the world's eyes — and what happens when they step into a crowd?"}]],
-    "worldcloth_followup": [{"type":"text","text":"Why does that complicate your character's life?"}],
-    "name_read_aloud": [{"type":"para","spans":[{"type":"text","text":"Now let's give your character a name."}]},{"type":"para","spans":[{"type":"text","text":"You can invent one, borrow from your favorite fantasy stories, or draw inspiration from the Touchstone List."}]},{"type":"para","spans":[{"type":"text","text":"Don't worry about getting it perfect. Choose something that feels fun to say, or that makes you curious about who this person might become."}]}],
-    "initiation_read_aloud": [{"type":"para","spans":[{"type":"text","text":"Since this is a game about taking risks, I'm going to give you an opportunity to get some bonuses when you get risky. We're going to create what are called "},{"type":"bold","text":"Initiations to Dark Gardens"},{"type":"text","text":"."}]},{"type":"para","spans":[{"type":"text","text":"An Initiation to Dark Gardens is a thematic goal your character might try to achieve during the story. You'll write it in the designated spot on your character sheet, and place an "},{"type":"bold","text":"XP token"},{"type":"text","text":" and a "},{"type":"bold","text":"✔ token"},{"type":"text","text":" there as well."}]},{"type":"para","spans":[{"type":"text","text":"When your character "},{"type":"italic","text":"takes a big risk"},{"type":"text","text":" to pursue this goal, you'll earn XP, and the ✔ token will advance a scene's progress bar. (We'll explain how those effects work later.)"}]},{"type":"para","spans":[{"type":"text","text":"To choose your Initiation to Dark Gardens, the player on your left will read you two options from a list. You'll pick one, and that becomes your character's personal Initiation to Dark Gardens.  You then read propose 2 different options to the player on your right and everyone will take their turn like that."}]}],
-    "initiation_options": [[{"type":"text","text":"Expose an embarrassment"}],[{"type":"text","text":"Locate a prize"}],[{"type":"text","text":"Extract a secret"}],[{"type":"text","text":"Become enamored"}],[{"type":"text","text":"Sell your services"}],[{"type":"text","text":"Break down a barrier"}],[{"type":"text","text":"Choose a side"}],[{"type":"text","text":"Be an agent of justice"}],[{"type":"text","text":"Take pity on the desperate"}],[{"type":"text","text":"Start a grudge"}],[{"type":"text","text":"Consort with the unsavory"}],[{"type":"text","text":"Believe an impossible claim"}],[{"type":"text","text":"Get called out on your boasting"}],[{"type":"text","text":"Claims the XP token"}],[{"type":"text","text":"Advances a ✔ token to a scene's progress bar of their choice"}]],
-    "receive_cards": [{"move":"Use a Magic Item","item":[{"type":"text","text":"1 magic item of your choice"}]},{"move":"Channel the Living Light","item":[{"type":"italic","text":"Sigil of the Living Light"}]},{"move":"Entreat the Blood Bound","item":[{"type":"italic","text":"Blade of Echoes"}]}]
+    "move_card_table": [
+      {
+        "players": "1",
+        "cards": "3"
+      },
+      {
+        "players": "2",
+        "cards": "6"
+      },
+      {
+        "players": "3",
+        "cards": "8"
+      },
+      {
+        "players": "4",
+        "cards": "13"
+      },
+      {
+        "players": "5",
+        "cards": "15"
+      }
+    ],
+    "move_cards_read_aloud": [
+      {
+        "type": "para",
+        "spans": [
+          {
+            "type": "text",
+            "text": "These are called Move Cards. You're going to take turns choosing, and I'll be here to explain how they work and answer questions."
+          }
+        ]
+      },
+      {
+        "type": "para",
+        "spans": [
+          {
+            "type": "text",
+            "text": "This process will give each of you three Move Cards. Move Cards are your character’s special starting gifts, talents, or powers."
+          }
+        ]
+      },
+      {
+        "type": "para",
+        "spans": [
+          {
+            "type": "text",
+            "text": "Later in the game, you’ll be able to “Study Under a Master” to gain more."
+          }
+        ]
+      },
+      {
+        "type": "para",
+        "spans": [
+          {
+            "type": "text",
+            "text": "There are a lot of choices here, and we don’t want to get bogged down in the details. For now, you’re just choosing by title. Read through "
+          },
+          {
+            "type": "italic",
+            "text": "just the titles"
+          },
+          {
+            "type": "text",
+            "text": " and ask yourself, “Does this sound like something I'd want my character to do?”"
+          }
+        ]
+      },
+      {
+        "type": "para",
+        "spans": [
+          {
+            "type": "text",
+            "text": "We’ll learn how the cards work later. This game is about improvisation, not perfection — so go with your gut and pick three cards that look fun to you."
+          }
+        ]
+      }
+    ],
+    "traits_read_aloud": [
+      {
+        "type": "para",
+        "spans": [
+          {
+            "type": "text",
+            "text": "Your character has three traits: Dexterity, Intelligence, and Strength. Find those on the character sheet. They describe "
+          },
+          {
+            "type": "italic",
+            "text": "how"
+          },
+          {
+            "type": "text",
+            "text": " your character acts, solves problems, and overcomes adversity."
+          }
+        ]
+      },
+      {
+        "type": "para",
+        "spans": [
+          {
+            "type": "text",
+            "text": "You’ll assign "
+          },
+          {
+            "type": "bold",
+            "text": "6 points"
+          },
+          {
+            "type": "text",
+            "text": " across these three traits to give them a rank."
+          }
+        ]
+      },
+      {
+        "type": "bullet",
+        "spans": [
+          {
+            "type": "text",
+            "text": "You must assign at least "
+          },
+          {
+            "type": "bold",
+            "text": "Anvil (1)"
+          },
+          {
+            "type": "text",
+            "text": " to each trait."
+          }
+        ]
+      },
+      {
+        "type": "bullet",
+        "spans": [
+          {
+            "type": "text",
+            "text": "No trait can go above "
+          },
+          {
+            "type": "bold",
+            "text": "Dragon (4)"
+          },
+          {
+            "type": "text",
+            "text": "."
+          }
+        ]
+      },
+      {
+        "type": "bullet",
+        "spans": [
+          {
+            "type": "text",
+            "text": "You have exactly 6 points to spend."
+          }
+        ]
+      },
+      {
+        "type": "para",
+        "spans": [
+          {
+            "type": "text",
+            "text": "Think about what your character relies on when the world turns against them. Are they fast? Cunning? Strong? What are they not so great at?"
+          }
+        ]
+      }
+    ],
+    "worldcloth_questions": [
+      [
+        {
+          "type": "text",
+          "text": "What is your character's species or kin — human, or something else from our Touchstone List?"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "Is your character righteous, hewing to moral norms, or do they get their hands dirty, taking opportunities wherever they find them?"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "What work or calling defines your character’s life — how do they earn respect, survive, or make trouble?"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "Does your character believe in gods? Is there some kind of spiritual practice or religious organization for them?"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "What kind of life does your character know best — wandering the wilds, the streets of a city, or somewhere in between?"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "How old was your character when they had their closest encounter with Death? Were they its witness -- or its agent?"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "What station does your character hold in the world’s eyes — and what happens when they step into a crowd?"
+        }
+      ]
+    ],
+    "worldcloth_followup": [
+      {
+        "type": "text",
+        "text": "Why does that complicate your character's life?"
+      }
+    ],
+    "name_read_aloud": [
+      {
+        "type": "para",
+        "spans": [
+          {
+            "type": "text",
+            "text": "Now let’s give your character a name."
+          }
+        ]
+      },
+      {
+        "type": "para",
+        "spans": [
+          {
+            "type": "text",
+            "text": "You can invent one, or borrow from the Touchstone List."
+          }
+        ]
+      },
+      {
+        "type": "para",
+        "spans": [
+          {
+            "type": "text",
+            "text": "Don’t worry about getting it perfect. Choose something that feels fun to say, or that arouses curiousity for their past and for their destiny."
+          }
+        ]
+      }
+    ],
+    "initiation_read_aloud": [
+      {
+        "type": "para",
+        "spans": [
+          {
+            "type": "text",
+            "text": "Since this is a game about taking risks, I'm going to give you an opportunity to get some bonuses when you get risky. We're going to create what are called "
+          },
+          {
+            "type": "bold",
+            "text": "Initiations to Dark Gardens"
+          },
+          {
+            "type": "text",
+            "text": "."
+          }
+        ]
+      },
+      {
+        "type": "para",
+        "spans": [
+          {
+            "type": "text",
+            "text": "An Initiation to Dark Gardens is a thematic goal your character might try to achieve during the story. You'll write it in the designated spot on your character sheet, and place an "
+          },
+          {
+            "type": "bold",
+            "text": "XP token"
+          },
+          {
+            "type": "text",
+            "text": " and a "
+          },
+          {
+            "type": "bold",
+            "text": "✔ token"
+          },
+          {
+            "type": "text",
+            "text": " there as well."
+          }
+        ]
+      },
+      {
+        "type": "para",
+        "spans": [
+          {
+            "type": "text",
+            "text": "When your character "
+          },
+          {
+            "type": "italic",
+            "text": "takes a big risk"
+          },
+          {
+            "type": "text",
+            "text": " to pursue this goal, you’ll earn XP, and the ✔ token will advance a scene’s progress bar. (We’ll explain how those effects work later.)"
+          }
+        ]
+      },
+      {
+        "type": "para",
+        "spans": [
+          {
+            "type": "text",
+            "text": "To choose your Initiation to Dark Gardens, the player on your left will read you two options from a list. You’ll pick one, and that becomes your character’s personal Initiation to Dark Gardens.  You then read propose 2 different options to the player on your right and everyone will take their turn like that."
+          }
+        ]
+      }
+    ],
+    "initiation_options": [
+      [
+        {
+          "type": "text",
+          "text": "Expose an embarrassment"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "Locate a prize"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "Extract a secret"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "Become enamored"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "Sell your services"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "Break down a barrier"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "Choose a side"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "Be an agent of justice"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "Take pity on the desperate"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "Start a grudge"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "Consort with the unsavory"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "Believe an impossible claim"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "Get called out on your boasting"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "Claims the XP token"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "Advances a ✔ token to a scene’s progress bar of their choice"
+        }
+      ]
+    ],
+    "receive_cards": [
+      {
+        "move": "Use a Magic Item",
+        "item": [
+          {
+            "type": "text",
+            "text": "1 magic item of your choice"
+          }
+        ]
+      },
+      {
+        "move": "Channel the Living Light",
+        "item": [
+          {
+            "type": "italic",
+            "text": "Sigil of the Living Light"
+          }
+        ]
+      },
+      {
+        "move": "Entreat the Blood Bound",
+        "item": [
+          {
+            "type": "italic",
+            "text": "Blade of Echoes"
+          }
+        ]
+      }
+    ]
   },
   "hearth": {
-    "at_home_read_aloud": [{"type":"para","spans":[{"type":"text","text":"What makes your character feel most at home, or what activity do they find the most comfort or competence in?"}]}],
-    "at_home_followup": [{"type":"text","text":"Listen for vulnerability. Where does each character feel safe enough to be themselves, to let their guard down? This will shape the beginning of the story.  Write down each player's answer."}],
-    "hearth_options": ["Specific People","Food","Song","Environmental feature","Ritual or festival","Group activity"],
-    "choose_hearth_read_aloud": [{"type":"para","spans":[{"type":"text","text":"This is a game where you all play together on the same team."}]},{"type":"para","spans":[{"type":"text","text":"So, let's bring all these characters together. We're going to decide on something that exists in the world of our Touchstone List that all of these characters value. They value it so much that they are going to team up to defend it - maybe even with their lives."}]},{"type":"para","spans":[{"type":"text","text":"We will call this thing \"The Hearth\"."}]}],
-    "hearth_examples_read_aloud": [{"type":"para","spans":[{"type":"text","text":"The Hearth can be a specific person or people. Maybe each character shares a friendly uncle?"}]},{"type":"para","spans":[{"type":"text","text":"The Hearth can be food. Do all these characters depend on the fruit of the quartzberry tree?"}]},{"type":"para","spans":[{"type":"text","text":"The Hearth can be a song. Is the valley home of these characters always humming with the melodies of the wood elves?"}]},{"type":"para","spans":[{"type":"text","text":"The Hearth can be an environmental feature. Does the village home of all these characters depend on the limestone spring for water?"}]},{"type":"para","spans":[{"type":"text","text":"The Hearth can be a ritual or festival. On the equinox, must every tribe send a representative to seal the portal to the netherworld?"}]},{"type":"para","spans":[{"type":"text","text":"The Hearth can be a group activity. No warrior may abandon the hunt until the beast is caught. Nor may they abandon each other."}]},{"type":"para","spans":[{"type":"text","text":"Those are some examples, but the choice is up to you. What will be The Hearth of this band of adventurers?"}]}],
-    "make_sure_note": [{"type":"text","text":"With follow up questions, make sure everyone agrees why this common thing bonds them\ntogether and why it makes them comrades that would risk their lives for\neach other."}],
-    "must_be_separated_note": [{"type":"text","text":"An important aspect of The Hearth is that it must be something that the characters can be separated from. When the players are deciding on The Hearth, keep this in mind."}],
-    "risk_life_read_aloud": [{"type":"para","spans":[{"type":"text","text":"Briefly, why would your character risk their life for The Hearth?"}]}]
-  }
+    "at_home_read_aloud": [
+      {
+        "type": "para",
+        "spans": [
+          {
+            "type": "text",
+            "text": "What makes your character feel most at home, or what activity do they find the most comfort or competence in?"
+          }
+        ]
+      }
+    ],
+    "at_home_followup": [
+      {
+        "type": "text",
+        "text": "Listen for vulnerability. Where does each character feel safe enough to be themselves, to let their guard down? This will shape the beginning of the story.  Write down each player's answer."
+      }
+    ],
+    "hearth_options": [
+      "Specific People",
+      "Food",
+      "Song",
+      "Environmental feature",
+      "Ritual or festival",
+      "Group activity"
+    ],
+    "choose_hearth_read_aloud": [
+      {
+        "type": "para",
+        "spans": [
+          {
+            "type": "text",
+            "text": "This is a game where you all play together on the same team."
+          }
+        ]
+      },
+      {
+        "type": "para",
+        "spans": [
+          {
+            "type": "text",
+            "text": "So, let's bring all these characters together. We're going to decide on something that exists in the world of our Touchstone List that all of these characters value. They value it so much that they are going to team up to defend it - maybe even with their lives."
+          }
+        ]
+      },
+      {
+        "type": "para",
+        "spans": [
+          {
+            "type": "text",
+            "text": "We will call this thing \"The Hearth\"."
+          }
+        ]
+      }
+    ],
+    "hearth_examples_read_aloud": [
+      {
+        "type": "para",
+        "spans": [
+          {
+            "type": "text",
+            "text": "The Hearth can be a specific person or people. Maybe each character shares a friendly uncle?"
+          }
+        ]
+      },
+      {
+        "type": "para",
+        "spans": [
+          {
+            "type": "text",
+            "text": "The Hearth can be food. Do all these characters depend on the fruit of the quartzberry tree?"
+          }
+        ]
+      },
+      {
+        "type": "para",
+        "spans": [
+          {
+            "type": "text",
+            "text": "The Hearth can be a song. Is the valley home of these characters always humming with the melodies of the wood elves?"
+          }
+        ]
+      },
+      {
+        "type": "para",
+        "spans": [
+          {
+            "type": "text",
+            "text": "The Hearth can be an environmental feature. Does the village home of all these characters depend on the limestone spring for water?"
+          }
+        ]
+      },
+      {
+        "type": "para",
+        "spans": [
+          {
+            "type": "text",
+            "text": "The Hearth can be a ritual or festival. On the equinox, must every tribe send a representative to seal the portal to the netherworld?"
+          }
+        ]
+      },
+      {
+        "type": "para",
+        "spans": [
+          {
+            "type": "text",
+            "text": "The Hearth can be a group activity. No warrior may abandon the hunt until the beast is caught. Nor may they abandon each other."
+          }
+        ]
+      },
+      {
+        "type": "para",
+        "spans": [
+          {
+            "type": "text",
+            "text": "Those are some examples, but the choice is up to you. What will be The Hearth of this band of adventurers?"
+          }
+        ]
+      }
+    ],
+    "make_sure_note": [
+      {
+        "type": "text",
+        "text": "With follow up questions, make sure everyone agrees why this common thing bonds them\ntogether and why it makes them comrades that would risk their lives for\neach other."
+      }
+    ],
+    "must_be_separated_note": [
+      {
+        "type": "text",
+        "text": "An important aspect of The Hearth is that it must be something that the characters can be separated from. When the players are deciding on The Hearth, keep this in mind."
+      }
+    ],
+    "risk_life_read_aloud": [
+      {
+        "type": "para",
+        "spans": [
+          {
+            "type": "text",
+            "text": "Briefly, why would your character risk their life for The Hearth?"
+          }
+        ]
+      }
+    ]
+  },
+  "moves": [
+    {
+      "title": "Mix It Up",
+      "attrs": [
+        "Str"
+      ],
+      "groups": []
+    },
+    {
+      "title": "Volley",
+      "attrs": [
+        "Dex"
+      ],
+      "groups": []
+    },
+    {
+      "title": "Defend",
+      "attrs": [
+        "Str"
+      ],
+      "groups": []
+    },
+    {
+      "title": "Take a Breather",
+      "attrs": [
+        "INT",
+        "DEX"
+      ],
+      "groups": []
+    },
+    {
+      "title": "Bravely Run Away",
+      "attrs": [],
+      "groups": []
+    },
+    {
+      "title": "Rest",
+      "attrs": [],
+      "groups": []
+    },
+    {
+      "title": "Seek Help",
+      "attrs": [],
+      "groups": []
+    },
+    {
+      "title": "Study under a master",
+      "attrs": [],
+      "groups": []
+    },
+    {
+      "title": "Shop / Procure",
+      "attrs": [],
+      "groups": []
+    },
+    {
+      "title": "Tales of a Weapon",
+      "attrs": [],
+      "groups": []
+    },
+    {
+      "title": "Sharpen & Stitch",
+      "attrs": [
+        "INT"
+      ],
+      "groups": []
+    },
+    {
+      "title": "Defy Danger",
+      "attrs": [
+        "Str",
+        "Dex",
+        "Int"
+      ],
+      "groups": []
+    },
+    {
+      "title": "Unfold Mystery",
+      "attrs": [
+        "Int"
+      ],
+      "groups": []
+    },
+    {
+      "title": "Discern",
+      "attrs": [
+        "Int"
+      ],
+      "groups": []
+    },
+    {
+      "title": "Parley",
+      "attrs": [
+        "Int"
+      ],
+      "groups": []
+    },
+    {
+      "title": "Destiny Forewritten",
+      "attrs": [],
+      "groups": []
+    },
+    {
+      "title": "Good thing I brought...",
+      "attrs": [],
+      "groups": []
+    },
+    {
+      "title": "Critical Flip",
+      "attrs": [],
+      "groups": []
+    },
+    {
+      "title": "And This Is For...",
+      "attrs": [
+        "STR"
+      ],
+      "groups": []
+    },
+    {
+      "title": "Where It Hurts",
+      "attrs": [
+        "DEX",
+        "STR"
+      ],
+      "groups": []
+    },
+    {
+      "title": "Tied with Her Ribbon",
+      "attrs": [],
+      "groups": []
+    },
+    {
+      "title": "Go Berserk!",
+      "attrs": [],
+      "groups": []
+    },
+    {
+      "title": "It Belonged to My Father",
+      "attrs": [],
+      "groups": []
+    },
+    {
+      "title": "Apex Predator",
+      "attrs": [
+        "Int",
+        "Str"
+      ],
+      "groups": []
+    },
+    {
+      "title": "Intimidate",
+      "attrs": [],
+      "groups": []
+    },
+    {
+      "title": "Fury",
+      "attrs": [
+        "STR"
+      ],
+      "groups": []
+    },
+    {
+      "title": "Goreography",
+      "attrs": [
+        "DEX"
+      ],
+      "groups": []
+    },
+    {
+      "title": "It's a Trap!",
+      "attrs": [
+        "INT"
+      ],
+      "groups": []
+    },
+    {
+      "title": "Pick Pockets",
+      "attrs": [
+        "DEX"
+      ],
+      "groups": []
+    },
+    {
+      "title": "Pick Locks",
+      "attrs": [
+        "DEX"
+      ],
+      "groups": []
+    },
+    {
+      "title": "Weak Spot",
+      "attrs": [
+        "INT"
+      ],
+      "groups": []
+    },
+    {
+      "title": "Bum Rush",
+      "attrs": [
+        "DEX",
+        "STR"
+      ],
+      "groups": []
+    },
+    {
+      "title": "Vanish",
+      "attrs": [],
+      "groups": []
+    },
+    {
+      "title": "I'm Only Here for the Job",
+      "attrs": [],
+      "groups": []
+    },
+    {
+      "title": "Slide",
+      "attrs": [],
+      "groups": []
+    },
+    {
+      "title": "Called Shot",
+      "attrs": [
+        "DEX"
+      ],
+      "groups": []
+    },
+    {
+      "title": "Come and get me",
+      "attrs": [
+        "INT"
+      ],
+      "groups": []
+    },
+    {
+      "title": "Not On My Turf",
+      "attrs": [],
+      "groups": []
+    },
+    {
+      "title": "Derring-Do",
+      "attrs": [
+        "DEX"
+      ],
+      "groups": []
+    },
+    {
+      "title": "Sangfroid",
+      "attrs": [],
+      "groups": []
+    },
+    {
+      "title": "Entreat the Blood-Bound",
+      "attrs": [],
+      "groups": []
+    },
+    {
+      "title": "Channel the Living Light",
+      "attrs": [
+        "INT"
+      ],
+      "groups": []
+    },
+    {
+      "title": "Reach Out With Your Feelings",
+      "attrs": [
+        "Int"
+      ],
+      "groups": []
+    },
+    {
+      "title": "Fundamental Magic",
+      "attrs": [
+        "INT"
+      ],
+      "groups": []
+    },
+    {
+      "title": "Counterspell",
+      "attrs": [
+        "INT"
+      ],
+      "groups": []
+    },
+    {
+      "title": "Obsessive Contemplation",
+      "attrs": [],
+      "groups": []
+    },
+    {
+      "title": "Suggestive Subtlety",
+      "attrs": [
+        "INT"
+      ],
+      "groups": []
+    },
+    {
+      "title": "Like A Second Skin",
+      "attrs": [],
+      "groups": [
+        "9hour"
+      ]
+    },
+    {
+      "title": "Bloody But Unbowed",
+      "attrs": [],
+      "groups": [
+        "9hour"
+      ]
+    },
+    {
+      "title": "Mystic Breathwork",
+      "attrs": [],
+      "groups": [
+        "9hour"
+      ]
+    },
+    {
+      "title": "Unknown Benefactor",
+      "attrs": [],
+      "groups": [
+        "9hour"
+      ]
+    },
+    {
+      "title": "Void Transfusion",
+      "attrs": [],
+      "groups": [
+        "9hour"
+      ]
+    },
+    {
+      "title": "Breach the Dam",
+      "attrs": [
+        "INT"
+      ],
+      "groups": [
+        "9hour"
+      ]
+    },
+    {
+      "title": "Good Cardio",
+      "attrs": [
+        "STR"
+      ],
+      "groups": [
+        "A"
+      ]
+    },
+    {
+      "title": "Backstab",
+      "attrs": [
+        "DEX"
+      ],
+      "groups": [
+        "A"
+      ]
+    },
+    {
+      "title": "Use a Magic Item",
+      "attrs": [
+        "INT"
+      ],
+      "groups": [
+        "A"
+      ]
+    }
+  ]
 };
 </script>
 <!-- ══ END DEV ONLY ══════════════════════════════════════════════════ -->
@@ -404,7 +1461,7 @@ input, textarea, select { font-family: inherit; }
 
 /* PC grid */
 .pc-grid {
-  display: grid; grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  display: grid; grid-template-columns: repeat(2, 1fr);
   gap: 0.75rem; margin-top: 0.5rem;
 }
 .pc-card {
@@ -618,6 +1675,163 @@ input, textarea, select { font-family: inherit; }
   box-shadow: 0 0 0 2px rgba(200,169,110,0.3);
 }
 
+/* ── DOWNLOAD ZONE ───────────────────────────────────────────────────── */
+.download-zone {
+  margin-top: 2rem;
+  display: flex; flex-direction: column; gap: 0.6rem;
+  align-items: flex-start;
+}
+.btn-download { font-size: 0.7rem; padding: 0.5rem 1.1rem; }
+.download-hint {
+  font-size: 0.7rem; color: var(--rule);
+  line-height: 1.5; font-style: italic;
+}
+.download-hint[hidden] { display: none; }
+
+/* ── MOVE CARD GRID ──────────────────────────────────────────────────── */
+.move-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+  padding: 0 4rem;
+  margin-bottom: 2rem;
+}
+.move-card-spot {
+  aspect-ratio: 3 / 4;
+  border: 2px dashed #333;
+  border-radius: 10px;
+  transition: border-color 0.15s;
+}
+.move-card-spot.spot-a {
+  border-color: #444;
+}
+
+.movecards-instruction {
+  font-size: 0.85rem; color: var(--rule);
+  margin-bottom: 1.25rem; line-height: 1.5;
+}
+.movecards-instruction strong { color: var(--paper); }
+
+/* Gold border for the 3 A-spots */
+.move-card-spot.spot-a {
+  border-color: var(--gold);
+  cursor: pointer;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.move-card-spot.spot-a:hover {
+  box-shadow: 0 0 0 2px rgba(200,169,110,0.25);
+}
+
+/* Filled spot */
+.move-card-spot.spot-filled {
+  border-style: dashed;
+  border-color: #333;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+}
+/* The card sits inside the spot, slightly smaller */
+.move-card-inner {
+  width: 88%; height: 88%;
+  background: #f8f4ec;
+  border-radius: 8px;
+  border: 1px solid #c8b89a;
+  box-shadow:
+    inset 0 0 0 3px #e8e0d0,
+    inset 0 0 0 4px #c8b89a,
+    2px 3px 8px rgba(0,0,0,0.45);
+  display: flex; flex-direction: column;
+  overflow: hidden;
+  color: #2a1f0e;
+}
+.card-body-top {
+  flex: 3;
+  display: flex; align-items: center; justify-content: center;
+  padding: 0 0.6rem;
+  text-align: center;
+}
+.card-body-bottom {
+  flex: 1;
+  padding: 0 0.6rem 0.4rem;
+  display: flex; flex-direction: column;
+}
+
+.spot-card-title {
+  font-family: var(--font-serif); font-size: 1.5rem;
+  color: #2a1f0e; line-height: 1.2;
+}
+.spot-card-rule {
+  border: none; border-top: 1px solid #b8a888;
+  margin: 0 0 0.3rem; width: 100%;
+}
+.spot-card-attr {
+  font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.18em;
+  color: #7a6040; text-align: center;
+  font-family: var(--font-serif); font-style: italic;
+}
+
+/* Picker overlay */
+.card-picker-overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 200;
+}
+.card-picker-overlay[hidden] { display: none; }
+.card-picker {
+  background: #111; border: 1.5px solid #333; border-radius: var(--r);
+  padding: 1.25rem 1.5rem; max-width: 480px; width: 90%;
+}
+.card-picker-label {
+  font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.2em;
+  color: var(--rule); margin-bottom: 1rem;
+}
+.card-picker-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem; margin-bottom: 1rem;
+}
+.picker-card {
+  aspect-ratio: 3 / 4;
+  background: #f8f4ec;
+  border-radius: 8px;
+  border: 1px solid #c8b89a;
+  box-shadow:
+    inset 0 0 0 3px #e8e0d0,
+    inset 0 0 0 4px #c8b89a,
+    2px 3px 6px rgba(0,0,0,0.5);
+  cursor: pointer;
+  display: flex; flex-direction: column;
+  align-items: center; padding: 0 0.5rem;
+  position: relative; color: #2a1f0e;
+  transition: transform 0.12s, box-shadow 0.12s;
+}
+.picker-card:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    inset 0 0 0 3px #e8e0d0,
+    inset 0 0 0 4px #c8b89a,
+    4px 6px 12px rgba(0,0,0,0.55);
+}
+
+.picker-card-attr {
+  font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.18em;
+  color: #7a6040; margin-top: 0.3rem;
+}
+.picker-card-title {
+  font-family: var(--font-serif); font-size: 1.1rem;
+  color: #2a1f0e; text-align: center;
+  margin-top: 3rem; line-height: 1.2;
+}
+.picker-card-rule {
+  width: 60%; border: none; border-top: 1px solid #b8a888;
+  margin: 0.4rem 0;
+}
+.card-picker-close {
+  background: none; border: none; color: var(--rule);
+  font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.15em;
+  padding: 0; cursor: pointer; transition: color 0.15s;
+}
+.card-picker-close:hover { color: var(--paper); }
+
 /* ── DELETE ZONE ─────────────────────────────────────────────────────── */
 .delete-zone {
   margin-top: 2.5rem; padding-top: 1.5rem;
@@ -677,6 +1891,8 @@ input, textarea, select { font-family: inherit; }
     <p class="page-subtitle">Pick up where you left off, or start fresh</p>
     <div class="action-row" style="margin-top:0;margin-bottom:1.5rem;">
       <button class="btn-primary" id="btn-new-game">New Game</button>
+      <button class="btn-secondary" id="btn-load-game">Load Game</button>
+      <input type="file" id="load-game-input" accept=".json" style="display:none">
     </div>
     <ul class="game-list" id="game-list"></ul>
   </section>
@@ -801,6 +2017,39 @@ input, textarea, select { font-family: inherit; }
     </div>
   </section>
 
+  <!-- ── VIEW: CHOOSE MOVE CARDS ──────────────────────────────────────── -->
+  <section class="view" id="view-movecards">
+    <div class="flow-progress">
+      <div class="flow-step done"></div>
+      <div class="flow-step done"></div>
+      <div class="flow-step done"></div>
+      <div class="flow-step current"></div>
+      <div class="flow-step"></div>
+      <div class="flow-step"></div>
+    </div>
+    <div class="section-label">Step 3 of 5</div>
+    <h1 class="page-title">Choose Move Cards</h1>
+    <p class="page-subtitle" id="movecards-subtitle">Each player selects their starting moves</p>
+
+    <p class="movecards-instruction">This screen guides you through laying out and choosing cards at your table. Do the following steps in real life.<br><br>Place all three cards marked with an <strong>"A"</strong> in the corner face down in the top row.</p>
+
+    <!-- Floating card picker -->
+    <div class="card-picker-overlay" id="card-picker-overlay" hidden>
+      <div class="card-picker" id="card-picker">
+        <div class="card-picker-label">Choose a card for this spot</div>
+        <div class="card-picker-grid" id="card-picker-grid"></div>
+        <button class="card-picker-close" id="card-picker-close">Cancel</button>
+      </div>
+    </div>
+
+    <div class="move-card-grid" id="move-card-grid"></div>
+
+    <div class="action-row">
+      <button class="btn-primary" id="btn-movecards-next">Continue Character Creation →</button>
+      <button class="btn-secondary" id="btn-movecards-back">← Touchstones</button>
+    </div>
+  </section>
+
   <!-- ── VIEW: CHARACTER CREATION ─────────────────────────────────────── -->
   <section class="view" id="view-chargen">
     <div class="flow-progress">
@@ -809,8 +2058,9 @@ input, textarea, select { font-family: inherit; }
       <div class="flow-step done"></div>
       <div class="flow-step current"></div>
       <div class="flow-step"></div>
+      <div class="flow-step"></div>
     </div>
-    <div class="section-label">Step 3 of 4</div>
+    <div class="section-label">Step 4 of 5</div>
     <h1 class="page-title">Character Creation</h1>
     <p class="page-subtitle">One player at a time — GM reads aloud, player answers</p>
 
@@ -822,7 +2072,7 @@ input, textarea, select { font-family: inherit; }
 
     <div class="action-row">
       <button class="btn-primary" id="btn-to-hearth">The Hearth →</button>
-      <button class="btn-secondary" id="btn-chargen-back">← Touchstones</button>
+      <button class="btn-secondary" id="btn-chargen-back">← Move Cards</button>
     </div>
   </section>
 
@@ -833,9 +2083,10 @@ input, textarea, select { font-family: inherit; }
       <div class="flow-step done"></div>
       <div class="flow-step done"></div>
       <div class="flow-step done"></div>
+      <div class="flow-step done"></div>
       <div class="flow-step current"></div>
     </div>
-    <div class="section-label">Step 4 of 4</div>
+    <div class="section-label">Step 5 of 5</div>
     <h1 class="page-title">Gather Around the Hearth</h1>
     <p class="page-subtitle">GM-led — whole table together</p>
 
@@ -913,6 +2164,10 @@ input, textarea, select { font-family: inherit; }
       <div class="pc-grid" id="sum-players"></div>
     </div>
 
+    <div class="download-zone">
+      <button class="btn-secondary btn-download" id="btn-download">Download</button>
+      <p class="download-hint" id="download-hint" hidden>Use this JSON file to move your game to another browser or device.</p>
+    </div>
     <div class="delete-zone" id="delete-zone">
       <button class="btn-delete-game" id="btn-delete-game">Delete</button>
       <div class="delete-confirm" id="delete-confirm" hidden>
@@ -1022,7 +2277,7 @@ function showToast(msg = 'Saved') {
 }
 
 // ── VIEW / PHASE ───────────────────────────────────────────────────────
-const ALL_VIEWS = ['games','players','campaign','touchstones','chargen','hearth','summary'];
+const ALL_VIEWS = ['games','players','campaign','touchstones','movecards','chargen','hearth','summary'];
 
 function showView(name) {
   ALL_VIEWS.forEach(v => el('view-'+v).classList.toggle('active', v === name));
@@ -1031,7 +2286,8 @@ function showView(name) {
     players:     'Who\'s at the table?',
     campaign:    'Step 1 · Campaign',
     touchstones: 'Step 2 · Touchstones',
-    chargen:     'Step 3 · Characters',
+    movecards:   'Step 3 · Move Cards',
+    chargen:     'Step 4 · Characters',
     hearth:      'Step 4 · The Hearth',
     summary:     'Setup Complete',
   };
@@ -1090,6 +2346,148 @@ function dbDelete(id)   { return new Promise((r,j) => { const q = db.transaction
 // ── STATE ──────────────────────────────────────────────────────────────
 let state = null;
 
+
+
+// ── MOVE CARD GRID ─────────────────────────────────────────────────────
+const aMoves = (GAMEDATA.moves || []).filter(m => m.groups.includes('A'));
+// Track which A-move is in each of the 3 A-spots (null = empty)
+let aSpotAssignments    = [null, null, null];
+let additionalAssignments = [];  // indexed by (spotIdx - 3)
+
+function renderMoveCardGrid() {
+  const playerCount = state.players.length || 1;
+  const tableEntry  = (cc.move_card_table || [])
+    .find(row => parseInt(row.players) === playerCount);
+  const additional  = tableEntry ? parseInt(tableEntry.cards) : 0;
+  const total       = 3 + additional;
+
+  const grid = el('move-card-grid');
+  grid.innerHTML = '';
+
+  const allAFilled = aSpotAssignments.every(m => m !== null);
+
+  for (let i = 0; i < total; i++) {
+    const spot = document.createElement('div');
+    const assigned = i < 3 ? aSpotAssignments[i] : null;
+
+    if (i < 3 && assigned) {
+      // Filled A-spot: show card, clickable to swap
+      spot.className = 'move-card-spot spot-a spot-filled';
+      spot.innerHTML = `
+        <div class="move-card-inner">
+          <div class="card-body-top">
+            <div class="spot-card-title">${assigned.title}</div>
+          </div>
+          <div class="card-body-bottom">
+            <hr class="spot-card-rule">
+            <div class="spot-card-attr">${assigned.attrs.join(' · ')}</div>
+          </div>
+        </div>`;
+      spot.addEventListener('click', () => openCardPicker(i));
+    } else if (i < 3) {
+      // Empty A-spot: always clickable
+      spot.className = 'move-card-spot spot-a';
+      spot.addEventListener('click', () => openCardPicker(i));
+    } else if (allAFilled) {
+      // Additional spots unlock only once all 3 A-spots are filled
+      const addIdx = i; // capture for closure
+      const addAssigned = additionalAssignments[i - 3] || null;
+      if (addAssigned) {
+        spot.className = 'move-card-spot spot-a spot-filled';
+        spot.innerHTML = `
+          <div class="move-card-inner">
+            <div class="card-body-top">
+              <div class="spot-card-title">${addAssigned.title}</div>
+            </div>
+            <div class="card-body-bottom">
+              <hr class="spot-card-rule">
+              <div class="spot-card-attr">${addAssigned.attrs.join(' · ')}</div>
+            </div>
+          </div>`;
+        spot.addEventListener('click', () => openAdditionalPicker(addIdx));
+      } else {
+        spot.className = 'move-card-spot spot-a';
+        spot.addEventListener('click', () => openAdditionalPicker(addIdx));
+      }
+    } else {
+      // Not yet unlocked
+      spot.className = 'move-card-spot';
+    }
+    grid.appendChild(spot);
+  }
+
+  el('movecards-subtitle').textContent =
+    `${playerCount} player${playerCount !== 1 ? 's' : ''} · 3 starting cards + ${additional} additional = ${total} total`;
+}
+
+function openCardPicker(spotIdx) {
+  // Available A-moves: not assigned to another spot
+  const taken = aSpotAssignments
+    .filter((m, i) => m !== null && i !== spotIdx)
+    .map(m => m.title);
+  const available = aMoves.filter(m => !taken.includes(m.title));
+
+  const pickerGrid = el('card-picker-grid');
+  pickerGrid.innerHTML = '';
+  available.forEach(move => {
+    const card = document.createElement('div');
+    card.className = 'picker-card';
+    card.innerHTML = `
+      <div class="picker-card-top">
+        <div class="picker-card-title">${move.title}</div>
+      </div>
+      <div class="picker-card-bottom">
+        <hr class="picker-card-rule">
+        <div class="picker-card-attr">${move.attrs.join(' · ')}</div>
+      </div>`;
+    card.addEventListener('click', () => {
+      aSpotAssignments[spotIdx] = move;
+      closeCardPicker();
+      renderMoveCardGrid();
+    });
+    pickerGrid.appendChild(card);
+  });
+
+  el('card-picker-overlay').removeAttribute('hidden');
+}
+
+
+function openAdditionalPicker(spotIdx) {
+  const taken = [
+    ...aSpotAssignments,
+    ...additionalAssignments,
+  ].filter(m => m !== null && m !== (additionalAssignments[spotIdx - 3] || null))
+   .map(m => m.title);
+  const available = (GAMEDATA.moves || [])
+    .filter(m => !m.groups.includes('A') && !taken.includes(m.title));
+
+  const pickerGrid = el('card-picker-grid');
+  pickerGrid.innerHTML = '';
+  available.forEach(move => {
+    const card = document.createElement('div');
+    card.className = 'picker-card';
+    card.innerHTML = `
+      <div class="picker-card-top">
+        <div class="picker-card-title">${move.title}</div>
+      </div>
+      <div class="picker-card-bottom">
+        <hr class="picker-card-rule">
+        <div class="picker-card-attr">${move.attrs.join(' · ')}</div>
+      </div>`;
+    card.addEventListener('click', () => {
+      additionalAssignments[spotIdx - 3] = move;
+      closeCardPicker();
+      renderMoveCardGrid();
+    });
+    pickerGrid.appendChild(card);
+  });
+
+  el('card-picker-overlay').removeAttribute('hidden');
+}
+
+function closeCardPicker() {
+  el('card-picker-overlay').setAttribute('hidden', '');
+}
 
 // ── PLAYERS ENTRY VIEW ─────────────────────────────────────────────────
 function renderPlayersEntry() {
@@ -1784,13 +3182,26 @@ document.addEventListener('DOMContentLoaded', async () => {
       renderSummary();
       showView('summary');
     } else {
-      currentPlayerIdx = 0;
-      renderPlayerTabs();
-      renderPlayerForm();
-      showView('chargen');
+      renderMoveCardGrid();
+      showView('movecards');
     }
   });
   el('btn-c-back').addEventListener('click', () => showPhase('b'));
+
+  el('card-picker-close').addEventListener('click', closeCardPicker);
+  el('card-picker-overlay').addEventListener('click', e => { if (e.target === el('card-picker-overlay')) closeCardPicker(); });
+
+  // Move cards
+  el('btn-movecards-next').addEventListener('click', () => {
+    currentPlayerIdx = 0;
+    renderPlayerTabs();
+    renderPlayerForm();
+    showView('chargen');
+  });
+  el('btn-movecards-back').addEventListener('click', () => {
+    showView('touchstones');
+    showPhase('c');
+  });
 
   // Character creation
   el('btn-to-hearth').addEventListener('click', async () => {
@@ -1800,7 +3211,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     renderHearthView();
     showView('hearth');
   });
-  el('btn-chargen-back').addEventListener('click', () => { saveCurrentPlayerForm(); showView('touchstones'); showPhase('c'); });
+  el('btn-chargen-back').addEventListener('click', () => { saveCurrentPlayerForm(); renderMoveCardGrid(); showView('movecards'); });
 
   // Hearth
   el('btn-hearth-finish').addEventListener('click', async () => {
@@ -1821,7 +3232,52 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Summary
 
 
+  el('btn-download').addEventListener('click', () => {
+    if (!state) return;
+    const json = JSON.stringify(state, null, 2);
+    const blob = new Blob([json], { type: 'application/json' });
+    const url  = URL.createObjectURL(blob);
+    const a    = document.createElement('a');
+    const name = (state.hearth?.name || state.campaign || 'game').replace(/[^a-z0-9]/gi, '_').toLowerCase();
+    const now  = new Date();
+    const date = now.getFullYear().toString()
+      + String(now.getMonth() + 1).padStart(2, '0')
+      + String(now.getDate()).padStart(2, '0');
+    a.href     = url;
+    a.download = `1kfa_${date}_${name}.json`;
+    a.click();
+    URL.revokeObjectURL(url);
+    el('download-hint').hidden = false;
+  });
+
   // Delete game
+  el('btn-load-game').addEventListener('click', () => {
+    el('load-game-input').click();
+  });
+
+  el('load-game-input').addEventListener('change', async e => {
+    const file = e.target.files[0];
+    if (!file) return;
+    try {
+      const text = await file.text();
+      const loaded = JSON.parse(text);
+      if (!loaded.id || !loaded.createdAt) throw new Error('Invalid game file');
+      loaded.updatedAt = Date.now();
+      await dbPut(loaded);
+      state = loaded;
+      // Warm thumb cache
+      (loaded.titles || []).forEach(t => {
+        if (t.thumb !== undefined) thumbCache[t.text.toLowerCase()] = t.thumb;
+      });
+      renderSummary();
+      showView('summary');
+      showToast('Game loaded');
+    } catch (err) {
+      showToast('Could not load file');
+    }
+    e.target.value = ''; // reset so same file can be re-loaded
+  });
+
   el('btn-delete-game').addEventListener('click', () => {
     const confirm = el('delete-confirm');
     confirm.hidden = !confirm.hidden;

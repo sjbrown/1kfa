@@ -107,7 +107,7 @@ This guide will prepare you for play by covering:
 ![Your Deckahedron](images/component_deckahedron.png){ width=2.5inch }
 
 (If you do not have a physical copy of this game, you can find a digital
-Deckahedron at [1kFA.com/table](http://www.1kFA.com/table) )
+Deckahedron at [1kFA.com/downloads](http://www.1kFA.com/downloads) )
 
 Every player except the GM gets a Deckahedron. Inspect your Deckahedron.
 You should have 20 cards.  There are 4 symbols, or "suits", on the fronts and
@@ -257,11 +257,10 @@ The GM reads aloud:
 
 > Now let’s give your character a name.
 >
-> You can invent one, borrow from your favorite fantasy stories, or draw
-> inspiration from the Touchstone List.
+> You can invent one, or borrow from the Touchstone List.
 >
 > Don’t worry about getting it perfect. Choose something that feels fun
-> to say, or that makes you curious about who this person might become.
+> to say, or that arouses curiousity for their past and for their destiny.
 
 Players should write their character’s name on their sheet, bold and
 large so everyone around the table can read it, before continuing.
