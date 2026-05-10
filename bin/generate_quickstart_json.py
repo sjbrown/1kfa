@@ -34,9 +34,10 @@ def parse_move_cards(moves_md: str) -> list:
     all_moves = handy_moves(moves_md)
     return [
         {
-            'title':  m['title'],
-            'attrs':  m.get('attrs', []),
-            'groups': m.get('groups', []),
+            'title':     m['title'],
+            'attrs':     m.get('attrs', []),
+            'groups':    m.get('groups', []),
+            'component': m.get('component'),
         }
         for m in all_moves
     ]
