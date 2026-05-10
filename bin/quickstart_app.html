@@ -1351,6 +1351,14 @@ input, textarea, select { font-family: inherit; }
 .btn-add:hover { opacity: 0.85; }
 
 /* ── CHARACTER CREATION ──────────────────────────────────────────────── */
+.character-reqs { margin-bottom: 0.5rem; }
+.req-indicator { margin-right: 0.4rem; }
+.character-reqs .btn-primary.active {
+  background: var(--ink);
+  color: var(--gold);
+  box-shadow: inset 0 -2px 0 var(--gold), 0 0 0 2px var(--gold);
+}
+
 .player-tabs {
   margin-top: 1.25rem;
   display: grid; grid-template-columns: repeat(3, 1fr);
@@ -1416,6 +1424,33 @@ input, textarea, select { font-family: inherit; }
 }
 .init-option:hover   { border-color: #555; color: var(--paper); }
 .init-option.chosen  { border-color: var(--danger); color: var(--paper); background: rgba(192,65,14,0.12); }
+
+
+/* ── CHARACTER TRAITS ────────────────────────────────────────────────── */
+.character-traits {
+  display: grid;
+  grid-template-columns: minmax(8rem, auto) repeat(4, 1fr);
+  gap: 0.5rem;
+  margin-top: 1rem;
+  align-items: stretch;
+}
+.trait-name {
+  font-family: var(--font-serif); font-size: 0.9rem;
+  color: var(--paper);
+  display: flex; align-items: center;
+  padding-right: 0.5rem;
+}
+.trait-rank-btn {
+  background: #111; border: 1.5px solid #2a2a2a;
+  border-radius: var(--r); padding: 0.5rem 0;
+  color: var(--rule); font-size: 0.65rem;
+  text-transform: uppercase; letter-spacing: 0.08em;
+  text-align: center; cursor: pointer; width: 100%;
+  transition: border-color 0.15s, color 0.15s;
+  line-height: 1.4;
+}
+.trait-rank-btn:hover { border-color: #555; color: var(--paper); }
+.trait-rank-btn.active { border-color: var(--accent); background: rgba(60,52,137,0.2); color: var(--paper); }
 
 /* ── HEARTH ──────────────────────────────────────────────────────────── */
 .hearth-options-grid {
@@ -2778,6 +2813,7 @@ function freshPlayer(name = '', playerName = '') {
     player_name:   playerName, // person at the table
     wc_answers:    Array(cc.worldcloth_questions.length).fill(''),
     initiation:    null,
+    traits:        { dex: null, int: null, str: null },
   };
 }
 
@@ -2992,6 +3028,11 @@ const REQ_SECTIONS = [
   { key: 'initiation', label: 'Initiation to Dark Gardens' },
 ];
 
+function traitSum(pc) {
+  const t = pc.traits || {};
+  return (t.dex || 0) + (t.int || 0) + (t.str || 0);
+}
+
 function isReqDone(key) {
   if (key === 'name')
     return state.pcs.every(pc => pc.name && pc.name.trim());
@@ -2999,6 +3040,8 @@ function isReqDone(key) {
     return state.pcs.every(pc => pc.initiation !== null && pc.initiation !== undefined);
   if (key === 'worldcloth')
     return state.pcs.every(pc => (pc.wc_answers || []).some(a => a && a.trim()));
+  if (key === 'traits')
+    return state.pcs.every(pc => traitSum(pc) === 6);
   return false;
 }
 
@@ -3065,23 +3108,56 @@ function renderActiveSection() {
   } else if (activeReqSection === 'traits') {
     const sec = document.createElement('div');
     sec.className = 'cc-section';
+    const ranks = [
+      { label: '1', name: 'Anvil' },
+      { label: '2', name: 'Blades' },
+      { label: '3', name: 'Crown' },
+      { label: '4', name: 'Dragon' },
+    ];
+    const traits = ['Dexterity', 'Intelligence', 'Strength'];
+    const traitRows = traits.map(trait =>
+      `<span class="trait-name">${trait}</span>` +
+      ranks.map(r =>
+        `<button class="trait-rank-btn" data-trait="${trait}" data-rank="${r.label}">${r.label}<br>${r.name}</button>`
+      ).join('')
+    ).join('');
     sec.innerHTML = `
-      <div class="step-header">
-        <div class="step-num">①</div>
-        <div class="step-name"><span>Character</span><strong>Assign Traits</strong></div>
-      </div>
       <div class="read-aloud">${blockquoteToHTML(cc.traits_read_aloud)}</div>
+      <div class="character-traits" id="trait-grid">${traitRows}</div>
     `;
     form.appendChild(sec);
+    // Wire trait buttons
+    const traitKeyMap = { 'Dexterity': 'dex', 'Intelligence': 'int', 'Strength': 'str' };
+    form.querySelectorAll('.trait-rank-btn').forEach(btn => {
+      const traitKey = traitKeyMap[btn.dataset.trait];
+      const rank     = parseInt(btn.dataset.rank, 10);
+      const pc       = state.pcs[currentPlayerIdx];
+      if ((pc.traits || {})[traitKey] === rank) btn.classList.add('active');
+      btn.addEventListener('click', () => {
+        const pc = state.pcs[currentPlayerIdx];
+        if (!pc.traits) pc.traits = { dex: null, int: null, str: null };
+        const newVal = rank;
+        const otherSum = traitSum(pc) - (pc.traits[traitKey] || 0);
+        if (otherSum + newVal > 6) {
+          // Null out others, keep only this value
+          pc.traits = { dex: null, int: null, str: null };
+        }
+        pc.traits[traitKey] = newVal;
+        // Update button active states
+        form.querySelectorAll('.trait-rank-btn').forEach(b => {
+          const bKey = traitKeyMap[b.dataset.trait];
+          const bRank = parseInt(b.dataset.rank, 10);
+          b.classList.toggle('active', (pc.traits[bKey] || 0) === bRank);
+        });
+        renderCharacterReqs();
+        autoSave();
+      });
+    });
 
   } else if (activeReqSection === 'worldcloth') {
     const sec = document.createElement('div');
     sec.className = 'cc-section';
     sec.innerHTML = `
-      <div class="step-header">
-        <div class="step-num">②</div>
-        <div class="step-name"><span>Character</span><strong>Worldcloth Questions</strong></div>
-      </div>
       <p class="gm-note" style="margin-bottom:1rem;">${spansToHTML(cc.worldcloth_followup)} Ask one. Listen. Move on.</p>
     `;
     cc.worldcloth_questions.forEach((q, qi) => {
@@ -3108,12 +3184,13 @@ function renderActiveSection() {
     const sec = document.createElement('div');
     sec.className = 'cc-section';
     sec.innerHTML = `
-      <div class="step-header">
-        <div class="step-num">③</div>
-        <div class="step-name"><span>Character</span><strong>Initiation to Dark Gardens</strong></div>
-      </div>
       <div class="read-aloud">${blockquoteToHTML(cc.initiation_read_aloud)}</div>
-      <p class="gm-note" style="margin-bottom:0.75rem;">The player on their left reads two options aloud. They pick one.</p>
+      <p class="gm-note" style="margin-bottom:0.75rem;">${(() => {
+        const px = state.pcs[currentPlayerIdx]?.player_name || state.pcs[currentPlayerIdx]?.name || `Player ${currentPlayerIdx + 1}`;
+        const yIdx = (currentPlayerIdx + 1) % state.pcs.length;
+        const py = state.pcs[yIdx]?.player_name || state.pcs[yIdx]?.name || `Player ${yIdx + 1}`;
+        return `<strong>${py}</strong> reads two of the following options aloud. Then <strong>${px}</strong> picks one.`;
+      })()}</p>
       <div class="initiation-grid" id="pf-init-grid"></div>
     `;
     form.appendChild(sec);
@@ -3138,93 +3215,6 @@ function renderPlayerForm() {
   renderActiveSection();
 }
 
-function renderPlayerForm_OLD() {
-  const p = state.pcs[currentPlayerIdx];
-  const form = el('player-form');
-  form.innerHTML = '';
-
-  // Name (kept for reference, no longer called)
-  const nameSection = document.createElement('div');
-  nameSection.className = 'cc-section';
-  nameSection.innerHTML = `
-    <div class="read-aloud">${blockquoteToHTML(cc.name_read_aloud)}</div>
-    <input class="player-name-input" id="pf-name" type="text"
-           placeholder="Character name…" maxlength="60" value="${p.name}"
-           oninput="state.pcs[currentPlayerIdx].name=this.value.trim();renderCharacterReqs();autoSave()">
-  `;
-  form.appendChild(nameSection);
-
-  // Traits read-aloud
-  const traitsSection = document.createElement('div');
-  traitsSection.className = 'cc-section';
-  traitsSection.innerHTML = `
-    <div class="step-header">
-      <div class="step-num">①</div>
-      <div class="step-name"><span>Character</span><strong>Assign Traits</strong></div>
-    </div>
-    <div class="read-aloud">${blockquoteToHTML(cc.traits_read_aloud)}</div>
-  `;
-  form.appendChild(traitsSection);
-
-  // Worldcloth questions
-  const wcSection = document.createElement('div');
-  wcSection.className = 'cc-section';
-  wcSection.innerHTML = `
-    <div class="step-header">
-      <div class="step-num">②</div>
-      <div class="step-name"><span>Character</span><strong>Worldcloth Questions</strong></div>
-    </div>
-    <p class="gm-note" style="margin-bottom:1rem;">${spansToHTML(cc.worldcloth_followup)} Ask one. Listen. Move on.</p>
-  `;
-  cc.worldcloth_questions.forEach((q, qi) => {
-    const div = document.createElement('div');
-    div.className = 'wc-question';
-    div.innerHTML = `
-      <div class="wc-q-text">${spansToHTML(q)}</div>
-      <textarea class="wc-answer" id="pf-wc-${qi}" rows="1" placeholder="Answer…">${p.wc_answers[qi] || ''}</textarea>
-    `;
-    wcSection.appendChild(div);
-  });
-  form.appendChild(wcSection);
-
-  // Initiation
-  const initSection = document.createElement('div');
-  initSection.className = 'cc-section';
-  initSection.innerHTML = `
-    <div class="step-header">
-      <div class="step-num">③</div>
-      <div class="step-name"><span>Character</span><strong>Initiation to Dark Gardens</strong></div>
-    </div>
-    <div class="read-aloud">${blockquoteToHTML(cc.initiation_read_aloud)}</div>
-    <p class="gm-note" style="margin-bottom:0.75rem;">The player on their left reads two options aloud. They pick one.</p>
-    <div class="initiation-grid" id="pf-init-grid"></div>
-  `;
-  form.appendChild(initSection);
-
-  // Populate initiation options
-  const grid = el('pf-init-grid');
-  cc.initiation_options.forEach((opt, oi) => {
-    const btn = document.createElement('button');
-    btn.className = 'init-option' + (p.initiation === oi ? ' chosen' : '');
-    btn.textContent = spansToHTML(opt);
-    btn.addEventListener('click', () => {
-      state.pcs[currentPlayerIdx].initiation = oi;
-      grid.querySelectorAll('.init-option').forEach(b => b.classList.remove('chosen'));
-      btn.classList.add('chosen');
-    });
-    grid.appendChild(btn);
-  });
-
-  // Auto-expand textareas
-  form.querySelectorAll('.wc-answer').forEach(ta => {
-    ta.addEventListener('input', () => {
-      ta.style.height = 'auto';
-      ta.style.height = ta.scrollHeight + 'px';
-    });
-    ta.style.height = 'auto';
-    ta.style.height = ta.scrollHeight + 'px';
-  });
-} // end renderPlayerForm_OLD
 
 function saveCurrentPlayerForm() {
   const p = state.pcs[currentPlayerIdx];
