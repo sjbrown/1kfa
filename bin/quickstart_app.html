@@ -1191,6 +1191,9 @@ body {
 }
 button { cursor: pointer; font-family: inherit; }
 input, textarea, select { font-family: inherit; }
+a { color: var(--gold); }
+a:hover { color: var(--gold); }
+a:visited { color: var(--warm); }
 
 /* ── LAYOUT ──────────────────────────────────────────────────────────── */
 .app { max-width: var(--page-max); margin: 0 auto; padding: 0 1.5rem 4rem; }
@@ -1208,7 +1211,7 @@ input, textarea, select { font-family: inherit; }
   gap: 1rem;
 }
 .masthead-title { font-family: var(--font-serif); font-size: 1.1rem; color: var(--gold); letter-spacing: 0.02em; }
-.masthead-sub   { font-size: 0.65rem; color: var(--rule); text-transform: uppercase; letter-spacing: 0.18em; }
+.masthead-page { font-family: var(--font-serif); font-size: 1.1rem; color: #FFF; letter-spacing: 0.02em; }
 .btn-ghost {
   background: none; border: none; color: var(--rule);
   font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.12em; padding: 0;
@@ -1283,10 +1286,13 @@ input, textarea, select { font-family: inherit; }
 .campaign-option .opt-desc { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--rule); }
 
 /* ── TITLE CHIPS ─────────────────────────────────────────────────────── */
-.titles-grid { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem; min-height: 2rem; }
+.titles-grid {
+  display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem; min-height: 2rem;
+  background-color: #faaaba33;
+}
 .title-chip {
   display: inline-flex; align-items: center; gap: 0.5rem;
-  background: #111; border: 1.5px solid #333; border-radius: 2px;
+  border: 1.5px solid #333; border-radius: 2px;
   padding: 0.3rem 0.65rem; font-size: 0.8rem;
   cursor: pointer; transition: border-color 0.15s, background 0.15s; user-select: none;
 }
@@ -1569,6 +1575,15 @@ input, textarea, select { font-family: inherit; }
   transition: border-color 0.15s;
 }
 .pc-card:hover { border-color: var(--gold); }
+/* ── PC CARD HEADER ──────────────────────────────────────────────────── */
+.pc-card-header {
+  display: flex; align-items: flex-start;
+  justify-content: space-between; gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.pc-card-text { flex: 1; min-width: 0; }
+.pc-card-svg { flex-shrink: 0; opacity: 0.6; }
+
 .pc-name {
   font-family: var(--font-serif); font-size: 1.25rem;
   font-weight: 400; line-height: 1.2; margin-bottom: 0.25rem;
@@ -1591,7 +1606,7 @@ input, textarea, select { font-family: inherit; }
 
 .pc-initiation { font-size: 0.8rem; color: rgba(255,255,255,0.7); line-height: 1.4; }
 
-@media (max-width: 520px) {
+@media (max-width: 580px) {
   .world-card-inner { flex-direction: column; }
   .world-card-thumbs { margin-top: 0.75rem; }
 }
@@ -1620,7 +1635,7 @@ input, textarea, select { font-family: inherit; }
 /* ── PRIVACY NOTE ────────────────────────────────────────────────────── */
 .privacy-note {
   border: 1.5px solid #2a2a2a; border-radius: var(--r);
-  padding: 1rem 1.25rem; margin-bottom: 2rem;
+  padding: 1rem 1.25rem; margin: 2rem;
 }
 .privacy-note-text {
   font-family: var(--font-serif); font-size: 1.05rem; color: var(--paper);
@@ -1946,6 +1961,13 @@ input, textarea, select { font-family: inherit; }
 }
 .card-picker-close:hover { color: var(--paper); }
 
+@media (max-width: 580px) {
+  .move-card-grid {
+    gap: 0.5rem;
+    padding: 0 0.5rem;
+  }
+}
+
 /* ── MOVE CARD ADDITIONS ─────────────────────────────────────────────── */
 /* All cards in MC2/MC3 use spot-filled so card is centered */
 .move-card-spot.spot-filled {
@@ -2005,8 +2027,9 @@ input, textarea, select { font-family: inherit; }
   <!-- MASTHEAD -->
   <header class="masthead">
     <div>
-      <div class="masthead-title">A Thousand Faces of Adventure</div>
-      <div class="masthead-sub" id="masthead-phase">Setup</div>
+      <div class="masthead-title" id="masthead-title">A Thousand Faces of Adventure
+      ⬧
+      <span class="masthead-page" id="masthead-page">Your Games</span></div>
     </div>
     <button class="hamburger" id="btn-show-games" aria-label="Home">
       <span></span><span></span><span></span>
@@ -2027,9 +2050,7 @@ input, textarea, select { font-family: inherit; }
 
   <!-- ── VIEW: WHO'S AT THE TABLE ──────────────────────────────────────── -->
   <section class="view" id="view-players">
-    <div class="section-label">Before we begin</div>
-    <h1 class="page-title">Who's at the table?</h1>
-    <p class="page-subtitle">Enter the names of everyone at your table</p>
+    <div class="step-name"><strong>Before we begin, who's at the table?</strong></div>
 
     <div class="privacy-note">
       <div class="privacy-note-text">
@@ -2064,7 +2085,6 @@ input, textarea, select { font-family: inherit; }
       <div class="flow-step"></div>
       <div class="flow-step"></div>
     </div>
-    <div class="section-label">Step 1 of 4</div>
     <h1 class="page-title">Campaign Length</h1>
     <p class="page-subtitle">Shapes how quickly characters grow and scenes are structured</p>
     <div class="campaign-options" id="campaign-options"></div>
@@ -2080,12 +2100,13 @@ input, textarea, select { font-family: inherit; }
       <div class="flow-step"></div>
     </div>
 
+    <!-- Chips — shared between phases, mode toggled via CSS class on parent -->
+    <div class="titles-grid" id="titles-brainstorm"></div>
+
     <!-- Phase A header (slides out), Phase B header (slides in) -->
     <div class="phase-header-wrap">
       <div class="phase-header" id="phase-header-a">
-        <div class="section-label">Step 2 of 4 · Brainstorm</div>
         <div class="step-header">
-          <div class="step-num">A</div>
           <div class="step-name"><span>Touchstones</span><strong>Write titles from pop culture</strong></div>
         </div>
         <div class="read-aloud" id="ra-intro"></div>
@@ -2096,18 +2117,13 @@ input, textarea, select { font-family: inherit; }
         </div>
       </div>
       <div class="phase-header phase-header-below" id="phase-header-b">
-        <div class="section-label">Step 2 of 4 · Narrow</div>
         <div class="step-header">
-          <div class="step-num">B</div>
           <div class="step-name"><span>Touchstones</span><strong>Circle one title each</strong></div>
         </div>
         <div class="read-aloud" id="ra-step-b"></div>
         <div id="gm-notes-b"></div>
       </div>
     </div>
-
-    <!-- Chips — shared between phases, mode toggled via CSS class on parent -->
-    <div class="titles-grid" id="titles-brainstorm"></div>
 
     <!-- Phase A actions (slide out) / Phase B actions (slide in) -->
     <div class="phase-actions-wrap">
@@ -2127,9 +2143,7 @@ input, textarea, select { font-family: inherit; }
 
     <!-- Phase C header (slides in from below after B) -->
     <div class="phase-header phase-header-c" id="phase-header-c">
-      <div class="section-label">Step 2 of 4 · Imagine</div>
       <div class="step-header">
-        <div class="step-num">C</div>
         <div class="step-name"><span>Touchstones</span><strong>Set expectations</strong></div>
       </div>
       <div class="touchstone-showcase" id="touchstone-showcase"></div>
@@ -2155,7 +2169,6 @@ input, textarea, select { font-family: inherit; }
       <div class="flow-step"></div>
       <div class="flow-step"></div>
     </div>
-    <div class="section-label" id="mc-section-label">Step 3 of 5</div>
 
     <!-- Floating player picker (step 3) -->
     <div class="card-picker-overlay" id="player-picker-overlay" hidden>
@@ -2209,7 +2222,6 @@ input, textarea, select { font-family: inherit; }
       <div class="flow-step"></div>
       <div class="flow-step"></div>
     </div>
-    <div class="section-label">Step 4 of 5</div>
     <h1 class="page-title">Character Creation</h1>
     <p class="page-subtitle">Flesh out your character</p>
 
@@ -2238,9 +2250,7 @@ input, textarea, select { font-family: inherit; }
       <div class="flow-step done"></div>
       <div class="flow-step current"></div>
     </div>
-    <div class="section-label">Step 5 of 5</div>
     <h1 class="page-title">Gather Around the Hearth</h1>
-    <p class="page-subtitle">GM-led — whole table together</p>
 
     <!-- Step 1: At home -->
     <div class="cc-section">
@@ -2298,9 +2308,9 @@ input, textarea, select { font-family: inherit; }
 
   <!-- ── VIEW: SUMMARY ─────────────────────────────────────────────────── -->
   <section class="view" id="view-summary">
-    <div class="section-label">Setup Complete</div>
     <h1 class="page-title">Ready to Play</h1>
-    <p class="page-subtitle">Hand off to the GM Guide at Chapter 1</p>
+    <p class="page-subtitle">Next step: Read "Paint the Opening Image" in the 
+    <a href="https://files.1kfa.com/latest/1kfa_guide_gm.html">GM Guide</a></p>
 
     <div class="summary-card" id="sum-world-card">
       <div class="world-card-inner">
@@ -2431,17 +2441,18 @@ const ALL_VIEWS = ['games','players','campaign','touchstones','movecards','charg
 
 function showView(name) {
   ALL_VIEWS.forEach(v => el('view-'+v).classList.toggle('active', v === name));
-  const labels = {
-    games:       'Saved Games',
-    players:     'Who\'s at the table?',
-    campaign:    'Step 1 · Campaign',
-    touchstones: 'Step 2 · Touchstones',
-    movecards:   'Step 3 · Move Cards',
-    chargen:     'Step 4 · Characters',
-    hearth:      'Step 4 · The Hearth',
-    summary:     'Setup Complete',
-  };
-  el('masthead-phase').textContent = labels[name] || '';
+  const pageNames = {
+     games: 'Your Games',
+     players: 'Who Gathers Around the Table?',
+     campaign: 'Universe Creation',
+     touchstones: 'Universe Creation',
+     movecards: 'Character Creation',
+     chargen: 'Character Creation',
+     hearth: 'Gather Around the Hearth',
+     summary: 'Ready to Play',
+   };
+   const pageName = pageNames[name];
+   el('masthead-page').textContent = pageName;
   window.scrollTo(0, 0);
 }
 
@@ -2550,7 +2561,7 @@ let mc1Display = [null, null, null];
 function renderMC1() {
   const grid = el('mc1-grid');
   grid.innerHTML = '';
-  grid.style.cssText = 'grid-template-columns:repeat(3,1fr);gap:4rem;padding:0 4rem;margin-bottom:2rem;';
+  grid.className = 'move-card-grid';
   for (let i = 0; i < 3; i++) {
     const spot     = document.createElement('div');
     const assigned = mc1Display[i];
@@ -2597,7 +2608,7 @@ function renderMC2() {
   const all  = availableAdditionalMoves();
   const grid = el('mc2-grid');
   grid.innerHTML = '';
-  grid.style.cssText = 'grid-template-columns:repeat(3,1fr);gap:4rem;padding:0 4rem;margin-bottom:2rem;';
+  grid.className = 'move-card-grid';
 
   all.forEach(move => {
     const sel      = mcs.gm_selected.includes(move.title);
@@ -2638,7 +2649,7 @@ function renderMC3() {
 
   const grid = el('mc3-grid');
   grid.innerHTML = '';
-  grid.style.cssText = 'grid-template-columns:repeat(3,1fr);gap:4rem;padding:0 4rem;margin-bottom:2rem;';
+  grid.className = 'move-card-grid';
 
   allCards.forEach(move => {
     const pidx = mcs.player_assigned[move.title] ?? null;
@@ -2677,17 +2688,18 @@ function openPlayerPicker(moveTitle) {
   const list   = el('player-picker-list');
   list.innerHTML = '';
 
-  state.pcs.forEach((p, i) => {
+  state.pcs.forEach((pc, i) => {
     // Cards owned by this player, in assignment order
     const ownedEntries = Object.entries(mcs.player_assigned)
       .filter(([, pi]) => pi === i);
     const n = ownedEntries.length;
 
+    const playerName = pc.player_name || `Player ${i+1}`;
     const pill = document.createElement('div');
     pill.className        = 'player-pill';
-    pill.style.background = playerGradientCSS(p.name || '');
+    pill.style.background = playerGradientCSS(playerName);
     pill.style.color      = '#fff';
-    pill.innerHTML = `<span>${p.name || `Player ${i+1}`}</span><span class="player-pill-count">(${n} card${n !== 1 ? 's' : ''})</span>`;
+    pill.innerHTML = `<span>${playerName}</span><span class="player-pill-count">(${n} card${n !== 1 ? 's' : ''})</span>`;
     pill.addEventListener('click', () => {
       if (n >= 3) {
         // Bump the first card they received
@@ -2711,7 +2723,6 @@ function showMCPhase(n) {
   if (!state?.move_card_state) initMoveCardState();
   [1,2,3].forEach(i => el(`mc-phase-${i}`).style.display = i === n ? '' : 'none');
   window.scrollTo(0, 0);
-  el('mc-section-label').textContent = `Step 3 of 5 \xb7 Part ${n} of 3`;
   if (n === 1) renderMC1();
   if (n === 2) renderMC2();
   if (n === 3) renderMC3();
@@ -3293,6 +3304,61 @@ function saveHearthForm() {
 }
 
 // ── SUMMARY ────────────────────────────────────────────────────────────
+
+// ── TRAITS SVG ─────────────────────────────────────────────────────────
+const TRAITS_SVG = `<svg width="60" height="35" viewBox="0 0 60 35" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <path style="fill:#FFF;stroke:none" d="M 6.169517,3.124704 C 5.21219,2.915729 4.356747,3.081814 3.490087,3.092774 c -0.13645,0 -0.269801,-0.0035 -0.400052,-0.01047 -0.359764,-0.03074 -0.705235,-0.0554 -1.051304,-0.06359 -0.04901,0.05561 -0.06037,0.197949 0.0186,0.254453 0.389633,0.04993 0.567665,0.168872 0.623354,0.551345 v 5.863271 c 0,0.155503 -0.0062,0.289803 -0.01873,0.402899 -0.01248,0.106033 -0.04039,0.197921 -0.08373,0.275664 -0.03721,0.07069 -0.09304,0.130769 -0.167466,0.180238 -0.07442,0.04947 -0.173661,0.08835 -0.297715,0.116643 -0.06203,0.01423 -0.08994,0.04957 -0.08373,0.106034 0.01249,0.05655 0.0497,0.08482 0.111636,0.08482 0.248093,-0.01423 0.496188,-0.01074 0.744284,0.01047 0.254298,0.01422 0.505495,0.03189 0.75359,0.05301 0.210881,0.02119 0.424864,0.03886 0.641947,0.05301 0.217083,0.01423 0.434166,0.02134 0.65125,0.02134 0.595429,0 1.135036,-0.08129 1.618822,-0.243864 C 7.040831,10.578396 7.459492,10.323932 7.806826,9.984653 8.154159,9.645368 8.337644,9.1796 8.606932,8.701732 9.131649,7.77059 8.797577,5.88301 8.458767,5.086863 8.076545,4.188705 7.233601,3.463598 6.169526,3.124704 Z m 0.911854,6.552443 c -0.260501,0.261533 -0.576822,0.45945 -0.948965,0.593749 -0.372143,0.134304 -0.7815,0.201456 -1.228073,0.201456 -0.167465,0 -0.356638,-0.01767 -0.567518,-0.05301 C 3.68112,10.273566 3.657675,9.867117 3.657675,9.284861 V 3.676053 c 0.84737,-0.02353 1.63063,-0.143651 2.270073,0.11665 0.857194,0.397173 1.460447,1.11458 1.749073,1.91908 C 7.954193,6.691597 8.053553,7.701263 7.804699,8.38703 7.555846,9.072796 7.348066,9.408546 7.081371,9.677147 Z"/>
+    <path style="fill:#FFF;stroke:none" d="m 7.204313,21.772891 c -0.07774,-0.01422 -0.684661,-0.02133 -0.762423,-0.02133 -0.03534,0 -0.08128,-0.0071 -0.137831,-0.02133 -0.05655,-0.01423 -0.102491,-0.02836 -0.137832,-0.0424 -0.02119,-0.02827 -0.04593,-0.08129 -0.07421,-0.159052 -0.02119,-0.08481 -0.0424,-0.173165 -0.06363,-0.265052 -0.02119,-0.09189 -0.03886,-0.176713 -0.05301,-0.254476 -0.01423,-0.08481 -0.02134,-0.144893 -0.02134,-0.180238 v -5.842064 c 0,-0.219122 0.06008,-0.364025 0.18024,-0.43471 0.120159,-0.07069 0.804831,-0.123706 0.995684,-0.15905 0.07069,-0.01422 0.102496,-0.04603 0.09542,-0.09542 -0.007,-0.05655 -0.04586,-0.08836 -0.116643,-0.09543 -0.204984,-0.01422 -0.935601,-0.01771 -1.133516,-0.01047 -0.197921,0.007 -0.395838,0.01047 -0.593751,0.01047 H 4.766519 c -0.197921,-0.007 -0.928539,-0.0035 -1.133519,0.01047 -0.06361,0.007 -0.09542,0.03879 -0.09542,0.09543 0,0.05654 0.03181,0.08835 0.09542,0.09542 0.183775,0.0212 0.871981,0.07422 1.006284,0.159051 0.134305,0.07776 0.201458,0.222665 0.201458,0.43471 v 5.789049 c 0,0.07069 -0.0071,0.159041 -0.02134,0.265054 -0.007,0.09896 -0.02819,0.197921 -0.06362,0.296882 -0.02827,0.09896 -0.06715,0.183785 -0.116644,0.254474 -0.04947,0.07069 -0.113089,0.106034 -0.190847,0.106034 -0.02119,0 -0.08127,0.01413 -0.18024,0.0424 -0.09189,0.02119 -0.68467,0.02468 -0.720014,0.01047 -0.02827,-0.01422 -0.05655,-0.01073 -0.08482,0.01047 -0.02827,0.01423 -0.04947,0.03543 -0.06362,0.06362 -0.01422,0.02827 -0.02133,0.05655 -0.02133,0.08482 0,0.02827 0.01414,0.04947 0.04241,0.06362 0.04947,0.02119 0.727078,0.02831 0.974481,0.02134 0.65103,-0.03382 1.298477,-0.01884 1.908475,-4e-4 0.148432,0.007 0.797763,0.01409 0.88966,0.02134 0.362169,-0.0072 0.243894,-0.146737 0.01102,-0.253702 z"/>
+    <path style="fill:#FFF;stroke:none" d="M 7.512922,30.955592 C 7.514022,30.22312 6.988223,29.629755 6.463257,29.179796 5.94336,28.726466 5.358869,28.345494 4.881097,27.845417 4.564198,27.500499 4.361499,26.9931 4.5536,26.536842 c 0.225768,-0.620771 1.004421,-0.864467 1.591569,-0.639276 0.438551,0.11616 0.759215,0.543412 0.742201,0.997629 0.238146,0.307394 0.434414,-0.305053 0.399534,-0.51681 0.01336,-0.279945 0.02142,-0.562152 0.0088,-0.841834 C 6.969887,25.352874 6.539791,25.37077 6.166523,25.34888 c -0.893774,0.01777 -1.854715,0.271277 -2.470419,0.957737 -0.409106,0.475786 -0.330596,1.207622 0.03181,1.686006 0.35795,0.545041 0.889381,1.00168 1.357139,1.406746 0.497702,0.481342 1.061895,0.927887 1.376353,1.558802 0.2061,0.402704 0.07132,0.910404 -0.278984,1.185934 -0.654048,0.57859 -1.824988,0.51367 -2.328615,-0.22914 -0.154306,-0.21809 -0.103701,-0.48849 -0.112781,-0.7348 -0.328829,-0.180039 -0.268192,0.3569 -0.360447,0.54379 -0.109674,0.35092 -0.111217,0.80061 0.214696,1.04004 0.38525,0.30342 0.914768,0.33774 1.386464,0.30215 0.942548,-0.10499 1.909189,-0.58641 2.376154,-1.44256 0.10442,-0.20606 0.1559,-0.43732 0.155039,-0.667993 z"/>
+    <rect style="fill:#FFF;stroke:none" id="r-d-1" width="10" height="10" x="14.47" y="2" rx="1" ry="1"/>
+    <rect style="fill:#FFF;stroke:none" id="r-d-2" width="10" height="10" x="25.583302" y="2" rx="1" ry="1"/>
+    <rect style="fill:#FFF;stroke:none" id="r-d-3" width="10" height="10" x="36.695797" y="2" rx="1" ry="1"/>
+    <rect style="fill:#FFF;stroke:none" id="r-d-4" width="10" height="10" x="47.8" y="2" rx="1" ry="1"/>
+    <rect style="fill:#FFF;stroke:none" id="r-i-1" width="10" height="10" x="14.47" y="13.1" rx="1" ry="1"/>
+    <rect style="fill:#FFF;stroke:none" id="r-i-2" width="10" height="10" x="25.583302" y="13.1" rx="1" ry="1"/>
+    <rect style="fill:#FFF;stroke:none" id="r-i-3" width="10" height="10" x="36.695797" y="13.1" rx="1" ry="1"/>
+    <rect style="fill:#FFF;stroke:none" id="r-i-4" width="10" height="10" x="47.8" y="13.1" rx="1" ry="1"/>
+    <rect style="fill:#FFF;stroke:none" id="r-s-1" width="10" height="10" x="14.47" y="24.21" rx="1" ry="1"/>
+    <rect style="fill:#FFF;stroke:none" id="r-s-2" width="10" height="10" x="25.583302" y="24.21" rx="1" ry="1"/>
+    <rect style="fill:#FFF;stroke:none" id="r-s-3" width="10" height="10" x="36.695797" y="24.21" rx="1" ry="1"/>
+    <rect style="fill:#FFF;stroke:none" id="r-s-4" width="10" height="10" x="47.8" y="24.21" rx="1" ry="1"/>
+  </g>
+</svg>`;
+
+function traitsSVGFor(pc) {
+  const t = pc?.traits;
+  if (!t || (t.dex === null && t.int === null && t.str === null)) {
+    return `<div class="pc-card-svg" style="display:none">${TRAITS_SVG}</div>`;
+  }
+  // Build set of rect IDs to hide
+  const hide = new Set();
+  const check = (key, prefix) => {
+    const val = t[key];
+    if (val === null || val === undefined) {
+      hide.add(`${prefix}-1`); hide.add(`${prefix}-2`);
+      hide.add(`${prefix}-3`); hide.add(`${prefix}-4`);
+    } else {
+      for (let r = 1; r <= 4; r++) {
+        if (r > val) hide.add(`${prefix}-${r}`);
+      }
+    }
+  };
+  check('dex', 'r-d');
+  check('int', 'r-i');
+  check('str', 'r-s');
+
+  // Inject display:none on hidden rects via style attribute
+  let svg = TRAITS_SVG;
+  hide.forEach(id => {
+    svg = svg.replace(
+      new RegExp(`id="${id}"`, 'g'),
+      `id="${id}" style="display:none"`
+    );
+  });
+  return `<div class="pc-card-svg">${svg}</div>`;
+}
+
 function renderSummary() {
   const hearth = state.hearth?.name || state.hearth?.choice || '';
   const deleteLabelEl = el('delete-label-text');
@@ -3375,8 +3441,13 @@ function renderSummary() {
     }
 
     return `<div class="pc-card" data-pc-idx="${i}" style="background:${bg}">
-      <div class="pc-name">${charName}${playerName ? ` <span class="pc-player">(${playerName})</span>` : ''}</div>
-      ${init ? `<div class="pc-initiation">${init}</div>` : ''}
+      <div class="pc-card-header">
+        <div class="pc-card-text">
+          <div class="pc-name">${charName}${playerName ? ` <span class="pc-player">(${playerName})</span>` : ''}</div>
+          ${init ? `<div class="pc-initiation">${init}</div>` : ''}
+        </div>
+        ${traitsSVGFor(p)}
+      </div>
       ${moveChips}
     </div>`;
   }).join('');
@@ -3531,7 +3602,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       renderSummary();
       showView('summary');
     } else {
-      initMoveCardState();
+      if (!state?.move_card_state) initMoveCardState();
       showMCPhase(1);
       showView('movecards');
     }
