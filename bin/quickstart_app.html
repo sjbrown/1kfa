@@ -2897,15 +2897,12 @@ function renderChips(container, mode) {
     const chip = document.createElement('span');
     chip.className = 'title-chip' + (t.circled ? ' circled' : '');
 
-    // Thumbnail when circled — real image or gradient fallback
-    if (t.circled) {
-      const img = document.createElement('img');
-      img.className = 'chip-thumb';
-      img.src = t.thumb || gradientSVG(t.text, 28, 38);
-      img.alt = '';
-      img.draggable = false;
-      chip.appendChild(img);
-    }
+    const img = document.createElement('img');
+    img.className = 'chip-thumb';
+    img.src = t.thumb || gradientSVG(t.text, 28, 38);
+    img.alt = '';
+    img.draggable = false;
+    chip.appendChild(img);
 
     const label = document.createElement('span');
     label.className = 'chip-label';
@@ -3022,7 +3019,10 @@ function addTitle(text) {
       added = true;
     }
   });
-  if (added) renderBrainstorm();
+  if (added) {
+    renderBrainstorm();
+    parts.forEach(part => fetchAndCacheThumb(part));
+  }
 }
 
 // ── CHARACTER CREATION ─────────────────────────────────────────────────
@@ -3348,15 +3348,14 @@ function traitsSVGFor(pc) {
   check('int', 'r-i');
   check('str', 'r-s');
 
-  // Inject display:none on hidden rects by merging into existing style attribute
-  let svg = TRAITS_SVG;
+  const div = document.createElement('div');
+  div.innerHTML = TRAITS_SVG;
+  const svg = div.firstElementChild;
   hide.forEach(id => {
-    svg = svg.replace(
-      new RegExp(`style="([^"]*)"([^>]*id="${id}")`, 'g'),
-      `style="$1;display:none"$2`
-    );
+    const rect = svg.getElementById(id);
+    if (rect) rect.style.display = 'none';
   });
-  return `<div class="pc-card-svg">${svg}</div>`;
+  return `<div class="pc-card-svg">${div.innerHTML}</div>`;
 }
 
 function renderSummary() {
