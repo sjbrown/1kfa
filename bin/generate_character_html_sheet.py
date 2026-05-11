@@ -428,7 +428,6 @@ def render_right_column(data: CharacterCreationData) -> str:
         f'{section_head("Initiation to Dark Gardens", "danger")}'
         f'{read_aloud(data.initiation_read_aloud, "margin-bottom:6px;")}'
         f'      <div class="init-grid">\n{init_items}      </div>\n'
-        f'      <p class="rule-note">Tokens stay on the sheet &mdash; not available to spend yet.</p>\n'
         f'    </div>\n\n'
 
         # Weapons & Items

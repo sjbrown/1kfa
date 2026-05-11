@@ -332,14 +332,19 @@ Here are the available Initiations to Dark Gardens:
 - Believe an impossible claim
 - Get called out on your boasting
 
-Once chosen, players keep their XP and ✔ tokens on the Initiation to Dark Gardens spot of their sheet. They are not available to spend yet.
+Players write their choice on their character sheet in the
+Initiation to Dark Gardens section.
 
-When a character first *takes a big risk* in pursuit of their Initiation to Dark Gardens — by the method or for the reason written on the Initiation to Dark Gardens spot — the player:
+When a character first *takes a big risk* in pursuit of their
+Initiation to Dark Gardens, by the method or for the reason
+written on the Initiation to Dark Gardens spot, the player
+takes the rewards shown. If the story progresses past a chapter
+listed there, the player strikes that chapter's rewards from
+their sheet.
 
-- Claims the XP token
-- Advances a ✔ token to a scene’s progress bar of their choice
-
-Initiations to Dark Gardens are especially helpful for players newer to roleplaying games — they provide a personal goal that can inspire bold choices and keep the story moving.
+Initiations to Dark Gardens are especially helpful for players
+newer to roleplaying games — they provide a personal goal that
+can inspire bold choices and keep the story moving.
 
 
 # Weapons and Items
