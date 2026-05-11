@@ -3348,12 +3348,12 @@ function traitsSVGFor(pc) {
   check('int', 'r-i');
   check('str', 'r-s');
 
-  // Inject display:none on hidden rects via style attribute
+  // Inject display:none on hidden rects by merging into existing style attribute
   let svg = TRAITS_SVG;
   hide.forEach(id => {
     svg = svg.replace(
-      new RegExp(`id="${id}"`, 'g'),
-      `id="${id}" style="display:none"`
+      new RegExp(`style="([^"]*)"([^>]*id="${id}")`, 'g'),
+      `style="$1;display:none"$2`
     );
   });
   return `<div class="pc-card-svg">${svg}</div>`;
