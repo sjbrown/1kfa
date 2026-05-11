@@ -1811,11 +1811,19 @@ a:visited { color: var(--warm); }
   display: flex; gap: 0.75rem; margin-top: 2rem; flex-wrap: wrap;
 }
 .btn-download { font-size: 0.7rem; padding: 0.5rem 1.1rem; }
-.download-hint {
-  font-size: 0.7rem; color: var(--rule);
-  line-height: 1.5; font-style: italic; margin-top: 0.5rem;
+.has-tooltip { position: relative; }
+.has-tooltip .tooltip {
+  position: absolute; bottom: calc(100% + 6px); left: 50%;
+  transform: translateX(-50%);
+  background: var(--paper); color: var(--ink);
+  border: 1px solid var(--rule);
+  font-size: 0.7rem; font-style: italic;
+  white-space: nowrap; padding: 0.3rem 0.6rem;
+  border-radius: 3px; pointer-events: none;
+  opacity: 0; transition: opacity 0.15s;
 }
-.download-hint[hidden] { display: none; }
+.has-tooltip:hover .tooltip,
+.has-tooltip.tooltip-visible .tooltip { opacity: 1; }
 
 /* ── MOVE CARD GRID ──────────────────────────────────────────────────── */
 .move-card-grid {
@@ -2042,8 +2050,11 @@ a:visited { color: var(--warm); }
     <p class="page-subtitle">Pick up where you left off, or start fresh</p>
     <div class="action-row" style="margin-top:0;margin-bottom:1.5rem;">
       <button class="btn-primary" id="btn-new-game">New Game</button>
-      <button class="btn-secondary" id="btn-load-game">Load Game</button>
-      <input type="file" id="load-game-input" accept=".json" style="display:none">
+      <div class="has-tooltip" id="btn-load-game-wrap">
+        <button class="btn-secondary" id="btn-load-game">Load Game</button>
+        <span class="tooltip">Load a previously downloaded JSON file.</span>
+      </div>
+       <input type="file" id="load-game-input" accept=".json" style="display:none">
     </div>
     <ul class="game-list" id="game-list"></ul>
   </section>
@@ -2256,23 +2267,23 @@ a:visited { color: var(--warm); }
     <div class="cc-section">
       <div class="step-header">
         <div class="step-num">1</div>
-        <div class="step-name"><span>Hearth</span><strong>What makes you feel at home?</strong></div>
+        <div class="step-name"><strong>What makes you feel at home?</strong></div>
       </div>
       <div class="read-aloud warm" id="ra-at-home"></div>
       <p class="gm-note" id="gm-note-followup"></p>
       <table class="hearth-table" id="hearth-at-home-table">
-        <thead><tr><th>Player</th><th>What makes them feel at home</th></tr></thead>
+        <thead><tr><th>PC</th><th>What makes them feel at home</th></tr></thead>
         <tbody id="hearth-at-home-body"></tbody>
       </table>
     </div>
 
     <hr class="divider">
 
-    <!-- Step 2: Choose The Hearth -->
+    <!-- Step 2: Name The Hearth -->
     <div class="cc-section">
       <div class="step-header">
         <div class="step-num">2</div>
-        <div class="step-name"><span>Hearth</span><strong>Choose The Hearth</strong></div>
+        <div class="step-name"><strong>Name The Hearth</strong></div>
       </div>
       <div class="read-aloud warm" id="ra-choose-hearth"></div>
       <p class="gm-note" style="margin-bottom:0.75rem;">By consensus, choose one:</p>
@@ -2291,11 +2302,11 @@ a:visited { color: var(--warm); }
     <div class="cc-section">
       <div class="step-header">
         <div class="step-num">3</div>
-        <div class="step-name"><span>Hearth</span><strong>Why would you risk your life for it?</strong></div>
+        <div class="step-name"><strong>The Ultimate Price</strong></div>
       </div>
       <div class="read-aloud warm" id="ra-risk-life"></div>
       <table class="hearth-table" id="hearth-risk-table">
-        <thead><tr><th>Player</th><th>Why they'd risk their life</th></tr></thead>
+        <thead><tr><th>PC</th><th>Why they'd risk their life</th></tr></thead>
         <tbody id="hearth-risk-body"></tbody>
       </table>
     </div>
@@ -2327,10 +2338,12 @@ a:visited { color: var(--warm); }
     </div>
 
     <div class="summary-footer-actions">
-      <button class="btn-secondary btn-download" id="btn-download">Download</button>
+      <div class="has-tooltip" id="btn-download-wrap">
+        <button class="btn-secondary btn-download" id="btn-download">Download</button>
+        <span class="tooltip">Use this JSON file to move your game to another browser or device.</span>
+      </div>
       <button class="btn-secondary btn-delete-game" id="btn-delete-game">Delete</button>
     </div>
-    <p class="download-hint" id="download-hint" hidden>Use this JSON file to move your game to another browser or device.</p>
     <div class="delete-confirm" id="delete-confirm" hidden>
       <label class="delete-label">
         <input type="checkbox" id="delete-check">
@@ -2512,8 +2525,9 @@ let state = null;
 // ── MOVE CARD STATE ────────────────────────────────────────────────────
 const aMoves = (GAMEDATA.moves || []).filter(m => m.groups.includes('A'));
 
-function playerGradientCSS(name) {
-  const g = titleGradient(name || '?');
+function playerGradientCSS(playerIndex) {
+  const name = state.player_names[playerIndex] || `${playerIndex}`;
+  const g = titleGradient(name)
   return `linear-gradient(${g.angle}deg, ${g.c1}, ${g.c2})`;
 }
 
@@ -2618,7 +2632,7 @@ function renderMC2() {
     spot.className = 'move-card-spot spot-a spot-filled' + (sel ? ' spot-selected' : '');
     spot.innerHTML = `<div class="move-card-inner">${moveCardInnerHTML(move)}</div>`;
     if (locked) {
-      spot.style.backgroundImage = playerGradientCSS(state.pcs[pidx]?.name || '');
+      spot.style.backgroundImage = playerGradientCSS(pidx);
       spot.style.cursor = 'default';
     } else {
       spot.addEventListener('click', () => {
@@ -2657,7 +2671,7 @@ function renderMC3() {
     spot.className      = 'move-card-spot spot-a spot-filled';
     spot.style.position = 'relative';
     if (pidx !== null) {
-      spot.style.backgroundImage = playerGradientCSS(state.pcs[pidx]?.name || '');
+      spot.style.backgroundImage = playerGradientCSS(pidx);
     } else {
       spot.style.backgroundImage = '';
     }
@@ -2697,7 +2711,7 @@ function openPlayerPicker(moveTitle) {
     const playerName = pc.player_name || `Player ${i+1}`;
     const pill = document.createElement('div');
     pill.className        = 'player-pill';
-    pill.style.background = playerGradientCSS(playerName);
+    pill.style.background = playerGradientCSS(i);
     pill.style.color      = '#fff';
     pill.innerHTML = `<span>${playerName}</span><span class="player-pill-count">(${n} card${n !== 1 ? 's' : ''})</span>`;
     pill.addEventListener('click', () => {
@@ -2723,6 +2737,7 @@ function showMCPhase(n) {
   if (!state?.move_card_state) initMoveCardState();
   [1,2,3].forEach(i => el(`mc-phase-${i}`).style.display = i === n ? '' : 'none');
   window.scrollTo(0, 0);
+  el('btn-mc1-back').style.display = pcEditMode ? 'none' : '';
   if (n === 1) renderMC1();
   if (n === 2) renderMC2();
   if (n === 3) renderMC3();
@@ -3027,6 +3042,7 @@ function addTitle(text) {
 
 // ── CHARACTER CREATION ─────────────────────────────────────────────────
 let currentPlayerIdx = 0;
+let pcEditMode = false;
 
 
 // ── CHARACTER REQS NAV ─────────────────────────────────────────────────
@@ -3084,11 +3100,10 @@ function renderPlayerTabs() {
   const tabs = el('player-tabs');
   tabs.innerHTML = '';
   state.pcs.forEach((p, i) => {
-    const pName = p.player_name || '';
     const btn   = document.createElement('button');
     btn.className          = 'player-tab' + (i === currentPlayerIdx ? ' active' : '');
-    btn.textContent        = p.name || pName || `Player ${i+1}`;
-    btn.style.background   = playerGradientCSS(pName);
+    btn.textContent        = p.name || p.player_name || `Player ${i+1}`;
+    btn.style.background   = playerGradientCSS(i);
     btn.addEventListener('click', () => {
       saveCurrentPlayerForm();
       currentPlayerIdx = i;
@@ -3169,7 +3184,8 @@ function renderActiveSection() {
     const sec = document.createElement('div');
     sec.className = 'cc-section';
     sec.innerHTML = `
-      <p class="gm-note" style="margin-bottom:1rem;">${spansToHTML(cc.worldcloth_followup)} Ask one. Listen. Move on.</p>
+      <p class="gm-note" style="margin-bottom:1rem;"
+      >After listening to their answer, follow your curiosity and ask one follow up question. The default can always be simply "${spansToHTML(cc.worldcloth_followup)}"</p>
     `;
     cc.worldcloth_questions.forEach((q, qi) => {
       const div = document.createElement('div');
@@ -3414,7 +3430,7 @@ function renderSummary() {
       ? spansToHTML(cc.initiation_options[p.initiation]) : '';
     const charName   = p.name || '—';
     const playerName = p.player_name || '';
-    const bg = playerGradientCSS(playerName);
+    const bg = playerGradientCSS(i);
 
     // Move cards assigned to this player
     let moveChips = '';
@@ -3630,6 +3646,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   el('btn-mc3-next').addEventListener('click', () => {
     renderPlayerTabs();
     renderPlayerForm();
+    el('btn-to-hearth').textContent = pcEditMode ? 'Save' : 'The Hearth →';
     showView('chargen');
   });
   el('btn-mc3-back').addEventListener('click', () => showMCPhase(2));
@@ -3638,9 +3655,15 @@ document.addEventListener('DOMContentLoaded', async () => {
   el('btn-to-hearth').addEventListener('click', async () => {
     saveCurrentPlayerForm();
     await saveGame();
-    renderPlayerTabs();   // refresh names
-    renderHearthView();
-    showView('hearth');
+    if (pcEditMode) {
+      pcEditMode = false;
+      renderSummary();
+      showView('summary');
+    } else {
+      renderPlayerTabs();   // refresh names
+      renderHearthView();
+      showView('hearth');
+    }
   });
   el('btn-chargen-back').addEventListener('click', () => { saveCurrentPlayerForm(); showMCPhase(3); showView('movecards'); });
 
@@ -3677,7 +3700,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     a.download = `1kfa_${date}_${name}.json`;
     a.click();
     URL.revokeObjectURL(url);
-    el('download-hint').hidden = false;
+    const wrap = el('btn-download-wrap');
+    wrap.classList.add('tooltip-visible');
+    setTimeout(() => wrap.classList.remove('tooltip-visible'), 3000);
   });
 
   // Delete game
@@ -3734,6 +3759,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (card) {
       const idx = parseInt(card.dataset.pcIdx, 10);
       if (!isNaN(idx)) currentPlayerIdx = idx;
+      pcEditMode = true;
+      el('btn-to-hearth').textContent = 'Save';
       showMCPhase(3);
       showView('movecards');
     }
