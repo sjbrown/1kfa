@@ -56,7 +56,8 @@ a:visited { color: var(--warm); }
   justify-content: space-between;
   gap: 1rem;
 }
-.masthead-title { font-family: var(--font-serif); font-size: 1.1rem; color: var(--gold); letter-spacing: 0.02em; }
+.masthead-title { font-family: var(--font-serif); font-size: 1.1rem; color: var(--gold); letter-spacing: 0.02em;}
+.masthead-title a {text-decoration: none;}
 .masthead-title a:visited { color: var(--gold); }
 .masthead-page { font-family: var(--font-serif); font-size: 1.1rem; color: #FFF; letter-spacing: 0.02em; }
 .btn-ghost {
@@ -287,6 +288,11 @@ a:visited { color: var(--warm); }
   margin-top: 1rem;
   align-items: stretch;
 }
+@media (max-width: 580px) {
+  .character-traits {
+    grid-template-columns: minmax(auto, auto) repeat(4, 1fr);
+  }
+}
 .trait-name {
   font-family: var(--font-serif); font-size: 0.9rem;
   color: var(--paper);
@@ -364,6 +370,11 @@ a:visited { color: var(--warm); }
   line-height: 1.5; flex-shrink: 0; max-width: 9rem;
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
+@media (max-width: 580px) {
+  .game-meta {
+    min-width: unset;
+  }
+}
 
 /* ── SUMMARY ─────────────────────────────────────────────────────────── */
 .summary-card {
@@ -394,6 +405,14 @@ a:visited { color: var(--warm); }
   border: 1px solid rgba(200,169,110,0.25); border-radius: var(--r);
   overflow: hidden; width: 4.5rem; flex-shrink: 0;
 }
+@media (max-width: 580px) {
+  .world-card-thumbs {
+    gap: 0.1rem;
+  }
+  .sum-ts-card {
+    width: 3rem;
+  }
+}
 .sum-ts-thumb {
   width: 4.5rem; height: 6.5rem;
   object-fit: cover; display: block;
@@ -414,6 +433,11 @@ a:visited { color: var(--warm); }
 .pc-grid {
   display: grid; grid-template-columns: repeat(2, 1fr);
   gap: 0.75rem; margin-top: 0.5rem;
+}
+@media (max-width: 580px) {
+  .pc-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 .pc-card {
   border-radius: var(--r); padding: 0.8rem 0.95rem;
@@ -657,7 +681,6 @@ a:visited { color: var(--warm); }
 .summary-footer-actions {
   display: flex; gap: 0.75rem; margin-top: 2rem; flex-wrap: wrap;
 }
-.btn-download { font-size: 0.7rem; padding: 0.5rem 1.1rem; }
 .has-tooltip { position: relative; }
 .has-tooltip .tooltip {
   position: absolute; bottom: calc(100% + 6px); left: 50%;
@@ -818,6 +841,7 @@ a:visited { color: var(--warm); }
 
 @media (max-width: 580px) {
   .move-card-grid {
+    grid-template-columns: repeat(2, 1fr);
     gap: 0.5rem;
     padding: 0 0.5rem;
   }
@@ -862,7 +886,6 @@ a:visited { color: var(--warm); }
 .delete-label input[type="checkbox"] { accent-color: var(--danger); }
 .btn-delete-confirm {
   background: var(--danger); color: white; border: none;
-  padding: 0.45rem 1rem; font-size: 0.7rem;
   text-transform: uppercase; letter-spacing: 0.15em;
   border-radius: var(--r); font-family: var(--font-mono);
   transition: opacity 0.15s;
@@ -883,7 +906,9 @@ a:visited { color: var(--warm); }
   <header class="masthead">
     <div>
       <div class="masthead-title" id="masthead-title"
-      ><a href="https://www.1kfa.com/" target="_blank">A Thousand Faces of Adventure</a>
+      ><a href="https://www.1kfa.com/" target="_blank"
+      ><img src="1kfa_badge.png" onerror="this.setAttribute('src','/favicon.ico')"
+        style="margin: 0 10px -3px 0; height: 20px;"/>A Thousand Faces of Adventure</a>
       ⬧
       <span class="masthead-page" id="masthead-page">Your Games</span></div>
     </div>
