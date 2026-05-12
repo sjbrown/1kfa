@@ -4,12 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>A Thousand Faces of Adventure</title>
-<!-- ══ DEV ONLY — DELETE BEFORE SHIP ══════════════════════════════════
-     Inline gamedata so the app works without running generate_quickstart_json.py.
-     Replace with <script src="gamedata.js"></script> for production.
-     ════════════════════════════════════════════════════════════════ -->
-<script src="gamedata.js"></script>
-<!-- ══ END DEV ONLY ══════════════════════════════════════════════════ -->
+<script src="1kfa_parsed.js"></script>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
 
@@ -62,6 +57,7 @@ a:visited { color: var(--warm); }
   gap: 1rem;
 }
 .masthead-title { font-family: var(--font-serif); font-size: 1.1rem; color: var(--gold); letter-spacing: 0.02em; }
+.masthead-title a:visited { color: var(--gold); }
 .masthead-page { font-family: var(--font-serif); font-size: 1.1rem; color: #FFF; letter-spacing: 0.02em; }
 .btn-ghost {
   background: none; border: none; color: var(--rule);
@@ -886,7 +882,8 @@ a:visited { color: var(--warm); }
   <!-- MASTHEAD -->
   <header class="masthead">
     <div>
-      <div class="masthead-title" id="masthead-title">A Thousand Faces of Adventure
+      <div class="masthead-title" id="masthead-title"
+      ><a href="https://www.1kfa.com/" target="_blank">A Thousand Faces of Adventure</a>
       ⬧
       <span class="masthead-page" id="masthead-page">Your Games</span></div>
     </div>
@@ -1210,9 +1207,9 @@ a:visited { color: var(--warm); }
 <script>
 // ── DATA REFS ──────────────────────────────────────────────────────────
 let lastGMName = localStorage.getItem('1kfa_gm_name') || '';
-const uc = GAMEDATA.universe_creation;
-const cc = GAMEDATA.character_creation;
-const h  = GAMEDATA.hearth;
+const uc = PARSED.universe_creation;
+const cc = PARSED.character_creation;
+const h  = PARSED.hearth;
 
 // ── THUMBNAIL FETCH ────────────────────────────────────────────────────
 // Cache: title (lowercase) -> url string | null
@@ -1374,7 +1371,7 @@ let state = null;
 
 
 // ── MOVE CARD STATE ────────────────────────────────────────────────────
-const aMoves = (GAMEDATA.moves || []).filter(m => m.groups.includes('A'));
+const aMoves = (PARSED.moves || []).filter(m => m.groups.includes('A'));
 
 function playerGradientCSS(playerIndex) {
   const name = state.player_names[playerIndex] || `${playerIndex}`;
@@ -1397,7 +1394,7 @@ function initMoveCardState() {
 
 function availableAdditionalMoves() {
   const isOneShot = state.campaignLength === 'One-Shot';
-  return (GAMEDATA.moves || []).filter(m =>
+  return (PARSED.moves || []).filter(m =>
     m.component === null &&
     !m.groups.includes('A') &&
     !(isOneShot && m.groups.includes('9hour'))
@@ -2286,7 +2283,7 @@ function renderSummary() {
     // Move cards assigned to this player
     let moveChips = '';
     if (mcs?.player_assigned) {
-      const allMoves = (GAMEDATA.moves || []);
+      const allMoves = (PARSED.moves || []);
       const myMoves = Object.entries(mcs.player_assigned)
         .filter(([, pi]) => pi === i)
         .map(([title]) => {

@@ -118,8 +118,8 @@ def main():
     parser.add_argument('gm_md',     help='Path to mod_guide_gm.md')
     parser.add_argument('--moves-md', default='resolution_cards/character_move_sheet.md',
                         help='Path to character_move_sheet.md')
-    parser.add_argument('--output', default='/tmp/1kfa_quickstart.js',
-                        help='Output path (default: /tmp/1kfa_quickstart.js)')
+    parser.add_argument('--output', default='/tmp/1kfa_companion_app/1kfa_parsed.js',
+                        help='Output path (default: /tmp/1kfa_companion_app/1kfa_parsed.js)')
     args = parser.parse_args()
 
     for path in [args.table_md, args.player_md, args.gm_md, args.moves_md]:
@@ -130,7 +130,7 @@ def main():
     os.makedirs(os.path.dirname(args.output) or '.', exist_ok=True)
 
     gamedata = build_gamedata(args.table_md, args.player_md, args.gm_md, args.moves_md)
-    js = 'const GAMEDATA = ' + json.dumps(gamedata, indent=2, ensure_ascii=False) + ';\n'
+    js = 'const PARSED = ' + json.dumps(gamedata, indent=2, ensure_ascii=False) + ';\n'
 
     with open(args.output, 'w', encoding='utf-8') as f:
         f.write(js)
@@ -150,6 +150,7 @@ def main():
     print(f'      hearth_options:        {len(h["hearth_options"])}')
     print(f'      examples paragraphs:   {len(h["hearth_examples_read_aloud"])}')
     print(f'    moves: {len(gamedata["moves"])} total')
+
 
 
 if __name__ == '__main__':
