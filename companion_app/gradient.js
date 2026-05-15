@@ -14,9 +14,9 @@
  *                               to [0, 100].
  * @param {number} satAnchor   - System-wide saturation anchor (0–100).
  *                               Same ±20 / 5-point-step constraint as lum.
- * @returns {{ grad, c1, c2, hue1, hue2, sat1, sat2, lum1, lum2, angle }}
+ * @returns {{ c1, c2, hue1, hue2, sat1, sat2, lum1, lum2, angle }}
  */
-function playerGradient(name, lumAnchor, satAnchor) {
+function detGradient(name, lumAnchor, satAnchor) {
   const h1 = hash32(name);
   const h2 = hash32(name + '__stop2');
   const h3 = hash32(name + '__lum1');
@@ -55,11 +55,29 @@ function playerGradient(name, lumAnchor, satAnchor) {
 
   const c1 = `hsl(${hue1}, ${sat1}%, ${lum1}%)`;
   const c2 = `hsl(${hue2}, ${sat2}%, ${lum2}%)`;
-  const grad = `linear-gradient(${angle}deg, ${c1}, ${c2})`;
 
-  return { c1, c2, grad, hue1, hue2, sat1, sat2, lum1, lum2, angle };
+  return { c1, c2, hue1, hue2, sat1, sat2, lum1, lum2, angle };
 }
 
+function cssGradient(text, lumAnchor, satAnchor) {
+  g = detGradient(text, lumAnchor, satAnchor);
+  const grad = `linear-gradient(${g.angle}deg, ${g.c1}, ${g.c2})`;
+  return grad;
+}
+
+function svgGradient(text, lumAnchor, satAnchor, w = 120, h = 180) {
+  const g = detGradient(text, lumAnchor, satAnchor);
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}">` +
+    `<defs><linearGradient id="g" x1="0" y1="0" ` +
+    `x2="${+(Math.cos((g.angle * Math.PI) / 180).toFixed(3))}" ` +
+    `y2="${+(Math.sin((g.angle * Math.PI) / 180).toFixed(3))}" ` +
+    `gradientUnits="objectBoundingBox">` +
+    `<stop offset="0%" stop-color="${g.c1}"/>` +
+    `<stop offset="100%" stop-color="${g.c2}"/>` +
+    `</linearGradient></defs>` +
+    `<rect width="${w}" height="${h}" fill="url(#g)"/>` +
+    `</svg>`;
+}
 
 function hash32(str) {
   let h = 2166136261;

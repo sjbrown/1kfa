@@ -4,13 +4,15 @@ set -e
 
 echo "Publish Web"
 
+OUTDIR="/tmp/1kfa_companion_app/"
+
 python bin/generate_quickstart_json.py mod_guide_table.md mod_guide_player.md mod_guide_gm.md
 
-cp companion_app/*.* /tmp/1kfa_companion_app/
+cp companion_app/*.* $OUTDIR
 
 echo ""
 echo "Now to see it run:"
-echo "  cd /tmp/1kfa_companion_app/; python3 -m http.server"
+echo "  cd $OUTDIR; python3 -m http.server"
 echo ""
 
 read -p "Push (rclone) to Cloudflare? (y/n)?" choice
@@ -20,8 +22,8 @@ case "$choice" in
   * ) echo "invalid";;
 esac
 
-echo "rclone copy /tmp/1kfa_companion_app/ r2:apps-1kfa-com/companion/"
-rclone copy /tmp/1kfa_companion_app/ r2:apps-1kfa-com/companion/
+echo "rclone copy $OUTDIR r2:apps-1kfa-com/companion/"
+rclone copy "$OUTDIR" r2:apps-1kfa-com/companion/
 
 echo ""
 echo " OPTIONALLY"

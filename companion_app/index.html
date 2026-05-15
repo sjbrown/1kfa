@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>A Thousand Faces of Adventure</title>
 <script src="1kfa_parsed.js"></script>
+<script src="gradient.js"></script>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
 
@@ -1399,10 +1400,16 @@ let state = null;
 const aMoves = (PARSED.moves || []).filter(m => m.groups.includes('A'));
 
 function playerGradientCSS(playerIndex) {
-  const name = state.player_names[playerIndex] || `${playerIndex}`;
-  const g = titleGradient(name)
-  return `linear-gradient(${g.angle}deg, ${g.c1}, ${g.c2})`;
+  const pName = state.player_names[playerIndex] || `${playerIndex}`;
+  return cssGradient(pName, 20, 95);
 }
+
+function gradientSVG(title, w = 120, h = 180) {
+  // Encode as data URI so it works inline without a server
+  let svg = svgGradient(title, 20, 95, w, h)
+  return 'data:image/svg+xml,' + encodeURIComponent(svg);
+}
+
 
 function initMoveCardState() {
   const playerCount = state.pcs.length || 1;
@@ -1830,47 +1837,6 @@ function renderChips(container, mode) {
 
     container.appendChild(chip);
   });
-}
-
-// ── TITLE GRADIENT ─────────────────────────────────────────────────────
-// Deterministic hash → two dark colours + angle for fallback thumbnail SVG.
-// Palette of pleasing dark base hues; hash selects and shifts them.
-function titleGradient(title) {
-  // djb2 hash
-  let h = 5381;
-  for (let i = 0; i < title.length; i++)
-    h = (((h << 5) + h) + title.charCodeAt(i)) >>> 0;
-
-  // Pull three independent values from different parts of the hash
-  const hue1  = h % 360;
-  const hue2  = (hue1 + 40 + ((h >> 8) % 80)) % 360;   // 40–120° apart
-  const angle = (h >> 16) % 360;
-
-  // Dark, saturated colours with controlled lightness
-  const sat = 55 + ((h >> 24) % 25);  // 55–80%
-  const l1  = 18 + ((h >> 12) % 10);  // 18–28%  (deep)
-  const l2  = 28 + ((h >> 20) % 14);  // 28–42%  (slightly lighter)
-
-  const c1 = `hsl(${hue1},${sat}%,${l1}%)`;
-  const c2 = `hsl(${hue2},${sat}%,${l2}%)`;
-
-  return { c1, c2, angle };
-}
-
-function gradientSVG(title, w = 120, h = 180) {
-  const g = titleGradient(title);
-  // Encode as data URI so it works inline without a server
-  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}">` +
-    `<defs><linearGradient id="g" x1="0" y1="0" ` +
-    `x2="${+(Math.cos((g.angle * Math.PI) / 180).toFixed(3))}" ` +
-    `y2="${+(Math.sin((g.angle * Math.PI) / 180).toFixed(3))}" ` +
-    `gradientUnits="objectBoundingBox">` +
-    `<stop offset="0%" stop-color="${g.c1}"/>` +
-    `<stop offset="100%" stop-color="${g.c2}"/>` +
-    `</linearGradient></defs>` +
-    `<rect width="${w}" height="${h}" fill="url(#g)"/>` +
-    `</svg>`;
-  return 'data:image/svg+xml,' + encodeURIComponent(svg);
 }
 
 function renderShowcase() {
