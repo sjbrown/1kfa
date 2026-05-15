@@ -90,7 +90,7 @@ def main():
 
     if failures:
         print(f"\n{len(failures)} script(s) failed: {', '.join(failures)}")
-        sys.exit(1)
+        raise Exception('failed')
 
     if args.export_pdf:
         # Explicit order for the united PDF — edit this list to reorder.

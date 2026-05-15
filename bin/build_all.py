@@ -15,6 +15,7 @@ def run(cmd):
 run('pandoc --version')
 run('bash bin/build_pdf_guides.sh')
 run('python3 resolution_cards/process_gm_cards.py mod_guide_gm.md /tmp/1kfa_gm_cards')
+run('python3 bin/generate_quickstart_sheets.py --export-pdf')
 run('cd resolution_cards; python3 process_square.py')
 run('cd resolution_cards; python3 process_tall.py')
 run('cd resolution_cards; python3 process_print_and_play.py')

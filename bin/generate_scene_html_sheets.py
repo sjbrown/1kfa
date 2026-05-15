@@ -29,6 +29,7 @@ from parse_quickstart_data import (
 )
 from render_sheet_html import (
     spans_to_html,
+    export_pdf,
 )
 
 
@@ -966,6 +967,10 @@ def main():
     parser = argparse.ArgumentParser(description="Generate 1kFA Adventure Scene sheets from mod_guide_gm.md")
     parser.add_argument("guide", help="Path to mod_guide_gm.md")
     parser.add_argument("--output-dir", default=".", help="Directory for output HTML files")
+    parser.add_argument(
+        "--export-pdf", action="store_true",
+        help="Also render the HTML to PDF using headless Chromium"
+    )
     args = parser.parse_args()
 
     if not os.path.exists(args.guide):
@@ -995,6 +1000,13 @@ def main():
         with open(out_path, 'w', encoding='utf-8') as f:
             f.write(html)
         print(f"  → {out_path}  (primary bar: {ch.primary_bar_length}, skull: {ch.skull_bar_length}, triggers: {len(ch.skull_triggers)})")
+
+        if args.export_pdf:
+            pdf_path = out_path.replace(".html", ".pdf")
+            print(f"  rendering PDF...")
+            export_pdf(out_path, pdf_path)
+            print(f"  -> {pdf_path}")
+
 
     print("Done.")
 

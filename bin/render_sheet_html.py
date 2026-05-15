@@ -10,6 +10,8 @@ All generate_*.py scripts import from here for rendering; parse logic stays
 in parse_quickstart_data.py.
 """
 
+import os
+
 
 # ── INLINE RENDERING ──────────────────────────────────────────────────────────
 
