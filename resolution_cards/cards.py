@@ -605,6 +605,18 @@ spot_it_map = {
   8: 'cock',
   9: 'pig',
 }
+pursuit_corners_map = {
+  0: 'num',
+  1: 'ram_str',
+  2: 'ram_dex',
+  3: 'ram_int',
+  5: 'wing_str',
+  4: 'wing_dex',
+  6: 'wing_int',
+  7: 'tri_str',
+  8: 'tri_dex',
+  9: 'tri_int',
+}
 
 def calc_zodiac(i):
     symbols = spot_it_rules[i%5]

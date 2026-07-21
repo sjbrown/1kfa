@@ -6,7 +6,7 @@ import os
 import shutil
 from itertools import product
 from cards import cards, blessing_cards, wound_cards, dice_print_rules
-from cards import spot_it_map, spot_it_rules, calc_zodiac
+from cards import pursuit_corners_map, spot_it_map, spot_it_rules, calc_zodiac
 
 from svg_dom import DOM, export_square_png
 from version import VERSION
@@ -66,15 +66,16 @@ cards
 
 
 
-def set_zodiac(dom, nw_animal, ne_animal, se_animal, sw_animal):
+def set_zodiac(dom, nw_label, ne_label, se_label, sw_label):
     directions = ['nw', 'ne', 'se', 'sw']
-    d_map = dict(nw=nw_animal, ne=ne_animal, se=se_animal, sw=sw_animal)
+    d_map = dict(nw=nw_label, ne=ne_label, se=se_label, sw=sw_label)
     for d in directions:
-        keep_animal = d_map[d]
-        d_titles = ['o_%s_%s' % (x,d) for x in spot_it_map.values()]
+        keep_label = d_map[d]
+        # d_titles = ['o_%s_%s' % (x,d) for x in spot_it_map.values()]
+        d_titles = ['o_%s_%s' % (x,d) for x in pursuit_corners_map.values()]
         d_titles += ['o_goat_%s' % d, 'o_dragon_%s' % d]
         for d_title in d_titles:
-            if keep_animal not in d_title:
+            if keep_label not in d_title:
                 dom.cut_element(d_title)
 
 def filter_dom_elements(dom, card, deck_title, dice_rule):
@@ -194,7 +195,8 @@ def make_deck(deck_number):
         dom = get_dom_for_printing(FACE_SVG)
         dom.layer_hide('wound')
         dom.layer_show('registration_marks')
-        dom.layer_show('zodiac')
+        # dom.layer_show('zodiac')
+        dom.layer_show('pursuit_zodiac')
         dom.layer_show('center_symbols')
         dom.layer_show('resolution')
         dom.layer_show('d6')
@@ -211,7 +213,8 @@ def make_deck(deck_number):
         #print 'dice rule %s %s' % (i, dice_rule)
 
         filter_dom_elements(dom, card, deck_title, dice_rule)
-        zargs = [spot_it_map[x] for x in calc_zodiac(i)]
+        # zargs = [spot_it_map[x] for x in calc_zodiac(i)]
+        zargs = [pursuit_corners_map[x] for x in calc_zodiac(i)]
         set_zodiac(dom, *zargs)
 
         # Create the svg file and export a PNG
