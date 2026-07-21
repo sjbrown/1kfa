@@ -30461,437 +30461,245 @@
      inkscape:label="pursuit_zodiac"
      id="g_pursuit_zodiac"
      inkscape:groupmode="layer">
-    <g
-       id="g_circs">
-      <circle
-         style="opacity:1;fill:#ff00ff;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-         id="circle_magenta_1"
-         cx="36.645344"
-         cy="179.13127"
-         r="10.869653" />
-      <circle
-         style="display:inline;opacity:1;fill:#ff00ff;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-         id="circle_magenta_2"
-         cx="179.13277"
-         cy="179.35194"
-         r="10.869653" />
-      <circle
-         style="display:inline;opacity:1;fill:#ff00ff;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-         id="circle_magenta_3"
-         cx="179.3537"
-         cy="36.867527"
-         r="10.869653" />
-      <circle
-         style="display:inline;opacity:1;fill:#ff00ff;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-         id="circle_magenta_4"
-         cx="36.866318"
-         cy="36.646027"
-         r="10.869653" />
-    </g>
-    <g
-       id="pursuit_zodiac">
-      <circle
-         cx="186.22746"
-         cy="184.85818"
-         r="2"
-         fill="#a23b72"
-         stroke="none"
-         id="circle6064">
-        <title
-           id="title6062">o_wing_int_se</title>
-      </circle>
-      <circle
-         cx="36.645344"
-         cy="179.13127"
-         r="2"
-         fill="#a23b72"
-         stroke="none"
-         id="circle6068">
-        <title
-           id="title6066">o_wing_int_sw</title>
-      </circle>
-      <circle
-         cx="174.57111"
-         cy="179.78946"
-         r="2"
-         fill="#ff6b6b"
-         stroke="none"
-         id="circle6072">
-        <title
-           id="title6070">o_ram_str_se</title>
-      </circle>
-      <circle
-         cx="36.645344"
-         cy="179.13127"
-         r="2"
-         fill="#ff6b6b"
-         stroke="none"
-         id="circle6076">
-        <title
-           id="title6074">o_ram_str_sw</title>
-      </circle>
-      <circle
-         cx="180.81284"
-         cy="184.26387"
-         r="2"
-         fill="#6a994e"
-         stroke="none"
-         id="circle6080">
-        <title
-           id="title6078">o_tri_int_se</title>
-      </circle>
-      <circle
-         cx="180.38551"
-         cy="188.94241"
-         r="2"
-         fill="#95e1d3"
-         stroke="none"
-         id="circle6084">
-        <title
-           id="title6082">o_ram_int_se</title>
-      </circle>
-      <circle
-         cx="178.44878"
-         cy="186.11896"
-         r="2"
-         fill="#4ecdc4"
-         stroke="none"
-         id="circle6088">
-        <title
-           id="title6086">o_ram_dex_se</title>
-      </circle>
-      <circle
-         cx="186.33154"
-         cy="178.08022"
-         r="2"
-         fill="#f18f01"
-         stroke="none"
-         id="circle6092">
-        <title
-           id="title6090">o_tri_str_se</title>
-      </circle>
-      <circle
-         cx="181.83957"
-         cy="182.45544"
-         r="2"
-         fill="#ff8c42"
-         stroke="none"
-         id="circle6096">
-        <title
-           id="title6094">o_wing_str_se</title>
-      </circle>
-      <circle
-         cx="184.85802"
-         cy="182.12874"
-         r="2"
-         fill="#c73e1d"
-         stroke="none"
-         id="circle6100">
-        <title
-           id="title6098">o_tri_dex_se</title>
-      </circle>
-      <circle
-         cx="186.31644"
-         cy="183.00963"
-         r="2"
-         fill="#2e86ab"
-         stroke="none"
-         id="circle6104">
-        <title
-           id="title6102">o_wing_dex_se</title>
-      </circle>
-      <circle
-         cx="36.645344"
-         cy="179.13127"
-         r="2"
-         fill="#6a994e"
-         stroke="none"
-         id="circle6108">
-        <title
-           id="title6106">o_tri_int_sw</title>
-      </circle>
-      <circle
-         cx="36.645344"
-         cy="179.13127"
-         r="2"
-         fill="#95e1d3"
-         stroke="none"
-         id="circle6112">
-        <title
-           id="title6110">o_ram_int_sw</title>
-      </circle>
-      <circle
-         cx="36.645344"
-         cy="179.13127"
-         r="2"
-         fill="#4ecdc4"
-         stroke="none"
-         id="circle6116">
-        <title
-           id="title6114">o_ram_dex_sw</title>
-      </circle>
-      <circle
-         cx="36.645344"
-         cy="179.13127"
-         r="2"
-         fill="#f18f01"
-         stroke="none"
-         id="circle6120">
-        <title
-           id="title6118">o_tri_str_sw</title>
-      </circle>
-      <circle
-         cx="36.645344"
-         cy="179.13127"
-         r="2"
-         fill="#ff8c42"
-         stroke="none"
-         id="circle6124">
-        <title
-           id="title6122">o_wing_str_sw</title>
-      </circle>
-      <circle
-         cx="36.645344"
-         cy="179.13127"
-         r="2"
-         fill="#c73e1d"
-         stroke="none"
-         id="circle6128">
-        <title
-           id="title6126">o_tri_dex_sw</title>
-      </circle>
-      <circle
-         cx="36.645344"
-         cy="179.13127"
-         r="2"
-         fill="#2e86ab"
-         stroke="none"
-         id="circle6132">
-        <title
-           id="title6130">o_wing_dex_sw</title>
-      </circle>
-      <circle
-         cx="184.85995"
-         cy="29.772821"
-         r="2"
-         fill="#a23b72"
-         stroke="none"
-         id="circle6136">
-        <title
-           id="title6134">o_wing_int_ne</title>
-      </circle>
-      <circle
-         cx="36.866318"
-         cy="36.646027"
-         r="2"
-         fill="#a23b72"
-         stroke="none"
-         id="circle6140">
-        <title
-           id="title6138">o_wing_int_nw</title>
-      </circle>
-      <circle
-         cx="179.79121"
-         cy="41.429104"
-         r="2"
-         fill="#ff6b6b"
-         stroke="none"
-         id="circle6144">
-        <title
-           id="title6142">o_ram_str_ne</title>
-      </circle>
-      <circle
-         cx="41.427883"
-         cy="36.2085"
-         cx="36.866318"
-         cy="36.646027"
-         r="2"
-         fill="#ff6b6b"
-         stroke="none"
-         id="circle6148">
-        <title
-           id="title6146">o_ram_str_nw</title>
-      </circle>
-      <circle
-         cx="184.26562"
-         cy="35.187435"
-         r="2"
-         fill="#6a994e"
-         stroke="none"
-         id="circle6152">
-        <title
-           id="title6150">o_tri_int_ne</title>
-      </circle>
-      <circle
-         cx="188.94417"
-         cy="35.614796"
-         r="2"
-         fill="#95e1d3"
-         stroke="none"
-         id="circle6156">
-        <title
-           id="title6154">o_ram_int_ne</title>
-      </circle>
-      <circle
-         cx="186.1207"
-         cy="37.551529"
-         r="2"
-         fill="#4ecdc4"
-         stroke="none"
-         id="circle6160">
-        <title
-           id="title6158">o_ram_dex_ne</title>
-      </circle>
-      <circle
-         cx="178.08195"
-         cy="29.668749"
-         r="2"
-         fill="#f18f01"
-         stroke="none"
-         id="circle6164">
-        <title
-           id="title6162">o_tri_str_ne</title>
-      </circle>
-      <circle
-         cx="182.45718"
-         cy="34.160717"
-         r="2"
-         fill="#ff8c42"
-         stroke="none"
-         id="circle6168">
-        <title
-           id="title6166">o_wing_str_ne</title>
-      </circle>
-      <circle
-         cx="182.13049"
-         cy="31.142277"
-         r="2"
-         fill="#c73e1d"
-         stroke="none"
-         id="circle6172">
-        <title
-           id="title6170">o_tri_dex_ne</title>
-      </circle>
-      <circle
-         cx="183.01138"
-         cy="29.683847"
-         r="2"
-         fill="#2e86ab"
-         stroke="none"
-         id="circle6176">
-        <title
-           id="title6174">o_wing_dex_ne</title>
-      </circle>
-      <circle
-         cx="36.866318"
-         cy="36.646027"
-         r="2"
-         fill="#6a994e"
-         stroke="none"
-         id="circle6180">
-        <title
-           id="title6178">o_tri_int_nw</title>
-      </circle>
-      <circle
-         cx="36.866318"
-         cy="36.646027"
-         r="2"
-         fill="#95e1d3"
-         stroke="none"
-         id="circle6184">
-        <title
-           id="title6182">o_ram_int_nw</title>
-      </circle>
-      <circle
-         cx="36.866318"
-         cy="36.646027"
-         r="2"
-         fill="#4ecdc4"
-         stroke="none"
-         id="circle6188">
-        <title
-           id="title6186">o_ram_dex_nw</title>
-      </circle>
-      <circle
-         cx="36.866318"
-         cy="36.646027"
-         r="2"
-         fill="#f18f01"
-         stroke="none"
-         id="circle6192">
-        <title
-           id="title6190">o_tri_str_nw</title>
-      </circle>
-      <circle
-         cx="36.866318"
-         cy="36.646027"
-         r="2"
-         fill="#ff8c42"
-         stroke="none"
-         id="circle6196">
-        <title
-           id="title6194">o_wing_str_nw</title>
-      </circle>
-      <circle
-         cx="36.866318"
-         cy="36.646027"
-         r="2"
-         fill="#c73e1d"
-         stroke="none"
-         id="circle6200">
-        <title
-           id="title6198">o_tri_dex_nw</title>
-      </circle>
-      <circle
-         cx="36.866318"
-         cy="36.646027"
-         r="2"
-         fill="#2e86ab"
-         stroke="none"
-         id="circle6204">
-        <title
-           id="title6202">o_wing_dex_nw</title>
-      </circle>
-      <circle
-         cx="36.866318"
-         cy="36.646027"
-         r="2"
-         fill="#ffd700"
-         stroke="none"
-         id="circle6208">
-        <title
-           id="title6206">o_num_nw</title>
-      </circle>
-      <circle
-         cx="183.49557"
-         cy="43.307861"
-         r="2"
-         fill="#ffd700"
-         stroke="none"
-         id="circle6212">
-        <title
-           id="title6210">o_num_ne</title>
-      </circle>
-      <circle
-         cx="172.69244"
-         cy="183.49384"
-         r="2"
-         fill="#ffd700"
-         stroke="none"
-         id="circle6216">
-        <title
-           id="title6214">o_num_se</title>
-      </circle>
-      <circle
-         cx="36.645344"
-         cy="179.13127"
-         r="2"
-         fill="#ffd700"
-         stroke="none"
-         id="circle6220">
-        <title
-           id="title6218">o_num_sw</title>
-      </circle>
-    </g>
+      <g id="o_tri_dex_nw_group" transform="translate(22, 37)">
+        <title>o_tri_dex_nw</title>
+        <use
+          xlink:href="wing_ram_tri.svg#tri_dex"
+          transform="translate(0, 0) rotate(-45)" />
+      </g>
+      <g id="o_tri_str_nw_group" transform="translate(22, 37)">
+        <title>o_tri_str_nw</title>
+        <use
+          xlink:href="wing_ram_tri.svg#tri_str"
+          transform="translate(0, 0) rotate(-45)" />
+      </g>
+      <g id="o_tri_int_nw_group" transform="translate(22, 37)">
+        <title>o_tri_int_nw</title>
+        <use
+          xlink:href="wing_ram_tri.svg#tri_int"
+          transform="translate(0, 0) rotate(-45)" />
+      </g>
+      <g id="o_wing_str_nw_group" transform="translate(22, 37)">
+        <title>o_wing_str_nw</title>
+        <use
+          xlink:href="wing_ram_tri.svg#wing_str"
+          transform="translate(0, 0) rotate(-45)" />
+      </g>
+      <g id="o_wing_dex_nw_group" transform="translate(22, 37)">
+        <title>o_wing_dex_nw</title>
+        <use
+          xlink:href="wing_ram_tri.svg#wing_dex"
+          transform="translate(0, 0) rotate(-45)" />
+      </g>
+      <g id="o_wing_int_nw_group" transform="translate(22, 37)">
+        <title>o_wing_int_nw</title>
+        <use
+          xlink:href="wing_ram_tri.svg#wing_int"
+          transform="translate(0, 0) rotate(-45)" />
+      </g>
+      <g id="o_ram_str_nw_group" transform="translate(22, 37)">
+        <title>o_ram_str_nw</title>
+        <use
+          xlink:href="wing_ram_tri.svg#ram_str"
+          transform="translate(0, 0) rotate(-45)" />
+      </g>
+      <g id="o_ram_dex_nw_group" transform="translate(22, 37)">
+        <title>o_ram_dex_nw</title>
+        <use
+          xlink:href="wing_ram_tri.svg#ram_dex"
+          transform="translate(0, 0) rotate(-45)" />
+      </g>
+      <g id="o_ram_int_nw_group" transform="translate(22, 37)">
+        <title>o_ram_int_nw</title>
+        <use
+          xlink:href="wing_ram_tri.svg#ram_int"
+          transform="translate(0, 0) rotate(-45)" />
+      </g>
+      <!-- ne groups -->
+      <g id="o_tri_dex_ne_group" transform="translate(179, 23)">
+        <title>o_tri_dex_ne</title>
+        <use
+          xlink:href="wing_ram_tri.svg#tri_dex"
+          transform="translate(0, 0) rotate(45)" />
+      </g>
+      <g id="o_tri_str_ne_group" transform="translate(179, 23)">
+        <title>o_tri_str_ne</title>
+        <use
+          xlink:href="wing_ram_tri.svg#tri_str"
+          transform="translate(0, 0) rotate(45)" />
+      </g>
+      <g id="o_tri_dex_ne_group" transform="translate(179, 23)">
+        <title>o_tri_dex_ne</title>
+        <use
+          xlink:href="wing_ram_tri.svg#tri_dex"
+          transform="translate(0, 0) rotate(45)" />
+      </g>
+      <g id="o_tri_int_ne_group" transform="translate(179, 23)">
+        <title>o_tri_int_ne</title>
+        <use
+          xlink:href="wing_ram_tri.svg#tri_int"
+          transform="translate(0, 0) rotate(45)" />
+      </g>
+      <g id="o_wing_str_ne_group" transform="translate(179, 23)">
+        <title>o_wing_str_ne</title>
+        <use
+          xlink:href="wing_ram_tri.svg#wing_str"
+          transform="translate(0, 0) rotate(45)" />
+      </g>
+      <g id="o_wing_dex_ne_group" transform="translate(179, 23)">
+        <title>o_wing_dex_ne</title>
+        <use
+          xlink:href="wing_ram_tri.svg#wing_dex"
+          transform="translate(0, 0) rotate(45)" />
+      </g>
+      <g id="o_wing_int_ne_group" transform="translate(179, 23)">
+        <title>o_wing_int_ne</title>
+        <use
+          xlink:href="wing_ram_tri.svg#wing_int"
+          transform="translate(0, 0) rotate(45)" />
+      </g>
+      <g id="o_ram_str_ne_group" transform="translate(179, 23)">
+        <title>o_ram_str_ne</title>
+        <use
+          xlink:href="wing_ram_tri.svg#ram_str"
+          transform="translate(0, 0) rotate(45)" />
+      </g>
+      <g id="o_ram_dex_ne_group" transform="translate(179, 23)">
+        <title>o_ram_dex_ne</title>
+        <use
+          xlink:href="wing_ram_tri.svg#ram_dex"
+          transform="translate(0, 0) rotate(45)" />
+      </g>
+      <g id="o_ram_int_ne_group" transform="translate(179, 23)">
+        <title>o_ram_int_ne</title>
+        <use
+          xlink:href="wing_ram_tri.svg#ram_int"
+          transform="translate(0, 0) rotate(45)" />
+      </g>
+
+      <!-- se groups -->
+      <g id="o_tri_dex_se_group" transform="translate(193, 179)">
+        <title>o_tri_dex_se</title>
+        <use
+          xlink:href="wing_ram_tri.svg#tri_dex"
+          transform="translate(0, 0) rotate(135)" />
+      </g>
+      <g id="o_tri_str_se_group" transform="translate(193, 179)">
+        <title>o_tri_str_se</title>
+        <use
+          xlink:href="wing_ram_tri.svg#tri_str"
+          transform="translate(0, 0) rotate(135)" />
+      </g>
+      <g id="o_tri_dex_se_group" transform="translate(193, 179)">
+        <title>o_tri_dex_se</title>
+        <use
+          xlink:href="wing_ram_tri.svg#tri_dex"
+          transform="translate(0, 0) rotate(135)" />
+      </g>
+      <g id="o_tri_int_se_group" transform="translate(193, 179)">
+        <title>o_tri_int_se</title>
+        <use
+          xlink:href="wing_ram_tri.svg#tri_int"
+          transform="translate(0, 0) rotate(135)" />
+      </g>
+      <g id="o_wing_str_se_group" transform="translate(193, 179)">
+        <title>o_wing_str_se</title>
+        <use
+          xlink:href="wing_ram_tri.svg#wing_str"
+          transform="translate(0, 0) rotate(135)" />
+      </g>
+      <g id="o_wing_dex_se_group" transform="translate(193, 179)">
+        <title>o_wing_dex_se</title>
+        <use
+          xlink:href="wing_ram_tri.svg#wing_dex"
+          transform="translate(0, 0) rotate(135)" />
+      </g>
+      <g id="o_wing_int_se_group" transform="translate(193, 179)">
+        <title>o_wing_int_se</title>
+        <use
+          xlink:href="wing_ram_tri.svg#wing_int"
+          transform="translate(0, 0) rotate(135)" />
+      </g>
+      <g id="o_ram_str_se_group" transform="translate(193, 179)">
+        <title>o_ram_str_se</title>
+        <use
+          xlink:href="wing_ram_tri.svg#ram_str"
+          transform="translate(0, 0) rotate(135)" />
+      </g>
+      <g id="o_ram_dex_se_group" transform="translate(193, 179)">
+        <title>o_ram_dex_se</title>
+        <use
+          xlink:href="wing_ram_tri.svg#ram_dex"
+          transform="translate(0, 0) rotate(135)" />
+      </g>
+      <g id="o_ram_int_se_group" transform="translate(193, 179)">
+        <title>o_ram_int_se</title>
+        <use
+          xlink:href="wing_ram_tri.svg#ram_int"
+          transform="translate(0, 0) rotate(135)" />
+      </g>
+
+      <!-- sw groups -->
+
+      <g id="o_tri_dex_sw_group" transform="translate(37 194)">
+        <title>o_tri_dex_sw</title>
+        <use
+          xlink:href="wing_ram_tri.svg#tri_dex"
+          transform="translate(0, 0) rotate(225)" />
+      </g>
+      <g id="o_tri_str_sw_group" transform="translate(37, 194)">
+        <title>o_tri_str_sw</title>
+        <use
+          xlink:href="wing_ram_tri.svg#tri_str"
+          transform="translate(0, 0) rotate(225)" />
+      </g>
+      <g id="o_tri_dex_sw_group" transform="translate(37, 194)">
+        <title>o_tri_dex_sw</title>
+        <use
+          xlink:href="wing_ram_tri.svg#tri_dex"
+          transform="translate(0, 0) rotate(225)" />
+      </g>
+      <g id="o_tri_int_sw_group" transform="translate(37, 194)">
+        <title>o_tri_int_sw</title>
+        <use
+          xlink:href="wing_ram_tri.svg#tri_int"
+          transform="translate(0, 0) rotate(225)" />
+      </g>
+      <g id="o_wing_str_sw_group" transform="translate(37, 194)">
+        <title>o_wing_str_sw</title>
+        <use
+          xlink:href="wing_ram_tri.svg#wing_str"
+          transform="translate(0, 0) rotate(225)" />
+      </g>
+      <g id="o_wing_dex_sw_group" transform="translate(37, 194)">
+        <title>o_wing_dex_sw</title>
+        <use
+          xlink:href="wing_ram_tri.svg#wing_dex"
+          transform="translate(0, 0) rotate(225)" />
+      </g>
+      <g id="o_wing_int_sw_group" transform="translate(37, 194)">
+        <title>o_wing_int_sw</title>
+        <use
+          xlink:href="wing_ram_tri.svg#wing_int"
+          transform="translate(0, 0) rotate(225)" />
+      </g>
+      <g id="o_ram_str_sw_group" transform="translate(37, 194)">
+        <title>o_ram_str_sw</title>
+        <use
+          xlink:href="wing_ram_tri.svg#ram_str"
+          transform="translate(0, 0) rotate(225)" />
+      </g>
+      <g id="o_ram_dex_sw_group" transform="translate(37, 194)">
+        <title>o_ram_dex_sw</title>
+        <use
+          xlink:href="wing_ram_tri.svg#ram_dex"
+          transform="translate(0, 0) rotate(225)" />
+      </g>
+      <g id="o_ram_int_sw_group" transform="translate(37, 194)">
+        <title>o_ram_int_sw</title>
+        <use
+          xlink:href="wing_ram_tri.svg#ram_int"
+          transform="translate(0, 0) rotate(225)" />
+      </g>
   </g>
 </svg>

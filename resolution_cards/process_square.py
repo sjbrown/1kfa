@@ -68,12 +68,18 @@ cards
 
 def set_zodiac(dom, nw_label, ne_label, se_label, sw_label):
     directions = ['nw', 'ne', 'se', 'sw']
+    num_vals = ['0', '1', '2', '3']
     d_map = dict(nw=nw_label, ne=ne_label, se=se_label, sw=sw_label)
     for d in directions:
         keep_label = d_map[d]
-        # d_titles = ['o_%s_%s' % (x,d) for x in spot_it_map.values()]
-        d_titles = ['o_%s_%s' % (x,d) for x in pursuit_corners_map.values()]
-        d_titles += ['o_goat_%s' % d, 'o_dragon_%s' % d]
+
+        d_titles = ['o_goat_%s' % d, 'o_dragon_%s' % d]
+        for x in pursuit_corners_map.values():
+            if x == 'num':
+                d_titles += ['o_%s_%s_%s' % (x,i,d) for i in [0,1,2,3]]
+            else:
+                d_titles += ['o_%s_%s' % (x,d)]
+
         for d_title in d_titles:
             if keep_label not in d_title:
                 dom.cut_element(d_title)
@@ -317,6 +323,8 @@ if __name__ == '__main__':
     shutil.copy(f'{OUTDIR}/back.png', f'{OUTDIR}/blessing/back.png')
     make_green_deck()
     make_red_deck()
+    shutil.copy(f'./wing_ram_tri.svg', f'{OUTDIR}/wing_ram_tri.svg')
+    shutil.copy(f'./wing_ram_tri.svg', f'/tmp/wing_ram_tri.svg')
     shutil.copy(f'./symbols_results.svg', f'{OUTDIR}/symbols_results.svg')
     shutil.copy(f'./symbols_results.svg', f'/tmp/symbols_results.svg')
     if os.environ.get('PARALLEL'):
